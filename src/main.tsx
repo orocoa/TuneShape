@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {lazy,Suspense,useEffect,useState,useSyncExternalStore} from 'react';
 import {createRoot} from 'react-dom/client';
 import Preview from './Preview';
 import {defaultConfig,parseConfig} from './model';
@@ -23,4 +23,22 @@ function Examples(){
   <p>Source: <code>src/Preview.tsx</code>, configuration and transitions: <code>src/model.ts</code>. Default prompts and configuration snapshots: <code>prompts/</code> and <code>configs/</code>.</p>
  </main>;
 }
-createRoot(document.getElementById('root')!).render(<Examples/>);
+const IslandExamples=lazy(()=>import('./lightning-island/IslandExamples'));
+const readCollection=()=>window.location.hash==='#lightning-island';
+function subscribeCollection(listener:()=>void){window.addEventListener('hashchange',listener);return()=>window.removeEventListener('hashchange',listener)}
+
+function App(){
+ const island=useSyncExternalStore(subscribeCollection,readCollection,()=>false);
+ useEffect(()=>{
+  document.documentElement.lang=island?'zh-CN':'en';
+  document.title=island?'Lightning Island · TuneShape community example':'TuneShape · Basic examples';
+ },[island]);
+ return <>
+  <nav className="collection-nav" aria-label="Example collections">
+   <a href="#basic" aria-current={!island?'page':undefined}>Basic examples</a>
+   <a href="#lightning-island" aria-current={island?'page':undefined}>闪电岛 · Lightning Island</a>
+  </nav>
+  {island?<Suspense fallback={<main role="status">正在加载闪电岛示例…</main>}><IslandExamples/></Suspense>:<Examples/>}
+ </>;
+}
+createRoot(document.getElementById('root')!).render(<App/>);

@@ -22,7 +22,7 @@ interface PreviewProps {
 type RunningAnimation = PlaybackControl
 
 /** Each retarget starts at the rendered MotionValues. Observation speed never enters a transition. */
-function usePose(config: EffectConfig, active: boolean, speed: number, reduced: boolean, paused: boolean, onSettled?: (active:boolean)=>void) {
+export function usePose(config: EffectConfig, active: boolean, speed: number, reduced: boolean, paused: boolean, onSettled?: (active:boolean)=>void) {
   const settled=useRef(onSettled);settled.current=onSettled
   const initial = statesFor(config)[active ? 'active' : 'rest']
   const x = useMotionValue(initial.x)

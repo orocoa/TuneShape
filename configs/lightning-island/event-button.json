@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "component": "button",
+  "mode": "beginner",
+  "animation": "tween",
+  "durationMs": 120,
+  "delayMs": 0,
+  "easing": [0.22, 1, 0.36, 1],
+  "bounce": 0.25,
+  "x": 0,
+  "y": 2,
+  "scale": 0.98,
+  "stiffness": 260,
+  "damping": 24,
+  "mass": 1,
+  "interruption": "retarget",
+  "reducedMotion": "instant"
+}

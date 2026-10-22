@@ -16,6 +16,18 @@ TuneShape · 随形，由 [orocoa](https://github.com/orocoa) 维护，提供 3 
 
 录自本仓库的基础示例：按住按钮，再松开回到初始状态。
 
+## 社区示例：闪电岛
+
+**[在线体验闪电岛 UI 动效](https://lightning-island-ui.liiiillliii.chatgpt.site/#lightning-island)** — 由贡献者托管的公开演示，无需登录或安装。
+
+[闪电岛 UI](docs/lightning-island.md) 由 [OXOOOOX](https://github.com/OXOOOOX) 提取，用三张紧凑卡片展示轮廓高亮、状态提示和完成反馈。只使用简单 SVG 与 CSS 图形，不加载图片素材；事件卡、LIVE 抽屉和更新弹窗放在默认折叠的组合示例中。沿用「源码 + JSON 配置 + Prompt」的组织方式，无新增依赖或后端。
+
+新增的 filter 与循环轨道采用独立的 `lightning-island-effects` 扩展格式，通过原生 Web Animations 播放。该 JSON 配合扩展源码使用，基础配置编辑器不支持；组合示例原有的三份动效预设仍可在基础编辑器使用。
+
+运行 `pnpm dev` 后选择 **闪电岛 · Lightning Island**（`/#lightning-island`）。[查看源码](src/lightning-island/IslandExamples.tsx) · [配置](configs/lightning-island/) · [提示词](prompts/lightning-island/) · [使用与来源说明](docs/lightning-island.md)。基础示例仍是默认入口。
+
+![闪电岛社区 UI 示例](docs/lightning-island-preview.png)
+
 ## 项目介绍
 
 TuneShape，中文名「随形」，取意“随物赋形”，是用于浏览和调整 UI 动效的网页工具。在线编辑器提供完整动效目录、交互式参数调整、配置导入导出，以及可复用的动效规格。
@@ -72,7 +84,7 @@ pnpm dev
 在演示页面选择 `button`、`tabs` 或 `modal`，可以加载对应示例的默认参数。应用精确配置的方法如下：
 
 1. 展开 **Edit the exact configuration**。
-2. 粘贴 `configs/` 中的完整配置，或在线编辑器导出的 schema version 1 配置。
+2. 粘贴完整基础配置，如 `configs/button.json`、`configs/tabs.json` 或 `configs/modal.json`，也可使用在线编辑器导出的兼容 schema version 1 配置。
 3. 点击 **Apply configuration**。
 
 配置包含组件类型，应用后会切换到对应示例。也可以在启动或构建前修改 [`config.json`](config.json)，设置初始示例。通过导航切换示例时，会加载新示例的默认配置。
@@ -81,7 +93,7 @@ pnpm dev
 
 ## 使用对应 Prompt 复刻
 
-[`prompts/`](prompts/) 中的每份文件都包含对应示例的交互规则、精确 JSON 配置，以及 Motion 状态和过渡契约，与 [`configs/`](configs/) 中的配置一一对应。
+[`prompts/`](prompts/) 中的三份基础 Prompt 包含对应示例的交互规则、精确 JSON 配置，以及 Motion 状态和过渡契约，与 [`configs/`](configs/) 中的配置一一对应。独立的闪电岛扩展请按其 [Prompt](prompts/lightning-island/interaction-effects.md) 和源码使用，不适用下面的基础编辑器导入步骤。
 
 1. 从上表选择配套的配置和 Prompt。
 2. 将 Prompt 与本仓库的实现及依赖模块一起使用。

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "kind": "lightning-island-effects",
+  "highlights": [
+    {"id":"building","label":"建筑白光","durationMs":120,"easing":"ease","rest":"brightness(1) saturate(1) drop-shadow(0 0 0px rgba(255,255,255,0))","hover":"brightness(1.05) saturate(1.05) drop-shadow(0 0 10px rgba(255,255,255,0.45))","focus":"brightness(1.12) saturate(1.08) drop-shadow(0 0 13px rgba(255,255,255,0.65))"},
+    {"id":"furniture","label":"家具青黄双光","durationMs":160,"easing":"ease","rest":"brightness(1) saturate(1) drop-shadow(0 0 0px rgba(109,224,255,0)) drop-shadow(0 0 0px rgba(255,201,40,0))","hover":"brightness(1.12) saturate(1.22) drop-shadow(0 0 8px rgba(109,224,255,0.65)) drop-shadow(0 0 6px rgba(255,201,40,0.42))","focus":"brightness(1.12) saturate(1.22) drop-shadow(0 0 8px rgba(109,224,255,0.65)) drop-shadow(0 0 6px rgba(255,201,40,0.42))"},
+    { "id": "cafe", "label": "咖啡厅金青双光", "durationMs": 140, "easing": "linear", "rest": "brightness(1) saturate(1) drop-shadow(0 0 0px rgba(255,214,92,0)) drop-shadow(0 0 0px rgba(100,221,255,0))", "hover": "brightness(1.12) saturate(1.18) drop-shadow(0 0 7px rgba(255,214,92,0.82)) drop-shadow(0 0 4px rgba(100,221,255,0.62))", "focus": "brightness(1.12) saturate(1.18) drop-shadow(0 0 7px rgba(255,214,92,0.82)) drop-shadow(0 0 4px rgba(100,221,255,0.62))" }
+  ],
+  "label": { "durationMs": 100, "fromY": 4, "steps": 2 },
+  "oven": {
+    "baking": { "durationMs": 900, "easing": "steps(2, end)", "iterations": "infinite", "keyframes": [
+      { "offset": 0, "filter": "brightness(1) saturate(1) drop-shadow(0 0 0px rgba(255,128,48,0))" },
+      { "offset": 0.5, "filter": "brightness(1.18) saturate(1.12) drop-shadow(0 0 7px rgba(255,128,48,0.82))" },
+      { "offset": 1, "filter": "brightness(1) saturate(1) drop-shadow(0 0 0px rgba(255,128,48,0))" }
+    ] },
+    "ready": { "durationMs": 700, "easing": "steps(2, end)", "iterations": "infinite", "keyframes": [
+      { "offset": 0, "filter": "brightness(1) saturate(1) drop-shadow(0 0 0px rgba(255,222,95,0))", "transform": "translateY(0)" },
+      { "offset": 0.5, "filter": "brightness(1.25) saturate(1.2) drop-shadow(0 0 8px rgba(255,222,95,0.92))", "transform": "translateY(-2px)" },
+      { "offset": 1, "filter": "brightness(1) saturate(1) drop-shadow(0 0 0px rgba(255,222,95,0))", "transform": "translateY(0)" }
+    ] },
+    "ding": { "durationMs": 700, "easing": "steps(2, end)", "iterations": "infinite", "keyframes": [
+      { "offset": 0, "transform": "translateY(0) rotate(0deg)" },
+      { "offset": 0.5, "transform": "translateY(-3px) rotate(-2deg)" },
+      { "offset": 1, "transform": "translateY(0) rotate(0deg)" }
+    ] }
+  },
+  "feeding": {
+    "bounce": { "durationMs": 550, "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)", "keyframes": [
+      { "offset": 0, "transform": "translateY(0)" },
+      { "offset": 0.45, "transform": "translateY(-8px)" },
+      { "offset": 1, "transform": "translateY(0)" }
+    ] },
+    "heart": { "durationMs": 2200, "easing": "cubic-bezier(0.16, 1, 0.3, 1)", "keyframes": [
+      { "offset": 0, "opacity": 0, "transform": "rotate(45deg) scale(0.4) translate(-2px, 10px)" },
+      { "offset": 0.14, "opacity": 1, "transform": "rotate(45deg) scale(1) translate(0, 0)" },
+      { "offset": 0.78, "opacity": 1, "transform": "rotate(45deg) scale(1.05) translate(0, -12px)" },
+      { "offset": 1, "opacity": 0, "transform": "rotate(45deg) scale(0.8) translate(4px, -24px)" }
+    ] },
+    "sparkles": { "durationMs": 2100, "delayMs": 350, "easing": "linear", "keyframes": [
+      { "offset": 0, "opacity": 0 },
+      { "offset": 0.18, "opacity": 0.3 },
+      { "offset": 0.5, "opacity": 0.06 },
+      { "offset": 0.7, "opacity": 0.06 },
+      { "offset": 1, "opacity": 0 }
+    ] },
+    "bubble": { "durationMs": 2200, "easing": "linear", "keyframes": [
+      { "offset": 0, "opacity": 0, "transform": "translate(-50%, 6px) scale(0.84)" },
+      { "offset": 0.18, "opacity": 1, "transform": "translate(-50%, 0) scale(1)" },
+      { "offset": 0.78, "opacity": 1, "transform": "translate(-50%, -2px) scale(1)" },
+      { "offset": 1, "opacity": 0, "transform": "translate(-50%, -10px) scale(0.88)" }
+    ] }
+  },
+  "live": { "durationMs": 1100, "easing": "steps(2, end)", "iterations": "infinite", "keyframes": [
+    { "offset": 0, "opacity": 1 },
+    { "offset": 0.5, "opacity": 0.25 },
+    { "offset": 1, "opacity": 1 }
+  ] }
+}
