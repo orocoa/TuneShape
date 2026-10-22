@@ -1,0 +1,11 @@
+{
+  "name": "@tuneshape/ascii-shoal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "A dependency-free, density-adjustable Canvas ASCII aquatic background.",
+  "exports": {".": {"types": "./src/ascii-shoal.d.ts", "import": "./src/ascii-shoal.js"}},
+  "scripts": {"dev": "node serve.mjs", "test": "node --test test/*.test.mjs", "build": "node build.mjs"},
+  "engines": {"node": ">=22"}
+}

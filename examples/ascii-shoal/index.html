@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafaf7">
+  <title>ASCII Shoal · TuneShape</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="ocean" aria-hidden="true"></div>
+  <header><a class="wordmark" href="https://github.com/orocoa/TuneShape/tree/main/examples/ascii-shoal">TuneShape <span> / </span> ASCII Shoal</a><span class="tag">Canvas · MIT</span></header>
+  <main class="panel">
+    <div class="heading"><div><p class="eyebrow">A CHARACTER STUDY</p><h1>A little ocean.</h1></div><button id="collapse" aria-label="Collapse controls" aria-expanded="true">−</button></div>
+    <div id="controls">
+      <p class="intro">A shoal drawn in characters.<br>Change the density. Keep the motion.</p>
+      <div class="presets" role="group" aria-label="Character density presets"><button data-density="0.6">Sparse</button><button data-density="1" aria-pressed="true">Balanced</button><button data-density="1.6">Fine</button></div>
+      <label class="range-label" for="density">Character density <output id="density-value">1.00×</output></label><input id="density" type="range" min="0.5" max="2" step="0.05" value="1">
+      <label class="range-label" for="glyphScale">Glyph size <output id="glyphScale-value">0.90×</output></label><input id="glyphScale" type="range" min="0.6" max="1.3" step="0.05" value="0.9">
+      <div class="actions"><button id="transport">Pause</button><button id="restart">Restart</button><button id="save">Save PNG</button></div>
+      <details><summary>More controls</summary><div class="advanced">
+        <label class="range-label" for="speed">Speed <output id="speed-value">1.00×</output></label><input id="speed" type="range" min="0" max="3" step="0.05" value="1">
+        <label class="range-label" for="sharkCount">Sharks <output id="sharkCount-value">4</output></label><input id="sharkCount" type="range" min="1" max="6" step="1" value="4">
+        <label class="range-label" for="fishDensity">Small fish <output id="fishDensity-value">1.00×</output></label><input id="fishDensity" type="range" min="0" max="2" step="0.1" value="1">
+        <label class="color-row">Paper <input id="backgroundColor" type="color" value="#fafaf7"></label><label class="color-row">Ink <input id="inkColor" type="color" value="#30362f"></label>
+        <label class="color-row">Pointer response <input id="interactive" type="checkbox" checked></label>
+      </div></details>
+      <p class="hint" id="motion-note">Move your pointer through the water.</p>
+    </div>
+  </main>
+  <footer>Procedural shapes. Independent motion. <a href="https://github.com/orocoa/TuneShape/tree/main/examples/ascii-shoal">View source ↗</a></footer>
+  <script type="module" src="./demo.js"></script>
+</body>
+</html>

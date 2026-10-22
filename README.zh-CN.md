@@ -1,12 +1,12 @@
-# TuneShape · 随形 — React UI 动效示例
+# TuneShape · 随形 — UI 动效示例
 
 [English](README.md) · **简体中文**
 
 [![基础示例 CI](https://github.com/orocoa/TuneShape/actions/workflows/ci.yml/badge.svg)](https://github.com/orocoa/TuneShape/actions/workflows/ci.yml) · [MIT 许可证](LICENSE)
 
-TuneShape · 随形，由 [orocoa](https://github.com/orocoa) 维护，提供 3 个基于 React、TypeScript 和 Motion 的基础 UI 动效示例：按钮按压反馈、Tab 切换和页内对话框。每个示例均提供可运行源码、经过校验的 JSON 配置，以及与之对应的实现 Prompt。
+TuneShape · 随形，由 [orocoa](https://github.com/orocoa) 维护，提供 3 个基于 React、TypeScript 和 Motion 的基础 UI 动效示例，以及独立的 Canvas ASCII 鱼群背景。基础示例包括按钮按压反馈、Tab 切换和页内对话框，均提供可运行源码、经过校验的 JSON 配置，以及与之对应的实现 Prompt。
 
-**[在线调整 UI 动效](https://kai-nex.com/tuneshape/)** · [运行 3 个公开示例](#快速开始)
+**[在线调整 UI 动效](https://kai-nex.com/tuneshape/)** · [运行 3 个基础示例](#快速开始) · [ASCII 鱼群](examples/ascii-shoal/)
 
 [关于 TuneShape](https://kai-nex.com/tuneshape/about/) · [English introduction](https://kai-nex.com/tuneshape/en/about/) · [在线交互示例](https://kai-nex.com/tuneshape/effects/) · [使用指南](https://kai-nex.com/tuneshape/guides/)
 
@@ -20,11 +20,11 @@ TuneShape · 随形，由 [orocoa](https://github.com/orocoa) 维护，提供 3 
 
 TuneShape，中文名「随形」，取意“随物赋形”，是用于浏览和调整 UI 动效的网页工具。在线编辑器提供完整动效目录、交互式参数调整、配置导入导出，以及可复用的动效规格。
 
-本仓库公开三个可独立运行的基础示例，沿用在线编辑器的基础交互渲染器，并使用系统字体和简洁的演示布局。完整网站、编辑器面板、目录、启动动画和高级效果实现由独立工程维护。
+本仓库公开三个可独立运行的基础示例，以及一个独立的 ASCII 鱼群背景。基础示例沿用在线编辑器的基础交互渲染器，并使用系统字体和简洁的演示布局。ASCII 鱼群是无运行依赖的 Canvas 模块，包含自己的演示和测试。完整网站、编辑器面板、目录、启动动画和其他效果实现由独立工程维护。
 
 ## 名称与项目入口
 
-项目正式名称为 **TuneShape**，中文名是「随形」。如果你搜索 **TurnShape / turnshape** 想寻找这个 UI 动效工具，请以以上官网地址和 `orocoa/TuneShape` 仓库确认项目。公开仓库提供基础示例，完整在线编辑器由独立工程维护。
+项目正式名称为 **TuneShape**，中文名是「随形」。如果你搜索 **TurnShape / turnshape** 想寻找这个 UI 动效工具，请以以上官网地址和 `orocoa/TuneShape` 仓库确认项目。公开仓库提供精选的可运行示例，完整在线编辑器由独立工程维护。
 
 ## 基础示例
 
@@ -35,6 +35,20 @@ TuneShape，中文名「随形」，取意“随物赋形”，是用于浏览�
 | 页内对话框 | 打开、关闭或按 Escape 退出，关闭后焦点返回触发按钮 | [modal.json](configs/modal.json) | [modal.md](prompts/modal.md) |
 
 对话框用于演示预览区域内的进入与退出，使用 `aria-modal="false"`，不限制整个应用的键盘焦点。
+
+## ASCII 鱼群背景
+
+[`examples/ascii-shoal/`](examples/ascii-shoal/) 是独立的 JavaScript Canvas 背景模块，提供游动轮廓、小鱼、可调整的 ASCII 采样密度、字符大小、配色和播放控制。无需运行时依赖，也无需先安装 React 基础示例。
+
+这份实现使用新编写的形状和运动路径，沿用 TuneShape ASCII 波形效果的网格采样与字符映射思路。示例目录包含源码和实现说明；本地预览、嵌入、参数和生命周期控制见[示例 README](examples/ascii-shoal/README.md)。
+
+```sh
+cd examples/ascii-shoal
+node --test test/*.test.mjs
+npm run build
+```
+
+构建会将独立演示输出到 `examples/ascii-shoal/dist/`。以下仓库根目录命令仍用于三个 React 基础示例。
 
 ## 快速开始
 
@@ -129,6 +143,6 @@ sha256sum -c SHA256SUMS.txt
 
 ## 许可证
 
-本仓库的源码与文档采用 [MIT 许可证](LICENSE)。React、React DOM、Motion 及开发依赖分别保留其上游许可证。
+本仓库的源码与文档采用 [MIT 许可证](LICENSE)。ASCII 鱼群没有运行时依赖；基础示例使用的 React、React DOM、Motion 及开发依赖分别保留其上游许可证。
 
 基础示例使用系统字体，不包含参考图片、打包字体、本地运行记录或部署配置。本仓库的许可证适用于在此发布的文件；网站素材及其他第三方内容分别遵循各自的许可。
