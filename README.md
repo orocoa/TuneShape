@@ -1,12 +1,12 @@
-# TuneShape — React UI Motion Examples
+# TuneShape — UI Motion Examples
 
 **English** · [简体中文](README.zh-CN.md)
 
 [![Basic examples CI](https://github.com/orocoa/TuneShape/actions/workflows/ci.yml/badge.svg)](https://github.com/orocoa/TuneShape/actions/workflows/ci.yml) · [MIT License](LICENSE)
 
-TuneShape by [orocoa](https://github.com/orocoa) provides three basic UI motion examples for React, TypeScript, and Motion: button press feedback, tab transitions, and an in-page dialog. Each example includes runnable source, a validated JSON configuration, and a matching implementation prompt.
+TuneShape by [orocoa](https://github.com/orocoa) provides three basic UI motion examples for React, TypeScript, and Motion, plus a standalone Canvas ASCII Shoal background. The basic examples cover button press feedback, tab transitions, and an in-page dialog, each with runnable source, a validated JSON configuration, and a matching implementation prompt.
 
-**[Try the online UI motion editor](https://kai-nex.com/tuneshape/)** · [Run the 3 public examples](#quick-start)
+**[Try the online UI motion editor](https://kai-nex.com/tuneshape/)** · [Run the 3 basic examples](#quick-start) · [ASCII Shoal](examples/ascii-shoal/)
 
 [About TuneShape](https://kai-nex.com/tuneshape/en/about/) · [中文项目介绍](https://kai-nex.com/tuneshape/about/) · [Interactive examples](https://kai-nex.com/tuneshape/effects/) · [Usage guides (Chinese)](https://kai-nex.com/tuneshape/guides/)
 
@@ -20,11 +20,11 @@ Captured from this repository's basic example: hold the button, then release to 
 
 TuneShape is a browser-based tool for exploring and adjusting UI motion. The online editor provides the full collection, interactive parameter controls, configuration import and export, and reusable motion specifications.
 
-This repository publishes three self-contained basic examples. They use the same basic interaction renderer as the online editor, with system fonts and a minimal demo layout. The complete website, editor panels, catalog, startup animation, and advanced effect implementations are maintained separately.
+This repository publishes three self-contained basic examples and a standalone ASCII Shoal background. The basic examples use the same basic interaction renderer as the online editor, with system fonts and a minimal demo layout. ASCII Shoal is a dependency-free Canvas module with its own demo and tests. The complete website, editor panels, catalog, startup animation, and other effect implementations are maintained separately.
 
 ## Project name and links
 
-The project name is **TuneShape**. If you searched for **TurnShape** while looking for this UI motion tool, use the website above and this `orocoa/TuneShape` repository to confirm the project. The repository publishes basic examples; the full online editor is maintained separately.
+The project name is **TuneShape**. If you searched for **TurnShape** while looking for this UI motion tool, use the website above and this `orocoa/TuneShape` repository to confirm the project. The repository publishes selected runnable examples; the full online editor is maintained separately.
 
 ## Examples
 
@@ -35,6 +35,20 @@ The project name is **TuneShape**. If you searched for **TurnShape** while looki
 | In-page dialog | Open, close, or dismiss with Escape; focus returns to the trigger | [modal.json](configs/modal.json) | [modal.md](prompts/modal.md) |
 
 The dialog demonstrates an entrance and exit inside the preview area. It uses `aria-modal="false"` and does not trap focus across the application.
+
+## ASCII Shoal background
+
+[`examples/ascii-shoal/`](examples/ascii-shoal/) is a standalone JavaScript Canvas background with swimming silhouettes, small fish, configurable ASCII sampling density, glyph size, palette, and playback. It has no runtime dependencies and does not require the React examples to be installed.
+
+The implementation uses newly authored shapes and motion paths, applying the grid-and-character approach used by TuneShape's ASCII wave effect. Its source and implementation notes are included in the example. See the [example README](examples/ascii-shoal/README.md) for local preview, embedding, configuration, and lifecycle controls.
+
+```sh
+cd examples/ascii-shoal
+node --test test/*.test.mjs
+npm run build
+```
+
+The build writes the standalone demo to `examples/ascii-shoal/dist/`. The root commands below continue to operate on the three React examples.
 
 ## Quick start
 
@@ -129,6 +143,6 @@ Bug reports and focused improvements to the public examples are welcome. See [CO
 
 ## License
 
-The source and documentation in this repository are available under the [MIT License](LICENSE). React, React DOM, Motion, and development dependencies retain their upstream licenses.
+The source and documentation in this repository are available under the [MIT License](LICENSE). ASCII Shoal has no runtime dependencies. React, React DOM, Motion, and development dependencies for the basic examples retain their upstream licenses.
 
 The examples use system fonts and include no reference artwork, bundled fonts, private operational records, or deployment configuration. This repository's license applies to the files published here; website assets and other third-party materials retain their respective licenses.

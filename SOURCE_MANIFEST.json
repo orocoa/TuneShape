@@ -1,8 +1,13 @@
 {
   "schemaVersion": 1,
-  "scope": "Three independently runnable basic examples; the complete website is not included",
-  "sourceSha256": "f8b5ea85d479e3b4a54ce62a91d8cda85c632990d78312aa3d1d8a80178d1b93",
+  "scope": "Three independently runnable basic examples and the original standalone ASCII Shoal background; the complete website is not included",
+  "sourceSha256": "447a05474e9b49f30c55c9fe6b92ca2e754d2f4406226a7e5a47dd7c2551d81c",
   "files": [
+    {
+      "path": ".github/workflows/ascii-shoal.yml",
+      "bytes": 559,
+      "sha256": "f58f41cc8d1ba66472c1335b13d38af0c0883c7a9ff26a706ccdec6a9acecc90"
+    },
     {
       "path": ".github/workflows/ci.yml",
       "bytes": 360,
@@ -35,8 +40,83 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 2850,
-      "sha256": "8e13996da5fd6a50451c44067d36f1af5ddb1c5a737a197b57eb438166ba5c4e"
+      "bytes": 3522,
+      "sha256": "be65f744512c582a4719460fc079d513125a8a05b7c50fc1b3267e6bd1101cd4"
+    },
+    {
+      "path": "docs/preview-button-press.gif",
+      "bytes": 99522,
+      "sha256": "1f6090df14931e6fc0f623517bd1047d220cef472c7add05c7530ed675c48fea"
+    },
+    {
+      "path": "examples/ascii-shoal/.gitignore",
+      "bytes": 16,
+      "sha256": "543eb3dff6ab822b9553e0e4f1a607c52991d3660ff0f0f034616ecffca70b5c"
+    },
+    {
+      "path": "examples/ascii-shoal/build.mjs",
+      "bytes": 1247,
+      "sha256": "a7059d2c577497babf1cd5fc84ffd67728c956cd85ae50bf7e591ce652cf9c29"
+    },
+    {
+      "path": "examples/ascii-shoal/demo.js",
+      "bytes": 2692,
+      "sha256": "76f119e11da75b36da6c1d1880d4be1f311334a01bd4a06f0b79bdd9240779c7"
+    },
+    {
+      "path": "examples/ascii-shoal/IMPLEMENTATION.md",
+      "bytes": 5590,
+      "sha256": "78e60eec00e05fdd82fcfb94263926afc7c56d4284697b030704436cc951838e"
+    },
+    {
+      "path": "examples/ascii-shoal/index.html",
+      "bytes": 2869,
+      "sha256": "a92e155548fbc5e32de728d91f3c7881f0b5691f50546e85ebec9bee2b6571e1"
+    },
+    {
+      "path": "examples/ascii-shoal/LICENSE",
+      "bytes": 1091,
+      "sha256": "163aa6b0282bf34042660e4543cb9f5e06f2b477d80a01f339c6840c639b8b3a"
+    },
+    {
+      "path": "examples/ascii-shoal/package.json",
+      "bytes": 439,
+      "sha256": "2cd4d5fefc7b946520b1e48d2b1c57312b958b526ceab2c953bbf2c05b6c640f"
+    },
+    {
+      "path": "examples/ascii-shoal/README.md",
+      "bytes": 4606,
+      "sha256": "2f3be708c826b689c9dd1f62ca84e68c5c4af0fc57a211b2f288cfc916496460"
+    },
+    {
+      "path": "examples/ascii-shoal/README.zh-CN.md",
+      "bytes": 2542,
+      "sha256": "ba47670d03de3ffb7df5427700c073cb66a0f1f830b4cca52e816146c045ae13"
+    },
+    {
+      "path": "examples/ascii-shoal/serve.mjs",
+      "bytes": 928,
+      "sha256": "cf9df597ad700815c707c42606218b1db56bffff15f68db6ea9349c6bc3e91c4"
+    },
+    {
+      "path": "examples/ascii-shoal/src/ascii-shoal.d.ts",
+      "bytes": 3753,
+      "sha256": "d354f485ada88895af4f0d7731bf806220952db466fd49b552dd15ff1f90f9a3"
+    },
+    {
+      "path": "examples/ascii-shoal/src/ascii-shoal.js",
+      "bytes": 24168,
+      "sha256": "85e8e842a2ca95fa9e5e871680eaa7f8d26149a580a38113841d150ea918e21a"
+    },
+    {
+      "path": "examples/ascii-shoal/style.css",
+      "bytes": 3410,
+      "sha256": "a5a57aaadd05033c343b72e0f1bd02f11967e8c61c4e46476505f2c3c9c5067e"
+    },
+    {
+      "path": "examples/ascii-shoal/test/ascii-shoal.test.mjs",
+      "bytes": 10101,
+      "sha256": "09acb3f9ca6eb73e14a004f2ed7b2baae98a0bfc09f1c46e5a3cca5052d60965"
     },
     {
       "path": "index.html",
@@ -80,13 +160,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 7815,
-      "sha256": "ee3d4c6e327a2fcdd06cc6e029c4bd29b8c41216e11af2163ea1f3e47fa28893"
+      "bytes": 9184,
+      "sha256": "fa9625dd6c65643ba902271294fc3478d5fe67e84a7e961bf9fa2296e3399989"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 7304,
-      "sha256": "d41d1ad7876595d8d298026a5479b6719f136291be7669663b3408912b3cfd3d"
+      "bytes": 8536,
+      "sha256": "1e275141980b252a922c57b6497afa3bb7ae02504b93902be1e6353817e6d139"
     },
     {
       "path": "src/DemoArrow.tsx",
