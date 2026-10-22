@@ -6,9 +6,9 @@
 
 TuneShape by [orocoa](https://github.com/orocoa) provides three basic UI motion examples for React, TypeScript, and Motion, plus a standalone Canvas ASCII Shoal background. The basic examples cover button press feedback, tab transitions, and an in-page dialog, each with runnable source, a validated JSON configuration, and a matching implementation prompt.
 
-**[Try the online UI motion editor](https://kai-nex.com/tuneshape/)** · [Run the 3 basic examples](#quick-start) · [ASCII Shoal](examples/ascii-shoal/)
+**[Try the online UI motion editor](https://tuneshape.kai-nex.com/)** · [Run the 3 basic examples](#quick-start) · [ASCII Shoal](examples/ascii-shoal/)
 
-[About TuneShape](https://kai-nex.com/tuneshape/en/about/) · [中文项目介绍](https://kai-nex.com/tuneshape/about/) · [Interactive examples](https://kai-nex.com/tuneshape/effects/) · [Usage guides (Chinese)](https://kai-nex.com/tuneshape/guides/)
+[About TuneShape](https://tuneshape.kai-nex.com/en/about/) · [中文项目介绍](https://tuneshape.kai-nex.com/about/) · [Interactive examples](https://tuneshape.kai-nex.com/effects/) · [Usage guides (Chinese)](https://tuneshape.kai-nex.com/guides/)
 
 [Releases](https://github.com/orocoa/TuneShape/releases) · [Report an issue](https://github.com/orocoa/TuneShape/issues) · [Contributing](CONTRIBUTING.md)
 

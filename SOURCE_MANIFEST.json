@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "scope": "Three independently runnable basic examples and the original standalone ASCII Shoal background; the complete website is not included",
-  "sourceSha256": "447a05474e9b49f30c55c9fe6b92ca2e754d2f4406226a7e5a47dd7c2551d81c",
+  "sourceSha256": "4dd7d131a145b0a1879b6c2f03fa102a9ee8344d5a4a39ebdd6dd52ee0baad38",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -161,12 +161,12 @@
     {
       "path": "README.md",
       "bytes": 9184,
-      "sha256": "fa9625dd6c65643ba902271294fc3478d5fe67e84a7e961bf9fa2296e3399989"
+      "sha256": "99fa8d8dda36c93e794cefb876c2fbe2b08833013161acd1f3084cc61d479f32"
     },
     {
       "path": "README.zh-CN.md",
       "bytes": 8536,
-      "sha256": "1e275141980b252a922c57b6497afa3bb7ae02504b93902be1e6353817e6d139"
+      "sha256": "f809f7d763b6239b631523917d23ee083cdbc4161f542cbd0850c9188f2ce081"
     },
     {
       "path": "src/DemoArrow.tsx",

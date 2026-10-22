@@ -6,9 +6,9 @@
 
 TuneShape · 随形，由 [orocoa](https://github.com/orocoa) 维护，提供 3 个基于 React、TypeScript 和 Motion 的基础 UI 动效示例，以及独立的 Canvas ASCII 鱼群背景。基础示例包括按钮按压反馈、Tab 切换和页内对话框，均提供可运行源码、经过校验的 JSON 配置，以及与之对应的实现 Prompt。
 
-**[在线调整 UI 动效](https://kai-nex.com/tuneshape/)** · [运行 3 个基础示例](#快速开始) · [ASCII 鱼群](examples/ascii-shoal/)
+**[在线调整 UI 动效](https://tuneshape.kai-nex.com/)** · [运行 3 个基础示例](#快速开始) · [ASCII 鱼群](examples/ascii-shoal/)
 
-[关于 TuneShape](https://kai-nex.com/tuneshape/about/) · [English introduction](https://kai-nex.com/tuneshape/en/about/) · [在线交互示例](https://kai-nex.com/tuneshape/effects/) · [使用指南](https://kai-nex.com/tuneshape/guides/)
+[关于 TuneShape](https://tuneshape.kai-nex.com/about/) · [English introduction](https://tuneshape.kai-nex.com/en/about/) · [在线交互示例](https://tuneshape.kai-nex.com/effects/) · [使用指南](https://tuneshape.kai-nex.com/guides/)
 
 [版本发布](https://github.com/orocoa/TuneShape/releases) · [反馈问题](https://github.com/orocoa/TuneShape/issues) · [参与贡献](CONTRIBUTING.md)
 
