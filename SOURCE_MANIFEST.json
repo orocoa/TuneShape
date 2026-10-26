@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "scope": "Three independently runnable basic examples and the original standalone ASCII Shoal background; the complete website is not included",
-  "sourceSha256": "2cd4e503aa3451f556629d0a723a36eb240bbbdcf67167e2719eff110b110fbb",
+  "sourceSha256": "d99a1b564bbb6b33aaf57f96246d753544d416f4c47b98e681b240025c0df6ae",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -57,6 +57,11 @@
       "path": "docs/readme-overview-zh.png",
       "bytes": 275621,
       "sha256": "2e976b778638ca8f0fd865bf28e463b19cc1baa764df9876c27423c9c4526183"
+    },
+    {
+      "path": "docs/readme-workflow-bilingual-30fps.gif",
+      "bytes": 4140052,
+      "sha256": "88ec33a973e3920705eb26cacd3e054a0118022d440537af800ae622093f4058"
     },
     {
       "path": "docs/readme-workflow-bilingual.gif",
@@ -175,13 +180,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 10021,
-      "sha256": "3d57514e736f4e84ad9debcbda66f67814d4dc8618c2757779aaed214720c632"
+      "bytes": 10027,
+      "sha256": "d2f48807c6a8fde1fea7dc50cdaf84cd1b1394428c60a733c3bc7a1fef82b0a9"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 9096,
-      "sha256": "c6e2f3e67c0c9ed57a67173495f11ce30fa1a5eabc469a9f317c9f37f3fc148d"
+      "bytes": 9102,
+      "sha256": "e476c83845423f5aae7e00dc5d0052b1dc898fabb849a52548509b8bfee70694"
     },
     {
       "path": "src/DemoArrow.tsx",

@@ -10,7 +10,7 @@ TuneShape is a browser tool for designers and developers to try UI effects and a
 
 **Live demo · Browse → Tune → Export**
 
-[![Live TuneShape workflow with Chinese and English captions: browse the catalog, change a glass folder's color and size, preview the result, and export JSON](docs/readme-workflow-bilingual.gif)](https://tuneshape.kai-nex.com/)
+[![Live TuneShape workflow with Chinese and English captions: browse the catalog, change a glass folder's color and size, preview the result, and export JSON](docs/readme-workflow-bilingual-30fps.gif)](https://tuneshape.kai-nex.com/)
 
 *About 15 seconds, recorded from the live website. The example adjusts Glass Folder's color, size, and card spread, then exports its current configuration.*
 
