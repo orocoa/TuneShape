@@ -1,32 +1,50 @@
-# TuneShape — UI Motion Examples
+# TuneShape · 随形
 
 **English** · [简体中文](README.zh-CN.md)
 
-[![Basic examples CI](https://github.com/orocoa/TuneShape/actions/workflows/ci.yml/badge.svg)](https://github.com/orocoa/TuneShape/actions/workflows/ci.yml) · [MIT License](LICENSE)
+**Explore UI motion, adjust it live, and take the settings into your project.**
 
-TuneShape by [orocoa](https://github.com/orocoa) provides three basic UI motion examples for React, TypeScript, and Motion, plus a standalone Canvas ASCII Shoal background. The basic examples cover button press feedback, tab transitions, and an in-page dialog, each with runnable source, a validated JSON configuration, and a matching implementation prompt.
+TuneShape is a browser tool for designers and developers to try UI effects and adjust how they look and behave. Browse the catalog, compare your changes with the preset, then export the configuration or copy an implementation prompt. The interface is available in English and Chinese.
 
-**[Try the online UI motion editor](https://tuneshape.kai-nex.com/)** · [Run the 3 basic examples](#quick-start) · [ASCII Shoal](examples/ascii-shoal/)
+### [Open TuneShape in your browser →](https://tuneshape.kai-nex.com/)
 
-[About TuneShape](https://tuneshape.kai-nex.com/en/about/) · [中文项目介绍](https://tuneshape.kai-nex.com/about/) · [Interactive examples](https://tuneshape.kai-nex.com/effects/) · [Usage guides (Chinese)](https://tuneshape.kai-nex.com/guides/)
+[![TuneShape online editor: selected UI effects, a before-and-after preview, and parameter controls](docs/readme-overview-en.png)](https://tuneshape.kai-nex.com/)
 
-[Releases](https://github.com/orocoa/TuneShape/releases) · [Report an issue](https://github.com/orocoa/TuneShape/issues) · [Contributing](CONTRIBUTING.md)
+*The overview shows the online editor. The local examples included in this repository are described below.*
 
-![Button press feedback (TuneShape basic example)](docs/preview-button-press.gif)
+## Try an effect in three steps
 
-Captured from this repository's basic example: hold the button, then release to return to its resting state.
+1. **Browse** — Choose an effect by category or search for its Chinese or English name. Try the interaction in its catalog card.
+2. **Tune** — Open the effect, change its parameters, and compare the current settings with the preset.
+3. **Reuse** — Export the JSON configuration or copy the implementation prompt to continue in your own project.
 
-## Overview
+[![Live TuneShape workflow with Chinese and English captions: browse the catalog, change a glass folder's color and size, preview the result, and export JSON](docs/readme-workflow-bilingual.gif)](https://tuneshape.kai-nex.com/)
 
-TuneShape is a browser-based tool for exploring and adjusting UI motion. The online editor provides the full collection, interactive parameter controls, configuration import and export, and reusable motion specifications.
+*About 15 seconds, recorded from the live website. The example adjusts Glass Folder's color, size, and card spread, then exports its current configuration.*
 
-This repository publishes three self-contained basic examples and a standalone ASCII Shoal background. The basic examples use the same basic interaction renderer as the online editor, with system fonts and a minimal demo layout. ASCII Shoal is a dependency-free Canvas module with its own demo and tests. The complete website, editor panels, catalog, startup animation, and other effect implementations are maintained separately.
+## What you can do on the website
 
-## Project name and links
+| Task | Available tools |
+| --- | --- |
+| Find an effect | Categories for controls, navigation, containers, text, images, indicators, and backgrounds; Chinese and English search |
+| Adjust the result | Effect-specific controls for content, appearance, timing, easing, and motion |
+| Compare behavior | Preset and current-setting previews, playback controls, and observation speed |
+| Bring it into a project | JSON import/export, motion specifications, implementation prompts, offline HTML, and standalone reproduction projects |
 
-The project name is **TuneShape**. If you searched for **TurnShape** while looking for this UI motion tool, use the website above and this `orocoa/TuneShape` repository to confirm the project. The repository publishes selected runnable examples; the full online editor is maintained separately.
+The editor supports pointer, keyboard, and touch interactions, with reduced-motion behavior. Available controls and interactions vary by effect.
 
-## Examples
+Export JSON before refreshing or leaving the page: effect parameters are kept for the current page session. Playback progress and observation speed are tool state rather than saved effect settings.
+
+**[Try your own settings on TuneShape →](https://tuneshape.kai-nex.com/)**
+
+## About this repository
+
+The website screenshots and recording above show the full online editor. This repository contains three runnable React, TypeScript, and Motion examples—button press feedback, tab transitions, and an in-page dialog—plus a standalone Canvas ASCII Shoal background. The complete website, catalog, editor panels, and other effect implementations are maintained separately.
+
+<details>
+<summary>Local setup, example configuration, and source guide</summary>
+
+### Examples
 
 | Example | Interaction | Configuration | Prompt |
 | --- | --- | --- | --- |
@@ -36,7 +54,7 @@ The project name is **TuneShape**. If you searched for **TurnShape** while looki
 
 The dialog demonstrates an entrance and exit inside the preview area. It uses `aria-modal="false"` and does not trap focus across the application.
 
-## ASCII Shoal background
+### ASCII Shoal background
 
 [`examples/ascii-shoal/`](examples/ascii-shoal/) is a standalone JavaScript Canvas background with swimming silhouettes, small fish, configurable ASCII sampling density, glyph size, palette, and playback. It has no runtime dependencies and does not require the React examples to be installed.
 
@@ -44,20 +62,22 @@ The implementation uses newly authored shapes and motion paths, applying the gri
 
 ```sh
 cd examples/ascii-shoal
+npm run dev
+# Stop the preview server before running the following commands.
 node --test test/*.test.mjs
 npm run build
 ```
 
 The build writes the standalone demo to `examples/ascii-shoal/dist/`. The root commands below continue to operate on the three React examples.
 
-## Quick start
+### Quick start
 
-### Requirements
+#### Requirements
 
 - Node.js **22.12 or later**. CI runs on Node.js 24.
 - pnpm **11.x**. Use the exact version declared in [`package.json`](package.json) under `packageManager`.
 
-### Install and run
+#### Install and run
 
 ```sh
 git clone https://github.com/orocoa/TuneShape.git
@@ -70,7 +90,7 @@ Open the local URL printed by Vite. If you downloaded a release ZIP, extract it 
 
 Package installation requires access to the package registry. Once dependencies are installed, the examples run locally without an account, API key, database, or connection to the TuneShape website.
 
-## Commands
+### Commands
 
 | Command | Purpose |
 | --- | --- |
@@ -81,7 +101,7 @@ Package installation requires access to the package registry. Once dependencies 
 
 Build before running `pnpm preview`. Deploy the contents of `dist/` to a static web host.
 
-## Configure an example
+### Configure an example
 
 Select `button`, `tabs`, or `modal` in the demo to load its defaults. To apply an exact configuration:
 
@@ -93,7 +113,7 @@ The configuration includes the component type, so applying it selects the corres
 
 Supported settings include tween and spring transitions, delay, easing, transform values, and physical spring parameters. Invalid or incompatible configurations are rejected with a validation message. The playback control supports pause and resume; the examples respond to live `prefers-reduced-motion` changes.
 
-## Reproduce an example with its Prompt
+### Reproduce an example with its Prompt
 
 Each file in [`prompts/`](prompts/) contains the interaction rules, exact JSON configuration, and Motion state and transition contract for the corresponding example in [`configs/`](configs/).
 
@@ -105,7 +125,7 @@ Each file in [`prompts/`](prompts/) contains the interaction rules, exact JSON c
 
 The included source and validated configuration define the reference behavior. AI-generated implementations should be checked against that contract; natural-language input alone does not guarantee identical generated code. The examples reproduce the basic interaction and parameters using the simplified styling in this package.
 
-## Source guide
+### Source guide
 
 | Path | Responsibility |
 | --- | --- |
@@ -119,7 +139,7 @@ The included source and validated configuration define the reference behavior. A
 | [`src/style.css`](src/style.css) | System-font demo styling and responsive layout |
 | `configs/` / `prompts/` | Matching configuration snapshots and implementation Prompts |
 
-## Release integrity
+### Release integrity
 
 GitHub release archives include `SOURCE_MANIFEST.json`, which records the exported files, byte lengths, and SHA-256 hashes. Its own hash is excluded to avoid a circular digest. Each release also provides `SHA256SUMS.txt` for its ZIP archive.
 
@@ -137,12 +157,14 @@ sha256sum -c SHA256SUMS.txt
 
 The manifest describes the published snapshot. Local edits to a listed file will change its hash.
 
-## Contributing
+</details>
 
-Bug reports and focused improvements to the public examples are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow and verification steps. Issues and pull requests may be written in English or Chinese.
+## Feedback and contributing
+
+For a bug or an effect request, [open an issue](https://github.com/orocoa/TuneShape/issues). Include the effect name, browser or device, steps to reproduce, and the result you expected. Issues and pull requests may be written in English or Chinese.
+
+For changes to the included source, see [CONTRIBUTING.md](CONTRIBUTING.md). Published versions are listed under [Releases](https://github.com/orocoa/TuneShape/releases). Maintained by [orocoa](https://github.com/orocoa).
 
 ## License
 
-The source and documentation in this repository are available under the [MIT License](LICENSE). ASCII Shoal has no runtime dependencies. React, React DOM, Motion, and development dependencies for the basic examples retain their upstream licenses.
-
-The examples use system fonts and include no reference artwork, bundled fonts, private operational records, or deployment configuration. This repository's license applies to the files published here; website assets and other third-party materials retain their respective licenses.
+The source code and documentation published in this repository are available under the [MIT License](LICENSE). Third-party dependencies and materials shown in website previews retain their respective licenses; the website preview does not grant rights to third-party assets.
