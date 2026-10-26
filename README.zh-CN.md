@@ -8,9 +8,11 @@ TuneShape，中文名「随形」，是面向设计师与开发者的 UI 动效�
 
 ### [打开 TuneShape 网页，直接体验 →](https://tuneshape.kai-nex.com/)
 
-[![TuneShape 在线编辑器：精选 UI 动效、调整前后预览与参数面板](docs/readme-overview-zh.png)](https://tuneshape.kai-nex.com/)
+**操作动图 · 浏览 → 调整 → 导出**
 
-*总览图展示在线编辑器。本仓库包含的本地示例见下方说明。*
+[![TuneShape 真实网页操作，中英双语字幕：浏览目录，修改磨砂文件夹的配色和尺寸，查看效果，再导出 JSON](docs/readme-workflow-bilingual.gif)](https://tuneshape.kai-nex.com/)
+
+*约 15 秒，录自真实网页。以磨砂文件夹演示配色、尺寸和卡片展开范围的调整，以及当前配置的导出。*
 
 ## 三步试用一个动效
 
@@ -18,9 +20,11 @@ TuneShape，中文名「随形」，是面向设计师与开发者的 UI 动效�
 2. **调整** — 打开详情，修改参数，对照预设查看当前配置的变化。
 3. **复用** — 导出 JSON 配置，或复制实现 Prompt，带回自己的项目继续使用。
 
-[![TuneShape 真实网页操作，中英双语字幕：浏览目录，修改磨砂文件夹的配色和尺寸，查看效果，再导出 JSON](docs/readme-workflow-bilingual.gif)](https://tuneshape.kai-nex.com/)
+## 动效与调参总览
 
-*约 15 秒，录自真实网页。以磨砂文件夹演示配色、尺寸和卡片展开范围的调整，以及当前配置的导出。*
+[![TuneShape 在线编辑器：精选 UI 动效、调整前后预览与参数面板](docs/readme-overview-zh.png)](https://tuneshape.kai-nex.com/)
+
+*总览图展示在线编辑器。本仓库包含的本地示例见下方说明。*
 
 ## 网页提供什么
 

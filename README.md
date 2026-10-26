@@ -8,9 +8,11 @@ TuneShape is a browser tool for designers and developers to try UI effects and a
 
 ### [Open TuneShape in your browser →](https://tuneshape.kai-nex.com/)
 
-[![TuneShape online editor: selected UI effects, a before-and-after preview, and parameter controls](docs/readme-overview-en.png)](https://tuneshape.kai-nex.com/)
+**Live demo · Browse → Tune → Export**
 
-*The overview shows the online editor. The local examples included in this repository are described below.*
+[![Live TuneShape workflow with Chinese and English captions: browse the catalog, change a glass folder's color and size, preview the result, and export JSON](docs/readme-workflow-bilingual.gif)](https://tuneshape.kai-nex.com/)
+
+*About 15 seconds, recorded from the live website. The example adjusts Glass Folder's color, size, and card spread, then exports its current configuration.*
 
 ## Try an effect in three steps
 
@@ -18,9 +20,11 @@ TuneShape is a browser tool for designers and developers to try UI effects and a
 2. **Tune** — Open the effect, change its parameters, and compare the current settings with the preset.
 3. **Reuse** — Export the JSON configuration or copy the implementation prompt to continue in your own project.
 
-[![Live TuneShape workflow with Chinese and English captions: browse the catalog, change a glass folder's color and size, preview the result, and export JSON](docs/readme-workflow-bilingual.gif)](https://tuneshape.kai-nex.com/)
+## Explore the collection
 
-*About 15 seconds, recorded from the live website. The example adjusts Glass Folder's color, size, and card spread, then exports its current configuration.*
+[![TuneShape online editor: selected UI effects, a before-and-after preview, and parameter controls](docs/readme-overview-en.png)](https://tuneshape.kai-nex.com/)
+
+*The overview shows the online editor. The local examples included in this repository are described below.*
 
 ## What you can do on the website
 
