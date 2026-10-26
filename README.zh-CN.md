@@ -10,7 +10,7 @@ TuneShape，中文名「随形」，是面向设计师与开发者的 UI 动效�
 
 **操作动图 · 浏览 → 调整 → 导出**
 
-[![TuneShape 真实网页操作，中英双语字幕：浏览目录，修改磨砂文件夹的配色和尺寸，查看效果，再导出 JSON](docs/readme-workflow-bilingual.gif)](https://tuneshape.kai-nex.com/)
+[![TuneShape 真实网页操作，中英双语字幕：浏览目录，修改磨砂文件夹的配色和尺寸，查看效果，再导出 JSON](docs/readme-workflow-bilingual-30fps.gif)](https://tuneshape.kai-nex.com/)
 
 *约 15 秒，录自真实网页。以磨砂文件夹演示配色、尺寸和卡片展开范围的调整，以及当前配置的导出。*
 
