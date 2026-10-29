@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "dropdown",
+  "durationMs": 400,
+  "delayMs": 0,
+  "easing": [
+    0.25,
+    0.1,
+    0.25,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "panel",
+      "property": "y",
+      "values": [
+        -7,
+        0
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "panel",
+      "property": "scale",
+      "values": [
+        0.985,
+        1
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "panel",
+      "property": "opacity",
+      "values": [
+        0,
+        1
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "item0",
+      "property": "y",
+      "values": [
+        -4,
+        0
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.78
+    },
+    {
+      "part": "item0",
+      "property": "opacity",
+      "values": [
+        0,
+        1
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.78
+    },
+    {
+      "part": "item1",
+      "property": "y",
+      "values": [
+        -4,
+        0
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0.086,
+      "span": 0.78
+    },
+    {
+      "part": "item1",
+      "property": "opacity",
+      "values": [
+        0,
+        1
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0.086,
+      "span": 0.78
+    }
+  ]
+}

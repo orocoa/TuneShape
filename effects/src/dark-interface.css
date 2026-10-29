@@ -1,0 +1,66 @@
+/* Website presentation overrides; demonstration targets keep their authored colors. */
+:root{color-scheme:light;color:#171717;background:#fff;--ink:#171717;--muted:#737373;--line:#e6e6e6;--catalog-paper:#fff;--catalog-card-surface:#f1f1f1;--surface:#fff;--surface-raised:#f5f5f5;--ui-border:#dddddd}
+body{background:#fff;color:#171717}
+.site-header{position:relative;top:auto}
+.catalog-sidebar{top:16px;height:calc(100dvh - 16px)}
+.catalog-overview{border:1px solid transparent}
+.catalog-overview[aria-current=page],.catalog-overview[aria-current=page]:hover{background:#f2f2f2;color:#171717;border-color:transparent}
+.catalog-overview[aria-current=page] small{color:#616161}
+.catalog-parent:has(a[aria-current=page]){background:#f2f2f2;box-shadow:none}
+.catalog-children a{border:1px solid transparent}
+.catalog-children a[aria-current=page]{background:#f2f2f2;border-color:transparent;color:#171717}
+.catalog-children a[aria-current=page]:before{display:none}
+.catalog-layout .library-filters select{min-height:40px}
+.catalog-layout .library-card-info{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:12px 0 0;min-height:32px}
+.catalog-layout .library-card-info h2{flex:1;min-width:0;margin:0;font-size:13px;line-height:20px;font-weight:500}
+.library-card-category{flex:none;color:#727272;font-size:10px;line-height:20px;white-space:nowrap}
+.library-visual,.preview-card,.history-canvas{color:#2c2c2c;--ink:#2c2c2c;--muted:#7e7e7e;--line:#e8e8e8;color-scheme:light}
+/* A shared corner size; native continuous shaping is applied below. */
+.catalog-layout .library-card[data-tone] .library-visual{background:var(--catalog-card-surface);border-radius:20px}
+@media(max-width:1100px) and (min-width:901px){}
+@media(max-width:900px){}
+@media(max-width:700px){.catalog-layout .library-filters{min-width:0;width:auto;flex:1;justify-content:flex-end}.catalog-layout .library-card-info{flex-wrap:nowrap;gap:6px;min-height:32px}.catalog-layout .library-card-info h2{font-size:12px;line-height:20px}.library-card-category{font-size:9px;line-height:20px}.catalog-layout .library-card-info h2{flex:1 1 0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.library-card-category{max-width:45%}.header-actions .text-button{background:#f3f3f3}}
+@media(max-width:450px){.catalog-layout .library-card-info{padding-top:10px;min-height:32px}.library-card-category{font-size:9px}}
+@media(prefers-reduced-motion:reduce){}
+
+/* Match the original catalog selector so its sticky rule cannot pin the header. */
+body:has(.catalog-layout) .site-header{position:relative;top:auto}
+/* Three columns keep previews legible while showing roughly three rows on desktop. */
+@media(min-width:901px){.catalog-layout .library-grid,.catalog-layout .library-grid:has(.category-card){grid-template-columns:repeat(3,minmax(0,1fr))}.catalog-layout .library-visual,.catalog-layout .category-card .library-visual{height:clamp(166px,19vh,220px);aspect-ratio:auto}}
+/* Optional comparison: four columns, approximately two complete rows per viewport. */
+@media(min-width:901px){html[data-catalog-layout="2x4"] .catalog-layout .library-grid,html[data-catalog-layout="2x4"] .catalog-layout .library-grid:has(.category-card){grid-template-columns:repeat(4,minmax(0,1fr))}html[data-catalog-layout="2x4"] .catalog-layout .library-visual,html[data-catalog-layout="2x4"] .catalog-layout .category-card .library-visual{height:clamp(180px,calc((100dvh - 282px)/2),360px)}}
+
+/* Website controls share the card's rounded rectangle. Authored demo targets are excluded. */
+:root{--ui-corner:32px}
+:is(.catalog-overview,.catalog-parent,.catalog-children a,.catalog-nav-head>button,.catalog-parent>button,.primary-button,.secondary-button,.text-button,.replay-button,.segmented,.segmented>button,.history-groups>button,.output-footer>button,.library-empty>button,.editor-breadcrumb .editor-back-link,.app-dialog .primary-button,.export-options>button,.library-touch-preview):not(:where(.history-canvas *, .demo-stage *)),.catalog-layout .library-card[data-tone] .library-visual{border-radius:var(--ui-corner)}
+
+/* CSS Borders 4: K=2 means exponent 4. At the straight-edge joins, the first
+   three normal derivatives vanish, giving G3 geometry. Engines rasterize it.
+   https://www.w3.org/TR/css-borders-4/#corner-shape
+   Older engines retain the ordinary rounded-rectangle fallback above. */
+@supports(corner-shape:superellipse(2)){
+ :is(.catalog-overview,.catalog-parent,.catalog-children a,.catalog-nav-head>button,.catalog-parent>button,.primary-button,.secondary-button,.text-button,.replay-button,.segmented,.segmented>button,.history-groups>button,.output-footer>button,.library-empty>button,.editor-breadcrumb .editor-back-link,.app-dialog .primary-button,.export-options>button,.library-touch-preview):not(:where(.history-canvas *, .demo-stage *)),.catalog-layout .library-card[data-tone] .library-visual{corner-shape:superellipse(2)}
+}
+
+/* No click/focus rings. Keyboard navigation keeps an underline cue instead. */
+:is(a,button,input,select,textarea,summary,[tabindex]):focus,:is(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:none!important}
+.catalog-layout .library-card:focus-within,.catalog-layout .library-card:hover{outline:none;box-shadow:none}
+.toggle-label input:focus-visible+.toggle-track{outline:none}
+:is(a,button,summary):focus-visible{ text-decoration:underline;text-underline-offset:4px }
+.catalog-layout .library-card:has(.library-card-link:focus-visible) .library-card-info h2{text-decoration:underline;text-underline-offset:4px}
+
+/* TuneShape's application chrome, separate from the motion teaching scenes. */
+.brand strong{font-family:Doto,Arial,sans-serif;font-size:29px;font-weight:750;letter-spacing:-1px;line-height:1}
+.editor-breadcrumb{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:44px}
+.editor-breadcrumb .editor-back-link{display:grid;place-items:center;flex:none;width:44px;height:44px;padding:0;margin:0 auto 0 0;border:0;background:transparent;color:#171717}
+.editor-breadcrumb .editor-back-link:hover{background:transparent;box-shadow:none}
+.editor-path{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap;min-width:0;margin-left:auto;text-align:right}
+.playback-controls .playback-icon{display:grid;place-items:center;width:40px;height:40px;min-width:40px;padding:0;margin-left:3px}
+.effect-select-field{display:grid;gap:10px;margin:20px 0;font-size:12px;font-weight:500}
+.effect-select-field select{width:100%;font-weight:400}
+.effect-color-field{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;margin:20px 0}
+.effect-color-field input{width:42px;height:30px;flex:none;padding:0;border:0;border-radius:8px;background:transparent;cursor:pointer}
+.effect-color-field input::-webkit-color-swatch-wrapper{padding:0}
+.effect-color-field input::-webkit-color-swatch{border:1px solid #00000012;border-radius:8px}
+.sculpt-trigger [data-part=chevron]{float:right;display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;transform-origin:center}
+@media(max-width:600px){.brand strong{font-size:26px}.editor-breadcrumb{gap:10px}.editor-path{gap:7px;font-size:10px}.playback-controls .playback-icon{width:36px;height:36px;min-width:36px}}

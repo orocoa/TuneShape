@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "finger-tap",
+  "durationMs": 1200,
+  "delayMs": 0,
+  "easing": [
+    0.42,
+    0,
+    0.58,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": true,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "finger0",
+      "property": "rotate",
+      "values": [
+        10,
+        50,
+        10,
+        10
+      ],
+      "times": [
+        0,
+        0.4,
+        0.5,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "finger0",
+      "property": "scale",
+      "values": [
+        0.4,
+        0.4
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "finger1",
+      "property": "rotate",
+      "values": [
+        10,
+        10,
+        50,
+        10,
+        10
+      ],
+      "times": [
+        0,
+        0.08333333333333333,
+        0.48333333333333334,
+        0.5833333333333334,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "finger1",
+      "property": "scale",
+      "values": [
+        0.6,
+        0.6
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "finger2",
+      "property": "rotate",
+      "values": [
+        10,
+        10,
+        50,
+        10,
+        10
+      ],
+      "times": [
+        0,
+        0.16666666666666666,
+        0.5666666666666667,
+        0.6666666666666666,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "finger2",
+      "property": "scale",
+      "values": [
+        0.8,
+        0.8
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "finger3",
+      "property": "rotate",
+      "values": [
+        10,
+        10,
+        50,
+        10,
+        10
+      ],
+      "times": [
+        0,
+        0.25,
+        0.65,
+        0.75,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "finger3",
+      "property": "scale",
+      "values": [
+        1,
+        1
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+/* Keep the catalog card's 32px, K=2 corners on application chrome and preview
+   containers. Motion scenes retain their authored shapes and adjustable radii.
+   Engines without corner-shape retain the rounded-rectangle fallback. */
+:root{--ui-corner:32px;--ui-corner-shape:superellipse(2)}
+
+/* Rectangular interface surfaces. Transparent layout wrappers stay unpainted. */
+:is(
+ .catalog-layout .library-card[data-tone] .library-visual,
+ .workspace .preview-card,.history-lab .preview-card,
+ .history-demo,.history-canvas,
+ .app-dialog,.catalog-mobile-panel,.toast,.library-count,.library-play-indicator,.catalog-skip-link,
+ .site-header button,.catalog-layout button,
+ .catalog-overview,.catalog-parent,.catalog-children a,
+ .workspace button,.history-lab button,.app-dialog button,
+ .segmented,.description-mark,.source-badge,.rule-badge,.export-icon,
+ .control-footnote,.state-strip,.file-picker,
+ .workspace pre,.history-lab pre,.curve-graph,
+ .album-upload,.album-cover-row img,
+ .page-shell select,.app-dialog select,
+ .page-shell textarea,.app-dialog textarea,
+ .page-shell input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=color]):not([type=file]),
+ .app-dialog input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=color]):not([type=file]),
+ .effect-color-field input[type=color],
+ .gooey-field,.gooey-trigger,.gooey-surface-field,.gooey-surface-bubble,.gooey-bubble
+):not(:where(.history-canvas *, .demo-stage *)){border-radius:var(--ui-corner);corner-shape:var(--ui-corner-shape)}
+
+.effect-color-field input[type=color]:not(:where(.history-canvas *, .demo-stage *))::-webkit-color-swatch{border-radius:var(--ui-corner);corner-shape:var(--ui-corner-shape)}
+.file-picker input[type=file]:not(:where(.history-canvas *, .demo-stage *))::file-selector-button{border-radius:var(--ui-corner);corner-shape:var(--ui-corner-shape)}

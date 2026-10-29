@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "period-drop",
+  "durationMs": 1567,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "typography": {
+    "kind": "period-drop",
+    "text": "Tuneshape",
+    "fontSize": 160,
+    "fontWeight": 800,
+    "color": "#171717",
+    "dotColor": "#737373",
+    "dotSize": 0.2
+  }
+}

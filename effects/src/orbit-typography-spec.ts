@@ -1,0 +1,42 @@
+import type {HistoryConfig} from './history-model';
+import type {Description} from './model';
+import type {NativeEffectRuntime} from './native-effect-tools';
+import {typographyDefaults,typographyDurations,type TypographyId,isTypography} from './typography-settings';
+import {createTypography,typographyEngineCode} from './typography-engine';
+import {createAppOrbit,appOrbitEngineCode} from './app-orbit-engine';
+import {defaultAppOrbit} from './app-orbit-settings';
+export const studioMeta={
+ 'app-orbit':{label:'几何封面轨道',english:'Geometric App Orbit',duration:650,note:'几何封面沿立体轨道旋转，支持拖拽惯性、聚焦与底部快捷选择。'},
+ 'typewriter-text':{label:'逐字打出',english:'Typewriter Text',duration:typographyDurations['typewriter-text'],note:'文字按固定速度逐字打出，末尾光标按时间闪烁。'},
+ 'soft-blur-in':{label:'柔焦入场',english:'Soft Blur In',duration:2000,note:'文字逐字从轻微上移与柔焦中变得清晰。'},
+ 'short-slide-down':{label:'落词堆叠',english:'Short Slide Down',duration:2000,note:'词语从上方依次落下，整组位置随词数调整并始终居中。'},
+ 'kinetic-center-build':{label:'居中推词',english:'Kinetic Center Build',duration:2000,note:'词语从右侧进入，推挤已有文字，逐步组成居中的完整短句。'},
+ 'period-drop':{label:'句点弹落',english:'Period Drop',duration:1567,note:'字母上升入场，句点从上方落下并以拉伸、压扁和两次回弹收尾。'},
+ 'outline-trace':{label:'字形描边',english:'Outline Trace',duration:1467,note:'沿真实字形轮廓逐字描绘，再由下往上填充字面。'},
+ 'glyph-anatomy':{label:'字形构建',english:'Glyph Anatomy',duration:2200,note:'显示度量线、轮廓锚点和贝塞尔手柄，字形从线段构建为曲线。'},
+} as const;
+export type StudioId=keyof typeof studioMeta;
+export const studioIds=Object.keys(studioMeta) as StudioId[];
+export const isStudioEffect=(id:string):id is StudioId=>Object.hasOwn(studioMeta,id);
+export const studioRuntime=(c:HistoryConfig)=>({durationMs:c.durationMs,delayMs:c.delayMs,loop:c.loop});
+export const studioSettings=(c:HistoryConfig)=>isTypography(c.recipeId)?c.typography??typographyDefaults[c.recipeId]:c.appOrbit??defaultAppOrbit;
+export function createStudioEffect(host:HTMLElement,c:HistoryConfig,r:NativeEffectRuntime){
+ if(isTypography(c.recipeId)){const engine=createTypography(host,c.typography??typographyDefaults[c.recipeId],r);return {demonstrate:engine.demonstrate,settle:engine.settle,getValue:engine.getValue,destroy:engine.destroy,update(next:HistoryConfig,runtime:NativeEffectRuntime){engine.update(next.typography??typographyDefaults[next.recipeId as TypographyId],runtime)}}}
+ const engine=createAppOrbit(host,c.appOrbit??defaultAppOrbit,r);return {demonstrate:engine.demonstrate,getValue:engine.getValue,destroy:engine.destroy,update(next:HistoryConfig,runtime:NativeEffectRuntime){engine.update(next.appOrbit??defaultAppOrbit,runtime)}};
+}
+export function studioDescription(c:HistoryConfig,language:'zh'|'en'='zh'):Description{
+ const meta=studioMeta[c.recipeId as StudioId],en=language==='en',type=isTypography(c.recipeId),s=c.typography,section=(label:string,zh:string,english:string)=>({label,text:en?english:zh});
+ return {title:en?meta.english:meta.label,summary:en?meta.english:meta.note,sections:[
+  section('组件',meta.label+' · '+meta.english,meta.english),
+  section('触发方式',type?'详情进入时播放一次；点击文字、Enter、空格或工具栏播放按钮可重播。目录悬停演示，离开后显示完整文字。':'自动旋转；拖动轨道改变方向与俯仰，释放后保留惯性；滚轮缩放。点击封面或底部按钮聚焦。方向键切换，Home 或 Escape 复位，空格暂停或继续自动旋转。',type?'Play once on detail entry; click, Enter, Space or Play to replay. Catalog hover demonstrates; leaving retains readable text.':'Auto-orbit; drag for inertial yaw and pitch, scroll to zoom. Click a cover or dock button to focus. Arrows select, Home/Escape reset, Space toggles auto-orbit.'),
+  section('起点与终点',meta.note,({'app-orbit':'Original geometric covers travel in a WebGL ring with beveled material, environment lighting, depth and a dock; CSS 3D is the compatibility fallback.','typewriter-text':'Reveal Unicode code points at a fixed rate; a deterministic block cursor blinks every 500ms.','soft-blur-in':'Characters fade in, drift upward and sharpen individually.','short-slide-down':'Each word occupies a line; earlier words move down while the growing stack stays centered.','kinetic-center-build':'Measure word widths and rebalance the growing line as each word enters from the right.','period-drop':'Letters rise through a clip. The inline period falls, stretches and bounces twice before settling.','outline-trace':'Trace actual glyph contours, then wipe the fill upward within the glyph.','glyph-anatomy':'Font metric guides appear; anchors and cubic handles construct the contours before fill.'})[c.recipeId as StudioId]),
+  section('进入与退出',type?'入场按完整文字时间线展开，完成后保持清晰可读；重播重新执行入场。':'封面沿环形轨道排列；切换聚焦时保持当前位置并吸附到新的正面目标。',type?'Complete the full entrance and retain readable text; replay restarts the entrance.':'Keep the current orbital pose and settle toward the newly selected front-facing target.'),
+  section('来源','浏览器渲染器由 TuneShape 接入；来源与完整许可证保存在导出记录和第三方声明中。','Integrated browser renderer by TuneShape; reference and full license records accompany exports and third-party notices.'),
+  section('内容与参数',`当前保存设置：${JSON.stringify(studioSettings(c))}。文字采用 1280×720 参考画布，预览按可用空间等比缩放。`, `Saved settings: ${JSON.stringify(studioSettings(c))}. Typography uses a 1280×720 reference canvas with proportional preview scaling.`),
+  section('时序',`时长基准 ${c.durationMs} ms，起始延迟 ${c.delayMs} ms。${s?.kind==='typewriter-text'?`打字速度 ${s.charsPerSecond} 字符/秒，完整打字需要 ${Math.ceil(Array.from(s.text).length/(s.charsPerSecond??22)*1000)} ms；总播放至少持续到文字打完。`:type?'按完整时间线缩放，最后一个字符也会到达终点。':'聚焦吸附使用此响应基准，自动旋转速度单独调节。'}`,`Duration basis ${c.durationMs} ms; delay ${c.delayMs} ms. ${s?.kind==='typewriter-text'?`Type at ${s.charsPerSecond} code points/second; finish all characters even when longer than the duration basis.`:type?'Scale the full timeline so every character completes.':'Focus response uses this duration; orbit rate is independent.'}`),
+  section('重复操作与打断','重播从头开始；暂停、预览隐藏和页面后台冻结当前时钟。实际旋转角度、选择、观察倍速和播放进度不写入配置。改动参数会同步预览、说明、Motion、JSON 与导出。','Replay restarts. Pause, inactive previews and background pages freeze the clock. Live angles, selection, observation speed and progress are transient. Settings drive previews, descriptions, Motion, JSON and exports.'),
+  section('减少动态效果','直接显示完整文字与静态几何轨道，保留点击聚焦与键盘选择，不自动旋转。','Show complete text and a static orbit. Keep focus/keyboard selection without automatic motion.'),
+  ...(['outline-trace','glyph-anatomy'].includes(c.recipeId)?[section('字形范围','内置 Inter ExtraBold 拉丁轮廓与Noto Sans SC常用中文轮廓，共 7738 个字形；固定 800 字重。离线字形库不含的字符会在输入时提示。','Built-in Inter ExtraBold Latin and Noto Sans SC Chinese contours: 7,738 glyphs. Fixed 800 weight. Unsupported characters are reported by the editor.')]:[]),
+ ]};
+}
+export function studioMotion(c:HistoryConfig){const id=c.recipeId as StudioId,type=isTypography(id),key=type?'typography':'appOrbit',name=type?'createTypography':'createAppOrbit';return {component:studioMeta[id].english,terminology:{id,englishTerm:studioMeta[id].english},sourceNotice:{source:type?'https://remocn.dev/docs/typography/'+(id==='typewriter-text'?'typewriter':id):'https://threeui.com/three-js/app-orbit',license:type?'MIT, Copyright (c) 2026 Remocn. Browser timeline adaptation by TuneShape. Scoped Geist and Inter fonts; font outlines: Inter and Noto Sans SC, SIL OFL 1.1; full licenses in THIRD_PARTY_NOTICES.txt.':'Independent TuneShape implementation, project MIT. Public visual reference only; Pro source not obtained or redistributed. Original TuneShape geometric covers, MIT. Three.js renderer, MIT; CSS 3D compatibility fallback.'},forward:[],reverse:[],policies:{repeat:0,reduceMotion:'readable static result; preserve input',observationSpeed:'runtime.speed only'},adapters:{[key]:{settings:studioSettings(c),runtime:studioRuntime(c),engineCode:type?typographyEngineCode(id==='outline-trace'||id==='glyph-anatomy'):appOrbitEngineCode,usage:`Evaluate engineCode; call ${name}(emptyElement,settings,{enabled:true,paused:false,reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,speed:1,language:'zh',...runtime,onRunning,onChange}). Call demonstrate(), update(settings,fullRuntime), getValue(), destroy(). Apply offsets/scale to an outer wrapper. Glyph outlines and geometric covers are embedded; no network requests.`}}}}

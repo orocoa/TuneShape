@@ -1,0 +1,5 @@
+User-provided screen recording (2026-10-21); https://varieties.worldcoffeeresearch.org
+
+TuneShape independent implementation: MIT. Reference recording author and license are unknown; no reference code or media is distributed.
+
+Reimplemented from visual observation, then changed at user request to a straight wheel, distance blur and inertial snapping. Coffee facts paraphrased from World Coffee Research on 2026-10-22.

@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Cite the repository and retain each effect's source notice when reusing code."
+type: software
+title: "TuneShape: open-source UI motion effects"
+authors:
+  - name: "TuneShape contributors"
+repository-code: "https://github.com/orocoa/TuneShape"
+url: "https://tuneshape.kai-nex.com/"
+license: MIT
+keywords:
+  - ui-animation
+  - motion
+  - react
+  - typescript
+  - animation-examples

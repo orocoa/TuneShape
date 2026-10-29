@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "glass-radio",
+  "durationMs": 500,
+  "delayMs": 0,
+  "easing": [
+    0.37,
+    1.95,
+    0.66,
+    0.56
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "glider",
+      "property": "x",
+      "values": [
+        "0%",
+        "100%"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "finish0",
+      "property": "opacity",
+      "values": [
+        1,
+        0
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.8
+    },
+    {
+      "part": "finish1",
+      "property": "opacity",
+      "values": [
+        0,
+        1
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.8
+    },
+    {
+      "part": "finish2",
+      "property": "opacity",
+      "values": [
+        0,
+        0
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.8
+    },
+    {
+      "part": "label0",
+      "property": "color",
+      "values": [
+        "#303640",
+        "#68717d"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.6
+    },
+    {
+      "part": "label1",
+      "property": "color",
+      "values": [
+        "#68717d",
+        "#303640"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.6
+    },
+    {
+      "part": "label2",
+      "property": "color",
+      "values": [
+        "#68717d",
+        "#68717d"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.6
+    }
+  ],
+  "glass": {
+    "theme": "light",
+    "motion": "spring",
+    "bounce": 0.24
+  }
+}

@@ -1,0 +1,83 @@
+:root{--accent:#171717;--preview-surface:#f1f1f1}
+.toast{background:#171717}
+input[type=range]{background:linear-gradient(to right,#171717 0%,#171717 var(--fill),#e2e2e2 var(--fill),#e2e2e2 100%)}
+.catalog-layout .library-basic-preview .demo-button,.workspace .preview-card .demo-button,.workspace .preview-card .demo-button:hover,.reuse-demo .demo-button,.reuse-demo .demo-button:hover{background:#fff;color:#171717;border-color:#e2e2e2;box-shadow:0 5px 9px #0000000d}
+.catalog-layout .library-basic-preview .demo-button,.catalog-layout .sculpt-tile,.workspace .preview-card .demo-button,.history-lab .sculpt-tile,.reuse-demo .demo-button,.reuse-demo .sculpt-tile{width:216px;min-width:216px;height:64px;padding:0 24px;justify-content:space-between;gap:16px;font-size:16px;font-weight:500;line-height:1.25;border-radius:10px}
+.workspace .demo-button .demo-arrow,.catalog-layout .library-basic-preview .demo-button .demo-arrow,.sculpt-tile .demo-arrow,.reuse-demo .demo-button .demo-arrow{width:20px;height:20px;flex:none}
+.catalog-layout .library-count{color:#171717}
+.source-badge,.description-mark{background:#f1f1f1;color:#555}
+.control-footnote{background:#f5f5f5;color:#777}
+.control-footnote p,.control-footnote .mini-spark,.output-footer,.output-footer>button,.history-adaptation{color:#777}
+.output-toolbar [role=tab].selected:after{background:#171717}
+.editor-breadcrumb,.history-demo-state,.history-track-summary,.history-control-label{color:#777}
+.history-track-details summary{color:#777}.history-track-details pre{color:#555}
+.app-dialog>p,.app-dialog small,.dialog-note,.export-icon{color:#777}
+.app-dialog .export-icon{background:#f1f1f1}.app-dialog .glossary-list :is(p,span){color:#777}
+:is(.workspace,.history-lab) .preview-card:is(.before,.after){background:var(--preview-surface)}
+.catalog-layout .library-card[data-tone] .library-visual{background:var(--preview-surface)}
+.library-card[data-library-effect] .library-visual{cursor:pointer}
+.workspace{grid-template-columns:minmax(0,1fr) var(--editor-controls-width,288px)}
+.workspace>.control-panel{grid-column:2;grid-row:1}
+.workspace>.main-column{grid-column:1;grid-row:1}
+.sculpt-morph{left:50%;top:50%;translate:-50% -50%}
+.sculpt-trigger,.sculpt-menu{left:50%;translate:-50% 0;border-color:#e0e0e0}
+.sculpt-trigger{top:67px}.sculpt-menu{top:120px}
+.sculpt-menu-item>span{color:#aaa}
+.sculpt-tooltip-anchor{background:#e4e4e4;border-color:#ddd;color:#171717}
+.sculpt-tooltip{left:50%;top:45px;translate:-50% 0;white-space:nowrap;background:#171717;pointer-events:none}
+.sculpt-tooltip:after{left:calc(50% - 5px);right:auto}
+.sculpt-toast{background:#171717}
+.sculpt-progress-track{background:#ddd}.sculpt-progress-track>div{background:#171717}
+.sculpt-spinner{border-color:#d4d4d4;border-top-color:#171717}
+.sculpt-dots>div{background:#717171}.sculpt-pulse>div{background:#929292}
+.sculpt-wave-ball{background:#171717}.sculpt-wave-bar{background:#999}
+.sculpt-letters,.sculpt-scramble{color:#171717}
+.scramble-copy{width:280px;white-space:normal;text-align:center}
+.scramble-copy .scramble-line-break{display:block;width:100%;height:0;line-height:0}
+.scramble-cell{position:relative;display:inline-block;width:1ch;text-align:center;white-space:pre}
+.scramble-noise-char{position:absolute;inset:0;pointer-events:none;user-select:none;opacity:0}
+.scramble-cell.is-framed:after{content:'';position:absolute;inset:10% 0 8%;border:1px solid currentColor;opacity:.32;pointer-events:none}
+.sculpt-document,.sculpt-morph,.sculpt-page,.sculpt-sheet,.sculpt-list-item{border-color:#ddd}
+.sculpt-placeholder i,.sculpt-document i{background:#dedede}
+/* Ariadne folder geometry and three paper layers; original source files stay untouched. */
+.sculpt-folder{width:240px;height:148.7px;perspective:1300px;transform-style:preserve-3d}
+.catalog-layout .library-visual .sculpt-folder{scale:.72}
+.sculpt-folder,.sculpt-tooltip-anchor{cursor:pointer}
+.sculpt-folder-back{inset:0;border:0;border-radius:0;background:transparent;transform:translateZ(-4px);color:#fff;backface-visibility:hidden}
+.sculpt-folder-back:before{content:none}
+.sculpt-folder-back svg{display:block;width:100%;height:100%}
+.sculpt-folder-paper{height:61.77%;left:7.86%;right:7.86%;top:18.67%;padding:14px;border-radius:12px;border:1px solid #d4d4d4;background:#fff;box-shadow:0 10px 22px #2222220e;transform-origin:bottom center;backface-visibility:hidden}
+.sculpt-folder-paper.paper-3{background:#f2f2f2;z-index:1}
+.sculpt-folder-paper.paper-2{background:#f6f6f6;z-index:2}
+.sculpt-folder-paper.paper-1{background:#fff;z-index:3}
+.sculpt-folder-paper i{display:block;height:3px;width:58%;margin-top:7px;border-radius:10px;background:#dedede}
+.sculpt-folder-paper i:nth-child(2){width:78%}.sculpt-folder-paper i:nth-child(3){width:42%}
+.sculpt-folder-front{inset:9.4% 0 0;height:auto;padding:0;border:1px solid #e1e1e1;border-radius:12px;background:#fbfbfb;transform-origin:bottom center;transform-style:preserve-3d;backface-visibility:hidden;z-index:4}
+.curve-settings{margin-top:28px}
+.curve-editor{margin-top:16px;color:#171717}
+.curve-editor-heading{display:flex;justify-content:space-between;align-items:center;font-size:11px;margin-bottom:10px}
+.curve-editor-heading output{font-size:10px;color:#888}
+.curve-graph{display:block;width:100%;height:auto;background:var(--preview-surface);border-radius:14px;touch-action:none;user-select:none;cursor:crosshair;overflow:visible}
+.curve-grid path{fill:none;stroke:#ddd;stroke-width:.7;pointer-events:none}
+.curve-polygon{fill:none;stroke:#aaa;stroke-width:1;stroke-dasharray:3 3;pointer-events:none}
+.curve-line{fill:none;stroke:#171717;stroke-width:2;pointer-events:none}
+.curve-line-hit{fill:none;stroke:transparent;stroke-width:18;pointer-events:stroke;cursor:crosshair}
+.curve-point{cursor:grab;outline:none}
+.curve-point-hit{fill:transparent;stroke:none;pointer-events:all}
+.curve-handle{fill:#fff;stroke:#171717;stroke-width:2;cursor:grab}
+.curve-point .curve-handle{pointer-events:none}
+.curve-anchor .curve-handle{fill:#171717}
+.curve-point.selected .curve-handle{fill:#171717;stroke-width:3}
+.curve-anchor.selected .curve-handle{fill:#fff}
+.curve-point:focus-visible .curve-handle{stroke:#171717;stroke-width:3}
+.curve-line-hit:focus-visible{stroke:#17171720;outline:none}
+.curve-graph.is-dragging,.curve-graph.is-dragging *{cursor:grabbing}
+.curve-handle:active{cursor:grabbing}
+
+@media(max-width:800px){
+ .workspace{display:flex;flex-direction:column}
+ .workspace>.main-column{display:contents}
+ .workspace>.control-panel{width:100%;order:1}
+ .workspace .main-column>.preview-panel{width:100%;order:0}
+ .workspace .main-column>.output-panel{width:100%;order:2}
+}

@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "text-rise",
+  "durationMs": 1160,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": true,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "char0",
+      "property": "y",
+      "values": [
+        "105%",
+        "0%"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.7724137931034483
+    },
+    {
+      "part": "char1",
+      "property": "y",
+      "values": [
+        "105%",
+        "0%"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0.028448275862068967,
+      "span": 0.7724137931034483
+    },
+    {
+      "part": "char2",
+      "property": "y",
+      "values": [
+        "105%",
+        "0%"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0.056896551724137934,
+      "span": 0.7724137931034483
+    },
+    {
+      "part": "char3",
+      "property": "y",
+      "values": [
+        "105%",
+        "0%"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0.0853448275862069,
+      "span": 0.7724137931034483
+    },
+    {
+      "part": "char4",
+      "property": "y",
+      "values": [
+        "105%",
+        "0%"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0.11379310344827587,
+      "span": 0.7724137931034483
+    },
+    {
+      "part": "char5",
+      "property": "y",
+      "values": [
+        "105%",
+        "0%"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0.14224137931034483,
+      "span": 0.7724137931034483
+    },
+    {
+      "part": "char6",
+      "property": "y",
+      "values": [
+        "105%",
+        "0%"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0.1706896551724138,
+      "span": 0.7724137931034483
+    },
+    {
+      "part": "char7",
+      "property": "y",
+      "values": [
+        "105%",
+        "0%"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0.19913793103448277,
+      "span": 0.7724137931034483
+    },
+    {
+      "part": "char8",
+      "property": "y",
+      "values": [
+        "105%",
+        "0%"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0.22758620689655173,
+      "span": 0.7724137931034483
+    }
+  ]
+}

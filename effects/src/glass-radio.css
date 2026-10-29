@@ -1,0 +1,25 @@
+/* Adapted from Uiverse.io / chase2k25 under MIT. */
+.glass-radio-stage{width:294px;background:#17171b;border-radius:1rem;pointer-events:auto}
+.glass-radio-group{--bg:rgba(255,255,255,.06);--text:#e5e5e5;display:flex;position:relative;width:100%;background:var(--bg);border-radius:1rem;backdrop-filter:blur(12px);box-shadow:inset 1px 1px 4px #fff3,inset -1px -1px 6px #0000004d,0 4px 12px #00000026;overflow:hidden}
+.glass-radio-option{flex:1;min-width:0;position:relative;z-index:2}
+.glass-radio-option label{display:flex;align-items:center;justify-content:center;width:100%;min-height:52px;padding:.8rem .6rem;font-size:14px;font-weight:600;letter-spacing:.3px;cursor:pointer;color:var(--text);position:relative;text-shadow:0 1px 2px #0009;white-space:nowrap}
+.glass-radio-input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.glass-radio-input:focus-visible+label{outline:2px solid #fff;outline-offset:-5px;border-radius:1rem}
+.glass-radio-input:disabled+label{cursor:default}
+.glass-radio-option label:hover{filter:brightness(1.12)}
+.glass-radio-glider{position:absolute;top:0;bottom:0;left:0;width:calc(100% / 3);border-radius:1rem;z-index:1}
+.glass-radio-finish{position:absolute;inset:0;border-radius:1rem}
+.glass-radio-finish.finish-0{background:linear-gradient(135deg,#c0c0c055,#e0e0e0);box-shadow:0 0 18px #c0c0c080,inset 0 0 10px #ffffff66}
+.glass-radio-finish.finish-1{background:linear-gradient(135deg,#ffd70055,#fc0);box-shadow:0 0 18px #ffd70080,inset 0 0 10px #ffeb9666}
+.glass-radio-finish.finish-2{background:linear-gradient(135deg,#d0e7ff55,#a0d8ff);box-shadow:0 0 18px #a0d8ff80,inset 0 0 10px #c8f0ff66}
+
+/* The light adaptation keeps a milky glass shell and restrained metallic tints. */
+[data-glass-theme="light"] .glass-radio-stage{background:linear-gradient(145deg,#f8f9fb,#e7eaee);border-radius:1rem;box-shadow:0 8px 22px #2634460c,0 2px 5px #26344608}
+[data-glass-theme="light"] .glass-radio-group{--bg:rgba(255,255,255,.6);--text:#68717d;box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #c4cbd43b,0 0 0 1px #c0c7d02e}
+[data-glass-theme="light"] .glass-radio-option label{font-weight:500;text-shadow:0 1px 0 #ffffffb3}
+[data-glass-theme="light"] .glass-radio-option label:hover{filter:brightness(.85)}
+[data-glass-theme="light"] .glass-radio-input:focus-visible+label{outline-color:#68717d}
+[data-glass-theme="light"] .glass-radio-finish{border:1px solid #ffffffcf}
+[data-glass-theme="light"] .glass-radio-finish.finish-0{background:linear-gradient(135deg,#fff 4%,#f8f9fc 48%,#e8edf3 100%);box-shadow:inset 0 1px 2px #fff,inset 0 -1px 2px #b1bcc522,0 2px 7px #3443531a}
+[data-glass-theme="light"] .glass-radio-finish.finish-1{background:linear-gradient(135deg,#fffefb 4%,#faf6eb 48%,#ede2c9 100%);box-shadow:inset 0 1px 2px #fff,inset 0 -1px 2px #c5b58d22,0 2px 7px #6458361a}
+[data-glass-theme="light"] .glass-radio-finish.finish-2{background:linear-gradient(135deg,#fff 4%,#f0f8fc 48%,#dcecf5 100%);box-shadow:inset 0 1px 2px #fff,inset 0 -1px 2px #a9c1d022,0 2px 7px #3453661a}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "ascii-wave",
+  "durationMs": 4000,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": true,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "ascii",
+      "property": "asciiPhase",
+      "values": [
+        0,
+        6.283185307
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    }
+  ],
+  "ascii": {
+    "characters": "cyslap",
+    "opacity": 0.77,
+    "fontSize": 6.8,
+    "density": 1.1,
+    "speed": 2.8,
+    "direction": 65,
+    "twist": 2,
+    "tension": 0.4,
+    "color": "#212121",
+    "pointerStrength": 1,
+    "pointerRadius": 100
+  }
+}

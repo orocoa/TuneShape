@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "watercolor-original",
+  "durationMs": 12000,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": true,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "watercolor",
+      "property": "watercolorTime",
+      "values": [
+        0,
+        12
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    }
+  ],
+  "watercolor": {
+    "color1": "#0A0A0A",
+    "color2": "#E0E0E0",
+    "speed": 0.6,
+    "scale": 0.6,
+    "warpSpeed": 0.08,
+    "opacity": 1,
+    "brightness": 0.15,
+    "cursorInteraction": false,
+    "cursorIntensity": 1
+  }
+}

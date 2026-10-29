@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "outline-trace",
+  "durationMs": 1467,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "typography": {
+    "kind": "outline-trace",
+    "text": "Outline",
+    "fontSize": 150,
+    "fontWeight": 800,
+    "color": "#171717",
+    "strokeColor": "#171717",
+    "strokeWidth": 2.5,
+    "stagger": 3,
+    "fill": true,
+    "keepStroke": false
+  }
+}

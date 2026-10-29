@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "short-slide-down",
+  "durationMs": 2000,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "typography": {
+    "kind": "short-slide-down",
+    "text": "Build from above.",
+    "fontSize": 72,
+    "fontWeight": 600,
+    "color": "#171717",
+    "entryOffset": 28
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "elastic-reel",
+  "durationMs": 800,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": true,
+  "interruption": "retarget",
+  "tracks": [],
+  "reel": {
+    "barWidth": 44,
+    "barHeight": 0.5,
+    "gap": 10,
+    "radius": 12,
+    "magnify": 2.4,
+    "influence": 200,
+    "openSize": 0.72,
+    "openAspect": 1,
+    "elasticity": 0.35,
+    "align": "center",
+    "autoplay": "sweep",
+    "speed": 1.4,
+    "interval": 4
+  }
+}

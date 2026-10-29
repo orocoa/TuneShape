@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "coffee-selector",
+  "durationMs": 460,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "coffeeSelector": {
+    "items": [
+      "Geisha",
+      "Bourbon",
+      "SL28",
+      "Typica",
+      "Pacamara"
+    ],
+    "selectedIndex": 0,
+    "width": 280,
+    "rowHeight": 48,
+    "radius": 24,
+    "fontSize": 16,
+    "blur": 2.4,
+    "fade": 0.22,
+    "bounce": 0.12,
+    "disabled": false
+  }
+}

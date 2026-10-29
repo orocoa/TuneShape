@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "text-scramble",
+  "durationMs": 200,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "scramble",
+      "property": "textProgress",
+      "values": [
+        0,
+        1
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "scramble",
+      "property": "y",
+      "values": [
+        0,
+        0
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    }
+  ]
+}

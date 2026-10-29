@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "pulse",
+  "durationMs": 1300,
+  "delayMs": 0,
+  "easing": [
+    0.42,
+    0,
+    0.58,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": true,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "face",
+      "property": "scale",
+      "values": [
+        0.9,
+        1.06,
+        0.9
+      ],
+      "times": [
+        0,
+        0.5,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "halo",
+      "property": "scale",
+      "values": [
+        1,
+        2.8,
+        1
+      ],
+      "times": [
+        0,
+        0.5,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "halo",
+      "property": "opacity",
+      "values": [
+        0.16,
+        0,
+        0.16
+      ],
+      "times": [
+        0,
+        0.5,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    }
+  ]
+}

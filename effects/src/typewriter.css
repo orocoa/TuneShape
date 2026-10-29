@@ -1,0 +1,15 @@
+/* Adapted from user-supplied Uiverse.io CSS by Nawsome.
+   Static geometry only: all moving parts use the shared Motion configuration. */
+.typewriter-stage{position:relative;width:120px;height:92px;transform:scale(.75)}
+.typewriter-stage .demo-typewriter{--body:#929292;--body-dark:#929292;--key:#fff;--paper:#f5f5f5;--text:#c6c6c6;--tool:#8c8c8c;position:absolute;left:0;top:26px;width:120px}
+.typewriter-carriage{position:relative;width:92px;height:20px;border-radius:3px;margin-left:14px;background:linear-gradient(var(--body),var(--body-dark))}
+.typewriter-carriage::before,.typewriter-carriage::after,.typewriter-carriage i::before{content:'';position:absolute;background:var(--tool)}
+.typewriter-carriage::before{width:2px;height:8px;top:6px;left:100%}
+.typewriter-carriage::after{left:94px;top:3px;height:14px;width:6px;border-radius:3px}
+.typewriter-carriage i{display:block;position:absolute;right:100%;width:6px;height:4px;top:4px;background:var(--tool)}
+.typewriter-carriage i::before{right:100%;top:-2px;width:4px;border-radius:2px;height:14px}
+.demo-typewriter .typewriter-paper{position:absolute;left:24px;top:-26px;width:40px;height:46px;border-radius:5px;background:var(--paper)}
+.typewriter-paper::before{content:'';position:absolute;left:6px;right:6px;top:7px;border-radius:2px;height:4px;transform:scaleY(.8);background:var(--text);box-shadow:0 12px 0 var(--text),0 24px 0 var(--text),0 36px 0 var(--text)}
+.typewriter-keyboard{width:120px;height:56px;margin-top:-10px;z-index:1;position:relative}
+.typewriter-keyboard::before{content:'';position:absolute;inset:0;border-radius:7px;background:linear-gradient(135deg,var(--body),var(--body-dark));transform:perspective(10px) rotateX(2deg);transform-origin:50% 100%}
+.demo-typewriter .typewriter-key{position:absolute;width:11px;height:4px;border-radius:2px;background:var(--key)}

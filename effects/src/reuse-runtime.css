@@ -1,0 +1,13 @@
+html,body{min-width:0;margin:0;background:#fff;color:#222}
+body{padding:clamp(8px,3vw,28px)}
+.reuse-demo{width:min(100%,900px);margin:0 auto;font-family:var(--font-body);--font-interface:var(--font-body)}
+.reuse-toolbar{display:flex;align-items:center;gap:12px;margin:0 0 16px;font-size:12px}
+.reuse-toolbar>button{padding:8px 14px;border:1px solid #ddd;background:#fff;border-radius:8px;cursor:pointer;font:inherit}
+.reuse-toolbar>button:focus-visible{outline:2px solid #333;outline-offset:3px}
+.reuse-toolbar>span{margin-left:auto;color:#777}
+.reuse-demo>.preview-card{min-height:360px;width:100%;margin:0;overflow:hidden}
+.reuse-demo .history-demo{height:400px;min-height:320px}
+.reuse-demo .history-canvas{height:100%!important;width:100%;min-height:0;background:transparent;border:0}
+.reuse-demo [data-recipe="glass-folder"]{height:480px}
+.reuse-demo .demo-stage{min-height:360px}
+@media(max-width:480px){.reuse-demo .history-demo{height:340px}.reuse-toolbar{gap:6px}.reuse-toolbar>span{font-size:10px}}

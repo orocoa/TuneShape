@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "hover-invert",
+  "durationMs": 220,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "face",
+      "property": "backgroundColor",
+      "values": [
+        "#ffffff",
+        "#171717"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "face",
+      "property": "color",
+      "values": [
+        "#171717",
+        "#ffffff"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    }
+  ]
+}

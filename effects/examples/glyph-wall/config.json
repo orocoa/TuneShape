@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "glyph-wall",
+  "durationMs": 2600,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": true,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "wall",
+      "property": "glyphPhase",
+      "values": [
+        0,
+        1
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    }
+  ],
+  "wall": {
+    "words": "HELLO|TUNESHAPE|EXPLORE|CREATE|IDEA|OROCOA",
+    "layout": "scatter",
+    "direction": "down",
+    "charset": "letters",
+    "fontSize": 14,
+    "density": 0.7,
+    "wallOpacity": 0.1,
+    "scrambleHz": 12,
+    "holdMs": 5000,
+    "restMs": 800,
+    "stagger": 0.5,
+    "bandWidth": 0.09,
+    "shuffle": true,
+    "color": "#171717",
+    "noiseColor": "#777777"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "hover-preview",
+  "durationMs": 200,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "hoverPreview": {
+    "imagePosition": "above",
+    "exitMs": 150,
+    "maxRotation": 12,
+    "maxOffset": 15,
+    "imageSize": 200,
+    "aspect": 1,
+    "radius": 12,
+    "shadow": true,
+    "targetPadding": 4
+  }
+}

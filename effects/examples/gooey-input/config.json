@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "gooey-input",
+  "durationMs": 400,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "gooeyInput": {
+    "placeholder": "Search...",
+    "defaultValue": "",
+    "collapsedWidth": 115,
+    "expandedWidth": 200,
+    "expandedOffset": 50,
+    "blur": 5,
+    "height": 40,
+    "bounce": 0.25,
+    "backgroundColor": "#929292",
+    "textColor": "#ffffff",
+    "disabled": false
+  }
+}

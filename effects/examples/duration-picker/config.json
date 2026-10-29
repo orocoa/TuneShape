@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "duration-picker",
+  "durationMs": 450,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "durationPicker": {
+    "hours": 7,
+    "minutes": 25,
+    "maxHours": 24,
+    "maxMinutes": 60,
+    "hoursLabel": "h",
+    "minutesLabel": "min",
+    "gap": 8,
+    "bounce": 0.12,
+    "height": 48,
+    "radius": 12,
+    "theme": "light",
+    "defaultEditing": false,
+    "disabled": false
+  }
+}

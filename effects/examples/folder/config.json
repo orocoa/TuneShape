@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "folder",
+  "durationMs": 640,
+  "delayMs": 0,
+  "easing": [
+    0.16,
+    1,
+    0.3,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "paper",
+      "property": "y",
+      "values": [
+        7,
+        -7
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.75
+    },
+    {
+      "part": "paper",
+      "property": "rotateX",
+      "values": [
+        0,
+        -7
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.75
+    },
+    {
+      "part": "front",
+      "property": "rotateX",
+      "values": [
+        0,
+        -30
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.71875
+    },
+    {
+      "part": "front",
+      "property": "y",
+      "values": [
+        0,
+        8
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.71875
+    }
+  ]
+}

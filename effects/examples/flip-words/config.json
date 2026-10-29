@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "flip-words",
+  "durationMs": 500,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": true,
+  "interruption": "retarget",
+  "tracks": [],
+  "flipWords": {
+    "words": [
+      "beautiful",
+      "modern",
+      "interactive",
+      "creative"
+    ],
+    "prefix": "Build",
+    "suffix": "websites with TuneShape",
+    "holdMs": 3000,
+    "staggerMs": 50,
+    "fontSize": 36,
+    "blur": 8,
+    "exitX": 40,
+    "exitY": -40,
+    "exitScale": 2,
+    "textColor": "#737373",
+    "wordColor": "#171717"
+  }
+}
