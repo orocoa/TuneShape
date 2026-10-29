@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "scope": "All 42 current UI effect renderers, bilingual runnable examples, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
-  "sourceSha256": "6c301727bf26ef99acf1fd4a5aafcc11260b7e519b6e155a7e9288a098f88479",
+  "sourceSha256": "52f232c306b5059c7edb5e383631244db2acfe5f44b8a835a5f7a835261b1a59",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -55,8 +55,8 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 3522,
-      "sha256": "be65f744512c582a4719460fc079d513125a8a05b7c50fc1b3267e6bd1101cd4"
+      "bytes": 4172,
+      "sha256": "3944d332e9cbd27c49b4ca271dcfcfb8b7fa58550646328cc61c8c8eb05c6335"
     },
     {
       "path": "docs/DISCOVERY.md",
