@@ -13,12 +13,12 @@
       "descriptionZh": "按钮按压反馈，使用时长型弹簧；420 ms / 回弹 0.25。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/basic-button",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/basic-button",
-      "license": "MIT",
-      "config": "examples/basic-button/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/button-press/",
         "en": "https://tuneshape.kai-nex.com/en/effects/button-press/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/basic-button/config.json"
     },
     {
       "id": "hover-invert",
@@ -29,12 +29,12 @@
       "descriptionZh": "悬停配色过渡 · 220 ms · Reprise",
       "editor": "https://tuneshape.kai-nex.com/#/effect/hover-invert",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/hover-invert",
-      "license": "MIT",
-      "config": "examples/hover-invert/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/hover-invert/",
         "en": "https://tuneshape.kai-nex.com/en/effects/hover-invert/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/hover-invert/config.json"
     },
     {
       "id": "duration-picker",
@@ -45,12 +45,12 @@
       "descriptionZh": "紧凑的时长输入，点击后弹开编辑，确认后重新合拢。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/duration-picker",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/duration-picker",
-      "license": "MIT",
-      "config": "examples/duration-picker/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/duration-picker/",
         "en": "https://tuneshape.kai-nex.com/en/effects/duration-picker/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/duration-picker/config.json"
     },
     {
       "id": "glass-radio",
@@ -61,12 +61,12 @@
       "descriptionZh": "玻璃分段单选 · 500 ms · Uiverse.io · chase2k25",
       "editor": "https://tuneshape.kai-nex.com/#/effect/glass-radio",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glass-radio",
-      "license": "MIT",
-      "config": "examples/glass-radio/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/glass-radio/",
         "en": "https://tuneshape.kai-nex.com/en/effects/glass-radio/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/glass-radio/config.json"
     },
     {
       "id": "dropdown",
@@ -77,12 +77,12 @@
       "descriptionZh": "下拉菜单 · 400 ms · Ariadne",
       "editor": "https://tuneshape.kai-nex.com/#/effect/dropdown",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/dropdown",
-      "license": "MIT",
-      "config": "examples/dropdown/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/dropdown-menu/",
         "en": "https://tuneshape.kai-nex.com/en/effects/dropdown-menu/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/dropdown/config.json"
     },
     {
       "id": "folder",
@@ -93,12 +93,12 @@
       "descriptionZh": "文件夹 · 640 ms · Ariadne",
       "editor": "https://tuneshape.kai-nex.com/#/effect/folder",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/folder",
-      "license": "MIT",
-      "config": "examples/folder/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/folder/",
         "en": "https://tuneshape.kai-nex.com/en/effects/folder/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/folder/config.json"
     },
     {
       "id": "glass-folder",
@@ -109,12 +109,12 @@
       "descriptionZh": "磨砂翻盖向前倾斜，文件卡片错峰扇开并抬起。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/glass-folder",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glass-folder",
-      "license": "MIT",
-      "config": "examples/glass-folder/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/glass-folder/",
         "en": "https://tuneshape.kai-nex.com/en/effects/glass-folder/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/glass-folder/config.json"
     },
     {
       "id": "scroll-progress",
@@ -125,12 +125,12 @@
       "descriptionZh": "圆环跟随真实阅读进度，悬停胶囊自动展开，点击章节定位。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/scroll-progress",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/scroll-progress",
-      "license": "MIT",
-      "config": "examples/scroll-progress/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/scroll-progress/",
         "en": "https://tuneshape.kai-nex.com/en/effects/scroll-progress/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/scroll-progress/config.json"
     },
     {
       "id": "hook-sidebar",
@@ -141,12 +141,12 @@
       "descriptionZh": "细钩线标记当前项，灰色轨道跟随悬停与焦点。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/hook-sidebar",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/hook-sidebar",
-      "license": "MIT",
-      "config": "examples/hook-sidebar/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/hook-sidebar/",
         "en": "https://tuneshape.kai-nex.com/en/effects/hook-sidebar/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/hook-sidebar/config.json"
     },
     {
       "id": "rail-toc",
@@ -157,12 +157,12 @@
       "descriptionZh": "纸飞机沿层级轨道跟随阅读进度，经过的路径与节点逐步填实。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/rail-toc",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/rail-toc",
-      "license": "MIT",
-      "config": "examples/rail-toc/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/rail-toc/",
         "en": "https://tuneshape.kai-nex.com/en/effects/rail-toc/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/rail-toc/config.json"
     },
     {
       "id": "card-morph",
@@ -173,124 +173,124 @@
       "descriptionZh": "卡片展开 · 540 ms · Ariadne",
       "editor": "https://tuneshape.kai-nex.com/#/effect/card-morph",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/card-morph",
-      "license": "MIT",
-      "config": "examples/card-morph/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/card-expand/",
         "en": "https://tuneshape.kai-nex.com/en/effects/card-expand/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/card-morph/config.json"
     },
     {
       "id": "typewriter-text",
       "name": "Typewriter Text",
       "nameZh": "逐字打出",
       "category": "文字",
-      "description": "Typewriter Text",
+      "description": "Reveal text at a fixed typing rate with a blinking block cursor.",
       "descriptionZh": "文字按固定速度逐字打出，末尾光标按时间闪烁。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/typewriter-text",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/typewriter-text",
-      "license": "MIT",
-      "config": "examples/typewriter-text/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/typewriter-text/",
         "en": "https://tuneshape.kai-nex.com/en/effects/typewriter-text/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/typewriter-text/config.json"
     },
     {
       "id": "soft-blur-in",
       "name": "Soft Blur In",
       "nameZh": "柔焦入场",
       "category": "文字",
-      "description": "Soft Blur In",
+      "description": "Characters fade in, drift upward and sharpen individually.",
       "descriptionZh": "文字逐字从轻微上移与柔焦中变得清晰。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/soft-blur-in",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/soft-blur-in",
-      "license": "MIT",
-      "config": "examples/soft-blur-in/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/soft-blur-in/",
         "en": "https://tuneshape.kai-nex.com/en/effects/soft-blur-in/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/soft-blur-in/config.json"
     },
     {
       "id": "short-slide-down",
       "name": "Short Slide Down",
       "nameZh": "落词堆叠",
       "category": "文字",
-      "description": "Short Slide Down",
+      "description": "Words enter from above and form a growing stack that stays centered.",
       "descriptionZh": "词语从上方依次落下，整组位置随词数调整并始终居中。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/short-slide-down",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/short-slide-down",
-      "license": "MIT",
-      "config": "examples/short-slide-down/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/short-slide-down/",
         "en": "https://tuneshape.kai-nex.com/en/effects/short-slide-down/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/short-slide-down/config.json"
     },
     {
       "id": "kinetic-center-build",
       "name": "Kinetic Center Build",
       "nameZh": "居中推词",
       "category": "文字",
-      "description": "Kinetic Center Build",
+      "description": "Words enter from the right and push existing words into a centered phrase.",
       "descriptionZh": "词语从右侧进入，推挤已有文字，逐步组成居中的完整短句。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/kinetic-center-build",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/kinetic-center-build",
-      "license": "MIT",
-      "config": "examples/kinetic-center-build/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/kinetic-center-build/",
         "en": "https://tuneshape.kai-nex.com/en/effects/kinetic-center-build/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/kinetic-center-build/config.json"
     },
     {
       "id": "period-drop",
       "name": "Period Drop",
       "nameZh": "句点弹落",
       "category": "文字",
-      "description": "Period Drop",
+      "description": "Letters rise into view before an inline period falls, stretches and bounces twice.",
       "descriptionZh": "字母上升入场，句点从上方落下并以拉伸、压扁和两次回弹收尾。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/period-drop",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/period-drop",
-      "license": "MIT",
-      "config": "examples/period-drop/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/period-drop/",
         "en": "https://tuneshape.kai-nex.com/en/effects/period-drop/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/period-drop/config.json"
     },
     {
       "id": "outline-trace",
       "name": "Outline Trace",
       "nameZh": "字形描边",
       "category": "文字",
-      "description": "Outline Trace",
+      "description": "Trace actual glyph contours, then reveal their fill from bottom to top.",
       "descriptionZh": "沿真实字形轮廓逐字描绘，再由下往上填充字面。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/outline-trace",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/outline-trace",
-      "license": "MIT",
-      "config": "examples/outline-trace/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/outline-trace/",
         "en": "https://tuneshape.kai-nex.com/en/effects/outline-trace/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/outline-trace/config.json"
     },
     {
       "id": "glyph-anatomy",
       "name": "Glyph Anatomy",
       "nameZh": "字形构建",
       "category": "文字",
-      "description": "Glyph Anatomy",
+      "description": "Metric guides, contour anchors and Bezier handles show how a glyph is constructed.",
       "descriptionZh": "显示度量线、轮廓锚点和贝塞尔手柄，字形从线段构建为曲线。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/glyph-anatomy",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glyph-anatomy",
-      "license": "MIT",
-      "config": "examples/glyph-anatomy/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/glyph-anatomy/",
         "en": "https://tuneshape.kai-nex.com/en/effects/glyph-anatomy/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/glyph-anatomy/config.json"
     },
     {
       "id": "encrypted-text",
@@ -301,12 +301,12 @@
       "descriptionZh": "逐字解码 · 可编辑内容与实时参数",
       "editor": "https://tuneshape.kai-nex.com/#/effect/encrypted-text",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/encrypted-text",
-      "license": "MIT",
-      "config": "examples/encrypted-text/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/encrypted-text/",
         "en": "https://tuneshape.kai-nex.com/en/effects/encrypted-text/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/encrypted-text/config.json"
     },
     {
       "id": "gooey-input",
@@ -317,12 +317,12 @@
       "descriptionZh": "黏性搜索输入 · 可编辑内容与实时参数",
       "editor": "https://tuneshape.kai-nex.com/#/effect/gooey-input",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/gooey-input",
-      "license": "MIT",
-      "config": "examples/gooey-input/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/gooey-input/",
         "en": "https://tuneshape.kai-nex.com/en/effects/gooey-input/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/gooey-input/config.json"
     },
     {
       "id": "flip-words",
@@ -333,12 +333,12 @@
       "descriptionZh": "词语翻替 · 可编辑内容与实时参数",
       "editor": "https://tuneshape.kai-nex.com/#/effect/flip-words",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/flip-words",
-      "license": "MIT",
-      "config": "examples/flip-words/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/flip-words/",
         "en": "https://tuneshape.kai-nex.com/en/effects/flip-words/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/flip-words/config.json"
     },
     {
       "id": "coffee-selector",
@@ -349,12 +349,12 @@
       "descriptionZh": "直列滚轮，中心清晰，远处渐隐虚化；拖动后带惯性吸附到最近选项。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/coffee-selector",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/coffee-selector",
-      "license": "MIT",
-      "config": "examples/coffee-selector/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/coffee-selector/",
         "en": "https://tuneshape.kai-nex.com/en/effects/coffee-selector/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/coffee-selector/config.json"
     },
     {
       "id": "rounded-checks",
@@ -365,12 +365,12 @@
       "descriptionZh": "可独立勾选的偏好列表，方框填色与勾号柔和过渡。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/rounded-checks",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/rounded-checks",
-      "license": "MIT",
-      "config": "examples/rounded-checks/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/rounded-checks/",
         "en": "https://tuneshape.kai-nex.com/en/effects/rounded-checks/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/rounded-checks/config.json"
     },
     {
       "id": "mini-sidebar",
@@ -381,12 +381,12 @@
       "descriptionZh": "页面导航 · 400 ms · Ariadne",
       "editor": "https://tuneshape.kai-nex.com/#/effect/mini-sidebar",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/mini-sidebar",
-      "license": "MIT",
-      "config": "examples/mini-sidebar/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/mini-sidebar/",
         "en": "https://tuneshape.kai-nex.com/en/effects/mini-sidebar/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/mini-sidebar/config.json"
     },
     {
       "id": "text-rise",
@@ -397,12 +397,12 @@
       "descriptionZh": "文字逐字上移揭示 · 1160 ms · 个人网站",
       "editor": "https://tuneshape.kai-nex.com/#/effect/text-rise",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/text-rise",
-      "license": "MIT",
-      "config": "examples/text-rise/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/text-rise/",
         "en": "https://tuneshape.kai-nex.com/en/effects/text-rise/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/text-rise/config.json"
     },
     {
       "id": "text-scramble",
@@ -413,12 +413,12 @@
       "descriptionZh": "局部字符扰动与恢复 · 200 ms · 个人网站",
       "editor": "https://tuneshape.kai-nex.com/#/effect/text-scramble",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/text-scramble",
-      "license": "MIT",
-      "config": "examples/text-scramble/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/text-scramble/",
         "en": "https://tuneshape.kai-nex.com/en/effects/text-scramble/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/text-scramble/config.json"
     },
     {
       "id": "glyph-wall",
@@ -429,12 +429,12 @@
       "descriptionZh": "文字解码墙 · 2600 ms · 原创实现",
       "editor": "https://tuneshape.kai-nex.com/#/effect/glyph-wall",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glyph-wall",
-      "license": "MIT",
-      "config": "examples/glyph-wall/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/glyph-wall/",
         "en": "https://tuneshape.kai-nex.com/en/effects/glyph-wall/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/glyph-wall/config.json"
     },
     {
       "id": "hover-preview",
@@ -445,12 +445,12 @@
       "descriptionZh": "文字悬停时浮出图片，随指针轻微偏移和倾斜。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/hover-preview",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/hover-preview",
-      "license": "MIT",
-      "config": "examples/hover-preview/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/hover-preview/",
         "en": "https://tuneshape.kai-nex.com/en/effects/hover-preview/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/hover-preview/config.json"
     },
     {
       "id": "album-rail",
@@ -461,12 +461,12 @@
       "descriptionZh": "唱片封套沿扇形展开，悬停探出黑胶，点击后抽出旋转。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/album-rail",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/album-rail",
-      "license": "MIT",
-      "config": "examples/album-rail/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/album-rail/",
         "en": "https://tuneshape.kai-nex.com/en/effects/album-rail/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/album-rail/config.json"
     },
     {
       "id": "orbit-reel",
@@ -477,12 +477,12 @@
       "descriptionZh": "旋转的卡片圆环，点击后展开为可切换的弧形。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/orbit-reel",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/orbit-reel",
-      "license": "MIT",
-      "config": "examples/orbit-reel/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/orbit-reel/",
         "en": "https://tuneshape.kai-nex.com/en/effects/orbit-reel/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/orbit-reel/config.json"
     },
     {
       "id": "elastic-reel",
@@ -493,12 +493,12 @@
       "descriptionZh": "窄幅图像随指针联动放大，点击弹性展开为完整画面。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/elastic-reel",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/elastic-reel",
-      "license": "MIT",
-      "config": "examples/elastic-reel/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/elastic-reel/",
         "en": "https://tuneshape.kai-nex.com/en/effects/elastic-reel/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/elastic-reel/config.json"
     },
     {
       "id": "dots",
@@ -509,12 +509,12 @@
       "descriptionZh": "三点交错跳动 · 1200 ms · Ariadne",
       "editor": "https://tuneshape.kai-nex.com/#/effect/dots",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/dots",
-      "license": "MIT",
-      "config": "examples/dots/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/dots/",
         "en": "https://tuneshape.kai-nex.com/en/effects/dots/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/dots/config.json"
     },
     {
       "id": "finger-tap",
@@ -525,12 +525,12 @@
       "descriptionZh": "手指敲击 · 1200 ms · Uiverse.io · Pradeepsaranbishnoi",
       "editor": "https://tuneshape.kai-nex.com/#/effect/finger-tap",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/finger-tap",
-      "license": "MIT",
-      "config": "examples/finger-tap/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/finger-tap/",
         "en": "https://tuneshape.kai-nex.com/en/effects/finger-tap/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/finger-tap/config.json"
     },
     {
       "id": "typewriter",
@@ -541,12 +541,12 @@
       "descriptionZh": "打字机 · 3000 ms · Uiverse.io · Nawsome",
       "editor": "https://tuneshape.kai-nex.com/#/effect/typewriter",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/typewriter",
-      "license": "MIT",
-      "config": "examples/typewriter/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/typewriter/",
         "en": "https://tuneshape.kai-nex.com/en/effects/typewriter/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/typewriter/config.json"
     },
     {
       "id": "yin-yang",
@@ -557,12 +557,12 @@
       "descriptionZh": "太极加载 · 3000 ms · Uiverse.io · fthisilak",
       "editor": "https://tuneshape.kai-nex.com/#/effect/yin-yang",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/yin-yang",
-      "license": "MIT",
-      "config": "examples/yin-yang/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/yin-yang/",
         "en": "https://tuneshape.kai-nex.com/en/effects/yin-yang/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/yin-yang/config.json"
     },
     {
       "id": "pulse",
@@ -573,60 +573,60 @@
       "descriptionZh": "脉冲缩放与扩散 · 1300 ms · Ariadne",
       "editor": "https://tuneshape.kai-nex.com/#/effect/pulse",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/pulse",
-      "license": "MIT",
-      "config": "examples/pulse/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/pulse/",
         "en": "https://tuneshape.kai-nex.com/en/effects/pulse/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/pulse/config.json"
     },
     {
       "id": "watercolor",
       "name": "Watercolor Blend",
       "nameZh": "水彩融合",
       "category": "背景",
-      "description": "Two pigments drift and blend through an original flowing noise field.",
-      "descriptionZh": "两种颜色随纹理流动，形成水彩般的渗透与交融。",
+      "description": "Five gradient-noise layers blend two colors into a smooth, grain-free wash with optional pointer warping.",
+      "descriptionZh": "五层渐变噪声形成柔和的双颜色水彩，无纸面颗粒，支持局部指针晕染。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/watercolor",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor",
-      "license": "MIT",
-      "config": "examples/watercolor/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/watercolor/",
         "en": "https://tuneshape.kai-nex.com/en/effects/watercolor/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/watercolor/config.json"
     },
     {
       "id": "watercolor-original",
       "name": "Watercolor Original",
       "nameZh": "水彩模糊",
       "category": "背景",
-      "description": "Two pigments drift and blend through an original flowing noise field.",
-      "descriptionZh": "两种颜色随纹理流动，形成水彩般的渗透与交融。",
+      "description": "Six noise layers and paper grain create the layered wash of the original watercolor.",
+      "descriptionZh": "六层噪声与纸面细颗粒叠成流动水彩，保留首版的多层晕染。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/watercolor-original",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor-original",
-      "license": "MIT",
-      "config": "examples/watercolor-original/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/watercolor-original/",
         "en": "https://tuneshape.kai-nex.com/en/effects/watercolor-original/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/watercolor-original/config.json"
     },
     {
       "id": "watercolor-flow",
       "name": "Watercolor Flow",
       "nameZh": "细度水彩融合",
       "category": "背景",
-      "description": "Two pigments drift and blend through an original flowing noise field.",
-      "descriptionZh": "两种颜色随纹理流动，形成水彩般的渗透与交融。",
+      "description": "Six gradient-noise layers create fine watercolor bands that blend through a double warp field.",
+      "descriptionZh": "六层渐变噪声带来更细密的水彩纹理，流动色带沿双重扭曲场交融。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/watercolor-flow",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor-flow",
-      "license": "MIT",
-      "config": "examples/watercolor-flow/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/watercolor-flow/",
         "en": "https://tuneshape.kai-nex.com/en/effects/watercolor-flow/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/watercolor-flow/config.json"
     },
     {
       "id": "ascii-sharks",
@@ -637,12 +637,12 @@
       "descriptionZh": "俯视游动的鲨鱼与小鱼，以可调密度的字符网格构成动态背景。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/ascii-sharks",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/ascii-sharks",
-      "license": "MIT",
-      "config": "examples/ascii-sharks/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/ascii-sharks/",
         "en": "https://tuneshape.kai-nex.com/en/effects/ascii-sharks/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/ascii-sharks/config.json"
     },
     {
       "id": "particle-tide",
@@ -653,12 +653,12 @@
       "descriptionZh": "粒子构成连续起伏的海面，可移动指针涌浪、点击叠加涟漪。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/particle-tide",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/particle-tide",
-      "license": "MIT",
-      "config": "examples/particle-tide/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/particle-tide/",
         "en": "https://tuneshape.kai-nex.com/en/effects/particle-tide/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/particle-tide/config.json"
     },
     {
       "id": "ascii-wave",
@@ -669,12 +669,12 @@
       "descriptionZh": "ASCII 波形动画 · 4000 ms · Ariadne",
       "editor": "https://tuneshape.kai-nex.com/#/effect/ascii-wave",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/ascii-wave",
-      "license": "MIT",
-      "config": "examples/ascii-wave/config.json",
       "documentation": {
         "zh": "https://tuneshape.kai-nex.com/effects/ascii-wave/",
         "en": "https://tuneshape.kai-nex.com/en/effects/ascii-wave/"
-      }
+      },
+      "license": "MIT",
+      "config": "examples/ascii-wave/config.json"
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-Glyph Anatomy
+Metric guides, contour anchors and Bezier handles show how a glyph is constructed.
 
 [Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/glyph-anatomy) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/glyph-anatomy/) · [All open-source effects](../../README.md)
 
@@ -40,11 +40,11 @@ Duration basis 2200 ms; delay 0 ms. Scale the full timeline so every character c
 
 ## Repeated input and interruption
 
-Replay restarts. Pause, inactive previews and background pages freeze the clock. Live angles, selection, observation speed and progress are transient. Settings drive previews, descriptions, Motion, JSON and exports.
+Replay restarts the text entrance. Pause, inactive previews and background pages freeze the clock. Observation speed and progress are transient. Text and parameter edits drive previews, descriptions, Motion, JSON and exports.
 
 ## Reduced motion
 
-Show complete text and a static orbit. Keep focus/keyboard selection without automatic motion.
+Show the complete, readable text immediately. Skip entrance animation and cursor blinking while retaining content and reading layout.
 
 ## Motion notes 8
 

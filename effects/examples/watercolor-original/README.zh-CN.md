@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文**
 
-两种颜色随纹理流动，形成水彩般的渗透与交融。
+六层噪声与纸面细颗粒叠成流动水彩，保留首版的多层晕染。
 
 [在线调整此动效](https://tuneshape.kai-nex.com/#/effect/watercolor-original) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/watercolor-original/) · [全部开源动效](../../README.zh-CN.md)
 
@@ -45,6 +45,10 @@ pnpm dev --open /examples/watercolor-original/
 ## 水彩设置
 
 颜色 #0A0A0A / #E0E0E0；速度 0.6；图案缩放 0.6；扭曲速度 0.08；不透明度 1；RGB 亮度偏移 0.15；指针交互 false；指针强度 1。
+
+## 版本
+
+此版使用六层值噪声、纸面细颗粒和分层晕染。与无颗粒的水彩融合、细度水彩融合相比，保留更明显的纸面肌理。三个版本共用参数格式，但使用不同渲染器，recipeId 决定导入与导出时保留哪个版本。
 
 ## 源码、配置与许可
 

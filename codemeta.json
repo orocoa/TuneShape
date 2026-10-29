@@ -155,7 +155,7 @@
       "@type": "SoftwareSourceCode",
       "name": "Typewriter Text",
       "alternateName": "逐字打出",
-      "description": "Typewriter Text",
+      "description": "Reveal text at a fixed typing rate with a blinking block cursor.",
       "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/typewriter-text",
       "url": "https://tuneshape.kai-nex.com/en/effects/typewriter-text/",
       "subjectOf": [
@@ -167,7 +167,7 @@
       "@type": "SoftwareSourceCode",
       "name": "Soft Blur In",
       "alternateName": "柔焦入场",
-      "description": "Soft Blur In",
+      "description": "Characters fade in, drift upward and sharpen individually.",
       "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/soft-blur-in",
       "url": "https://tuneshape.kai-nex.com/en/effects/soft-blur-in/",
       "subjectOf": [
@@ -179,7 +179,7 @@
       "@type": "SoftwareSourceCode",
       "name": "Short Slide Down",
       "alternateName": "落词堆叠",
-      "description": "Short Slide Down",
+      "description": "Words enter from above and form a growing stack that stays centered.",
       "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/short-slide-down",
       "url": "https://tuneshape.kai-nex.com/en/effects/short-slide-down/",
       "subjectOf": [
@@ -191,7 +191,7 @@
       "@type": "SoftwareSourceCode",
       "name": "Kinetic Center Build",
       "alternateName": "居中推词",
-      "description": "Kinetic Center Build",
+      "description": "Words enter from the right and push existing words into a centered phrase.",
       "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/kinetic-center-build",
       "url": "https://tuneshape.kai-nex.com/en/effects/kinetic-center-build/",
       "subjectOf": [
@@ -203,7 +203,7 @@
       "@type": "SoftwareSourceCode",
       "name": "Period Drop",
       "alternateName": "句点弹落",
-      "description": "Period Drop",
+      "description": "Letters rise into view before an inline period falls, stretches and bounces twice.",
       "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/period-drop",
       "url": "https://tuneshape.kai-nex.com/en/effects/period-drop/",
       "subjectOf": [
@@ -215,7 +215,7 @@
       "@type": "SoftwareSourceCode",
       "name": "Outline Trace",
       "alternateName": "字形描边",
-      "description": "Outline Trace",
+      "description": "Trace actual glyph contours, then reveal their fill from bottom to top.",
       "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/outline-trace",
       "url": "https://tuneshape.kai-nex.com/en/effects/outline-trace/",
       "subjectOf": [
@@ -227,7 +227,7 @@
       "@type": "SoftwareSourceCode",
       "name": "Glyph Anatomy",
       "alternateName": "字形构建",
-      "description": "Glyph Anatomy",
+      "description": "Metric guides, contour anchors and Bezier handles show how a glyph is constructed.",
       "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glyph-anatomy",
       "url": "https://tuneshape.kai-nex.com/en/effects/glyph-anatomy/",
       "subjectOf": [
@@ -455,7 +455,7 @@
       "@type": "SoftwareSourceCode",
       "name": "Watercolor Blend",
       "alternateName": "水彩融合",
-      "description": "Two pigments drift and blend through an original flowing noise field.",
+      "description": "Five gradient-noise layers blend two colors into a smooth, grain-free wash with optional pointer warping.",
       "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor",
       "url": "https://tuneshape.kai-nex.com/en/effects/watercolor/",
       "subjectOf": [
@@ -467,7 +467,7 @@
       "@type": "SoftwareSourceCode",
       "name": "Watercolor Original",
       "alternateName": "水彩模糊",
-      "description": "Two pigments drift and blend through an original flowing noise field.",
+      "description": "Six noise layers and paper grain create the layered wash of the original watercolor.",
       "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor-original",
       "url": "https://tuneshape.kai-nex.com/en/effects/watercolor-original/",
       "subjectOf": [
@@ -479,7 +479,7 @@
       "@type": "SoftwareSourceCode",
       "name": "Watercolor Flow",
       "alternateName": "细度水彩融合",
-      "description": "Two pigments drift and blend through an original flowing noise field.",
+      "description": "Six gradient-noise layers create fine watercolor bands that blend through a double warp field.",
       "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor-flow",
       "url": "https://tuneshape.kai-nex.com/en/effects/watercolor-flow/",
       "subjectOf": [
