@@ -4,7 +4,7 @@
 
 Glass Segmented Radio Control · 500 ms · Uiverse.io · chase2k25
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/glass-radio) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/glass-radio) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/glass-radio/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

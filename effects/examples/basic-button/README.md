@@ -4,7 +4,7 @@
 
 Button Press Feedback · Duration spring · 420 ms / bounce 0.25
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/basic-button) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/basic-button) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/button-press/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

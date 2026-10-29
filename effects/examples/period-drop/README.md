@@ -4,7 +4,7 @@
 
 Period Drop
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/period-drop) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/period-drop) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/period-drop/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

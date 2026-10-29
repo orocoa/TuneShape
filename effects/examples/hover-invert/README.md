@@ -4,7 +4,7 @@
 
 Hover Color Transition · 220 ms · Reprise
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/hover-invert) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/hover-invert) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/hover-invert/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

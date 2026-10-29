@@ -4,7 +4,7 @@
 
 文字逐字从轻微上移与柔焦中变得清晰。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/soft-blur-in) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/soft-blur-in) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/soft-blur-in/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

@@ -4,7 +4,7 @@
 
 A straight wheel with a crisp center, soft distant rows, inertial dragging and snap selection.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/coffee-selector) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/coffee-selector) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/coffee-selector/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

@@ -4,7 +4,7 @@
 
 A compact duration input that springs apart to edit and joins on confirmation.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/duration-picker) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/duration-picker) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/duration-picker/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

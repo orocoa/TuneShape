@@ -4,7 +4,7 @@
 
 ASCII 波形动画 · 4000 ms · Ariadne
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/ascii-wave) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/ascii-wave) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/ascii-wave/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

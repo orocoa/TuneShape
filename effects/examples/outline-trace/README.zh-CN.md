@@ -4,7 +4,7 @@
 
 沿真实字形轮廓逐字描绘，再由下往上填充字面。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/outline-trace) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/outline-trace) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/outline-trace/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

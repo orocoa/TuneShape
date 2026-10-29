@@ -4,7 +4,7 @@
 
 磨砂翻盖向前倾斜，文件卡片错峰扇开并抬起。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/glass-folder) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/glass-folder) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/glass-folder/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

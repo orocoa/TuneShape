@@ -4,7 +4,7 @@
 
 圆环跟随真实阅读进度，悬停胶囊自动展开，点击章节定位。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/scroll-progress) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/scroll-progress) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/scroll-progress/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

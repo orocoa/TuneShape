@@ -4,7 +4,7 @@
 
 词语从右侧进入，推挤已有文字，逐步组成居中的完整短句。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/kinetic-center-build) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/kinetic-center-build) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/kinetic-center-build/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

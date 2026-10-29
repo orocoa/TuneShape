@@ -4,7 +4,7 @@
 
 Hover the current chapter pill to open navigation, then click a chapter to jump.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/scroll-progress) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/scroll-progress) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/scroll-progress/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

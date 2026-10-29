@@ -4,7 +4,7 @@
 
 Staggered Character Reveal · 1160 ms · 个人网站
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/text-rise) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/text-rise) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/text-rise/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

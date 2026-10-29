@@ -4,7 +4,7 @@
 
 Kinetic Center Build
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/kinetic-center-build) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/kinetic-center-build) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/kinetic-center-build/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

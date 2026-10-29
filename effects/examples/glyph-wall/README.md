@@ -4,7 +4,7 @@
 
 Glyph Decode Wall · 2600 ms · 原创实现
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/glyph-wall) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/glyph-wall) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/glyph-wall/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

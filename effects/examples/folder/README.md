@@ -4,7 +4,7 @@
 
 Folder · 640 ms · Ariadne
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/folder) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/folder) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/folder/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

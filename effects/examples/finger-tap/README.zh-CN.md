@@ -4,7 +4,7 @@
 
 手指敲击 · 1200 ms · Uiverse.io · Pradeepsaranbishnoi
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/finger-tap) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/finger-tap) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/finger-tap/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

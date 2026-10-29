@@ -4,7 +4,7 @@
 
 太极加载 · 3000 ms · Uiverse.io · fthisilak
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/yin-yang) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/yin-yang) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/yin-yang/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

@@ -4,7 +4,7 @@
 
 Inline words reveal a floating image that follows the pointer.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/hover-preview) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/hover-preview) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/hover-preview/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

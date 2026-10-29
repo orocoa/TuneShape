@@ -4,7 +4,7 @@
 
 Local Text Scramble and Recovery · 200 ms · 个人网站
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/text-scramble) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/text-scramble) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/text-scramble/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

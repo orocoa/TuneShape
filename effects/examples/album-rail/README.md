@@ -4,7 +4,7 @@
 
 A fan of album sleeves, with records that slide out and spin.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/album-rail) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/album-rail) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/album-rail/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

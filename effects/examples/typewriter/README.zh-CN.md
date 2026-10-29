@@ -4,7 +4,7 @@
 
 打字机 · 3000 ms · Uiverse.io · Nawsome
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/typewriter) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/typewriter) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/typewriter/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

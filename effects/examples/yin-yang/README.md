@@ -4,7 +4,7 @@
 
 Yin Yang Loader · 3000 ms · Uiverse.io · fthisilak
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/yin-yang) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/yin-yang) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/yin-yang/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

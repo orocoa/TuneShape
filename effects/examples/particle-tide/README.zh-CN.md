@@ -4,7 +4,7 @@
 
 粒子构成连续起伏的海面，可移动指针涌浪、点击叠加涟漪。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/particle-tide) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/particle-tide) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/particle-tide/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

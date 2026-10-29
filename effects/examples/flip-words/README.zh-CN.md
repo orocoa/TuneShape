@@ -4,7 +4,7 @@
 
 词语翻替 · 可编辑内容与实时参数
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/flip-words) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/flip-words) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/flip-words/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

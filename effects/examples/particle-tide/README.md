@@ -4,7 +4,7 @@
 
 An original ocean of particles with rolling swells and click ripples.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/particle-tide) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/particle-tide) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/particle-tide/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

@@ -4,7 +4,7 @@
 
 下拉菜单 · 400 ms · Ariadne
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/dropdown) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/dropdown) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/dropdown-menu/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

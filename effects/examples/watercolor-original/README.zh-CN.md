@@ -4,7 +4,7 @@
 
 两种颜色随纹理流动，形成水彩般的渗透与交融。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/watercolor-original) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/watercolor-original) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/watercolor-original/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

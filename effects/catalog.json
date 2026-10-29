@@ -14,7 +14,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/basic-button",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/basic-button",
       "license": "MIT",
-      "config": "examples/basic-button/config.json"
+      "config": "examples/basic-button/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/button-press/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/button-press/"
+      }
     },
     {
       "id": "hover-invert",
@@ -26,7 +30,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/hover-invert",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/hover-invert",
       "license": "MIT",
-      "config": "examples/hover-invert/config.json"
+      "config": "examples/hover-invert/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/hover-invert/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/hover-invert/"
+      }
     },
     {
       "id": "duration-picker",
@@ -38,7 +46,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/duration-picker",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/duration-picker",
       "license": "MIT",
-      "config": "examples/duration-picker/config.json"
+      "config": "examples/duration-picker/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/duration-picker/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/duration-picker/"
+      }
     },
     {
       "id": "glass-radio",
@@ -50,7 +62,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/glass-radio",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glass-radio",
       "license": "MIT",
-      "config": "examples/glass-radio/config.json"
+      "config": "examples/glass-radio/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/glass-radio/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/glass-radio/"
+      }
     },
     {
       "id": "dropdown",
@@ -62,7 +78,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/dropdown",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/dropdown",
       "license": "MIT",
-      "config": "examples/dropdown/config.json"
+      "config": "examples/dropdown/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/dropdown-menu/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/dropdown-menu/"
+      }
     },
     {
       "id": "folder",
@@ -74,7 +94,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/folder",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/folder",
       "license": "MIT",
-      "config": "examples/folder/config.json"
+      "config": "examples/folder/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/folder/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/folder/"
+      }
     },
     {
       "id": "glass-folder",
@@ -86,7 +110,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/glass-folder",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glass-folder",
       "license": "MIT",
-      "config": "examples/glass-folder/config.json"
+      "config": "examples/glass-folder/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/glass-folder/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/glass-folder/"
+      }
     },
     {
       "id": "scroll-progress",
@@ -98,7 +126,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/scroll-progress",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/scroll-progress",
       "license": "MIT",
-      "config": "examples/scroll-progress/config.json"
+      "config": "examples/scroll-progress/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/scroll-progress/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/scroll-progress/"
+      }
     },
     {
       "id": "hook-sidebar",
@@ -110,7 +142,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/hook-sidebar",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/hook-sidebar",
       "license": "MIT",
-      "config": "examples/hook-sidebar/config.json"
+      "config": "examples/hook-sidebar/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/hook-sidebar/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/hook-sidebar/"
+      }
     },
     {
       "id": "rail-toc",
@@ -122,7 +158,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/rail-toc",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/rail-toc",
       "license": "MIT",
-      "config": "examples/rail-toc/config.json"
+      "config": "examples/rail-toc/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/rail-toc/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/rail-toc/"
+      }
     },
     {
       "id": "card-morph",
@@ -134,7 +174,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/card-morph",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/card-morph",
       "license": "MIT",
-      "config": "examples/card-morph/config.json"
+      "config": "examples/card-morph/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/card-expand/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/card-expand/"
+      }
     },
     {
       "id": "typewriter-text",
@@ -146,7 +190,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/typewriter-text",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/typewriter-text",
       "license": "MIT",
-      "config": "examples/typewriter-text/config.json"
+      "config": "examples/typewriter-text/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/typewriter-text/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/typewriter-text/"
+      }
     },
     {
       "id": "soft-blur-in",
@@ -158,7 +206,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/soft-blur-in",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/soft-blur-in",
       "license": "MIT",
-      "config": "examples/soft-blur-in/config.json"
+      "config": "examples/soft-blur-in/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/soft-blur-in/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/soft-blur-in/"
+      }
     },
     {
       "id": "short-slide-down",
@@ -170,7 +222,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/short-slide-down",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/short-slide-down",
       "license": "MIT",
-      "config": "examples/short-slide-down/config.json"
+      "config": "examples/short-slide-down/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/short-slide-down/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/short-slide-down/"
+      }
     },
     {
       "id": "kinetic-center-build",
@@ -182,7 +238,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/kinetic-center-build",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/kinetic-center-build",
       "license": "MIT",
-      "config": "examples/kinetic-center-build/config.json"
+      "config": "examples/kinetic-center-build/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/kinetic-center-build/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/kinetic-center-build/"
+      }
     },
     {
       "id": "period-drop",
@@ -194,7 +254,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/period-drop",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/period-drop",
       "license": "MIT",
-      "config": "examples/period-drop/config.json"
+      "config": "examples/period-drop/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/period-drop/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/period-drop/"
+      }
     },
     {
       "id": "outline-trace",
@@ -206,7 +270,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/outline-trace",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/outline-trace",
       "license": "MIT",
-      "config": "examples/outline-trace/config.json"
+      "config": "examples/outline-trace/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/outline-trace/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/outline-trace/"
+      }
     },
     {
       "id": "glyph-anatomy",
@@ -218,7 +286,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/glyph-anatomy",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glyph-anatomy",
       "license": "MIT",
-      "config": "examples/glyph-anatomy/config.json"
+      "config": "examples/glyph-anatomy/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/glyph-anatomy/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/glyph-anatomy/"
+      }
     },
     {
       "id": "encrypted-text",
@@ -230,7 +302,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/encrypted-text",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/encrypted-text",
       "license": "MIT",
-      "config": "examples/encrypted-text/config.json"
+      "config": "examples/encrypted-text/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/encrypted-text/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/encrypted-text/"
+      }
     },
     {
       "id": "gooey-input",
@@ -242,7 +318,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/gooey-input",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/gooey-input",
       "license": "MIT",
-      "config": "examples/gooey-input/config.json"
+      "config": "examples/gooey-input/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/gooey-input/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/gooey-input/"
+      }
     },
     {
       "id": "flip-words",
@@ -254,7 +334,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/flip-words",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/flip-words",
       "license": "MIT",
-      "config": "examples/flip-words/config.json"
+      "config": "examples/flip-words/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/flip-words/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/flip-words/"
+      }
     },
     {
       "id": "coffee-selector",
@@ -266,7 +350,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/coffee-selector",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/coffee-selector",
       "license": "MIT",
-      "config": "examples/coffee-selector/config.json"
+      "config": "examples/coffee-selector/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/coffee-selector/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/coffee-selector/"
+      }
     },
     {
       "id": "rounded-checks",
@@ -278,7 +366,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/rounded-checks",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/rounded-checks",
       "license": "MIT",
-      "config": "examples/rounded-checks/config.json"
+      "config": "examples/rounded-checks/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/rounded-checks/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/rounded-checks/"
+      }
     },
     {
       "id": "mini-sidebar",
@@ -290,7 +382,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/mini-sidebar",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/mini-sidebar",
       "license": "MIT",
-      "config": "examples/mini-sidebar/config.json"
+      "config": "examples/mini-sidebar/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/mini-sidebar/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/mini-sidebar/"
+      }
     },
     {
       "id": "text-rise",
@@ -302,7 +398,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/text-rise",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/text-rise",
       "license": "MIT",
-      "config": "examples/text-rise/config.json"
+      "config": "examples/text-rise/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/text-rise/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/text-rise/"
+      }
     },
     {
       "id": "text-scramble",
@@ -314,7 +414,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/text-scramble",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/text-scramble",
       "license": "MIT",
-      "config": "examples/text-scramble/config.json"
+      "config": "examples/text-scramble/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/text-scramble/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/text-scramble/"
+      }
     },
     {
       "id": "glyph-wall",
@@ -326,7 +430,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/glyph-wall",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glyph-wall",
       "license": "MIT",
-      "config": "examples/glyph-wall/config.json"
+      "config": "examples/glyph-wall/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/glyph-wall/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/glyph-wall/"
+      }
     },
     {
       "id": "hover-preview",
@@ -338,7 +446,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/hover-preview",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/hover-preview",
       "license": "MIT",
-      "config": "examples/hover-preview/config.json"
+      "config": "examples/hover-preview/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/hover-preview/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/hover-preview/"
+      }
     },
     {
       "id": "album-rail",
@@ -350,7 +462,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/album-rail",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/album-rail",
       "license": "MIT",
-      "config": "examples/album-rail/config.json"
+      "config": "examples/album-rail/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/album-rail/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/album-rail/"
+      }
     },
     {
       "id": "orbit-reel",
@@ -362,7 +478,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/orbit-reel",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/orbit-reel",
       "license": "MIT",
-      "config": "examples/orbit-reel/config.json"
+      "config": "examples/orbit-reel/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/orbit-reel/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/orbit-reel/"
+      }
     },
     {
       "id": "elastic-reel",
@@ -374,7 +494,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/elastic-reel",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/elastic-reel",
       "license": "MIT",
-      "config": "examples/elastic-reel/config.json"
+      "config": "examples/elastic-reel/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/elastic-reel/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/elastic-reel/"
+      }
     },
     {
       "id": "dots",
@@ -386,7 +510,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/dots",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/dots",
       "license": "MIT",
-      "config": "examples/dots/config.json"
+      "config": "examples/dots/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/dots/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/dots/"
+      }
     },
     {
       "id": "finger-tap",
@@ -398,7 +526,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/finger-tap",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/finger-tap",
       "license": "MIT",
-      "config": "examples/finger-tap/config.json"
+      "config": "examples/finger-tap/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/finger-tap/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/finger-tap/"
+      }
     },
     {
       "id": "typewriter",
@@ -410,7 +542,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/typewriter",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/typewriter",
       "license": "MIT",
-      "config": "examples/typewriter/config.json"
+      "config": "examples/typewriter/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/typewriter/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/typewriter/"
+      }
     },
     {
       "id": "yin-yang",
@@ -422,7 +558,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/yin-yang",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/yin-yang",
       "license": "MIT",
-      "config": "examples/yin-yang/config.json"
+      "config": "examples/yin-yang/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/yin-yang/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/yin-yang/"
+      }
     },
     {
       "id": "pulse",
@@ -434,7 +574,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/pulse",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/pulse",
       "license": "MIT",
-      "config": "examples/pulse/config.json"
+      "config": "examples/pulse/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/pulse/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/pulse/"
+      }
     },
     {
       "id": "watercolor",
@@ -446,7 +590,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/watercolor",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor",
       "license": "MIT",
-      "config": "examples/watercolor/config.json"
+      "config": "examples/watercolor/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/watercolor/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/watercolor/"
+      }
     },
     {
       "id": "watercolor-original",
@@ -458,7 +606,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/watercolor-original",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor-original",
       "license": "MIT",
-      "config": "examples/watercolor-original/config.json"
+      "config": "examples/watercolor-original/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/watercolor-original/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/watercolor-original/"
+      }
     },
     {
       "id": "watercolor-flow",
@@ -470,7 +622,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/watercolor-flow",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor-flow",
       "license": "MIT",
-      "config": "examples/watercolor-flow/config.json"
+      "config": "examples/watercolor-flow/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/watercolor-flow/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/watercolor-flow/"
+      }
     },
     {
       "id": "ascii-sharks",
@@ -482,7 +638,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/ascii-sharks",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/ascii-sharks",
       "license": "MIT",
-      "config": "examples/ascii-sharks/config.json"
+      "config": "examples/ascii-sharks/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/ascii-sharks/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/ascii-sharks/"
+      }
     },
     {
       "id": "particle-tide",
@@ -494,7 +654,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/particle-tide",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/particle-tide",
       "license": "MIT",
-      "config": "examples/particle-tide/config.json"
+      "config": "examples/particle-tide/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/particle-tide/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/particle-tide/"
+      }
     },
     {
       "id": "ascii-wave",
@@ -506,7 +670,11 @@
       "editor": "https://tuneshape.kai-nex.com/#/effect/ascii-wave",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/ascii-wave",
       "license": "MIT",
-      "config": "examples/ascii-wave/config.json"
+      "config": "examples/ascii-wave/config.json",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/ascii-wave/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/ascii-wave/"
+      }
     }
   ]
 }

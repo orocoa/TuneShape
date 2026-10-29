@@ -4,7 +4,7 @@
 
 Typewriter · 3000 ms · Uiverse.io · Nawsome
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/typewriter) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/typewriter) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/typewriter/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

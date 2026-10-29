@@ -4,7 +4,7 @@
 
 A rotating ring of cards opens into a navigable arc.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/orbit-reel) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/orbit-reel) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/orbit-reel/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

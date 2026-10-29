@@ -4,7 +4,7 @@
 
 纸飞机沿层级轨道跟随阅读进度，经过的路径与节点逐步填实。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/rail-toc) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/rail-toc) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/rail-toc/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

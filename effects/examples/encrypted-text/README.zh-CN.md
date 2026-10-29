@@ -4,7 +4,7 @@
 
 逐字解码 · 可编辑内容与实时参数
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/encrypted-text) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/encrypted-text) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/encrypted-text/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

@@ -4,7 +4,7 @@
 
 悬停配色过渡 · 220 ms · Reprise
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/hover-invert) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/hover-invert) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/hover-invert/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

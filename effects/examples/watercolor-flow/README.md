@@ -4,7 +4,7 @@
 
 Two pigments drift and blend through an original flowing noise field.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/watercolor-flow) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/watercolor-flow) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/watercolor-flow/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

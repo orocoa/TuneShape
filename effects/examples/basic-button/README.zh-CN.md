@@ -4,7 +4,7 @@
 
 按钮按压反馈，使用时长型弹簧；420 ms / 回弹 0.25。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/basic-button) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/basic-button) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/button-press/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

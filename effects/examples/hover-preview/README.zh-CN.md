@@ -4,7 +4,7 @@
 
 文字悬停时浮出图片，随指针轻微偏移和倾斜。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/hover-preview) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/hover-preview) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/hover-preview/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

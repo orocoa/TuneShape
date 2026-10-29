@@ -4,7 +4,7 @@
 
 脉冲缩放与扩散 · 1300 ms · Ariadne
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/pulse) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/pulse) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/pulse/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 
