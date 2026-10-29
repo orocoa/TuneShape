@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-Two pigments drift and blend through an original flowing noise field.
+Six noise layers and paper grain create the layered wash of the original watercolor.
 
 [Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/watercolor-original) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/watercolor-original/) · [All open-source effects](../../README.md)
 
@@ -45,6 +45,10 @@ Respect reduced motion: render a still watercolor frame with no animation or poi
 ## Motion notes 7
 
 Colors #0A0A0A / #E0E0E0; speed 0.6; scale 0.6; warp speed 0.08; opacity 1; additive RGB offset 0.15; cursor interaction false; cursor intensity 1.
+
+## Motion notes 8
+
+This version uses six value-noise layers, paper grain and layered washes. It retains a visible paper texture compared with the grain-free Blend and Flow versions. The three versions share a settings format but use distinct renderers; recipeId preserves the selected renderer on import and export.
 
 ## Source, configuration, and license
 

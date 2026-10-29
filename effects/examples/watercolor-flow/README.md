@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-Two pigments drift and blend through an original flowing noise field.
+Six gradient-noise layers create fine watercolor bands that blend through a double warp field.
 
 [Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/watercolor-flow) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/watercolor-flow/) · [All open-source effects](../../README.md)
 
@@ -45,6 +45,10 @@ Respect reduced motion: render a still watercolor frame with no animation or poi
 ## Motion notes 7
 
 Colors #0A0A0A / #E0E0E0; speed 0.6; scale 0.6; warp speed 0.08; opacity 1; additive RGB offset 0.15; cursor interaction false; cursor intensity 1.
+
+## Motion notes 8
+
+This version uses six gradient-noise layers without paper grain. Stronger domain-warp coefficients than the five-layer Blend version produce finer flowing bands. Original instead uses value noise and a grain texture. All three share a settings format; recipeId preserves the chosen renderer.
 
 ## Source, configuration, and license
 
