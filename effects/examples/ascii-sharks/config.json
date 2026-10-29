@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "ascii-sharks",
+  "durationMs": 12000,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": true,
+  "interruption": "retarget",
+  "tracks": [],
+  "asciiSharks": {
+    "density": 1,
+    "fontScale": 0.9,
+    "speed": 1,
+    "sharkCount": 4,
+    "sharkScale": 1,
+    "fishDensity": 1,
+    "backgroundColor": "#fafaf9",
+    "inkColor": "#252a24",
+    "opacity": 0.9,
+    "gridOpacity": 0.04,
+    "wakeOpacity": 0,
+    "interactive": false
+  }
+}

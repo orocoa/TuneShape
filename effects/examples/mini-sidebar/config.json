@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "mini-sidebar",
+  "durationMs": 400,
+  "delayMs": 0,
+  "easing": [
+    0.4,
+    0,
+    0.2,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "item0",
+      "property": "y",
+      "values": [
+        -10.5,
+        -18
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "item1",
+      "property": "y",
+      "values": [
+        -3.5,
+        -6
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "item2",
+      "property": "y",
+      "values": [
+        3.5,
+        6
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "item3",
+      "property": "y",
+      "values": [
+        10.5,
+        18
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "line0",
+      "property": "width",
+      "values": [
+        8,
+        13.457852349679698
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "line0",
+      "property": "opacity",
+      "values": [
+        0.2,
+        0.34554272932479196
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "line0",
+      "property": "scaleY",
+      "values": [
+        0.76,
+        0.8182170917299167
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "line1",
+      "property": "width",
+      "values": [
+        18,
+        31.061863099396838
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "line1",
+      "property": "opacity",
+      "values": [
+        0.96,
+        0.96
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "line1",
+      "property": "scaleY",
+      "values": [
+        0.76,
+        0.9689898095903494
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "line2",
+      "property": "width",
+      "values": [
+        8,
+        38
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "line2",
+      "property": "opacity",
+      "values": [
+        0.2,
+        1
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "line2",
+      "property": "scaleY",
+      "values": [
+        0.76,
+        1.08
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "line3",
+      "property": "width",
+      "values": [
+        8,
+        27.59279464909526
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "line3",
+      "property": "opacity",
+      "values": [
+        0.2,
+        0.7224745239758736
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "line3",
+      "property": "scaleY",
+      "values": [
+        0.76,
+        0.9689898095903494
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "panel",
+      "property": "x",
+      "values": [
+        -8,
+        0
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.8461538461538461
+    },
+    {
+      "part": "panel",
+      "property": "y",
+      "values": [
+        6,
+        6
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "panel",
+      "property": "scale",
+      "values": [
+        0.96,
+        1
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.8461538461538461
+    },
+    {
+      "part": "panel",
+      "property": "opacity",
+      "values": [
+        0,
+        1
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.5384615384615384
+    }
+  ]
+}

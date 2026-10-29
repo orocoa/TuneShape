@@ -1,0 +1,14 @@
+/* Adapted from the user-supplied Uiverse.io animation by Pradeepsaranbishnoi.
+   Motion keyframes own timing; scoped finger positioning overrides the generic
+   sculpture layout so the original overlapping geometry is preserved. */
+.tapping-hand{--skin-color:#929292;--nail-color:#b8b8b8;position:relative;width:80px;height:60px;margin-left:40px;transform:scale(.5)}
+.tapping-hand::before{content:'';display:block;width:180%;height:75%;position:absolute;top:70%;right:20%;background:#666;border-radius:40px 10px;filter:blur(10px);opacity:.22}
+.tapping-hand-palm{display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:var(--skin-color);border-radius:10px 40px}
+.tapping-hand-thumb{position:absolute;width:120%;height:38px;background:var(--skin-color);bottom:-18%;right:1%;transform-origin:calc(100% - 20px) 20px;transform:rotate(-20deg);border-radius:30px 20px 20px 10px;border-bottom:2px solid #0000001a;border-left:2px solid #0000001a}
+.tapping-hand-thumb::after{width:20%;height:60%;content:'';background:var(--nail-color);position:absolute;bottom:-8%;left:5px;border-radius:60% 10% 10% 30%;border-right:2px solid #0000000d}
+.tapping-hand>.tapping-hand-finger{position:absolute;width:80%;height:35px;background:var(--skin-color);bottom:32%;right:64%;transform-origin:100% 20px}
+.tapping-hand-finger::before{content:'';position:absolute;width:140%;height:30px;background:var(--skin-color);bottom:8%;right:65%;transform-origin:calc(100% - 20px) 20px;transform:rotate(-60deg);border-radius:20px}
+.tapping-hand-finger:nth-child(1){filter:brightness(70%)}
+.tapping-hand-finger:nth-child(2){filter:brightness(80%)}
+.tapping-hand-finger:nth-child(3){filter:brightness(90%)}
+.tapping-hand-finger:nth-child(4){filter:brightness(100%)}

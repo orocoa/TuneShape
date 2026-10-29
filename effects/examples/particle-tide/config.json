@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "particle-tide",
+  "durationMs": 12000,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": true,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "ocean",
+      "property": "tideTime",
+      "values": [
+        0,
+        12
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    }
+  ],
+  "tide": {
+    "backgroundColor": "#242426",
+    "waterColor": "#B9B9C2",
+    "crestColor": "#FFFFFF",
+    "density": 1,
+    "particleSize": 1,
+    "waveHeight": 1,
+    "wavelength": 1,
+    "speed": 1,
+    "interactive": true,
+    "clickRipples": true
+  }
+}

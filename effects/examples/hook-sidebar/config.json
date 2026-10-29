@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "hook-sidebar",
+  "durationMs": 360,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "hookSidebar": {
+    "label": "TuneShape",
+    "items": [
+      "Controls",
+      "Navigation",
+      "Containers",
+      "Text",
+      "Images",
+      "Indicators",
+      "Backgrounds"
+    ],
+    "initialIndex": 0,
+    "rowHeight": 32,
+    "fontSize": 14,
+    "accentColor": "#fc4c01",
+    "dashed": true,
+    "theme": "light"
+  }
+}

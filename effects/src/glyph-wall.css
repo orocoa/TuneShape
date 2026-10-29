@@ -1,0 +1,11 @@
+[data-recipe="glyph-wall"] .history-fit,[data-recipe="glyph-wall"] .history-motion-root{width:640px;height:360px;flex-basis:640px}
+.glyph-wall-art{position:relative;width:640px;height:360px;pointer-events:auto;cursor:pointer;font-family:var(--mono);isolation:isolate}
+.glyph-wall-art>canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;mask-image:linear-gradient(0deg,transparent,#000 7%,#000 93%,transparent)}
+.glyph-wall-word{position:absolute;padding:0!important;border:0!important;background:none!important;border-radius:0!important;box-shadow:none!important;text-align:left;line-height:1.8;letter-spacing:.12em;font-family:ui-monospace,"SFMono-Regular",Menlo,monospace;font-weight:500;white-space:nowrap;cursor:pointer;z-index:1}
+.glyph-wall-word::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .18s ease}
+.glyph-wall-word[data-focused=true]::after,.glyph-wall-word:focus-visible::after{transform:scaleX(1)}
+.glyph-wall-word:focus-visible{outline:1px dotted currentColor;outline-offset:5px}
+.glyph-wall-art .glyph-wall-shuffle{position:absolute;right:7px;bottom:2px;width:24px;height:24px;padding:0!important;background:none!important;border:0!important;box-shadow:none!important;color:#777;font-size:17px;opacity:0;transition:opacity .18s;cursor:pointer}
+.glyph-wall-art:hover .glyph-wall-shuffle,.glyph-wall-art:focus-within .glyph-wall-shuffle{opacity:.65}
+@media(hover:none){.glyph-wall-art .glyph-wall-shuffle{opacity:.65}}
+@media(prefers-reduced-motion:reduce){.glyph-wall-word::after,.glyph-wall-shuffle{transition:none!important}}

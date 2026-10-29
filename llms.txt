@@ -1,0 +1,56 @@
+# TuneShape · 随形
+
+> UI motion editor and public rendering-source collection. 42 current effects with runnable examples, exact default configurations, English/Chinese notes, and preserved third-party attribution.
+
+Website: https://tuneshape.kai-nex.com/
+Repository: https://github.com/orocoa/TuneShape
+Catalog: https://github.com/orocoa/TuneShape/blob/main/effects/catalog.json
+English: https://github.com/orocoa/TuneShape/blob/main/README.md
+Chinese: https://github.com/orocoa/TuneShape/blob/main/README.zh-CN.md
+License: TuneShape-authored code is MIT; third-party code and fonts retain the notices accompanying their source.
+Scope: Effect renderers and examples are public. The full website editor and deployments are maintained separately.
+
+## Effects
+
+- [Button Press Feedback / 按钮按压反馈](https://github.com/orocoa/TuneShape/tree/main/effects/examples/basic-button): Button Press Feedback · Duration spring · 420 ms / bounce 0.25
+- [Hover Color Transition / 悬停配色过渡](https://github.com/orocoa/TuneShape/tree/main/effects/examples/hover-invert): Hover Color Transition · 220 ms · Reprise
+- [Duration Picker / 时长选择器](https://github.com/orocoa/TuneShape/tree/main/effects/examples/duration-picker): A compact duration input that springs apart to edit and joins on confirmation.
+- [Glass Segmented Radio Control / 玻璃分段单选](https://github.com/orocoa/TuneShape/tree/main/effects/examples/glass-radio): Glass Segmented Radio Control · 500 ms · Uiverse.io · chase2k25
+- [Dropdown Menu / 下拉菜单](https://github.com/orocoa/TuneShape/tree/main/effects/examples/dropdown): Dropdown Menu · 400 ms · Ariadne
+- [Folder / 文件夹](https://github.com/orocoa/TuneShape/tree/main/effects/examples/folder): Folder · 640 ms · Ariadne
+- [Glass Folder / 磨砂文件夹](https://github.com/orocoa/TuneShape/tree/main/effects/examples/glass-folder): A frosted flap tilts forward as document cards fan out and lift.
+- [Scroll Progress / 阅读进度胶囊](https://github.com/orocoa/TuneShape/tree/main/effects/examples/scroll-progress): Hover the current chapter pill to open navigation, then click a chapter to jump.
+- [Hook Sidebar / 钩线侧栏](https://github.com/orocoa/TuneShape/tree/main/effects/examples/hook-sidebar): A fine hooked rail marks selection while a neutral rail follows hover or focus.
+- [Rail TOC / 纸飞机目录](https://github.com/orocoa/TuneShape/tree/main/effects/examples/rail-toc): A reading rail with a paper plane that follows the current section.
+- [Card Expansion / 卡片展开](https://github.com/orocoa/TuneShape/tree/main/effects/examples/card-morph): Card Expansion · 540 ms · Ariadne
+- [Typewriter Text / 逐字打出](https://github.com/orocoa/TuneShape/tree/main/effects/examples/typewriter-text): Typewriter Text
+- [Soft Blur In / 柔焦入场](https://github.com/orocoa/TuneShape/tree/main/effects/examples/soft-blur-in): Soft Blur In
+- [Short Slide Down / 落词堆叠](https://github.com/orocoa/TuneShape/tree/main/effects/examples/short-slide-down): Short Slide Down
+- [Kinetic Center Build / 居中推词](https://github.com/orocoa/TuneShape/tree/main/effects/examples/kinetic-center-build): Kinetic Center Build
+- [Period Drop / 句点弹落](https://github.com/orocoa/TuneShape/tree/main/effects/examples/period-drop): Period Drop
+- [Outline Trace / 字形描边](https://github.com/orocoa/TuneShape/tree/main/effects/examples/outline-trace): Outline Trace
+- [Glyph Anatomy / 字形构建](https://github.com/orocoa/TuneShape/tree/main/effects/examples/glyph-anatomy): Glyph Anatomy
+- [Encrypted Text / 逐字解码](https://github.com/orocoa/TuneShape/tree/main/effects/examples/encrypted-text): Encrypted Text · editable content and live parameters
+- [Gooey Input / 黏性搜索输入](https://github.com/orocoa/TuneShape/tree/main/effects/examples/gooey-input): Gooey Input · editable content and live parameters
+- [Flip Words / 词语翻替](https://github.com/orocoa/TuneShape/tree/main/effects/examples/flip-words): Flip Words · editable content and live parameters
+- [Selector / 选择器](https://github.com/orocoa/TuneShape/tree/main/effects/examples/coffee-selector): A straight wheel with a crisp center, soft distant rows, inertial dragging and snap selection.
+- [Rounded Checkboxes / 圆角复选框](https://github.com/orocoa/TuneShape/tree/main/effects/examples/rounded-checks): Independent native checkboxes with a soft fill and checkmark transition.
+- [Page Navigation / 页面导航](https://github.com/orocoa/TuneShape/tree/main/effects/examples/mini-sidebar): Page Navigation · 400 ms · Ariadne
+- [Staggered Character Reveal / 文字逐字上移揭示](https://github.com/orocoa/TuneShape/tree/main/effects/examples/text-rise): Staggered Character Reveal · 1160 ms · 个人网站
+- [Local Text Scramble and Recovery / 局部字符扰动与恢复](https://github.com/orocoa/TuneShape/tree/main/effects/examples/text-scramble): Local Text Scramble and Recovery · 200 ms · 个人网站
+- [Glyph Decode Wall / 文字解码墙](https://github.com/orocoa/TuneShape/tree/main/effects/examples/glyph-wall): Glyph Decode Wall · 2600 ms · 原创实现
+- [Hover Preview / 文字悬停图片](https://github.com/orocoa/TuneShape/tree/main/effects/examples/hover-preview): Inline words reveal a floating image that follows the pointer.
+- [Album Rail / 唱片轨道](https://github.com/orocoa/TuneShape/tree/main/effects/examples/album-rail): A fan of album sleeves, with records that slide out and spin.
+- [Orbit Reel / 卡片转轮](https://github.com/orocoa/TuneShape/tree/main/effects/examples/orbit-reel): A rotating ring of cards opens into a navigable arc.
+- [Elastic Reel / 弹性相片卷](https://github.com/orocoa/TuneShape/tree/main/effects/examples/elastic-reel): Elastic image slices with pointer magnification and click-to-open images.
+- [Staggered Loading Dots / 三点交错跳动](https://github.com/orocoa/TuneShape/tree/main/effects/examples/dots): Staggered Loading Dots · 1200 ms · Ariadne
+- [Finger Tapping / 手指敲击](https://github.com/orocoa/TuneShape/tree/main/effects/examples/finger-tap): Finger Tapping · 1200 ms · Uiverse.io · Pradeepsaranbishnoi
+- [Typewriter / 打字机](https://github.com/orocoa/TuneShape/tree/main/effects/examples/typewriter): Typewriter · 3000 ms · Uiverse.io · Nawsome
+- [Yin Yang Loader / 太极加载](https://github.com/orocoa/TuneShape/tree/main/effects/examples/yin-yang): Yin Yang Loader · 3000 ms · Uiverse.io · fthisilak
+- [Pulse Scale and Ripple / 脉冲缩放与扩散](https://github.com/orocoa/TuneShape/tree/main/effects/examples/pulse): Pulse Scale and Ripple · 1300 ms · Ariadne
+- [Watercolor Blend / 水彩融合](https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor): Two pigments drift and blend through an original flowing noise field.
+- [Watercolor Original / 水彩模糊](https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor-original): Two pigments drift and blend through an original flowing noise field.
+- [Watercolor Flow / 细度水彩融合](https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor-flow): Two pigments drift and blend through an original flowing noise field.
+- [ASCII Sharks / ASCII 鲨鱼群](https://github.com/orocoa/TuneShape/tree/main/effects/examples/ascii-sharks): Top-down sharks and small fish drawn on a configurable character grid.
+- [Particle Tide / 粒子海浪](https://github.com/orocoa/TuneShape/tree/main/effects/examples/particle-tide): An original ocean of particles with rolling swells and click ripples.
+- [ASCII Wave Animation / ASCII 波形动画](https://github.com/orocoa/TuneShape/tree/main/effects/examples/ascii-wave): ASCII Wave Animation · 4000 ms · Ariadne

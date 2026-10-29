@@ -1,0 +1,10 @@
+.site-header{gap:16px}
+.site-header .brand{color:#000}
+.site-header .brand strong{font-weight:800}
+.header-actions{--header-label-size:13px;gap:8px}
+.language-switch{display:flex;align-items:center;gap:7px;flex:none;font-size:var(--header-label-size);line-height:1;color:#777;white-space:nowrap}
+.language-switch>button{padding:7px 1px;color:#777;background:transparent;font-size:var(--header-label-size);line-height:1}
+.language-switch>button[aria-pressed=true]{color:#171717;font-weight:700;text-decoration:none;font-synthesis:weight}
+.language-switch>button:hover{color:#171717;background:transparent}
+.header-actions .glossary-trigger{display:grid;place-items:center;width:34px;height:34px;min-width:34px;padding:0;gap:0;border-radius:50%}
+.header-actions .glossary-trigger svg{width:18px;height:18px}

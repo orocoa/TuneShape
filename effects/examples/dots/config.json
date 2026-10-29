@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "dots",
+  "durationMs": 1200,
+  "delayMs": 0,
+  "easing": [
+    0.42,
+    0,
+    0.58,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": true,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "dot0",
+      "property": "y",
+      "values": [
+        0,
+        -4,
+        0,
+        0
+      ],
+      "times": [
+        0,
+        0.3,
+        0.6,
+        1
+      ],
+      "start": 0,
+      "span": 0.75
+    },
+    {
+      "part": "dot0",
+      "property": "opacity",
+      "values": [
+        0.4,
+        1,
+        0.4,
+        0.4
+      ],
+      "times": [
+        0,
+        0.3,
+        0.6,
+        1
+      ],
+      "start": 0,
+      "span": 0.75
+    },
+    {
+      "part": "dot1",
+      "property": "y",
+      "values": [
+        0,
+        -4,
+        0,
+        0
+      ],
+      "times": [
+        0,
+        0.3,
+        0.6,
+        1
+      ],
+      "start": 0.125,
+      "span": 0.75
+    },
+    {
+      "part": "dot1",
+      "property": "opacity",
+      "values": [
+        0.4,
+        1,
+        0.4,
+        0.4
+      ],
+      "times": [
+        0,
+        0.3,
+        0.6,
+        1
+      ],
+      "start": 0.125,
+      "span": 0.75
+    },
+    {
+      "part": "dot2",
+      "property": "y",
+      "values": [
+        0,
+        -4,
+        0,
+        0
+      ],
+      "times": [
+        0,
+        0.3,
+        0.6,
+        1
+      ],
+      "start": 0.25,
+      "span": 0.75
+    },
+    {
+      "part": "dot2",
+      "property": "opacity",
+      "values": [
+        0.4,
+        1,
+        0.4,
+        0.4
+      ],
+      "times": [
+        0,
+        0.3,
+        0.6,
+        1
+      ],
+      "start": 0.25,
+      "span": 0.75
+    }
+  ]
+}

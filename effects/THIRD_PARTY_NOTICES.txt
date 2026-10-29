@@ -1,0 +1,955 @@
+TuneShape · 第三方运行时依赖许可声明
+核实版本以 pnpm-lock.yaml 为准。
+
+
+========================================================================
+react 19.3.1
+MIT
+MIT License
+
+Copyright (c) Meta Platforms, Inc. and affiliates.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+========================================================================
+react-dom 19.3.1
+MIT
+MIT License
+
+Copyright (c) Meta Platforms, Inc. and affiliates.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+========================================================================
+scheduler 0.28.0
+MIT
+MIT License
+
+Copyright (c) Meta Platforms, Inc. and affiliates.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+========================================================================
+motion 14.2.0
+MIT
+The MIT License (MIT)
+
+Copyright (c) 2024 [Motion](https://motion.dev) B.V.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+========================================================================
+framer-motion 14.2.0
+MIT
+The MIT License (MIT)
+
+Copyright (c) 2018 Framer B.V.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+========================================================================
+motion-dom 14.2.0
+MIT
+The MIT License (MIT)
+
+Copyright (c) 2024 [Motion](https://motion.dev) B.V.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+========================================================================
+motion-utils 14.1.1
+MIT
+The MIT License (MIT)
+
+Copyright (c) 2024 [Motion](https://motion.dev) B.V.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+========================================================================
+bezier-easing-editor 1.1.0
+MIT
+The MIT License (MIT)
+
+Copyright (c) 2019 Gaëtan Renaudeau
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+========================================================================
+bezier-easing 3.2.0
+MIT
+Copyright (c) 2014 Gaëtan Renaudeau
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+
+========================================================================
+tslib 2.8.1
+0BSD
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+
+Ariadne waveform geometry (adapted as explicit Motion keyframes)
+MIT License
+
+Copyright (c) 2026 KAI-NEX
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+Doto — SIL Open Font License 1.1
+Source: https://github.com/oliverlalan/Doto
+Bundled license: /fonts/doto/OFL.txt
+
+Fusion Pixel 12px Proportional Simplified Chinese — SIL Open Font License 1.1
+Source: https://github.com/TakWolf/fusion-pixel-font/releases/tag/2026.10.16
+Bundled license: /fonts/fusion-pixel/OFL.txt
+Upstream font notices are retained in /fonts/fusion-pixel/LICENSES/.
+
+
+Search control: src/SearchControl.tsx and src/search-control.css.
+Independently implemented using native input/button semantics, CSS transitions,
+and an SVG alpha filter. Interaction reference:
+https://ui.aceternity.com/components/gooey-input
+The former Aceternity-adapted implementation is retained only in the local
+worktree for audit. It is excluded from the portable source and reusable exports.
+No Aceternity registry implementation is included in current runtime output.
+
+
+========================================================================
+Geist Pixel Circle 1.8.1 — SIL Open Font License 1.1
+Source: https://github.com/vercel/geist-font/releases/tag/v1.8.1
+Copyright 2024 The Geist Project Authors.
+Unmodified upstream WOFF2: /fonts/geist-pixel/GeistPixel-Circle.woff2
+Full license: /fonts/geist-pixel/OFL.txt
+
+LXGW Neo XiHei 1.305 — IPA Font License 1.0
+Source: https://github.com/lxgw/LxgwNeoXiHei/releases/tag/v1.305
+Full original license (Japanese/English): /fonts/lxgw-neo-xihei/LICENSE.md
+Chinese translation: /fonts/lxgw-neo-xihei/LICENSE_CHS.md
+Upstream TTF: /fonts/lxgw-neo-xihei/LXGWNeoXiHei.ttf
+Web copy: /fonts/lxgw-neo-xihei/LXGWNeoXiHei.woff2
+Change: full glyph set compressed from the upstream TTF into WOFF2 with fontTools;
+no glyph outlines were changed or removed. The original TTF remains available.
+
+IPAexGothic 004.01 — IPA Font License 1.0
+Source: https://moji.or.jp/ipafont/ipaex00401/
+Original font, unchanged: /fonts/ipaex-gothic/ipaexg.ttf
+Full license: /fonts/ipaex-gothic/IPA_Font_License_Agreement_v1.0.txt
+
+The site no longer has a font picker or a stored font choice. To replace
+LXGW Neo XiHei with the original IPAexGothic, download the unchanged original
+/fonts/ipaex-gothic/ipaexg.ttf, install it on the local system, restart the browser,
+and reload the page. The Chinese font stack checks the installed IPAexGothic
+family before the bundled derived font, following the font author's documented JPAfonts
+restoration approach. This original Japanese font may require system fallback for
+Simplified Chinese characters. The original file remains available unchanged.
+Author's embedding guide:
+https://github.com/lxgw/lxgw/blob/main/documents/xizhi_embedding_instructions.md
+Font sources, versions, and SHA-256 checksums: /fonts/SOURCES.json
+
+
+========================================================================
+Finger Tapping UI — user-supplied CSS
+Attribution supplied with the code: From Uiverse.io by Pradeepsaranbishnoi
+Original snippet retained at outputs/finger-tap-20261017/original.css.
+Original: https://uiverse.io/Pradeepsaranbishnoi/tall-fish-38
+Adaptation: English class names, gray hand and light gray nails with original overlapping geometry,
+Motion-driven keyframes, editable cycle/amplitude/stagger, pause/resume and
+reduced-motion support.
+License verified from the original page on 2026-10-17: MIT.
+
+Copyright (c) 2026 Pradeepsaranbishnoi (Pradeep Saran)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to
+do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+========================================================================
+Typewriter UI — user-supplied CSS
+Attribution supplied with the code: From Uiverse.io by Nawsome
+Verified source (2026-10-18): https://uiverse.io/Nawsome/kind-mole-87
+License: MIT, as published on the source page.
+Original snippet retained at outputs/typewriter-20261017/original.css.
+Adaptation: monochrome palette, original geometry, explicit individual keys,
+Motion-driven 3-second cycle, sampled carriage easing, editable travel and
+keypress depth, pause/resume and reduced-motion support.
+The user-supplied attribution is retained. Uiverse publishes UI elements under MIT; Motion exports include the MIT permission notice.
+
+
+========================================================================
+Yin Yang Loader UI — user-supplied CSS
+Attribution supplied with the code: From Uiverse.io by fthisilak
+Original snippet retained at outputs/yin-yang-20261017/original.css.
+Adaptation: scoped geometry, centered preview, one Motion-driven 4-second
+rotation and pulse clock, editable direction/period/pulse amplitude,
+original hover shadow, pause/resume and reduced-motion support.
+The user-supplied attribution is retained. Uiverse publishes UI elements under MIT; Motion exports include the MIT permission notice.
+
+
+========================================================================
+Glass Radio Selector — chase2k25
+Source: https://uiverse.io/chase2k25/slimy-chipmunk-97
+Normalized user-supplied CSS and HTML retained in outputs/glass-radio-20261017.
+Adaptation: native accessible radio inputs, unique IDs, responsive spacing,
+Motion-driven elastic glider and finish crossfades, pause/resume.
+
+MIT License
+Copyright - 2026 chase2k25 (chandu.exe)
+Source: https://uiverse.io/chase2k25/slimy-chipmunk-97
+Verified: 2026-10-17
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+========================================================================
+Glyph Decode Wall — original UiWeb implementation
+Concept reference: https://pro.reactbits.dev/docs/components/typographic-wall
+The user requested an original effect after confirming no Pro license.
+No React Bits Pro source code or registry component is included.
+The deterministic grid, layout, scan/decode renderer and interactions were
+implemented independently in src/glyph-wall.ts and GlyphWallPreview.tsx.
+Uses the existing React and Motion dependencies listed above.
+
+========================================================================
+Particle Tide — original UiWeb implementation
+Concept reference: https://pro.reactbits.dev/docs/components/contour-tide
+The user requested an original alternative without a Pro license, then
+requested a simplified set of useful controls based on public Customize.
+No React Bits Pro source, registry component or license key is included.
+The particle field, wave synthesis, projection, WebGL point renderer and
+Canvas 2D fallback were implemented independently in src/particle-tide.ts and ParticleTidePreview.tsx.
+Uses the existing React and Motion dependencies listed above.
+
+========================================================================
+Watercolor Blend — original UiWeb implementation
+Concept reference: https://pro.reactbits.dev/docs/components/watercolor
+The original two-pigment shader and CPU fallback were authored independently
+in src/watercolor.ts. Selected public Customize controls inform the settings.
+No React Bits Pro source, registry component or license key is included.
+Uses the existing React and Motion dependencies listed above, plus native
+WebGL / Canvas 2D browser APIs. No additional runtime dependency.
+
+Elastic Reel reference (2026-10-17): https://pro.reactbits.dev/docs/components/elastic-reel
+Original UiWeb implementation in src/elastic-reel.ts. No React Bits Pro code, registry or assets are distributed. Abstract SVG artwork in public/images/elastic-reel/ was authored for UiWeb.
+
+Orbit Reel concept reference (2026-10-18): https://pro.reactbits.dev/docs/components/orbit-reel
+Original UiWeb wheel/arc carousel in src/orbit-reel.ts, informed by the public preview and selected Customize controls. No React Bits Pro source, registry package or assets are used. Reuses six abstract SVG artworks originally authored for UiWeb Elastic Reel.
+
+
+Remocn / Mondrian Split
+https://github.com/Remocn/remocn
+MIT License
+
+Copyright (c) 2026 Remocn
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Hover Preview concept reference (2026-10-18): https://pro.reactbits.dev/docs/components/hover-preview
+Original UiWeb inline-word image preview in src/hover-preview.ts, informed by the public preview and selected Customize controls. Uses native Web Animations and embedded preview images. GitHub logo and Octicons star attribution are included below. No React Bits Pro source, registry package, license key or assets are used.
+
+Album Rail reference (2026-10-18): https://pro.reactbits.dev/docs/components/album-rail
+Independent TuneShape implementation in src/album-rail.ts; no React Bits Pro source code, registry or demo artwork is distributed. Twelve original fictional TuneShape sleeves are used in previews and exports (public/images/album-rail/ORIGINAL_ART.json). Previously downloaded reference covers are retained locally for audit history and excluded from production builds.
+
+Preserved UiWeb originals (2026-10-18)
+Watercolor Original (src/watercolor-original.ts) retains the first original six-octave pigment field and grain. Watercolor Blend remains a separate refined implementation. Elastic Reel Classic has been removed from the product catalog and exports; its historical source remains locally archived. The current Elastic Reel uses original TuneShape artwork. No React Bits Pro source or registry package is included.
+
+Duration Picker interaction reference (2026-10-18): https://www.rareui.com/components/durationpicker
+Independent TuneShape implementation in src/duration-picker.ts. The public interaction and user-supplied reference were studied; Rare UI source, registry, SVG paths, and its dependencies are not distributed. Our own DOM renderer, analytical spring, SVG silhouettes and CSS corners approximate the interaction. Rare UI retains authorship of the referenced component.
+
+Rail TOC interaction reference (2026-10-18): https://www.rareui.com/components/railtoc
+Independent TuneShape implementation in src/rail-toc.ts, informed by the public reference and user-supplied material. Rare UI retains authorship of the referenced component. No Rare UI source, registry, SVG plane path or dependency is distributed. Our own measured polyline geometry, paper plane silhouette, analytical spring and DOM/SVG renderer reproduce the interaction.
+
+
+Album cover customization (2026-10-18): local raster upload and name only.
+Images are decoded and resized on the page, included in explicitly exported configuration, and are not uploaded by the cover control. Rights in custom images remain with the uploader/rightsholder. Default demo covers are original fictional TuneShape artwork.
+
+Hook Sidebar interaction reference (2026-10-18): https://www.rareui.com/components/hooksidebar
+Independent TuneShape implementation in src/hook-sidebar.ts, informed by the public interaction and user-supplied reference. Rare UI retains authorship of the reference. No Rare UI source, registry or dependencies are distributed. Uses an independently authored quadratic hook, measured row centers, analytical spring, native buttons and DOM/SVG renderer.
+
+Watercolor Flow (2026-10-18): independently authored continuous six-octave pigment field in src/watercolor-flow.ts. Watercolor Blend retains the previous five-octave soft field; Watercolor Original retains the initial grainy field. The three versions have separate catalog entries and export engines.
+
+Scroll Progress interaction reference (2026-10-18): https://www.rareui.com/components/scrollprogressindicator
+Independent TuneShape implementation in src/scroll-progress.ts, informed by the public interaction and user-supplied material. Rare UI retains authorship of the reference. No Rare UI source, registry or dependencies are distributed. Own DOM/SVG renderer, measured pill/menu layout, analytical spring clock, scroll binding and original reading text.
+
+Folder component interaction reference (2026-10-18): https://www.rareui.com/components/foldercomponent
+Independent TuneShape Glass Folder implementation in src/glass-folder.ts, informed by the public interaction and user-supplied material. Rare UI retains authorship of the reference. No Rare UI source, SVG path, registry or dependencies are distributed. Own rounded flap outline, document renderer, CSS frost/perspective and analytical spring clock.
+
+TuneShape Han interface subset — IPA Font License 1.0
+Derived from LXGW Neo XiHei 1.305. The derived font is renamed TuneShape Han;
+glyph outlines are unchanged. Generator, pinned tooling, codepoints and SHA-256
+are in scripts/subset-font.py, scripts/font-requirements.txt and
+/fonts/tuneshape-han/BUILD.json. License and restoration instructions accompany
+the fonts in /fonts/tuneshape-han/README.md and /fonts/lxgw-neo-xihei/LICENSE.md.
+The full upstream TTF/WOFF2 and unmodified IPA original remain available.
+
+
+Hover Preview GitHub assets (2026-10-20)
+GitHub Invertocat Black Clearspace: official logo from https://brand.github.com/GitHub_Logos.zip
+Brand guidance: https://brand.github.com/foundations/logo
+GitHub and the Invertocat are trademarks of GitHub, Inc. The logo path and proportions are unchanged; it identifies GitHub in the inline preview example. No affiliation or endorsement is implied.
+
+GitHub Octicons star-24: https://github.com/primer/octicons/blob/main/icons/star-24.svg
+License source: https://github.com/primer/octicons/blob/main/LICENSE
+MIT License
+
+Copyright (c) 2026 GitHub Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+The orocoa avatar is the user-supplied O cubed PNG. Its original bytes and transparency are preserved.
+
+
+Rounded Checkboxes (rounded-checks)
+Source: https://uiverse.io/uiverse-astronaut/witty-bird-51
+Author: uiverse-astronaut
+MIT License
+Copyright (c) 2026 uiverse-astronaut
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Adaptation: user-supplied markup/CSS normalized in outputs/rounded-checks-20261021. Native checkbox semantics, settings and pause/resume added. The malformed remote Google Fonts import is not executed. Author and site-wide MIT policy verified on 2026-10-21; public editor preview was blank, so geometry follows the supplied snippet.
+
+
+Aceternity-inspired independent TuneShape effects (2026-10-21)
+Effects: expandable-sidebar, encrypted-text, gooey-input, flip-words.
+Interaction references by Aceternity UI / Manu Arora:
+https://ui.aceternity.com/components/sidebar
+https://ui.aceternity.com/components/encrypted-text
+https://ui.aceternity.com/components/gooey-input
+https://ui.aceternity.com/components/flip-words
+Reference license: https://ui.aceternity.com/licence (custom Aceternity License, not MIT).
+
+Native DOM renderers, clocks, settings, SVG icons and demo content are independently authored in TuneShape and covered by the project LICENSE. No original Aceternity registry source, Tailwind component source, cn helper, Tabler icons, paid source or upstream assets are included in runtime or reusable exports. Original fetched registries remain under outputs/aceternity-set-20261021/references for local reference only. No affiliation or original-source redistribution permission is claimed.
+
+
+Typography browser timelines (2026-10-21)
+Adapted from public MIT Remocn typewriter, soft-blur-in, short-slide-down, kinetic-center-build, period-drop, outline-trace and glyph-anatomy components.
+https://github.com/Remocn/remocn/tree/main/registry/remocn
+MIT License
+
+Copyright (c) 2026 Remocn
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+TuneShape Glyph Atlas: 7,738 contours derived from Inter ExtraBold (Latin) and Noto Sans SC (Chinese), both SIL OFL 1.1. This font derivative remains OFL, independently of the renderer MIT license.
+Inter source: https://github.com/rsms/inter
+Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION AND CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+
+Noto source: https://github.com/notofonts/noto-cjk
+Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name Source.
+This Font Software is licensed under the SIL Open Font License,
+Version 1.1.
+
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font
+creation efforts of academic and linguistic communities, and to
+provide a free and open framework in which fonts may be shared and
+improved in partnership with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply to
+any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software
+components as distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to,
+deleting, or substituting -- in part or in whole -- any of the
+components of the Original Version, by changing formats or by porting
+the Font Software to a new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed,
+modify, redistribute, and sell modified and unmodified copies of the
+Font Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components, in
+Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the
+corresponding Copyright Holder. This restriction only applies to the
+primary font name as presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created using
+the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+
+
+Geometric App Orbit: independent TuneShape CSS 3D renderer; public visual reference https://threeui.com/three-js/app-orbit. Pro source not accessed or copied. Original TuneShape covers MIT; see images/geometric-cards/ORIGINAL_ART.json.
+
+
+Reference-fidelity fonts and WebGL renderer (2026-10-21)
+Scoped Geist variable and Inter variable faces are embedded in the independent effect engines for consistent native and exported typography. Font software remains SIL OFL 1.1.
+Geist source: https://github.com/vercel/geist-font
+Copyright (c) 2023 Vercel, in collaboration with basement.studio
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION AND CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+
+
+Three.js 0.186.1, WebGL geometric-cover renderer
+https://threejs.org/
+The MIT License
+
+Copyright © 2010-2026 three.js authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+Selector / 选择器
+Independently implemented by TuneShape (MIT), from user-supplied visual reference and subsequent user direction (straight wheel, distance blur, inertial snapping). Original recording author/license: unknown. No recording media or third-party source code is distributed in the component.
+Variety information paraphrased from World Coffee Research, checked 2026-10-22:
+https://varieties.worldcoffeeresearch.org/varieties/geisha-panama
+https://varieties.worldcoffeeresearch.org/varieties/bourbon
+https://varieties.worldcoffeeresearch.org/varieties/sl28
+https://varieties.worldcoffeeresearch.org/varieties/typica
+https://varieties.worldcoffeeresearch.org/varieties/pacamara
+
+
+Historical ASCII Sharks adaptation — stackedlol (excluded)
+This historical reference is superseded by ASCII Shoal. The prior adaptation is excluded from the current runtime, exports and public source package; original files and prior generated outputs remain only as local history.
+Source: https://github.com/stackedlol/ascii-sharks
+Commit: c521e24a787e6d4cc460d4cf2b9815f25e4fe453
+Local source adaptation requested by the user, with configurable character sampling density, palette and TuneShape gallery lifecycle.
+No upstream license was declared at this commit. The TuneShape MIT license does not grant rights to the upstream source or this adaptation. Preserve this source notice; this record does not authorize public source publication.
+
+ASCII Shoal / ASCII 鲨鱼群 — independent implementation
+Source: https://github.com/orocoa/TuneShape/tree/main/examples/ascii-shoal
+Based on user-owned Ariadne / TuneShape ASCII Wave character-sampling and flow-field methods, with fish geometry, motion and a standalone module written for ASCII Shoal.
+
+MIT License
+
+Copyright (c) 2026 KAI-NEX and TuneShape contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

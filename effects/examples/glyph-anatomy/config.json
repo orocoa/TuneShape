@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "glyph-anatomy",
+  "durationMs": 2200,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "typography": {
+    "kind": "glyph-anatomy",
+    "text": "Glyph",
+    "fontSize": 200,
+    "fontWeight": 800,
+    "color": "#171717",
+    "guideColor": "#737373",
+    "guides": true,
+    "keepPoints": false
+  }
+}

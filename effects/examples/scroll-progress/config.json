@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "scroll-progress",
+  "durationMs": 500,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "scrollProgress": {
+    "title": "Attention Is All You Need",
+    "sections": [
+      {
+        "id": "introduction",
+        "label": "Introduction",
+        "body": "The 2017 paper introduced the Transformer, a model first tested on machine translation. It replaces recurrent and convolutional layers with attention, allowing more of the training computation to run in parallel."
+      },
+      {
+        "id": "self-attention",
+        "label": "Self-Attention",
+        "body": "Each token creates a query, a key and a value. The query is compared with keys to assign attention weights. A weighted combination of values gives that token information from relevant parts of the sequence."
+      },
+      {
+        "id": "multi-head-attention",
+        "label": "Multi-Head Attention",
+        "body": "Several attention heads work in parallel, learning different relationships between tokens. Their outputs are combined into one representation. Positional encodings add information about token order, which attention alone does not provide."
+      },
+      {
+        "id": "transformer",
+        "label": "The Transformer",
+        "body": "An encoder builds representations of the input. A decoder uses those representations and earlier output tokens to predict the next token. A mask hides future output tokens during training. Both stacks also contain feed-forward layers. The paper demonstrated strong translation results with less sequential computation."
+      }
+    ],
+    "initialProgress": 0,
+    "initialOpen": false,
+    "offset": 120,
+    "bottom": 24,
+    "fontSize": 14,
+    "accentColor": "#222222",
+    "theme": "light"
+  }
+}

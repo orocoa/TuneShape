@@ -1,0 +1,20 @@
+name: All public effects
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  effects:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: corepack enable
+      - run: node scripts/verify-public-manifest.mjs
+      - run: pnpm install --frozen-lockfile
+        working-directory: effects
+      - run: pnpm test
+        working-directory: effects
+      - run: pnpm build
+        working-directory: effects

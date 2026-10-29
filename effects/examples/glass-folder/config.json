@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "glass-folder",
+  "durationMs": 800,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "glassFolder": {
+    "name": "",
+    "documents": [
+      {
+        "title": "Notes",
+        "body": ""
+      },
+      {
+        "title": "Draft",
+        "body": ""
+      },
+      {
+        "title": "Ideas",
+        "body": ""
+      }
+    ],
+    "color": "white",
+    "size": "md",
+    "lift": 175,
+    "spread": 68,
+    "hoverLift": 20,
+    "tilt": 55,
+    "fanAngle": 16,
+    "initialOpen": false
+  }
+}

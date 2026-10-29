@@ -1,0 +1,359 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "TuneShape",
+  "alternateName": "随形",
+  "description": "Rendering source and runnable bilingual examples for 42 UI motion effects.",
+  "codeRepository": "https://github.com/orocoa/TuneShape",
+  "url": "https://tuneshape.kai-nex.com/",
+  "license": "https://spdx.org/licenses/MIT.html",
+  "programmingLanguage": [
+    "TypeScript",
+    "JavaScript",
+    "CSS"
+  ],
+  "runtimePlatform": "Browser",
+  "author": {
+    "@type": "Person",
+    "name": "orocoa",
+    "url": "https://github.com/orocoa"
+  },
+  "hasPart": [
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Button Press Feedback",
+      "alternateName": "按钮按压反馈",
+      "description": "Button Press Feedback · Duration spring · 420 ms / bounce 0.25",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/basic-button",
+      "url": "https://tuneshape.kai-nex.com/#/effect/basic-button"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Hover Color Transition",
+      "alternateName": "悬停配色过渡",
+      "description": "Hover Color Transition · 220 ms · Reprise",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/hover-invert",
+      "url": "https://tuneshape.kai-nex.com/#/effect/hover-invert"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Duration Picker",
+      "alternateName": "时长选择器",
+      "description": "A compact duration input that springs apart to edit and joins on confirmation.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/duration-picker",
+      "url": "https://tuneshape.kai-nex.com/#/effect/duration-picker"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Glass Segmented Radio Control",
+      "alternateName": "玻璃分段单选",
+      "description": "Glass Segmented Radio Control · 500 ms · Uiverse.io · chase2k25",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glass-radio",
+      "url": "https://tuneshape.kai-nex.com/#/effect/glass-radio"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Dropdown Menu",
+      "alternateName": "下拉菜单",
+      "description": "Dropdown Menu · 400 ms · Ariadne",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/dropdown",
+      "url": "https://tuneshape.kai-nex.com/#/effect/dropdown"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Folder",
+      "alternateName": "文件夹",
+      "description": "Folder · 640 ms · Ariadne",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/folder",
+      "url": "https://tuneshape.kai-nex.com/#/effect/folder"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Glass Folder",
+      "alternateName": "磨砂文件夹",
+      "description": "A frosted flap tilts forward as document cards fan out and lift.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glass-folder",
+      "url": "https://tuneshape.kai-nex.com/#/effect/glass-folder"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Scroll Progress",
+      "alternateName": "阅读进度胶囊",
+      "description": "Hover the current chapter pill to open navigation, then click a chapter to jump.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/scroll-progress",
+      "url": "https://tuneshape.kai-nex.com/#/effect/scroll-progress"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Hook Sidebar",
+      "alternateName": "钩线侧栏",
+      "description": "A fine hooked rail marks selection while a neutral rail follows hover or focus.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/hook-sidebar",
+      "url": "https://tuneshape.kai-nex.com/#/effect/hook-sidebar"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Rail TOC",
+      "alternateName": "纸飞机目录",
+      "description": "A reading rail with a paper plane that follows the current section.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/rail-toc",
+      "url": "https://tuneshape.kai-nex.com/#/effect/rail-toc"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Card Expansion",
+      "alternateName": "卡片展开",
+      "description": "Card Expansion · 540 ms · Ariadne",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/card-morph",
+      "url": "https://tuneshape.kai-nex.com/#/effect/card-morph"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Typewriter Text",
+      "alternateName": "逐字打出",
+      "description": "Typewriter Text",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/typewriter-text",
+      "url": "https://tuneshape.kai-nex.com/#/effect/typewriter-text"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Soft Blur In",
+      "alternateName": "柔焦入场",
+      "description": "Soft Blur In",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/soft-blur-in",
+      "url": "https://tuneshape.kai-nex.com/#/effect/soft-blur-in"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Short Slide Down",
+      "alternateName": "落词堆叠",
+      "description": "Short Slide Down",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/short-slide-down",
+      "url": "https://tuneshape.kai-nex.com/#/effect/short-slide-down"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Kinetic Center Build",
+      "alternateName": "居中推词",
+      "description": "Kinetic Center Build",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/kinetic-center-build",
+      "url": "https://tuneshape.kai-nex.com/#/effect/kinetic-center-build"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Period Drop",
+      "alternateName": "句点弹落",
+      "description": "Period Drop",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/period-drop",
+      "url": "https://tuneshape.kai-nex.com/#/effect/period-drop"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Outline Trace",
+      "alternateName": "字形描边",
+      "description": "Outline Trace",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/outline-trace",
+      "url": "https://tuneshape.kai-nex.com/#/effect/outline-trace"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Glyph Anatomy",
+      "alternateName": "字形构建",
+      "description": "Glyph Anatomy",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glyph-anatomy",
+      "url": "https://tuneshape.kai-nex.com/#/effect/glyph-anatomy"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Encrypted Text",
+      "alternateName": "逐字解码",
+      "description": "Encrypted Text · editable content and live parameters",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/encrypted-text",
+      "url": "https://tuneshape.kai-nex.com/#/effect/encrypted-text"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Gooey Input",
+      "alternateName": "黏性搜索输入",
+      "description": "Gooey Input · editable content and live parameters",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/gooey-input",
+      "url": "https://tuneshape.kai-nex.com/#/effect/gooey-input"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Flip Words",
+      "alternateName": "词语翻替",
+      "description": "Flip Words · editable content and live parameters",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/flip-words",
+      "url": "https://tuneshape.kai-nex.com/#/effect/flip-words"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Selector",
+      "alternateName": "选择器",
+      "description": "A straight wheel with a crisp center, soft distant rows, inertial dragging and snap selection.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/coffee-selector",
+      "url": "https://tuneshape.kai-nex.com/#/effect/coffee-selector"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Rounded Checkboxes",
+      "alternateName": "圆角复选框",
+      "description": "Independent native checkboxes with a soft fill and checkmark transition.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/rounded-checks",
+      "url": "https://tuneshape.kai-nex.com/#/effect/rounded-checks"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Page Navigation",
+      "alternateName": "页面导航",
+      "description": "Page Navigation · 400 ms · Ariadne",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/mini-sidebar",
+      "url": "https://tuneshape.kai-nex.com/#/effect/mini-sidebar"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Staggered Character Reveal",
+      "alternateName": "文字逐字上移揭示",
+      "description": "Staggered Character Reveal · 1160 ms · 个人网站",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/text-rise",
+      "url": "https://tuneshape.kai-nex.com/#/effect/text-rise"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Local Text Scramble and Recovery",
+      "alternateName": "局部字符扰动与恢复",
+      "description": "Local Text Scramble and Recovery · 200 ms · 个人网站",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/text-scramble",
+      "url": "https://tuneshape.kai-nex.com/#/effect/text-scramble"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Glyph Decode Wall",
+      "alternateName": "文字解码墙",
+      "description": "Glyph Decode Wall · 2600 ms · 原创实现",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glyph-wall",
+      "url": "https://tuneshape.kai-nex.com/#/effect/glyph-wall"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Hover Preview",
+      "alternateName": "文字悬停图片",
+      "description": "Inline words reveal a floating image that follows the pointer.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/hover-preview",
+      "url": "https://tuneshape.kai-nex.com/#/effect/hover-preview"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Album Rail",
+      "alternateName": "唱片轨道",
+      "description": "A fan of album sleeves, with records that slide out and spin.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/album-rail",
+      "url": "https://tuneshape.kai-nex.com/#/effect/album-rail"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Orbit Reel",
+      "alternateName": "卡片转轮",
+      "description": "A rotating ring of cards opens into a navigable arc.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/orbit-reel",
+      "url": "https://tuneshape.kai-nex.com/#/effect/orbit-reel"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Elastic Reel",
+      "alternateName": "弹性相片卷",
+      "description": "Elastic image slices with pointer magnification and click-to-open images.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/elastic-reel",
+      "url": "https://tuneshape.kai-nex.com/#/effect/elastic-reel"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Staggered Loading Dots",
+      "alternateName": "三点交错跳动",
+      "description": "Staggered Loading Dots · 1200 ms · Ariadne",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/dots",
+      "url": "https://tuneshape.kai-nex.com/#/effect/dots"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Finger Tapping",
+      "alternateName": "手指敲击",
+      "description": "Finger Tapping · 1200 ms · Uiverse.io · Pradeepsaranbishnoi",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/finger-tap",
+      "url": "https://tuneshape.kai-nex.com/#/effect/finger-tap"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Typewriter",
+      "alternateName": "打字机",
+      "description": "Typewriter · 3000 ms · Uiverse.io · Nawsome",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/typewriter",
+      "url": "https://tuneshape.kai-nex.com/#/effect/typewriter"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Yin Yang Loader",
+      "alternateName": "太极加载",
+      "description": "Yin Yang Loader · 3000 ms · Uiverse.io · fthisilak",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/yin-yang",
+      "url": "https://tuneshape.kai-nex.com/#/effect/yin-yang"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Pulse Scale and Ripple",
+      "alternateName": "脉冲缩放与扩散",
+      "description": "Pulse Scale and Ripple · 1300 ms · Ariadne",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/pulse",
+      "url": "https://tuneshape.kai-nex.com/#/effect/pulse"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Watercolor Blend",
+      "alternateName": "水彩融合",
+      "description": "Two pigments drift and blend through an original flowing noise field.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor",
+      "url": "https://tuneshape.kai-nex.com/#/effect/watercolor"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Watercolor Original",
+      "alternateName": "水彩模糊",
+      "description": "Two pigments drift and blend through an original flowing noise field.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor-original",
+      "url": "https://tuneshape.kai-nex.com/#/effect/watercolor-original"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Watercolor Flow",
+      "alternateName": "细度水彩融合",
+      "description": "Two pigments drift and blend through an original flowing noise field.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor-flow",
+      "url": "https://tuneshape.kai-nex.com/#/effect/watercolor-flow"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "ASCII Sharks",
+      "alternateName": "ASCII 鲨鱼群",
+      "description": "Top-down sharks and small fish drawn on a configurable character grid.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/ascii-sharks",
+      "url": "https://tuneshape.kai-nex.com/#/effect/ascii-sharks"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Particle Tide",
+      "alternateName": "粒子海浪",
+      "description": "An original ocean of particles with rolling swells and click ripples.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/particle-tide",
+      "url": "https://tuneshape.kai-nex.com/#/effect/particle-tide"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "ASCII Wave Animation",
+      "alternateName": "ASCII 波形动画",
+      "description": "ASCII Wave Animation · 4000 ms · Ariadne",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/ascii-wave",
+      "url": "https://tuneshape.kai-nex.com/#/effect/ascii-wave"
+    }
+  ]
+}

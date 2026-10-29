@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "album-rail",
+  "durationMs": 650,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": true,
+  "interruption": "retarget",
+  "tracks": [],
+  "album": {
+    "aspect": 1,
+    "size": 0.62,
+    "spread": 0.58,
+    "stack": 0.5,
+    "fan": 6,
+    "turn": 22,
+    "depth": 0.5,
+    "visible": 3,
+    "radius": 14,
+    "rpm": 33,
+    "interval": 4,
+    "vinyl": true,
+    "autoplay": true,
+    "albumAccent": true,
+    "accentColor": "#5227ff",
+    "backgroundColor": "#f1f1f1"
+  }
+}

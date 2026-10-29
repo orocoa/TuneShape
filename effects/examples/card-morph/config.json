@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "card-morph",
+  "durationMs": 540,
+  "delayMs": 0,
+  "easing": [
+    0.16,
+    1,
+    0.3,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [
+    {
+      "part": "surface",
+      "property": "width",
+      "values": [
+        "45%",
+        "90%"
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "surface",
+      "property": "height",
+      "values": [
+        75,
+        190
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "surface",
+      "property": "borderRadius",
+      "values": [
+        15,
+        10
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 1
+    },
+    {
+      "part": "summary",
+      "property": "opacity",
+      "values": [
+        1,
+        0
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0,
+      "span": 0.25
+    },
+    {
+      "part": "detail",
+      "property": "opacity",
+      "values": [
+        0,
+        1
+      ],
+      "times": [
+        0,
+        1
+      ],
+      "start": 0.7,
+      "span": 0.3
+    }
+  ]
+}

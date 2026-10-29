@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "rail-toc",
+  "durationMs": 520,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "railToc": {
+    "title": "On this page",
+    "items": [
+      {
+        "id": "installation",
+        "label": "Installation",
+        "depth": 0,
+        "body": "Start with a clear path. The contents list keeps every section within reach."
+      },
+      {
+        "id": "prerequisites",
+        "label": "Prerequisites",
+        "depth": 1,
+        "body": "Gather the essentials before you begin. Related sections sit one step inside their parent."
+      },
+      {
+        "id": "installation-steps",
+        "label": "Installation Steps",
+        "depth": 1,
+        "body": "Take one step at a time. Select a heading to jump directly to its place in the article."
+      },
+      {
+        "id": "configuration",
+        "label": "Configuration",
+        "depth": 1,
+        "body": "Choose the spacing and reading position that suit your page."
+      },
+      {
+        "id": "usage",
+        "label": "Usage",
+        "depth": 0,
+        "body": "Read at your own pace. The paper plane follows your progress along the rail."
+      },
+      {
+        "id": "customizing-content",
+        "label": "Customizing Content",
+        "depth": 1,
+        "body": "Give each section a useful name. Short, concrete labels make a long page easier to explore."
+      },
+      {
+        "id": "submenu-content",
+        "label": "Submenu Content",
+        "depth": 2,
+        "body": "Use a deeper level for details that belong together. The rail bends to reflect the hierarchy."
+      },
+      {
+        "id": "features",
+        "label": "Features",
+        "depth": 0,
+        "body": "Return to any section whenever you need it. Scrolling upward turns the plane around."
+      }
+    ],
+    "initialIndex": 0,
+    "indent": 14,
+    "rowHeight": 32,
+    "fontSize": 14,
+    "offset": 96,
+    "planeSize": 16,
+    "accentColor": "#333333",
+    "theme": "light",
+    "showContent": false
+  }
+}

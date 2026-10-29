@@ -43,7 +43,61 @@ Export JSON before refreshing or leaving the page: effect parameters are kept fo
 
 ## About this repository
 
-The website screenshots and recording above show the full online editor. This repository contains three runnable React, TypeScript, and Motion examples—button press feedback, tab transitions, and an in-page dialog—plus a standalone Canvas ASCII Shoal background. The complete website, catalog, editor panels, and other effect implementations are maintained separately.
+**Rendering source for all 42 effects in the visible catalog is public.** Each includes a default configuration, runnable page, and English/Chinese documentation. [Run the examples](effects/README.md) · [Machine-readable catalog](effects/catalog.json)
+
+```sh
+git clone https://github.com/orocoa/TuneShape.git
+cd TuneShape/effects
+pnpm install --frozen-lockfile
+pnpm dev
+```
+
+| Effect ID | English | 中文 |
+| --- | --- | --- |
+| basic-button | [Button Press Feedback](effects/examples/basic-button/README.md) | [按钮按压反馈](effects/examples/basic-button/README.zh-CN.md) |
+| hover-invert | [Hover Color Transition](effects/examples/hover-invert/README.md) | [悬停配色过渡](effects/examples/hover-invert/README.zh-CN.md) |
+| duration-picker | [Duration Picker](effects/examples/duration-picker/README.md) | [时长选择器](effects/examples/duration-picker/README.zh-CN.md) |
+| glass-radio | [Glass Segmented Radio Control](effects/examples/glass-radio/README.md) | [玻璃分段单选](effects/examples/glass-radio/README.zh-CN.md) |
+| dropdown | [Dropdown Menu](effects/examples/dropdown/README.md) | [下拉菜单](effects/examples/dropdown/README.zh-CN.md) |
+| folder | [Folder](effects/examples/folder/README.md) | [文件夹](effects/examples/folder/README.zh-CN.md) |
+| glass-folder | [Glass Folder](effects/examples/glass-folder/README.md) | [磨砂文件夹](effects/examples/glass-folder/README.zh-CN.md) |
+| scroll-progress | [Scroll Progress](effects/examples/scroll-progress/README.md) | [阅读进度胶囊](effects/examples/scroll-progress/README.zh-CN.md) |
+| hook-sidebar | [Hook Sidebar](effects/examples/hook-sidebar/README.md) | [钩线侧栏](effects/examples/hook-sidebar/README.zh-CN.md) |
+| rail-toc | [Rail TOC](effects/examples/rail-toc/README.md) | [纸飞机目录](effects/examples/rail-toc/README.zh-CN.md) |
+| card-morph | [Card Expansion](effects/examples/card-morph/README.md) | [卡片展开](effects/examples/card-morph/README.zh-CN.md) |
+| typewriter-text | [Typewriter Text](effects/examples/typewriter-text/README.md) | [逐字打出](effects/examples/typewriter-text/README.zh-CN.md) |
+| soft-blur-in | [Soft Blur In](effects/examples/soft-blur-in/README.md) | [柔焦入场](effects/examples/soft-blur-in/README.zh-CN.md) |
+| short-slide-down | [Short Slide Down](effects/examples/short-slide-down/README.md) | [落词堆叠](effects/examples/short-slide-down/README.zh-CN.md) |
+| kinetic-center-build | [Kinetic Center Build](effects/examples/kinetic-center-build/README.md) | [居中推词](effects/examples/kinetic-center-build/README.zh-CN.md) |
+| period-drop | [Period Drop](effects/examples/period-drop/README.md) | [句点弹落](effects/examples/period-drop/README.zh-CN.md) |
+| outline-trace | [Outline Trace](effects/examples/outline-trace/README.md) | [字形描边](effects/examples/outline-trace/README.zh-CN.md) |
+| glyph-anatomy | [Glyph Anatomy](effects/examples/glyph-anatomy/README.md) | [字形构建](effects/examples/glyph-anatomy/README.zh-CN.md) |
+| encrypted-text | [Encrypted Text](effects/examples/encrypted-text/README.md) | [逐字解码](effects/examples/encrypted-text/README.zh-CN.md) |
+| gooey-input | [Gooey Input](effects/examples/gooey-input/README.md) | [黏性搜索输入](effects/examples/gooey-input/README.zh-CN.md) |
+| flip-words | [Flip Words](effects/examples/flip-words/README.md) | [词语翻替](effects/examples/flip-words/README.zh-CN.md) |
+| coffee-selector | [Selector](effects/examples/coffee-selector/README.md) | [选择器](effects/examples/coffee-selector/README.zh-CN.md) |
+| rounded-checks | [Rounded Checkboxes](effects/examples/rounded-checks/README.md) | [圆角复选框](effects/examples/rounded-checks/README.zh-CN.md) |
+| mini-sidebar | [Page Navigation](effects/examples/mini-sidebar/README.md) | [页面导航](effects/examples/mini-sidebar/README.zh-CN.md) |
+| text-rise | [Staggered Character Reveal](effects/examples/text-rise/README.md) | [文字逐字上移揭示](effects/examples/text-rise/README.zh-CN.md) |
+| text-scramble | [Local Text Scramble and Recovery](effects/examples/text-scramble/README.md) | [局部字符扰动与恢复](effects/examples/text-scramble/README.zh-CN.md) |
+| glyph-wall | [Glyph Decode Wall](effects/examples/glyph-wall/README.md) | [文字解码墙](effects/examples/glyph-wall/README.zh-CN.md) |
+| hover-preview | [Hover Preview](effects/examples/hover-preview/README.md) | [文字悬停图片](effects/examples/hover-preview/README.zh-CN.md) |
+| album-rail | [Album Rail](effects/examples/album-rail/README.md) | [唱片轨道](effects/examples/album-rail/README.zh-CN.md) |
+| orbit-reel | [Orbit Reel](effects/examples/orbit-reel/README.md) | [卡片转轮](effects/examples/orbit-reel/README.zh-CN.md) |
+| elastic-reel | [Elastic Reel](effects/examples/elastic-reel/README.md) | [弹性相片卷](effects/examples/elastic-reel/README.zh-CN.md) |
+| dots | [Staggered Loading Dots](effects/examples/dots/README.md) | [三点交错跳动](effects/examples/dots/README.zh-CN.md) |
+| finger-tap | [Finger Tapping](effects/examples/finger-tap/README.md) | [手指敲击](effects/examples/finger-tap/README.zh-CN.md) |
+| typewriter | [Typewriter](effects/examples/typewriter/README.md) | [打字机](effects/examples/typewriter/README.zh-CN.md) |
+| yin-yang | [Yin Yang Loader](effects/examples/yin-yang/README.md) | [太极加载](effects/examples/yin-yang/README.zh-CN.md) |
+| pulse | [Pulse Scale and Ripple](effects/examples/pulse/README.md) | [脉冲缩放与扩散](effects/examples/pulse/README.zh-CN.md) |
+| watercolor | [Watercolor Blend](effects/examples/watercolor/README.md) | [水彩融合](effects/examples/watercolor/README.zh-CN.md) |
+| watercolor-original | [Watercolor Original](effects/examples/watercolor-original/README.md) | [水彩模糊](effects/examples/watercolor-original/README.zh-CN.md) |
+| watercolor-flow | [Watercolor Flow](effects/examples/watercolor-flow/README.md) | [细度水彩融合](effects/examples/watercolor-flow/README.zh-CN.md) |
+| ascii-sharks | [ASCII Sharks](effects/examples/ascii-sharks/README.md) | [ASCII 鲨鱼群](effects/examples/ascii-sharks/README.zh-CN.md) |
+| particle-tide | [Particle Tide](effects/examples/particle-tide/README.md) | [粒子海浪](effects/examples/particle-tide/README.zh-CN.md) |
+| ascii-wave | [ASCII Wave Animation](effects/examples/ascii-wave/README.md) | [ASCII 波形动画](effects/examples/ascii-wave/README.zh-CN.md) |
+
+The effect package uses the same rendering components as the website. The full website editor, deployment configuration, and work records are outside this package. The original three React basic examples and standalone ASCII Shoal module remain available; their setup is preserved below.
 
 <details>
 <summary>Local setup, example configuration, and source guide</summary>

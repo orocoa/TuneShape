@@ -1,0 +1,12 @@
+/* Uiverse.io / fthisilak. Motion owns rotation and pulse; CSS owns geometry. */
+/* Preserve the source geometry at the spinner's 40px rendered diameter. */
+.yin-yang-stage{width:120px;height:120px;transform:scale(.3333333333)}
+.yin-yang-stage .demo-yin-yang{position:relative;width:120px;height:120px;border-radius:50%;background:linear-gradient(90deg,#fff 50%,#000 50%);box-shadow:var(--yin-shadow);transition:box-shadow var(--yin-shadow-transition)!important;pointer-events:auto}
+.demo-yin-yang::before,.demo-yin-yang::after{content:'';position:absolute;width:60px;height:60px;left:50%;transform:translateX(-50%);border-radius:50%}
+.demo-yin-yang::before{top:0;background:#000}
+.demo-yin-yang::after{bottom:0;background:#fff}
+.yin-yang-stage .yin-yang-dot{position:absolute;left:calc(50% - 9px);width:18px;height:18px;border-radius:50%;z-index:1}
+.yin-yang-dot.white{background:#fff;top:30px}
+.yin-yang-dot.black{background:#000;bottom:30px}
+.yin-yang-stage .demo-yin-yang:hover{box-shadow:var(--yin-hover-shadow)}
+@media(prefers-reduced-motion:reduce){.yin-yang-stage .demo-yin-yang{transition:none!important}}

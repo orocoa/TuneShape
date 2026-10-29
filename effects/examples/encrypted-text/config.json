@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "encrypted-text",
+  "durationMs": 550,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "encryptedText": {
+    "text": "Lorem ipsum",
+    "charset": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-={}[];:,.<>/?",
+    "flipDelayMs": 50,
+    "fontSize": 16,
+    "revealedColor": "#171717",
+    "encryptedColor": "#999999"
+  }
+}

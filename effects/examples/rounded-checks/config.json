@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "rounded-checks",
+  "durationMs": 220,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "roundedChecks": {
+    "items": [
+      {
+        "label": "Daily summary email",
+        "checked": true
+      },
+      {
+        "label": "Weekly performance digest",
+        "checked": true
+      },
+      {
+        "label": "Product release notes",
+        "checked": false
+      }
+    ],
+    "size": 20,
+    "radius": 8,
+    "rowGap": 14,
+    "labelGap": 12,
+    "fontSize": 15,
+    "checkedColor": "#929292",
+    "textColor": "#737373",
+    "boxColor": "#ffffff",
+    "borderColor": "#e3e8ee",
+    "checkColor": "#ffffff",
+    "disabled": false
+  }
+}

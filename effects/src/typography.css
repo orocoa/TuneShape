@@ -1,0 +1,34 @@
+@import './font-subset.css';
+/* Self-hosted fonts; sources and unmodified upstream files are retained in public/fonts. */
+@font-face{font-family:"Geist Pixel Circle";src:url('/fonts/geist-pixel/GeistPixel-Circle.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+/* An installed IPA original takes precedence without a local() source candidate.
+   WebKit can leave an unused segmented face pending when its local() lookup fails.
+   No original Japanese font is automatically downloaded or installed. */
+:root{
+ --font-zh:"IPAexGothic","TuneShape Han";
+ --font-body:"Geist Pixel Circle",var(--font-zh),"PingFang SC","Noto Sans SC",sans-serif;
+ --font-label:var(--font-body);
+ --font-data:"Geist Pixel Circle",var(--font-zh),"SFMono-Regular",Consolas,monospace;
+ --mono:var(--font-data);
+}
+/* Keep the dot outlines; use real pair kerning and slightly tighter Latin spacing. */
+:root{font-kerning:normal;font-feature-settings:"kern" 1;word-spacing:-.06em;--latin-tracking:-.012em;--latin-word-spacing:-.075em}
+.field-heading label>span,.section-divider>span:last-child,.copy-prompt-button,.glossary-list h3 span,.demo-button,.sculpt-tile{letter-spacing:var(--latin-tracking);word-spacing:var(--latin-word-spacing)}
+.number-wrap input,.curve-selected-values input{letter-spacing:var(--latin-tracking)}
+.mini-sidebar-rail{font-family:var(--font-body)}
+/* Inspector headings share the regular Chinese face and the existing Latin face. */
+.control-panel :is(.panel-heading h2,h3,h4,label,summary){font-family:var(--font-label);font-weight:400;font-synthesis:none}
+/* Give the small English labels enough room for the circle grid. */
+.field-heading label>span,.section-divider>span:last-child,.source-badge,.glossary-list h3 span{font-size:12px}
+.spec-number,.recipe-number,.state-arrow small,.curve-editor-heading output{font-size:12px}
+.catalog-overview small,.catalog-parent small,.catalog-children small{font-size:12px}
+.copy-prompt-button{font-size:13px}
+.font-preferences-trigger{padding:0;color:inherit;font:inherit;text-decoration:underline;text-underline-offset:3px}
+.font-preferences-trigger:hover{background:transparent;color:var(--ink)}
+.font-preferences-dialog>p{font-size:13px;line-height:1.9;margin-top:16px}
+.font-license-restoration{margin-top:20px;font-size:12px;line-height:1.9;color:#777}
+.font-license-restoration summary{cursor:pointer;color:var(--ink)}
+.font-license-restoration p{margin:12px 0}
+.font-license-restoration a{text-decoration:underline;text-underline-offset:3px}
+.font-license-links{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:24px;font-size:12px;line-height:1.8}
+.font-license-links a{text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
