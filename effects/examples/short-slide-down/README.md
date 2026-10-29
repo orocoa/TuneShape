@@ -4,7 +4,7 @@
 
 Short Slide Down
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/short-slide-down) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/short-slide-down) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/short-slide-down/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

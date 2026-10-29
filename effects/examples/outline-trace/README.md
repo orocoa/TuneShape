@@ -4,7 +4,7 @@
 
 Outline Trace
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/outline-trace) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/outline-trace) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/outline-trace/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

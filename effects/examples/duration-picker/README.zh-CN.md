@@ -4,7 +4,7 @@
 
 紧凑的时长输入，点击后弹开编辑，确认后重新合拢。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/duration-picker) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/duration-picker) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/duration-picker/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

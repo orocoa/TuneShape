@@ -4,7 +4,7 @@
 
 Encrypted Text · editable content and live parameters
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/encrypted-text) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/encrypted-text) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/encrypted-text/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

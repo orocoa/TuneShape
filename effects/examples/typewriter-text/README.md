@@ -4,7 +4,7 @@
 
 Typewriter Text
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/typewriter-text) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/typewriter-text) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/typewriter-text/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

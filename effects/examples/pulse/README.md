@@ -4,7 +4,7 @@
 
 Pulse Scale and Ripple · 1300 ms · Ariadne
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/pulse) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/pulse) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/pulse/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

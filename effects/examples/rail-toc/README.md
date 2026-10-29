@@ -4,7 +4,7 @@
 
 A reading rail with a paper plane that follows the current section.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/rail-toc) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/rail-toc) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/rail-toc/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

@@ -4,7 +4,7 @@
 
 显示度量线、轮廓锚点和贝塞尔手柄，字形从线段构建为曲线。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/glyph-anatomy) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/glyph-anatomy) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/glyph-anatomy/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

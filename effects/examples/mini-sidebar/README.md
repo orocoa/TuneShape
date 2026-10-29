@@ -4,7 +4,7 @@
 
 Page Navigation · 400 ms · Ariadne
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/mini-sidebar) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/mini-sidebar) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/mini-sidebar/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

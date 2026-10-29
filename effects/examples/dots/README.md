@@ -4,7 +4,7 @@
 
 Staggered Loading Dots · 1200 ms · Ariadne
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/dots) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/dots) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/dots/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

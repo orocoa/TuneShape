@@ -4,7 +4,7 @@
 
 唱片封套沿扇形展开，悬停探出黑胶，点击后抽出旋转。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/album-rail) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/album-rail) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/album-rail/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

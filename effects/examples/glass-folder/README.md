@@ -4,7 +4,7 @@
 
 A frosted flap tilts forward as document cards fan out and lift.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/glass-folder) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/glass-folder) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/glass-folder/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

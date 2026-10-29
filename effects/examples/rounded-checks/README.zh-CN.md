@@ -4,7 +4,7 @@
 
 可独立勾选的偏好列表，方框填色与勾号柔和过渡。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/rounded-checks) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/rounded-checks) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/rounded-checks/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

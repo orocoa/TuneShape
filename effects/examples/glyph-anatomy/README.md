@@ -4,7 +4,7 @@
 
 Glyph Anatomy
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/glyph-anatomy) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/glyph-anatomy) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/glyph-anatomy/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

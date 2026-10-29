@@ -4,7 +4,7 @@
 
 文字逐字上移揭示 · 1160 ms · 个人网站
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/text-rise) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/text-rise) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/text-rise/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

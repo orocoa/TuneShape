@@ -4,7 +4,7 @@
 
 词语从上方依次落下，整组位置随词数调整并始终居中。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/short-slide-down) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/short-slide-down) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/short-slide-down/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

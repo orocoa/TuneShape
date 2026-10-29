@@ -4,7 +4,7 @@
 
 Card Expansion · 540 ms · Ariadne
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/card-morph) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/card-morph) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/card-expand/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

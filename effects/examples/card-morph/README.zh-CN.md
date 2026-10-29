@@ -4,7 +4,7 @@
 
 卡片展开 · 540 ms · Ariadne
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/card-morph) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/card-morph) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/card-expand/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

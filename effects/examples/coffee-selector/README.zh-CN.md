@@ -4,7 +4,7 @@
 
 直列滚轮，中心清晰，远处渐隐虚化；拖动后带惯性吸附到最近选项。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/coffee-selector) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/coffee-selector) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/coffee-selector/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

@@ -4,7 +4,7 @@
 
 Finger Tapping · 1200 ms · Uiverse.io · Pradeepsaranbishnoi
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/finger-tap) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/finger-tap) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/finger-tap/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

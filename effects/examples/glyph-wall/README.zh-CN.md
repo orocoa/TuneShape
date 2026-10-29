@@ -4,7 +4,7 @@
 
 文字解码墙 · 2600 ms · 原创实现
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/glyph-wall) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/glyph-wall) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/glyph-wall/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

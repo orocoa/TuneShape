@@ -43,7 +43,7 @@ TuneShape，中文名「随形」，是面向设计师与开发者的 UI 动效�
 
 ## 关于本仓库
 
-当前可见目录中的 **42 个动效渲染源码均已公开**，每项提供默认配置、可运行页面和中英文说明。[运行全部示例](effects/README.zh-CN.md) · [机器可读清单](effects/catalog.json)
+当前可见目录中的 **42 个动效渲染源码均已公开**，每项提供默认配置、可运行页面和中英文说明。[运行全部示例](effects/README.zh-CN.md) · [机器可读清单](effects/catalog.json) · [动效说明](https://tuneshape.kai-nex.com/effects/)
 
 ```sh
 git clone https://github.com/orocoa/TuneShape.git

@@ -4,7 +4,7 @@
 
 玻璃分段单选 · 500 ms · Uiverse.io · chase2k25
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/glass-radio) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/glass-radio) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/glass-radio/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

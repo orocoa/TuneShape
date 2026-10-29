@@ -4,7 +4,7 @@
 
 局部字符扰动与恢复 · 200 ms · 个人网站
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/text-scramble) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/text-scramble) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/text-scramble/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

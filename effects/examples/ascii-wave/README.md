@@ -4,7 +4,7 @@
 
 ASCII Wave Animation · 4000 ms · Ariadne
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/ascii-wave) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/ascii-wave) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/ascii-wave/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

@@ -4,7 +4,7 @@
 
 俯视游动的鲨鱼与小鱼，以可调密度的字符网格构成动态背景。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/ascii-sharks) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/ascii-sharks) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/ascii-sharks/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

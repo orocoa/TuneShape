@@ -4,7 +4,7 @@
 
 细钩线标记当前项，灰色轨道跟随悬停与焦点。
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/hook-sidebar) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/hook-sidebar) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/hook-sidebar/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

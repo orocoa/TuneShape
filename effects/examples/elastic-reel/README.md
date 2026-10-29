@@ -4,7 +4,7 @@
 
 Elastic image slices with pointer magnification and click-to-open images.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/elastic-reel) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/elastic-reel) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/elastic-reel/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

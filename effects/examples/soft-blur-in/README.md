@@ -4,7 +4,7 @@
 
 Soft Blur In
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/soft-blur-in) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/soft-blur-in) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/soft-blur-in/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

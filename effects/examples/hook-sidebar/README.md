@@ -4,7 +4,7 @@
 
 A fine hooked rail marks selection while a neutral rail follows hover or focus.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/hook-sidebar) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/hook-sidebar) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/hook-sidebar/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

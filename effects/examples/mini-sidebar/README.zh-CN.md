@@ -4,7 +4,7 @@
 
 页面导航 · 400 ms · Ariadne
 
-[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/mini-sidebar) · [全部开源动效](../../README.zh-CN.md)
+[在线调整此动效](https://tuneshape.kai-nex.com/#/effect/mini-sidebar) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/mini-sidebar/) · [全部开源动效](../../README.zh-CN.md)
 
 ## 本地运行
 

@@ -4,7 +4,7 @@
 
 Top-down sharks and small fish drawn on a configurable character grid.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/ascii-sharks) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/ascii-sharks) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/ascii-sharks/) · [All open-source effects](../../README.md)
 
 ## Run locally
 

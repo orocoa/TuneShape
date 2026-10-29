@@ -4,7 +4,7 @@
 
 Independent native checkboxes with a soft fill and checkmark transition.
 
-[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/rounded-checks) · [All open-source effects](../../README.md)
+[Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/rounded-checks) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/rounded-checks/) · [All open-source effects](../../README.md)
 
 ## Run locally
 
