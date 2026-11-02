@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "key": "tuneshape-public-effects-v1:c4d0f87fb0ba932ec190daa465efe7fa1c5038609a88d2d7138df4480a328cb6",
+  "key": "tuneshape-public-effects-v1:4322772b20c51f2b10669b80759f1f15d1bac18546806bc82409e4daa5f3931e",
   "effects": 43,
   "scope": "Current visible effect renderers and runnable entries; full editor excluded",
   "input": [
@@ -556,18 +556,18 @@
     },
     {
       "path": "src/liquid-carousel-spec.ts",
-      "bytes": 5242,
-      "sha256": "73e92dcd9eef20ddfe5144f1c805d537a24f7c336ab6898d65d7a098f1635bb6"
+      "bytes": 5314,
+      "sha256": "82770fac7d036deceaceab19a403cc80739ebd8183246904fd63459b2ad500fe"
     },
     {
       "path": "src/liquid-carousel.test.ts",
-      "bytes": 3468,
-      "sha256": "fe017bc3277f9f31c3b34aaa12a46f830be1803622d0670c3a58bd5dd0ca5a9c"
+      "bytes": 4499,
+      "sha256": "76cf6a0892490ed1163f7dfe3ebb43229a48ee49da6afcef4e684e62e7339e48"
     },
     {
       "path": "src/liquid-carousel.ts",
-      "bytes": 20331,
-      "sha256": "c04df0f4f228c42281791c2aa60a58bcac5e77566d48fbfcdce7145d2da7bb46"
+      "bytes": 21772,
+      "sha256": "eb4b1a7b87d3f40f290aa72c91c730a93975d0aa7e978013f489cc7c6b538624"
     },
     {
       "path": "src/mini-sidebar-model.ts",
@@ -888,8 +888,8 @@
     },
     {
       "path": "src/liquid-carousel.ts",
-      "bytes": 20331,
-      "sha256": "c04df0f4f228c42281791c2aa60a58bcac5e77566d48fbfcdce7145d2da7bb46"
+      "bytes": 21772,
+      "sha256": "eb4b1a7b87d3f40f290aa72c91c730a93975d0aa7e978013f489cc7c6b538624"
     },
     {
       "path": "src/native-effect-tools.ts",
@@ -968,8 +968,8 @@
     },
     {
       "path": "src/liquid-carousel-spec.ts",
-      "bytes": 5242,
-      "sha256": "73e92dcd9eef20ddfe5144f1c805d537a24f7c336ab6898d65d7a098f1635bb6"
+      "bytes": 5314,
+      "sha256": "82770fac7d036deceaceab19a403cc80739ebd8183246904fd63459b2ad500fe"
     },
     {
       "path": "src/source-notices.ts",
@@ -1513,8 +1513,8 @@
     },
     {
       "path": "src/liquid-carousel.test.ts",
-      "bytes": 3468,
-      "sha256": "fe017bc3277f9f31c3b34aaa12a46f830be1803622d0670c3a58bd5dd0ca5a9c"
+      "bytes": 4499,
+      "sha256": "76cf6a0892490ed1163f7dfe3ebb43229a48ee49da6afcef4e684e62e7339e48"
     },
     {
       "path": "src/native-gallery-playback.test.ts",
@@ -2233,8 +2233,8 @@
     },
     {
       "path": "examples/liquid-carousel/config.json",
-      "bytes": 3338,
-      "sha256": "c75da69279fbbe58e8811d1e8d9b9d76c4917631790b785fbd671fb2159764af"
+      "bytes": 3336,
+      "sha256": "d310c33d57b2a42bef610451b04869af29e745f45e9f4f4f12eaa42aba3a44ea"
     },
     {
       "path": "examples/liquid-carousel/main.tsx",
@@ -2253,13 +2253,13 @@
     },
     {
       "path": "examples/liquid-carousel/README.md",
-      "bytes": 2499,
-      "sha256": "b7f625ba170f7d84314da05c67b0970704875bb79d199a87ced7f8bc79e24dec"
+      "bytes": 2542,
+      "sha256": "2336ed050121a19eb124d1ace0d256ba18266b779d6d344c1eab7325ad83e8f0"
     },
     {
       "path": "examples/liquid-carousel/README.zh-CN.md",
-      "bytes": 2322,
-      "sha256": "9bc0b89338ecefc0bc5e48ec19741f41dc72318290a592989c34ce77eecfa488"
+      "bytes": 2347,
+      "sha256": "42c124a3c48c2d3f2a57df2586d503ab5a376f9ed1e514a9e07ca9caa286115e"
     },
     {
       "path": "examples/coffee-selector/config.json",

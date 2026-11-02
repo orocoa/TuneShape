@@ -4,7 +4,7 @@ import {liquidCarouselImages} from './liquid-carousel-art';
 
 export type LiquidImage={src:string;title:string};
 export type LiquidCarouselSettings={items:LiquidImage[];selectedIndex:number;height:number;aspect:number;radius:number;border:number;buttonSize:number;distortion:number;edge:number;autoplay:boolean;interval:number;disabled:boolean};
-export const defaultLiquidCarousel:LiquidCarouselSettings={items:structuredClone(liquidCarouselImages),selectedIndex:0,height:202,aspect:350/463,radius:14.2,border:4.5,buttonSize:19.2,distortion:.01,edge:.02,autoplay:false,interval:1800,disabled:false};
+export const defaultLiquidCarousel:LiquidCarouselSettings={items:structuredClone(liquidCarouselImages),selectedIndex:0,height:202,aspect:350/463,radius:14.2,border:4.5,buttonSize:19.2,distortion:.2,edge:.1,autoplay:false,interval:1800,disabled:false};
 export const liquidCarouselRanges={height:[150,280],aspect:[.6,1.5],radius:[0,40],border:[0,12],buttonSize:[16,36],distortion:[0,.6],edge:[0,.25],interval:[800,6000]} as const;
 export function validateLiquidCarousel(value:unknown):LiquidCarouselSettings{
  if(!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype)throw Error('液态轮播设置须为普通对象。');
@@ -24,9 +24,18 @@ export function validateLiquidCarousel(value:unknown):LiquidCarouselSettings{
 }
 export function liquidIndex(index:number,count:number){return ((index%count)+count)%count}
 export function liquidRadius(progress:number,aspect=350/463){const p=Math.max(0,Math.min(1,progress));return (-.05+.84*p+.235*(1-Math.exp(-196*p*p)))*Math.hypot(.889*aspect,.5)/Math.hypot(.889*350/463,.5)}
+/** Low-frequency ripples follow the front rather than boiling through a noise field. */
+export const liquidBoundaryProfile=[0.0225,-0.0375,-0.015,0.03,0,-0.09,-0.105,0.0075] as const;
+function liquidBoundaryKernel(profile:readonly number[],angle:number,progress:number,amount:number){
+ const p=Math.max(0,Math.min(1,progress)),smooth=(x:number)=>{const t=Math.max(0,Math.min(1,x));return t*t*(3-2*t)};
+ const gate=smooth(p/.12)*(1-smooth((p-.8)/.2));if(gate===0||amount===0)return 0;let wave=0;
+ for(let i=0;i<4;i++)wave+=profile[i*2]*Math.sin((i+1)*angle)+profile[i*2+1]*Math.cos((i+1)*angle);
+ return amount*gate*wave;
+}
+export function liquidBoundaryOffset(angle:number,progress:number,amount:number){return liquidBoundaryKernel(liquidBoundaryProfile,angle,progress,amount)}
 export type LiquidRuntime=NativeEffectRuntime&{gallery?:boolean;managed?:boolean;interactive?:boolean;interruption?:'retarget'|'restart'};
 
-function liquidCarouselEngine(tools:ReturnType<typeof nativeEffectTools>,wrap:typeof liquidIndex,radiusAt:typeof liquidRadius){
+function liquidCarouselEngine(tools:ReturnType<typeof nativeEffectTools>,wrap:typeof liquidIndex,radiusAt:typeof liquidRadius,boundaryAt:typeof liquidBoundaryOffset,profile:readonly number[]){
  const css=`.liquid-carousel{position:relative;width:320px;height:300px;isolation:isolate;user-select:none;-webkit-user-select:none;color:#17191a}
  .liquid-carousel *{box-sizing:border-box}.liquid-carousel .lc-frame{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#fff;overflow:hidden;box-shadow:0 3px 10px #00000003;outline:none;touch-action:pan-y}
  .liquid-carousel .lc-frame:focus-visible{outline:2px solid #555;outline-offset:4px}.liquid-carousel .lc-canvas{display:block;width:100%;height:100%;pointer-events:none}
@@ -35,16 +44,15 @@ function liquidCarouselEngine(tools:ReturnType<typeof nativeEffectTools>,wrap:ty
  .liquid-carousel .lc-button:focus-visible{outline:2px solid #222;outline-offset:3px}.liquid-carousel .lc-button:hover{background:#f8f8f8}.liquid-carousel .lc-button:disabled{cursor:default}.liquid-carousel .lc-button svg{display:block;width:44%;height:44%;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
  .liquid-carousel .lc-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.liquid-carousel[data-disabled=true]{opacity:.45}`;
  const vertex=`attribute vec2 aPosition;varying vec2 vUv;void main(){vUv=aPosition*.5+.5;gl_Position=vec4(aPosition,0.,1.);}`;
- const fragment=`precision highp float;varying vec2 vUv;uniform sampler2D uFrom,uTo;uniform float uProgress,uRadius,uAspect,uFromAspect,uToAspect,uDirection,uDistortion,uEdge;
- float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453123);}
- float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hash(i),hash(i+vec2(1.,0.)),f.x),mix(hash(i+vec2(0.,1.)),hash(i+vec2(1.,1.)),f.x),f.y);}
- float fbm(vec2 p){float n=0.,a=.5;for(int i=0;i<4;i++){n+=a*noise(p);p=p*2.03+vec2(7.1,3.4);a*=.5;}return n;}
+ const fragment=`precision highp float;varying vec2 vUv;uniform sampler2D uFrom,uTo;uniform float uProgress,uRadius,uAspect,uFromAspect,uToAspect,uDirection,uDistortion,uEdge,uTexel;uniform vec4 uWave,uRipple;
  vec2 cover(vec2 uv,float imageAspect){return (uv-.5)*vec2(min(uAspect/imageAspect,1.),min(imageAspect/uAspect,1.))+.5;}
  void main(){vec2 uv=vUv;if(uProgress<=0.){gl_FragColor=texture2D(uFrom,cover(uv,uFromAspect));return;}if(uProgress>=1.){gl_FragColor=texture2D(uTo,cover(uv,uToAspect));return;}
  vec2 origin=vec2(uDirection>0.?.889:.111,.5),q=(uv-origin)*vec2(uAspect,1.);float distance=length(q);vec2 direction=q/max(distance,.001);
- float detail=(fbm(q*5.2+vec2(uProgress*.4,-uProgress*.25))-.47)*2.;float edge=distance+detail*uEdge-uRadius;
- float mask=1.-smoothstep(-.009,.009,edge);float band=exp(-pow(edge/.155,2.))*sin(3.14159265*uProgress);
- vec2 offset=direction/vec2(uAspect,1.)*uDistortion*band;vec2 fromUv=cover(clamp(uv+offset*.52,.001,.999),uFromAspect),toUv=cover(clamp(uv-offset*.34,.001,.999),uToAspect);
+ float angle=atan(q.y,-q.x*uDirection+0.000001);float wave=dot(uWave,vec4(sin(angle),cos(angle),sin(2.*angle),cos(2.*angle)))+dot(uRipple,vec4(sin(3.*angle),cos(3.*angle),sin(4.*angle),cos(4.*angle)));
+ float gate=smoothstep(0.,.12,uProgress)*(1.-smoothstep(.8,1.,uProgress)),edge=distance+wave*uEdge*gate-uRadius;
+ float feather=max(uTexel*.9,.0015),mask=1.-smoothstep(-feather,feather,edge);
+ float width=.05+.22*uDistortion,band=exp(-pow(edge/width,2.))*sin(3.14159265*uProgress),strength=uDistortion/(1.+2.*uDistortion);
+ vec2 offset=direction/vec2(uAspect,1.)*strength*band;vec2 fromUv=cover(clamp(uv+offset*.52,.001,.999),uFromAspect),toUv=cover(clamp(uv-offset*.34,.001,.999),uToAspect);
  gl_FragColor=mix(texture2D(uFrom,fromUv),texture2D(uTo,toUv),mask);}`;
  function create(host:HTMLElement,initial:LiquidCarouselSettings,initialRuntime:LiquidRuntime){
   let settings=initial,runtime=initialRuntime,items=settings.items,index=settings.selectedIndex,target=index,dead=false,ready=false,generation=0,elapsed=0,frames=0;
@@ -61,7 +69,7 @@ function liquidCarouselEngine(tools:ReturnType<typeof nativeEffectTools>,wrap:ty
    const compile=(kind:number,source:string)=>{const shader=gl.createShader(kind)!;gl.shaderSource(shader,source);gl.compileShader(shader);if(!gl.getShaderParameter(shader,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(shader)??'Liquid shader compile failed');return shader};
    const v=compile(gl.VERTEX_SHADER,vertex),f=compile(gl.FRAGMENT_SHADER,fragment);program=gl.createProgram()!;gl.attachShader(program,v);gl.attachShader(program,f);gl.linkProgram(program);gl.deleteShader(v);gl.deleteShader(f);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error('Liquid shader link failed');gl.useProgram(program);
    buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);const a=gl.getAttribLocation(program,'aPosition');gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,2,gl.FLOAT,false,0,0);
-   for(const key of ['uFrom','uTo','uProgress','uRadius','uAspect','uFromAspect','uToAspect','uDirection','uDistortion','uEdge'])uniforms[key]=gl.getUniformLocation(program,key);
+   for(const key of ['uFrom','uTo','uProgress','uRadius','uAspect','uFromAspect','uToAspect','uDirection','uDistortion','uEdge','uTexel','uWave','uRipple'])uniforms[key]=gl.getUniformLocation(program,key);
   }
   host.dataset.backend=gl?'webgl':'canvas2d';
   function texture(source?:TexImageSource){if(!gl)return null;const tex=gl.createTexture()!;gl.bindTexture(gl.TEXTURE_2D,tex);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);if(source){gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,source)}return tex}
@@ -77,8 +85,8 @@ function liquidCarouselEngine(tools:ReturnType<typeof nativeEffectTools>,wrap:ty
   function paint(){
    if(dead)return;layout();host.dataset.ready=String(ready);host.dataset.count=String(items.length);host.dataset.index=String(index);host.dataset.target=String(target);host.dataset.value=items[target].title;host.dataset.elapsed=elapsed.toFixed(1);host.dataset.frame=String(++frames);
    if(!ready)return;const a=transition?.from??surfaces[index],b=transition?.to??a,p=transition?tools.clamp(transition.elapsed/Math.max(80,runtime.durationMs)):0;host.dataset.progress=p.toFixed(4);
-   if(gl){gl.viewport(0,0,canvas.width,canvas.height);gl.useProgram(program);gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,a.texture);gl.activeTexture(gl.TEXTURE1);gl.bindTexture(gl.TEXTURE_2D,b.texture);gl.uniform1i(uniforms.uFrom,0);gl.uniform1i(uniforms.uTo,1);gl.uniform1f(uniforms.uProgress,p);gl.uniform1f(uniforms.uRadius,radiusAt(p,canvas.width/canvas.height));gl.uniform1f(uniforms.uAspect,canvas.width/canvas.height);gl.uniform1f(uniforms.uFromAspect,a.aspect);gl.uniform1f(uniforms.uToAspect,b.aspect);gl.uniform1f(uniforms.uDirection,transition?.direction??1);gl.uniform1f(uniforms.uDistortion,settings.distortion);gl.uniform1f(uniforms.uEdge,settings.edge);gl.drawArrays(gl.TRIANGLES,0,6)}
-   else if(ctx){ctx.clearRect(0,0,canvas.width,canvas.height);coverDraw(ctx,a);if(transition){ctx.save();ctx.beginPath();const x=canvas.width*(transition.direction>0?.889:.111),y=canvas.height*.5,r=radiusAt(p,canvas.width/canvas.height)*canvas.height;for(let i=0;i<=180;i++){const angle=i/180*Math.PI*2,edge=(Math.sin(angle*5+1)+Math.sin(angle*9-2)*.45)*settings.edge*canvas.height*.35;const px=x+Math.cos(angle)*Math.max(0,r+edge),py=y+Math.sin(angle)*Math.max(0,r+edge);i?ctx.lineTo(px,py):ctx.moveTo(px,py)}ctx.closePath();ctx.clip();coverDraw(ctx,b);ctx.restore()}}
+   if(gl){gl.viewport(0,0,canvas.width,canvas.height);gl.useProgram(program);gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,a.texture);gl.activeTexture(gl.TEXTURE1);gl.bindTexture(gl.TEXTURE_2D,b.texture);gl.uniform1i(uniforms.uFrom,0);gl.uniform1i(uniforms.uTo,1);gl.uniform1f(uniforms.uProgress,p);gl.uniform1f(uniforms.uRadius,radiusAt(p,canvas.width/canvas.height));gl.uniform1f(uniforms.uAspect,canvas.width/canvas.height);gl.uniform1f(uniforms.uFromAspect,a.aspect);gl.uniform1f(uniforms.uToAspect,b.aspect);gl.uniform1f(uniforms.uDirection,transition?.direction??1);gl.uniform1f(uniforms.uDistortion,settings.distortion);gl.uniform1f(uniforms.uEdge,settings.edge);gl.uniform1f(uniforms.uTexel,1/canvas.height);gl.uniform4f(uniforms.uWave,profile[0],profile[1],profile[2],profile[3]);gl.uniform4f(uniforms.uRipple,profile[4],profile[5],profile[6],profile[7]);gl.drawArrays(gl.TRIANGLES,0,6)}
+   else if(ctx){ctx.clearRect(0,0,canvas.width,canvas.height);coverDraw(ctx,a);if(transition){ctx.save();ctx.beginPath();const x=canvas.width*(transition.direction>0?.889:.111),y=canvas.height*.5,r=radiusAt(p,canvas.width/canvas.height)*canvas.height;for(let i=0;i<=180;i++){const angle=i/180*Math.PI*2,edge=boundaryAt(Math.atan2(-Math.sin(angle),-Math.cos(angle)*transition.direction),p,settings.edge)*canvas.height;const px=x+Math.cos(angle)*Math.max(0,r-edge),py=y+Math.sin(angle)*Math.max(0,r-edge);i?ctx.lineTo(px,py):ctx.moveTo(px,py)}ctx.closePath();ctx.clip();coverDraw(ctx,b);ctx.restore()}}
    haloA.style.backgroundImage=`url("${items[index].src}")`;haloB.style.backgroundImage=`url("${items[target].src}")`;haloA.style.opacity=String(.18*(1-p));haloB.style.opacity=String(.18*p);
   }
   function finish(){if(transition){release(transition.from);transition=null;index=target;status.textContent=items[index].title}paint()}
@@ -127,6 +135,6 @@ function liquidCarouselEngine(tools:ReturnType<typeof nativeEffectTools>,wrap:ty
  }
  return {create};
 }
-const engine=liquidCarouselEngine(nativeEffectTools(),liquidIndex,liquidRadius);
+const engine=liquidCarouselEngine(nativeEffectTools(),liquidIndex,liquidRadius,liquidBoundaryOffset,liquidBoundaryProfile);
 export const createLiquidCarousel=engine.create;
-export const liquidCarouselEngineCode=`${nativeToolsCode}\nconst liquidIndex=${liquidIndex.toString()};\nconst liquidRadius=${liquidRadius.toString()};\nconst liquidEngine=((__name)=>(${liquidCarouselEngine.toString()}))((fn)=>fn)(tools,liquidIndex,liquidRadius);\nconst createLiquidCarousel=liquidEngine.create;`;
+export const liquidCarouselEngineCode=`${nativeToolsCode}\nconst liquidIndex=${liquidIndex.toString()};\nconst liquidRadius=${liquidRadius.toString()};\nconst liquidBoundaryProfile=${JSON.stringify(liquidBoundaryProfile)};\nconst liquidBoundaryKernel=((__name)=>(${liquidBoundaryKernel.toString()}))((fn)=>fn);\nconst liquidBoundaryOffset=(angle,progress,amount)=>liquidBoundaryKernel(liquidBoundaryProfile,angle,progress,amount);\nconst liquidEngine=((__name)=>(${liquidCarouselEngine.toString()}))((fn)=>fn)(tools,liquidIndex,liquidRadius,liquidBoundaryOffset,liquidBoundaryProfile);\nconst createLiquidCarousel=liquidEngine.create;`;

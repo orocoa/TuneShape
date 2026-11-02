@@ -28,7 +28,7 @@ A 202px card, 0.756 image aspect, 14.2px corners and 4.5px white border. Default
 
 ## Motion notes 3
 
-Each transition lasts 800 ms. An organic radial reveal grows from the clicked button; four noise octaves shape the edge. Distortion 0.01, edge variation 0.02.
+Each transition lasts 800 ms. An organic radial reveal grows from the clicked button; coherent ripples follow the edge, with refraction confined to the moving front. Distortion 0.2, edge variation 0.1.
 
 ## Motion notes 4
 
