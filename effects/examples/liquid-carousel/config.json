@@ -48,8 +48,8 @@
     "radius": 14.2,
     "border": 4.5,
     "buttonSize": 19.2,
-    "distortion": 0.01,
-    "edge": 0.02,
+    "distortion": 0.2,
+    "edge": 0.1,
     "autoplay": false,
     "interval": 1800,
     "disabled": false

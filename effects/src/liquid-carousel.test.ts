@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {defaultLiquidCarousel,validateLiquidCarousel,liquidIndex,liquidRadius,liquidCarouselEngineCode} from './liquid-carousel';
+import {defaultLiquidCarousel,validateLiquidCarousel,liquidIndex,liquidRadius,liquidBoundaryProfile,liquidBoundaryOffset,liquidCarouselEngineCode} from './liquid-carousel';
 import {defaultHistory,parseHistory,serializeHistory,historyMotion,validateHistory} from './history-model';
 import {reelItems} from './elastic-reel-art';
 import {galleryPlayback,interactionSelector} from './effect-behavior';
@@ -21,6 +21,7 @@ test('liquid carousel validates strict local media and preserves independent sav
 });
 test('liquid carousel JSON, Motion adapter and portable factory use the same complete content',()=>{
  const config=defaultHistory('liquid-carousel'),json=serializeHistory(config),motion=historyMotion(config);
+ assert.equal(config.liquidCarousel?.edge,.1);assert.equal(config.liquidCarousel?.distortion,.2);
  assert.deepEqual(parseHistory(json),config);assert.deepEqual(motion.adapters.liquidCarousel.settings,config.liquidCarousel);
  assert.equal(motion.adapters.liquidCarousel.runtime.durationMs,800);
  assert.equal(typeof Function('__name',liquidCarouselEngineCode+';return createLiquidCarousel')((fn:unknown)=>fn),'function');
@@ -33,4 +34,15 @@ test('liquid carousel reuses the original Orbit Reel artwork and exports no refe
  assert.deepEqual(defaultLiquidCarousel.items,reelItems.slice(0,6).map(({src,title})=>({src,title})));
  assert.ok(defaultLiquidCarousel.items.every(item=>item.src.startsWith('data:image/svg+xml,')));
  assert.doesNotMatch(liquidCarouselEngineCode,/data:image\/jpeg|Harmonic fill|Reference controls/);
+});
+
+test('coherent liquid boundary closes smoothly and advances without retreat at the requested preset',()=>{
+ assert.equal(liquidBoundaryProfile.length,8);
+ const exported=Function('__name',liquidCarouselEngineCode+';return liquidBoundaryOffset')((fn:unknown)=>fn);
+ for(let i=0;i<=32;i++){
+  const angle=i/32*Math.PI*2;assert.equal(liquidBoundaryOffset(angle,0,.1),0);assert.equal(Math.abs(liquidBoundaryOffset(angle,1,.1)),0);
+  let previous=-Infinity;
+  for(let n=0;n<=100;n++){const p=n/100,offset=liquidBoundaryOffset(angle,p,.1),radius=liquidRadius(p)-offset;assert.ok(radius>=previous,'front must not flicker backwards');previous=radius;assert.ok(Math.abs(offset)<=.1*liquidBoundaryProfile.reduce((sum,v)=>sum+Math.abs(v),0));assert.equal(exported(angle,p,.1),offset)}
+  assert.ok(Math.abs(liquidBoundaryOffset(angle,.5,.1)-liquidBoundaryOffset(angle+2*Math.PI,.5,.1))<1e-14);
+ }
 });

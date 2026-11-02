@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "scope": "All 43 current UI effect renderers, bilingual runnable examples, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
-  "sourceSha256": "9f57e239e45650f03a08207cec41ff91c2b01bc493dc0cbe05630c7b9cbcacf6",
+  "sourceSha256": "010bd09062ad28f1ba10a7f7e8ab4fcaeef3d3f967a8caf4d4562a49aac3a228",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -705,8 +705,8 @@
     },
     {
       "path": "effects/examples/liquid-carousel/config.json",
-      "bytes": 3338,
-      "sha256": "c75da69279fbbe58e8811d1e8d9b9d76c4917631790b785fbd671fb2159764af"
+      "bytes": 3336,
+      "sha256": "d310c33d57b2a42bef610451b04869af29e745f45e9f4f4f12eaa42aba3a44ea"
     },
     {
       "path": "effects/examples/liquid-carousel/index.html",
@@ -720,13 +720,13 @@
     },
     {
       "path": "effects/examples/liquid-carousel/README.md",
-      "bytes": 2499,
-      "sha256": "b7f625ba170f7d84314da05c67b0970704875bb79d199a87ced7f8bc79e24dec"
+      "bytes": 2542,
+      "sha256": "2336ed050121a19eb124d1ace0d256ba18266b779d6d344c1eab7325ad83e8f0"
     },
     {
       "path": "effects/examples/liquid-carousel/README.zh-CN.md",
-      "bytes": 2322,
-      "sha256": "9bc0b89338ecefc0bc5e48ec19741f41dc72318290a592989c34ce77eecfa488"
+      "bytes": 2347,
+      "sha256": "42c124a3c48c2d3f2a57df2586d503ab5a376f9ed1e514a9e07ca9caa286115e"
     },
     {
       "path": "effects/examples/liquid-carousel/SOURCE_NOTICE.txt",
@@ -1226,7 +1226,7 @@
     {
       "path": "effects/EXPORT_MANIFEST.json",
       "bytes": 92745,
-      "sha256": "d79234d861368fd4e1e740dce2eee21f4bc318e7f9337fb58cd4e78fe9895758"
+      "sha256": "c38e32459202e9204261c5a05c85f8499d3ca18c6961b47fb5375746ef141614"
     },
     {
       "path": "effects/index.html",
@@ -1780,18 +1780,18 @@
     },
     {
       "path": "effects/src/liquid-carousel-spec.ts",
-      "bytes": 5242,
-      "sha256": "73e92dcd9eef20ddfe5144f1c805d537a24f7c336ab6898d65d7a098f1635bb6"
+      "bytes": 5314,
+      "sha256": "82770fac7d036deceaceab19a403cc80739ebd8183246904fd63459b2ad500fe"
     },
     {
       "path": "effects/src/liquid-carousel.test.ts",
-      "bytes": 3468,
-      "sha256": "fe017bc3277f9f31c3b34aaa12a46f830be1803622d0670c3a58bd5dd0ca5a9c"
+      "bytes": 4499,
+      "sha256": "76cf6a0892490ed1163f7dfe3ebb43229a48ee49da6afcef4e684e62e7339e48"
     },
     {
       "path": "effects/src/liquid-carousel.ts",
-      "bytes": 20331,
-      "sha256": "c04df0f4f228c42281791c2aa60a58bcac5e77566d48fbfcdce7145d2da7bb46"
+      "bytes": 21772,
+      "sha256": "eb4b1a7b87d3f40f290aa72c91c730a93975d0aa7e978013f489cc7c6b538624"
     },
     {
       "path": "effects/src/LiquidCarouselPreview.tsx",
