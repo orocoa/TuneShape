@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "scope": "All 42 current UI effect renderers, bilingual runnable examples, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
-  "sourceSha256": "646f5229df21e3e9cdbc59fec2877cc577e9ccf81d0ba0b87711ddc3bcb63395",
+  "scope": "All 43 current UI effect renderers, bilingual runnable examples, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
+  "sourceSha256": "9f57e239e45650f03a08207cec41ff91c2b01bc493dc0cbe05630c7b9cbcacf6",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -30,8 +30,8 @@
     },
     {
       "path": "codemeta.json",
-      "bytes": 23364,
-      "sha256": "49574a104f6660a1159151a41f4494d2c9399d835993cfe8b8adb0405ea015f0"
+      "bytes": 23974,
+      "sha256": "186aa6dac0e958eb55971092034768e6bb22d65b2b82ab533258ae5b9a3a7840"
     },
     {
       "path": "config.json",
@@ -90,8 +90,8 @@
     },
     {
       "path": "effects/catalog.json",
-      "bytes": 30727,
-      "sha256": "be04a8d9af473f014aff2cb43516317e70bbbd27f42c850c3ce2941950604103"
+      "bytes": 31566,
+      "sha256": "c0182c34e0f62a76c524a1226fde3b7385719c97aed6da1ead80fb666c78c090"
     },
     {
       "path": "effects/demo/main.tsx",
@@ -704,6 +704,36 @@
       "sha256": "31926acda2bf035091db931532e8d2d85dfd9d38a8a3c46f0b5c2c3d0bb4e276"
     },
     {
+      "path": "effects/examples/liquid-carousel/config.json",
+      "bytes": 3338,
+      "sha256": "c75da69279fbbe58e8811d1e8d9b9d76c4917631790b785fbd671fb2159764af"
+    },
+    {
+      "path": "effects/examples/liquid-carousel/index.html",
+      "bytes": 468,
+      "sha256": "d188054578ce4b5c40df107462a2b7dc081c2e365504e02189e3368bfa83e90e"
+    },
+    {
+      "path": "effects/examples/liquid-carousel/main.tsx",
+      "bytes": 116,
+      "sha256": "db3b7c355b28bd615f031a7bc4d63fb5a84e4258aa67fc78bab98a3454e91f40"
+    },
+    {
+      "path": "effects/examples/liquid-carousel/README.md",
+      "bytes": 2499,
+      "sha256": "b7f625ba170f7d84314da05c67b0970704875bb79d199a87ced7f8bc79e24dec"
+    },
+    {
+      "path": "effects/examples/liquid-carousel/README.zh-CN.md",
+      "bytes": 2322,
+      "sha256": "9bc0b89338ecefc0bc5e48ec19741f41dc72318290a592989c34ce77eecfa488"
+    },
+    {
+      "path": "effects/examples/liquid-carousel/SOURCE_NOTICE.txt",
+      "bytes": 473,
+      "sha256": "d83f591433537f83c1dc2fdb6b7d93233056f115b12ae562046337d6d3a001fd"
+    },
+    {
       "path": "effects/examples/mini-sidebar/config.json",
       "bytes": 4319,
       "sha256": "e1de4277447f240e148d566662095cdff57542a6890eec8dfd76c19953293d2d"
@@ -1195,13 +1225,13 @@
     },
     {
       "path": "effects/EXPORT_MANIFEST.json",
-      "bytes": 85662,
-      "sha256": "cc5d67c9a5057342c11fffc26479e549a95254da456762ab0d90ca771739486e"
+      "bytes": 92745,
+      "sha256": "d79234d861368fd4e1e740dce2eee21f4bc318e7f9337fb58cd4e78fe9895758"
     },
     {
       "path": "effects/index.html",
-      "bytes": 6790,
-      "sha256": "31a24bfe247eeca9cb3a753c17fbc40cf4abe6561ef79fb8753312ab9e1d6135"
+      "bytes": 6997,
+      "sha256": "d2cd92d55e3d4ac9d1f1aaf145609643eb3d3c40dee874721ea1c208eee6ffdd"
     },
     {
       "path": "effects/LICENSE",
@@ -1274,14 +1304,79 @@
       "sha256": "dc1b9e0e7e0d09befb2307a65749e49f80172043e10cc6437368302433a47ca7"
     },
     {
+      "path": "effects/public/images/geometric-cards/01.svg",
+      "bytes": 166,
+      "sha256": "02ab7228c2421ba79e7409f6223ced708aba19c0bb26b475adede6a6ef606bdd"
+    },
+    {
+      "path": "effects/public/images/geometric-cards/02.svg",
+      "bytes": 259,
+      "sha256": "00d7ae99e950f7b83dd4988cb70ac290f04aca4f62784bcde1aa4d35cd39b0c2"
+    },
+    {
+      "path": "effects/public/images/geometric-cards/03.svg",
+      "bytes": 228,
+      "sha256": "e5ab3edf20861858849cef3b7c191317b82fc3c425e6a302a3df74731c5f5681"
+    },
+    {
+      "path": "effects/public/images/geometric-cards/04.svg",
+      "bytes": 242,
+      "sha256": "d6aa07f7e52b20641c3fa1c0af028afa0d576a640a97b1fce1c723c68c8684e9"
+    },
+    {
+      "path": "effects/public/images/geometric-cards/05.svg",
+      "bytes": 211,
+      "sha256": "e6548a97ccfa53d1449a7ea3699c895eea01cc42fc93dfddb6bfaf046f2e69cf"
+    },
+    {
+      "path": "effects/public/images/geometric-cards/06.svg",
+      "bytes": 258,
+      "sha256": "02fb15fa0395315a18ea21d57055bb95fa0bb050c016b611bb5656adab0ae1c0"
+    },
+    {
+      "path": "effects/public/images/geometric-cards/07.svg",
+      "bytes": 210,
+      "sha256": "e8fc344556d8d2121daea8997e795c00fb4a8d3fa4ddfeac62bcc8a92be2670a"
+    },
+    {
+      "path": "effects/public/images/geometric-cards/08.svg",
+      "bytes": 557,
+      "sha256": "b6346e46b1c2eb5ebb44eb6816b898c5d79e30730b6d067a299ca5a187a67a48"
+    },
+    {
+      "path": "effects/public/images/geometric-cards/09.svg",
+      "bytes": 336,
+      "sha256": "ce4abfcef56ec5fb49dadf6baa77938b7475aa9c4cec2e252dcd09c2f1234903"
+    },
+    {
+      "path": "effects/public/images/geometric-cards/10.svg",
+      "bytes": 305,
+      "sha256": "3301725bbdb9d9fc25f0aa3d64a76c0bfb34e9b5064ab45ac7a458d650006ccd"
+    },
+    {
+      "path": "effects/public/images/geometric-cards/11.svg",
+      "bytes": 278,
+      "sha256": "c15de6d5ee816a1ca79d785a048608c03bc6de9774da51ba1a9184cd9b09c6f3"
+    },
+    {
+      "path": "effects/public/images/geometric-cards/12.svg",
+      "bytes": 361,
+      "sha256": "7e229fd091423833175e85feea44cdfea70d65582d4d88eb5059fe4493d66ef6"
+    },
+    {
+      "path": "effects/public/images/geometric-cards/ORIGINAL_ART.json",
+      "bytes": 2759,
+      "sha256": "97e0bfe2ee364034e31da30248c4b16abafeeb26606493581e963fdf28ac0e42"
+    },
+    {
       "path": "effects/README.md",
-      "bytes": 6305,
-      "sha256": "87716f308888171ff10c22ad424d2e23bed9d434fadf50a980a6dac33ef5bbca"
+      "bytes": 6452,
+      "sha256": "a2fe4f536377acb7ead2c0c1a3601dc315fc29bce5d710e25a2a85c9a7e8cde1"
     },
     {
       "path": "effects/README.zh-CN.md",
-      "bytes": 6213,
-      "sha256": "7160b3f1a686f98198cb311c3126817f4deb1a8fbbc64075abfbbdc2fda861af"
+      "bytes": 6360,
+      "sha256": "c7031eba24aa66b132318a7f7571d161e05c9592747930ff741a1684b6dd1f10"
     },
     {
       "path": "effects/src/aceternity-settings.ts",
@@ -1405,8 +1500,8 @@
     },
     {
       "path": "effects/src/browse-catalog.ts",
-      "bytes": 2973,
-      "sha256": "9cbd833a1d88be86dec83a4fb09a9e96579c887d2db2e467e84d223b9a6a666d"
+      "bytes": 2996,
+      "sha256": "d2a8d22d2e0379ee32b798b824e53f129f6ba896dc2dadc9e0695304fda4b32f"
     },
     {
       "path": "effects/src/catalog-design.css",
@@ -1415,8 +1510,8 @@
     },
     {
       "path": "effects/src/catalog.ts",
-      "bytes": 3478,
-      "sha256": "79f8ab2a6282f68a42857f39575e531fdf2515e51456740245042616acc0056d"
+      "bytes": 3496,
+      "sha256": "6857727c78d7b284fdf813a15b3b33877912afcdc5f6f370638fc631b633b177"
     },
     {
       "path": "effects/src/coffee-selector-spec.ts",
@@ -1455,8 +1550,8 @@
     },
     {
       "path": "effects/src/detail-interface.css",
-      "bytes": 13701,
-      "sha256": "8875a117cabdcee663b399982347e6348a6264f44888e3a1d2466a4da67fe626"
+      "bytes": 14102,
+      "sha256": "f7b73871c64ef633bfafcb1cb4e629bbdf24091c6e2637708dfe794dab2330f8"
     },
     {
       "path": "effects/src/duration-picker-spec.ts",
@@ -1485,13 +1580,13 @@
     },
     {
       "path": "effects/src/effect-behavior.ts",
-      "bytes": 9561,
-      "sha256": "c5592537d9f51a960d14db533acde6581d7962fd3a9ff2f54c1ee4dacaaf5a73"
+      "bytes": 9836,
+      "sha256": "5eb00a4babd00affccc4168fc632e2940bc26f8dff582b3f33f31d8e92e1e5e1"
     },
     {
       "path": "effects/src/effect-terms.ts",
-      "bytes": 8351,
-      "sha256": "48fb348fa514d4dec0e0c5e449d7850f4afc25264ad474d1fbcc5e8a466f2840"
+      "bytes": 8536,
+      "sha256": "8a8cb22b5ef71ef553f60e81ad7890af01e5bbcd6dc8f7ec02b28542baafdd29"
     },
     {
       "path": "effects/src/effect-variants.ts",
@@ -1615,18 +1710,18 @@
     },
     {
       "path": "effects/src/history-model.test.ts",
-      "bytes": 4810,
-      "sha256": "0bfa43067a6a23ea6d1849dbcaff29831647dba81b7dce8604157e9b6ba999b6"
+      "bytes": 4828,
+      "sha256": "da0ca632251ed78ceba06fa2bf575b6d0c0ea1d9a9fa932e765b11e6efbc4b3d"
     },
     {
       "path": "effects/src/history-model.ts",
-      "bytes": 73447,
-      "sha256": "e7e77b0f876317ada873027cb1845cf44e3af603d8ea1096c2ff8ca0c76d2aee"
+      "bytes": 74541,
+      "sha256": "3ece21e2bbb567ce27d4947fbbb1b1965b6e2ec16ac252361e48e40de815f63d"
     },
     {
       "path": "effects/src/HistoryPreview.tsx",
-      "bytes": 25607,
-      "sha256": "49a418b14035106a7179ce17a253981718d8077a676e9a0ffd770b7dda7c14e1"
+      "bytes": 25746,
+      "sha256": "3147795a81bc88eaf979f5167b285ce38ca046732e008ea621df2b03d2f52949"
     },
     {
       "path": "effects/src/hook-sidebar-spec.ts",
@@ -1677,6 +1772,31 @@
       "path": "effects/src/i18n.ts",
       "bytes": 3572,
       "sha256": "7ce9cd6564d0d4d2b9b9b402a002d894e517b3dbd11f8fb68a2526e7cae3a320"
+    },
+    {
+      "path": "effects/src/liquid-carousel-art.ts",
+      "bytes": 283,
+      "sha256": "67ce3229ff89d34408094b710cca79cf7218a56b39af401d5b40ca698ab836dc"
+    },
+    {
+      "path": "effects/src/liquid-carousel-spec.ts",
+      "bytes": 5242,
+      "sha256": "73e92dcd9eef20ddfe5144f1c805d537a24f7c336ab6898d65d7a098f1635bb6"
+    },
+    {
+      "path": "effects/src/liquid-carousel.test.ts",
+      "bytes": 3468,
+      "sha256": "fe017bc3277f9f31c3b34aaa12a46f830be1803622d0670c3a58bd5dd0ca5a9c"
+    },
+    {
+      "path": "effects/src/liquid-carousel.ts",
+      "bytes": 20331,
+      "sha256": "c04df0f4f228c42281791c2aa60a58bcac5e77566d48fbfcdce7145d2da7bb46"
+    },
+    {
+      "path": "effects/src/LiquidCarouselPreview.tsx",
+      "bytes": 2733,
+      "sha256": "038c572f1b50b9dcb4e5024575157df5cf399163476ddc5d94088076f4917ef2"
     },
     {
       "path": "effects/src/mini-sidebar-model.ts",
@@ -1845,8 +1965,8 @@
     },
     {
       "path": "effects/src/source-notices.ts",
-      "bytes": 3151,
-      "sha256": "2166316e1e7ab49616f77c38cd0fe0181a22b895214eb25e925925bf2d2af8bf"
+      "bytes": 3670,
+      "sha256": "f8409afb7ce2283ece96db038212e5e32f1ba8b1d3afa76a86317a0ad5b0b39e"
     },
     {
       "path": "effects/src/StudioEffectsPreview.tsx",
@@ -1880,8 +2000,8 @@
     },
     {
       "path": "effects/src/translations-en.ts",
-      "bytes": 62437,
-      "sha256": "03f21522e4161afe7934f38188d0be89dd78afe32263e88bc618eb3afa14e9c3"
+      "bytes": 63844,
+      "sha256": "a8e6b38aec7a356d049ace330d3d97675df4dc38b0fd032cde8891a577e07ee3"
     },
     {
       "path": "effects/src/tuneshape-navigation.ts",
@@ -1990,8 +2110,8 @@
     },
     {
       "path": "effects/THIRD_PARTY_NOTICES.txt",
-      "bytes": 51605,
-      "sha256": "1ebd1c85f0d30863e3f945fe40bffdc73632e00e89924c08bada90b909a48dd2"
+      "bytes": 52023,
+      "sha256": "b4f271a0eb3d6583d17c3ba47a3a90bc86055a003cb3e9cfc9b752f6405cb72c"
     },
     {
       "path": "effects/tsconfig.json",
@@ -2000,8 +2120,8 @@
     },
     {
       "path": "effects/vite.config.ts",
-      "bytes": 885,
-      "sha256": "61f0dbee6d5db3480b2526b469f1ef0c55edc2e145378f110478ced8b9ed6747"
+      "bytes": 903,
+      "sha256": "306abe336d7763de4fea81191298cd78301ef2a3825048e2220681959c113a2a"
     },
     {
       "path": "examples/ascii-shoal/.gitignore",
@@ -2085,8 +2205,8 @@
     },
     {
       "path": "llms.txt",
-      "bytes": 14023,
-      "sha256": "eb64adef15dc589bc88d6ac1c43f5e7f8608fab972b5ab76f1765f936a3ffa3a"
+      "bytes": 14413,
+      "sha256": "7725ffee437d558acdb7091c955f387d4b52f92ad42a2188f68bb92e29c71412"
     },
     {
       "path": "package.json",
@@ -2120,13 +2240,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 16469,
-      "sha256": "c8f24fe20ef4c4b7882001b47234b13a4ac8214c6cdeba95447e82e74f2120c0"
+      "bytes": 16632,
+      "sha256": "e62e29df956677074a2a9d02686b9abbd11998e1aeaf7f9cc786f793394562d0"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 15521,
-      "sha256": "2b2cbc083932fa0069e23b8a35a784133c677eaac1019985e074a3d93370b129"
+      "bytes": 15684,
+      "sha256": "ae3a2905612b34bba4e4bce99cf26568cf48f5f169624f9828dfdd063ddc7b03"
     },
     {
       "path": "scripts/verify-public-manifest.mjs",

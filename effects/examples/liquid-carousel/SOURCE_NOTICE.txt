@@ -1,0 +1,5 @@
+User-provided video dated 2026-11-02 (visual observation only).
+
+Independent TuneShape renderer and original geometric demo artwork: MIT. The visual reference retains its original rights and is not distributed.
+
+Independent WebGL radial reveal, organic edge and local refraction. Demo images reuse the six original MIT compositions used by Orbit Reel (public/images/geometric-cards/ORIGINAL_ART.json). No video, reference stills or reference application code are included.

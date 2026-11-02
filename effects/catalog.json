@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "count": 42,
+  "count": 43,
   "website": "https://tuneshape.kai-nex.com/",
   "repository": "https://github.com/orocoa/TuneShape",
   "effects": [
@@ -339,6 +339,22 @@
       },
       "license": "MIT",
       "config": "examples/flip-words/config.json"
+    },
+    {
+      "id": "liquid-carousel",
+      "name": "Liquid Image Carousel",
+      "nameZh": "液态图片轮播",
+      "category": "图片",
+      "description": "A fixed image card with an organic liquid reveal and local refraction originating at the navigation buttons.",
+      "descriptionZh": "固定卡片中的图片从左右按钮位置展开液态覆盖，边界起伏并带局部折射。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/liquid-carousel",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/liquid-carousel",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/liquid-carousel/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/liquid-carousel/"
+      },
+      "license": "MIT",
+      "config": "examples/liquid-carousel/config.json"
     },
     {
       "id": "coffee-selector",

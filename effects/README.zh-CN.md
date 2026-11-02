@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文**
 
-包含当前可见目录的 42 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
+包含当前可见目录的 43 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
 
 [在线编辑器](https://tuneshape.kai-nex.com/)
 
@@ -39,6 +39,7 @@ pnpm build
 | encrypted-text | [Encrypted Text](examples/encrypted-text/README.md) | [逐字解码](examples/encrypted-text/README.zh-CN.md) |
 | gooey-input | [Gooey Input](examples/gooey-input/README.md) | [黏性搜索输入](examples/gooey-input/README.zh-CN.md) |
 | flip-words | [Flip Words](examples/flip-words/README.md) | [词语翻替](examples/flip-words/README.zh-CN.md) |
+| liquid-carousel | [Liquid Image Carousel](examples/liquid-carousel/README.md) | [液态图片轮播](examples/liquid-carousel/README.zh-CN.md) |
 | coffee-selector | [Selector](examples/coffee-selector/README.md) | [选择器](examples/coffee-selector/README.zh-CN.md) |
 | rounded-checks | [Rounded Checkboxes](examples/rounded-checks/README.md) | [圆角复选框](examples/rounded-checks/README.zh-CN.md) |
 | mini-sidebar | [Page Navigation](examples/mini-sidebar/README.md) | [页面导航](examples/mini-sidebar/README.zh-CN.md) |

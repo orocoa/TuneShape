@@ -953,3 +953,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+Liquid Image Carousel / 液态图片轮播
+Independent TuneShape renderer and original geometric demo artwork: MIT. Visual reference: user-provided video dated 2026-11-02, used only for motion observation. Default artwork reuses the six original MIT compositions used by Orbit Reel (public/images/geometric-cards/ORIGINAL_ART.json). No reference stills, complete video or reference application code are distributed.
