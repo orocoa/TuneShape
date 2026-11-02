@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-All 42 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
+All 43 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
 
 [Online editor](https://tuneshape.kai-nex.com/)
 
@@ -39,6 +39,7 @@ Choose an effect in the local server; edit its config.json to reuse it. The dist
 | encrypted-text | [Encrypted Text](examples/encrypted-text/README.md) | [逐字解码](examples/encrypted-text/README.zh-CN.md) |
 | gooey-input | [Gooey Input](examples/gooey-input/README.md) | [黏性搜索输入](examples/gooey-input/README.zh-CN.md) |
 | flip-words | [Flip Words](examples/flip-words/README.md) | [词语翻替](examples/flip-words/README.zh-CN.md) |
+| liquid-carousel | [Liquid Image Carousel](examples/liquid-carousel/README.md) | [液态图片轮播](examples/liquid-carousel/README.zh-CN.md) |
 | coffee-selector | [Selector](examples/coffee-selector/README.md) | [选择器](examples/coffee-selector/README.zh-CN.md) |
 | rounded-checks | [Rounded Checkboxes](examples/rounded-checks/README.md) | [圆角复选框](examples/rounded-checks/README.zh-CN.md) |
 | mini-sidebar | [Page Navigation](examples/mini-sidebar/README.md) | [页面导航](examples/mini-sidebar/README.zh-CN.md) |

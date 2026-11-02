@@ -8,7 +8,7 @@ const definitions:BrowseCategory[]=[
  {key:'navigation',label:'导航',english:'Navigation',symbol:'tabs',featured:'mini-sidebar',ids:['mini-sidebar','expandable-sidebar','scroll-progress','hook-sidebar','rail-toc']},
  {key:'containers',label:'容器',english:'Containers',symbol:'grid',featured:'card-morph',ids:['card-morph','folder','glass-folder']},
  {key:'text',label:'文字',english:'Text',symbol:'text',featured:'text-rise',ids:['text-rise','text-scramble','glyph-wall','encrypted-text','flip-words','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy']},
- {key:'images',label:'图片',english:'Images',symbol:'image',featured:'album-rail',ids:['album-rail','elastic-reel','orbit-reel','hover-preview','app-orbit']},
+ {key:'images',label:'图片',english:'Images',symbol:'image',featured:'liquid-carousel',ids:['liquid-carousel','album-rail','elastic-reel','orbit-reel','hover-preview','app-orbit']},
  {key:'indicators',label:'状态指示',english:'Indicators',symbol:'loader',featured:'progress',ids:['progress','dots','finger-tap','typewriter','yin-yang','pulse']},
  {key:'backgrounds',label:'背景',english:'Backgrounds',symbol:'page',featured:'ascii-wave',ids:['ascii-wave','ascii-sharks','particle-tide','watercolor','watercolor-original','watercolor-flow']},
 ];

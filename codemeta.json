@@ -3,7 +3,7 @@
   "@type": "SoftwareSourceCode",
   "name": "TuneShape",
   "alternateName": "随形",
-  "description": "Rendering source and runnable bilingual examples for 42 UI motion effects.",
+  "description": "Rendering source and runnable bilingual examples for 43 UI motion effects.",
   "codeRepository": "https://github.com/orocoa/TuneShape",
   "url": "https://tuneshape.kai-nex.com/",
   "license": "https://spdx.org/licenses/MIT.html",
@@ -521,6 +521,18 @@
       "subjectOf": [
         "https://tuneshape.kai-nex.com/en/effects/ascii-wave/",
         "https://tuneshape.kai-nex.com/effects/ascii-wave/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Liquid Image Carousel",
+      "alternateName": "液态图片轮播",
+      "description": "A fixed image card with an organic liquid reveal and local refraction originating at the navigation buttons.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/liquid-carousel",
+      "url": "https://tuneshape.kai-nex.com/en/effects/liquid-carousel/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/liquid-carousel/",
+        "https://tuneshape.kai-nex.com/effects/liquid-carousel/"
       ]
     }
   ]

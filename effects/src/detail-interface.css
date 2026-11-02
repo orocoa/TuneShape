@@ -165,3 +165,5 @@
 
 
 @media(max-width:600px){.prompt-export .copy-prompt-button{padding-inline:9px}}
+
+.effect-resource-links{display:flex;gap:20px;align-items:center;margin-left:auto;font-size:13px;white-space:nowrap}.effect-resource-links a{text-underline-offset:4px}.effect-resource-links a:focus-visible{outline:2px solid currentColor;outline-offset:4px}@media(max-width:650px){.editor-breadcrumb{flex-wrap:wrap}.effect-resource-links{width:100%;margin:0;padding-left:44px;gap:24px;font-size:12px}}

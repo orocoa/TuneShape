@@ -50,6 +50,7 @@ export const effectTerms:Record<string,EffectTerm>={
  'period-drop':{label:'句点弹落',english:'Period Drop',aliases:['Period Drop']},
  'outline-trace':{label:'字形描边',english:'Outline Trace',aliases:['Outline Trace']},
  'glyph-anatomy':{label:'字形构建',english:'Glyph Anatomy',aliases:['Glyph Anatomy']},
+ 'liquid-carousel':{label:'液态图片轮播',english:'Liquid Image Carousel',aliases:['液态','流体','图片切换','Liquid','Fluid','Carousel','Slider','折射','图像过渡']},
  'coffee-selector':{label:'选择器',english:'Selector',aliases:['咖啡','咖啡豆','选择器','Coffee','Geisha','Gesha','瑰夏','滚轮','wheel','picker','Bourbon','SL28','Typica','Pacamara']},
  'rounded-checks':{label:'圆角复选框',english:'Rounded Checkboxes',aliases:['复选框','多选框','Checkbox','Squircle Ink Checkbox','Cirrus','uiverse-astronaut','Uiverse']},
  'glass-radio':{label:'玻璃分段单选',english:'Glass Segmented Radio Control',aliases:['玻璃分段选择','Glass Radio Selector','玻璃单选','金属分段控件','segmented control','Silver Gold Platinum','chase2k25','Uiverse']},

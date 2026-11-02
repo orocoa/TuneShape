@@ -1,6 +1,6 @@
 # TuneShape · 随形
 
-> UI motion editor and public rendering-source collection. 42 current effects with runnable examples, exact default configurations, English/Chinese notes, and preserved third-party attribution.
+> UI motion editor and public rendering-source collection. 43 current effects with runnable examples, exact default configurations, English/Chinese notes, and preserved third-party attribution.
 
 Website: https://tuneshape.kai-nex.com/
 Repository: https://github.com/orocoa/TuneShape
@@ -57,3 +57,5 @@ English effect guides: https://tuneshape.kai-nex.com/en/effects/
 - [ASCII Sharks / ASCII 鲨鱼群](https://github.com/orocoa/TuneShape/tree/main/effects/examples/ascii-sharks) · [English guide](https://tuneshape.kai-nex.com/en/effects/ascii-sharks/) · [中文说明](https://tuneshape.kai-nex.com/effects/ascii-sharks/): Top-down sharks and small fish drawn on a configurable character grid.
 - [Particle Tide / 粒子海浪](https://github.com/orocoa/TuneShape/tree/main/effects/examples/particle-tide) · [English guide](https://tuneshape.kai-nex.com/en/effects/particle-tide/) · [中文说明](https://tuneshape.kai-nex.com/effects/particle-tide/): An original ocean of particles with rolling swells and click ripples.
 - [ASCII Wave Animation / ASCII 波形动画](https://github.com/orocoa/TuneShape/tree/main/effects/examples/ascii-wave) · [English guide](https://tuneshape.kai-nex.com/en/effects/ascii-wave/) · [中文说明](https://tuneshape.kai-nex.com/effects/ascii-wave/): ASCII Wave Animation · 4000 ms · Ariadne
+
+- [Liquid Image Carousel / 液态图片轮播](https://github.com/orocoa/TuneShape/tree/main/effects/examples/liquid-carousel) · [English guide](https://tuneshape.kai-nex.com/en/effects/liquid-carousel/) · [中文说明](https://tuneshape.kai-nex.com/effects/liquid-carousel/): A fixed image card with an organic liquid reveal and local refraction originating at the navigation buttons.

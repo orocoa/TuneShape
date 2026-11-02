@@ -1,0 +1,36 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {defaultLiquidCarousel,validateLiquidCarousel,liquidIndex,liquidRadius,liquidCarouselEngineCode} from './liquid-carousel';
+import {defaultHistory,parseHistory,serializeHistory,historyMotion,validateHistory} from './history-model';
+import {reelItems} from './elastic-reel-art';
+import {galleryPlayback,interactionSelector} from './effect-behavior';
+
+test('liquid carousel wraps both directions and the reveal radius covers the complete image',()=>{
+ assert.equal(liquidIndex(-1,4),3);assert.equal(liquidIndex(4,4),0);assert.equal(liquidIndex(-9,4),3);
+ assert.ok(liquidRadius(0)<0);assert.ok(liquidRadius(1)>Math.hypot(.889*.756,.5));
+ let last=liquidRadius(0);for(let p=.01;p<=1;p+=.01){assert.ok(liquidRadius(p)>last);last=liquidRadius(p)}
+ for(const aspect of [.6,1,1.5])assert.ok(liquidRadius(1,aspect)>Math.hypot(.889*aspect,.5));
+ assert.equal(liquidRadius(-1),liquidRadius(0));assert.equal(liquidRadius(2),liquidRadius(1));
+});
+test('liquid carousel validates strict local media and preserves independent saved defaults',()=>{
+ const settings=structuredClone(defaultLiquidCarousel);assert.equal(validateLiquidCarousel(settings).items.length,6);
+ const copy=validateLiquidCarousel(settings);copy.items[0].title='Changed';assert.notEqual(copy.items[0].title,settings.items[0].title);
+ for(const bad of [{...settings,distortion:NaN},{...settings,items:[]},{...settings,items:settings.items.slice(0,1)},{...settings,items:new Array(4)},{...settings,selectedIndex:6},{...settings,autoplay:1},{...settings,unknown:true},{...settings,items:[{src:'https://example.com/image.jpg',title:'Remote'},settings.items[1]]}])assert.throws(()=>validateLiquidCarousel(bad));
+ assert.throws(()=>validateLiquidCarousel({...settings,items:[{src:'data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg"><script/></svg>'),title:'Untrusted'},settings.items[1]]}));
+ const unsafe=structuredClone(settings);Object.defineProperty(unsafe.items[0],'src',{get(){throw Error('getter was invoked')}});assert.throws(()=>validateLiquidCarousel(unsafe),/图片只可/);
+});
+test('liquid carousel JSON, Motion adapter and portable factory use the same complete content',()=>{
+ const config=defaultHistory('liquid-carousel'),json=serializeHistory(config),motion=historyMotion(config);
+ assert.deepEqual(parseHistory(json),config);assert.deepEqual(motion.adapters.liquidCarousel.settings,config.liquidCarousel);
+ assert.equal(motion.adapters.liquidCarousel.runtime.durationMs,800);
+ assert.equal(typeof Function('__name',liquidCarouselEngineCode+';return createLiquidCarousel')((fn:unknown)=>fn),'function');
+ assert.throws(()=>validateHistory({...config,loop:true}));assert.throws(()=>validateHistory({...defaultHistory('toast'),liquidCarousel:config.liquidCarousel}));
+ assert.equal(galleryPlayback('liquid-carousel'),'loading');assert.equal(interactionSelector('liquid-carousel'),'.liquid-carousel');
+ assert.doesNotMatch(json,/"progress"|"frame"|"target"|"gallery"|"velocity"/);
+});
+
+test('liquid carousel reuses the original Orbit Reel artwork and exports no reference video stills',()=>{
+ assert.deepEqual(defaultLiquidCarousel.items,reelItems.slice(0,6).map(({src,title})=>({src,title})));
+ assert.ok(defaultLiquidCarousel.items.every(item=>item.src.startsWith('data:image/svg+xml,')));
+ assert.doesNotMatch(liquidCarouselEngineCode,/data:image\/jpeg|Harmonic fill|Reference controls/);
+});

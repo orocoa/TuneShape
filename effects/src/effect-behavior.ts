@@ -2,6 +2,7 @@ import {isStudioEffect} from './orbit-typography-spec';
 import {isWatercolorRecipe,isReelRecipe} from './effect-variants';
 export type EffectTrigger='press'|'click'|'hover'|'loading';
 export function galleryPlayback(id:string):'loading'|'cycle'|'direct'{
+ if(id==='liquid-carousel')return 'loading';
  if(id==='ascii-sharks'||id==='coffee-selector')return 'loading';
  if(isStudioEffect(id))return 'loading';
  if(['encrypted-text','flip-words'].includes(id))return 'loading';
@@ -9,6 +10,7 @@ export function galleryPlayback(id:string):'loading'|'cycle'|'direct'{
  return ['toast','card-morph','sheet','blur-panel','breality-sheet','page-fade','stagger','text-rise'].includes(id)?'cycle':'direct';
 }
 export function interactionSelector(id:string){
+ if(id==='liquid-carousel')return '.liquid-carousel';
  if(id==='ascii-sharks')return '.ascii-sharks';
  if(id==='coffee-selector')return '.coffee-selector';
  if(isStudioEffect(id))return id==='app-orbit'?'.app-orbit':'.type-motion';
@@ -55,6 +57,7 @@ export const clickTarget:Record<string,string>={
  stagger:'.sculpt-stagger','text-rise':'.sculpt-letters',progress:'.sculpt-progress',
 };
 export function triggerDescription(id:string){
+ if(id==='liquid-carousel')return '点击左右箭头、方向键或横向滑动切换图片；新图片沿液态边缘从点击侧扩散，连续操作接续当前画面。';
  if(id==='ascii-sharks')return '详情自动游动；目录悬停、聚焦或手机预览时播放。离开且失焦、离屏或后台时停止；暂停保留鱼群进度，速度为 0 冻结当前画面。';
  if(id==='coffee-selector')return '点击展开直列滚轮，滚轮、上下拖动或方向键选择；松手惯性吸附，点击选项或 Enter 确认，Escape 撤回。';
  if(id==='glass-folder')return '悬停或聚焦时轻展卡片，点击、Enter / 空格展开；移开、离焦、点击外部或 Escape 收合。';

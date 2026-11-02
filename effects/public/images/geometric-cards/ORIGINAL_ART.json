@@ -1,0 +1,123 @@
+{
+  "authorship": "Original TuneShape minimalist geometric vector compositions",
+  "license": "MIT",
+  "palette": [
+    "#ffffff",
+    "#f7f7f7",
+    "#dedede",
+    "#cccccc",
+    "#b8b8b8",
+    "#a0a0a0",
+    "#929292"
+  ],
+  "items": [
+    {
+      "file": "01.svg",
+      "name": "Circle",
+      "sha256": "02ab7228c2421ba79e7409f6223ced708aba19c0bb26b475adede6a6ef606bdd"
+    },
+    {
+      "file": "02.svg",
+      "name": "Open ring",
+      "sha256": "00d7ae99e950f7b83dd4988cb70ac290f04aca4f62784bcde1aa4d35cd39b0c2"
+    },
+    {
+      "file": "03.svg",
+      "name": "Two semicircles",
+      "sha256": "e5ab3edf20861858849cef3b7c191317b82fc3c425e6a302a3df74731c5f5681"
+    },
+    {
+      "file": "04.svg",
+      "name": "Offset squares",
+      "sha256": "d6aa07f7e52b20641c3fa1c0af028afa0d576a640a97b1fce1c723c68c8684e9"
+    },
+    {
+      "file": "05.svg",
+      "name": "Triangle",
+      "sha256": "e6548a97ccfa53d1449a7ea3699c895eea01cc42fc93dfddb6bfaf046f2e69cf"
+    },
+    {
+      "file": "06.svg",
+      "name": "Parallel bars",
+      "sha256": "02fb15fa0395315a18ea21d57055bb95fa0bb050c016b611bb5656adab0ae1c0"
+    },
+    {
+      "file": "07.svg",
+      "name": "Arch",
+      "sha256": "e8fc344556d8d2121daea8997e795c00fb4a8d3fa4ddfeac62bcc8a92be2670a"
+    },
+    {
+      "file": "08.svg",
+      "name": "Dot grid",
+      "sha256": "b6346e46b1c2eb5ebb44eb6816b898c5d79e30730b6d067a299ca5a187a67a48"
+    },
+    {
+      "file": "09.svg",
+      "name": "Quarter circles",
+      "sha256": "ce4abfcef56ec5fb49dadf6baa77938b7475aa9c4cec2e252dcd09c2f1234903"
+    },
+    {
+      "file": "10.svg",
+      "name": "Stepped form",
+      "sha256": "3301725bbdb9d9fc25f0aa3d64a76c0bfb34e9b5064ab45ac7a458d650006ccd"
+    },
+    {
+      "file": "11.svg",
+      "name": "Crossing lines",
+      "sha256": "c15de6d5ee816a1ca79d785a048608c03bc6de9774da51ba1a9184cd9b09c6f3"
+    },
+    {
+      "file": "12.svg",
+      "name": "Concentric rings",
+      "sha256": "7e229fd091423833175e85feea44cdfea70d65582d4d88eb5059fe4493d66ef6"
+    }
+  ],
+  "usage": {
+    "elasticReel": [
+      "01.svg",
+      "02.svg",
+      "03.svg",
+      "04.svg",
+      "05.svg",
+      "06.svg",
+      "07.svg",
+      "08.svg"
+    ],
+    "orbitReel": [
+      "01.svg",
+      "02.svg",
+      "03.svg",
+      "04.svg",
+      "05.svg",
+      "06.svg"
+    ],
+    "albumRail": [
+      "01.svg",
+      "02.svg",
+      "03.svg",
+      "04.svg",
+      "05.svg",
+      "06.svg",
+      "07.svg",
+      "08.svg",
+      "09.svg",
+      "10.svg",
+      "11.svg",
+      "12.svg"
+    ],
+    "appOrbit": [
+      "01.svg",
+      "02.svg",
+      "03.svg",
+      "04.svg",
+      "05.svg",
+      "06.svg",
+      "07.svg",
+      "08.svg",
+      "09.svg",
+      "10.svg",
+      "11.svg",
+      "12.svg"
+    ]
+  }
+}
