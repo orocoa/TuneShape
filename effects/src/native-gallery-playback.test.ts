@@ -49,3 +49,5 @@ test('manual replay during dwell cancels the old timer instead of interrupting t
  f.start();assert.equal(f.pending.size,0);f.flush();assert.equal(f.counts().starts,1);
  f.complete();f.flush();assert.equal(f.counts().starts,2);
 });
+
+test('manual inspection cancels a finite replay without settling or changing the active scene',()=>{let callback:(()=>void)|undefined,plays=0,settles=0;const c=createNativeGalleryReplay({replay:()=>plays++,settle:()=>settles++,schedule:fn=>{callback=fn;return 1 as unknown as ReturnType<typeof setTimeout>},cancel:()=>{callback=undefined}});c.setActive(true);c.onRunning(false);assert.ok(callback);c.cancelPending();assert.equal(callback,undefined);assert.equal(plays,1);assert.equal(settles,0);c.onRunning(false);assert.ok(callback);c.setActive(false);assert.equal(callback,undefined);assert.equal(settles,1)});

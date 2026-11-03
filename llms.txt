@@ -66,3 +66,5 @@ English effect guides: https://tuneshape.kai-nex.com/en/effects/
 - Topographic Flow: https://github.com/orocoa/TuneShape/tree/main/effects/examples/topographic-flow
 
 - Chromatic Button: https://github.com/orocoa/TuneShape/tree/main/effects/examples/chromatic-button
+
+- Liquid Glass Logo: https://github.com/orocoa/TuneShape/tree/main/effects/examples/liquid-glass-logo

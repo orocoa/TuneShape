@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "key": "tuneshape-public-effects-v1:7fa15f48b7f6dafd7ce71a43374d063253d437fe2fe5755c4e0facc2e75dd848",
-  "effects": 47,
+  "key": "tuneshape-public-effects-v1:ecc6a2f229dac0c584707f338732b074e4c3e4698f4eae2b36a2ef456185a60e",
+  "effects": 48,
   "scope": "Current visible effect renderers and runnable entries; full editor excluded",
   "input": [
     {
@@ -156,8 +156,8 @@
     },
     {
       "path": "src/HistoryPreview.tsx",
-      "bytes": 26155,
-      "sha256": "dd14dafaa71f053942d83350474cc34a8336800b398d17d49f059c28d0d3fbd9"
+      "bytes": 26299,
+      "sha256": "655564c6ed34a3482ea49f969f3fd82de393ad6ab070df7de77731216ec080a7"
     },
     {
       "path": "src/HookSidebarPreview.tsx",
@@ -173,6 +173,11 @@
       "path": "src/LiquidCarouselPreview.tsx",
       "bytes": 2733,
       "sha256": "038c572f1b50b9dcb4e5024575157df5cf399163476ddc5d94088076f4917ef2"
+    },
+    {
+      "path": "src/LiquidGlassLogoPreview.tsx",
+      "bytes": 3474,
+      "sha256": "78bbf94f4758bdf7f861cd076033309197bd56b5c7a9e1f7eafb7fb3802272fd"
     },
     {
       "path": "src/MiniSidebarPreview.tsx",
@@ -341,8 +346,8 @@
     },
     {
       "path": "src/browse-catalog.ts",
-      "bytes": 3077,
-      "sha256": "8e1c56b8557b717fb6d9a415be325cc8141170d70d6c7e603b82b977ad4186e1"
+      "bytes": 3100,
+      "sha256": "e40ac87854b12c0753ef8e004e9ec6447adf7741e0af28812dc488ef3375d154"
     },
     {
       "path": "src/catalog-design.css",
@@ -351,8 +356,8 @@
     },
     {
       "path": "src/catalog.ts",
-      "bytes": 3570,
-      "sha256": "ad47b7519cfe956d5b6782b5f6f9732a81894da220f89d32d5a8b72eca09ce77"
+      "bytes": 3590,
+      "sha256": "4ff451db9631976440a928ae9d1504d25b60c60f6483fa5cb2243c18d934eb15"
     },
     {
       "path": "src/chromatic-button-settings.ts",
@@ -431,13 +436,13 @@
     },
     {
       "path": "src/effect-behavior.ts",
-      "bytes": 11112,
-      "sha256": "c260763c5df45bb2bac9f3e14414a6e5d305687a933a31185aa946e2085689a9"
+      "bytes": 11460,
+      "sha256": "f6691e202c01d185968b179227aa2bbe30bc74a681d77ddd7e2b0430af5c3443"
     },
     {
       "path": "src/effect-terms.ts",
-      "bytes": 9266,
-      "sha256": "7a1aaeb1aa00f12ab29b48f9f0ed14de2074e63abe6deb4226e69672081d97f3"
+      "bytes": 9474,
+      "sha256": "ec28f597d73fbb7d4f2cc20d1f09d874e103771309659a7d28f122da0419049f"
     },
     {
       "path": "src/effect-variants.ts",
@@ -561,13 +566,13 @@
     },
     {
       "path": "src/history-model.test.ts",
-      "bytes": 4897,
-      "sha256": "d3508e87e93e5119e45f6f9cf766e073d806608c3ce9849aa52e90e13c616ce2"
+      "bytes": 4917,
+      "sha256": "ff7d583a3a23c453e318eb6ace4f7f2f221916fe6a09d0835d674f4a16863a54"
     },
     {
       "path": "src/history-model.ts",
-      "bytes": 77863,
-      "sha256": "7dd0d518788928378f701a8ad6aa6bc4883eff37c4d7fe13f797d26984e1bf56"
+      "bytes": 79036,
+      "sha256": "b31b729224e8d5ee1c755dcdb9437fafcfafc5379b87f9281f89a8d36e39a759"
     },
     {
       "path": "src/hook-sidebar-spec.ts",
@@ -630,6 +635,26 @@
       "sha256": "eb4b1a7b87d3f40f290aa72c91c730a93975d0aa7e978013f489cc7c6b538624"
     },
     {
+      "path": "src/liquid-glass-logo-settings.ts",
+      "bytes": 11816,
+      "sha256": "83d93874c5552b268c090551ceb6d5960f8479bce4a82fabb3f7c0c5aca720ec"
+    },
+    {
+      "path": "src/liquid-glass-logo-shader.ts",
+      "bytes": 5288,
+      "sha256": "8d7e1b9f785704982b31dc84294f0aaca85a367ff5d7995144d7b4b4f07c93f3"
+    },
+    {
+      "path": "src/liquid-glass-logo-spec.ts",
+      "bytes": 10886,
+      "sha256": "8a6789ee0d0dbd4da6c2743c9a965a36d2caa7db44b48ad5bdafb736ecad770b"
+    },
+    {
+      "path": "src/liquid-glass-logo.ts",
+      "bytes": 15476,
+      "sha256": "2b0e085b34c2629150fc7183626548d11ee8e465b102e2d857c1da5c9dd2c47a"
+    },
+    {
       "path": "src/mini-sidebar-model.ts",
       "bytes": 6431,
       "sha256": "1e53fec6319342567362d3fa3d92057f656a120747abaac7e573341ec1f51dc8"
@@ -656,13 +681,13 @@
     },
     {
       "path": "src/native-gallery-playback.test.ts",
-      "bytes": 3261,
-      "sha256": "e2b62019ee181b3d43f68fbd8c0062fddfe58db1d47b5338a126a648fc6781d9"
+      "bytes": 3875,
+      "sha256": "004ba7057c7a303d60219e2f50a2937ce6d666c2834f6d1d92fbd7c0041ab903"
     },
     {
       "path": "src/native-gallery-playback.ts",
-      "bytes": 1181,
-      "sha256": "10d20b2e154b9d904e2f830cdcf610cc5ab1d51873bfdc41ef66396490b387f2"
+      "bytes": 1204,
+      "sha256": "08269af28d386ba2dba41b12805158dcaeaa76f98c244be696e47dbbd7f690d5"
     },
     {
       "path": "src/orbit-reel-art.ts",
@@ -781,8 +806,8 @@
     },
     {
       "path": "src/source-notices.ts",
-      "bytes": 5643,
-      "sha256": "6076ea1e00486f64a1309c82b1dcaaaf08a7b003d750a8251a16dd51989428c0"
+      "bytes": 6300,
+      "sha256": "c720a20e15bda51ee83347164de97d29c9746cb9e5d5854120f04c59a30288c8"
     },
     {
       "path": "src/style.css",
@@ -826,8 +851,8 @@
     },
     {
       "path": "src/translations-en.ts",
-      "bytes": 66073,
-      "sha256": "ab86776de8cc74e4ed184c136b1af10e30b675a9c5b6ff9c841241c784eab703"
+      "bytes": 66643,
+      "sha256": "62366636f32e75da9e719db9052b85c7e7e648d4e3939aea65dc9024bea64ae8"
     },
     {
       "path": "src/tuneshape-navigation.ts",
@@ -876,8 +901,8 @@
     },
     {
       "path": "src/useNativeGalleryReplay.ts",
-      "bytes": 826,
-      "sha256": "28066676122f7ff00cfe70d6052c7a75862d5efc197d071708034e79d0757145"
+      "bytes": 890,
+      "sha256": "76642938de505254b64113e846fdd02453d7b01cd8cda2b91301ceacf724477e"
     },
     {
       "path": "src/usePrefersReducedMotion.ts",
@@ -938,23 +963,23 @@
     },
     {
       "path": "src/translations-en.ts",
-      "bytes": 66073,
-      "sha256": "ab86776de8cc74e4ed184c136b1af10e30b675a9c5b6ff9c841241c784eab703"
+      "bytes": 66643,
+      "sha256": "62366636f32e75da9e719db9052b85c7e7e648d4e3939aea65dc9024bea64ae8"
     },
     {
       "path": "src/effect-terms.ts",
-      "bytes": 9266,
-      "sha256": "7a1aaeb1aa00f12ab29b48f9f0ed14de2074e63abe6deb4226e69672081d97f3"
+      "bytes": 9474,
+      "sha256": "ec28f597d73fbb7d4f2cc20d1f09d874e103771309659a7d28f122da0419049f"
     },
     {
       "path": "src/browse-catalog.ts",
-      "bytes": 3077,
-      "sha256": "8e1c56b8557b717fb6d9a415be325cc8141170d70d6c7e603b82b977ad4186e1"
+      "bytes": 3100,
+      "sha256": "e40ac87854b12c0753ef8e004e9ec6447adf7741e0af28812dc488ef3375d154"
     },
     {
       "path": "src/catalog.ts",
-      "bytes": 3570,
-      "sha256": "ad47b7519cfe956d5b6782b5f6f9732a81894da220f89d32d5a8b72eca09ce77"
+      "bytes": 3590,
+      "sha256": "4ff451db9631976440a928ae9d1504d25b60c60f6483fa5cb2243c18d934eb15"
     },
     {
       "path": "src/model.ts",
@@ -978,8 +1003,48 @@
     },
     {
       "path": "src/HistoryPreview.tsx",
-      "bytes": 26155,
-      "sha256": "dd14dafaa71f053942d83350474cc34a8336800b398d17d49f059c28d0d3fbd9"
+      "bytes": 26299,
+      "sha256": "655564c6ed34a3482ea49f969f3fd82de393ad6ab070df7de77731216ec080a7"
+    },
+    {
+      "path": "src/LiquidGlassLogoPreview.tsx",
+      "bytes": 3474,
+      "sha256": "78bbf94f4758bdf7f861cd076033309197bd56b5c7a9e1f7eafb7fb3802272fd"
+    },
+    {
+      "path": "src/liquid-glass-logo.ts",
+      "bytes": 15476,
+      "sha256": "2b0e085b34c2629150fc7183626548d11ee8e465b102e2d857c1da5c9dd2c47a"
+    },
+    {
+      "path": "src/gooey-wordmark-font.ts",
+      "bytes": 42561,
+      "sha256": "5fc20dd10934837c189ce9b098d305400cb309c36f9424718194b752a90a0a7a"
+    },
+    {
+      "path": "src/liquid-glass-logo-shader.ts",
+      "bytes": 5288,
+      "sha256": "8d7e1b9f785704982b31dc84294f0aaca85a367ff5d7995144d7b4b4f07c93f3"
+    },
+    {
+      "path": "src/liquid-glass-logo-settings.ts",
+      "bytes": 11816,
+      "sha256": "83d93874c5552b268c090551ceb6d5960f8479bce4a82fabb3f7c0c5aca720ec"
+    },
+    {
+      "path": "src/native-effect-tools.ts",
+      "bytes": 3696,
+      "sha256": "4982a9161566904c619468f0fb6e037163672fb8caa54181ce2609fa538d4838"
+    },
+    {
+      "path": "src/native-gallery-playback.ts",
+      "bytes": 1204,
+      "sha256": "08269af28d386ba2dba41b12805158dcaeaa76f98c244be696e47dbbd7f690d5"
+    },
+    {
+      "path": "src/useNativeGalleryReplay.ts",
+      "bytes": 890,
+      "sha256": "76642938de505254b64113e846fdd02453d7b01cd8cda2b91301ceacf724477e"
     },
     {
       "path": "src/ChromaticButtonPreview.tsx",
@@ -1000,21 +1065,6 @@
       "path": "src/chromatic-button-settings.ts",
       "bytes": 4781,
       "sha256": "744111d2208d754a764f1ac80fd07cf848a7c9241245a1abccc67d749cc3db1b"
-    },
-    {
-      "path": "src/native-effect-tools.ts",
-      "bytes": 3696,
-      "sha256": "4982a9161566904c619468f0fb6e037163672fb8caa54181ce2609fa538d4838"
-    },
-    {
-      "path": "src/native-gallery-playback.ts",
-      "bytes": 1181,
-      "sha256": "10d20b2e154b9d904e2f830cdcf610cc5ab1d51873bfdc41ef66396490b387f2"
-    },
-    {
-      "path": "src/useNativeGalleryReplay.ts",
-      "bytes": 826,
-      "sha256": "28066676122f7ff00cfe70d6052c7a75862d5efc197d071708034e79d0757145"
     },
     {
       "path": "src/TopographicFlowPreview.tsx",
@@ -1137,29 +1187,29 @@
       "sha256": "fc7d01e1bc32c7344c17ffb84a589164d842a7d4901cc9e82847654456e8f92f"
     },
     {
-      "path": "src/gooey-wordmark-font.ts",
-      "bytes": 42561,
-      "sha256": "5fc20dd10934837c189ce9b098d305400cb309c36f9424718194b752a90a0a7a"
-    },
-    {
       "path": "src/gooey-wordmark-spec.ts",
       "bytes": 5232,
       "sha256": "ae8373d2f1a48293b0d684a7a6bfa48f41d7b07ab37441fc0b95e001c59d8fbe"
     },
     {
       "path": "src/history-model.ts",
-      "bytes": 77863,
-      "sha256": "7dd0d518788928378f701a8ad6aa6bc4883eff37c4d7fe13f797d26984e1bf56"
+      "bytes": 79036,
+      "sha256": "b31b729224e8d5ee1c755dcdb9437fafcfafc5379b87f9281f89a8d36e39a759"
+    },
+    {
+      "path": "src/liquid-glass-logo-spec.ts",
+      "bytes": 10886,
+      "sha256": "8a6789ee0d0dbd4da6c2743c9a965a36d2caa7db44b48ad5bdafb736ecad770b"
+    },
+    {
+      "path": "src/source-notices.ts",
+      "bytes": 6300,
+      "sha256": "c720a20e15bda51ee83347164de97d29c9746cb9e5d5854120f04c59a30288c8"
     },
     {
       "path": "src/chromatic-button-spec.ts",
       "bytes": 8339,
       "sha256": "06ee4c5d94cb882833c9a929cf08e32773252197bf7f9659e9aa1d3344ee2348"
-    },
-    {
-      "path": "src/source-notices.ts",
-      "bytes": 5643,
-      "sha256": "6076ea1e00486f64a1309c82b1dcaaaf08a7b003d750a8251a16dd51989428c0"
     },
     {
       "path": "src/topographic-flow-spec.ts",
@@ -1443,8 +1493,8 @@
     },
     {
       "path": "src/effect-behavior.ts",
-      "bytes": 11112,
-      "sha256": "c260763c5df45bb2bac9f3e14414a6e5d305687a933a31185aa946e2085689a9"
+      "bytes": 11460,
+      "sha256": "f6691e202c01d185968b179227aa2bbe30bc74a681d77ddd7e2b0430af5c3443"
     },
     {
       "path": "src/sidebar-field.ts",
@@ -1697,14 +1747,14 @@
       "sha256": "f9a0109981afc35095f0a9a1fece94f27c6159ce61dc6ef6b2afb319a148a084"
     },
     {
+      "path": "src/native-gallery-playback.test.ts",
+      "bytes": 3875,
+      "sha256": "004ba7057c7a303d60219e2f50a2937ce6d666c2834f6d1d92fbd7c0041ab903"
+    },
+    {
       "path": "src/chromatic-button.test.ts",
       "bytes": 3458,
       "sha256": "939f811c1623c954f0705f46eecd398f604804e026cca18af3dc5f9f206c7899"
-    },
-    {
-      "path": "src/native-gallery-playback.test.ts",
-      "bytes": 3261,
-      "sha256": "e2b62019ee181b3d43f68fbd8c0062fddfe58db1d47b5338a126a648fc6781d9"
     },
     {
       "path": "src/topographic-flow.test.ts",
@@ -1728,8 +1778,8 @@
     },
     {
       "path": "src/history-model.test.ts",
-      "bytes": 4897,
-      "sha256": "d3508e87e93e5119e45f6f9cf766e073d806608c3ce9849aa52e90e13c616ce2"
+      "bytes": 4917,
+      "sha256": "ff7d583a3a23c453e318eb6ace4f7f2f221916fe6a09d0835d674f4a16863a54"
     },
     {
       "path": "src/source-notices.test.ts",
@@ -1858,8 +1908,8 @@
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
-      "bytes": 58054,
-      "sha256": "ea5a5f9d789688fc881158bf694ac218966eeb9de7cd8fd0647e154c1a9373e0"
+      "bytes": 58475,
+      "sha256": "70201be40c4f9d8eb7be9fade666490e673bc47b04dccc6f6eacdd8a541b0722"
     },
     {
       "path": "public/fonts/doto/OFL.txt",
@@ -3137,9 +3187,39 @@
       "sha256": "13a6bdfb363dae7bdd107ff84fc0456a357373bc4f2db8a062a032b74578a8bf"
     },
     {
+      "path": "examples/liquid-glass-logo/config.json",
+      "bytes": 1275,
+      "sha256": "0a3f3a5f70254b3f21b07e6962d86c2acf7af6869dd085e3e86f81a7f4d2ab45"
+    },
+    {
+      "path": "examples/liquid-glass-logo/main.tsx",
+      "bytes": 118,
+      "sha256": "3fb86b0b471b4d16c460da860a2c1ad11b1c4d42ee85da2d2355e8b486cc4324"
+    },
+    {
+      "path": "examples/liquid-glass-logo/index.html",
+      "bytes": 453,
+      "sha256": "1749abfaac4d051b1894885c48ab98f3548793e330d7177e0c6473114220b7d4"
+    },
+    {
+      "path": "examples/liquid-glass-logo/SOURCE_NOTICE.txt",
+      "bytes": 609,
+      "sha256": "476783225b2908b2169293be43dd514f7f21f7f89b5e433ae2ebd3c500aa38a9"
+    },
+    {
+      "path": "examples/liquid-glass-logo/README.md",
+      "bytes": 4562,
+      "sha256": "96c9b58c712577de7ecf971bfad5105dc6ccaee73319686e9fd10df7b908a27f"
+    },
+    {
+      "path": "examples/liquid-glass-logo/README.zh-CN.md",
+      "bytes": 4325,
+      "sha256": "637d9e3e6c207253562f7be691bb2aae0e63f1eb33723475a5e89669c4b6ba0d"
+    },
+    {
       "path": "catalog.json",
-      "bytes": 34799,
-      "sha256": "ab8d78cde8aaa0c26de03cb08999214de6b0f65e747583158cb1b6ad4f90b3d8"
+      "bytes": 35624,
+      "sha256": "d40246f36e20bea908290b657f869544d08fab27d6c2e0ea82146efc729cc8b8"
     },
     {
       "path": "demo/main.tsx",
@@ -3148,23 +3228,23 @@
     },
     {
       "path": "vite.config.ts",
-      "bytes": 972,
-      "sha256": "2fb070b83fea5688982dea659c1eb7148e6c121165253d879b3be55e0a35a931"
+      "bytes": 992,
+      "sha256": "12496108d8954537b75fd87053c42952e31c89b29412287c56486f3ca3b09ba8"
     },
     {
       "path": "index.html",
-      "bytes": 7777,
-      "sha256": "9ffb799278981dba43fb1e30651ee33c67dc8e060fd16f5f0df6a5a4adfa852a"
+      "bytes": 7970,
+      "sha256": "05221872ef8fafa236c222c4b101c9a727d73b7bae2e0c4908b14bc918f956f2"
     },
     {
       "path": "README.md",
-      "bytes": 6995,
-      "sha256": "60253240ac9bde75f02ec33214291da7000e01dc1d7a349ea58dbf04afff3276"
+      "bytes": 7143,
+      "sha256": "2e7f86fcdd3368d688fdc1a8269086a90c1ddfdc190f7e46adb4e1648e465c84"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 6903,
-      "sha256": "3cdf2bf94d6e444e04c75873728a550e1825c24bc7ecddea18efbcb153bffd29"
+      "bytes": 7051,
+      "sha256": "52f12a9fe31b73fe5a3f66dc77b6436f68579f90c1e2741a3ac58e7300c395f7"
     },
     {
       "path": "test/catalog.test.mjs",

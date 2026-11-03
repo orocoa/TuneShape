@@ -1,5 +1,9 @@
 /** Interface copy only. Configuration keys, routes, source records and user text stay canonical. */
 export const english: Record<string, string> = {
+"液态玻璃 Logo":"Liquid Glass Logo",
+"Logo 显形基准时长":"Logo reveal base duration",
+"Logo 显形延迟":"Logo reveal delay",
+"参考 ReactDrops Liquid Glass Logo 的公开预览、七种材质预设和参数语义独立实现。默认使用 tuneshape 自有字标及现有 OFL 字体，不使用原站组件源码、品牌图形或媒体。":"Independently implemented from the public Liquid Glass Logo preview, seven presets and controls. Uses original TuneShape artwork and the existing OFL font; no reference component code, trademarks or media reused.",
 "流彩按钮":"Chromatic Button",
 "入场基准时长":"Entrance base duration",
 "参考 ReactDrops Chromatic Button 的公开预览、调节项与交互说明独立实现。使用原生按钮、独立球面投影材质和静态颗粒，不使用原站组件源码或媒体。":"Independently implemented from the public Chromatic Button preview and controls. Native buttons, projected material and stationary grain; no reference component code or media reused.",

@@ -1,0 +1,5 @@
+https://reactdrops.dev/components/text-reveal/liquid-glass-logo
+
+TuneShape independent implementation: MIT. Parkinsans font: SIL OFL 1.1. Reference component redistribution is restricted by ReactDrops Component License 1.0.
+
+Public preview, seven material presets and control semantics reviewed 2026-11-03. Independent rounded-lens geometry, refraction, dispersion, caustics and finite timeline; original TuneShape artwork replaces reference trademarks. Existing project font reused with its OFL notice. No reference component code, shaders or media redistributed. Material detail differs from the reference.

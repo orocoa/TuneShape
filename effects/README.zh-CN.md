@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文**
 
-包含当前可见目录的 47 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
+包含当前可见目录的 48 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
 
 [在线编辑器](https://tuneshape.kai-nex.com/)
 
@@ -65,6 +65,7 @@ pnpm build
 | soap-bubble | [Soap Bubble UI](examples/soap-bubble/README.md) | [肥皂泡控件](examples/soap-bubble/README.zh-CN.md) |
 | topographic-flow | [Topographic Flow](examples/topographic-flow/README.md) | [流动等高线](examples/topographic-flow/README.zh-CN.md) |
 | chromatic-button | [Chromatic Button](examples/chromatic-button/README.md) | [流彩按钮](examples/chromatic-button/README.zh-CN.md) |
+| liquid-glass-logo | [Liquid Glass Logo](examples/liquid-glass-logo/README.md) | [液态玻璃 Logo](examples/liquid-glass-logo/README.zh-CN.md) |
 
 ## 许可与范围
 

@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-All 47 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
+All 48 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
 
 [Online editor](https://tuneshape.kai-nex.com/)
 
@@ -65,6 +65,7 @@ Choose an effect in the local server; edit its config.json to reuse it. The dist
 | soap-bubble | [Soap Bubble UI](examples/soap-bubble/README.md) | [肥皂泡控件](examples/soap-bubble/README.zh-CN.md) |
 | topographic-flow | [Topographic Flow](examples/topographic-flow/README.md) | [流动等高线](examples/topographic-flow/README.zh-CN.md) |
 | chromatic-button | [Chromatic Button](examples/chromatic-button/README.md) | [流彩按钮](examples/chromatic-button/README.zh-CN.md) |
+| liquid-glass-logo | [Liquid Glass Logo](examples/liquid-glass-logo/README.md) | [液态玻璃 Logo](examples/liquid-glass-logo/README.zh-CN.md) |
 
 ## License and scope
 
