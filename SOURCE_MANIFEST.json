@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "scope": "All 45 current UI effect renderers, bilingual runnable examples, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
-  "sourceSha256": "3aabb6d01a9e29173584466aedad3b4d4fd52af45b8d0d3a88f2faa1aad4f67c",
+  "sourceSha256": "bc55fe0b84fdb29131819f81294de3c99805f964d92cc65c2e0bc4d1aed57fbe",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -1286,7 +1286,7 @@
     {
       "path": "effects/EXPORT_MANIFEST.json",
       "bytes": 97642,
-      "sha256": "f26ead5a790f5db5c03c63430222d46604ae5d965257d67fdd2840966edb28bf"
+      "sha256": "dbc5c00efd457bebb87b4dc1c1da2bed06dc3139538eb51ff85283b81717f251"
     },
     {
       "path": "effects/index.html",
@@ -2055,8 +2055,8 @@
     },
     {
       "path": "effects/src/soap-bubble.ts",
-      "bytes": 19433,
-      "sha256": "d84e3d6ea7502ed7fb8207bf1f82dfd4e7b5376e0fc6a45df16dc3a3ef86a5d6"
+      "bytes": 20490,
+      "sha256": "f0278edc9d85ba8b34e85b6201d8ba72f4bd58250db0bdeee11ad56bd979b31b"
     },
     {
       "path": "effects/src/SoapBubblePreview.tsx",
