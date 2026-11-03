@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "scope": "All 47 current UI effect renderers, bilingual runnable examples, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
-  "sourceSha256": "67dd1d6f7e6ba0fb77e71ba3c2dfdcba304b266620368b0dfa94597fadf15f2d",
+  "sourceSha256": "08c2464e17802e36e957af07755054fdeb1f57cf9ad299b9eec74b88da264cb7",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -1346,7 +1346,7 @@
     {
       "path": "effects/EXPORT_MANIFEST.json",
       "bytes": 103307,
-      "sha256": "4a9572029fd4501b6213eea67c25934e4a96d63c97d7261114d500629abcc814"
+      "sha256": "aa1e89e471134c6a969fe8a85ac0bf7ccf8bfc45a268a08b4ac4a1eb430242b3"
     },
     {
       "path": "effects/index.html",
@@ -1655,8 +1655,8 @@
     },
     {
       "path": "effects/src/chromatic-button.ts",
-      "bytes": 14960,
-      "sha256": "8ff3bb9f8d3372f9a38303303ff81ac2b0662d0a3e1976f36d12213cabdb6549"
+      "bytes": 15151,
+      "sha256": "87aa02e87e73dadf95106280e172cd9b5d32652cecf3bc241ab5acff738c5c89"
     },
     {
       "path": "effects/src/ChromaticButtonPreview.tsx",
