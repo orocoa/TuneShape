@@ -9,7 +9,7 @@ const originalCatalog:CatalogCategory[]=[
  {label:'文字效果',symbol:'text',featured:'gooey-wordmark',children:[{label:'文字出现',ids:['text-rise','scroll-mask','flip-words','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy']},{label:'字符变化',ids:['gooey-wordmark','text-scramble','glyph-wall','encrypted-text']}]},
  {label:'图片与媒体',symbol:'image',featured:'image-zoom',children:[{label:'图片过渡',ids:['liquid-carousel','album-rail','elastic-reel','orbit-reel','hover-preview','app-orbit','image-zoom','image-flight']},{label:'点云聚合',ids:['pointcloud']}]},
  {label:'加载与状态',symbol:'loader',featured:'wave',children:[{label:'等待与进度',ids:['progress','spinner','dots','finger-tap','typewriter','yin-yang','wave']},{label:'状态反馈',ids:['pulse','message']}]},
- {label:'页面与背景',symbol:'page',featured:'page-swap',children:[{label:'页面转场',ids:['page-fade','page-swap']},{label:'动态背景',ids:['ascii-wave','ascii-sharks','particle-tide','watercolor','watercolor-original','watercolor-flow']}]},
+ {label:'页面与背景',symbol:'page',featured:'page-swap',children:[{label:'页面转场',ids:['page-fade','page-swap']},{label:'动态背景',ids:['topographic-flow','ascii-wave','ascii-sharks','particle-tide','watercolor','watercolor-original','watercolor-flow']}]},
  {label:'手势与系统',symbol:'pointer',featured:'three-finger',children:[{label:'点击与指针',ids:['tap','press','ripple','pointer']},{label:'窗口与文件',ids:['minimize','three-finger','hotcorner-upload']},{label:'步骤与设备',ids:['workflow','proximity','hotcorner-sleep']}]},
 ];
 export const catalog:CatalogCategory[]=originalCatalog.flatMap(category=>{

@@ -1,5 +1,8 @@
 /** Interface copy only. Configuration keys, routes, source records and user text stay canonical. */
 export const english: Record<string, string> = {
+"流动等高线":"Topographic Flow",
+"地形入场时长":"Terrain entrance duration",
+"参考 ReactDrops Topographic Flow 的公开预览、15 种预设与参数说明独立实现。采用连续地形场、连接等高线和真实曲线虚线；未使用原站源码或媒体。":"Independently implemented from the public Topographic Flow preview, 15 presets and controls. Uses a continuous terrain field, connected contours and real curve dashes without reference code or media.",
 "肥皂泡控件":"Soap Bubble UI",
 "菜单响应基准":"Menu response basis",
 "参考 ReactDrops Bubble UI 的公开演示与参数说明独立实现；包含按钮、图标按钮、搜索、菜单、开关和滑块。未使用原站受限分发的组件源码、着色器或媒体。":"Independently implemented from the public ReactDrops Bubble UI demonstration and control descriptions. Includes buttons, search, menus, switches and sliders without reference source, shaders or media.",
