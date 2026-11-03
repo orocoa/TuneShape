@@ -64,3 +64,5 @@ English effect guides: https://tuneshape.kai-nex.com/en/effects/
 - Soap Bubble UI: https://github.com/orocoa/TuneShape/tree/main/effects/examples/soap-bubble
 
 - Topographic Flow: https://github.com/orocoa/TuneShape/tree/main/effects/examples/topographic-flow
+
+- Chromatic Button: https://github.com/orocoa/TuneShape/tree/main/effects/examples/chromatic-button

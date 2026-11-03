@@ -4,7 +4,7 @@ import {retiredEffectIds} from './effect-terms';
 export type BrowseCategory={key:string;label:string;english:string;symbol:string;featured:string;ids:string[]};
 /** Browse metadata is separate from the category fixtures inside authored effects. */
 const definitions:BrowseCategory[]=[
- {key:'controls',label:'控件',english:'Controls',symbol:'button',featured:'soap-bubble',ids:['soap-bubble','coffee-selector','basic-button','hover-invert','dropdown','glass-radio','duration-picker','rounded-checks','gooey-input']},
+ {key:'controls',label:'控件',english:'Controls',symbol:'button',featured:'chromatic-button',ids:['chromatic-button','soap-bubble','coffee-selector','basic-button','hover-invert','dropdown','glass-radio','duration-picker','rounded-checks','gooey-input']},
  {key:'navigation',label:'导航',english:'Navigation',symbol:'tabs',featured:'mini-sidebar',ids:['mini-sidebar','expandable-sidebar','scroll-progress','hook-sidebar','rail-toc']},
  {key:'containers',label:'容器',english:'Containers',symbol:'grid',featured:'card-morph',ids:['card-morph','folder','glass-folder']},
  {key:'text',label:'文字',english:'Text',symbol:'text',featured:'gooey-wordmark',ids:['gooey-wordmark','text-rise','text-scramble','glyph-wall','encrypted-text','flip-words','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy']},

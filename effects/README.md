@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-All 46 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
+All 47 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
 
 [Online editor](https://tuneshape.kai-nex.com/)
 
@@ -64,6 +64,7 @@ Choose an effect in the local server; edit its config.json to reuse it. The dist
 | ascii-wave | [ASCII Wave Animation](examples/ascii-wave/README.md) | [ASCII 波形动画](examples/ascii-wave/README.zh-CN.md) |
 | soap-bubble | [Soap Bubble UI](examples/soap-bubble/README.md) | [肥皂泡控件](examples/soap-bubble/README.zh-CN.md) |
 | topographic-flow | [Topographic Flow](examples/topographic-flow/README.md) | [流动等高线](examples/topographic-flow/README.zh-CN.md) |
+| chromatic-button | [Chromatic Button](examples/chromatic-button/README.md) | [流彩按钮](examples/chromatic-button/README.zh-CN.md) |
 
 ## License and scope
 

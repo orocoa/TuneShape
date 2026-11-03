@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "count": 46,
+  "count": 47,
   "website": "https://tuneshape.kai-nex.com/",
   "repository": "https://github.com/orocoa/TuneShape",
   "effects": [
@@ -739,6 +739,22 @@
       },
       "license": "MIT",
       "config": "examples/topographic-flow/config.json"
+    },
+    {
+      "id": "chromatic-button",
+      "name": "Chromatic Button",
+      "nameZh": "流彩按钮",
+      "category": "控件",
+      "description": "A tactile chromatic button with projected reflections, whole-material colour flow and native interactions.",
+      "descriptionZh": "带球面反射、整体换色与真实按钮交互的流彩材质。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/chromatic-button",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/chromatic-button",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/chromatic-button/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/chromatic-button/"
+      },
+      "license": "MIT",
+      "config": "examples/chromatic-button/config.json"
     }
   ]
 }
