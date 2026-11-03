@@ -32,7 +32,8 @@ Copy `src/ascii-shoal.js` and its `LICENSE` into your project:
   import {createAsciiShoal} from './ascii-shoal.js';
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const shoal = createAsciiShoal(document.querySelector('#background'), {
-    density: 1,
+    density: 2,
+    speed: 1.7,
     glyphScale: 0.9,
     sharkCount: 4,
     fishDensity: 1,
@@ -44,18 +45,20 @@ Copy `src/ascii-shoal.js` and its `LICENSE` into your project:
 
 Give the host an explicit size and place your content above it. For decorative backgrounds, mark the host `aria-hidden="true"`. Pointer response follows pointer movement received by the host; content that covers it keeps its normal interactions.
 
+The five primary controls are density, swim speed, shark count, shark size and fish density. Character details and custom colors stay in separate expandable groups. The default palette is neutral gray.
+
 ## Settings
 
 | Option | Default | Range / meaning |
 | --- | --- | --- |
-| `density` | `1` | `0.5–2`; sparse `0.6`, balanced `1`, fine `1.6` |
+| `density` | `2` | `0.5–2`; sparse `0.6`, balanced `1`, fine `1.6`, high `2` |
 | `glyphScale` | `0.9` | `0.6–1.3`; glyph size within each cell |
-| `speed` | `1` | `0–3`; zero freezes animation |
+| `speed` | `1.7` | `0–3`; zero freezes animation |
 | `sharkCount` | `4` | `1–6` |
 | `sharkScale` | `1` | `0.5–1.5` |
 | `fishDensity` | `1` | `0–2`; zero removes the small fish |
-| `backgroundColor` | `#fafaf7` | Three- or six-digit hex |
-| `inkColor` | `#30362f` | Three- or six-digit hex |
+| `backgroundColor` | `#eeeeee` | Three- or six-digit hex |
+| `inkColor` | `#303030` | Three- or six-digit hex |
 | `opacity` | `0.9` | `0–1` |
 | `gridOpacity` | `0.04` | `0–0.2` |
 | `wakeOpacity` | `0` | `0–1` |

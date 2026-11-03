@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "scope": "All 48 current UI effect renderers, bilingual runnable examples, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
-  "sourceSha256": "636b6cc3eeb92c8f4c83af09869734a6324fbfba6a7a0d87290e86fa08eca3a3",
+  "sourceSha256": "670df1f6227a1464624a56be022245ecf34a703211f627c82298a4944d1671ec",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -125,8 +125,8 @@
     },
     {
       "path": "effects/examples/ascii-sharks/config.json",
-      "bytes": 545,
-      "sha256": "4c4cef8d6c955682208a3394e56c563d71db43bf8401923a4b3f847215138c95"
+      "bytes": 547,
+      "sha256": "a12b746ba954917fd65089f6e5a7a55064c461e3ded5771616e6d2f2988acdab"
     },
     {
       "path": "effects/examples/ascii-sharks/index.html",
@@ -140,13 +140,13 @@
     },
     {
       "path": "effects/examples/ascii-sharks/README.md",
-      "bytes": 2344,
-      "sha256": "0ed6e4db2b45799ad0157772236446f269521e3d912625862dc0987a23cb83ec"
+      "bytes": 2364,
+      "sha256": "c138ecc87950dc7e51b4cdde42a4d6b9c3b0595d8b94ff578e5ea0cf1956df5a"
     },
     {
       "path": "effects/examples/ascii-sharks/README.zh-CN.md",
-      "bytes": 2216,
-      "sha256": "a0f6b691e159f39fbef6a4179006ebf6f33beef61151fa8addbda66890e14142"
+      "bytes": 2234,
+      "sha256": "595920a4ebfe22dafa374fba0be7ba976ef0ee4a6c1920ef4b210836dc3cbd9d"
     },
     {
       "path": "effects/examples/ascii-sharks/SOURCE_NOTICE.txt",
@@ -160,8 +160,8 @@
     },
     {
       "path": "effects/examples/ascii-shoal/src/ascii-shoal.js",
-      "bytes": 21842,
-      "sha256": "4c2294fd82c1ed6bde507f6f543bcaceb6ab60ad9bcac2e1aff432942c8d427c"
+      "bytes": 21844,
+      "sha256": "2c4dd7de9a0a9367bf699e561cc2c3e03f60efaf3a229a432fbde59878f70b75"
     },
     {
       "path": "effects/examples/ascii-wave/config.json",
@@ -1376,7 +1376,7 @@
     {
       "path": "effects/EXPORT_MANIFEST.json",
       "bytes": 105996,
-      "sha256": "34f3a410baf29259e14ff8e8cd3ad07d51c9346dbe25e785584dea94dfae0137"
+      "sha256": "a8d81af068b91886cbf025e0e1ec1da2dc65dd23f1c865f96f7d1d9b460835c3"
     },
     {
       "path": "effects/index.html",
@@ -1615,13 +1615,13 @@
     },
     {
       "path": "effects/src/ascii-sharks-settings.ts",
-      "bytes": 1830,
-      "sha256": "0c6eb2675ee953e16e1f5cbc881ed3a9f95e89d4d24df4476592f7f5013d3d5a"
+      "bytes": 1832,
+      "sha256": "934077fcb6def41d99077379a8ddb184b5dafcbcb1d5b5104d80b27faf7fdec3"
     },
     {
       "path": "effects/src/ascii-sharks-spec.ts",
-      "bytes": 5637,
-      "sha256": "35eaedcc6f636b05fd80743beda8c90e7398480691e6aa9d6007ed359437d385"
+      "bytes": 5671,
+      "sha256": "b762f2456917e8000bbd39f247f1e6f61542af432d60df77f15c3d9863f6ac9a"
     },
     {
       "path": "effects/src/ascii-shoal-adapter.ts",
@@ -1630,8 +1630,8 @@
     },
     {
       "path": "effects/src/ascii-shoal-engine-source.ts",
-      "bytes": 11365,
-      "sha256": "08c22e9cc2c62f610da928106351eed2222c6de028276514c1d7deeeb5b9480c"
+      "bytes": 11367,
+      "sha256": "258b9208e3350d7d8ea261e69e7daf03aed04866ce1d5020251e4cbc5f9d0967"
     },
     {
       "path": "effects/src/ascii-shoal-export-entry.ts",
@@ -2275,8 +2275,8 @@
     },
     {
       "path": "effects/src/translations-en.ts",
-      "bytes": 66643,
-      "sha256": "62366636f32e75da9e719db9052b85c7e7e648d4e3939aea65dc9024bea64ae8"
+      "bytes": 66671,
+      "sha256": "db15457b0b53a4a80d1a2eb135e626d322e5608b84b7313165e999cd95db3f3b"
     },
     {
       "path": "effects/src/tuneshape-navigation.ts",
@@ -2410,8 +2410,8 @@
     },
     {
       "path": "examples/ascii-shoal/demo.js",
-      "bytes": 2692,
-      "sha256": "76f119e11da75b36da6c1d1880d4be1f311334a01bd4a06f0b79bdd9240779c7"
+      "bytes": 2766,
+      "sha256": "cd16a9af89d83449b1ddddfdfaf3c5180946ae3c6faa2b477c5b2e0e709f41bb"
     },
     {
       "path": "examples/ascii-shoal/IMPLEMENTATION.md",
@@ -2420,8 +2420,8 @@
     },
     {
       "path": "examples/ascii-shoal/index.html",
-      "bytes": 2869,
-      "sha256": "a92e155548fbc5e32de728d91f3c7881f0b5691f50546e85ebec9bee2b6571e1"
+      "bytes": 3800,
+      "sha256": "9c9bc8364bd6a0e90d695698b475a7cd4a1c41808a53360520bc4d390d8f3618"
     },
     {
       "path": "examples/ascii-shoal/LICENSE",
@@ -2435,13 +2435,13 @@
     },
     {
       "path": "examples/ascii-shoal/README.md",
-      "bytes": 4606,
-      "sha256": "2f3be708c826b689c9dd1f62ca84e68c5c4af0fc57a211b2f288cfc916496460"
+      "bytes": 4837,
+      "sha256": "a1fd176533b96a2acd267f8aba5d00c115c3499159ec1ae77dc0fc226e7221fc"
     },
     {
       "path": "examples/ascii-shoal/README.zh-CN.md",
-      "bytes": 2542,
-      "sha256": "ba47670d03de3ffb7df5427700c073cb66a0f1f830b4cca52e816146c045ae13"
+      "bytes": 2779,
+      "sha256": "4a665a7c58f28ca0d3c90946c83cdd23e40f42cd1673716f2ff7c06e400dd3ca"
     },
     {
       "path": "examples/ascii-shoal/serve.mjs",
@@ -2455,18 +2455,18 @@
     },
     {
       "path": "examples/ascii-shoal/src/ascii-shoal.js",
-      "bytes": 24168,
-      "sha256": "85e8e842a2ca95fa9e5e871680eaa7f8d26149a580a38113841d150ea918e21a"
+      "bytes": 24170,
+      "sha256": "7e9591529487c9ae291f6a4e15bd4172cae052f38c9e38b5dc96814870f9a24d"
     },
     {
       "path": "examples/ascii-shoal/style.css",
-      "bytes": 3410,
-      "sha256": "a5a57aaadd05033c343b72e0f1bd02f11967e8c61c4e46476505f2c3c9c5067e"
+      "bytes": 3498,
+      "sha256": "a01bd5ff304b886dded0cbcc63e4abd58b95cb9b399a1f4add51d71d13325977"
     },
     {
       "path": "examples/ascii-shoal/test/ascii-shoal.test.mjs",
-      "bytes": 10101,
-      "sha256": "09acb3f9ca6eb73e14a004f2ed7b2baae98a0bfc09f1c46e5a3cca5052d60965"
+      "bytes": 10118,
+      "sha256": "9cf07a1fc6ac5b3f36b061e92ec7246251ce81b38c3af3607f084a8066b40e74"
     },
     {
       "path": "index.html",
