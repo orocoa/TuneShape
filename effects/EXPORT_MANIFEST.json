@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "key": "tuneshape-public-effects-v1:093d095171859c0a3b9b53ec41417b9ac57a10f03a54a6017a9818ace8df9b3d",
+  "key": "tuneshape-public-effects-v1:fc038817c5734a2bb64fcd02dea42decb1206250a25b7ab7e79f6691f4e82cd4",
   "effects": 45,
   "scope": "Current visible effect renderers and runnable entries; full editor excluded",
   "input": [
@@ -736,8 +736,8 @@
     },
     {
       "path": "src/soap-bubble.ts",
-      "bytes": 19433,
-      "sha256": "d84e3d6ea7502ed7fb8207bf1f82dfd4e7b5376e0fc6a45df16dc3a3ef86a5d6"
+      "bytes": 20490,
+      "sha256": "f0278edc9d85ba8b34e85b6201d8ba72f4bd58250db0bdeee11ad56bd979b31b"
     },
     {
       "path": "src/source-notices.test.ts",
@@ -933,8 +933,8 @@
     },
     {
       "path": "src/soap-bubble.ts",
-      "bytes": 19433,
-      "sha256": "d84e3d6ea7502ed7fb8207bf1f82dfd4e7b5376e0fc6a45df16dc3a3ef86a5d6"
+      "bytes": 20490,
+      "sha256": "f0278edc9d85ba8b34e85b6201d8ba72f4bd58250db0bdeee11ad56bd979b31b"
     },
     {
       "path": "src/soap-bubble-shader.ts",
