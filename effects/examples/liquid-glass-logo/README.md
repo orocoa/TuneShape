@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-A droplet forms a refractive glass tile, then its glass and rings dissolve into the resting logo.
+A droplet forms a refractive glass tile, then its glass and rings dissolve into the resting logo on the shared #f1f1f1 gray surface.
 
 [Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/liquid-glass-logo) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/liquid-glass-logo/) · [All open-source effects](../../README.md)
 
@@ -48,11 +48,11 @@ Preview pixel ratio cap (maxDpr): 2.
 
 ## Motion notes 8
 
-Logo #09111b; plate #e4e6ea; background #e2e2e5. Use the chosen recolour and logo relief. Plate enabled. Uploaded logo: none; background: none.
+Logo #09111b; plate #f1f1f1; background #f1f1f1. Use the chosen recolour and logo relief. Plate enabled. Uploaded logo: none; background: none.
 
 ## Motion notes 9
 
-Depth controls magnification and bending; dispersion splits edge colours; double bevel adds an inset face. Caustics focus shoulder light, highlights control reflected contours, diffusion softens bright edges. Echo tint blends cool glints with the plate colour. Inner-wall focus changes a full contour into two corner arcs. Background images cover the frame with offset, zoom and tint; their plate becomes see-through.
+Depth controls smoothly settling magnification and bending; dispersion splits edge colours; double bevel adds an inset face. Caustics focus shoulder light, highlights control reflected contours, diffusion softens bright edges. Echo tint blends cool glints with the plate colour. Inner-wall focus changes a full contour into two corner arcs. Background images cover the frame with offset, zoom and tint; their plate becomes see-through.
 
 ## Motion notes 10
 
