@@ -1,6 +1,7 @@
 /** Reviewable editorial metadata. IDs and serialized motion configs never change here. */
 export type EffectTerm={label:string;english:string;aliases:string[]};
 export const effectTerms:Record<string,EffectTerm>={
+ 'topographic-flow':{label:'流动等高线',english:'Topographic Flow',aliases:['ReactDrops','topographic','contour','地形','测绘','等高线','高程','地形流动','survey']},
  'soap-bubble':{label:'肥皂泡控件',english:'Soap Bubble UI',aliases:['ReactDrops','soap bubble','bubble ui','肥皂泡按钮','泡泡玻璃','薄膜干涉','液态玻璃','虹彩']},
  'gooey-wordmark':{label:'液态交互字标',english:'Gooey Wordmark',aliases:['hipuku','液态文字','融化文字','彩色字标','gooey','wordmark','tuneshape']},
  'basic-button':{label:'按钮按压反馈',english:'Button Press Feedback',aliases:['按钮按压']},

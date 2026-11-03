@@ -1067,3 +1067,8 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 Soap Bubble UI — independent TuneShape implementation (MIT)
 Visual/control reference: https://reactdrops.dev/components/button/soap-bubble
 Reference reviewed 2026-11-03. ReactDrops source redistribution is restricted; no reference component code, shader or demo media is included. TuneShape uses an independently authored thin-film shader and native controls with a built-in backdrop scene.
+
+
+Topographic Flow — independent TuneShape implementation (MIT)
+Visual/control reference: https://reactdrops.dev/components/background/topographic-flow
+Public control ranges and palette values reviewed 2026-11-03. No reference component code, terrain algorithm or demo media is distributed. Canvas terrain, connected contour paths and pointer effects are independently authored.

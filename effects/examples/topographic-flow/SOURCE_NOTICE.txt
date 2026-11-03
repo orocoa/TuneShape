@@ -1,0 +1,5 @@
+https://reactdrops.dev/components/background/topographic-flow
+
+TuneShape independent implementation: MIT. Reference component redistribution is restricted by ReactDrops Component License 1.0.
+
+Public previews, control ranges and palette values observed on 2026-11-03. Independently authored gradient terrain, connected marching squares, arc-length dashes and pointer field. No ReactDrops component source, implementation code or media redistributed. Terrain composition and grain are independently authored.

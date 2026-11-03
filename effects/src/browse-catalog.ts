@@ -10,7 +10,7 @@ const definitions:BrowseCategory[]=[
  {key:'text',label:'文字',english:'Text',symbol:'text',featured:'gooey-wordmark',ids:['gooey-wordmark','text-rise','text-scramble','glyph-wall','encrypted-text','flip-words','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy']},
  {key:'images',label:'图片',english:'Images',symbol:'image',featured:'liquid-carousel',ids:['liquid-carousel','album-rail','elastic-reel','orbit-reel','hover-preview','app-orbit']},
  {key:'indicators',label:'状态指示',english:'Indicators',symbol:'loader',featured:'progress',ids:['progress','dots','finger-tap','typewriter','yin-yang','pulse']},
- {key:'backgrounds',label:'背景',english:'Backgrounds',symbol:'page',featured:'ascii-wave',ids:['ascii-wave','ascii-sharks','particle-tide','watercolor','watercolor-original','watercolor-flow']},
+ {key:'backgrounds',label:'背景',english:'Backgrounds',symbol:'page',featured:'topographic-flow',ids:['topographic-flow','ascii-wave','ascii-sharks','particle-tide','watercolor','watercolor-original','watercolor-flow']},
 ];
 export const catalog=definitions.flatMap(category=>{
  const ids=category.ids.filter(id=>!retiredEffectIds.has(id));
