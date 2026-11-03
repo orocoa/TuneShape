@@ -1,0 +1,5 @@
+https://reactdrops.dev/components/button/chromatic-button
+
+TuneShape independent implementation: MIT. Reference component redistribution is restricted by ReactDrops Component License 1.0.
+
+Public previews, controls and property semantics observed on 2026-11-03. Independently authored projection, colour field, grain and native button interactions; no reference component code or media redistributed. projectionScale explicitly stores the applied angle shown in the editor. Material texture differs from the reference.

@@ -3,7 +3,7 @@
   "@type": "SoftwareSourceCode",
   "name": "TuneShape",
   "alternateName": "随形",
-  "description": "Rendering source and runnable bilingual examples for 46 UI motion effects.",
+  "description": "Rendering source and runnable bilingual examples for 47 UI motion effects.",
   "codeRepository": "https://github.com/orocoa/TuneShape",
   "url": "https://tuneshape.kai-nex.com/",
   "license": "https://spdx.org/licenses/MIT.html",
@@ -569,6 +569,18 @@
       "subjectOf": [
         "https://tuneshape.kai-nex.com/en/effects/topographic-flow/",
         "https://tuneshape.kai-nex.com/effects/topographic-flow/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Chromatic Button",
+      "alternateName": "流彩按钮",
+      "description": "A tactile chromatic button with projected reflections, whole-material colour flow and native interactions.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/chromatic-button",
+      "url": "https://tuneshape.kai-nex.com/en/effects/chromatic-button/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/chromatic-button/",
+        "https://tuneshape.kai-nex.com/effects/chromatic-button/"
       ]
     }
   ]

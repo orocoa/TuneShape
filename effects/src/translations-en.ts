@@ -1,5 +1,8 @@
 /** Interface copy only. Configuration keys, routes, source records and user text stay canonical. */
 export const english: Record<string, string> = {
+"流彩按钮":"Chromatic Button",
+"入场基准时长":"Entrance base duration",
+"参考 ReactDrops Chromatic Button 的公开预览、调节项与交互说明独立实现。使用原生按钮、独立球面投影材质和静态颗粒，不使用原站组件源码或媒体。":"Independently implemented from the public Chromatic Button preview and controls. Native buttons, projected material and stationary grain; no reference component code or media reused.",
 "流动等高线":"Topographic Flow",
 "地形入场时长":"Terrain entrance duration",
 "参考 ReactDrops Topographic Flow 的公开预览、15 种预设与参数说明独立实现。采用连续地形场、连接等高线和真实曲线虚线；未使用原站源码或媒体。":"Independently implemented from the public Topographic Flow preview, 15 presets and controls. Uses a continuous terrain field, connected contours and real curve dashes without reference code or media.",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "key": "tuneshape-public-effects-v1:4c31e989504a5aa9b3e9412995b6894cf84c3242291d847158c17ff05da08816",
-  "effects": 46,
+  "key": "tuneshape-public-effects-v1:bb0b7d3e984fe6e368c859337417bb87c09db7ef56f1bb4e0f977cc16bf0d2c4",
+  "effects": 47,
   "scope": "Current visible effect renderers and runnable entries; full editor excluded",
   "input": [
     {
@@ -115,6 +115,11 @@
       "sha256": "1fe2b6e2f5eaf570aa61b228f8594d92eed1918c4c17b8d7150e3a8d21a8f0fc"
     },
     {
+      "path": "src/ChromaticButtonPreview.tsx",
+      "bytes": 2830,
+      "sha256": "06dd37b329a333923270121fb4c3193c9fcbd8fa3db7e939184c883b5b08d5b8"
+    },
+    {
       "path": "src/CoffeeSelectorPreview.tsx",
       "bytes": 2815,
       "sha256": "da47879af396494cdf57b785a7640ef8780c18478f539d5c6dba41018af6715f"
@@ -151,8 +156,8 @@
     },
     {
       "path": "src/HistoryPreview.tsx",
-      "bytes": 26012,
-      "sha256": "5994c12b89b09d4ef0a6590b2638e5c47fdf5fbf62a57ef54869f0a05709f388"
+      "bytes": 26155,
+      "sha256": "dd14dafaa71f053942d83350474cc34a8336800b398d17d49f059c28d0d3fbd9"
     },
     {
       "path": "src/HookSidebarPreview.tsx",
@@ -336,8 +341,8 @@
     },
     {
       "path": "src/browse-catalog.ts",
-      "bytes": 3053,
-      "sha256": "2e5343ac2d2f3c6069884569e99556daf2eedf9ff488da62701b923d4d6307fa"
+      "bytes": 3077,
+      "sha256": "8e1c56b8557b717fb6d9a415be325cc8141170d70d6c7e603b82b977ad4186e1"
     },
     {
       "path": "src/catalog-design.css",
@@ -346,8 +351,33 @@
     },
     {
       "path": "src/catalog.ts",
-      "bytes": 3551,
-      "sha256": "3a00e521f096040e192fb68c68b838509b511267f1c0dae9ebabf3b43102c365"
+      "bytes": 3570,
+      "sha256": "ad47b7519cfe956d5b6782b5f6f9732a81894da220f89d32d5a8b72eca09ce77"
+    },
+    {
+      "path": "src/chromatic-button-settings.ts",
+      "bytes": 4781,
+      "sha256": "744111d2208d754a764f1ac80fd07cf848a7c9241245a1abccc67d749cc3db1b"
+    },
+    {
+      "path": "src/chromatic-button-shader.ts",
+      "bytes": 2772,
+      "sha256": "c2e0c24539494fd56373fcdb67b9ca3f76e821e05bde05f9230d1cb14d7502e7"
+    },
+    {
+      "path": "src/chromatic-button-spec.ts",
+      "bytes": 8339,
+      "sha256": "06ee4c5d94cb882833c9a929cf08e32773252197bf7f9659e9aa1d3344ee2348"
+    },
+    {
+      "path": "src/chromatic-button.test.ts",
+      "bytes": 3458,
+      "sha256": "939f811c1623c954f0705f46eecd398f604804e026cca18af3dc5f9f206c7899"
+    },
+    {
+      "path": "src/chromatic-button.ts",
+      "bytes": 14960,
+      "sha256": "8ff3bb9f8d3372f9a38303303ff81ac2b0662d0a3e1976f36d12213cabdb6549"
     },
     {
       "path": "src/coffee-selector-spec.ts",
@@ -401,13 +431,13 @@
     },
     {
       "path": "src/effect-behavior.ts",
-      "bytes": 10762,
-      "sha256": "4cbdba40e5492b454619e07dbc48934eb42d49aeae4436b2dc66d655e8020845"
+      "bytes": 11112,
+      "sha256": "c260763c5df45bb2bac9f3e14414a6e5d305687a933a31185aa946e2085689a9"
     },
     {
       "path": "src/effect-terms.ts",
-      "bytes": 9076,
-      "sha256": "2a438da293b5054cda292e575f83f61fee8aa2b09c1a72e713c981774c796585"
+      "bytes": 9266,
+      "sha256": "7a1aaeb1aa00f12ab29b48f9f0ed14de2074e63abe6deb4226e69672081d97f3"
     },
     {
       "path": "src/effect-variants.ts",
@@ -531,13 +561,13 @@
     },
     {
       "path": "src/history-model.test.ts",
-      "bytes": 4878,
-      "sha256": "4e485c8cff01e356b4eac81ddc9fed2617a257cc8cbdfdcacc90910e6589367a"
+      "bytes": 4897,
+      "sha256": "d3508e87e93e5119e45f6f9cf766e073d806608c3ce9849aa52e90e13c616ce2"
     },
     {
       "path": "src/history-model.ts",
-      "bytes": 76715,
-      "sha256": "b52ffdddf05f0aa8902d97d3025325ddd3a6d7eeb90d621dc60580fbf4e3545f"
+      "bytes": 77863,
+      "sha256": "7dd0d518788928378f701a8ad6aa6bc4883eff37c4d7fe13f797d26984e1bf56"
     },
     {
       "path": "src/hook-sidebar-spec.ts",
@@ -751,8 +781,8 @@
     },
     {
       "path": "src/source-notices.ts",
-      "bytes": 5077,
-      "sha256": "88d4369c6aad1540d642bbad81b1f7b52fc6f3f4b26521e192d8e37df163af30"
+      "bytes": 5643,
+      "sha256": "6076ea1e00486f64a1309c82b1dcaaaf08a7b003d750a8251a16dd51989428c0"
     },
     {
       "path": "src/style.css",
@@ -796,8 +826,8 @@
     },
     {
       "path": "src/translations-en.ts",
-      "bytes": 65608,
-      "sha256": "abd2e68995728735d2585dc929bb01207adc617cb4721d6286e2136bb0ec5f44"
+      "bytes": 66073,
+      "sha256": "ab86776de8cc74e4ed184c136b1af10e30b675a9c5b6ff9c841241c784eab703"
     },
     {
       "path": "src/tuneshape-navigation.ts",
@@ -908,23 +938,23 @@
     },
     {
       "path": "src/translations-en.ts",
-      "bytes": 65608,
-      "sha256": "abd2e68995728735d2585dc929bb01207adc617cb4721d6286e2136bb0ec5f44"
+      "bytes": 66073,
+      "sha256": "ab86776de8cc74e4ed184c136b1af10e30b675a9c5b6ff9c841241c784eab703"
     },
     {
       "path": "src/effect-terms.ts",
-      "bytes": 9076,
-      "sha256": "2a438da293b5054cda292e575f83f61fee8aa2b09c1a72e713c981774c796585"
+      "bytes": 9266,
+      "sha256": "7a1aaeb1aa00f12ab29b48f9f0ed14de2074e63abe6deb4226e69672081d97f3"
     },
     {
       "path": "src/browse-catalog.ts",
-      "bytes": 3053,
-      "sha256": "2e5343ac2d2f3c6069884569e99556daf2eedf9ff488da62701b923d4d6307fa"
+      "bytes": 3077,
+      "sha256": "8e1c56b8557b717fb6d9a415be325cc8141170d70d6c7e603b82b977ad4186e1"
     },
     {
       "path": "src/catalog.ts",
-      "bytes": 3551,
-      "sha256": "3a00e521f096040e192fb68c68b838509b511267f1c0dae9ebabf3b43102c365"
+      "bytes": 3570,
+      "sha256": "ad47b7519cfe956d5b6782b5f6f9732a81894da220f89d32d5a8b72eca09ce77"
     },
     {
       "path": "src/model.ts",
@@ -948,8 +978,43 @@
     },
     {
       "path": "src/HistoryPreview.tsx",
-      "bytes": 26012,
-      "sha256": "5994c12b89b09d4ef0a6590b2638e5c47fdf5fbf62a57ef54869f0a05709f388"
+      "bytes": 26155,
+      "sha256": "dd14dafaa71f053942d83350474cc34a8336800b398d17d49f059c28d0d3fbd9"
+    },
+    {
+      "path": "src/ChromaticButtonPreview.tsx",
+      "bytes": 2830,
+      "sha256": "06dd37b329a333923270121fb4c3193c9fcbd8fa3db7e939184c883b5b08d5b8"
+    },
+    {
+      "path": "src/chromatic-button.ts",
+      "bytes": 14960,
+      "sha256": "8ff3bb9f8d3372f9a38303303ff81ac2b0662d0a3e1976f36d12213cabdb6549"
+    },
+    {
+      "path": "src/chromatic-button-shader.ts",
+      "bytes": 2772,
+      "sha256": "c2e0c24539494fd56373fcdb67b9ca3f76e821e05bde05f9230d1cb14d7502e7"
+    },
+    {
+      "path": "src/chromatic-button-settings.ts",
+      "bytes": 4781,
+      "sha256": "744111d2208d754a764f1ac80fd07cf848a7c9241245a1abccc67d749cc3db1b"
+    },
+    {
+      "path": "src/native-effect-tools.ts",
+      "bytes": 3696,
+      "sha256": "4982a9161566904c619468f0fb6e037163672fb8caa54181ce2609fa538d4838"
+    },
+    {
+      "path": "src/native-gallery-playback.ts",
+      "bytes": 1181,
+      "sha256": "10d20b2e154b9d904e2f830cdcf610cc5ab1d51873bfdc41ef66396490b387f2"
+    },
+    {
+      "path": "src/useNativeGalleryReplay.ts",
+      "bytes": 826,
+      "sha256": "28066676122f7ff00cfe70d6052c7a75862d5efc197d071708034e79d0757145"
     },
     {
       "path": "src/TopographicFlowPreview.tsx",
@@ -965,16 +1030,6 @@
       "path": "src/topographic-flow-settings.ts",
       "bytes": 17539,
       "sha256": "da4494f696d9bce596155483438fdbc5786815ff6b19b4da583ed8535d5a60e2"
-    },
-    {
-      "path": "src/native-effect-tools.ts",
-      "bytes": 3696,
-      "sha256": "4982a9161566904c619468f0fb6e037163672fb8caa54181ce2609fa538d4838"
-    },
-    {
-      "path": "src/native-gallery-playback.ts",
-      "bytes": 1181,
-      "sha256": "10d20b2e154b9d904e2f830cdcf610cc5ab1d51873bfdc41ef66396490b387f2"
     },
     {
       "path": "src/SoapBubblePreview.tsx",
@@ -1093,18 +1148,23 @@
     },
     {
       "path": "src/history-model.ts",
-      "bytes": 76715,
-      "sha256": "b52ffdddf05f0aa8902d97d3025325ddd3a6d7eeb90d621dc60580fbf4e3545f"
+      "bytes": 77863,
+      "sha256": "7dd0d518788928378f701a8ad6aa6bc4883eff37c4d7fe13f797d26984e1bf56"
+    },
+    {
+      "path": "src/chromatic-button-spec.ts",
+      "bytes": 8339,
+      "sha256": "06ee4c5d94cb882833c9a929cf08e32773252197bf7f9659e9aa1d3344ee2348"
+    },
+    {
+      "path": "src/source-notices.ts",
+      "bytes": 5643,
+      "sha256": "6076ea1e00486f64a1309c82b1dcaaaf08a7b003d750a8251a16dd51989428c0"
     },
     {
       "path": "src/topographic-flow-spec.ts",
       "bytes": 7798,
       "sha256": "9267fde6197ec17abc664a7a96a9122fc6654086c138d2fd38bcb50f337a14bb"
-    },
-    {
-      "path": "src/source-notices.ts",
-      "bytes": 5077,
-      "sha256": "88d4369c6aad1540d642bbad81b1f7b52fc6f3f4b26521e192d8e37df163af30"
     },
     {
       "path": "src/soap-bubble-spec.ts",
@@ -1383,8 +1443,8 @@
     },
     {
       "path": "src/effect-behavior.ts",
-      "bytes": 10762,
-      "sha256": "4cbdba40e5492b454619e07dbc48934eb42d49aeae4436b2dc66d655e8020845"
+      "bytes": 11112,
+      "sha256": "c260763c5df45bb2bac9f3e14414a6e5d305687a933a31185aa946e2085689a9"
     },
     {
       "path": "src/sidebar-field.ts",
@@ -1425,11 +1485,6 @@
       "path": "src/app-orbit-engine-source.ts",
       "bytes": 605318,
       "sha256": "c217cdde087b1cc0d9acc6debdd49e4b298c7f9e123e06ad574ed4815cd77473"
-    },
-    {
-      "path": "src/useNativeGalleryReplay.ts",
-      "bytes": 826,
-      "sha256": "28066676122f7ff00cfe70d6052c7a75862d5efc197d071708034e79d0757145"
     },
     {
       "path": "src/preview-playback.ts",
@@ -1642,14 +1697,19 @@
       "sha256": "f9a0109981afc35095f0a9a1fece94f27c6159ce61dc6ef6b2afb319a148a084"
     },
     {
-      "path": "src/topographic-flow.test.ts",
-      "bytes": 4684,
-      "sha256": "d9ef70a8be5c5857fbe851d97f8ff4326c23f27db2bb50740122ad02428f651f"
+      "path": "src/chromatic-button.test.ts",
+      "bytes": 3458,
+      "sha256": "939f811c1623c954f0705f46eecd398f604804e026cca18af3dc5f9f206c7899"
     },
     {
       "path": "src/native-gallery-playback.test.ts",
       "bytes": 3261,
       "sha256": "e2b62019ee181b3d43f68fbd8c0062fddfe58db1d47b5338a126a648fc6781d9"
+    },
+    {
+      "path": "src/topographic-flow.test.ts",
+      "bytes": 4684,
+      "sha256": "d9ef70a8be5c5857fbe851d97f8ff4326c23f27db2bb50740122ad02428f651f"
     },
     {
       "path": "src/liquid-carousel.test.ts",
@@ -1668,8 +1728,8 @@
     },
     {
       "path": "src/history-model.test.ts",
-      "bytes": 4878,
-      "sha256": "4e485c8cff01e356b4eac81ddc9fed2617a257cc8cbdfdcacc90910e6589367a"
+      "bytes": 4897,
+      "sha256": "d3508e87e93e5119e45f6f9cf766e073d806608c3ce9849aa52e90e13c616ce2"
     },
     {
       "path": "src/source-notices.test.ts",
@@ -1798,8 +1858,8 @@
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
-      "bytes": 57639,
-      "sha256": "18f30c3f0954d4c773bbb6ce28367ab2fe1242387d40b728ed24154e9f1981a8"
+      "bytes": 58054,
+      "sha256": "ea5a5f9d789688fc881158bf694ac218966eeb9de7cd8fd0647e154c1a9373e0"
     },
     {
       "path": "public/fonts/doto/OFL.txt",
@@ -3047,9 +3107,39 @@
       "sha256": "a2233c5fe38c40c5823adaca4291d7930a0b521df58dbe84e922d5385f91de2b"
     },
     {
+      "path": "examples/chromatic-button/config.json",
+      "bytes": 805,
+      "sha256": "95e89cb9d86a925684d05dcae2dc571b72b722ea8b5be45eac8a8053b781ccd9"
+    },
+    {
+      "path": "examples/chromatic-button/main.tsx",
+      "bytes": 117,
+      "sha256": "9bbe1eeee3f612dc94611ec58e7f4c7d9d5f0038dd5401a54915eca170fe5bbb"
+    },
+    {
+      "path": "examples/chromatic-button/index.html",
+      "bytes": 461,
+      "sha256": "fb5711c8cc9dc09409f569030032495e67f63255a13c7ea97820b3bc6ab42f0a"
+    },
+    {
+      "path": "examples/chromatic-button/SOURCE_NOTICE.txt",
+      "bytes": 519,
+      "sha256": "573ad0ad2c8409c4129164aff13bdf502bac4e1b186f34c7580ea95a06111e0c"
+    },
+    {
+      "path": "examples/chromatic-button/README.md",
+      "bytes": 3248,
+      "sha256": "04cef19ccb4ec3f0fc972175c6576e7a0380f219fa0fbb5a9dbb038191325a34"
+    },
+    {
+      "path": "examples/chromatic-button/README.zh-CN.md",
+      "bytes": 3001,
+      "sha256": "13a6bdfb363dae7bdd107ff84fc0456a357373bc4f2db8a062a032b74578a8bf"
+    },
+    {
       "path": "catalog.json",
-      "bytes": 33997,
-      "sha256": "da2aa23a2550151e70336baa9de7be7550bf2de4811e8a6bbea2b6c377ae0641"
+      "bytes": 34799,
+      "sha256": "ab8d78cde8aaa0c26de03cb08999214de6b0f65e747583158cb1b6ad4f90b3d8"
     },
     {
       "path": "demo/main.tsx",
@@ -3058,23 +3148,23 @@
     },
     {
       "path": "vite.config.ts",
-      "bytes": 953,
-      "sha256": "60cb5ddeb30f23b7a4e8223739a81a759d6a39d140caaf104872c0157d757a19"
+      "bytes": 972,
+      "sha256": "2fb070b83fea5688982dea659c1eb7148e6c121165253d879b3be55e0a35a931"
     },
     {
       "path": "index.html",
-      "bytes": 7582,
-      "sha256": "ea5ce927fe4950c4d61aaefe2ac5e892d93ba9724735d9c9920e3b22ceea3b8d"
+      "bytes": 7777,
+      "sha256": "9ffb799278981dba43fb1e30651ee33c67dc8e060fd16f5f0df6a5a4adfa852a"
     },
     {
       "path": "README.md",
-      "bytes": 6856,
-      "sha256": "879af7d8d5083c6fb95146d6af7e6910e1c814cc7e2415d47921dbcda484334a"
+      "bytes": 6995,
+      "sha256": "60253240ac9bde75f02ec33214291da7000e01dc1d7a349ea58dbf04afff3276"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 6764,
-      "sha256": "fa254b380f87b45b61d478d584fe52c0b90fa24062bb59199706e31a31eea035"
+      "bytes": 6903,
+      "sha256": "3cdf2bf94d6e444e04c75873728a550e1825c24bc7ecddea18efbcb153bffd29"
     },
     {
       "path": "test/catalog.test.mjs",

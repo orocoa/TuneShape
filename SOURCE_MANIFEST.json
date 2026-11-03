@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "scope": "All 46 current UI effect renderers, bilingual runnable examples, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
-  "sourceSha256": "d412b58da3cac3ed7c07ac4341b37ff54327ffe9ea6ed5a8b03c1fd2331f9722",
+  "scope": "All 47 current UI effect renderers, bilingual runnable examples, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
+  "sourceSha256": "67dd1d6f7e6ba0fb77e71ba3c2dfdcba304b266620368b0dfa94597fadf15f2d",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -30,8 +30,8 @@
     },
     {
       "path": "codemeta.json",
-      "bytes": 25756,
-      "sha256": "2215f52c9701f1dd41d402ac975f52142fb1d6999a7409a732f4a4a71e96c161"
+      "bytes": 26357,
+      "sha256": "5a03bfb5c3129d14402d6ea2948bfb9ece9158c035f7dda272285bba6ed64542"
     },
     {
       "path": "config.json",
@@ -90,8 +90,8 @@
     },
     {
       "path": "effects/catalog.json",
-      "bytes": 33997,
-      "sha256": "da2aa23a2550151e70336baa9de7be7550bf2de4811e8a6bbea2b6c377ae0641"
+      "bytes": 34799,
+      "sha256": "ab8d78cde8aaa0c26de03cb08999214de6b0f65e747583158cb1b6ad4f90b3d8"
     },
     {
       "path": "effects/demo/main.tsx",
@@ -237,6 +237,36 @@
       "path": "effects/examples/card-morph/README.zh-CN.md",
       "bytes": 2205,
       "sha256": "d92a930f04729cc6de3e8132b6118f45d89db58431211d64917a8a167fe97376"
+    },
+    {
+      "path": "effects/examples/chromatic-button/config.json",
+      "bytes": 805,
+      "sha256": "95e89cb9d86a925684d05dcae2dc571b72b722ea8b5be45eac8a8053b781ccd9"
+    },
+    {
+      "path": "effects/examples/chromatic-button/index.html",
+      "bytes": 461,
+      "sha256": "fb5711c8cc9dc09409f569030032495e67f63255a13c7ea97820b3bc6ab42f0a"
+    },
+    {
+      "path": "effects/examples/chromatic-button/main.tsx",
+      "bytes": 117,
+      "sha256": "9bbe1eeee3f612dc94611ec58e7f4c7d9d5f0038dd5401a54915eca170fe5bbb"
+    },
+    {
+      "path": "effects/examples/chromatic-button/README.md",
+      "bytes": 3248,
+      "sha256": "04cef19ccb4ec3f0fc972175c6576e7a0380f219fa0fbb5a9dbb038191325a34"
+    },
+    {
+      "path": "effects/examples/chromatic-button/README.zh-CN.md",
+      "bytes": 3001,
+      "sha256": "13a6bdfb363dae7bdd107ff84fc0456a357373bc4f2db8a062a032b74578a8bf"
+    },
+    {
+      "path": "effects/examples/chromatic-button/SOURCE_NOTICE.txt",
+      "bytes": 519,
+      "sha256": "573ad0ad2c8409c4129164aff13bdf502bac4e1b186f34c7580ea95a06111e0c"
     },
     {
       "path": "effects/examples/coffee-selector/config.json",
@@ -1315,13 +1345,13 @@
     },
     {
       "path": "effects/EXPORT_MANIFEST.json",
-      "bytes": 100311,
-      "sha256": "2c61af2c538eb95b8b77fec3e3a1111197d1288d5730d9ab9f002f733a6328a8"
+      "bytes": 103307,
+      "sha256": "4a9572029fd4501b6213eea67c25934e4a96d63c97d7261114d500629abcc814"
     },
     {
       "path": "effects/index.html",
-      "bytes": 7582,
-      "sha256": "ea5ce927fe4950c4d61aaefe2ac5e892d93ba9724735d9c9920e3b22ceea3b8d"
+      "bytes": 7777,
+      "sha256": "9ffb799278981dba43fb1e30651ee33c67dc8e060fd16f5f0df6a5a4adfa852a"
     },
     {
       "path": "effects/LICENSE",
@@ -1460,13 +1490,13 @@
     },
     {
       "path": "effects/README.md",
-      "bytes": 6856,
-      "sha256": "879af7d8d5083c6fb95146d6af7e6910e1c814cc7e2415d47921dbcda484334a"
+      "bytes": 6995,
+      "sha256": "60253240ac9bde75f02ec33214291da7000e01dc1d7a349ea58dbf04afff3276"
     },
     {
       "path": "effects/README.zh-CN.md",
-      "bytes": 6764,
-      "sha256": "fa254b380f87b45b61d478d584fe52c0b90fa24062bb59199706e31a31eea035"
+      "bytes": 6903,
+      "sha256": "3cdf2bf94d6e444e04c75873728a550e1825c24bc7ecddea18efbcb153bffd29"
     },
     {
       "path": "effects/src/aceternity-settings.ts",
@@ -1590,8 +1620,8 @@
     },
     {
       "path": "effects/src/browse-catalog.ts",
-      "bytes": 3053,
-      "sha256": "2e5343ac2d2f3c6069884569e99556daf2eedf9ff488da62701b923d4d6307fa"
+      "bytes": 3077,
+      "sha256": "8e1c56b8557b717fb6d9a415be325cc8141170d70d6c7e603b82b977ad4186e1"
     },
     {
       "path": "effects/src/catalog-design.css",
@@ -1600,8 +1630,38 @@
     },
     {
       "path": "effects/src/catalog.ts",
-      "bytes": 3551,
-      "sha256": "3a00e521f096040e192fb68c68b838509b511267f1c0dae9ebabf3b43102c365"
+      "bytes": 3570,
+      "sha256": "ad47b7519cfe956d5b6782b5f6f9732a81894da220f89d32d5a8b72eca09ce77"
+    },
+    {
+      "path": "effects/src/chromatic-button-settings.ts",
+      "bytes": 4781,
+      "sha256": "744111d2208d754a764f1ac80fd07cf848a7c9241245a1abccc67d749cc3db1b"
+    },
+    {
+      "path": "effects/src/chromatic-button-shader.ts",
+      "bytes": 2772,
+      "sha256": "c2e0c24539494fd56373fcdb67b9ca3f76e821e05bde05f9230d1cb14d7502e7"
+    },
+    {
+      "path": "effects/src/chromatic-button-spec.ts",
+      "bytes": 8339,
+      "sha256": "06ee4c5d94cb882833c9a929cf08e32773252197bf7f9659e9aa1d3344ee2348"
+    },
+    {
+      "path": "effects/src/chromatic-button.test.ts",
+      "bytes": 3458,
+      "sha256": "939f811c1623c954f0705f46eecd398f604804e026cca18af3dc5f9f206c7899"
+    },
+    {
+      "path": "effects/src/chromatic-button.ts",
+      "bytes": 14960,
+      "sha256": "8ff3bb9f8d3372f9a38303303ff81ac2b0662d0a3e1976f36d12213cabdb6549"
+    },
+    {
+      "path": "effects/src/ChromaticButtonPreview.tsx",
+      "bytes": 2830,
+      "sha256": "06dd37b329a333923270121fb4c3193c9fcbd8fa3db7e939184c883b5b08d5b8"
     },
     {
       "path": "effects/src/coffee-selector-spec.ts",
@@ -1670,13 +1730,13 @@
     },
     {
       "path": "effects/src/effect-behavior.ts",
-      "bytes": 10762,
-      "sha256": "4cbdba40e5492b454619e07dbc48934eb42d49aeae4436b2dc66d655e8020845"
+      "bytes": 11112,
+      "sha256": "c260763c5df45bb2bac9f3e14414a6e5d305687a933a31185aa946e2085689a9"
     },
     {
       "path": "effects/src/effect-terms.ts",
-      "bytes": 9076,
-      "sha256": "2a438da293b5054cda292e575f83f61fee8aa2b09c1a72e713c981774c796585"
+      "bytes": 9266,
+      "sha256": "7a1aaeb1aa00f12ab29b48f9f0ed14de2074e63abe6deb4226e69672081d97f3"
     },
     {
       "path": "effects/src/effect-variants.ts",
@@ -1820,18 +1880,18 @@
     },
     {
       "path": "effects/src/history-model.test.ts",
-      "bytes": 4878,
-      "sha256": "4e485c8cff01e356b4eac81ddc9fed2617a257cc8cbdfdcacc90910e6589367a"
+      "bytes": 4897,
+      "sha256": "d3508e87e93e5119e45f6f9cf766e073d806608c3ce9849aa52e90e13c616ce2"
     },
     {
       "path": "effects/src/history-model.ts",
-      "bytes": 76715,
-      "sha256": "b52ffdddf05f0aa8902d97d3025325ddd3a6d7eeb90d621dc60580fbf4e3545f"
+      "bytes": 77863,
+      "sha256": "7dd0d518788928378f701a8ad6aa6bc4883eff37c4d7fe13f797d26984e1bf56"
     },
     {
       "path": "effects/src/HistoryPreview.tsx",
-      "bytes": 26012,
-      "sha256": "5994c12b89b09d4ef0a6590b2638e5c47fdf5fbf62a57ef54869f0a05709f388"
+      "bytes": 26155,
+      "sha256": "dd14dafaa71f053942d83350474cc34a8336800b398d17d49f059c28d0d3fbd9"
     },
     {
       "path": "effects/src/hook-sidebar-spec.ts",
@@ -2100,8 +2160,8 @@
     },
     {
       "path": "effects/src/source-notices.ts",
-      "bytes": 5077,
-      "sha256": "88d4369c6aad1540d642bbad81b1f7b52fc6f3f4b26521e192d8e37df163af30"
+      "bytes": 5643,
+      "sha256": "6076ea1e00486f64a1309c82b1dcaaaf08a7b003d750a8251a16dd51989428c0"
     },
     {
       "path": "effects/src/StudioEffectsPreview.tsx",
@@ -2160,8 +2220,8 @@
     },
     {
       "path": "effects/src/translations-en.ts",
-      "bytes": 65608,
-      "sha256": "abd2e68995728735d2585dc929bb01207adc617cb4721d6286e2136bb0ec5f44"
+      "bytes": 66073,
+      "sha256": "ab86776de8cc74e4ed184c136b1af10e30b675a9c5b6ff9c841241c784eab703"
     },
     {
       "path": "effects/src/tuneshape-navigation.ts",
@@ -2270,8 +2330,8 @@
     },
     {
       "path": "effects/THIRD_PARTY_NOTICES.txt",
-      "bytes": 57639,
-      "sha256": "18f30c3f0954d4c773bbb6ce28367ab2fe1242387d40b728ed24154e9f1981a8"
+      "bytes": 58054,
+      "sha256": "ea5a5f9d789688fc881158bf694ac218966eeb9de7cd8fd0647e154c1a9373e0"
     },
     {
       "path": "effects/tsconfig.json",
@@ -2280,8 +2340,8 @@
     },
     {
       "path": "effects/vite.config.ts",
-      "bytes": 953,
-      "sha256": "60cb5ddeb30f23b7a4e8223739a81a759d6a39d140caaf104872c0157d757a19"
+      "bytes": 972,
+      "sha256": "2fb070b83fea5688982dea659c1eb7148e6c121165253d879b3be55e0a35a931"
     },
     {
       "path": "examples/ascii-shoal/.gitignore",
@@ -2365,8 +2425,8 @@
     },
     {
       "path": "llms.txt",
-      "bytes": 15003,
-      "sha256": "f8db8d7564d93f410cb9d69ec2462d7d56be34c115e160fbd1f70b0b7ddf397e"
+      "bytes": 15104,
+      "sha256": "e5dd18e99462c29c34f0c9cbc4b5d0bcbf87890519d75d79760829ce4401b478"
     },
     {
       "path": "package.json",
@@ -2400,13 +2460,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 17084,
-      "sha256": "413544bbdbbd6d8e9758be7daf7f60264e2f6438a0c5c59afd960f5a7994b437"
+      "bytes": 17239,
+      "sha256": "448b5a413b2cc3307d66041701f46e80e5155cdf8eb6c55e206ceeec1588d070"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 16136,
-      "sha256": "941b0e218aa54d5c498689d24d5d95ffe6a4175d34f2fe671e2b608cc2b77f24"
+      "bytes": 16291,
+      "sha256": "64a84c0a6d20cfaf6199c6a6f52fbc2c3c494513eea4a18ce520b259ea7d296e"
     },
     {
       "path": "scripts/verify-public-manifest.mjs",

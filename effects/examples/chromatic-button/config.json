@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "chromatic-button",
+  "durationMs": 700,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "chromaticButton": {
+    "example": "message",
+    "hoverEffect": "brighten",
+    "entrance": "blur-up",
+    "colorMode": "spectrum",
+    "color": "#b126ff",
+    "color2": "#ff177c",
+    "color3": "#35d3ff",
+    "label": "Get started",
+    "disabled": false,
+    "paused": false,
+    "entranceSpeed": 1,
+    "entranceBlur": 10,
+    "entranceDistance": 20,
+    "entranceScale": 0.65,
+    "borderRadius": 50,
+    "feather": 100,
+    "projectionScale": 174.7,
+    "intensity": 1.4,
+    "grain": 0.105,
+    "speed": 0.7,
+    "phase": 0,
+    "seed": 7
+  }
+}
