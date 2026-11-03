@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文**
 
-包含当前可见目录的 43 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
+包含当前可见目录的 44 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
 
 [在线编辑器](https://tuneshape.kai-nex.com/)
 
@@ -29,6 +29,7 @@ pnpm build
 | hook-sidebar | [Hook Sidebar](examples/hook-sidebar/README.md) | [钩线侧栏](examples/hook-sidebar/README.zh-CN.md) |
 | rail-toc | [Rail TOC](examples/rail-toc/README.md) | [纸飞机目录](examples/rail-toc/README.zh-CN.md) |
 | card-morph | [Card Expansion](examples/card-morph/README.md) | [卡片展开](examples/card-morph/README.zh-CN.md) |
+| gooey-wordmark | [Gooey Wordmark](examples/gooey-wordmark/README.md) | [液态交互字标](examples/gooey-wordmark/README.zh-CN.md) |
 | typewriter-text | [Typewriter Text](examples/typewriter-text/README.md) | [逐字打出](examples/typewriter-text/README.zh-CN.md) |
 | soft-blur-in | [Soft Blur In](examples/soft-blur-in/README.md) | [柔焦入场](examples/soft-blur-in/README.zh-CN.md) |
 | short-slide-down | [Short Slide Down](examples/short-slide-down/README.md) | [落词堆叠](examples/short-slide-down/README.zh-CN.md) |

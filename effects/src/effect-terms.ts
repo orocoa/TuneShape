@@ -1,6 +1,7 @@
 /** Reviewable editorial metadata. IDs and serialized motion configs never change here. */
 export type EffectTerm={label:string;english:string;aliases:string[]};
 export const effectTerms:Record<string,EffectTerm>={
+ 'gooey-wordmark':{label:'液态交互字标',english:'Gooey Wordmark',aliases:['hipuku','液态文字','融化文字','彩色字标','gooey','wordmark','tuneshape']},
  'basic-button':{label:'按钮按压反馈',english:'Button Press Feedback',aliases:['按钮按压']},
  'basic-tabs':{label:'标签页切换',english:'Tab Transition',aliases:['Tab 切换']},
  'basic-modal':{label:'模态对话框开合',english:'Modal Dialog Transition',aliases:['弹窗开合']},

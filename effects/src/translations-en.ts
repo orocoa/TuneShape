@@ -1,5 +1,15 @@
 /** Interface copy only. Configuration keys, routes, source records and user text stay canonical. */
 export const english: Record<string, string> = {
+"模糊液团凝聚成 tuneshape 字标，鼠标局部融化、黏连并逐字换色。":"A blurred liquid mass resolves into tuneshape. Move the pointer to melt nearby strokes and change letter colours.",
+"液态交互字标":"Gooey Wordmark",
+"字标说明":"Wordmark caption",
+"液态形变强度":"Melt intensity",
+"液态交互范围":"Interaction radius",
+"字标背景色":"Wordmark background",
+"显示背景网格":"Show background grid",
+"显示标注引线":"Show leader lines",
+"说明文字最多 64 个可见字符。":"Use up to 64 visible characters for the caption.",
+"彩色液态带弹开成 tuneshape 字标，鼠标局部融化、黏连并逐字换色。":"A colour ribbon unfolds into tuneshape. Move the pointer to melt nearby strokes and change letter colours.",
 "液态图片轮播":"Liquid Image Carousel",
 "用户视频 · 独立实现":"User video · Independent implementation",
 "轮播图片":"Carousel images",
