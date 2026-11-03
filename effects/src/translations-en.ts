@@ -1,5 +1,8 @@
 /** Interface copy only. Configuration keys, routes, source records and user text stay canonical. */
 export const english: Record<string, string> = {
+"肥皂泡控件":"Soap Bubble UI",
+"菜单响应基准":"Menu response basis",
+"参考 ReactDrops Bubble UI 的公开演示与参数说明独立实现；包含按钮、图标按钮、搜索、菜单、开关和滑块。未使用原站受限分发的组件源码、着色器或媒体。":"Independently implemented from the public ReactDrops Bubble UI demonstration and control descriptions. Includes buttons, search, menus, switches and sliders without reference source, shaders or media.",
 "模糊液团凝聚成 tuneshape 字标，鼠标局部融化、黏连并逐字换色。":"A blurred liquid mass resolves into tuneshape. Move the pointer to melt nearby strokes and change letter colours.",
 "液态交互字标":"Gooey Wordmark",
 "字标说明":"Wordmark caption",

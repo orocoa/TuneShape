@@ -3,7 +3,7 @@
   "@type": "SoftwareSourceCode",
   "name": "TuneShape",
   "alternateName": "随形",
-  "description": "Rendering source and runnable bilingual examples for 44 UI motion effects.",
+  "description": "Rendering source and runnable bilingual examples for 45 UI motion effects.",
   "codeRepository": "https://github.com/orocoa/TuneShape",
   "url": "https://tuneshape.kai-nex.com/",
   "license": "https://spdx.org/licenses/MIT.html",
@@ -545,6 +545,18 @@
       "subjectOf": [
         "https://tuneshape.kai-nex.com/en/effects/liquid-carousel/",
         "https://tuneshape.kai-nex.com/effects/liquid-carousel/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Soap Bubble UI",
+      "alternateName": "肥皂泡控件",
+      "description": "Interactive controls with a flowing interference film, glass refraction and pointer reflections.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/soap-bubble",
+      "url": "https://tuneshape.kai-nex.com/en/effects/soap-bubble/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/soap-bubble/",
+        "https://tuneshape.kai-nex.com/effects/soap-bubble/"
       ]
     }
   ]

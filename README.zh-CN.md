@@ -43,7 +43,7 @@ TuneShape，中文名「随形」，是面向设计师与开发者的 UI 动效�
 
 ## 关于本仓库
 
-当前可见目录中的 **44 个动效渲染源码均已公开**，每项提供默认配置、可运行页面和中英文说明。[运行全部示例](effects/README.zh-CN.md) · [机器可读清单](effects/catalog.json) · [动效说明](https://tuneshape.kai-nex.com/effects/)
+当前可见目录中的 **45 个动效渲染源码均已公开**，每项提供默认配置、可运行页面和中英文说明。[运行全部示例](effects/README.zh-CN.md) · [机器可读清单](effects/catalog.json) · [动效说明](https://tuneshape.kai-nex.com/effects/)
 
 ```sh
 git clone https://github.com/orocoa/TuneShape.git
@@ -76,6 +76,7 @@ pnpm dev
 | encrypted-text | [Encrypted Text](effects/examples/encrypted-text/README.md) | [逐字解码](effects/examples/encrypted-text/README.zh-CN.md) |
 | gooey-input | [Gooey Input](effects/examples/gooey-input/README.md) | [黏性搜索输入](effects/examples/gooey-input/README.zh-CN.md) |
 | flip-words | [Flip Words](effects/examples/flip-words/README.md) | [词语翻替](effects/examples/flip-words/README.zh-CN.md) |
+| soap-bubble | [Soap Bubble UI](effects/examples/soap-bubble/README.md) | [肥皂泡控件](effects/examples/soap-bubble/README.zh-CN.md) |
 | coffee-selector | [Selector](effects/examples/coffee-selector/README.md) | [选择器](effects/examples/coffee-selector/README.zh-CN.md) |
 | rounded-checks | [Rounded Checkboxes](effects/examples/rounded-checks/README.md) | [圆角复选框](effects/examples/rounded-checks/README.zh-CN.md) |
 | mini-sidebar | [Page Navigation](effects/examples/mini-sidebar/README.md) | [页面导航](effects/examples/mini-sidebar/README.zh-CN.md) |
