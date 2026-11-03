@@ -1077,3 +1077,8 @@ Public control ranges and palette values reviewed 2026-11-03. No reference compo
 Chromatic Button — independent TuneShape implementation (MIT)
 Visual/control reference: https://reactdrops.dev/components/button/chromatic-button
 Public previews, control ranges and property semantics reviewed 2026-11-03. No reference component code, shaders or media distributed. Independent projection, colour field and native button interactions. projectionScale stores the displayed applied angle directly.
+
+
+Liquid Glass Logo — independent TuneShape implementation (MIT)
+Visual/control reference: https://reactdrops.dev/components/text-reveal/liquid-glass-logo
+Public previews and controls reviewed 2026-11-03. No reference component code, shaders, trademark graphics or media distributed. Independent refraction geometry and original TuneShape artwork; existing Parkinsans font reused under its retained SIL OFL 1.1 notice.

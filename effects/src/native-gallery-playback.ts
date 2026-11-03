@@ -14,6 +14,7 @@ export function createNativeGalleryReplay({replay,settle,delay=()=>500,schedule=
  let active=false,pending:ReturnType<typeof setTimeout>|undefined;
  function clear(){if(pending!==undefined)cancel(pending);pending=undefined}
  return {
+  cancelPending:clear,
   setActive(next:boolean){if(active===next)return;active=next;clear();if(active)replay();else settle()},
   onRunning(running:boolean){clear();if(active&&!running)pending=schedule(()=>{pending=undefined;if(active)replay()},delay())},
  };

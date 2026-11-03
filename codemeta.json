@@ -3,7 +3,7 @@
   "@type": "SoftwareSourceCode",
   "name": "TuneShape",
   "alternateName": "随形",
-  "description": "Rendering source and runnable bilingual examples for 47 UI motion effects.",
+  "description": "Rendering source and runnable bilingual examples for 48 UI motion effects.",
   "codeRepository": "https://github.com/orocoa/TuneShape",
   "url": "https://tuneshape.kai-nex.com/",
   "license": "https://spdx.org/licenses/MIT.html",
@@ -581,6 +581,18 @@
       "subjectOf": [
         "https://tuneshape.kai-nex.com/en/effects/chromatic-button/",
         "https://tuneshape.kai-nex.com/effects/chromatic-button/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Liquid Glass Logo",
+      "alternateName": "液态玻璃 Logo",
+      "description": "A droplet forms a refractive glass tile, then its glass and rings dissolve into the resting logo.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/liquid-glass-logo",
+      "url": "https://tuneshape.kai-nex.com/en/effects/liquid-glass-logo/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/liquid-glass-logo/",
+        "https://tuneshape.kai-nex.com/effects/liquid-glass-logo/"
       ]
     }
   ]

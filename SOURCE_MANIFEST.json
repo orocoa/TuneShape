@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "scope": "All 47 current UI effect renderers, bilingual runnable examples, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
-  "sourceSha256": "08c2464e17802e36e957af07755054fdeb1f57cf9ad299b9eec74b88da264cb7",
+  "scope": "All 48 current UI effect renderers, bilingual runnable examples, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
+  "sourceSha256": "636b6cc3eeb92c8f4c83af09869734a6324fbfba6a7a0d87290e86fa08eca3a3",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -30,8 +30,8 @@
     },
     {
       "path": "codemeta.json",
-      "bytes": 26357,
-      "sha256": "5a03bfb5c3129d14402d6ea2948bfb9ece9158c035f7dda272285bba6ed64542"
+      "bytes": 26959,
+      "sha256": "871de22cc595595094ca04614956750dcba0624e03c1082862e26968a785c730"
     },
     {
       "path": "config.json",
@@ -90,8 +90,8 @@
     },
     {
       "path": "effects/catalog.json",
-      "bytes": 34799,
-      "sha256": "ab8d78cde8aaa0c26de03cb08999214de6b0f65e747583158cb1b6ad4f90b3d8"
+      "bytes": 35624,
+      "sha256": "d40246f36e20bea908290b657f869544d08fab27d6c2e0ea82146efc729cc8b8"
     },
     {
       "path": "effects/demo/main.tsx",
@@ -794,6 +794,36 @@
       "sha256": "d83f591433537f83c1dc2fdb6b7d93233056f115b12ae562046337d6d3a001fd"
     },
     {
+      "path": "effects/examples/liquid-glass-logo/config.json",
+      "bytes": 1275,
+      "sha256": "0a3f3a5f70254b3f21b07e6962d86c2acf7af6869dd085e3e86f81a7f4d2ab45"
+    },
+    {
+      "path": "effects/examples/liquid-glass-logo/index.html",
+      "bytes": 453,
+      "sha256": "1749abfaac4d051b1894885c48ab98f3548793e330d7177e0c6473114220b7d4"
+    },
+    {
+      "path": "effects/examples/liquid-glass-logo/main.tsx",
+      "bytes": 118,
+      "sha256": "3fb86b0b471b4d16c460da860a2c1ad11b1c4d42ee85da2d2355e8b486cc4324"
+    },
+    {
+      "path": "effects/examples/liquid-glass-logo/README.md",
+      "bytes": 4562,
+      "sha256": "96c9b58c712577de7ecf971bfad5105dc6ccaee73319686e9fd10df7b908a27f"
+    },
+    {
+      "path": "effects/examples/liquid-glass-logo/README.zh-CN.md",
+      "bytes": 4325,
+      "sha256": "637d9e3e6c207253562f7be691bb2aae0e63f1eb33723475a5e89669c4b6ba0d"
+    },
+    {
+      "path": "effects/examples/liquid-glass-logo/SOURCE_NOTICE.txt",
+      "bytes": 609,
+      "sha256": "476783225b2908b2169293be43dd514f7f21f7f89b5e433ae2ebd3c500aa38a9"
+    },
+    {
       "path": "effects/examples/mini-sidebar/config.json",
       "bytes": 4319,
       "sha256": "e1de4277447f240e148d566662095cdff57542a6890eec8dfd76c19953293d2d"
@@ -1345,13 +1375,13 @@
     },
     {
       "path": "effects/EXPORT_MANIFEST.json",
-      "bytes": 103307,
-      "sha256": "aa1e89e471134c6a969fe8a85ac0bf7ccf8bfc45a268a08b4ac4a1eb430242b3"
+      "bytes": 105996,
+      "sha256": "34f3a410baf29259e14ff8e8cd3ad07d51c9346dbe25e785584dea94dfae0137"
     },
     {
       "path": "effects/index.html",
-      "bytes": 7777,
-      "sha256": "9ffb799278981dba43fb1e30651ee33c67dc8e060fd16f5f0df6a5a4adfa852a"
+      "bytes": 7970,
+      "sha256": "05221872ef8fafa236c222c4b101c9a727d73b7bae2e0c4908b14bc918f956f2"
     },
     {
       "path": "effects/LICENSE",
@@ -1490,13 +1520,13 @@
     },
     {
       "path": "effects/README.md",
-      "bytes": 6995,
-      "sha256": "60253240ac9bde75f02ec33214291da7000e01dc1d7a349ea58dbf04afff3276"
+      "bytes": 7143,
+      "sha256": "2e7f86fcdd3368d688fdc1a8269086a90c1ddfdc190f7e46adb4e1648e465c84"
     },
     {
       "path": "effects/README.zh-CN.md",
-      "bytes": 6903,
-      "sha256": "3cdf2bf94d6e444e04c75873728a550e1825c24bc7ecddea18efbcb153bffd29"
+      "bytes": 7051,
+      "sha256": "52f12a9fe31b73fe5a3f66dc77b6436f68579f90c1e2741a3ac58e7300c395f7"
     },
     {
       "path": "effects/src/aceternity-settings.ts",
@@ -1620,8 +1650,8 @@
     },
     {
       "path": "effects/src/browse-catalog.ts",
-      "bytes": 3077,
-      "sha256": "8e1c56b8557b717fb6d9a415be325cc8141170d70d6c7e603b82b977ad4186e1"
+      "bytes": 3100,
+      "sha256": "e40ac87854b12c0753ef8e004e9ec6447adf7741e0af28812dc488ef3375d154"
     },
     {
       "path": "effects/src/catalog-design.css",
@@ -1630,8 +1660,8 @@
     },
     {
       "path": "effects/src/catalog.ts",
-      "bytes": 3570,
-      "sha256": "ad47b7519cfe956d5b6782b5f6f9732a81894da220f89d32d5a8b72eca09ce77"
+      "bytes": 3590,
+      "sha256": "4ff451db9631976440a928ae9d1504d25b60c60f6483fa5cb2243c18d934eb15"
     },
     {
       "path": "effects/src/chromatic-button-settings.ts",
@@ -1730,13 +1760,13 @@
     },
     {
       "path": "effects/src/effect-behavior.ts",
-      "bytes": 11112,
-      "sha256": "c260763c5df45bb2bac9f3e14414a6e5d305687a933a31185aa946e2085689a9"
+      "bytes": 11460,
+      "sha256": "f6691e202c01d185968b179227aa2bbe30bc74a681d77ddd7e2b0430af5c3443"
     },
     {
       "path": "effects/src/effect-terms.ts",
-      "bytes": 9266,
-      "sha256": "7a1aaeb1aa00f12ab29b48f9f0ed14de2074e63abe6deb4226e69672081d97f3"
+      "bytes": 9474,
+      "sha256": "ec28f597d73fbb7d4f2cc20d1f09d874e103771309659a7d28f122da0419049f"
     },
     {
       "path": "effects/src/effect-variants.ts",
@@ -1880,18 +1910,18 @@
     },
     {
       "path": "effects/src/history-model.test.ts",
-      "bytes": 4897,
-      "sha256": "d3508e87e93e5119e45f6f9cf766e073d806608c3ce9849aa52e90e13c616ce2"
+      "bytes": 4917,
+      "sha256": "ff7d583a3a23c453e318eb6ace4f7f2f221916fe6a09d0835d674f4a16863a54"
     },
     {
       "path": "effects/src/history-model.ts",
-      "bytes": 77863,
-      "sha256": "7dd0d518788928378f701a8ad6aa6bc4883eff37c4d7fe13f797d26984e1bf56"
+      "bytes": 79036,
+      "sha256": "b31b729224e8d5ee1c755dcdb9437fafcfafc5379b87f9281f89a8d36e39a759"
     },
     {
       "path": "effects/src/HistoryPreview.tsx",
-      "bytes": 26155,
-      "sha256": "dd14dafaa71f053942d83350474cc34a8336800b398d17d49f059c28d0d3fbd9"
+      "bytes": 26299,
+      "sha256": "655564c6ed34a3482ea49f969f3fd82de393ad6ab070df7de77731216ec080a7"
     },
     {
       "path": "effects/src/hook-sidebar-spec.ts",
@@ -1964,9 +1994,34 @@
       "sha256": "eb4b1a7b87d3f40f290aa72c91c730a93975d0aa7e978013f489cc7c6b538624"
     },
     {
+      "path": "effects/src/liquid-glass-logo-settings.ts",
+      "bytes": 11816,
+      "sha256": "83d93874c5552b268c090551ceb6d5960f8479bce4a82fabb3f7c0c5aca720ec"
+    },
+    {
+      "path": "effects/src/liquid-glass-logo-shader.ts",
+      "bytes": 5288,
+      "sha256": "8d7e1b9f785704982b31dc84294f0aaca85a367ff5d7995144d7b4b4f07c93f3"
+    },
+    {
+      "path": "effects/src/liquid-glass-logo-spec.ts",
+      "bytes": 10886,
+      "sha256": "8a6789ee0d0dbd4da6c2743c9a965a36d2caa7db44b48ad5bdafb736ecad770b"
+    },
+    {
+      "path": "effects/src/liquid-glass-logo.ts",
+      "bytes": 15476,
+      "sha256": "2b0e085b34c2629150fc7183626548d11ee8e465b102e2d857c1da5c9dd2c47a"
+    },
+    {
       "path": "effects/src/LiquidCarouselPreview.tsx",
       "bytes": 2733,
       "sha256": "038c572f1b50b9dcb4e5024575157df5cf399163476ddc5d94088076f4917ef2"
+    },
+    {
+      "path": "effects/src/LiquidGlassLogoPreview.tsx",
+      "bytes": 3474,
+      "sha256": "78bbf94f4758bdf7f861cd076033309197bd56b5c7a9e1f7eafb7fb3802272fd"
     },
     {
       "path": "effects/src/mini-sidebar-model.ts",
@@ -2000,13 +2055,13 @@
     },
     {
       "path": "effects/src/native-gallery-playback.test.ts",
-      "bytes": 3261,
-      "sha256": "e2b62019ee181b3d43f68fbd8c0062fddfe58db1d47b5338a126a648fc6781d9"
+      "bytes": 3875,
+      "sha256": "004ba7057c7a303d60219e2f50a2937ce6d666c2834f6d1d92fbd7c0041ab903"
     },
     {
       "path": "effects/src/native-gallery-playback.ts",
-      "bytes": 1181,
-      "sha256": "10d20b2e154b9d904e2f830cdcf610cc5ab1d51873bfdc41ef66396490b387f2"
+      "bytes": 1204,
+      "sha256": "08269af28d386ba2dba41b12805158dcaeaa76f98c244be696e47dbbd7f690d5"
     },
     {
       "path": "effects/src/orbit-reel-art.ts",
@@ -2160,8 +2215,8 @@
     },
     {
       "path": "effects/src/source-notices.ts",
-      "bytes": 5643,
-      "sha256": "6076ea1e00486f64a1309c82b1dcaaaf08a7b003d750a8251a16dd51989428c0"
+      "bytes": 6300,
+      "sha256": "c720a20e15bda51ee83347164de97d29c9746cb9e5d5854120f04c59a30288c8"
     },
     {
       "path": "effects/src/StudioEffectsPreview.tsx",
@@ -2220,8 +2275,8 @@
     },
     {
       "path": "effects/src/translations-en.ts",
-      "bytes": 66073,
-      "sha256": "ab86776de8cc74e4ed184c136b1af10e30b675a9c5b6ff9c841241c784eab703"
+      "bytes": 66643,
+      "sha256": "62366636f32e75da9e719db9052b85c7e7e648d4e3939aea65dc9024bea64ae8"
     },
     {
       "path": "effects/src/tuneshape-navigation.ts",
@@ -2270,8 +2325,8 @@
     },
     {
       "path": "effects/src/useNativeGalleryReplay.ts",
-      "bytes": 826,
-      "sha256": "28066676122f7ff00cfe70d6052c7a75862d5efc197d071708034e79d0757145"
+      "bytes": 890,
+      "sha256": "76642938de505254b64113e846fdd02453d7b01cd8cda2b91301ceacf724477e"
     },
     {
       "path": "effects/src/usePrefersReducedMotion.ts",
@@ -2330,8 +2385,8 @@
     },
     {
       "path": "effects/THIRD_PARTY_NOTICES.txt",
-      "bytes": 58054,
-      "sha256": "ea5a5f9d789688fc881158bf694ac218966eeb9de7cd8fd0647e154c1a9373e0"
+      "bytes": 58475,
+      "sha256": "70201be40c4f9d8eb7be9fade666490e673bc47b04dccc6f6eacdd8a541b0722"
     },
     {
       "path": "effects/tsconfig.json",
@@ -2340,8 +2395,8 @@
     },
     {
       "path": "effects/vite.config.ts",
-      "bytes": 972,
-      "sha256": "2fb070b83fea5688982dea659c1eb7148e6c121165253d879b3be55e0a35a931"
+      "bytes": 992,
+      "sha256": "12496108d8954537b75fd87053c42952e31c89b29412287c56486f3ca3b09ba8"
     },
     {
       "path": "examples/ascii-shoal/.gitignore",
@@ -2425,8 +2480,8 @@
     },
     {
       "path": "llms.txt",
-      "bytes": 15104,
-      "sha256": "e5dd18e99462c29c34f0c9cbc4b5d0bcbf87890519d75d79760829ce4401b478"
+      "bytes": 15207,
+      "sha256": "2d9f131188827e6fd01708fb22f01f2d7e5865ce23b99d89b3546ff0df571f71"
     },
     {
       "path": "package.json",
@@ -2460,13 +2515,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 17239,
-      "sha256": "448b5a413b2cc3307d66041701f46e80e5155cdf8eb6c55e206ceeec1588d070"
+      "bytes": 17403,
+      "sha256": "8c7d454f13836cbac5be94a181eb67db32dcf9248b1720ba7cc78f151dffd951"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 16291,
-      "sha256": "64a84c0a6d20cfaf6199c6a6f52fbc2c3c494513eea4a18ce520b259ea7d296e"
+      "bytes": 16455,
+      "sha256": "35b97edab3005f362a3a1c3a3232e6e484e32f03b49a247e55c4196555738f2a"
     },
     {
       "path": "scripts/verify-public-manifest.mjs",

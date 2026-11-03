@@ -8,5 +8,5 @@ export function useNativeGalleryReplay(engine:RefObject<{demonstrate:()=>void;se
  if(!controller.current)controller.current=createNativeGalleryReplay({replay:()=>engine.current?.demonstrate(),settle:()=>engine.current?.settle?.(),delay:()=>delay.current});
  // Layout effects restore the engine runtime before this effect requests replay.
  useEffect(()=>{const replay=controller.current!;replay.setActive(active);return()=>replay.setActive(false)},[active]);
- return controller.current.onRunning;
+ return Object.assign(controller.current.onRunning,{cancelPending:controller.current.cancelPending});
 }

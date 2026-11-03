@@ -1,6 +1,7 @@
 /** Reviewable editorial metadata. IDs and serialized motion configs never change here. */
 export type EffectTerm={label:string;english:string;aliases:string[]};
 export const effectTerms:Record<string,EffectTerm>={
+ 'liquid-glass-logo':{label:'液态玻璃 Logo',english:'Liquid Glass Logo',aliases:['ReactDrops','liquid glass logo','玻璃标志','水滴显形','Logo reveal','品牌显形','液滴Logo','折射字标']},
  'chromatic-button':{label:'流彩按钮',english:'Chromatic Button',aliases:['ReactDrops','chromatic','虹彩按钮','球面投影','流彩','彩色反射','彩色按钮','渐变按钮']},
  'topographic-flow':{label:'流动等高线',english:'Topographic Flow',aliases:['ReactDrops','topographic','contour','地形','测绘','等高线','高程','地形流动','survey']},
  'soap-bubble':{label:'肥皂泡控件',english:'Soap Bubble UI',aliases:['ReactDrops','soap bubble','bubble ui','肥皂泡按钮','泡泡玻璃','薄膜干涉','液态玻璃','虹彩']},

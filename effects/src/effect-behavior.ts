@@ -2,6 +2,7 @@ import {isStudioEffect} from './orbit-typography-spec';
 import {isWatercolorRecipe,isReelRecipe} from './effect-variants';
 export type EffectTrigger='press'|'click'|'hover'|'loading';
 export function galleryPlayback(id:string):'loading'|'cycle'|'direct'{
+ if(id==='liquid-glass-logo')return 'loading';
  if(id==='chromatic-button')return 'loading';
  if(id==='topographic-flow')return 'loading';
  if(id==='soap-bubble')return 'loading';
@@ -13,6 +14,7 @@ export function galleryPlayback(id:string):'loading'|'cycle'|'direct'{
  return ['toast','card-morph','sheet','blur-panel','breality-sheet','page-fade','stagger','text-rise'].includes(id)?'cycle':'direct';
 }
 export function interactionSelector(id:string){
+ if(id==='liquid-glass-logo')return '.liquid-glass-logo';
  if(id==='chromatic-button')return '.chromatic-button';
  if(id==='topographic-flow')return '.topographic-flow';
  if(id==='soap-bubble')return '.soap-bubble';
@@ -45,6 +47,7 @@ export function interactionSelector(id:string){
  return '[data-gallery-control]';
 }
 export function effectTrigger(id:string):EffectTrigger{
+ if(id==='liquid-glass-logo')return 'loading';
  if(id==='chromatic-button')return 'loading';
  if(id==='topographic-flow')return 'loading';
  if(id==='soap-bubble')return 'loading';
@@ -66,6 +69,7 @@ export const clickTarget:Record<string,string>={
  stagger:'.sculpt-stagger','text-rise':'.sculpt-letters',progress:'.sculpt-progress',
 };
 export function triggerDescription(id:string){
+ if(id==='liquid-glass-logo')return '悬停、聚焦或 Preview 显形；点击、Enter / 空格重播，方向键定位，End / Escape 显示终态，移开且失焦、离屏或后台停止。';
  if(id==='chromatic-button')return '目录悬停、聚焦或 Preview 播放流彩材质；按钮、消息输入与语音外观保留真实操作，支持 Enter 和空格，操作不会打开详情。';
  if(id==='topographic-flow')return '目录悬停、聚焦或 Preview 播放，详情自动流动；指针与触屏拖动塑造地形，方向键移动影响位置，Home 居中，Escape 清除，Enter / 空格重播。';
  if(id==='soap-bubble')return '悬停、聚焦或 Preview 播放薄膜，按钮、菜单、搜索、开关和滑块保留真实操作；方向键调整滑块，Escape 收起菜单。';
