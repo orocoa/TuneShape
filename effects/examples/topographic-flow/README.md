@@ -48,7 +48,7 @@ Pointer strength (hoverStrength): 0.6; Pointer radius (hoverRadius): 200px; Poin
 
 ## Motion notes 8
 
-Style solid; regular ink #000000; every fourth level #000000. Elevation gradient disabled; background #ffffff. Saved gradient stops are inactive.
+Style solid; regular ink #000000; every fourth level #000000. Elevation gradient disabled; background #f1f1f1. Saved gradient stops are inactive.
 
 ## Motion notes 9
 

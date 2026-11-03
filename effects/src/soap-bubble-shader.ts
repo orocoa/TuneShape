@@ -1,11 +1,11 @@
 /** Independent signed-distance / thin-film shader. No reference shader or media. */
 export const soapBubbleFragment=`precision highp float;
-uniform vec2 resolution;uniform vec2 sceneOffset;uniform float time;uniform vec2 pointer;uniform float menuOpen;uniform float toggleValue;uniform float sliderValue;uniform float hoverId;uniform float pressId;uniform float pressAge;uniform float selectedElement;
+uniform float neutralPage;uniform vec2 resolution;uniform vec2 sceneOffset;uniform float time;uniform vec2 pointer;uniform float menuOpen;uniform float toggleValue;uniform float sliderValue;uniform float hoverId;uniform float pressId;uniform float pressAge;uniform float selectedElement;
 uniform vec4 boxes[9];uniform float radii[9];
 __PARAMETERS__
 float sd(vec2 p,vec2 halfSize,float r){r=min(r,min(halfSize.x,halfSize.y));vec2 q=abs(p)-halfSize+r;return length(max(q,0.))+min(max(q.x,q.y),0.)-r;}
 vec3 base(vec2 p){
- vec3 c=mix(vec3(.968,.968,.976),vec3(.055,.061,.078),page);
+ vec3 c=neutralPage>.5?vec3(241./255.):mix(vec3(.968,.968,.976),vec3(.055,.061,.078),page);
  if(backdrop>1.5){c=mix(c,vec3(.95,.37,.55),.72*exp(-dot((p-vec2(175.,180.))/95.,(p-vec2(175.,180.))/95.)));c=mix(c,vec3(.18,.62,.94),.7*exp(-dot((p-vec2(435.,235.))/110.,(p-vec2(435.,235.))/110.)));}
  else if(backdrop>.5){vec2 g=abs(mod(p,24.)-12.);c=mix(c,mix(vec3(.82),vec3(.18),page),.6*(1.-smoothstep(.4,1.,min(g.x,g.y))));}
  if(selectedElement<.5||abs(selectedElement-5.)<.5){float track=1.-smoothstep(-.5,.5,sd(p-vec2(144.,236.),vec2(64.,23.),23.));c=mix(c,mix(vec3(.8),toggleColor.rgb,toggleValue),track);}

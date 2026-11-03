@@ -32,7 +32,7 @@ pnpm dev --open /examples/soap-bubble/
 
 ## 内容与默认状态
 
-控件缩放 1×，圆角 40px，背景 plain，可操作。预览 showcase，浅色背景，主按钮「Continue」，搜索提示「Search」，菜单「Select chats / Read all」，Volume 默认 40，开关默认开启。
+控件缩放 1×，圆角 40px，背景 plain，可操作。预览 showcase，统一灰色 #f1f1f1背景，主按钮「Continue」，搜索提示「Search」，菜单「Select chats / Read all」，Volume 默认 40，开关默认开启。
 
 ## 运动
 

@@ -28,3 +28,9 @@ test('wordmark schema rejects malformed, unsafe and unsupported settings',()=>{
  for(const part of [{radius:0},{intensity:3},{grid:'false'},{caption:'a'.repeat(65)},{caption:'line\nbreak'},{text:'x'.repeat(33)},{backgroundColor:'url(https://example.com)'}])assert.throws(()=>validateTypography({...d,...part}));
  assert.deepEqual(validateTypography({...d,text:'随形 tuneshape',caption:''}),{...d,text:'随形 tuneshape',caption:''});
 });
+
+test('the three requested effects share the studio gray in saved defaults and portable adapters',()=>{
+ const wordmark=defaultHistory('gooey-wordmark'),soap=defaultHistory('soap-bubble'),terrain=defaultHistory('topographic-flow');
+ assert.equal(wordmark.typography!.backgroundColor,'#f1f1f1');assert.equal(soap.soapBubble!.page,'neutral');assert.equal(terrain.topographicFlow!.backgroundColor,'#f1f1f1');assert.equal(terrain.topographicFlow!.gradientEnabled,false);
+ for(const [config,key,field] of [[wordmark,'typography','backgroundColor'],[soap,'soapBubble','page'],[terrain,'topographicFlow','backgroundColor']] as const){const restored=parseHistory(serializeHistory(config));assert.equal((historyMotion(restored).adapters as any)[key].settings[field],(config as any)[key][field]);}
+});
