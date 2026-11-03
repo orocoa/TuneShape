@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "key": "tuneshape-public-effects-v1:bb0b7d3e984fe6e368c859337417bb87c09db7ef56f1bb4e0f977cc16bf0d2c4",
+  "key": "tuneshape-public-effects-v1:7fa15f48b7f6dafd7ce71a43374d063253d437fe2fe5755c4e0facc2e75dd848",
   "effects": 47,
   "scope": "Current visible effect renderers and runnable entries; full editor excluded",
   "input": [
@@ -376,8 +376,8 @@
     },
     {
       "path": "src/chromatic-button.ts",
-      "bytes": 14960,
-      "sha256": "8ff3bb9f8d3372f9a38303303ff81ac2b0662d0a3e1976f36d12213cabdb6549"
+      "bytes": 15151,
+      "sha256": "87aa02e87e73dadf95106280e172cd9b5d32652cecf3bc241ab5acff738c5c89"
     },
     {
       "path": "src/coffee-selector-spec.ts",
@@ -988,8 +988,8 @@
     },
     {
       "path": "src/chromatic-button.ts",
-      "bytes": 14960,
-      "sha256": "8ff3bb9f8d3372f9a38303303ff81ac2b0662d0a3e1976f36d12213cabdb6549"
+      "bytes": 15151,
+      "sha256": "87aa02e87e73dadf95106280e172cd9b5d32652cecf3bc241ab5acff738c5c89"
     },
     {
       "path": "src/chromatic-button-shader.ts",
