@@ -7,14 +7,14 @@
  */
 
 export const defaults = Object.freeze({
-  density: 1,
+  density: 2,
   glyphScale: 0.9,
-  speed: 1,
+  speed: 1.7,
   sharkCount: 4,
   sharkScale: 1,
   fishDensity: 1,
-  backgroundColor: '#fafaf7',
-  inkColor: '#30362f',
+  backgroundColor: '#eeeeee',
+  inkColor: '#303030',
   opacity: 0.9,
   gridOpacity: 0.04,
   wakeOpacity: 0,

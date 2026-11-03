@@ -64,6 +64,7 @@ export const english: Record<string, string> = {
 "稀疏":"Sparse",
 "均衡":"Balanced",
 "细密":"Fine",
+"高密度":"High density",
 "鱼群与字符外观":"Fish and character appearance",
 "指针避让":"Pointer avoidance",
 "鲨鱼背景色":"Shark background color",

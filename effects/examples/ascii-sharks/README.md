@@ -24,11 +24,11 @@ Catalog hover, keyboard focus and mobile Preview start playback. Detail auto-sta
 
 ## States and motion
 
-Fill the host. Character sampling density 1×, font scale 0.9×; 4 sharks at 1× size, fish density 1×.
+Fill the host. Character sampling density 2×, font scale 0.9×; 4 sharks at 1× size, fish density 1×.
 
 ## Motion notes 3
 
-Single-pass duration 12000 ms, delay 0 ms; simulation speed 1×; continuous playback. Speed 0 and Pause hold the current frame. Observation speed is runtime-only.
+Single-pass duration 12000 ms, delay 0 ms; simulation speed 1.7×; continuous playback. Speed 0 and Pause hold the current frame. Observation speed is runtime-only.
 
 ## Motion notes 4
 
@@ -36,7 +36,7 @@ Leaving with no focus, scrolling offscreen and switching to a background tab sto
 
 ## Motion notes 5
 
-Sparse 0.6×, balanced 1× and fine 1.6× presets, with continuous adjustment from 0.5–2×. Density sets grid sampling; font scale sets glyph size within cells. Background grid opacity 0.04; wake opacity 0.
+Sparse 0.6×, balanced 1×, fine 1.6× and high-density 2× presets, with continuous adjustment from 0.5–2×. Density sets grid sampling; font scale sets glyph size within cells. Background grid opacity 0.04; wake opacity 0.
 
 ## Repeated input and interruption
 
@@ -48,7 +48,7 @@ Follow the system preference: render a still frame without automatic loops.
 
 ## Motion notes 8
 
-Background #fafaf9; ink #252a24; glyph opacity 0.9; autonomous paths are unaffected by pointer input.
+Background #eeeeee; ink #303030; glyph opacity 0.9; autonomous paths are unaffected by pointer input.
 
 ## Source, configuration, and license
 

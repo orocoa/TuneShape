@@ -13,7 +13,7 @@ cd examples/ascii-shoal
 npm run dev
 ```
 
-打开终端显示的地址，默认端口为 5188。端口被占用时，macOS/Linux 可使用 `PORT=5298 npm run dev`。演示包括稀疏／均衡／细密预设、字符尺寸、速度、鱼群数量、配色、暂停接续、重新播放与 PNG 保存。
+打开终端显示的地址，默认端口为 5188。端口被占用时，macOS/Linux 可使用 `PORT=5298 npm run dev`。演示包括稀疏／均衡／细密／高密度预设、字符尺寸、速度、鱼群数量、配色、暂停接续、重新播放与 PNG 保存。
 
 ```sh
 npm test
@@ -26,7 +26,9 @@ npm run build
 
 复制 `src/ascii-shoal.js` 和 `LICENSE`，给宿主元素明确的宽高，调用 `createAsciiShoal(host, options, runtime)`。完整接入代码和参数表见 [英文说明](README.md#use-as-a-background)。装饰背景使用 `aria-hidden="true"`，把页面内容放在上层。
 
-- `density`：0.5–2；稀疏 0.6、均衡 1、细密 1.6。
+默认采样密度 2×、游动速度 1.7×、鲨鱼 4 条、大小 1×、鱼群密度 1×；背景 `#eeeeee`，字符 `#303030`。五个常用参数直接显示，字符外观和自定义配色分别折叠。
+
+- `density`：0.5–2；稀疏 0.6、均衡 1、细密 1.6、高密度 2。
 - `glyphScale`：独立控制字形大小，不改变采样间距。
 - `sharkCount`、`sharkScale`、`fishDensity`：数量、大小和小鱼数量；小鱼密度为 0 时不显示小鱼。
 - `speed`：0–3；0 保留静态画面。

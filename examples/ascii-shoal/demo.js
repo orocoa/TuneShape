@@ -6,17 +6,18 @@ const motion=matchMedia('(prefers-reduced-motion: reduce)');
 let paused=false;
 const engine=createAsciiShoal(host,options,{reduced:motion.matches});
 const update=()=>engine.update(options,{paused,reduced:motion.matches});
+const rangeKeys=['density','speed','sharkCount','sharkScale','fishDensity','glyphScale','opacity','gridOpacity','wakeOpacity'];
 function reflect(){
- for(const key of ['density','glyphScale','speed','sharkCount','fishDensity']){
+ for(const key of rangeKeys){
   document.getElementById(key).value=String(options[key]);
-  document.getElementById(key+'-value').textContent=key==='sharkCount'?String(options[key]):options[key].toFixed(2)+'×';
+  document.getElementById(key+'-value').textContent=key==='sharkCount'?String(options[key]):options[key].toFixed(2)+(key==='opacity'||key.endsWith('Opacity')?'':'×');
  }
  document.querySelectorAll('[data-density]').forEach(button=>button.setAttribute('aria-pressed',String(Number(button.dataset.density)===options.density)));
  document.getElementById('transport').textContent=paused?'Play':'Pause';
  document.getElementById('motion-note').textContent=motion.matches?'Reduced motion: showing a still frame.':'Move your pointer through the water.';
  document.getElementById('transport').disabled=motion.matches;
 }
-for(const key of ['density','glyphScale','speed','sharkCount','fishDensity'])document.getElementById(key).addEventListener('input',event=>{options[key]=Number(event.target.value);update();reflect()});
+for(const key of rangeKeys)document.getElementById(key).addEventListener('input',event=>{options[key]=Number(event.target.value);update();reflect()});
 document.querySelectorAll('[data-density]').forEach(button=>button.addEventListener('click',()=>{options.density=Number(button.dataset.density);update();reflect()}));
 for(const key of ['backgroundColor','inkColor'])document.getElementById(key).addEventListener('input',event=>{options[key]=event.target.value;update()});
 document.getElementById('interactive').addEventListener('change',event=>{options.interactive=event.target.checked;update()});

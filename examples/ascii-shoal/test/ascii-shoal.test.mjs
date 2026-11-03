@@ -182,7 +182,7 @@ test('restart is seed-repeatable; runtime delay and finite completion are respec
   env.step(); env.step(); env.step();
   assert.equal(engine.getState().completed, true);
   assert.equal(engine.getState().elapsed, 220);
-  assert.ok(Math.abs(engine.getState().time - 0.12) < 1e-8);
+  assert.ok(Math.abs(engine.getState().time - 0.12 * defaults.speed) < 1e-8);
   assert.equal(env.callbacks.size, 0);
   assert.equal(reports.at(-1), false);
   engine.restart();

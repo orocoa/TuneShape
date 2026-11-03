@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "key": "tuneshape-public-effects-v1:ecc6a2f229dac0c584707f338732b074e4c3e4698f4eae2b36a2ef456185a60e",
+  "key": "tuneshape-public-effects-v1:ed7fab5888d552644934c12f4b75d2b2e0e77ad0f5d4f9a239a50e18c75b54d7",
   "effects": 48,
   "scope": "Current visible effect renderers and runnable entries; full editor excluded",
   "input": [
@@ -11,8 +11,8 @@
     },
     {
       "path": "examples/ascii-shoal/src/ascii-shoal.js",
-      "bytes": 21842,
-      "sha256": "4c2294fd82c1ed6bde507f6f543bcaceb6ab60ad9bcac2e1aff432942c8d427c"
+      "bytes": 21844,
+      "sha256": "2c4dd7de9a0a9367bf699e561cc2c3e03f60efaf3a229a432fbde59878f70b75"
     },
     {
       "path": "public/fonts/doto/Doto-variable.woff2",
@@ -316,13 +316,13 @@
     },
     {
       "path": "src/ascii-sharks-settings.ts",
-      "bytes": 1830,
-      "sha256": "0c6eb2675ee953e16e1f5cbc881ed3a9f95e89d4d24df4476592f7f5013d3d5a"
+      "bytes": 1832,
+      "sha256": "934077fcb6def41d99077379a8ddb184b5dafcbcb1d5b5104d80b27faf7fdec3"
     },
     {
       "path": "src/ascii-sharks-spec.ts",
-      "bytes": 5637,
-      "sha256": "35eaedcc6f636b05fd80743beda8c90e7398480691e6aa9d6007ed359437d385"
+      "bytes": 5671,
+      "sha256": "b762f2456917e8000bbd39f247f1e6f61542af432d60df77f15c3d9863f6ac9a"
     },
     {
       "path": "src/ascii-shoal-adapter.ts",
@@ -331,8 +331,8 @@
     },
     {
       "path": "src/ascii-shoal-engine-source.ts",
-      "bytes": 11365,
-      "sha256": "08c22e9cc2c62f610da928106351eed2222c6de028276514c1d7deeeb5b9480c"
+      "bytes": 11367,
+      "sha256": "258b9208e3350d7d8ea261e69e7daf03aed04866ce1d5020251e4cbc5f9d0967"
     },
     {
       "path": "src/ascii-shoal-export-entry.ts",
@@ -851,8 +851,8 @@
     },
     {
       "path": "src/translations-en.ts",
-      "bytes": 66643,
-      "sha256": "62366636f32e75da9e719db9052b85c7e7e648d4e3939aea65dc9024bea64ae8"
+      "bytes": 66671,
+      "sha256": "db15457b0b53a4a80d1a2eb135e626d322e5608b84b7313165e999cd95db3f3b"
     },
     {
       "path": "src/tuneshape-navigation.ts",
@@ -963,8 +963,8 @@
     },
     {
       "path": "src/translations-en.ts",
-      "bytes": 66643,
-      "sha256": "62366636f32e75da9e719db9052b85c7e7e648d4e3939aea65dc9024bea64ae8"
+      "bytes": 66671,
+      "sha256": "db15457b0b53a4a80d1a2eb135e626d322e5608b84b7313165e999cd95db3f3b"
     },
     {
       "path": "src/effect-terms.ts",
@@ -1138,18 +1138,18 @@
     },
     {
       "path": "examples/ascii-shoal/src/ascii-shoal.js",
-      "bytes": 21842,
-      "sha256": "4c2294fd82c1ed6bde507f6f543bcaceb6ab60ad9bcac2e1aff432942c8d427c"
+      "bytes": 21844,
+      "sha256": "2c4dd7de9a0a9367bf699e561cc2c3e03f60efaf3a229a432fbde59878f70b75"
     },
     {
       "path": "src/ascii-sharks-settings.ts",
-      "bytes": 1830,
-      "sha256": "0c6eb2675ee953e16e1f5cbc881ed3a9f95e89d4d24df4476592f7f5013d3d5a"
+      "bytes": 1832,
+      "sha256": "934077fcb6def41d99077379a8ddb184b5dafcbcb1d5b5104d80b27faf7fdec3"
     },
     {
       "path": "src/ascii-shoal-engine-source.ts",
-      "bytes": 11365,
-      "sha256": "08c22e9cc2c62f610da928106351eed2222c6de028276514c1d7deeeb5b9480c"
+      "bytes": 11367,
+      "sha256": "258b9208e3350d7d8ea261e69e7daf03aed04866ce1d5020251e4cbc5f9d0967"
     },
     {
       "path": "src/CoffeeSelectorPreview.tsx",
@@ -1228,8 +1228,8 @@
     },
     {
       "path": "src/ascii-sharks-spec.ts",
-      "bytes": 5637,
-      "sha256": "35eaedcc6f636b05fd80743beda8c90e7398480691e6aa9d6007ed359437d385"
+      "bytes": 5671,
+      "sha256": "b762f2456917e8000bbd39f247f1e6f61542af432d60df77f15c3d9863f6ac9a"
     },
     {
       "path": "src/coffee-selector-spec.ts",
@@ -3018,8 +3018,8 @@
     },
     {
       "path": "examples/ascii-sharks/config.json",
-      "bytes": 545,
-      "sha256": "4c4cef8d6c955682208a3394e56c563d71db43bf8401923a4b3f847215138c95"
+      "bytes": 547,
+      "sha256": "a12b746ba954917fd65089f6e5a7a55064c461e3ded5771616e6d2f2988acdab"
     },
     {
       "path": "examples/ascii-sharks/main.tsx",
@@ -3038,13 +3038,13 @@
     },
     {
       "path": "examples/ascii-sharks/README.md",
-      "bytes": 2344,
-      "sha256": "0ed6e4db2b45799ad0157772236446f269521e3d912625862dc0987a23cb83ec"
+      "bytes": 2364,
+      "sha256": "c138ecc87950dc7e51b4cdde42a4d6b9c3b0595d8b94ff578e5ea0cf1956df5a"
     },
     {
       "path": "examples/ascii-sharks/README.zh-CN.md",
-      "bytes": 2216,
-      "sha256": "a0f6b691e159f39fbef6a4179006ebf6f33beef61151fa8addbda66890e14142"
+      "bytes": 2234,
+      "sha256": "595920a4ebfe22dafa374fba0be7ba976ef0ee4a6c1920ef4b210836dc3cbd9d"
     },
     {
       "path": "examples/particle-tide/config.json",
