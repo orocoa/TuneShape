@@ -3,7 +3,7 @@
   "@type": "SoftwareSourceCode",
   "name": "TuneShape",
   "alternateName": "随形",
-  "description": "Rendering source and runnable bilingual examples for 43 UI motion effects.",
+  "description": "Rendering source and runnable bilingual examples for 44 UI motion effects.",
   "codeRepository": "https://github.com/orocoa/TuneShape",
   "url": "https://tuneshape.kai-nex.com/",
   "license": "https://spdx.org/licenses/MIT.html",
@@ -149,6 +149,18 @@
       "subjectOf": [
         "https://tuneshape.kai-nex.com/en/effects/card-expand/",
         "https://tuneshape.kai-nex.com/effects/card-expand/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Gooey Wordmark",
+      "alternateName": "液态交互字标",
+      "description": "A blurred liquid mass resolves into readable type. The pointer melts nearby strokes and changes each touched letter’s hue.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/gooey-wordmark",
+      "url": "https://tuneshape.kai-nex.com/en/effects/gooey-wordmark/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/gooey-wordmark/",
+        "https://tuneshape.kai-nex.com/effects/gooey-wordmark/"
       ]
     },
     {

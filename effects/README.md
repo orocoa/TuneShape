@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-All 43 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
+All 44 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
 
 [Online editor](https://tuneshape.kai-nex.com/)
 
@@ -29,6 +29,7 @@ Choose an effect in the local server; edit its config.json to reuse it. The dist
 | hook-sidebar | [Hook Sidebar](examples/hook-sidebar/README.md) | [钩线侧栏](examples/hook-sidebar/README.zh-CN.md) |
 | rail-toc | [Rail TOC](examples/rail-toc/README.md) | [纸飞机目录](examples/rail-toc/README.zh-CN.md) |
 | card-morph | [Card Expansion](examples/card-morph/README.md) | [卡片展开](examples/card-morph/README.zh-CN.md) |
+| gooey-wordmark | [Gooey Wordmark](examples/gooey-wordmark/README.md) | [液态交互字标](examples/gooey-wordmark/README.zh-CN.md) |
 | typewriter-text | [Typewriter Text](examples/typewriter-text/README.md) | [逐字打出](examples/typewriter-text/README.zh-CN.md) |
 | soft-blur-in | [Soft Blur In](examples/soft-blur-in/README.md) | [柔焦入场](examples/soft-blur-in/README.zh-CN.md) |
 | short-slide-down | [Short Slide Down](examples/short-slide-down/README.md) | [落词堆叠](examples/short-slide-down/README.zh-CN.md) |

@@ -43,7 +43,7 @@ TuneShape，中文名「随形」，是面向设计师与开发者的 UI 动效�
 
 ## 关于本仓库
 
-当前可见目录中的 **43 个动效渲染源码均已公开**，每项提供默认配置、可运行页面和中英文说明。[运行全部示例](effects/README.zh-CN.md) · [机器可读清单](effects/catalog.json) · [动效说明](https://tuneshape.kai-nex.com/effects/)
+当前可见目录中的 **44 个动效渲染源码均已公开**，每项提供默认配置、可运行页面和中英文说明。[运行全部示例](effects/README.zh-CN.md) · [机器可读清单](effects/catalog.json) · [动效说明](https://tuneshape.kai-nex.com/effects/)
 
 ```sh
 git clone https://github.com/orocoa/TuneShape.git
@@ -65,6 +65,7 @@ pnpm dev
 | hook-sidebar | [Hook Sidebar](effects/examples/hook-sidebar/README.md) | [钩线侧栏](effects/examples/hook-sidebar/README.zh-CN.md) |
 | rail-toc | [Rail TOC](effects/examples/rail-toc/README.md) | [纸飞机目录](effects/examples/rail-toc/README.zh-CN.md) |
 | card-morph | [Card Expansion](effects/examples/card-morph/README.md) | [卡片展开](effects/examples/card-morph/README.zh-CN.md) |
+| gooey-wordmark | [Gooey Wordmark](effects/examples/gooey-wordmark/README.md) | [液态交互字标](effects/examples/gooey-wordmark/README.zh-CN.md) |
 | typewriter-text | [Typewriter Text](effects/examples/typewriter-text/README.md) | [逐字打出](effects/examples/typewriter-text/README.zh-CN.md) |
 | soft-blur-in | [Soft Blur In](effects/examples/soft-blur-in/README.md) | [柔焦入场](effects/examples/soft-blur-in/README.zh-CN.md) |
 | short-slide-down | [Short Slide Down](effects/examples/short-slide-down/README.md) | [落词堆叠](effects/examples/short-slide-down/README.zh-CN.md) |

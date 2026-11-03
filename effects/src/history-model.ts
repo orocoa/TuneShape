@@ -96,7 +96,7 @@ export const recipes:Recipe[]=[
  d('hook-sidebar','钩线侧栏','导航与切换','原创实现','src/hook-sidebar.ts',1,360,'hook-sidebar',[],L,hookSourceNote),
  d('rail-toc','纸飞机目录','导航与切换','原创实现','src/rail-toc.ts',1,520,'rail-toc',[],L,railSourceNote),
  d('duration-picker','时长选择器','按钮与输入','原创实现','src/duration-picker.ts',1,450,'duration-picker',[],L,durationSourceNote),
- ...studioIds.map(id=>d(id,studioMeta[id].label,id==='app-orbit'?'图片与媒体':'文字效果','原创实现','src/'+(id==='app-orbit'?'app-orbit-engine':'typography-engine')+'.ts',1,studioMeta[id].duration,id,[],E,studioMeta[id].note)),
+ ...studioIds.map(id=>d(id,studioMeta[id].label,id==='app-orbit'?'图片与媒体':'文字效果','原创实现','src/'+(id==='app-orbit'?'app-orbit-engine':id==='gooey-wordmark'?'gooey-wordmark':'typography-engine')+'.ts',1,studioMeta[id].duration,id,[],E,studioMeta[id].note)),
  ...aceternityIds.map(id=>d(id,aceternityMeta[id].label,id==='expandable-sidebar'?'导航与切换':id==='gooey-input'?'按钮与输入':'页面与文字','原创实现','src/'+id+'.ts',1,aceternityMeta[id].duration,id,[],E,aceternitySourceNote(id))),
  d('liquid-carousel','液态图片轮播','媒体','用户录屏 · 独立实现','src/liquid-carousel.ts',1,800,'liquid-carousel',[],E,liquidCarouselSourceNote),
  d('coffee-selector','选择器','按钮与输入','用户录屏 · 独立实现','src/coffee-selector.ts',1,460,'coffee-selector',[],E,coffeeSourceNote),

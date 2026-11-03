@@ -1,6 +1,6 @@
 # TuneShape · 随形
 
-> UI motion editor and public rendering-source collection. 43 current effects with runnable examples, exact default configurations, English/Chinese notes, and preserved third-party attribution.
+> UI motion editor and public rendering-source collection. 44 current effects with runnable examples, exact default configurations, English/Chinese notes, and preserved third-party attribution.
 
 Website: https://tuneshape.kai-nex.com/
 Repository: https://github.com/orocoa/TuneShape
@@ -26,6 +26,7 @@ English effect guides: https://tuneshape.kai-nex.com/en/effects/
 - [Hook Sidebar / 钩线侧栏](https://github.com/orocoa/TuneShape/tree/main/effects/examples/hook-sidebar) · [English guide](https://tuneshape.kai-nex.com/en/effects/hook-sidebar/) · [中文说明](https://tuneshape.kai-nex.com/effects/hook-sidebar/): A fine hooked rail marks selection while a neutral rail follows hover or focus.
 - [Rail TOC / 纸飞机目录](https://github.com/orocoa/TuneShape/tree/main/effects/examples/rail-toc) · [English guide](https://tuneshape.kai-nex.com/en/effects/rail-toc/) · [中文说明](https://tuneshape.kai-nex.com/effects/rail-toc/): A reading rail with a paper plane that follows the current section.
 - [Card Expansion / 卡片展开](https://github.com/orocoa/TuneShape/tree/main/effects/examples/card-morph) · [English guide](https://tuneshape.kai-nex.com/en/effects/card-expand/) · [中文说明](https://tuneshape.kai-nex.com/effects/card-expand/): Card Expansion · 540 ms · Ariadne
+- [Gooey Wordmark / 液态交互字标](https://github.com/orocoa/TuneShape/tree/main/effects/examples/gooey-wordmark) · [English guide](https://tuneshape.kai-nex.com/en/effects/gooey-wordmark/) · [中文说明](https://tuneshape.kai-nex.com/effects/gooey-wordmark/): A blurred liquid mass resolves into readable type. The pointer melts nearby strokes and changes each touched letter’s hue.
 - [Typewriter Text / 逐字打出](https://github.com/orocoa/TuneShape/tree/main/effects/examples/typewriter-text) · [English guide](https://tuneshape.kai-nex.com/en/effects/typewriter-text/) · [中文说明](https://tuneshape.kai-nex.com/effects/typewriter-text/): Typewriter Text
 - [Soft Blur In / 柔焦入场](https://github.com/orocoa/TuneShape/tree/main/effects/examples/soft-blur-in) · [English guide](https://tuneshape.kai-nex.com/en/effects/soft-blur-in/) · [中文说明](https://tuneshape.kai-nex.com/effects/soft-blur-in/): Soft Blur In
 - [Short Slide Down / 落词堆叠](https://github.com/orocoa/TuneShape/tree/main/effects/examples/short-slide-down) · [English guide](https://tuneshape.kai-nex.com/en/effects/short-slide-down/) · [中文说明](https://tuneshape.kai-nex.com/effects/short-slide-down/): Short Slide Down
