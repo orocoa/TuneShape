@@ -32,7 +32,7 @@ The menu expands from the round trigger and closes into it; rapid changes preser
 
 ## Motion notes 4
 
-Scale 1×; radius 40px; backdrop plain; interactive. View showcase; light page; button “Continue”; search “Search”; menu “Select chats / Read all”; Volume defaults to 40; switch defaults on.
+Scale 1×; radius 40px; backdrop plain; interactive. View showcase; neutral #f1f1f1 page; button “Continue”; search “Search”; menu “Select chats / Read all”; Volume defaults to 40; switch defaults on.
 
 ## Motion notes 5
 

@@ -5,7 +5,7 @@ export const isTypography=(id:string):id is TypographyId=>(typographyIds as read
 type Base={kind:TypographyId;text:string;fontSize:number;fontWeight:number;color:string};
 export type TypographySettings=Base&Partial<{charsPerSecond:number;cursor:boolean;cursorColor:string;blur:number;entryOffset:number;dotColor:string;dotSize:number;strokeColor:string;strokeWidth:number;stagger:number;fill:boolean;keepStroke:boolean;guideColor:string;guides:boolean;keepPoints:boolean;intensity:number;radius:number;grid:boolean;annotations:boolean;backgroundColor:string;caption:string}>;
 export const typographyDefaults:Record<TypographyId,TypographySettings>={
- 'gooey-wordmark':{kind:'gooey-wordmark',text:'tuneshape',fontSize:210,fontWeight:600,color:'#bf9ff1',intensity:1,radius:100,grid:true,annotations:true,backgroundColor:'#121213',caption:'Shape the way things move.'},
+ 'gooey-wordmark':{kind:'gooey-wordmark',text:'tuneshape',fontSize:210,fontWeight:600,color:'#9864c7',intensity:1,radius:100,grid:true,annotations:true,backgroundColor:'#f1f1f1',caption:'Shape the way things move.'},
  'typewriter-text':{kind:'typewriter-text',text:'Hello, World!',fontSize:72,fontWeight:600,color:'#171717',charsPerSecond:22,cursor:true,cursorColor:'#171717'},
  'soft-blur-in':{kind:'soft-blur-in',text:'Think different.',fontSize:72,fontWeight:600,color:'#171717',blur:12},
  'short-slide-down':{kind:'short-slide-down',text:'Build from above.',fontSize:72,fontWeight:600,color:'#171717',entryOffset:28},

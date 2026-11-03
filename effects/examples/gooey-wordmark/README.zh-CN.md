@@ -42,6 +42,10 @@ pnpm dev --open /examples/gooey-wordmark/
 
 文字 "tuneshape"；字号 210px；形变强度 1；交互范围 100px；网格 true；标注 true。1280 × 720 参考画布，等比适配。
 
+## 配色与文案
+
+字形颜色 #9864c7；背景 #f1f1f1；字重 600；辅文「Shape the way things move.」。网格、标签与辅文按实际背景明暗切换，默认与网站预览共用 #f1f1f1。
+
 ## 减少动态效果
 
 直接显示完整可读字标、网格与标注，关闭液态入场、指针融化和目录循环。

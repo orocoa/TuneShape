@@ -536,6 +536,10 @@ export const soapSelectControls=[
    {
     "value": "dark",
     "label": "深色"
+   },
+   {
+    "value": "neutral",
+    "label": "统一灰色"
    }
   ]
  },
@@ -830,7 +834,7 @@ export const soapColorControls=[
   "group": "内容与尺寸"
  }
 ] as const;
-export type SoapBubbleSettings={wobble:number;speed:number;seed:number;seeThrough:number;seeThroughBend:number;refraction:number;opacity:number;oilOpacity:number;uiScale:number;radius:number;glass:number;iridescence:number;filmScale:number;oilCoverage:number;oilEdge:number;oilEdgeFade:number;clearCenter:number;thickness:number;drainage:number;swirl:number;reflectivity:number;dispersion:number;bevel:number;mirage:number;reach:number;tilt:number;windowSize:number;windowWidth:number;windowHead:number;windowTail:number;windowIntensity:number;windowGradient:number;windowLength:number;windowMargin:number;windowBend:number;glintSize:number;glintIntensity:number;glintDistance:number;glintHeight:number;topLength:number;topFade:number;topTail:number;maxDpr:number;sliderValue:number;element:"showcase"|"menu"|"camera"|"chat"|"search"|"toggle"|"add"|"close"|"button"|"slider";page:"light"|"dark";backdrop:"plain"|"grid"|"colour";pop:"none"|"droplets"|"bubbles"|"both";soapPalette:"natural"|"custom";environment:"auto"|"studio"|"window"|"sky"|"soft";windowStyle:"edge"|"bubble";glintShape:"auto"|"dot"|"dash"|"pair"|"none";windowTwinShape:"mirror"|"arc"|"crescent"|"streak"|"dot";paused:boolean;windowLight:boolean;windowTwin:boolean;keyLight:boolean;bottomShade:boolean;defaultChecked:boolean;disabled:boolean;tint:string;soapColor:string;soapShadeColor:string;soapHighlightColor:string;bottomShadeColor:string;soapPaletteRed:string;soapPaletteGold:string;soapPaletteGreen:string;soapPaletteCyan:string;soapPaletteBlue:string;soapPaletteViolet:string;toggleColor:string;sliderFrom:string;sliderTo:string;buttonText:string;searchPlaceholder:string;menuFirst:string;menuSecond:string;sliderLabel:string};
+export type SoapBubbleSettings={wobble:number;speed:number;seed:number;seeThrough:number;seeThroughBend:number;refraction:number;opacity:number;oilOpacity:number;uiScale:number;radius:number;glass:number;iridescence:number;filmScale:number;oilCoverage:number;oilEdge:number;oilEdgeFade:number;clearCenter:number;thickness:number;drainage:number;swirl:number;reflectivity:number;dispersion:number;bevel:number;mirage:number;reach:number;tilt:number;windowSize:number;windowWidth:number;windowHead:number;windowTail:number;windowIntensity:number;windowGradient:number;windowLength:number;windowMargin:number;windowBend:number;glintSize:number;glintIntensity:number;glintDistance:number;glintHeight:number;topLength:number;topFade:number;topTail:number;maxDpr:number;sliderValue:number;element:"showcase"|"menu"|"camera"|"chat"|"search"|"toggle"|"add"|"close"|"button"|"slider";page:"light"|"dark"|"neutral";backdrop:"plain"|"grid"|"colour";pop:"none"|"droplets"|"bubbles"|"both";soapPalette:"natural"|"custom";environment:"auto"|"studio"|"window"|"sky"|"soft";windowStyle:"edge"|"bubble";glintShape:"auto"|"dot"|"dash"|"pair"|"none";windowTwinShape:"mirror"|"arc"|"crescent"|"streak"|"dot";paused:boolean;windowLight:boolean;windowTwin:boolean;keyLight:boolean;bottomShade:boolean;defaultChecked:boolean;disabled:boolean;tint:string;soapColor:string;soapShadeColor:string;soapHighlightColor:string;bottomShadeColor:string;soapPaletteRed:string;soapPaletteGold:string;soapPaletteGreen:string;soapPaletteCyan:string;soapPaletteBlue:string;soapPaletteViolet:string;toggleColor:string;sliderFrom:string;sliderTo:string;buttonText:string;searchPlaceholder:string;menuFirst:string;menuSecond:string;sliderLabel:string};
 export const defaultSoapBubble:Readonly<SoapBubbleSettings>={
  "wobble": 0.4,
  "speed": 1,
@@ -876,7 +880,7 @@ export const defaultSoapBubble:Readonly<SoapBubbleSettings>={
  "topTail": 1,
  "maxDpr": 2,
  "element": "showcase",
- "page": "light",
+ "page": "neutral",
  "backdrop": "plain",
  "pop": "droplets",
  "soapPalette": "natural",

@@ -20,12 +20,12 @@
     "text": "tuneshape",
     "fontSize": 210,
     "fontWeight": 600,
-    "color": "#bf9ff1",
+    "color": "#9864c7",
     "intensity": 1,
     "radius": 100,
     "grid": true,
     "annotations": true,
-    "backgroundColor": "#121213",
+    "backgroundColor": "#f1f1f1",
     "caption": "Shape the way things move."
   }
 }

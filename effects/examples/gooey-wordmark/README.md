@@ -42,6 +42,10 @@ Pause freezes the entrance and pointer recovery; resume continues the clock. Ina
 
 Text "tuneshape"; type size 210px; melt intensity 1; interaction radius 100px; grid true; annotations true. Proportionally fit a 1280 × 720 reference canvas.
 
+## Motion notes 7
+
+Glyph colour #9864c7; background #f1f1f1; weight 600; caption “Shape the way things move.”. Grid, labels and caption adapt to the actual background; the default shares the website preview's #f1f1f1.
+
 ## Reduced motion
 
 Show the readable final wordmark and annotations; disable the entrance, pointer melting and catalog repetition.
