@@ -761,8 +761,8 @@
       "name": "Liquid Glass Logo",
       "nameZh": "液态玻璃 Logo",
       "category": "文字",
-      "description": "A droplet forms a refractive glass tile, then its glass and rings dissolve into the resting logo.",
-      "descriptionZh": "液滴聚合成折射玻璃图标，玻璃与波纹消退后保留正常大小的 Logo。",
+      "description": "A droplet forms a refractive glass tile, then its glass and rings dissolve into the resting logo on the shared #f1f1f1 gray surface.",
+      "descriptionZh": "液滴聚合成折射玻璃图标，玻璃与波纹消退后保留正常大小的 Logo；默认使用统一的 #f1f1f1 灰色画布。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/liquid-glass-logo",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/liquid-glass-logo",
       "documentation": {
