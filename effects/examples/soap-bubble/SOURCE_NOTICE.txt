@@ -1,0 +1,5 @@
+https://reactdrops.dev/components/button/soap-bubble
+
+TuneShape independent implementation: MIT. Reference component redistribution is restricted by ReactDrops Component License 1.0.
+
+Visual and public-control reference reviewed 2026-11-03. Independently authored SDF and thin-film shader plus native controls. No ReactDrops source, shaders, textures, media or documentation text are redistributed. Refraction uses the built-in scene rather than arbitrary page DOM.

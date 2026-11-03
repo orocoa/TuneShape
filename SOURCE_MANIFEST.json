@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "scope": "All 44 current UI effect renderers, bilingual runnable examples, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
-  "sourceSha256": "97913a739b93aab12d2438072f0db69d3484ddf3dcd6b242b9a56ecf8e467620",
+  "scope": "All 45 current UI effect renderers, bilingual runnable examples, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
+  "sourceSha256": "3aabb6d01a9e29173584466aedad3b4d4fd52af45b8d0d3a88f2faa1aad4f67c",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -30,8 +30,8 @@
     },
     {
       "path": "codemeta.json",
-      "bytes": 24589,
-      "sha256": "14d0838d10dc4307d6f790f3d041a02f1fe102cfa1667eea47fcf385e9130d41"
+      "bytes": 25161,
+      "sha256": "7ba954bbaa71a910026918e0ec25e3829db884de94f8e9e3f4aa9f2d9c33bb87"
     },
     {
       "path": "config.json",
@@ -90,8 +90,8 @@
     },
     {
       "path": "effects/catalog.json",
-      "bytes": 32408,
-      "sha256": "83e793df90193be96aafbdee058007fcd60f2336f61d244b99fdeb3cfea136af"
+      "bytes": 33177,
+      "sha256": "42508adf92b29baa043e33859796cb9b904179221ae7a05e2c32696f3d731b68"
     },
     {
       "path": "effects/demo/main.tsx",
@@ -1019,6 +1019,36 @@
       "sha256": "69233b733a5d3dffeca7305c1b7a1026ab462d9057d39e96befeef67be29930b"
     },
     {
+      "path": "effects/examples/soap-bubble/config.json",
+      "bytes": 2230,
+      "sha256": "5504223577ca90ae75adef1bb5e74d601e4d9862609d3a120f2f376f022cb05f"
+    },
+    {
+      "path": "effects/examples/soap-bubble/index.html",
+      "bytes": 449,
+      "sha256": "f7f027f199291a69087cd7f27ce613d2e8a76ddb59e7ec60c3c0de8ba8d37639"
+    },
+    {
+      "path": "effects/examples/soap-bubble/main.tsx",
+      "bytes": 112,
+      "sha256": "93266a8862eb8c23547ffc20ecc8a5f0fce4709e980272540e5b7e0abbbcca9b"
+    },
+    {
+      "path": "effects/examples/soap-bubble/README.md",
+      "bytes": 4906,
+      "sha256": "f01c257063c86e47fa2d5470b6c6fbca4777d08330ae07332b3a793f674474fa"
+    },
+    {
+      "path": "effects/examples/soap-bubble/README.zh-CN.md",
+      "bytes": 5151,
+      "sha256": "917da4006f8831a8f22ee54675e6673ee957aa3558abe713bc8f89984fb289c4"
+    },
+    {
+      "path": "effects/examples/soap-bubble/SOURCE_NOTICE.txt",
+      "bytes": 466,
+      "sha256": "97a070695c7a60dcc39f12daadf568ad4db2d15e8a6dd4193a4ba5acf9651063"
+    },
+    {
       "path": "effects/examples/soft-blur-in/config.json",
       "bytes": 419,
       "sha256": "b31f9d59a80608073af63003278216f7e547118cd1dc6647fe36dd1d33847541"
@@ -1255,13 +1285,13 @@
     },
     {
       "path": "effects/EXPORT_MANIFEST.json",
-      "bytes": 95049,
-      "sha256": "0107b41a7b1d633d6b1254dc127b09e51a2d69b5e733eba07815d1fdfbb63e00"
+      "bytes": 97642,
+      "sha256": "f26ead5a790f5db5c03c63430222d46604ae5d965257d67fdd2840966edb28bf"
     },
     {
       "path": "effects/index.html",
-      "bytes": 7212,
-      "sha256": "bb669fcecc42d2c3cba84d8b330f2489122a6b9ac2d61dd4dcd6b5698e9ed639"
+      "bytes": 7393,
+      "sha256": "da628dd81d3dc59a6f01f76102e5d0b4ea3ec6c3a7a445394803d79f973741ec"
     },
     {
       "path": "effects/LICENSE",
@@ -1400,13 +1430,13 @@
     },
     {
       "path": "effects/README.md",
-      "bytes": 6589,
-      "sha256": "6239900985b8f45d35b29f029ba9cd550eafe66e4d9485fc1d40e7757b730057"
+      "bytes": 6714,
+      "sha256": "b3066770a5598028e2e476d2594a22e128ce63522a039387b5c31eb917e8af57"
     },
     {
       "path": "effects/README.zh-CN.md",
-      "bytes": 6497,
-      "sha256": "f4f8b89515148ad590396ab7368ae3b0d27b809c3b6359fc833752be3e7e327e"
+      "bytes": 6622,
+      "sha256": "6b2b008ae042d82e702c0f0c20ec84d1def1670c17b5b184311ebbb9705b77c1"
     },
     {
       "path": "effects/src/aceternity-settings.ts",
@@ -1530,8 +1560,8 @@
     },
     {
       "path": "effects/src/browse-catalog.ts",
-      "bytes": 3018,
-      "sha256": "6fd0003fe9610dcf56193903cdc8ae6e735bb046839edbb921a2fb0d9bec892c"
+      "bytes": 3028,
+      "sha256": "6c27a7b674509ba46508c4e2ce53834d171fdd4c15c75ed2a549e2b95b0032ba"
     },
     {
       "path": "effects/src/catalog-design.css",
@@ -1540,8 +1570,8 @@
     },
     {
       "path": "effects/src/catalog.ts",
-      "bytes": 3518,
-      "sha256": "2de9b0bda510c083360838ff27a751a4c4c6bc147af3cddebae8ad72ccd564f5"
+      "bytes": 3532,
+      "sha256": "801da11ce22b6daa77ea7f3a0b2a1fa64dbde13b57ac3ce34019e535172237ca"
     },
     {
       "path": "effects/src/coffee-selector-spec.ts",
@@ -1610,13 +1640,13 @@
     },
     {
       "path": "effects/src/effect-behavior.ts",
-      "bytes": 10080,
-      "sha256": "f57983f9ce4e8e2ba8ab4c31c573c0c1e7e9966569f22cf124ad03680e7b2a68"
+      "bytes": 10393,
+      "sha256": "f3a302bc955e2ffc818a024a02c1549d9dda4af212de805e41bf41230d2a9bac"
     },
     {
       "path": "effects/src/effect-terms.ts",
-      "bytes": 8704,
-      "sha256": "1ec465ded37cb4bca90fb49735feef151e67a62217c2a3c31189f399ee43ab11"
+      "bytes": 8892,
+      "sha256": "3c4c21782373ad4f92b1c9e463a652d9581899467d00b6e594a184a42b9546d0"
     },
     {
       "path": "effects/src/effect-variants.ts",
@@ -1760,18 +1790,18 @@
     },
     {
       "path": "effects/src/history-model.test.ts",
-      "bytes": 4845,
-      "sha256": "5cd5b526c6ff7bfd7faf2646e15b47d29fc3ec7d8aa5221fec65518fb493fee3"
+      "bytes": 4859,
+      "sha256": "39cd1fc56685f97f98c68c7a4be8d5ad92be9886ed43a299f61b632b68e7eaa0"
     },
     {
       "path": "effects/src/history-model.ts",
-      "bytes": 74580,
-      "sha256": "0e538a2ed5e969575c390ee383069018d456f6f7d57c121859754f4d38b72726"
+      "bytes": 75585,
+      "sha256": "54adf9ba240f5d8d3de7f8ef98cbdbce8aab14a7b54178bdf1a67dd3139df582"
     },
     {
       "path": "effects/src/HistoryPreview.tsx",
-      "bytes": 25746,
-      "sha256": "3147795a81bc88eaf979f5167b285ce38ca046732e008ea621df2b03d2f52949"
+      "bytes": 25869,
+      "sha256": "87e98383b5aec61531973a8f2603903855d550e94655280966b0de2181826690"
     },
     {
       "path": "effects/src/hook-sidebar-spec.ts",
@@ -2009,14 +2039,39 @@
       "sha256": "efd3abc295a1f9c7749c8338f8904ad4b83a8d30ba12e20c665705dfa4dc7614"
     },
     {
+      "path": "effects/src/soap-bubble-settings.ts",
+      "bytes": 23945,
+      "sha256": "0dfa2904c7e9f3521daf31dd5508d5ac7ef391d42881f55abeaf973eca718fe0"
+    },
+    {
+      "path": "effects/src/soap-bubble-shader.ts",
+      "bytes": 8099,
+      "sha256": "12bf38dabd7bdb07c29a7322a712d71a34f635346b77308203c634151d542025"
+    },
+    {
+      "path": "effects/src/soap-bubble-spec.ts",
+      "bytes": 7578,
+      "sha256": "cbda41bc7e61f313ee7e41fbcea38f885f1e2a573c3ae15733c25325e4f7bc4e"
+    },
+    {
+      "path": "effects/src/soap-bubble.ts",
+      "bytes": 19433,
+      "sha256": "d84e3d6ea7502ed7fb8207bf1f82dfd4e7b5376e0fc6a45df16dc3a3ef86a5d6"
+    },
+    {
+      "path": "effects/src/SoapBubblePreview.tsx",
+      "bytes": 2275,
+      "sha256": "d55866aa6c38155da0e51a4cd90e18b8c7525611e593d57bb7751bc0f9133a8a"
+    },
+    {
       "path": "effects/src/source-notices.test.ts",
       "bytes": 682,
       "sha256": "bf7968662a71e431675e1ad332fd3d0f6f66a35965f699e264fb16779dfe1afa"
     },
     {
       "path": "effects/src/source-notices.ts",
-      "bytes": 4014,
-      "sha256": "75c1ec3d542313d2a43b128e8ab97405c2eb317bb6498f496b497cca6b2086f4"
+      "bytes": 4522,
+      "sha256": "e19fdb8453f418ddb65f8bc41a6844df0980dca62fcc32cec3409b35c4040dcc"
     },
     {
       "path": "effects/src/StudioEffectsPreview.tsx",
@@ -2050,8 +2105,8 @@
     },
     {
       "path": "effects/src/translations-en.ts",
-      "bytes": 64631,
-      "sha256": "532d0dda373d8d6ffa7f366f90b835109b92ae6d6bb7a11a5f96b564acaaaa26"
+      "bytes": 65123,
+      "sha256": "f14c32c3ed841b4e6ab28217be307e53b4d4517723a32c0c289898984efbc1e7"
     },
     {
       "path": "effects/src/tuneshape-navigation.ts",
@@ -2160,8 +2215,8 @@
     },
     {
       "path": "effects/THIRD_PARTY_NOTICES.txt",
-      "bytes": 56863,
-      "sha256": "c5050ce68ae64dba7c9010d0320e0551af9892edfa5bb7047875cfd091377326"
+      "bytes": 57258,
+      "sha256": "f5560559c7eaed8034283d4594d44a00e1458a04a3c070038e6cc44675638db4"
     },
     {
       "path": "effects/tsconfig.json",
@@ -2170,8 +2225,8 @@
     },
     {
       "path": "effects/vite.config.ts",
-      "bytes": 920,
-      "sha256": "4b8b6741d6fc45db627e1a384b3e2dccc9ee8784c442cd0053d8e318cbffa739"
+      "bytes": 934,
+      "sha256": "96b8f26c8b98b0309d20849a2cb755c8ce87ac7ac4b3155d8d9de6dc85cfa413"
     },
     {
       "path": "examples/ascii-shoal/.gitignore",
@@ -2255,8 +2310,8 @@
     },
     {
       "path": "llms.txt",
-      "bytes": 14808,
-      "sha256": "937265b3546710cd6a671a88cd33ce8ebed74ddb643af14050c6e5278b75aeca"
+      "bytes": 14902,
+      "sha256": "3f17ab5439fc416db8d57f7aada5721dc6ffdc59f9ffe3a6ce89375488eb0cf7"
     },
     {
       "path": "package.json",
@@ -2290,13 +2345,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 16785,
-      "sha256": "01461f07ff764045c9f6b005829c823bdf02b35d1f33bfc99177cb8d4a4b3d81"
+      "bytes": 16926,
+      "sha256": "1b3b9627ec2404539f960613ff81a09ab6043a9ef31ba8d9eff9aaf1884066e1"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 15837,
-      "sha256": "bf38f2f56b8b110b26feb8fd67278b8e4a8f3462533412c3258d1e1a85cdacca"
+      "bytes": 15978,
+      "sha256": "a7bc479bdeb187ba084511b568d4e8fd4767652da99505a116e9e0eb5b765bd8"
     },
     {
       "path": "scripts/verify-public-manifest.mjs",

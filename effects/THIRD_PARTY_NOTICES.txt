@@ -1062,3 +1062,8 @@ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
 DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
+
+
+Soap Bubble UI — independent TuneShape implementation (MIT)
+Visual/control reference: https://reactdrops.dev/components/button/soap-bubble
+Reference reviewed 2026-11-03. ReactDrops source redistribution is restricted; no reference component code, shader or demo media is included. TuneShape uses an independently authored thin-film shader and native controls with a built-in backdrop scene.

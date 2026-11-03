@@ -60,3 +60,5 @@ English effect guides: https://tuneshape.kai-nex.com/en/effects/
 - [ASCII Wave Animation / ASCII 波形动画](https://github.com/orocoa/TuneShape/tree/main/effects/examples/ascii-wave) · [English guide](https://tuneshape.kai-nex.com/en/effects/ascii-wave/) · [中文说明](https://tuneshape.kai-nex.com/effects/ascii-wave/): ASCII Wave Animation · 4000 ms · Ariadne
 
 - [Liquid Image Carousel / 液态图片轮播](https://github.com/orocoa/TuneShape/tree/main/effects/examples/liquid-carousel) · [English guide](https://tuneshape.kai-nex.com/en/effects/liquid-carousel/) · [中文说明](https://tuneshape.kai-nex.com/effects/liquid-carousel/): A fixed image card with an organic liquid reveal and local refraction originating at the navigation buttons.
+
+- Soap Bubble UI: https://github.com/orocoa/TuneShape/tree/main/effects/examples/soap-bubble

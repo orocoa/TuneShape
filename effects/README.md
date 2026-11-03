@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-All 44 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
+All 45 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
 
 [Online editor](https://tuneshape.kai-nex.com/)
 
@@ -62,6 +62,7 @@ Choose an effect in the local server; edit its config.json to reuse it. The dist
 | ascii-sharks | [ASCII Sharks](examples/ascii-sharks/README.md) | [ASCII 鲨鱼群](examples/ascii-sharks/README.zh-CN.md) |
 | particle-tide | [Particle Tide](examples/particle-tide/README.md) | [粒子海浪](examples/particle-tide/README.zh-CN.md) |
 | ascii-wave | [ASCII Wave Animation](examples/ascii-wave/README.md) | [ASCII 波形动画](examples/ascii-wave/README.zh-CN.md) |
+| soap-bubble | [Soap Bubble UI](examples/soap-bubble/README.md) | [肥皂泡控件](examples/soap-bubble/README.zh-CN.md) |
 
 ## License and scope
 

@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文**
 
-包含当前可见目录的 44 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
+包含当前可见目录的 45 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
 
 [在线编辑器](https://tuneshape.kai-nex.com/)
 
@@ -62,6 +62,7 @@ pnpm build
 | ascii-sharks | [ASCII Sharks](examples/ascii-sharks/README.md) | [ASCII 鲨鱼群](examples/ascii-sharks/README.zh-CN.md) |
 | particle-tide | [Particle Tide](examples/particle-tide/README.md) | [粒子海浪](examples/particle-tide/README.zh-CN.md) |
 | ascii-wave | [ASCII Wave Animation](examples/ascii-wave/README.md) | [ASCII 波形动画](examples/ascii-wave/README.zh-CN.md) |
+| soap-bubble | [Soap Bubble UI](examples/soap-bubble/README.md) | [肥皂泡控件](examples/soap-bubble/README.zh-CN.md) |
 
 ## 许可与范围
 

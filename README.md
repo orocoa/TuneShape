@@ -43,7 +43,7 @@ Export JSON before refreshing or leaving the page: effect parameters are kept fo
 
 ## About this repository
 
-**Rendering source for all 44 effects in the visible catalog is public.** Each includes a default configuration, runnable page, and English/Chinese documentation. [Run the examples](effects/README.md) · [Machine-readable catalog](effects/catalog.json) · [Effect guides](https://tuneshape.kai-nex.com/en/effects/)
+**Rendering source for all 45 effects in the visible catalog is public.** Each includes a default configuration, runnable page, and English/Chinese documentation. [Run the examples](effects/README.md) · [Machine-readable catalog](effects/catalog.json) · [Effect guides](https://tuneshape.kai-nex.com/en/effects/)
 
 ```sh
 git clone https://github.com/orocoa/TuneShape.git
@@ -76,6 +76,7 @@ pnpm dev
 | encrypted-text | [Encrypted Text](effects/examples/encrypted-text/README.md) | [逐字解码](effects/examples/encrypted-text/README.zh-CN.md) |
 | gooey-input | [Gooey Input](effects/examples/gooey-input/README.md) | [黏性搜索输入](effects/examples/gooey-input/README.zh-CN.md) |
 | flip-words | [Flip Words](effects/examples/flip-words/README.md) | [词语翻替](effects/examples/flip-words/README.zh-CN.md) |
+| soap-bubble | [Soap Bubble UI](effects/examples/soap-bubble/README.md) | [肥皂泡控件](effects/examples/soap-bubble/README.zh-CN.md) |
 | coffee-selector | [Selector](effects/examples/coffee-selector/README.md) | [选择器](effects/examples/coffee-selector/README.zh-CN.md) |
 | rounded-checks | [Rounded Checkboxes](effects/examples/rounded-checks/README.md) | [圆角复选框](effects/examples/rounded-checks/README.zh-CN.md) |
 | mini-sidebar | [Page Navigation](effects/examples/mini-sidebar/README.md) | [页面导航](effects/examples/mini-sidebar/README.zh-CN.md) |
