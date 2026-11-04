@@ -24,7 +24,7 @@ Detail auto-starts. Catalog hover, focus or Preview runs the reveal; leave and b
 
 ## States and motion
 
-A droplet grows into rounded glass; magnification, bending and dispersion reveal the artwork. Glass, bevel echoes, caustics and rings disappear completely. The resting logo uses 1 final scale; black backgrounds do not enlarge it automatically.
+A brief lead-in grows into a round droplet, then a rounded glass tile with a thick curved shoulder. The centre stays readable while its edges stretch, refract and disperse. Glass, bevel echoes, caustics and rings disappear completely. The resting logo uses 1 final scale; black backgrounds do not enlarge it automatically.
 
 ## Motion notes 3
 
@@ -56,7 +56,7 @@ Depth controls smoothly settling magnification and bending; dispersion splits ed
 
 ## Motion notes 10
 
-Base reveal duration 1800 ms; delay 0 ms; speed 1×; reveal about 1.800s. The base timeline reveals by 1.8s; frame selection spans 0–2.4s with a 0.6s ending hold. Speed and observation speed change advancement, not base seek units. Stop after one reveal.
+Base reveal duration 1800 ms; delay 0 ms; speed 1×; reveal about 1.800s. The base timeline starts forming around 0.12s, morphs from droplet to tile during 0.27–0.49s, clears its glass around 1.5s and completes the sequence at 1.8s; frame selection spans 0–2.4s with a 0.6s ending hold. Speed and observation speed change advancement, not base seek units. Stop after one reveal.
 
 ## Motion notes 11
 
@@ -68,7 +68,7 @@ Pause freezes the sequence; resume retains progress; replay returns to the dropl
 
 ## Motion notes 13
 
-Type video; format MP4; ratio 16:9; resolution 1080p gives 1920 × 1080px; target 60 fps. Images use base frame 0.9s. Video records one sequence and ending hold, about 2.400s. Preview and export share a 600px reference scene; resolution changes output pixels. JPEG/video flatten transparency on black. Export uses the click-time configuration snapshot.
+Type video; format MP4; ratio 16:9; resolution 1080p gives 1920 × 1080px; target 60 fps. Images use base frame 0.9s. Video records one sequence and ending hold, about 2.400s. Preview and export share a 700px reference scene; resolution changes output pixels. JPEG/video flatten transparency on black. Export uses the click-time configuration snapshot.
 
 ## Reduced motion
 

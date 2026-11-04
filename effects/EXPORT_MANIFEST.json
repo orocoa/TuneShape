@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "key": "tuneshape-public-effects-v1:16f78bdf1986bcf17cb5cff123e72e0035a67f66d81eb78538ab04093683676b",
+  "key": "tuneshape-public-effects-v1:8f82cf31038223f593b9d47bed4d45cd8a03cc568323bb9b5d07f7f057bf527a",
   "effects": 48,
   "scope": "Current visible effect renderers and runnable entries; full editor excluded",
   "input": [
@@ -176,8 +176,8 @@
     },
     {
       "path": "src/LiquidGlassLogoPreview.tsx",
-      "bytes": 3600,
-      "sha256": "efaac9f670314397fc44c8c4dc44d465cea869a96280cd7b486f65688c1b2f5c"
+      "bytes": 3672,
+      "sha256": "234fa2e5cce8a882734dc6383430f9d9356c36572c14ca9af71e452034ee0bd4"
     },
     {
       "path": "src/MiniSidebarPreview.tsx",
@@ -636,18 +636,18 @@
     },
     {
       "path": "src/liquid-glass-logo-settings.ts",
-      "bytes": 11816,
-      "sha256": "704c6d7a9cdbb2d577baa86cace0269b369c81f0881bdb36666e25a9b5c082e1"
+      "bytes": 11872,
+      "sha256": "f9307d106dee094511230696651bee25f101a76e1917916502d7d7a30c63c5a2"
     },
     {
       "path": "src/liquid-glass-logo-shader.ts",
-      "bytes": 7018,
-      "sha256": "966b27a0d8ea7bd20add0d01fd627c8939c9fed5c290292cfa7f6b8bd27ce14f"
+      "bytes": 9902,
+      "sha256": "248ecc7e949b655a021e9bf82b9268ab98a7da63bc5c595a93554ffd58701305"
     },
     {
       "path": "src/liquid-glass-logo-spec.ts",
-      "bytes": 11008,
-      "sha256": "c2a267cdda949d6f2198e35d633b494419dffb95b71ee966d3b6c34d51d16f6c"
+      "bytes": 11368,
+      "sha256": "f4d1bcbd0633e62848570230548c3f51b1c1add019458bd6f9a413f5ca2fae96"
     },
     {
       "path": "src/liquid-glass-logo.ts",
@@ -1008,8 +1008,8 @@
     },
     {
       "path": "src/LiquidGlassLogoPreview.tsx",
-      "bytes": 3600,
-      "sha256": "efaac9f670314397fc44c8c4dc44d465cea869a96280cd7b486f65688c1b2f5c"
+      "bytes": 3672,
+      "sha256": "234fa2e5cce8a882734dc6383430f9d9356c36572c14ca9af71e452034ee0bd4"
     },
     {
       "path": "src/liquid-glass-logo.ts",
@@ -1023,13 +1023,13 @@
     },
     {
       "path": "src/liquid-glass-logo-shader.ts",
-      "bytes": 7018,
-      "sha256": "966b27a0d8ea7bd20add0d01fd627c8939c9fed5c290292cfa7f6b8bd27ce14f"
+      "bytes": 9902,
+      "sha256": "248ecc7e949b655a021e9bf82b9268ab98a7da63bc5c595a93554ffd58701305"
     },
     {
       "path": "src/liquid-glass-logo-settings.ts",
-      "bytes": 11816,
-      "sha256": "704c6d7a9cdbb2d577baa86cace0269b369c81f0881bdb36666e25a9b5c082e1"
+      "bytes": 11872,
+      "sha256": "f9307d106dee094511230696651bee25f101a76e1917916502d7d7a30c63c5a2"
     },
     {
       "path": "src/native-effect-tools.ts",
@@ -1198,8 +1198,8 @@
     },
     {
       "path": "src/liquid-glass-logo-spec.ts",
-      "bytes": 11008,
-      "sha256": "c2a267cdda949d6f2198e35d633b494419dffb95b71ee966d3b6c34d51d16f6c"
+      "bytes": 11368,
+      "sha256": "f4d1bcbd0633e62848570230548c3f51b1c1add019458bd6f9a413f5ca2fae96"
     },
     {
       "path": "src/source-notices.ts",
@@ -3208,13 +3208,13 @@
     },
     {
       "path": "examples/liquid-glass-logo/README.md",
-      "bytes": 4615,
-      "sha256": "8a6ccdbedea7dcd88e514ecdd899bdbc6dc9cfce72825c421fe6de2b71e3941d"
+      "bytes": 4820,
+      "sha256": "4afb410bec595ed5ff7a74acaf575c6f0284b503a07c29a3540b79f560076f66"
     },
     {
       "path": "examples/liquid-glass-logo/README.zh-CN.md",
-      "bytes": 4394,
-      "sha256": "0e38f67b2c90b844a06123b7759dd41a6b1c304ec860625cda9e26df850adbee"
+      "bytes": 4549,
+      "sha256": "d5a448df170809975d3a84d589868bf23f5241f49781c79d28531b0006206bc9"
     },
     {
       "path": "catalog.json",
