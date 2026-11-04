@@ -152,7 +152,8 @@ export const glassLogoThemes={light:{logoColor:'#09111b',tileColor:'#f1f1f1',bac
 export function matchingGlassTheme(s:LiquidGlassLogoSettings){return !s.transparentBackground?Object.entries(glassLogoThemes).find(([,v])=>Object.entries(v).every(([k,v])=>s[k as keyof LiquidGlassLogoSettings]===v))?.[0]??'custom':'custom'}
 export function matchingGlassPreset(s:LiquidGlassLogoSettings){return Object.entries(glassLogoPresets).find(([,v])=>Object.entries(v).every(([k,v])=>s[k as keyof LiquidGlassLogoSettings]===v))?.[0]??'custom'}
 export function glassLogoExportSize(s:LiquidGlassLogoSettings){const [x,y]=s.exportRatio.split(':').map(Number),short=s.exportResolution;return {width:Math.round((x>=y?short*x/y:short)/2)*2,height:Math.round((y>=x?short*y/x:short)/2)*2}}
-export function glassLogoDesignHeight(s:LiquidGlassLogoSettings){const [x,y]=s.exportRatio.split(':').map(Number);return 600*y/x}
+export const glassLogoDesignWidth=700;
+export function glassLogoDesignHeight(s:LiquidGlassLogoSettings){const [x,y]=s.exportRatio.split(':').map(Number);return glassLogoDesignWidth*y/x}
 export function glassLogoVideoDuration(s:LiquidGlassLogoSettings,durationMs=1800,delayMs=0){return delayMs/1000+2.4/s.speed*durationMs/1800}
 export function validateGlassRaster(value:unknown,limit:number){if(typeof value!=='string'||value.length>limit||value&&!/^data:image\/(?:png|jpeg|webp);base64,[A-Za-z0-9+/]+={0,2}$/.test(value))throw Error('图片必须是配置内嵌的本地 PNG、JPEG 或 WebP 数据。');return value}
 export function validateLiquidGlassLogo(value:unknown):LiquidGlassLogoSettings{
