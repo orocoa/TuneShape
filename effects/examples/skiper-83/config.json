@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "skiper-83",
+  "durationMs": 500,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "skiper": {
+    "placeholder": "Type shit..",
+    "inputWidth": 512,
+    "fontSize": 24,
+    "cornerRadius": 29,
+    "background": "#f1f1f1",
+    "inputColor": "#f5f4f3",
+    "textColor": "#121212",
+    "buttonColor": "#ffffff",
+    "youtubeLabel": "Youtube Analyzer",
+    "googleLabel": "Google Search",
+    "notionLabel": "Notion",
+    "soundEnabled": true,
+    "pink": "#fc2ba3",
+    "orange": "#fc6d35",
+    "yellow": "#f9c83d",
+    "blue": "#c2d6e1",
+    "demoText": "Find @yt about design"
+  }
+}

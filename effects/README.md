@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-All 48 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
+All 62 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
 
 [Online editor](https://tuneshape.kai-nex.com/)
 
@@ -29,7 +29,6 @@ Choose an effect in the local server; edit its config.json to reuse it. The dist
 | hook-sidebar | [Hook Sidebar](examples/hook-sidebar/README.md) | [钩线侧栏](examples/hook-sidebar/README.zh-CN.md) |
 | rail-toc | [Rail TOC](examples/rail-toc/README.md) | [纸飞机目录](examples/rail-toc/README.zh-CN.md) |
 | card-morph | [Card Expansion](examples/card-morph/README.md) | [卡片展开](examples/card-morph/README.zh-CN.md) |
-| gooey-wordmark | [Gooey Wordmark](examples/gooey-wordmark/README.md) | [液态交互字标](examples/gooey-wordmark/README.zh-CN.md) |
 | typewriter-text | [Typewriter Text](examples/typewriter-text/README.md) | [逐字打出](examples/typewriter-text/README.zh-CN.md) |
 | soft-blur-in | [Soft Blur In](examples/soft-blur-in/README.md) | [柔焦入场](examples/soft-blur-in/README.zh-CN.md) |
 | short-slide-down | [Short Slide Down](examples/short-slide-down/README.md) | [落词堆叠](examples/short-slide-down/README.zh-CN.md) |
@@ -66,7 +65,22 @@ Choose an effect in the local server; edit its config.json to reuse it. The dist
 | topographic-flow | [Topographic Flow](examples/topographic-flow/README.md) | [流动等高线](examples/topographic-flow/README.zh-CN.md) |
 | chromatic-button | [Chromatic Button](examples/chromatic-button/README.md) | [流彩按钮](examples/chromatic-button/README.zh-CN.md) |
 | liquid-glass-logo | [Liquid Glass Logo](examples/liquid-glass-logo/README.md) | [液态玻璃 Logo](examples/liquid-glass-logo/README.zh-CN.md) |
+| skiper-106 | [Smooth Caret Input](examples/skiper-106/README.md) | [平滑光标输入框](examples/skiper-106/README.zh-CN.md) |
+| skiper-46 | [Next.js Gooey Menu](examples/skiper-46/README.md) | [黏连状态菜单](examples/skiper-46/README.zh-CN.md) |
+| skiper-98 | [Vertical Tooltip Menu](examples/skiper-98/README.md) | [竖向裁切提示菜单](examples/skiper-98/README.zh-CN.md) |
+| skiper-92 | [Vercel Command Search](examples/skiper-92/README.md) | [变形命令搜索](examples/skiper-92/README.zh-CN.md) |
+| skiper-48 | [Card Swipe Carousel](examples/skiper-48/README.md) | [卡片堆叠滑动轮播](examples/skiper-48/README.zh-CN.md) |
+| skiper-91 | [Elastic Video Player](examples/skiper-91/README.md) | [弹性拖动视频播放器](examples/skiper-91/README.zh-CN.md) |
+| skiper-81 | [AI Multi Mode Input](examples/skiper-81/README.md) | [AI 多模式输入框](examples/skiper-81/README.zh-CN.md) |
+| skiper-82 | [Rainbow Send Input](examples/skiper-82/README.md) | [彩虹发送输入框](examples/skiper-82/README.zh-CN.md) |
+| skiper-83 | [Integration Mention Input](examples/skiper-83/README.md) | [集成提及输入框](examples/skiper-83/README.zh-CN.md) |
+| skiper-41 | [Progressive Blur](examples/skiper-41/README.md) | [渐进模糊阅读](examples/skiper-41/README.zh-CN.md) |
+| skiper-43 | [Vercel Tooltip](examples/skiper-43/README.md) | [Vercel 图标提示栏](examples/skiper-43/README.zh-CN.md) |
+| skiper-56 | [Devouring Details Sign In](examples/skiper-56/README.md) | [粒子消散输入](examples/skiper-56/README.zh-CN.md) |
+| mirrored-card-stack | [Mirrored Card Stack](examples/mirrored-card-stack/README.md) | [镜像抽出卡片](examples/mirrored-card-stack/README.zh-CN.md) |
+| page-turn-cards | [Page Turn Cards](examples/page-turn-cards/README.md) | [翻页卡片](examples/page-turn-cards/README.zh-CN.md) |
+| chapter-progress-nav | [Chapter Progress Navigation](examples/chapter-progress-nav/README.md) | [章节进度导航](examples/chapter-progress-nav/README.zh-CN.md) |
 
 ## License and scope
 
-TuneShape-authored code is MIT. Adaptations and fonts retain their attribution and licenses in THIRD_PARTY_NOTICES.txt. Personal avatar and brand graphics use authored generic placeholders. The package publishes the effect rendering source, excluding the full website editor, deployments, work records, and account verification files.
+TuneShape-authored code is MIT. Adaptations and fonts retain their attribution and licenses in THIRD_PARTY_NOTICES.txt. Personal avatar, product and brand graphics use authored generic placeholders. The public send cue and video are original demonstrations. The package publishes the effect rendering source, excluding the full website editor, deployments, work records, and account verification files.

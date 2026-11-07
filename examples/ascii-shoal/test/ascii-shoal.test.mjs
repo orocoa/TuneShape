@@ -83,14 +83,16 @@ test('the authored mask contains body and extended paired fins and deforms the t
   assert.equal(headDifference, 0);
 });
 
-test('routes remain continuous, and pointer avoidance moves a nearby shark away', () => {
+test('routes remain continuous and ignore pointer input, including legacy interaction settings', () => {
   const scene = createScene(17);
   const a = sampleScene(scene, 10, 900, 600);
   const b = sampleScene(scene, 10.001, 900, 600);
   a.sharks.forEach((shark, i) => assert.ok(Math.hypot(shark.x - b.sharks[i].x, shark.y - b.sharks[i].y) < 0.1));
   const pointer = { x: a.sharks[0].x - 25, y: a.sharks[0].y, energy: 1 };
-  const avoided = sampleScene(scene, 10, 900, 600, defaults, pointer);
-  assert.ok(avoided.sharks[0].x > a.sharks[0].x);
+  assert.equal(defaults.interactive, false);
+  const ignored = sampleScene(scene, 10, 900, 600, { interactive: true }, pointer);
+  assert.deepEqual(ignored, a);
+  assert.equal(normalizeOptions({interactive: true}).interactive, false);
   const disabled = sampleScene(scene, 10, 900, 600, { interactive: false }, pointer);
   assert.deepEqual(disabled, a);
 });
@@ -207,5 +209,16 @@ test('rendering is capped to 30fps while zero speed and disabled runtime do not 
   assert.equal(env.callbacks.size, 0);
   engine.update({}, { paused: false });
   assert.equal(env.callbacks.size, 1);
+  engine.destroy();
+});
+
+test('mounted backgrounds install no pointer disturbance handlers for legacy configs', () => {
+  const env = browserFixture();
+  const engine = createAsciiShoal(env.host, {interactive:true});
+  assert.deepEqual([...env.hostListeners.keys()], []);
+  env.step(); env.step();
+  assert.ok(engine.getState().time > 0);
+  engine.update({interactive:true});
+  assert.deepEqual([...env.hostListeners.keys()], []);
   engine.destroy();
 });

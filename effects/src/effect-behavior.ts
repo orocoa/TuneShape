@@ -1,7 +1,12 @@
+import {isSkiperEffect} from './skiper-effects';
 import {isStudioEffect} from './orbit-typography-spec';
 import {isWatercolorRecipe,isReelRecipe} from './effect-variants';
 export type EffectTrigger='press'|'click'|'hover'|'loading';
 export function galleryPlayback(id:string):'loading'|'cycle'|'direct'{
+ if(isSkiperEffect(id))return 'loading';
+ if(id==='mirrored-card-stack')return 'loading';
+ if(id==='page-turn-cards')return 'loading';
+ if(id==='chapter-progress-nav')return 'loading';
  if(id==='liquid-glass-logo')return 'loading';
  if(id==='chromatic-button')return 'loading';
  if(id==='topographic-flow')return 'loading';
@@ -14,6 +19,7 @@ export function galleryPlayback(id:string):'loading'|'cycle'|'direct'{
  return ['toast','card-morph','sheet','blur-panel','breality-sheet','page-fade','stagger','text-rise'].includes(id)?'cycle':'direct';
 }
 export function interactionSelector(id:string){
+ if(isSkiperEffect(id))return '.skiper-effect';
  if(id==='liquid-glass-logo')return '.liquid-glass-logo';
  if(id==='chromatic-button')return '.chromatic-button';
  if(id==='topographic-flow')return '.topographic-flow';
@@ -25,6 +31,9 @@ export function interactionSelector(id:string){
  if(id==='glass-folder')return '.glass-folder-hit';
  if(id==='scroll-progress')return '.reading-progress-stage';
  if(id==='hook-sidebar')return '.hook-sidebar-nav';
+ if(id==='mirrored-card-stack')return '.mirrored-card-stack';
+ if(id==='page-turn-cards')return '.page-turn-cards';
+ if(id==='chapter-progress-nav')return '.chapter-progress-nav';
  if(id==='rail-toc')return '.rail-toc-stage';
  if(id==='expandable-sidebar')return '.expandable-sidebar';
  if(id==='encrypted-text')return '.encrypted-text';
@@ -69,6 +78,7 @@ export const clickTarget:Record<string,string>={
  stagger:'.sculpt-stagger','text-rise':'.sculpt-letters',progress:'.sculpt-progress',
 };
 export function triggerDescription(id:string){
+ if(isSkiperEffect(id))return '目录悬停、聚焦或手机 Preview 演示；原生输入、按钮、菜单、拖动与键盘在当前预览内操作。';
  if(id==='liquid-glass-logo')return '悬停、聚焦或 Preview 显形；点击、Enter / 空格重播，方向键定位，End / Escape 显示终态，移开且失焦、离屏或后台停止。';
  if(id==='chromatic-button')return '目录悬停、聚焦或 Preview 播放流彩材质；按钮、消息输入与语音外观保留真实操作，支持 Enter 和空格，操作不会打开详情。';
  if(id==='topographic-flow')return '目录悬停、聚焦或 Preview 播放，详情自动流动；指针与触屏拖动塑造地形，方向键移动影响位置，Home 居中，Escape 清除，Enter / 空格重播。';
@@ -80,6 +90,9 @@ export function triggerDescription(id:string){
  if(id==='glass-folder')return '悬停或聚焦时轻展卡片，点击、Enter / 空格展开；移开、离焦、点击外部或 Escape 收合。';
  if(id==='scroll-progress')return '滚动阅读区同步圆环与当前章节，鼠标悬停胶囊自动展开目录，移出胶囊和菜单区域自动收合，点击章节定位并收合；触屏点按胶囊展开，点击外部或 Escape 关闭。';
  if(id==='hook-sidebar')return '点击菜单项确认选择，悬停或键盘聚焦另一项显示灰色钩线；方向键与 Home / End 移动焦点，Enter / 空格确认。';
+ if(id==='mirrored-card-stack')return '左右拖动、短甩、方向键、箭头及分页点切换；两侧均抽出当前顶卡，中途按住可接住并反向继续。';
+ if(id==='page-turn-cards')return '左右拖动、方向键、箭头和分页点切换；目录悬停、聚焦或手机 Preview 演示一页，手动操作后停止自动重播。';
+ if(id==='chapter-progress-nav')return '滚动阅读区更新章节细线；整行标签可点击，细线不可操作。最新点击替换目标，滚轮、触摸和滚动按键可中断；目录悬停或 Preview 演示真实滚动位置。';
  if(id==='rail-toc')return '点击目录或使用方向键切换，纸飞机沿层级轨道跟随；单独预览时滚轮沿轨道移动，开启联动阅读预览后可滚动真实章节。';
  if(id==='expandable-sidebar')return '悬停或聚焦展开侧栏，手机点击菜单打开抽屉；点击条目选择本地内容，Escape 关闭。';
  if(id==='encrypted-text')return '详情自动解码一次，点击文字或播放按钮重播；完成后保留原文。';

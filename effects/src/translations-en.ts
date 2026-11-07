@@ -1,5 +1,9 @@
 /** Interface copy only. Configuration keys, routes, source records and user text stay canonical. */
 export const english: Record<string, string> = {
+"章节进度导航":"Chapter Progress Navigation",
+"响应基准时长":"Response duration",
+"参数与内容":"Content and parameters",
+
 "液态玻璃 Logo":"Liquid Glass Logo",
 "Logo 显形基准时长":"Logo reveal base duration",
 "Logo 显形延迟":"Logo reveal delay",

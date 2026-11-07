@@ -1082,3 +1082,187 @@ Public previews, control ranges and property semantics reviewed 2026-11-03. No r
 Liquid Glass Logo — independent TuneShape implementation (MIT)
 Visual/control reference: https://reactdrops.dev/components/text-reveal/liquid-glass-logo
 Public previews and controls reviewed 2026-11-03. No reference component code, shaders, trademark graphics or media distributed. Independent refraction geometry and original TuneShape artwork; existing Parkinsans font reused under its retained SIL OFL 1.1 notice.
+
+
+Skiper UI reference components (2026-11-04)
+https://skiper-ui.com/v1/
+Skiper UI / @gurvinder-singh02 / https://gxuri.me
+Components 41, 48, 50 and 106 adapt publicly supplied examples. The published terms permit personal/commercial use and modification with attribution to Skiper UI. Original inspiration credits include devouringdetails.com (41/56), Vercel (43/92), Next.js (46), Dia (78), Apple (75/77), AarzooAly illustration showcase (48/50). Components 43, 46, 56, 75, 77, 78, 81, 82, 83, 91, 92, 98 were independently implemented from public demos/documentation; their Pro source was unavailable and is not redistributed.
+Skiper 48 defaults now reuse the six original TuneShape MIT geometric SVG works used by Liquid Carousel and Orbit Reel; compositions and hashes are listed in public/images/geometric-cards/ORIGINAL_ART.json. Skiper 50 retains the original reference illustration demo.
+Demo media from public Skiper UI pages retains its original third-party rights. Apple product imagery and video, illustrated artwork and depicted brands are demonstration/reference content; no ownership or blanket MIT license is claimed for those assets. Source URLs and hashes are retained in project reference records. User-replaced media retains the user's original rights.
+
+
+========================================================================
+Skiper fidelity refinement (2026-11-04)
+
+Inter variable font: Copyright (c) 2016 The Inter Project Authors. SIL OFL 1.1.
+Geist / Geist Mono: The Geist Project Authors, Vercel and basement.studio. SIL OFL 1.1.
+Font source URLs and hashes: fonts/skiper/SOURCES.json. Full licenses accompany fonts/skiper/ and fonts/type-motion/.
+Preview and standalone Skiper exports include identical font bytes and full OFL notices.
+
+Swiper card/creative transform formulas (public source adaptations):
+https://github.com/nolimits4web/swiper
+The MIT License (MIT)
+
+Copyright (c) 2019 Vladimir Kharlampidi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Lucide / Feather icon geometry adapted from the publicly rendered reference UI:
+https://github.com/lucide-icons/lucide
+ISC License
+
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+---
+
+The following Lucide icons are derived from the Feather project:
+
+airplay, alert-circle, alert-octagon, alert-triangle, aperture, arrow-down-circle, arrow-down-left, arrow-down-right, arrow-down, arrow-left-circle, arrow-left, arrow-right-circle, arrow-right, arrow-up-circle, arrow-up-left, arrow-up-right, arrow-up, at-sign, calendar, cast, check, chevron-down, chevron-left, chevron-right, chevron-up, chevrons-down, chevrons-left, chevrons-right, chevrons-up, circle, clipboard, clock, code, columns, command, compass, corner-down-left, corner-down-right, corner-left-down, corner-left-up, corner-right-down, corner-right-up, corner-up-left, corner-up-right, crosshair, database, divide-circle, divide-square, dollar-sign, download, external-link, feather, frown, hash, headphones, help-circle, info, italic, key, layout, life-buoy, link-2, link, loader, lock, log-in, log-out, maximize, meh, minimize, minimize-2, minus-circle, minus-square, minus, monitor, moon, more-horizontal, more-vertical, move, music, navigation-2, navigation, octagon, pause-circle, percent, plus-circle, plus-square, plus, power, radio, rss, search, server, share, shopping-bag, sidebar, smartphone, smile, square, table-2, tablet, target, terminal, trash-2, trash, triangle, tv, type, upload, x-circle, x-octagon, x-square, x, zoom-in, zoom-out
+
+The MIT License (MIT) (for the icons listed above)
+
+Copyright (c) 2013-present Cole Bemis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+Embla Carousel public physics reference (Skiper 77)
+Public scroll physics adapted independently for the Apple feature carousel; original reference https://github.com/davidjerleke/embla-carousel/blob/master/LICENSE .
+MIT License
+
+Copyright (c) David Jerleke.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+Skiper UI public send audio (82 / 83)
+Original public source: https://skiper-ui.com/audio/send2.wav
+SHA-256: 89d2675ead32fade883f0695fbb127f08cf14fb52997abe3ba2e9636a3bec053
+382932 bytes; 44100 Hz stereo PCM WAV; 2.170566893424036 seconds; reference gain 0.2.
+The original audio retains its original rights and attribution. It is reference media, not TuneShape-original MIT audio. Preview and self-contained exports embed identical bytes.
+SF Pro Display is never embedded: only local installed-face aliases and the documented system fallback are used.
+
+Chapter Progress Navigation (2026-11-05)
+TuneShape-authored generic implementation, MIT. Informed by a user-authorized chapter-navigation prototype. No portfolio controllers, personal content, fonts or media are distributed.
+
+
+TuneShape gray page-turn cards — third-party attribution
+
+Skiper 50 / Carousel_004
+Author: @gurvinder-singh02
+Website: https://gxuri.me
+Source reference: https://skiper-ui.com/v1/skiper50
+
+The user-supplied reference source includes the following notice:
+
+License & Usage:
+- Free to use and modify in both personal and commercial projects.
+- Attribution to Skiper UI is required when using the free version.
+- No attribution required with Skiper UI Pro.
+
+This adaptation retains the independent side-pivot page-turn idea and replaces
+its implementation of handoff, projected gap, light and lifecycle behavior.
+Attribution is retained here and in the component source. No reference artwork,
+illustrations, image URLs, icons, React or Framer Motion runtime is included.
+Default numbered gray cards are plain DOM text and CSS.
+
+Swiper 14.4.0
+https://swiperjs.com/
+Unmodified minimal core modules and CSS are vendored under vendor/swiper/.
+The original license is also retained at vendor/swiper/LICENSE.
+
+The MIT License (MIT)
+
+Copyright (c) 2019 Vladimir Kharlampidi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Skiper48 / Carousel_002 — Skiper UI
+https://skiper-ui.com/v1/skiper48
+Author: @gurvinder-singh02 — https://gxuri.me
+Adapted from the example supplied by the user. The free version permits personal/commercial use and modification with attribution to Skiper UI. Retain this notice and visible attribution in distributed examples.
+
+Swiper 14.4.0 — https://swiperjs.com/
+Copyright (c) 2019 Vladimir Kharlampidi. MIT License; full text in vendor/swiper/LICENSE.
+
+This distribution includes only Swiper's required ESM dependency graph and CSS, preserved byte-for-byte from the pinned package. It does not include Motion, React, original Skiper artwork, portfolio images, fonts, project data or personal website routing.
+
+Public example media: Skiper-group images, the send cue and the video are original generic TuneShape demonstrations under MIT. Private reference media is not included. Video producer: examples/public-demo-media/original_demo_video.swift.

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "skiper-98",
+  "durationMs": 500,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "skiper": {
+    "comment": "Comment",
+    "share": "Share",
+    "menu": "Menu",
+    "side": "left",
+    "badge": true,
+    "iconSize": 32,
+    "gap": 8,
+    "background": "#f5f4f3",
+    "menuColor": "#000000",
+    "textColor": "#ffffff",
+    "badgeColor": "#00a6f4"
+  }
+}

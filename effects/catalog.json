@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "count": 48,
+  "count": 62,
   "website": "https://tuneshape.kai-nex.com/",
   "repository": "https://github.com/orocoa/TuneShape",
   "effects": [
@@ -179,22 +179,6 @@
       },
       "license": "MIT",
       "config": "examples/card-morph/config.json"
-    },
-    {
-      "id": "gooey-wordmark",
-      "name": "Gooey Wordmark",
-      "nameZh": "液态交互字标",
-      "category": "文字",
-      "description": "A blurred liquid mass resolves into readable type. The pointer melts nearby strokes and changes each touched letter’s hue.",
-      "descriptionZh": "模糊液团逐渐凝聚成字标；鼠标在局部融化、黏连笔画，并逐字切换颜色。",
-      "editor": "https://tuneshape.kai-nex.com/#/effect/gooey-wordmark",
-      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/gooey-wordmark",
-      "documentation": {
-        "zh": "https://tuneshape.kai-nex.com/effects/gooey-wordmark/",
-        "en": "https://tuneshape.kai-nex.com/en/effects/gooey-wordmark/"
-      },
-      "license": "MIT",
-      "config": "examples/gooey-wordmark/config.json"
     },
     {
       "id": "typewriter-text",
@@ -771,6 +755,246 @@
       },
       "license": "MIT",
       "config": "examples/liquid-glass-logo/config.json"
+    },
+    {
+      "id": "skiper-106",
+      "name": "Smooth Caret Input",
+      "nameZh": "平滑光标输入框",
+      "category": "控件",
+      "description": "A spring-driven caret follows native text selection, beside a regular input for comparison.",
+      "descriptionZh": "弹簧光标跟随原生文本选区，保留标准输入作对照。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-106",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-106",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-106/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-106/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-106/config.json"
+    },
+    {
+      "id": "skiper-46",
+      "name": "Next.js Gooey Menu",
+      "nameZh": "黏连状态菜单",
+      "category": "导航",
+      "description": "A black circular mark and three-row status tooltip expand through a gooey SVG filter.",
+      "descriptionZh": "黑色圆形标志与三行状态气泡通过 SVG 黏连滤镜展开和收合。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-46",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-46",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-46/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-46/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-46/config.json"
+    },
+    {
+      "id": "skiper-98",
+      "name": "Vertical Tooltip Menu",
+      "nameZh": "竖向裁切提示菜单",
+      "category": "导航",
+      "description": "Three vertically stacked icons share a clipped tooltip that follows hover and keyboard focus.",
+      "descriptionZh": "三枚竖向图标共享一个裁切提示层，提示随悬停和键盘聚焦滑动。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-98",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-98",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-98/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-98/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-98/config.json"
+    },
+    {
+      "id": "skiper-92",
+      "name": "Vercel Command Search",
+      "nameZh": "变形命令搜索",
+      "category": "控件",
+      "description": "A compact search trigger morphs into a grouped command panel with filtering, arrow-key selection and Escape.",
+      "descriptionZh": "紧凑搜索入口变形成分组命令面板，可搜索、方向键选择、Esc 收起。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-92",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-92",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-92/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-92/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-92/config.json"
+    },
+    {
+      "id": "skiper-48",
+      "name": "Card Swipe Carousel",
+      "nameZh": "卡片堆叠滑动轮播",
+      "category": "图片",
+      "description": "Drag a stack of geometric image cards, with depth and rotation on the cards behind, and snap on release.",
+      "descriptionZh": "拖拽站内几何图片卡片，后方卡片以旋转和纵深堆叠，松手吸附到上一张或下一张。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-48",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-48",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-48/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-48/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-48/config.json"
+    },
+    {
+      "id": "skiper-91",
+      "name": "Elastic Video Player",
+      "nameZh": "弹性拖动视频播放器",
+      "category": "图片",
+      "description": "A portrait video with an elastic scrubber, hover time marker and animated playback feedback.",
+      "descriptionZh": "竖屏视频配合可拉伸进度条、悬停时间标记与播放反馈。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-91",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-91",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-91/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-91/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-91/config.json"
+    },
+    {
+      "id": "skiper-81",
+      "name": "AI Multi Mode Input",
+      "nameZh": "AI 多模式输入框",
+      "category": "控件",
+      "description": "A multiline composer with attachments, Search, DeepMind and model selection. Submission stays in the local demo.",
+      "descriptionZh": "带附件、搜索、DeepMind 和模型选择的多行输入；提交内容只保存在当前演示。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-81",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-81",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-81/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-81/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-81/config.json"
+    },
+    {
+      "id": "skiper-82",
+      "name": "Rainbow Send Input",
+      "nameZh": "彩虹发送输入框",
+      "category": "控件",
+      "description": "A compact message input with a rainbow send wave, rotating arrow and local message stack.",
+      "descriptionZh": "紧凑消息输入在发送时展开彩色光带、旋转箭头，并堆叠本地消息。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-82",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-82",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-82/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-82/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-82/config.json"
+    },
+    {
+      "id": "skiper-83",
+      "name": "Integration Mention Input",
+      "nameZh": "集成提及输入框",
+      "category": "控件",
+      "description": "Recognizes @yt, @google and @notion, expands integration cards and sends them with local messages.",
+      "descriptionZh": "识别 @yt、@google、@notion，展开集成卡片并随消息发送；保持本地演示。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-83",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-83",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-83/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-83/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-83/config.json"
+    },
+    {
+      "id": "skiper-41",
+      "name": "Progressive Blur",
+      "nameZh": "渐进模糊阅读",
+      "category": "背景",
+      "description": "A scrollable reading surface with gradient backdrop blur at both edges.",
+      "descriptionZh": "文字滚经上下渐进模糊遮罩，阅读区中部保持清晰。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-41",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-41",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-41/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-41/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-41/config.json"
+    },
+    {
+      "id": "skiper-43",
+      "name": "Vercel Tooltip",
+      "nameZh": "Vercel 图标提示栏",
+      "category": "导航",
+      "description": "A dark icon toolbar with a shared moving tooltip and keyboard hints.",
+      "descriptionZh": "黑色胶囊图标栏，共享气泡跟随悬停项目并显示快捷键。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-43",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-43",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-43/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-43/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-43/config.json"
+    },
+    {
+      "id": "skiper-56",
+      "name": "Devouring Details Sign In",
+      "nameZh": "粒子消散输入",
+      "category": "控件",
+      "description": "An underlined input whose text disintegrates into particles when submitted.",
+      "descriptionZh": "极简下划线输入框，提交时文字从右向左化为粒子消散。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-56",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-56",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-56/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-56/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-56/config.json"
+    },
+    {
+      "id": "mirrored-card-stack",
+      "name": "Mirrored Card Stack",
+      "nameZh": "镜像抽出卡片",
+      "category": "图片",
+      "description": "The current top card extracts on either side, changes layer, and slips back into the stack.",
+      "descriptionZh": "当前顶卡向两侧镜像抽出，换层后回插，保留惯性和中途接住的姿态。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/mirrored-card-stack",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/mirrored-card-stack",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/mirrored-card-stack/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/mirrored-card-stack/"
+      },
+      "license": "MIT",
+      "config": "examples/mirrored-card-stack/config.json"
+    },
+    {
+      "id": "page-turn-cards",
+      "name": "Page Turn Cards",
+      "nameZh": "翻页卡片",
+      "category": "容器",
+      "description": "Independent rigid cards turn on opposing side pivots, with a narrow projected gap and soft light.",
+      "descriptionZh": "两张独立刚性卡片沿各自边轴翻转，以连续窄缝和柔光完成交接。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/page-turn-cards",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/page-turn-cards",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/page-turn-cards/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/page-turn-cards/"
+      },
+      "license": "MIT",
+      "config": "examples/page-turn-cards/config.json"
+    },
+    {
+      "id": "chapter-progress-nav",
+      "name": "Chapter Progress Navigation",
+      "nameZh": "章节进度导航",
+      "category": "导航",
+      "description": "Equal chapter labels, real scroll progress, and an interruptible direct transition.",
+      "descriptionZh": "等宽章节标签、真实阅读进度和可随时打断的短转场。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/chapter-progress-nav",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/chapter-progress-nav",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/chapter-progress-nav/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/chapter-progress-nav/"
+      },
+      "license": "MIT",
+      "config": "examples/chapter-progress-nav/config.json"
     }
   ]
 }

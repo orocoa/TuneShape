@@ -1,0 +1,1 @@
+Original TuneShape geometric demonstration video, MIT. Generated with the project-owned original_demo_video.swift; 320x568, 24 fps, 4 seconds. No reference video frames or media were used.

@@ -1,0 +1,5 @@
+https://skiper-ui.com/v1/skiper56
+
+TuneShape independently authored renderer; visual reference: Skiper UI. Pro component source was not accessible and is not bundled.
+
+Skiper UI / @gurvinder-singh02 / https://gxuri.me. Reference demo media, artwork and product names retain their respective rights; they are demo content, not TuneShape original MIT artwork. Current input, focus, selection and playback position are transient.

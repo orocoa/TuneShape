@@ -12,16 +12,16 @@ vec4 backdrop(vec2 pos){vec4 base=vec4(backgroundColor,transparentBackground>.5?
 vec4 art(vec2 uv,float blur){
  if(any(lessThan(uv,vec2(0.)))||any(greaterThan(uv,vec2(1.))))return vec4(0.);
  vec4 a=texture2D(logoTex,uv);
- if(blur>.00001){vec2 px=vec2(blur)/logoPixels;a=(a*4.+texture2D(logoTex,uv+vec2(px.x,0.))+texture2D(logoTex,uv-vec2(px.x,0.))+texture2D(logoTex,uv+vec2(0.,px.y))+texture2D(logoTex,uv-vec2(0.,px.y)))*.125;}
+ if(blur>.00001){vec2 px=vec2(blur)/logoPixels;a=a*.25+(texture2D(logoTex,uv+vec2(px.x,0.))+texture2D(logoTex,uv-vec2(px.x,0.))+texture2D(logoTex,uv+vec2(0.,px.y))+texture2D(logoTex,uv-vec2(0.,px.y)))*.125+(texture2D(logoTex,uv+px)+texture2D(logoTex,uv-px)+texture2D(logoTex,uv+vec2(px.x,-px.y))+texture2D(logoTex,uv+vec2(-px.x,px.y)))*.0625;}
  if(originalColors<.5){vec2 px=1./logoPixels;float ax=texture2D(logoTex,uv+vec2(px.x,0.)).a-texture2D(logoTex,uv-vec2(px.x,0.)).a,ay=texture2D(logoTex,uv+vec2(0.,px.y)).a-texture2D(logoTex,uv-vec2(0.,px.y)).a;float shade=.76+.24*max(0.,dot(normalize(vec3(-ax,-ay,.2)),normalize(vec3(-.5,-.7,1.))));a.rgb=logoColor*mix(1.,shade,logoRelief);}
  return a;
 }
 // Back-project an incident viewing ray through a curved air/glass interface.
-vec2 opticalRay(vec2 q,vec3 normal,float ior,float thickness,float magnification,float curve){vec3 r=refract(vec3(0.,0.,-1.),normal,1./ior);float grazing=1.-normal.z;float bulb=1.-smoothstep(.27,.49,progress*1.8);float mag=magnification*(1.+(ior-1.46)*1.7*bulb*grazing);vec2 axis=q/(mag+curve*pow(abs(q)*2.,vec2(6.))*max(.1,1.+(ior-1.46)*5.*grazing*grazing));vec2 tangent=pow(clamp(abs(q.yx)*2.,0.,1.),vec2(6.));axis/=1.+curve*3.1*tangent*max(.1,1.+(ior-1.46)*5.);return axis+r.xy/max(.08,-r.z)*thickness;}
+vec2 opticalRay(vec2 q,vec3 normal,float ior,float thickness,float magnification,float curve){vec3 r=refract(vec3(0.,0.,-1.),normal,1./ior);float grazing=1.-normal.z;float bulb=1.-smoothstep(.27,.49,progress*1.8);float mag=magnification*(1.+(ior-1.46)*1.7*bulb*grazing);vec2 axis=q/(mag+curve*pow(abs(q)*2.,vec2(6.))*max(.1,1.+(ior-1.46)*5.*grazing*grazing));vec2 tangent=pow(clamp(abs(q.yx)*2.,0.,1.),vec2(6.));axis/=1.+curve*5.2*tangent*max(.1,1.+(ior-1.46)*5.*grazing);return axis+r.xy/max(.08,-r.z)*thickness;}
 vec4 scene(vec2 ray,vec2 center,float size,float logoRatio,float reveal,float blur,float bubble){vec4 a=art(ray/logoRatio+.5,blur);a.a*=reveal;vec4 b=backdrop(center+ray*size);if(tile>.5&&hasBackground<.5&&bubble>.5)b=over(vec4(tileColor,.08),b);float roundLight=(1.-smoothstep(.27,.49,progress*1.8))*.92*bubble;b=over(vec4(vec3(1.),roundLight),b);return over(a,b);}
 vec4 spectralScene(vec2 q,vec3 normal,vec2 center,float size,float ratio,float thickness,float magnification,float curve,float split,float reveal,float blur){
  vec2 red=opticalRay(q,normal,1.46-split,thickness,magnification,curve),green=opticalRay(q,normal,1.46,thickness,magnification,curve),blue=opticalRay(q,normal,1.46+split,thickness,magnification,curve);
- float filterSize=blur+split*70.*pow(1.-normal.z,2.);vec4 r=scene(red,center,size,ratio,reveal,filterSize,1.),g=scene(green,center,size,ratio,reveal,filterSize,1.),b=scene(blue,center,size,ratio,reveal,filterSize,1.);float a=max(r.a,max(g.a,b.a));return vec4(vec3(r.r*r.a,g.g*g.a,b.b*b.a)/max(.00001,a),a);
+ float filterSize=blur+split*150.*pow(1.-normal.z,2.);vec4 r=scene(red,center,size,ratio,reveal,filterSize,1.),g=scene(green,center,size,ratio,reveal,filterSize,1.),b=scene(blue,center,size,ratio,reveal,filterSize,1.);float a=max(r.a,max(g.a,b.a));return vec4(vec3(r.r*r.a,g.g*g.a,b.b*b.a)/max(.00001,a),a);
 }
 void main(){
  vec2 pos=gl_FragCoord.xy/resolution*viewSize;pos.y=viewSize.y-pos.y;
@@ -40,18 +40,18 @@ void main(){
  float sd=roundedBox(surface,halfSize,radius),pixel=max(.0005,viewSize.x/resolution.x/size);
  float mask=(1.-smoothstep(-pixel,pixel,sd))*visible;
  vec2 n=boxNormal(surface,halfSize,radius);
- float d=max(0.,-sd),bevel=mix(.42,.095,square)*growth*(1.-.96*smoothstep(.72,1.3,t));
+ float d=max(0.,-sd),bevel=mix(.42,.095,square)*growth*(1.-.96*smoothstep(.78,1.36,t));
  float u=clamp(d/max(.0001,bevel),0.,1.);
- float corePower=1.-smoothstep(.4,1.12,t);
- float power=1.-smoothstep(1.1,1.48,t),glass=visible*(1.-smoothstep(.94,1.49,t));
+ float corePower=(1.-.42*smoothstep(.35,.7,t))*(1.-smoothstep(1.08,1.4,t));
+ float power=1.-smoothstep(1.1,1.4,t),glass=visible*(1.-smoothstep(.94,1.4,t));
  float angle=(1.-u)*PI*.5;
  vec3 normal=normalize(mix(vec3(0.,0.,1.),vec3(n*sin(angle),cos(angle)),power));
  float shoulder=sin(u*PI)*mask;
  float corner=smoothstep(.025,.35,abs(n.x*n.y));
- float thickness=depth*(.006+.003*dropStrength)*power*mix(.06,1.,square);
- float curve=depth*(.14*square+.025*(1.-square))*power;
- float magnification=1.+depth*(.07+.12*(1.-square))*corePower;
- float ratio=logoScale*mix(1.,finalLogoScale,smoothstep(1.1,1.5,t));
+ float thickness=depth*(.006+.003*dropStrength)*power*mix(.06,1.,square)*(1.+2.*smoothstep(.72,1.12,t));
+ float curve=depth*(.14*square+.025*(1.-square))*power*(1.-.5*smoothstep(.72,1.12,t));
+ float magnification=1.+depth*(.12+.21*(1.-square))*corePower;
+ float ratio=logoScale*mix(1.,finalLogoScale,smoothstep(1.1,1.4,t));
  float reveal=smoothstep(.14,.24,t),blur=(1.-smoothstep(.25,.48,t))*2.4;
  // A short travelling wave belongs to the impact, then decays before the ending hold.
  float radial=length(q),front=birth*2.3;
@@ -60,11 +60,11 @@ void main(){
  vec4 base=scene(q+radialN*wave*.006,center,size,ratio,reveal,0.,0.);
  float outerShadow=exp(-pow((sd-.009*growth)/max(.004*growth,pixel*2.),2.))*(1.-mask)*glass*.07;
  base=over(vec4(logoColor*.3,outerShadow),base);
- float split=dispersion*.060*power;
+ float split=dispersion*.040*power;
  float edgeKeep=smoothstep(.001,.017*growth,d);
  vec4 bent=spectralScene(q,normal,center,size,ratio,thickness,magnification,curve,split,reveal*edgeKeep,blur);
  // The inset back face has its own curved normal and optical path, not a duplicate flat logo.
- float inset=.095*growth;
+ float inset=mix(.05,.083,square)*growth;
  float backSd=roundedBox(surface-vec2(.005,-.004)*relief,halfSize-vec2(inset),max(.0001,radius-inset*.65));
  float backU=clamp(max(0.,-backSd)/max(.001,bevel*.52),0.,1.);
  vec2 backN=boxNormal(surface-vec2(.005,-.004)*relief,halfSize-vec2(inset),max(.0001,radius-inset*.65));
@@ -92,16 +92,16 @@ void main(){
  float glintA=exp(-pow((sd+.008*growth)/max(pixel*.7,.0008),2.));
  float glintB=exp(-pow((sd+.017*growth)/max(pixel*.6,.0007),2.));
  float splitGlints=(glintA*.28+glintB*.16)*mask*highlights*glass*(.25+.75*corner)*reliefStage;
- float contour=(rim*(.7+.6*key)+innerLine*relief*reliefStage*(.4+1.3*key)*focus)*highlights*glass;
+ float contour=(rim*(.7+.6*key+.35*fill)+innerLine*relief*reliefStage*(.4+1.3*key)*focus)*highlights*glass;
 
  // Optical path colour is strongest on the deep curved shoulder and opposite corners.
  float spectralPower=dispersion*clamp((depth-1.15)*.65,0.,1.)*glass*square;
- float hue=min(1.12,.60+u*.15+.45*smoothstep(.4,.8,u))+(q.x+q.y)*.025;
+ float hue=min(1.12,.60+u*.15+.45*smoothstep(0.,.45,u))+(q.x+q.y)*.025;
  vec3 spectrum=clamp(abs(fract(hue+vec3(0.,.666667,.333333))*6.-3.)-1.,0.,1.);
  float diagonal=pow(clamp(abs(q.x-q.y)/max(.001,growth),0.,1.),2.7);
  spectrum*=1.-.30*exp(-pow((u-.63)/.18,2.));
  float spectralBand=exp(-pow((u-.38)/.42,2.))*mask;
- float spectralOpacity=spectralPower*spectralBand*(.02+.96*diagonal)*1.6;
+ float spectralOpacity=spectralPower*spectralBand*(.02+.96*diagonal)*1.15;
  base=over(vec4(spectrum,clamp(spectralOpacity,0.,.88)),base);
  float concentrated=exp(-pow((u-.78)/.12,2.))*mask;
  base=over(vec4(mix(vec3(1.),spectrum,min(1.,dispersion)*.18),clamp(concentrated*caustics*(.035+.07*corner)*glass,0.,.4)),base);

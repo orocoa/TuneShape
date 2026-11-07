@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "chapter-progress-nav",
+  "durationMs": 370,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "chapterProgressNav": {
+    "sections": [
+      {
+        "id": "overview",
+        "label": "Overview",
+        "shortLabel": "Start",
+        "title": "A clear beginning.",
+        "body": "Give each chapter a useful name. This reading surface is a working example: scroll to see the line follow your position, or choose a chapter above to jump directly to its content.",
+        "tone": "dark"
+      },
+      {
+        "id": "process",
+        "label": "Process",
+        "shortLabel": "Build",
+        "title": "Move with intention.",
+        "body": "The whole label row is clickable. The thin line underneath only reports real reading progress. It moves backward when you scroll upward, and never acts as a scrubber.",
+        "tone": "light"
+      },
+      {
+        "id": "details",
+        "label": "Details",
+        "shortLabel": "Refine",
+        "title": "Keep the reader in control.",
+        "body": "A new destination replaces the previous one. Wheel, touch and scrolling keys interrupt the transition. Keyboard focus arrives with the content; reduced motion moves there immediately.",
+        "tone": "dark"
+      }
+    ],
+    "initialIndex": 0,
+    "theme": "auto",
+    "accentColor": "#2447d8",
+    "fontSize": 14,
+    "mobileFontSize": 13,
+    "fontWeight": 350,
+    "gap": 28,
+    "padding": 32,
+    "rowHeight": 44,
+    "lineWidth": 1,
+    "railGap": 7,
+    "sectionHeight": 480,
+    "readingOffset": 24,
+    "fadeOutMs": 140
+  }
+}

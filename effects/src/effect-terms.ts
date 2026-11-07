@@ -1,6 +1,10 @@
+import {skiperDefinitions} from './skiper-effects';
 /** Reviewable editorial metadata. IDs and serialized motion configs never change here. */
 export type EffectTerm={label:string;english:string;aliases:string[]};
 export const effectTerms:Record<string,EffectTerm>={
+ ...Object.fromEntries(skiperDefinitions.map(d=>[d.id,{label:d.title,english:d.titleEn,aliases:["Skiper UI","skiper"+d.number,"skiper "+d.number,d.titleEn]}])),
+ 'mirrored-card-stack':{label:'镜像抽出卡片',english:'Mirrored Card Stack',aliases:['镜像卡片','对称抽出','短甩卡片','卡片堆叠','Skiper 48','Carousel_002','mirrored stack']},
+ 'page-turn-cards':{label:'翻页卡片',english:'Page Turn Cards',aliases:['灰阶翻页','独立卡片翻转','刚性翻页','page turn','Skiper 50','Carousel_004']},
  'liquid-glass-logo':{label:'液态玻璃 Logo',english:'Liquid Glass Logo',aliases:['ReactDrops','liquid glass logo','玻璃标志','水滴显形','Logo reveal','品牌显形','液滴Logo','折射字标']},
  'chromatic-button':{label:'流彩按钮',english:'Chromatic Button',aliases:['ReactDrops','chromatic','虹彩按钮','球面投影','流彩','彩色反射','彩色按钮','渐变按钮']},
  'topographic-flow':{label:'流动等高线',english:'Topographic Flow',aliases:['ReactDrops','topographic','contour','地形','测绘','等高线','高程','地形流动','survey']},
@@ -35,6 +39,7 @@ export const effectTerms:Record<string,EffectTerm>={
  'glass-folder':{label:'磨砂文件夹',english:'Glass Folder',aliases:['玻璃文件夹','文件夹展开','Folder component','foldercomponent','Rare UI Folder']},
  'scroll-progress':{label:'阅读进度胶囊',english:'Scroll Progress',aliases:['滚动进度指示器','阅读进度','章节胶囊','scrollprogressindicator','Rare UI Scroll Progress']},
  'hook-sidebar':{label:'钩线侧栏',english:'Hook Sidebar',aliases:['钩形侧栏','侧边导航','虚线侧栏','hooksidebar','Rare UI Hook Sidebar']},
+ 'chapter-progress-nav':{label:'章节进度导航',english:'Chapter Progress Navigation',aliases:['顶部章节','真实阅读进度','章节细线','chapter navigation','chapter progress','reading navigation']},
  'rail-toc':{label:'纸飞机目录',english:'Rail TOC',aliases:['轨道目录','文章目录','阅读进度','层级目录','table of contents','railtoc','Rare UI Rail TOC']},
  'duration-picker':{label:'时长选择器',english:'Duration Picker',aliases:['时长输入','小时分钟','时间选择','duration input','Rare UI','durationpicker']},
  'album-rail':{label:'唱片轨道',english:'Album Rail',aliases:['专辑封套','黑胶唱片','唱片封面','唱片架','唱片扇形','vinyl','album']},
@@ -73,5 +78,5 @@ export const retiredEffectIds=new Set([
  'ripple','pointer','minimize','workflow','proximity','three-finger','hotcorner-upload','hotcorner-sleep',
  'pointcloud','tap','press','nav-label','image-zoom','image-flight','scroll-mask',
  'message','submit','grid-collapse','border-lines','page-swap','news-morph','divider-merge','arrow','accordion',
- 'breality-sheet','toast','wave','switch','spinner','progress','expandable-sidebar','app-orbit',
+ 'gooey-wordmark','breality-sheet','toast','wave','switch','spinner','progress','expandable-sidebar','app-orbit','skiper-77','skiper-78','skiper-50','skiper-75',
 ]);

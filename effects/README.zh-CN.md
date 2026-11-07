@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文**
 
-包含当前可见目录的 48 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
+包含当前可见目录的 62 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
 
 [在线编辑器](https://tuneshape.kai-nex.com/)
 
@@ -29,7 +29,6 @@ pnpm build
 | hook-sidebar | [Hook Sidebar](examples/hook-sidebar/README.md) | [钩线侧栏](examples/hook-sidebar/README.zh-CN.md) |
 | rail-toc | [Rail TOC](examples/rail-toc/README.md) | [纸飞机目录](examples/rail-toc/README.zh-CN.md) |
 | card-morph | [Card Expansion](examples/card-morph/README.md) | [卡片展开](examples/card-morph/README.zh-CN.md) |
-| gooey-wordmark | [Gooey Wordmark](examples/gooey-wordmark/README.md) | [液态交互字标](examples/gooey-wordmark/README.zh-CN.md) |
 | typewriter-text | [Typewriter Text](examples/typewriter-text/README.md) | [逐字打出](examples/typewriter-text/README.zh-CN.md) |
 | soft-blur-in | [Soft Blur In](examples/soft-blur-in/README.md) | [柔焦入场](examples/soft-blur-in/README.zh-CN.md) |
 | short-slide-down | [Short Slide Down](examples/short-slide-down/README.md) | [落词堆叠](examples/short-slide-down/README.zh-CN.md) |
@@ -66,7 +65,22 @@ pnpm build
 | topographic-flow | [Topographic Flow](examples/topographic-flow/README.md) | [流动等高线](examples/topographic-flow/README.zh-CN.md) |
 | chromatic-button | [Chromatic Button](examples/chromatic-button/README.md) | [流彩按钮](examples/chromatic-button/README.zh-CN.md) |
 | liquid-glass-logo | [Liquid Glass Logo](examples/liquid-glass-logo/README.md) | [液态玻璃 Logo](examples/liquid-glass-logo/README.zh-CN.md) |
+| skiper-106 | [Smooth Caret Input](examples/skiper-106/README.md) | [平滑光标输入框](examples/skiper-106/README.zh-CN.md) |
+| skiper-46 | [Next.js Gooey Menu](examples/skiper-46/README.md) | [黏连状态菜单](examples/skiper-46/README.zh-CN.md) |
+| skiper-98 | [Vertical Tooltip Menu](examples/skiper-98/README.md) | [竖向裁切提示菜单](examples/skiper-98/README.zh-CN.md) |
+| skiper-92 | [Vercel Command Search](examples/skiper-92/README.md) | [变形命令搜索](examples/skiper-92/README.zh-CN.md) |
+| skiper-48 | [Card Swipe Carousel](examples/skiper-48/README.md) | [卡片堆叠滑动轮播](examples/skiper-48/README.zh-CN.md) |
+| skiper-91 | [Elastic Video Player](examples/skiper-91/README.md) | [弹性拖动视频播放器](examples/skiper-91/README.zh-CN.md) |
+| skiper-81 | [AI Multi Mode Input](examples/skiper-81/README.md) | [AI 多模式输入框](examples/skiper-81/README.zh-CN.md) |
+| skiper-82 | [Rainbow Send Input](examples/skiper-82/README.md) | [彩虹发送输入框](examples/skiper-82/README.zh-CN.md) |
+| skiper-83 | [Integration Mention Input](examples/skiper-83/README.md) | [集成提及输入框](examples/skiper-83/README.zh-CN.md) |
+| skiper-41 | [Progressive Blur](examples/skiper-41/README.md) | [渐进模糊阅读](examples/skiper-41/README.zh-CN.md) |
+| skiper-43 | [Vercel Tooltip](examples/skiper-43/README.md) | [Vercel 图标提示栏](examples/skiper-43/README.zh-CN.md) |
+| skiper-56 | [Devouring Details Sign In](examples/skiper-56/README.md) | [粒子消散输入](examples/skiper-56/README.zh-CN.md) |
+| mirrored-card-stack | [Mirrored Card Stack](examples/mirrored-card-stack/README.md) | [镜像抽出卡片](examples/mirrored-card-stack/README.zh-CN.md) |
+| page-turn-cards | [Page Turn Cards](examples/page-turn-cards/README.md) | [翻页卡片](examples/page-turn-cards/README.zh-CN.md) |
+| chapter-progress-nav | [Chapter Progress Navigation](examples/chapter-progress-nav/README.md) | [章节进度导航](examples/chapter-progress-nav/README.zh-CN.md) |
 
 ## 许可与范围
 
-TuneShape 自有代码采用 MIT；第三方改编与字体保留其署名和许可，详见 THIRD_PARTY_NOTICES.txt。个人头像和品牌图形替换为通用原创图形。本包公开动效渲染源码，不包含完整网页编辑器、部署文件、工作记录或账号验证文件。
+TuneShape 自有代码采用 MIT；第三方改编与字体保留其署名和许可，详见 THIRD_PARTY_NOTICES.txt。个人头像、产品和品牌图形替换为通用原创图形，提示音与视频使用原创演示素材。本包公开动效渲染源码，不包含完整网页编辑器、部署文件、工作记录或账号验证文件。

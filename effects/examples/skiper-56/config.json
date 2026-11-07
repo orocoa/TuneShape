@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "skiper-56",
+  "durationMs": 500,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "skiper": {
+    "placeholder": "yo@gxuri.me",
+    "defaultValue": "",
+    "fontSize": 60,
+    "inputWidth": 550,
+    "particleSize": 1,
+    "scatter": 26,
+    "backgroundColor": "#f5f4f3",
+    "textColor": "#000000",
+    "placeholderColor": "#808080",
+    "buttonLabel": "→"
+  }
+}

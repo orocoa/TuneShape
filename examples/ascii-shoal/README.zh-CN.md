@@ -35,7 +35,7 @@ npm run build
 - `backgroundColor`、`inkColor`、`opacity`、`gridOpacity`、`wakeOpacity`：颜色与绘制强度。
 - `characters`、`seed`：自定义字符序列与可重复场景种子。
 
-`update()` 接受局部设置；`play()` 接续，`pause()` 暂停，`restart()` 重播，`destroy()` 清理。运行时可传入 `enabled`、`paused`、`reduced`、`speed`、`durationMs`、`delayMs`、`loop`、`onRunning`。系统减少动态效果可通过 `matchMedia` 同步给 `reduced`；后台或离开可视区会停止请求动画帧。
+`update()` 接受局部设置；`play()` 接续，`pause()` 暂停，`restart()` 重播，`destroy()` 清理。运行时可传入 `enabled`、`paused`、`reduced`、`speed`、`durationMs`、`delayMs`、`loop`、`onRunning`。系统减少动态效果可通过 `matchMedia` 同步给 `reduced`；后台或离开可视区会停止请求动画帧。鱼群按自己的路径游动，不受鼠标移动或点击影响；旧配置中的 `interactive` 字段保留兼容，始终忽略。
 
 采用解析形状与周期路径，没有捕食或群体寻路模拟。目标帧率为 30 fps，并限制采样格数量和画布像素面积；大屏下密度可能触及性能上限。
 

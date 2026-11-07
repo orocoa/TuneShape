@@ -1,0 +1,44 @@
+@import url('../page-turn-vendor/swiper/swiper.css');
+@property --fold-progress{syntax:'<number>';inherits:true;initial-value:0}
+/* Independent rigid cards, with a small timing lead and a narrow projected gap.
+   Position corrections move whole cards; their surfaces are never joined. */
+.ts-page-turn{
+ --fold-progress:0;--fold-w:500;--fold-h:600;
+ --turn-camera:2.8;--turn-retreat:.10;--turn-ease:cubic-bezier(.42,0,.58,1);
+ --light-loss:.18;--light-side:.018;
+ --turn-left:clamp(0,calc(var(--fold-progress) / .96),1);
+ --turn-right:clamp(0,calc((1 - var(--fold-progress)) / .96),1);
+ --angle-left:calc(var(--turn-left) * 100deg);--angle-right:calc(var(--turn-right) * 100deg);
+ --turn-bulge:sin(var(--fold-progress) * 180deg);
+ --plane-z-left:calc(.4 * var(--turn-left) + var(--turn-retreat) * var(--turn-bulge));
+ --plane-z-right:calc(.4 * var(--turn-right) + var(--turn-retreat) * var(--turn-bulge));
+ --projection-left:calc(var(--turn-camera) / (var(--turn-camera) + var(--plane-z-left) + sin(var(--angle-left))));
+ --projection-right:calc(var(--turn-camera) / (var(--turn-camera) + var(--plane-z-right) + sin(var(--angle-right))));
+ --edge-left:calc(.5 + (-.05 * var(--turn-left) + cos(var(--angle-left)) - .5) * var(--projection-left));
+ --edge-right:calc(.5 + (.5 + .05 * var(--turn-right) - cos(var(--angle-right))) * var(--projection-right));
+ --edge-gap:calc(clamp(3,calc(var(--fold-w) * .012),6) / var(--fold-w) * var(--turn-bulge));
+ --contact-ramp:clamp(0,calc(min(var(--fold-progress),calc(1 - var(--fold-progress))) / .035),1);
+ --contact-weight:calc(var(--contact-ramp) * var(--contact-ramp) * (3 - 2 * var(--contact-ramp)));
+ --contact-correction:calc((var(--edge-left) - var(--edge-right) + var(--edge-gap)) * .5 * var(--contact-weight));
+ position:absolute;inset:0;width:100%;height:100%;transform:none!important;perspective:calc(var(--fold-w) * var(--turn-camera) * 1px);perspective-origin:50% 50%;overflow:visible;touch-action:pan-y;user-select:none;-webkit-user-select:none;outline:none;cursor:grab;transition-property:--fold-progress;transition-duration:0ms;transition-timing-function:var(--turn-ease)
+}
+.ts-page-turn:focus-visible{outline:2px solid #555;outline-offset:-3px}
+.ts-page-turn[data-gesture=dragging]{cursor:grabbing}
+.ts-page-turn .swiper-wrapper{translate:none;transform:none!important;transform-style:preserve-3d}
+.ts-page-turn .swiper-slide{width:100%;height:100%;border-radius:0!important;box-shadow:none;opacity:1;backface-visibility:hidden;visibility:hidden;pointer-events:none;background:transparent;overflow:hidden;transition:none!important}
+.ts-page-turn .swiper-slide[data-fold-role]:not([data-fold-role=hidden]){visibility:visible;pointer-events:auto}
+.ts-page-turn .swiper-slide[data-fold-role=single]{transform:translate3d(calc(-1px * var(--fold-slot)),0,0)}
+.ts-page-turn .swiper-slide[data-fold-role=left]{transform-origin:left center;transform:translate3d(calc(-1px * var(--fold-slot) - var(--fold-w) * 1px * (.05 * var(--turn-left) + var(--contact-correction) / var(--projection-left))),0,calc(var(--fold-w) * -1px * var(--plane-z-left))) rotateY(var(--angle-left));opacity:clamp(0,calc((1 - var(--turn-left)) * 50),1)}
+.ts-page-turn .swiper-slide[data-fold-role=right]{transform-origin:right center;transform:translate3d(calc(-1px * var(--fold-slot) + var(--fold-w) * 1px * (.05 * var(--turn-right) + var(--contact-correction) / var(--projection-right))),0,calc(var(--fold-w) * -1px * var(--plane-z-right))) rotateY(calc(-1 * var(--angle-right)));opacity:clamp(0,calc((1 - var(--turn-right)) * 50),1)}
+.ts-page-turn .fold-shade{position:absolute;inset:0;background:#000;pointer-events:none;opacity:0}
+/* One fixed soft light: both faces darken with angle; the right-facing surface
+   turns slightly away from the key. Keep front-facing exposure unchanged. */
+.ts-page-turn [data-fold-role=left] .fold-shade{opacity:clamp(0,calc(var(--light-loss) * (1 - max(0,cos(var(--angle-left)))) + var(--light-side) * sin(var(--angle-left))),.2)}
+.ts-page-turn [data-fold-role=right] .fold-shade{opacity:clamp(0,calc(var(--light-loss) * (1 - max(0,cos(var(--angle-right)))) - var(--light-side) * sin(var(--angle-right))),.2)}
+.ts-page-turn img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;-webkit-user-drag:none;user-select:none}
+.ts-page-turn,.ts-page-turn .swiper-wrapper{background:transparent}
+@media(prefers-reduced-motion:reduce){.ts-page-turn{transition-duration:0ms!important}}
+.ts-page-turn,.ts-page-turn .swiper-wrapper{background:transparent}
+.ts-page-turn .tspt-face{display:grid;place-items:center;width:100%;height:100%;background:var(--card-gray,#424242);color:#fff;font:400 clamp(32px,8vw,48px)/1 ui-sans-serif,system-ui,sans-serif;font-variant-numeric:tabular-nums;pointer-events:none}
+.ts-page-turn .tspt-live{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.ts-page-turn *{box-sizing:border-box}

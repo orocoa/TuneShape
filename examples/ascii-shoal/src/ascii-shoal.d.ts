@@ -10,6 +10,7 @@ export interface AsciiShoalOptions {
   opacity: number;
   gridOpacity: number;
   wakeOpacity: number;
+  /** @deprecated Kept for compatibility; pointer input is ignored. */
   interactive: boolean;
   characters: string;
   seed: number;

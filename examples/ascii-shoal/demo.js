@@ -14,13 +14,12 @@ function reflect(){
  }
  document.querySelectorAll('[data-density]').forEach(button=>button.setAttribute('aria-pressed',String(Number(button.dataset.density)===options.density)));
  document.getElementById('transport').textContent=paused?'Play':'Pause';
- document.getElementById('motion-note').textContent=motion.matches?'Reduced motion: showing a still frame.':'Move your pointer through the water.';
+ document.getElementById('motion-note').textContent=motion.matches?'Reduced motion: showing a still frame.':'The shoal follows its own rhythm.';
  document.getElementById('transport').disabled=motion.matches;
 }
 for(const key of rangeKeys)document.getElementById(key).addEventListener('input',event=>{options[key]=Number(event.target.value);update();reflect()});
 document.querySelectorAll('[data-density]').forEach(button=>button.addEventListener('click',()=>{options.density=Number(button.dataset.density);update();reflect()}));
 for(const key of ['backgroundColor','inkColor'])document.getElementById(key).addEventListener('input',event=>{options[key]=event.target.value;update()});
-document.getElementById('interactive').addEventListener('change',event=>{options.interactive=event.target.checked;update()});
 document.getElementById('transport').addEventListener('click',()=>{paused=!paused;update();reflect()});
 document.getElementById('restart').addEventListener('click',()=>{engine.restart();if(paused)engine.pause()});
 document.getElementById('collapse').addEventListener('click',event=>{const controls=document.getElementById('controls');controls.hidden=!controls.hidden;event.currentTarget.setAttribute('aria-expanded',String(!controls.hidden));event.currentTarget.setAttribute('aria-label',controls.hidden?'Expand controls':'Collapse controls');event.currentTarget.textContent=controls.hidden?'+':'−'});

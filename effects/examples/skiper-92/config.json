@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "skiper-92",
+  "durationMs": 500,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "skiper": {
+    "placeholder": "Find...",
+    "shortcut": "F",
+    "suggestions": "Calendar\nSearch Emoji\nCalculator\nDocuments\nImages\nMusic",
+    "settings": "Profile\nBilling\nSettings\nNotifications\nMessages\nSecurity",
+    "help": "FAQ\nContact Support",
+    "docs": "Documentation\nTutorials",
+    "panelWidth": 384,
+    "listHeight": 300,
+    "background": "#f5f4f3",
+    "panelColor": "#f5f4f3",
+    "textColor": "#121212"
+  }
+}

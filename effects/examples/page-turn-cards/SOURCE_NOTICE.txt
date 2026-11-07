@@ -1,0 +1,5 @@
+User-delivered gray page-turn component; Skiper 50 / Carousel_004 by @gurvinder-singh02
+
+Skiper UI attribution retained; Swiper 14.4.0 MIT. See bundled notices.
+
+Rigid-card handoff and geometry from the reviewed delivery. Only gray cards and numbers; no portfolio data, images or private fonts.

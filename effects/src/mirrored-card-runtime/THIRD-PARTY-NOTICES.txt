@@ -1,0 +1,9 @@
+Skiper48 / Carousel_002 — Skiper UI
+https://skiper-ui.com/v1/skiper48
+Author: @gurvinder-singh02 — https://gxuri.me
+Adapted from the example supplied by the user. The free version permits personal/commercial use and modification with attribution to Skiper UI. Retain this notice and visible attribution in distributed examples.
+
+Swiper 14.4.0 — https://swiperjs.com/
+Copyright (c) 2019 Vladimir Kharlampidi. MIT License; full text in vendor/swiper/LICENSE.
+
+This distribution includes only Swiper's required ESM dependency graph and CSS, preserved byte-for-byte from the pinned package. It does not include Motion, React, original Skiper artwork, portfolio images, fonts, project data or personal website routing.

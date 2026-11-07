@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "skiper-106",
+  "durationMs": 500,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "skiper": {
+    "placeholder": "smooth input",
+    "comparisonPlaceholder": "normal input",
+    "initialValue": "",
+    "inputType": "text",
+    "fontSize": 24,
+    "fieldWidth": 420,
+    "stiffness": 500,
+    "damping": 30,
+    "mass": 0.5,
+    "background": "#f5f4f3",
+    "fieldBackground": "#fcfcfc",
+    "textColor": "#121212"
+  }
+}

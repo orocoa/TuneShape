@@ -18,7 +18,7 @@ export const defaults = Object.freeze({
   opacity: 0.9,
   gridOpacity: 0.04,
   wakeOpacity: 0,
-  interactive: true,
+  interactive: false,
   characters: '.:;=+*oO#',
   seed: 7,
 });
@@ -57,7 +57,7 @@ export function normalizeOptions(input = {}) {
     opacity: finite(o.opacity, defaults.opacity, 0, 1),
     gridOpacity: finite(o.gridOpacity, defaults.gridOpacity, 0, 0.2),
     wakeOpacity: finite(o.wakeOpacity, defaults.wakeOpacity, 0, 1),
-    interactive: typeof o.interactive === 'boolean' ? o.interactive : defaults.interactive,
+    interactive: false, // Retained for configuration compatibility; pointer input is ignored.
     characters: characters || defaults.characters,
     seed: Math.trunc(finite(o.seed, defaults.seed, -2147483648, 2147483647)),
   };
@@ -155,38 +155,25 @@ export function createScene(seed = defaults.seed) {
   return Object.freeze({ seed, sharks: Object.freeze(sharks), schools: Object.freeze(schools), fish: Object.freeze(fish) });
 }
 
-function avoid(position, pointer, width, height, strength) {
-  if (!pointer || !(pointer.energy > 0)) return position;
-  const dx = position.x - pointer.x;
-  const dy = position.y - pointer.y;
-  const radius = Math.min(width, height) * 0.28;
-  const d2 = dx * dx + dy * dy;
-  const amount = Math.exp(-d2 / (radius * radius)) * pointer.energy * strength;
-  // A softened denominator avoids a discontinuity when the cursor meets a center.
-  const divisor = Math.sqrt(d2 + radius * radius * 0.035);
-  return { x: position.x + dx / divisor * radius * amount, y: position.y + dy / divisor * radius * amount };
-}
-
-function sharkPoint(shark, time, width, height, pointer) {
+function sharkPoint(shark, time, width, height) {
   const a = shark.phase + time * shark.drift * shark.direction;
   const p = {
     x: width * (shark.centerX + shark.orbitX * Math.cos(a) + 0.035 * Math.sin(2 * a + shark.phase)),
     y: height * (shark.centerY + shark.orbitY * Math.sin(a) + 0.026 * Math.cos(3 * a - shark.phase)),
   };
-  return avoid(p, pointer, width, height, 0.47);
+  return p;
 }
 
 /** Pure scene sampling: density and glyphScale cannot influence swimming paths. */
-export function sampleScene(scene, time, width, height, options = defaults, pointer = null) {
+export function sampleScene(scene, time, width, height, options = defaults, _pointer = null) {
   const settings = normalizeOptions(options);
   time = finite(time, 0, 0, 1e10);
   width = finite(width, 1, 1, 16384);
   height = finite(height, 1, 1, 16384);
   const short = Math.min(width, height);
-  pointer = settings.interactive ? pointer : null;
   const sharks = scene.sharks.slice(0, settings.sharkCount).map((shark) => {
-    const p = sharkPoint(shark, time, width, height, pointer);
-    const next = sharkPoint(shark, time + 0.025, width, height, pointer);
+    const p = sharkPoint(shark, time, width, height);
+    const next = sharkPoint(shark, time + 0.025, width, height);
     return {
       id: shark.id, kind: 'shark', x: p.x, y: p.y,
       angle: Math.atan2(next.y - p.y, next.x - p.x),
@@ -210,10 +197,10 @@ export function sampleScene(scene, time, width, height, options = defaults, poin
     const a = school.angle;
     const localX = fish.localX * school.spread;
     const localY = (fish.localY + Math.sin(time * fish.pulse + fish.phase) * 0.055) * school.spread;
-    const p = avoid({
+    const p = {
       x: school.x + Math.cos(a) * localX - Math.sin(a) * localY,
       y: school.y + Math.sin(a) * localX + Math.cos(a) * localY,
-    }, pointer, width, height, 0.72);
+    };
     return {
       id: fish.id, kind: 'fish', x: p.x, y: p.y,
       angle: a + Math.sin(time * fish.pulse + fish.phase) * 0.11,
@@ -317,7 +304,6 @@ export function createAsciiShoal(host, options = {}, runtime = {}) {
   let raf = 0, lastTick = null, lastPaint = -Infinity, logicalRunning;
   let layout = computeLayout(1, 1), field = new Float32Array(1), tones = new Float32Array(1);
   let poses = { sharks: [], fish: [] };
-  const pointer = { x: -10000, y: -10000, targetX: -10000, targetY: -10000, energy: 0, targetEnergy: 0 };
   const canvas = doc.createElement('canvas');
   canvas.setAttribute('aria-hidden', 'true');
   canvas.dataset.asciiShoal = '';
@@ -359,8 +345,7 @@ export function createAsciiShoal(host, options = {}, runtime = {}) {
   function paint() {
     if (destroyed || !hasSize) return;
     const { width, height, columns, rows, cellWidth, cellHeight } = layout;
-    const effectivePointer = control.reduced ? null : pointer;
-    poses = sampleScene(scene, time, width, height, settings, effectivePointer);
+    poses = sampleScene(scene, time, width, height, settings);
     rasterize(layout, [...poses.sharks, ...poses.fish], settings, field, tones);
     context.setTransform(layout.dpr, 0, 0, layout.dpr, 0, 0);
     context.globalAlpha = 1;
@@ -431,10 +416,6 @@ export function createAsciiShoal(host, options = {}, runtime = {}) {
     }
     const active = Math.max(0, elapsed - control.delayMs);
     time += (active - previousActive) / 1000 * settings.speed;
-    const ease = 1 - Math.exp(-dt * 6.5);
-    pointer.x += (pointer.targetX - pointer.x) * ease;
-    pointer.y += (pointer.targetY - pointer.y) * ease;
-    pointer.energy += (pointer.targetEnergy - pointer.energy) * ease;
     if (now - lastPaint >= FRAME_MS - 0.2 || completed) {
       paint();
       lastPaint = now;
@@ -456,22 +437,8 @@ export function createAsciiShoal(host, options = {}, runtime = {}) {
     sync();
   }
 
-  function pointerMove(event) {
-    if (!canAnimate() || !settings.interactive) return;
-    const rect = canvas.getBoundingClientRect();
-    const x = (event.clientX - rect.left) * layout.width / Math.max(1, rect.width);
-    const y = (event.clientY - rect.top) * layout.height / Math.max(1, rect.height);
-    if (pointer.energy < 0.001) { pointer.x = x; pointer.y = y; }
-    pointer.targetX = x;
-    pointer.targetY = y;
-    pointer.targetEnergy = 1;
-  }
-  function pointerLeave() { pointer.targetEnergy = 0; }
   function visibilityChange() { sync(); }
 
-  host.addEventListener('pointermove', pointerMove, { passive: true });
-  host.addEventListener('pointerleave', pointerLeave, { passive: true });
-  host.addEventListener('pointercancel', pointerLeave, { passive: true });
   doc.addEventListener('visibilitychange', visibilityChange);
   const resizeObserver = typeof win.ResizeObserver === 'function' ? new win.ResizeObserver(resize) : null;
   const intersectionObserver = typeof win.IntersectionObserver === 'function' ? new win.IntersectionObserver((entries) => {
@@ -495,12 +462,6 @@ export function createAsciiShoal(host, options = {}, runtime = {}) {
         time = 0;
         elapsed = 0;
         completed = false;
-        pointer.energy = 0;
-        pointer.targetEnergy = 0;
-      }
-      if (!settings.interactive || control.reduced) {
-        pointer.energy = 0;
-        pointer.targetEnergy = 0;
       }
       // Keep time and deterministic descriptors intact on sampling/style edits.
       resize();
@@ -527,8 +488,6 @@ export function createAsciiShoal(host, options = {}, runtime = {}) {
       completed = false;
       manualPaused = false;
       control.paused = false;
-      pointer.energy = 0;
-      pointer.targetEnergy = 0;
       lastPaint = -Infinity;
       paint();
       sync();
@@ -540,9 +499,6 @@ export function createAsciiShoal(host, options = {}, runtime = {}) {
       resizeObserver?.disconnect();
       intersectionObserver?.disconnect();
       if (!resizeObserver) win.removeEventListener('resize', resize);
-      host.removeEventListener('pointermove', pointerMove);
-      host.removeEventListener('pointerleave', pointerLeave);
-      host.removeEventListener('pointercancel', pointerLeave);
       doc.removeEventListener('visibilitychange', visibilityChange);
       canvas.remove();
       writeState();

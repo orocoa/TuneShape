@@ -1,0 +1,5 @@
+Skiper 48 / Carousel_002 · https://skiper-ui.com/v1/skiper48 · @gurvinder-singh02; user-delivered mirrored 1.0.2
+
+Skiper UI attribution required and retained visibly; Swiper 14.4.0 MIT. See bundled notices.
+
+The original top card extracts in either direction. Original C2 path, material and springs are retained. Runtime scales that existing clock. Only locally generated gray-number SVGs; no portfolio photos, fonts or routing.

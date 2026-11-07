@@ -43,7 +43,7 @@ TuneShape，中文名「随形」，是面向设计师与开发者的 UI 动效�
 
 ## 关于本仓库
 
-当前可见目录中的 **48 个动效渲染源码均已公开**，每项提供默认配置、可运行页面和中英文说明。[运行全部示例](effects/README.zh-CN.md) · [机器可读清单](effects/catalog.json) · [动效说明](https://tuneshape.kai-nex.com/effects/)
+当前可见目录中的 **62 个动效渲染源码均已公开**，每项提供默认配置、可运行页面和中英文说明。[运行全部示例](effects/README.zh-CN.md) · [机器可读清单](effects/catalog.json) · [动效说明](https://tuneshape.kai-nex.com/effects/)
 
 ```sh
 git clone https://github.com/orocoa/TuneShape.git
@@ -65,7 +65,6 @@ pnpm dev
 | hook-sidebar | [Hook Sidebar](effects/examples/hook-sidebar/README.md) | [钩线侧栏](effects/examples/hook-sidebar/README.zh-CN.md) |
 | rail-toc | [Rail TOC](effects/examples/rail-toc/README.md) | [纸飞机目录](effects/examples/rail-toc/README.zh-CN.md) |
 | card-morph | [Card Expansion](effects/examples/card-morph/README.md) | [卡片展开](effects/examples/card-morph/README.zh-CN.md) |
-| gooey-wordmark | [Gooey Wordmark](effects/examples/gooey-wordmark/README.md) | [液态交互字标](effects/examples/gooey-wordmark/README.zh-CN.md) |
 | typewriter-text | [Typewriter Text](effects/examples/typewriter-text/README.md) | [逐字打出](effects/examples/typewriter-text/README.zh-CN.md) |
 | soft-blur-in | [Soft Blur In](effects/examples/soft-blur-in/README.md) | [柔焦入场](effects/examples/soft-blur-in/README.zh-CN.md) |
 | short-slide-down | [Short Slide Down](effects/examples/short-slide-down/README.md) | [落词堆叠](effects/examples/short-slide-down/README.zh-CN.md) |
@@ -76,7 +75,7 @@ pnpm dev
 | encrypted-text | [Encrypted Text](effects/examples/encrypted-text/README.md) | [逐字解码](effects/examples/encrypted-text/README.zh-CN.md) |
 | gooey-input | [Gooey Input](effects/examples/gooey-input/README.md) | [黏性搜索输入](effects/examples/gooey-input/README.zh-CN.md) |
 | flip-words | [Flip Words](effects/examples/flip-words/README.md) | [词语翻替](effects/examples/flip-words/README.zh-CN.md) |
-| soap-bubble | [Soap Bubble UI](effects/examples/soap-bubble/README.md) | [肥皂泡控件](effects/examples/soap-bubble/README.zh-CN.md) |
+| liquid-carousel | [Liquid Image Carousel](effects/examples/liquid-carousel/README.md) | [液态图片轮播](effects/examples/liquid-carousel/README.zh-CN.md) |
 | coffee-selector | [Selector](effects/examples/coffee-selector/README.md) | [选择器](effects/examples/coffee-selector/README.zh-CN.md) |
 | rounded-checks | [Rounded Checkboxes](effects/examples/rounded-checks/README.md) | [圆角复选框](effects/examples/rounded-checks/README.zh-CN.md) |
 | mini-sidebar | [Page Navigation](effects/examples/mini-sidebar/README.md) | [页面导航](effects/examples/mini-sidebar/README.zh-CN.md) |
@@ -84,7 +83,6 @@ pnpm dev
 | text-scramble | [Local Text Scramble and Recovery](effects/examples/text-scramble/README.md) | [局部字符扰动与恢复](effects/examples/text-scramble/README.zh-CN.md) |
 | glyph-wall | [Glyph Decode Wall](effects/examples/glyph-wall/README.md) | [文字解码墙](effects/examples/glyph-wall/README.zh-CN.md) |
 | hover-preview | [Hover Preview](effects/examples/hover-preview/README.md) | [文字悬停图片](effects/examples/hover-preview/README.zh-CN.md) |
-| liquid-carousel | [Liquid Image Carousel](effects/examples/liquid-carousel/README.md) | [液态图片轮播](effects/examples/liquid-carousel/README.zh-CN.md) |
 | album-rail | [Album Rail](effects/examples/album-rail/README.md) | [唱片轨道](effects/examples/album-rail/README.zh-CN.md) |
 | orbit-reel | [Orbit Reel](effects/examples/orbit-reel/README.md) | [卡片转轮](effects/examples/orbit-reel/README.zh-CN.md) |
 | elastic-reel | [Elastic Reel](effects/examples/elastic-reel/README.md) | [弹性相片卷](effects/examples/elastic-reel/README.zh-CN.md) |
@@ -98,10 +96,28 @@ pnpm dev
 | watercolor-flow | [Watercolor Flow](effects/examples/watercolor-flow/README.md) | [细度水彩融合](effects/examples/watercolor-flow/README.zh-CN.md) |
 | ascii-sharks | [ASCII Sharks](effects/examples/ascii-sharks/README.md) | [ASCII 鲨鱼群](effects/examples/ascii-sharks/README.zh-CN.md) |
 | particle-tide | [Particle Tide](effects/examples/particle-tide/README.md) | [粒子海浪](effects/examples/particle-tide/README.zh-CN.md) |
+| ascii-wave | [ASCII Wave Animation](effects/examples/ascii-wave/README.md) | [ASCII 波形动画](effects/examples/ascii-wave/README.zh-CN.md) |
+| soap-bubble | [Soap Bubble UI](effects/examples/soap-bubble/README.md) | [肥皂泡控件](effects/examples/soap-bubble/README.zh-CN.md) |
 | topographic-flow | [Topographic Flow](effects/examples/topographic-flow/README.md) | [流动等高线](effects/examples/topographic-flow/README.zh-CN.md) |
 | chromatic-button | [Chromatic Button](effects/examples/chromatic-button/README.md) | [流彩按钮](effects/examples/chromatic-button/README.zh-CN.md) |
 | liquid-glass-logo | [Liquid Glass Logo](effects/examples/liquid-glass-logo/README.md) | [液态玻璃 Logo](effects/examples/liquid-glass-logo/README.zh-CN.md) |
-| ascii-wave | [ASCII Wave Animation](effects/examples/ascii-wave/README.md) | [ASCII 波形动画](effects/examples/ascii-wave/README.zh-CN.md) |
+| skiper-106 | [Smooth Caret Input](effects/examples/skiper-106/README.md) | [平滑光标输入框](effects/examples/skiper-106/README.zh-CN.md) |
+| skiper-46 | [Next.js Gooey Menu](effects/examples/skiper-46/README.md) | [黏连状态菜单](effects/examples/skiper-46/README.zh-CN.md) |
+| skiper-98 | [Vertical Tooltip Menu](effects/examples/skiper-98/README.md) | [竖向裁切提示菜单](effects/examples/skiper-98/README.zh-CN.md) |
+| skiper-92 | [Vercel Command Search](effects/examples/skiper-92/README.md) | [变形命令搜索](effects/examples/skiper-92/README.zh-CN.md) |
+| skiper-48 | [Card Swipe Carousel](effects/examples/skiper-48/README.md) | [卡片堆叠滑动轮播](effects/examples/skiper-48/README.zh-CN.md) |
+| skiper-91 | [Elastic Video Player](effects/examples/skiper-91/README.md) | [弹性拖动视频播放器](effects/examples/skiper-91/README.zh-CN.md) |
+| skiper-81 | [AI Multi Mode Input](effects/examples/skiper-81/README.md) | [AI 多模式输入框](effects/examples/skiper-81/README.zh-CN.md) |
+| skiper-82 | [Rainbow Send Input](effects/examples/skiper-82/README.md) | [彩虹发送输入框](effects/examples/skiper-82/README.zh-CN.md) |
+| skiper-83 | [Integration Mention Input](effects/examples/skiper-83/README.md) | [集成提及输入框](effects/examples/skiper-83/README.zh-CN.md) |
+| skiper-41 | [Progressive Blur](effects/examples/skiper-41/README.md) | [渐进模糊阅读](effects/examples/skiper-41/README.zh-CN.md) |
+| skiper-43 | [Vercel Tooltip](effects/examples/skiper-43/README.md) | [Vercel 图标提示栏](effects/examples/skiper-43/README.zh-CN.md) |
+| skiper-56 | [Devouring Details Sign In](effects/examples/skiper-56/README.md) | [粒子消散输入](effects/examples/skiper-56/README.zh-CN.md) |
+| mirrored-card-stack | [Mirrored Card Stack](effects/examples/mirrored-card-stack/README.md) | [镜像抽出卡片](effects/examples/mirrored-card-stack/README.zh-CN.md) |
+| page-turn-cards | [Page Turn Cards](effects/examples/page-turn-cards/README.md) | [翻页卡片](effects/examples/page-turn-cards/README.zh-CN.md) |
+| chapter-progress-nav | [Chapter Progress Navigation](effects/examples/chapter-progress-nav/README.md) | [章节进度导航](effects/examples/chapter-progress-nav/README.zh-CN.md) |
+
+公开示例的个人头像、产品与品牌图形采用通用原创图形，提示音与视频使用原创演示素材；线上编辑器的原始内容保留。
 
 动效包使用与网页相同的渲染组件。完整网页编辑器、部署配置与工作记录不在此包内。仓库原有的三个 React 基础示例和独立 ASCII 鱼群模块继续保留，旧示例的运行说明在下方。
 

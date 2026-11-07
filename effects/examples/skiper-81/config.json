@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "skiper-81",
+  "durationMs": 500,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "skiper": {
+    "placeholder": "Ask Anything",
+    "watermark": "Skiper llm 0.3",
+    "showWatermark": true,
+    "inputWidth": 744,
+    "fontSize": 16,
+    "cornerRadius": 16,
+    "background": "#f1f1f1",
+    "inputColor": "#f9f8f8",
+    "buttonColor": "#f9f8f8",
+    "textColor": "#121212",
+    "accent": "#0ea5e9",
+    "models": "GPT-4o\nClaude 3.5 Sonnet\nGemini Pro\nLlama 3.1",
+    "initialModel": "GPT-4o",
+    "searchDefault": false,
+    "deepDefault": false,
+    "replyText": "I dunnoo 😭",
+    "replyDelay": 1000,
+    "demoText": "Plan a studio"
+  }
+}

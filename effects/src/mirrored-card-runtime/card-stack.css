@@ -1,0 +1,18 @@
+@import url('../page-turn-vendor/swiper/swiper.css');
+@import url('../page-turn-vendor/swiper/modules/effect-cards.css');
+.ts-mirrored-stack{position:relative;isolation:isolate;overflow:visible}
+.ts-mirrored-stack .portfolio-deck{position:absolute;inset:0;width:100%;height:100%;transform:none!important;overflow:visible;touch-action:pan-y;user-select:none;-webkit-user-select:none;outline:none;cursor:grab;isolation:isolate}
+.ts-mirrored-stack .portfolio-deck[data-gesture=pending],.ts-mirrored-stack .portfolio-deck[data-gesture=dragging]{cursor:grabbing}
+.ts-mirrored-stack .deck-surface{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;z-index:1;overflow:visible;pointer-events:none}
+.ts-mirrored-stack .portfolio-deck .swiper-wrapper{translate:none;transform-style:preserve-3d}
+.ts-mirrored-stack .portfolio-deck .swiper-slide{width:100%;height:100%;overflow:visible;border-radius:0;background:transparent;box-shadow:none;transform-origin:center bottom;backface-visibility:hidden;will-change:transform;transition:none!important}
+.ts-mirrored-stack .portfolio-deck .swiper-slide[data-exposed=false]{visibility:hidden}
+.ts-mirrored-stack .portfolio-deck img{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;-webkit-user-drag:none;user-select:none}
+.ts-mirrored-stack .portfolio-deck .swiper-slide-shadow{background:var(--vi-ink,#111);pointer-events:none}
+/* Static shadow kernels: only their opacity and offset change during travel. taste-skill-ignore: moving physical cards only, all opacity is zero at rest. */
+.ts-mirrored-stack .deck-contact-shadow,.ts-mirrored-stack .deck-float-shadow{position:absolute;inset:0;z-index:-1;opacity:0;pointer-events:none}
+.ts-mirrored-stack .deck-contact-shadow{box-shadow:1px 2px 4px rgba(0,0,0,.16)} /* taste-skill-ignore: moving card contact shadow, invisible at rest. */
+.ts-mirrored-stack .deck-float-shadow{box-shadow:0 0 18px rgba(0,0,0,.16)} /* taste-skill-ignore: lifted card cast shadow, invisible at rest. */
+
+.ts-mirrored-stack .sb-live{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.ts-mirrored-stack .portfolio-deck:focus-visible{outline:2px solid currentColor;outline-offset:6px}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "page-turn-cards",
+  "durationMs": 600,
+  "delayMs": 0,
+  "easing": [
+    0.42,
+    0,
+    0.58,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "pageTurnCards": {
+    "cards": [
+      {
+        "id": "1",
+        "label": "1",
+        "color": "#424242"
+      },
+      {
+        "id": "2",
+        "label": "2",
+        "color": "#424242"
+      },
+      {
+        "id": "3",
+        "label": "3",
+        "color": "#424242"
+      },
+      {
+        "id": "4",
+        "label": "4",
+        "color": "#424242"
+      },
+      {
+        "id": "5",
+        "label": "5",
+        "color": "#424242"
+      },
+      {
+        "id": "6",
+        "label": "6",
+        "color": "#424242"
+      }
+    ],
+    "initialIndex": 0,
+    "width": 280,
+    "height": 336,
+    "fontSize": 48
+  }
+}

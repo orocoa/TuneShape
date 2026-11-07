@@ -1,0 +1,3 @@
+Swiper 14.4.0
+https://swiperjs.com/
+Minimal unmodified core module graph; MIT license in LICENSE.

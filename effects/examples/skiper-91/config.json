@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "skiper-91",
+  "durationMs": 500,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "skiper": {
+    "videoUrl": "/video/skiper-91.mp4",
+    "poster": "",
+    "videoHeight": 500,
+    "videoRadius": 32,
+    "panelRadius": 50,
+    "panelColor": "#f1f1f1",
+    "background": "#f1f1f1",
+    "trackColor": "#f5f5f5",
+    "progressColor": "#404040",
+    "markerColor": "#f97316",
+    "railWidth": 400,
+    "barHeight": 6,
+    "stretch": 24,
+    "showTime": true,
+    "muted": true,
+    "volume": 0.8,
+    "loop": false
+  }
+}

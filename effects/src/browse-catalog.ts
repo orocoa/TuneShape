@@ -4,13 +4,13 @@ import {retiredEffectIds} from './effect-terms';
 export type BrowseCategory={key:string;label:string;english:string;symbol:string;featured:string;ids:string[]};
 /** Browse metadata is separate from the category fixtures inside authored effects. */
 const definitions:BrowseCategory[]=[
- {key:'controls',label:'控件',english:'Controls',symbol:'button',featured:'chromatic-button',ids:['chromatic-button','soap-bubble','coffee-selector','basic-button','hover-invert','dropdown','glass-radio','duration-picker','rounded-checks','gooey-input']},
- {key:'navigation',label:'导航',english:'Navigation',symbol:'tabs',featured:'mini-sidebar',ids:['mini-sidebar','expandable-sidebar','scroll-progress','hook-sidebar','rail-toc']},
- {key:'containers',label:'容器',english:'Containers',symbol:'grid',featured:'card-morph',ids:['card-morph','folder','glass-folder']},
+ {key:'controls',label:'控件',english:'Controls',symbol:'button',featured:'chromatic-button',ids:['skiper-106','skiper-56','skiper-81','skiper-83','skiper-82','skiper-92','chromatic-button','soap-bubble','coffee-selector','basic-button','hover-invert','dropdown','glass-radio','duration-picker','rounded-checks','gooey-input']},
+ {key:'navigation',label:'导航',english:'Navigation',symbol:'tabs',featured:'chapter-progress-nav',ids:['skiper-46','skiper-98','skiper-43','skiper-75','mini-sidebar','expandable-sidebar','scroll-progress','hook-sidebar','chapter-progress-nav','rail-toc']},
+ {key:'containers',label:'容器',english:'Containers',symbol:'grid',featured:'page-turn-cards',ids:['page-turn-cards','card-morph','folder','glass-folder']},
  {key:'text',label:'文字',english:'Text',symbol:'text',featured:'liquid-glass-logo',ids:['liquid-glass-logo','gooey-wordmark','text-rise','text-scramble','glyph-wall','encrypted-text','flip-words','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy']},
- {key:'images',label:'图片',english:'Images',symbol:'image',featured:'liquid-carousel',ids:['liquid-carousel','album-rail','elastic-reel','orbit-reel','hover-preview','app-orbit']},
+ {key:'images',label:'图片',english:'Images',symbol:'image',featured:'mirrored-card-stack',ids:['mirrored-card-stack','skiper-48','skiper-50','skiper-78','skiper-77','skiper-91','liquid-carousel','album-rail','elastic-reel','orbit-reel','hover-preview','app-orbit']},
  {key:'indicators',label:'状态指示',english:'Indicators',symbol:'loader',featured:'progress',ids:['progress','dots','finger-tap','typewriter','yin-yang','pulse']},
- {key:'backgrounds',label:'背景',english:'Backgrounds',symbol:'page',featured:'topographic-flow',ids:['topographic-flow','ascii-wave','ascii-sharks','particle-tide','watercolor','watercolor-original','watercolor-flow']},
+ {key:'backgrounds',label:'背景',english:'Backgrounds',symbol:'page',featured:'topographic-flow',ids:['skiper-41','topographic-flow','ascii-wave','ascii-sharks','particle-tide','watercolor','watercolor-original','watercolor-flow']},
 ];
 export const catalog=definitions.flatMap(category=>{
  const ids=category.ids.filter(id=>!retiredEffectIds.has(id));

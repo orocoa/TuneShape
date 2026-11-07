@@ -1,0 +1,5 @@
+https://skiper-ui.com/v1/skiper48
+
+Adapted from the publicly available Skiper UI example. Free use and modification for personal/commercial projects; attribution to Skiper UI is required.
+
+Default images: six original TuneShape MIT geometric works shared with Liquid Carousel and Orbit Reel. Source compositions: public/images/geometric-cards/ORIGINAL_ART.json. User-replaced images retain their original rights. Skiper UI / @gurvinder-singh02 / https://gxuri.me. Reference demo media, artwork and product names retain their respective rights; they are demo content, not TuneShape original MIT artwork. Current input, focus, selection and playback position are transient.

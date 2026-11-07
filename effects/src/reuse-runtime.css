@@ -11,3 +11,4 @@ body{padding:clamp(8px,3vw,28px)}
 .reuse-demo [data-recipe="glass-folder"]{height:480px}
 .reuse-demo .demo-stage{min-height:360px}
 @media(max-width:480px){.reuse-demo .history-demo{height:340px}.reuse-toolbar{gap:6px}.reuse-toolbar>span{font-size:10px}}
+.reuse-demo [data-recipe="mirrored-card-stack"]{height:440px}

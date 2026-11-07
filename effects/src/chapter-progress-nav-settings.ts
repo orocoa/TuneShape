@@ -1,0 +1,18 @@
+export type ChapterSection={id:string;label:string;shortLabel:string;title:string;body:string;tone:'light'|'dark'};
+export type ChapterProgressSettings={sections:ChapterSection[];initialIndex:number;theme:'auto'|'light'|'dark';accentColor:string;fontSize:number;mobileFontSize:number;fontWeight:number;gap:number;padding:number;rowHeight:number;lineWidth:number;railGap:number;sectionHeight:number;readingOffset:number;fadeOutMs:number};
+export const defaultChapterProgress:ChapterProgressSettings={sections:[
+ {id:'overview',label:'Overview',shortLabel:'Start',title:'A clear beginning.',body:'Give each chapter a useful name. This reading surface is a working example: scroll to see the line follow your position, or choose a chapter above to jump directly to its content.',tone:'dark'},
+ {id:'process',label:'Process',shortLabel:'Build',title:'Move with intention.',body:'The whole label row is clickable. The thin line underneath only reports real reading progress. It moves backward when you scroll upward, and never acts as a scrubber.',tone:'light'},
+ {id:'details',label:'Details',shortLabel:'Refine',title:'Keep the reader in control.',body:'A new destination replaces the previous one. Wheel, touch and scrolling keys interrupt the transition. Keyboard focus arrives with the content; reduced motion moves there immediately.',tone:'dark'},
+],initialIndex:0,theme:'auto',accentColor:'#2447d8',fontSize:14,mobileFontSize:13,fontWeight:350,gap:28,padding:32,rowHeight:44,lineWidth:1,railGap:7,sectionHeight:480,readingOffset:24,fadeOutMs:140};
+export const chapterProgressRanges={fontSize:[12,20,1],mobileFontSize:[12,16,1],fontWeight:[300,600,50],gap:[8,40,1],padding:[12,48,1],rowHeight:[44,64,1],lineWidth:[.5,3,.5],railGap:[4,16,1],sectionHeight:[400,900,10],readingOffset:[0,80,1],fadeOutMs:[0,2000,10]} as const;
+export function validateChapterProgress(value:unknown):ChapterProgressSettings{
+ const exact=(v:unknown,keys:string[])=>{if(!v||typeof v!=='object'||Object.getPrototypeOf(v)!==Object.prototype||Reflect.ownKeys(v).length!==keys.length||keys.some(k=>!Object.hasOwn(Object.getOwnPropertyDescriptor(v,k)??{},'value')))throw Error('章节导航字段不完整或含未知字段。')};
+ exact(value,Object.keys(defaultChapterProgress));const s=value as ChapterProgressSettings;
+ const text=(v:unknown,min:number,max:number)=>typeof v==='string'&&v.trim().length>=min&&Array.from(v).length<=max&&!/[\u0000-\u001f\u007f-\u009f<>]/u.test(v);
+ if(!Array.isArray(s.sections)||Object.getPrototypeOf(s.sections)!==Array.prototype||s.sections.length<1||s.sections.length>6||Reflect.ownKeys(s.sections).length!==s.sections.length+1)throw Error('章节须有 1–6 项。');
+ const ids=new Set<string>();for(let i=0;i<s.sections.length;i++){const d=Object.getOwnPropertyDescriptor(s.sections,String(i));if(!d||!Object.hasOwn(d,'value'))throw Error('章节必须是连续的普通数据。');const item=d.value as ChapterSection;exact(item,['id','label','shortLabel','title','body','tone']);if(typeof item.id!=='string'||!/^[a-z][a-z0-9-]{0,47}$/.test(item.id)||ids.has(item.id)||!text(item.label,1,32)||!text(item.shortLabel,1,12)||!text(item.title,1,80)||!text(item.body,0,600)||!['light','dark'].includes(item.tone))throw Error('章节标识、文字或配色无效。');ids.add(item.id)}
+ for(const[k,[min,max]]of Object.entries(chapterProgressRanges)){const n=s[k as keyof typeof chapterProgressRanges];if(typeof n!=='number'||!Number.isFinite(n)||n<min||n>max||(k!=='lineWidth'&&!Number.isInteger(n)))throw Error('章节导航 '+k+' 超出范围。')}
+ if(!Number.isInteger(s.initialIndex)||s.initialIndex<0||s.initialIndex>=s.sections.length||!['auto','light','dark'].includes(s.theme)||typeof s.accentColor!=='string'||!/^#[0-9a-f]{6}$/i.test(s.accentColor))throw Error('章节导航的初始章节或主题无效。');
+ return structuredClone(s);
+}

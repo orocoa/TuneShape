@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "skiper-43",
+  "durationMs": 500,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "skiper": {
+    "labels": "Comment\nInbox\nFeature Flags\nDraft Mode\nShare\nMenu",
+    "shortcuts": "C\n\n\n\n\n⌘ K",
+    "badgeIndices": "1,5",
+    "iconSize": 20,
+    "gap": 12,
+    "padding": 14,
+    "radius": 30,
+    "tooltipOffset": 8,
+    "backgroundColor": "#000000",
+    "textColor": "#ffffff",
+    "badgeColor": "#00a6f4"
+  }
+}

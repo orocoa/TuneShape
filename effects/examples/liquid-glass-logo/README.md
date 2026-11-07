@@ -56,7 +56,7 @@ Depth controls smoothly settling magnification and bending; dispersion splits ed
 
 ## Motion notes 10
 
-Base reveal duration 1800 ms; delay 0 ms; speed 1×; reveal about 1.800s. The base timeline starts forming around 0.12s, morphs from droplet to tile during 0.27–0.49s, clears its glass around 1.5s and completes the sequence at 1.8s; frame selection spans 0–2.4s with a 0.6s ending hold. Speed and observation speed change advancement, not base seek units. Stop after one reveal.
+Base reveal duration 1800 ms; delay 0 ms; speed 1×; reveal about 1.800s. The base timeline starts forming around 0.12s, morphs from droplet to tile during 0.27–0.49s, clears its glass around 1.4s and completes the sequence at 1.8s; frame selection spans 0–2.4s with a 0.6s ending hold. Speed and observation speed change advancement, not base seek units. Stop after one reveal.
 
 ## Motion notes 11
 

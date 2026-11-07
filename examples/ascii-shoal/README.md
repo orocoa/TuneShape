@@ -43,7 +43,7 @@ Copy `src/ascii-shoal.js` and its `LICENSE` into your project:
 </script>
 ```
 
-Give the host an explicit size and place your content above it. For decorative backgrounds, mark the host `aria-hidden="true"`. Pointer response follows pointer movement received by the host; content that covers it keeps its normal interactions.
+Give the host an explicit size and place your content above it. For decorative backgrounds, mark the host `aria-hidden="true"`. The shoal follows its autonomous paths; moving or clicking the pointer does not alter its motion.
 
 The five primary controls are density, swim speed, shark count, shark size and fish density. Character details and custom colors stay in separate expandable groups. The default palette is neutral gray.
 
@@ -62,7 +62,7 @@ The five primary controls are density, swim speed, shark count, shark size and f
 | `opacity` | `0.9` | `0–1` |
 | `gridOpacity` | `0.04` | `0–0.2` |
 | `wakeOpacity` | `0` | `0–1` |
-| `interactive` | `true` | Pointer avoidance |
+| `interactive` | `false` | Deprecated compatibility field; input is ignored |
 | `characters` | `.:;=+*oO#` | Up to 32 non-whitespace glyphs, ordered light to dense |
 | `seed` | `7` | Signed 32-bit integer; repeatable scene |
 
@@ -74,7 +74,7 @@ The optional runtime accepts `enabled`, `paused`, `reduced`, `speed`, `durationM
 
 ## How it is drawn
 
-The rendering approach follows TuneShape's ASCII Wave: sample a continuous field on a regular grid, then map each sample to glyph and opacity. This module authors a different field using analytic bodies, fin polygons, tail oscillation, and seeded periodic paths. It does not run a predator or flocking simulation. The renderer targets 30 fps, bounds the number of grid cells, and caps the canvas backing-store size; at large viewport sizes, density may reach that sampling cap.
+The rendering approach follows TuneShape's ASCII Wave: sample a continuous field on a regular grid, then map each sample to glyph and opacity. This module authors a different field using analytic bodies, fin polygons, tail oscillation, and seeded periodic paths. Pointer input does not change the field or its motion. It does not run a predator or flocking simulation. The renderer targets 30 fps, bounds the number of grid cells, and caps the canvas backing-store size; at large viewport sizes, density may reach that sampling cap.
 
 This source is a new implementation, separate from an earlier local third-party adaptation. That earlier code and its media are not included in this example. See [IMPLEMENTATION.md](IMPLEMENTATION.md) for the scope of the provenance record.
 
