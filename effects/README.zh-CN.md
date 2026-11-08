@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文**
 
-包含当前可见目录的 54 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
+包含当前可见目录的 53 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
 
 [在线编辑器](https://tuneshape.kai-nex.com/)
 
@@ -55,7 +55,6 @@ pnpm build
 | typewriter | [Typewriter](examples/typewriter/README.md) | [打字机](examples/typewriter/README.zh-CN.md) |
 | yin-yang | [Yin Yang Loader](examples/yin-yang/README.md) | [太极加载](examples/yin-yang/README.zh-CN.md) |
 | pulse | [Pulse Scale and Ripple](examples/pulse/README.md) | [脉冲缩放与扩散](examples/pulse/README.zh-CN.md) |
-| watercolor | [Watercolor Blend](examples/watercolor/README.md) | [水彩融合](examples/watercolor/README.zh-CN.md) |
 | watercolor-original | [Watercolor Original](examples/watercolor-original/README.md) | [水彩模糊](examples/watercolor-original/README.zh-CN.md) |
 | watercolor-flow | [Watercolor Flow](examples/watercolor-flow/README.md) | [细度水彩融合](examples/watercolor-flow/README.zh-CN.md) |
 | ascii-sharks | [ASCII Sharks](examples/ascii-sharks/README.md) | [ASCII 鲨鱼群](examples/ascii-sharks/README.zh-CN.md) |

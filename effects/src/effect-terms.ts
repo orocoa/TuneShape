@@ -74,7 +74,7 @@ export const effectTerms:Record<string,EffectTerm>={
 
 /** Removed from the product catalog; original recipes stay available to validate older exports. */
 export const retiredEffectIds=new Set([
- 'mirrored-card-stack','ascii-wave',
+ 'watercolor','mirrored-card-stack','ascii-wave',
  'skiper-41','skiper-82','chapter-progress-nav','skiper-48','skiper-106','topographic-flow',
  'basic-tabs','basic-modal','hover-lift','sheet','blur-panel','page-fade','stagger','tooltip',
  'ripple','pointer','minimize','workflow','proximity','three-finger','hotcorner-upload','hotcorner-sleep',

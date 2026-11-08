@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "scope": "All 54 current UI effect renderers, bilingual runnable examples, original generic demonstration media, button example, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
-  "sourceSha256": "33a943bcea170eb3b07dd91cb9866efb612bf9ace0d8772ad2d2a265e459e5d2",
+  "scope": "All 53 current UI effect renderers, bilingual runnable examples, original generic demonstration media, button example, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
+  "sourceSha256": "c66fb95b039cbfdddf6b4a0a55ebe32849b08db5b9567210f99ee6f1f5b5e6fd",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -40,13 +40,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 17923,
-      "sha256": "af5ba56697c51994cdb116af0859ec94b13c599fc4c5f70c99b5a49f0b29b052"
+      "bytes": 17786,
+      "sha256": "c7434115a2d900adc6ed39954162442235df24d37920c9d33ab652fd1c01f65d"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 16962,
-      "sha256": "1e2c2fb84f49d502de6a03321a181cd7e27cf4000d2a1203922965958e1b6b7d"
+      "bytes": 16825,
+      "sha256": "572eb27ea3cf5066604baffaa5e445a6c8804bddacbdb69785a0a99449adc46c"
     },
     {
       "path": "codemeta.json",
@@ -95,8 +95,8 @@
     },
     {
       "path": "effects/EXPORT_MANIFEST.json",
-      "bytes": 133523,
-      "sha256": "a5498e03a5b28b5ee239b2359eb00a114cb98c554b4f1a63afda4fdc56183f95"
+      "bytes": 132698,
+      "sha256": "5c57a09a4e4a2996e6ce3675f607d3028051b498714f5488c655571a0ffd3d6d"
     },
     {
       "path": "effects/LICENSE",
@@ -105,13 +105,13 @@
     },
     {
       "path": "effects/README.md",
-      "bytes": 7988,
-      "sha256": "c726a058fecb5704fed21d3961566ee2aefe8cd81b50af1193ef91e4472e7f3d"
+      "bytes": 7867,
+      "sha256": "0b9888a9e9a2a964c068c3c74342cc0147dfae8594ee2d44489cb8cdb3cfc2df"
     },
     {
       "path": "effects/README.zh-CN.md",
-      "bytes": 7882,
-      "sha256": "4f156ede2f879cb2d59ff30c94e3e8f8968648e681605f6168283e9b2ef39708"
+      "bytes": 7761,
+      "sha256": "44ce26f46daaff0a2e4d913451ba6b0b0ef51c81ca10c465a283d032f4708e40"
     },
     {
       "path": "effects/THIRD_PARTY_NOTICES.txt",
@@ -120,8 +120,8 @@
     },
     {
       "path": "effects/catalog.json",
-      "bytes": 40360,
-      "sha256": "e12eac2a96f22ea23429beecd04519a22af7d89471683a7ec524bfe89c07b19e"
+      "bytes": 39568,
+      "sha256": "a7e1136d0ee7e0984e7873c5e9cd51d6c21761612311cda3f5eb51c3d5d90c05"
     },
     {
       "path": "effects/demo/main.tsx",
@@ -1539,31 +1539,6 @@
       "sha256": "48b4782291ee831b03c9e26fc773fc195af4c68f5dfb3da47b850198857b55ff"
     },
     {
-      "path": "effects/examples/watercolor/README.md",
-      "bytes": 2440,
-      "sha256": "62bd9239c2cb5bc8e40e937c81f14632b530c260291e21e77201505e527a2962"
-    },
-    {
-      "path": "effects/examples/watercolor/README.zh-CN.md",
-      "bytes": 2185,
-      "sha256": "d7b15d669dd4525729066302c9698221901f46b8719f1c66df966bb9c50e8a19"
-    },
-    {
-      "path": "effects/examples/watercolor/config.json",
-      "bytes": 686,
-      "sha256": "43f02c3516cd76044dc14b279b6d03e94b6dbb745b18819cd97bd6f43bc3178b"
-    },
-    {
-      "path": "effects/examples/watercolor/index.html",
-      "bytes": 460,
-      "sha256": "60d8a812a9a47d786bf90896f52447b93e2c7815040823a3611fcf3f85743e18"
-    },
-    {
-      "path": "effects/examples/watercolor/main.tsx",
-      "bytes": 111,
-      "sha256": "ade081599b6283b1a08a1beac1e23da2b35a65275113dbb261f61ed5747f777c"
-    },
-    {
       "path": "effects/examples/yin-yang/README.md",
       "bytes": 2395,
       "sha256": "b2a791623e3bdef217e8e7c3e220a9ce6f3b14a6bc5fd4163214fb4c19d01097"
@@ -1595,8 +1570,8 @@
     },
     {
       "path": "effects/index.html",
-      "bytes": 9145,
-      "sha256": "85a62d04b57f9430de10b054314f001771786e053e4de67895fc8f5c597320bd"
+      "bytes": 8957,
+      "sha256": "282e9522c22b8ab9bb12a6b91ea00d700a04b53f9512a34407c1833f89750a6b"
     },
     {
       "path": "effects/package.json",
@@ -2120,8 +2095,8 @@
     },
     {
       "path": "effects/src/effect-terms.ts",
-      "bytes": 10462,
-      "sha256": "d059eb7c5a6add6dd8e0d57eac4a37187195da4c42837d4d658aca93da6c4871"
+      "bytes": 10475,
+      "sha256": "e75474c11172fb1d3db813b264262efe9a3c228ab84c0e39a59d31f4971f0fe3"
     },
     {
       "path": "effects/src/effect-variants.ts",
@@ -2905,8 +2880,8 @@
     },
     {
       "path": "effects/vite.config.ts",
-      "bytes": 1057,
-      "sha256": "02926e871aa61acea221565092bf1a212339663ebc433bd1fed25d441a83e1fc"
+      "bytes": 1044,
+      "sha256": "b2d0378ac11db5085f63ca6981ba9e89e97eaf52ca9f77c76b1420d823aab103"
     },
     {
       "path": "examples/ascii-shoal/.gitignore",
