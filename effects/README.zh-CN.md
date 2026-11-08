@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文**
 
-包含当前可见目录的 56 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
+包含当前可见目录的 54 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
 
 [在线编辑器](https://tuneshape.kai-nex.com/)
 
@@ -60,7 +60,6 @@ pnpm build
 | watercolor-flow | [Watercolor Flow](examples/watercolor-flow/README.md) | [细度水彩融合](examples/watercolor-flow/README.zh-CN.md) |
 | ascii-sharks | [ASCII Sharks](examples/ascii-sharks/README.md) | [ASCII 鲨鱼群](examples/ascii-sharks/README.zh-CN.md) |
 | particle-tide | [Particle Tide](examples/particle-tide/README.md) | [粒子海浪](examples/particle-tide/README.zh-CN.md) |
-| ascii-wave | [ASCII Wave Animation](examples/ascii-wave/README.md) | [ASCII 波形动画](examples/ascii-wave/README.zh-CN.md) |
 | soap-bubble | [Soap Bubble UI](examples/soap-bubble/README.md) | [肥皂泡控件](examples/soap-bubble/README.zh-CN.md) |
 | chromatic-button | [Chromatic Button](examples/chromatic-button/README.md) | [流彩按钮](examples/chromatic-button/README.zh-CN.md) |
 | liquid-glass-logo | [Liquid Glass Logo](examples/liquid-glass-logo/README.md) | [液态玻璃 Logo](examples/liquid-glass-logo/README.zh-CN.md) |
@@ -72,7 +71,6 @@ pnpm build
 | skiper-83 | [Integration Mention Input](examples/skiper-83/README.md) | [集成提及输入框](examples/skiper-83/README.zh-CN.md) |
 | skiper-43 | [Vercel Tooltip](examples/skiper-43/README.md) | [Vercel 图标提示栏](examples/skiper-43/README.zh-CN.md) |
 | skiper-56 | [Devouring Details Sign In](examples/skiper-56/README.md) | [粒子消散输入](examples/skiper-56/README.zh-CN.md) |
-| mirrored-card-stack | [Mirrored Card Stack](examples/mirrored-card-stack/README.md) | [镜像抽出卡片](examples/mirrored-card-stack/README.zh-CN.md) |
 | page-turn-cards | [Page Turn Cards](examples/page-turn-cards/README.md) | [翻页卡片](examples/page-turn-cards/README.zh-CN.md) |
 
 ## 许可与范围

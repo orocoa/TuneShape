@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "scope": "All 56 current UI effect renderers, bilingual runnable examples, original generic demonstration media, button example, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
-  "sourceSha256": "c253f3f1f29ad7b01ce59de00b24fc17394750523f9ad7b59af21c2e573e613a",
+  "scope": "All 54 current UI effect renderers, bilingual runnable examples, original generic demonstration media, button example, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
+  "sourceSha256": "33a943bcea170eb3b07dd91cb9866efb612bf9ace0d8772ad2d2a265e459e5d2",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -40,13 +40,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 18243,
-      "sha256": "4111748c6b7b22b478cff9badb604ea5f52668942f2fbf99eeb0d865e264913f"
+      "bytes": 17923,
+      "sha256": "af5ba56697c51994cdb116af0859ec94b13c599fc4c5f70c99b5a49f0b29b052"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 17282,
-      "sha256": "1c3b1d2261afbe611f370e224da2874f12649a42927073b488377fd43910b269"
+      "bytes": 16962,
+      "sha256": "1e2c2fb84f49d502de6a03321a181cd7e27cf4000d2a1203922965958e1b6b7d"
     },
     {
       "path": "codemeta.json",
@@ -95,8 +95,8 @@
     },
     {
       "path": "effects/EXPORT_MANIFEST.json",
-      "bytes": 135408,
-      "sha256": "1ea9fe6d9f1018c538ef3feb8ae3152eef4c5441d76f7b886bac470d175e851e"
+      "bytes": 133523,
+      "sha256": "a5498e03a5b28b5ee239b2359eb00a114cb98c554b4f1a63afda4fdc56183f95"
     },
     {
       "path": "effects/LICENSE",
@@ -105,13 +105,13 @@
     },
     {
       "path": "effects/README.md",
-      "bytes": 8276,
-      "sha256": "0b1bf23fcb39d6f787b7aa6349632cf8b63cbaede9945f04f39efc64d804e6f3"
+      "bytes": 7988,
+      "sha256": "c726a058fecb5704fed21d3961566ee2aefe8cd81b50af1193ef91e4472e7f3d"
     },
     {
       "path": "effects/README.zh-CN.md",
-      "bytes": 8170,
-      "sha256": "f378d7a0b612772aea9f3c51c527b4dec8b5f96cf4c805e16f9c478bb4f08c31"
+      "bytes": 7882,
+      "sha256": "4f156ede2f879cb2d59ff30c94e3e8f8968648e681605f6168283e9b2ef39708"
     },
     {
       "path": "effects/THIRD_PARTY_NOTICES.txt",
@@ -120,8 +120,8 @@
     },
     {
       "path": "effects/catalog.json",
-      "bytes": 41881,
-      "sha256": "fe69c483a4f7cd161c0d0393e0ee195188fe5f1ee8d1147d6a63cb9e1dd752ba"
+      "bytes": 40360,
+      "sha256": "e12eac2a96f22ea23429beecd04519a22af7d89471683a7ec524bfe89c07b19e"
     },
     {
       "path": "effects/demo/main.tsx",
@@ -192,31 +192,6 @@
       "path": "effects/examples/ascii-shoal/src/ascii-shoal.js",
       "bytes": 21844,
       "sha256": "2c4dd7de9a0a9367bf699e561cc2c3e03f60efaf3a229a432fbde59878f70b75"
-    },
-    {
-      "path": "effects/examples/ascii-wave/README.md",
-      "bytes": 2427,
-      "sha256": "5f0d7de7fe15380ecc9d74b30b159a4cf9c9fc96c7b83b18b1d0e09bd7992203"
-    },
-    {
-      "path": "effects/examples/ascii-wave/README.zh-CN.md",
-      "bytes": 2308,
-      "sha256": "6e77bc53dccb70fbdf9afe8bcc221b748dc40cde1d6a5898187d30c2e6093009"
-    },
-    {
-      "path": "effects/examples/ascii-wave/config.json",
-      "bytes": 712,
-      "sha256": "aa2705c5cbc4e6242186e54611c9a05409bac13b760cfacfccc3e5a2835e6d74"
-    },
-    {
-      "path": "effects/examples/ascii-wave/index.html",
-      "bytes": 401,
-      "sha256": "9f5efaaade5a4bd86bff644c74a86c38c797b0ee160b46ad8d611fe58ff00b69"
-    },
-    {
-      "path": "effects/examples/ascii-wave/main.tsx",
-      "bytes": 111,
-      "sha256": "b9c024b2cbc9a94ac4d8497707c666763a53895f0fb238da52c793917af7d1f7"
     },
     {
       "path": "effects/examples/basic-button/README.md",
@@ -847,36 +822,6 @@
       "path": "effects/examples/mini-sidebar/main.tsx",
       "bytes": 113,
       "sha256": "d1f4ffafa3f2843bd2fbaf873777ec02b035158457681763880cd1209a761c3d"
-    },
-    {
-      "path": "effects/examples/mirrored-card-stack/README.md",
-      "bytes": 3735,
-      "sha256": "88653875c2b5942e083c786e017193c6fb857e71be3d19b4d2fef47bf09b406a"
-    },
-    {
-      "path": "effects/examples/mirrored-card-stack/README.zh-CN.md",
-      "bytes": 3244,
-      "sha256": "c10711e47e2bb3507e063d3db7887faa749453049d7e7f4c651a7c3f3b8f27f9"
-    },
-    {
-      "path": "effects/examples/mirrored-card-stack/SOURCE_NOTICE.txt",
-      "bytes": 431,
-      "sha256": "c10d96f65bb4d8dfbe71e0f36e501606a6aeddb7d0f28a50357debc1d1d74345"
-    },
-    {
-      "path": "effects/examples/mirrored-card-stack/config.json",
-      "bytes": 894,
-      "sha256": "cde752b658a3b1b80bbd7502aaa3c2198b951405605181754e09a69e7f216c9c"
-    },
-    {
-      "path": "effects/examples/mirrored-card-stack/index.html",
-      "bytes": 449,
-      "sha256": "8e2864f20ea8271e3ca16a477ea954d974784d3c7711689d5ddbaa678f903ef3"
-    },
-    {
-      "path": "effects/examples/mirrored-card-stack/main.tsx",
-      "bytes": 120,
-      "sha256": "f8a26f8c1be6e2c01508f68048044c8a65cafac2fd963c011c1fa822aec0b8a4"
     },
     {
       "path": "effects/examples/orbit-reel/README.md",
@@ -1650,8 +1595,8 @@
     },
     {
       "path": "effects/index.html",
-      "bytes": 9472,
-      "sha256": "e2a097627e95a0e5dd50c70fe34d5b60010ca1c235ea65e72037c03eea4e8518"
+      "bytes": 9145,
+      "sha256": "85a62d04b57f9430de10b054314f001771786e053e4de67895fc8f5c597320bd"
     },
     {
       "path": "effects/package.json",
@@ -2175,8 +2120,8 @@
     },
     {
       "path": "effects/src/effect-terms.ts",
-      "bytes": 10425,
-      "sha256": "08a84d8dd16097bea9f6699ff1ceade0f56565bced9e0b5a0acdea1581a0ba85"
+      "bytes": 10462,
+      "sha256": "d059eb7c5a6add6dd8e0d57eac4a37187195da4c42837d4d658aca93da6c4871"
     },
     {
       "path": "effects/src/effect-variants.ts",
@@ -2960,8 +2905,8 @@
     },
     {
       "path": "effects/vite.config.ts",
-      "bytes": 1092,
-      "sha256": "22981f7b69b1d27464491ee8316c40c5766507c55d60619cc7cbac963473f31b"
+      "bytes": 1057,
+      "sha256": "02926e871aa61acea221565092bf1a212339663ebc433bd1fed25d441a83e1fc"
     },
     {
       "path": "examples/ascii-shoal/.gitignore",

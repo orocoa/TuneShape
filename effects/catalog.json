@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "count": 56,
+  "count": 54,
   "website": "https://tuneshape.kai-nex.com/",
   "repository": "https://github.com/orocoa/TuneShape",
   "effects": [
@@ -677,22 +677,6 @@
       "config": "examples/particle-tide/config.json"
     },
     {
-      "id": "ascii-wave",
-      "name": "ASCII Wave Animation",
-      "nameZh": "ASCII 波形动画",
-      "category": "背景",
-      "description": "ASCII Wave Animation · 4000 ms · Ariadne",
-      "descriptionZh": "ASCII 波形动画 · 4000 ms · Ariadne",
-      "editor": "https://tuneshape.kai-nex.com/#/effect/ascii-wave",
-      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/ascii-wave",
-      "documentation": {
-        "zh": "https://tuneshape.kai-nex.com/effects/ascii-wave/",
-        "en": "https://tuneshape.kai-nex.com/en/effects/ascii-wave/"
-      },
-      "license": "MIT",
-      "config": "examples/ascii-wave/config.json"
-    },
-    {
       "id": "soap-bubble",
       "name": "Soap Bubble UI",
       "nameZh": "肥皂泡控件",
@@ -867,22 +851,6 @@
       },
       "license": "MIT",
       "config": "examples/skiper-56/config.json"
-    },
-    {
-      "id": "mirrored-card-stack",
-      "name": "Mirrored Card Stack",
-      "nameZh": "镜像抽出卡片",
-      "category": "图片",
-      "description": "The current top card extracts on either side, changes layer, and slips back into the stack.",
-      "descriptionZh": "当前顶卡向两侧镜像抽出，换层后回插，保留惯性和中途接住的姿态。",
-      "editor": "https://tuneshape.kai-nex.com/#/effect/mirrored-card-stack",
-      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/mirrored-card-stack",
-      "documentation": {
-        "zh": "https://tuneshape.kai-nex.com/effects/mirrored-card-stack/",
-        "en": "https://tuneshape.kai-nex.com/en/effects/mirrored-card-stack/"
-      },
-      "license": "MIT",
-      "config": "examples/mirrored-card-stack/config.json"
     },
     {
       "id": "page-turn-cards",

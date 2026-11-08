@@ -43,7 +43,7 @@ Export JSON before refreshing or leaving the page: effect parameters are kept fo
 
 ## About this repository
 
-**Rendering source for all 56 effects in the visible catalog is public.** Each includes a default configuration, runnable page, and English/Chinese documentation. [Run the examples](effects/README.md) · [Machine-readable catalog](effects/catalog.json) · [Effect guides](https://tuneshape.kai-nex.com/en/effects/)
+**Rendering source for all 54 effects in the visible catalog is public.** Each includes a default configuration, runnable page, and English/Chinese documentation. [Run the examples](effects/README.md) · [Machine-readable catalog](effects/catalog.json) · [Effect guides](https://tuneshape.kai-nex.com/en/effects/)
 
 ```sh
 git clone https://github.com/orocoa/TuneShape.git
@@ -96,7 +96,6 @@ pnpm dev
 | watercolor-flow | [Watercolor Flow](effects/examples/watercolor-flow/README.md) | [细度水彩融合](effects/examples/watercolor-flow/README.zh-CN.md) |
 | ascii-sharks | [ASCII Sharks](effects/examples/ascii-sharks/README.md) | [ASCII 鲨鱼群](effects/examples/ascii-sharks/README.zh-CN.md) |
 | particle-tide | [Particle Tide](effects/examples/particle-tide/README.md) | [粒子海浪](effects/examples/particle-tide/README.zh-CN.md) |
-| ascii-wave | [ASCII Wave Animation](effects/examples/ascii-wave/README.md) | [ASCII 波形动画](effects/examples/ascii-wave/README.zh-CN.md) |
 | soap-bubble | [Soap Bubble UI](effects/examples/soap-bubble/README.md) | [肥皂泡控件](effects/examples/soap-bubble/README.zh-CN.md) |
 | chromatic-button | [Chromatic Button](effects/examples/chromatic-button/README.md) | [流彩按钮](effects/examples/chromatic-button/README.zh-CN.md) |
 | liquid-glass-logo | [Liquid Glass Logo](effects/examples/liquid-glass-logo/README.md) | [液态玻璃 Logo](effects/examples/liquid-glass-logo/README.zh-CN.md) |
@@ -108,7 +107,6 @@ pnpm dev
 | skiper-83 | [Integration Mention Input](effects/examples/skiper-83/README.md) | [集成提及输入框](effects/examples/skiper-83/README.zh-CN.md) |
 | skiper-43 | [Vercel Tooltip](effects/examples/skiper-43/README.md) | [Vercel 图标提示栏](effects/examples/skiper-43/README.zh-CN.md) |
 | skiper-56 | [Devouring Details Sign In](effects/examples/skiper-56/README.md) | [粒子消散输入](effects/examples/skiper-56/README.zh-CN.md) |
-| mirrored-card-stack | [Mirrored Card Stack](effects/examples/mirrored-card-stack/README.md) | [镜像抽出卡片](effects/examples/mirrored-card-stack/README.zh-CN.md) |
 | page-turn-cards | [Page Turn Cards](effects/examples/page-turn-cards/README.md) | [翻页卡片](effects/examples/page-turn-cards/README.zh-CN.md) |
 
 Public examples use original generic avatar, product and brand artwork, an original sound cue and an original video. The online editor retains its existing media.
