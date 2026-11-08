@@ -113,7 +113,7 @@ pnpm dev
 
 公开示例的个人头像、产品与品牌图形采用通用原创图形，提示音与视频使用原创演示素材；线上编辑器的原始内容保留。
 
-动效包使用与网页相同的渲染组件。完整网页编辑器、部署配置与工作记录不在此包内。仓库原有的三个 React 基础示例和独立 ASCII 鱼群模块继续保留，旧示例的运行说明在下方。
+动效包使用与网页相同的渲染组件。完整网页编辑器、部署配置与工作记录不在此包内。按钮按压反馈示例和独立 ASCII 鱼群模块继续保留，运行说明在下方。
 
 <details>
 <summary>本地运行、示例配置与源码说明</summary>
@@ -123,10 +123,7 @@ pnpm dev
 | 示例 | 交互方式 | 配置 | Prompt |
 | --- | --- | --- | --- |
 | 按钮按压反馈 | 指针、空格键或 Enter 键按下与释放 | [button.json](configs/button.json) | [button.md](prompts/button.md) |
-| Tab 切换过渡 | 指针或方向键切换内容，支持 Home 和 End 键 | [tabs.json](configs/tabs.json) | [tabs.md](prompts/tabs.md) |
-| 页内对话框 | 打开、关闭或按 Escape 退出，关闭后焦点返回触发按钮 | [modal.json](configs/modal.json) | [modal.md](prompts/modal.md) |
 
-对话框用于演示预览区域内的进入与退出，使用 `aria-modal="false"`，不限制整个应用的键盘焦点。
 
 ### ASCII 鱼群背景
 
@@ -142,7 +139,7 @@ node --test test/*.test.mjs
 npm run build
 ```
 
-构建会将独立演示输出到 `examples/ascii-shoal/dist/`。以下仓库根目录命令仍用于三个 React 基础示例。
+构建会将独立演示输出到 `examples/ascii-shoal/dist/`。以下仓库根目录命令仍用于按钮按压反馈示例。
 
 ### 快速开始
 
@@ -177,7 +174,7 @@ pnpm dev
 
 ### 配置示例
 
-在演示页面选择 `button`、`tabs` 或 `modal`，可以加载对应示例的默认参数。应用精确配置的方法如下：
+演示页面默认加载 `button` 示例。应用精确配置的方法如下：
 
 1. 展开 **Edit the exact configuration**。
 2. 粘贴 `configs/` 中的完整配置，或在线编辑器导出的 schema version 1 配置。
@@ -204,7 +201,7 @@ pnpm dev
 | 路径 | 职责 |
 | --- | --- |
 | [`src/main.tsx`](src/main.tsx) | 示例导航、JSON 编辑器和播放控件 |
-| [`src/Preview.tsx`](src/Preview.tsx) | 按钮、Tab 和对话框的渲染与交互 |
+| [`src/Preview.tsx`](src/Preview.tsx) | 按钮的渲染与交互 |
 | [`src/model.ts`](src/model.ts) | 配置校验、状态映射和 Motion 规格 |
 | [`src/easing.ts`](src/easing.ts) | 缓动配置的校验与计算 |
 | [`src/useDetailPlayback.ts`](src/useDetailPlayback.ts) | 播放状态和动画时钟控制 |

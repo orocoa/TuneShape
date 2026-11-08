@@ -113,7 +113,7 @@ pnpm dev
 
 Public examples use original generic avatar, product and brand artwork, an original sound cue and an original video. The online editor retains its existing media.
 
-The effect package uses the same rendering components as the website. The full website editor, deployment configuration, and work records are outside this package. The original three React basic examples and standalone ASCII Shoal module remain available; their setup is preserved below.
+The effect package uses the same rendering components as the website. The full website editor, deployment configuration, and work records are outside this package. The button press feedback example and standalone ASCII Shoal module remain available; their setup is below.
 
 <details>
 <summary>Local setup, example configuration, and source guide</summary>
@@ -123,10 +123,7 @@ The effect package uses the same rendering components as the website. The full w
 | Example | Interaction | Configuration | Prompt |
 | --- | --- | --- | --- |
 | Button press feedback | Press and release with a pointer, Space, or Enter | [button.json](configs/button.json) | [button.md](prompts/button.md) |
-| Tab transitions | Switch panels with a pointer or arrow keys; Home and End are supported | [tabs.json](configs/tabs.json) | [tabs.md](prompts/tabs.md) |
-| In-page dialog | Open, close, or dismiss with Escape; focus returns to the trigger | [modal.json](configs/modal.json) | [modal.md](prompts/modal.md) |
 
-The dialog demonstrates an entrance and exit inside the preview area. It uses `aria-modal="false"` and does not trap focus across the application.
 
 ### ASCII Shoal background
 
@@ -142,7 +139,7 @@ node --test test/*.test.mjs
 npm run build
 ```
 
-The build writes the standalone demo to `examples/ascii-shoal/dist/`. The root commands below continue to operate on the three React examples.
+The build writes the standalone demo to `examples/ascii-shoal/dist/`. The root commands below continue to operate on the button example.
 
 ### Quick start
 
@@ -177,7 +174,7 @@ Build before running `pnpm preview`. Deploy the contents of `dist/` to a static 
 
 ### Configure an example
 
-Select `button`, `tabs`, or `modal` in the demo to load its defaults. To apply an exact configuration:
+The demo loads the `button` example by default. To apply an exact configuration:
 
 1. Open **Edit the exact configuration**.
 2. Paste a complete configuration from `configs/` or a schema version 1 export from the online editor.
@@ -204,7 +201,7 @@ The included source and validated configuration define the reference behavior. A
 | Path | Responsibility |
 | --- | --- |
 | [`src/main.tsx`](src/main.tsx) | Demo navigation, JSON editor, and playback controls |
-| [`src/Preview.tsx`](src/Preview.tsx) | Button, tabs, and dialog rendering and interaction |
+| [`src/Preview.tsx`](src/Preview.tsx) | Button rendering and interaction |
 | [`src/model.ts`](src/model.ts) | Configuration validation, state mapping, and Motion specifications |
 | [`src/easing.ts`](src/easing.ts) | Easing validation and evaluation |
 | [`src/useDetailPlayback.ts`](src/useDetailPlayback.ts) | Playback state and animation-clock control |

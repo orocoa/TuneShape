@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "scope": "All 56 current UI effect renderers, bilingual runnable examples, original generic demonstration media, legacy basic examples, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
-  "sourceSha256": "eb175f355e519c0801559b721eeec3e143d6b494cd628b1f2701269a09d64b50",
+  "scope": "All 56 current UI effect renderers, bilingual runnable examples, original generic demonstration media, button example, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
+  "sourceSha256": "ef3b5d14527c2d635996f02e940a64e24f0ae2e09bcc75162dfbb61af63ea2ec",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -40,13 +40,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 18760,
-      "sha256": "5f559b594746380717e61f034ce736154cefe431dff7e9e509811bfbcb69a2e5"
+      "bytes": 18243,
+      "sha256": "4111748c6b7b22b478cff9badb604ea5f52668942f2fbf99eeb0d865e264913f"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 17812,
-      "sha256": "4708c5ae537f29069d8c8cf0ab90df7ca4215c7ce48175fc4a4e9f18ce21b34b"
+      "bytes": 17282,
+      "sha256": "1c3b1d2261afbe611f370e224da2874f12649a42927073b488377fd43910b269"
     },
     {
       "path": "codemeta.json",
@@ -62,16 +62,6 @@
       "path": "configs/button.json",
       "bytes": 351,
       "sha256": "10280966891161ac50f6ec216953718c320f0617b1b2f51eb3efcdece307ff37"
-    },
-    {
-      "path": "configs/modal.json",
-      "bytes": 351,
-      "sha256": "0864ba6127cab1f2018e66e0a41989c9501dced71ba29a4164487af6fe92f499"
-    },
-    {
-      "path": "configs/tabs.json",
-      "bytes": 349,
-      "sha256": "225929395bbb79baed7015db0bea703b12d756f42aca6903fcf7c5f91fe2add6"
     },
     {
       "path": "docs/DISCOVERY.md",
@@ -3074,16 +3064,6 @@
       "sha256": "a0e66ec2a08d2510ad8e1a55572fd128f8d08291f01e26641b607ae46ef07cbf"
     },
     {
-      "path": "prompts/modal.md",
-      "bytes": 3885,
-      "sha256": "d12f1f9350c7e6a1ce938aea0211ec2c62caaea355fd3e891296e8c8c3ad9532"
-    },
-    {
-      "path": "prompts/tabs.md",
-      "bytes": 3848,
-      "sha256": "99f5be700e84fcce76cab90c1184fa068814007f44fcf6e7f7ba80b57c3aa10e"
-    },
-    {
       "path": "scripts/verify-public-manifest.mjs",
       "bytes": 681,
       "sha256": "0c5651a2b1f12f461e99265c7872c75b92a3b919d814d9bf3cbdced2ae6fedee"
@@ -3115,8 +3095,8 @@
     },
     {
       "path": "src/main.tsx",
-      "bytes": 2409,
-      "sha256": "72f46a46f0665557e5eb88dd8bf6268e4ce76a6a4a07a6188cf96d7e10d699fd"
+      "bytes": 2381,
+      "sha256": "8faccd82944a086b8f15c606a9da339cc9da27facefd175464606141b01e4877"
     },
     {
       "path": "src/model.test.ts",
@@ -3127,6 +3107,11 @@
       "path": "src/model.ts",
       "bytes": 14067,
       "sha256": "e37f8627ef994f1b4c388095d5526388ae93f6f76f5acbe1c1b11be35b6c04db"
+    },
+    {
+      "path": "src/retired-entrypoints.test.ts",
+      "bytes": 675,
+      "sha256": "2fdb9884aeabd114c0bb363fe5a915996e60334b97159584f804ebfda108265d"
     },
     {
       "path": "src/style.css",
