@@ -28,7 +28,7 @@ pnpm dev --open /examples/hover-invert/
 
 ## 时序
 
-总时长 220 ms，统一触发延迟 0 ms，三次贝塞尔曲线 cubic-bezier(0.22, 1, 0.36, 1)。各轨道按配置中的 start / span 和 times 分阶段运行。
+总时长 220 ms，统一触发延迟 0 ms，三次贝塞尔曲线 cubic-bezier(0.22, 1, 0.605, 0.554)。各轨道按配置中的 start / span 和 times 分阶段运行。
 
 ## 进入与退出
 

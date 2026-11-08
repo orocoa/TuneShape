@@ -87,7 +87,7 @@ const d=(id:string,label:string,group:string,source:string,file:string,line:numb
 const RP='Reprise', AR='Ariadne', PW='个人网站', AI='AiEvent', BR='Breality', MS='个人网站 · MacSetup';
 export const recipes:Recipe[]=[
  d('hover-lift','悬停抬升','基础反馈',RP,'web/base.css',11,160,'tile',[t('face','y',[0,-1])]),
- d('hover-invert','黑白反转','基础反馈',RP,'web/paper-grid.css',495,220,'tile',[t('face','backgroundColor',['#ffffff','#171717']),t('face','color',['#171717','#ffffff'])],E,'背景与文字颜色使用同一条缓动曲线平滑反转。'),
+ d('hover-invert','黑白反转','基础反馈',RP,'web/paper-grid.css',495,220,'tile',[t('face','backgroundColor',['#ffffff','#171717']),t('face','color',['#171717','#ffffff'])],[.22,1,.605,.554],'背景与文字颜色使用同一条缓动曲线平滑反转。'),
  d('dropdown','下拉菜单逐项展开','基础反馈',AR,'public/styles.css',36,400,'menu',[t('panel','y',[-7,0]),t('panel','scale',[.985,1]),t('panel','opacity',[0,1]),...[0,1].flatMap(i=>[t('item'+i,'y',[-4,0],undefined,i*.086,.78),t('item'+i,'opacity',[0,1],undefined,i*.086,.78)])],[.25,.1,.25,1]),
  d('accordion','原位折叠展开','基础反馈',AI,'web/motion.js',239,300,'accordion',[t('panel','height',[0,104]),t('panel','opacity',[0,1]),t('chevron','rotate',[0,180])]),
  d('toast','轻提示浮现','基础反馈',RP,'web/styles.css',242,200,'toast',[t('face','y',[6,0]),t('face','opacity',[0,1])]),

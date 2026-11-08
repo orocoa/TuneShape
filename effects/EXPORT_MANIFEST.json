@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "key": "tuneshape-public-retirement-v1:b3362f06e9ea29bdf6e2eddfd6d0b014f52aa35f85ceaa58e71f302813b18e83",
+  "key": "tuneshape-public-hover-invert-default-v1:fd0efddb807d9d738f2327c056e33fcf585a8af7ad0194b023471d8f739cc1d0",
   "effects": 56,
   "scope": "Current visible effect renderers and runnable entries; full editor excluded",
   "input": [
@@ -621,8 +621,8 @@
     },
     {
       "path": "src/history-model.ts",
-      "bytes": 84438,
-      "sha256": "b20603f21f655155a9455380406c6cccfa88ceaee5be1704db11151697ee2649"
+      "bytes": 84454,
+      "sha256": "2e383d8b10a02945b2bd0598ea83a30e3c1b024ca4cfd1248015b0cad3cf82f7"
     },
     {
       "path": "src/hook-sidebar-spec.ts",
@@ -1723,8 +1723,8 @@
     },
     {
       "path": "src/history-model.ts",
-      "bytes": 84438,
-      "sha256": "b20603f21f655155a9455380406c6cccfa88ceaee5be1704db11151697ee2649"
+      "bytes": 84454,
+      "sha256": "2e383d8b10a02945b2bd0598ea83a30e3c1b024ca4cfd1248015b0cad3cf82f7"
     },
     {
       "path": "src/mirrored-card-stack-spec.ts",
@@ -2613,8 +2613,8 @@
     },
     {
       "path": "examples/hover-invert/config.json",
-      "bytes": 679,
-      "sha256": "66be96ec6505e0c0e689fc60a5fa85d0afe5630fa0433a9c254d467282ad2e62"
+      "bytes": 684,
+      "sha256": "18a916eacde180d4b0c9587436e40ebdecf85ffce944f58ad5cf746706fd45b0"
     },
     {
       "path": "examples/hover-invert/main.tsx",
@@ -2628,13 +2628,13 @@
     },
     {
       "path": "examples/hover-invert/README.md",
-      "bytes": 2310,
-      "sha256": "cdb442272f91478e673e1f5d653d16735dda2644c3716d89c18252a05730fc6e"
+      "bytes": 2315,
+      "sha256": "13a2693398eb7da4073b6169eb1d4ec7172203d2045930e842e1fc8f75572932"
     },
     {
       "path": "examples/hover-invert/README.zh-CN.md",
-      "bytes": 2165,
-      "sha256": "0344a816f67194fc6bd7218f53582660e576fa2034758be96c0c1c66ceb73941"
+      "bytes": 2170,
+      "sha256": "542a7492ac97a000c7665f8ef50195a91e0777570c1b5f617aef757462691d13"
     },
     {
       "path": "examples/duration-picker/config.json",
