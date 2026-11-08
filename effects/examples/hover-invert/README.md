@@ -28,7 +28,7 @@ Enter the actual component to play; leave to exit. Card whitespace does not trig
 
 ## Motion notes 3
 
-Total duration 220 ms; trigger delay 0 ms; cubic-bezier(0.22, 1, 0.36, 1). Each track follows its configured start / span and times.
+Total duration 220 ms; trigger delay 0 ms; cubic-bezier(0.22, 1, 0.605, 0.554). Each track follows its configured start / span and times.
 
 ## Motion notes 4
 
