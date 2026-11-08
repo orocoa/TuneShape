@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "key": "tuneshape-public-effects-v1:547b1a9464fba83ec94343ca1cf1664002f0a2d1c8da2bb15a80809108a435ec",
-  "effects": 62,
+  "key": "tuneshape-public-retirement-v1:b3362f06e9ea29bdf6e2eddfd6d0b014f52aa35f85ceaa58e71f302813b18e83",
+  "effects": 56,
   "scope": "Current visible effect renderers and runnable entries; full editor excluded",
   "input": [
     {
@@ -1283,8 +1283,8 @@
     },
     {
       "path": "src/effect-terms.ts",
-      "bytes": 10332,
-      "sha256": "eb66760400c544e246e33706564760777a7a76afc5efe609b6a0fced6f7d3705"
+      "bytes": 10425,
+      "sha256": "08a84d8dd16097bea9f6699ff1ceade0f56565bced9e0b5a0acdea1581a0ba85"
     },
     {
       "path": "src/skiper-effects.ts",
@@ -3732,36 +3732,6 @@
       "sha256": "9a283927c4ed8797f9b92597ca895028a99e3a4c1b822e4352b27249e4700299"
     },
     {
-      "path": "examples/topographic-flow/config.json",
-      "bytes": 1003,
-      "sha256": "404b2b9fe3f561d069754be333f2f0fa3837b658e6edf195c15a4670531d3f8e"
-    },
-    {
-      "path": "examples/topographic-flow/main.tsx",
-      "bytes": 117,
-      "sha256": "f48623e48c7bcd6851dcba47d8da6983f5e59ef3ddc3bd81d14e9f52fc236bc8"
-    },
-    {
-      "path": "examples/topographic-flow/index.html",
-      "bytes": 452,
-      "sha256": "259cc0ea5fa5634d092ccfa4f4e78d06ae787e09c3f7e3edec7a2553b7201570"
-    },
-    {
-      "path": "examples/topographic-flow/SOURCE_NOTICE.txt",
-      "bytes": 508,
-      "sha256": "ed820b5b9248a5a19970375237d74f5833d39e47f7547cf40196711f453f58dc"
-    },
-    {
-      "path": "examples/topographic-flow/README.md",
-      "bytes": 3474,
-      "sha256": "eab15e6ebcb72758dd86d5166ba7a17fdb46ee1a3b1abbff4cee478aa3835cb3"
-    },
-    {
-      "path": "examples/topographic-flow/README.zh-CN.md",
-      "bytes": 3308,
-      "sha256": "9062fd75759f664e8c984614876a12e8755d29927a6a3167287244257ab834d7"
-    },
-    {
       "path": "examples/chromatic-button/config.json",
       "bytes": 805,
       "sha256": "95e89cb9d86a925684d05dcae2dc571b72b722ea8b5be45eac8a8053b781ccd9"
@@ -3820,36 +3790,6 @@
       "path": "examples/liquid-glass-logo/README.zh-CN.md",
       "bytes": 4549,
       "sha256": "7038c4b393d49da60f6892024b97ec7936c4e0307939ce0460ef798f957ca776"
-    },
-    {
-      "path": "examples/skiper-106/config.json",
-      "bytes": 590,
-      "sha256": "97aafb24f36b092d4276a415bba9c49d026784704e86aea555c2b34184a25b22"
-    },
-    {
-      "path": "examples/skiper-106/main.tsx",
-      "bytes": 111,
-      "sha256": "b2abbe1266783fcba5d218bb4f2e496ecf6f4043df332868f9315306c462776c"
-    },
-    {
-      "path": "examples/skiper-106/index.html",
-      "bytes": 448,
-      "sha256": "8ea938021f9857248609d6e1daadfe11647fe2c1e9bb51f8cf40ec984871fca9"
-    },
-    {
-      "path": "examples/skiper-106/SOURCE_NOTICE.txt",
-      "bytes": 449,
-      "sha256": "e397b739ec87d599918d0f7bd1738e2c8092a6141dbab1b143419f3361f7fbf3"
-    },
-    {
-      "path": "examples/skiper-106/README.md",
-      "bytes": 2892,
-      "sha256": "d8bb5cae05656bc1b15f4eb0c9bdab0300b4a5d915f3b94cf9cdf855b5769a62"
-    },
-    {
-      "path": "examples/skiper-106/README.zh-CN.md",
-      "bytes": 2565,
-      "sha256": "57e0a087a9590273e04541276b0cc411c548e6206c39bdaa0b2e2cea174868fe"
     },
     {
       "path": "examples/skiper-46/config.json",
@@ -3942,36 +3882,6 @@
       "sha256": "9f55ce1e4b018fe0fdb9bc11288875b5cfd1cc891581d2ba4b58598f6a36eee6"
     },
     {
-      "path": "examples/skiper-48/config.json",
-      "bytes": 2969,
-      "sha256": "9be67e6186f587ad18e1e1b053a3ff237015b392e70c4ed25ede6545ae59adde"
-    },
-    {
-      "path": "examples/skiper-48/main.tsx",
-      "bytes": 110,
-      "sha256": "ba625ec13e11abfcda826e70b37e8aa050e6878d37a0192a20162fe160150064"
-    },
-    {
-      "path": "examples/skiper-48/index.html",
-      "bytes": 462,
-      "sha256": "124645b9f8ba1efbf52b430508bb2a96d74286dd4c2d323809b50970945536aa"
-    },
-    {
-      "path": "examples/skiper-48/SOURCE_NOTICE.txt",
-      "bytes": 672,
-      "sha256": "1c1861ddb922cbb82dc2c1de51958ebb42200dbd10496ff8e968d250ca62700a"
-    },
-    {
-      "path": "examples/skiper-48/README.md",
-      "bytes": 2956,
-      "sha256": "7a2fba3d105d42dd949a450e712f6b195bfadf4ee433dc80c431c62bf75c8441"
-    },
-    {
-      "path": "examples/skiper-48/README.zh-CN.md",
-      "bytes": 2699,
-      "sha256": "d81870c8ce28a5ecaa44c42d7f89197d4eb4681287b3334ca978b57219e72d51"
-    },
-    {
       "path": "examples/skiper-91/config.json",
       "bytes": 685,
       "sha256": "06ed19ce7234f2e12fa7e4e56ec11142f0c3254a9c8b4a89adaf0a5074d3c643"
@@ -4032,36 +3942,6 @@
       "sha256": "dc573152d97a2efb0413b100e890f494cd75e78837906a94de36afce0b16b3bf"
     },
     {
-      "path": "examples/skiper-82/config.json",
-      "bytes": 708,
-      "sha256": "59fd5a69da8f5696041dfe26b9efe0d519472fcb37b3d3db85c74bff3ea0f204"
-    },
-    {
-      "path": "examples/skiper-82/main.tsx",
-      "bytes": 110,
-      "sha256": "de31f223f8718bdd972b6300c290c9417902a31f0ab09c97bbd650b87c5d51f7"
-    },
-    {
-      "path": "examples/skiper-82/index.html",
-      "bytes": 446,
-      "sha256": "3e19bca87502ae87eacac1aa9d394c68f633a0d891f08d3f3db40414c316ec5f"
-    },
-    {
-      "path": "examples/skiper-82/SOURCE_NOTICE.txt",
-      "bytes": 427,
-      "sha256": "b3b83a733562e160f51266233d490187fd6b766d7f89aef7286d0ef9e59b88df"
-    },
-    {
-      "path": "examples/skiper-82/README.md",
-      "bytes": 3145,
-      "sha256": "7e9789b4e25b953116f818f1d0c7c5762f8a2c65e330b8c887ce3f7c14fbb69b"
-    },
-    {
-      "path": "examples/skiper-82/README.zh-CN.md",
-      "bytes": 2874,
-      "sha256": "fae67053ed63a0f72aacf18462d51fdeb9c794a5fd0e1baf14e839dfe3668d2c"
-    },
-    {
       "path": "examples/skiper-83/config.json",
       "bytes": 753,
       "sha256": "8ab0b2641fa7086cdaff642b0692a30833244c3a7e8ba62d4fb19ffab923e9d1"
@@ -4090,36 +3970,6 @@
       "path": "examples/skiper-83/README.zh-CN.md",
       "bytes": 2836,
       "sha256": "af4b46b3b255eb0911ae156ae2a7f9cf724713f97ac01ae9951bf6e21df9143c"
-    },
-    {
-      "path": "examples/skiper-41/config.json",
-      "bytes": 1800,
-      "sha256": "e08fe0d285bf0bd0f0e2aa3c76841ce7561ae5227a7d5609382a05b5ab9b4f03"
-    },
-    {
-      "path": "examples/skiper-41/main.tsx",
-      "bytes": 110,
-      "sha256": "8ff6ff6cf60600497d9a1ade04cd452b04fee904edb14e517bfbc09c3af9743d"
-    },
-    {
-      "path": "examples/skiper-41/index.html",
-      "bytes": 426,
-      "sha256": "9ab6e23fd5436400dc428c75fcac98ab44c7e5a71a47087f6c981fbd54bafcd8"
-    },
-    {
-      "path": "examples/skiper-41/SOURCE_NOTICE.txt",
-      "bytes": 448,
-      "sha256": "cf0bd1ae25748722eeaa672412b943d594ee7f291b7e09c938aa514ecc97761a"
-    },
-    {
-      "path": "examples/skiper-41/README.md",
-      "bytes": 2762,
-      "sha256": "2425215aedb7ec55fd0c6e6d0f1272a569454302c3898c7cc08ec1a632874598"
-    },
-    {
-      "path": "examples/skiper-41/README.zh-CN.md",
-      "bytes": 2514,
-      "sha256": "6e1446884e319eb04ada84ebbefdd16db83c1833df3e9edd658219b8d40a431d"
     },
     {
       "path": "examples/skiper-43/config.json",
@@ -4242,39 +4092,9 @@
       "sha256": "ddd0c3b88692b65266c09c306dda59032f2ebf1addf3617b348c09405d028ea0"
     },
     {
-      "path": "examples/chapter-progress-nav/config.json",
-      "bytes": 1710,
-      "sha256": "1c963f848c7592068af8adc3fb43262c7a47a176b303f108ed24ea3544b4d081"
-    },
-    {
-      "path": "examples/chapter-progress-nav/main.tsx",
-      "bytes": 121,
-      "sha256": "4feb8084ba30f1a241e4178978679e037d9e559b783422d8dcc0ed149a2ffa90"
-    },
-    {
-      "path": "examples/chapter-progress-nav/index.html",
-      "bytes": 449,
-      "sha256": "39461f149c13745b3ea8731b1ae3386f5a940745254538091ec4127e372bfe75"
-    },
-    {
-      "path": "examples/chapter-progress-nav/SOURCE_NOTICE.txt",
-      "bytes": 219,
-      "sha256": "39b9d062da4e91b31846024a6a66212825d40990e07bb91af796066fc0e6ff46"
-    },
-    {
-      "path": "examples/chapter-progress-nav/README.md",
-      "bytes": 3845,
-      "sha256": "e8ffa73edcc3ebb14477e0a0b6434fae7b20a1544fc1449b36a614dc05c6590b"
-    },
-    {
-      "path": "examples/chapter-progress-nav/README.zh-CN.md",
-      "bytes": 3419,
-      "sha256": "eb10522ac1bc6d3efb3a7d198167d698bd106136d3282484250e2e67e9c3f1a5"
-    },
-    {
       "path": "catalog.json",
-      "bytes": 46607,
-      "sha256": "6ae6451b16334137cc458369b83fa6aa20ce5fea5f5adc3a9a080f8412e3dd27"
+      "bytes": 41881,
+      "sha256": "fe69c483a4f7cd161c0d0393e0ee195188fe5f1ee8d1147d6a63cb9e1dd752ba"
     },
     {
       "path": "demo/main.tsx",
@@ -4283,23 +4103,23 @@
     },
     {
       "path": "vite.config.ts",
-      "bytes": 1183,
-      "sha256": "808c4de93ff650a96624d8b9b7d1c13d438b27c9ef276ed279f974391139c16e"
+      "bytes": 1092,
+      "sha256": "22981f7b69b1d27464491ee8316c40c5766507c55d60619cc7cbac963473f31b"
     },
     {
       "path": "index.html",
-      "bytes": 10581,
-      "sha256": "db0ec59dfed2938c28bb42f3c7157eeb1088db4530dceb168d2454c6fd1f3e0c"
+      "bytes": 9472,
+      "sha256": "e2a097627e95a0e5dd50c70fe34d5b60010ca1c235ea65e72037c03eea4e8518"
     },
     {
       "path": "README.md",
-      "bytes": 9104,
-      "sha256": "71948f1d51bb1a3eb8288d0a7b522c77e9852bc798bd1c4834ab86311123ebcb"
+      "bytes": 8276,
+      "sha256": "0b1bf23fcb39d6f787b7aa6349632cf8b63cbaede9945f04f39efc64d804e6f3"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 8998,
-      "sha256": "9d6bb74ae5b992323629dc8c126836e085c0dafd6690d258326c85c42172578b"
+      "bytes": 8170,
+      "sha256": "f378d7a0b612772aea9f3c51c527b4dec8b5f96cf4c805e16f9c478bb4f08c31"
     },
     {
       "path": "test/catalog.test.mjs",

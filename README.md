@@ -43,7 +43,7 @@ Export JSON before refreshing or leaving the page: effect parameters are kept fo
 
 ## About this repository
 
-**Rendering source for all 62 effects in the visible catalog is public.** Each includes a default configuration, runnable page, and English/Chinese documentation. [Run the examples](effects/README.md) · [Machine-readable catalog](effects/catalog.json) · [Effect guides](https://tuneshape.kai-nex.com/en/effects/)
+**Rendering source for all 56 effects in the visible catalog is public.** Each includes a default configuration, runnable page, and English/Chinese documentation. [Run the examples](effects/README.md) · [Machine-readable catalog](effects/catalog.json) · [Effect guides](https://tuneshape.kai-nex.com/en/effects/)
 
 ```sh
 git clone https://github.com/orocoa/TuneShape.git
@@ -98,24 +98,18 @@ pnpm dev
 | particle-tide | [Particle Tide](effects/examples/particle-tide/README.md) | [粒子海浪](effects/examples/particle-tide/README.zh-CN.md) |
 | ascii-wave | [ASCII Wave Animation](effects/examples/ascii-wave/README.md) | [ASCII 波形动画](effects/examples/ascii-wave/README.zh-CN.md) |
 | soap-bubble | [Soap Bubble UI](effects/examples/soap-bubble/README.md) | [肥皂泡控件](effects/examples/soap-bubble/README.zh-CN.md) |
-| topographic-flow | [Topographic Flow](effects/examples/topographic-flow/README.md) | [流动等高线](effects/examples/topographic-flow/README.zh-CN.md) |
 | chromatic-button | [Chromatic Button](effects/examples/chromatic-button/README.md) | [流彩按钮](effects/examples/chromatic-button/README.zh-CN.md) |
 | liquid-glass-logo | [Liquid Glass Logo](effects/examples/liquid-glass-logo/README.md) | [液态玻璃 Logo](effects/examples/liquid-glass-logo/README.zh-CN.md) |
-| skiper-106 | [Smooth Caret Input](effects/examples/skiper-106/README.md) | [平滑光标输入框](effects/examples/skiper-106/README.zh-CN.md) |
 | skiper-46 | [Next.js Gooey Menu](effects/examples/skiper-46/README.md) | [黏连状态菜单](effects/examples/skiper-46/README.zh-CN.md) |
 | skiper-98 | [Vertical Tooltip Menu](effects/examples/skiper-98/README.md) | [竖向裁切提示菜单](effects/examples/skiper-98/README.zh-CN.md) |
 | skiper-92 | [Vercel Command Search](effects/examples/skiper-92/README.md) | [变形命令搜索](effects/examples/skiper-92/README.zh-CN.md) |
-| skiper-48 | [Card Swipe Carousel](effects/examples/skiper-48/README.md) | [卡片堆叠滑动轮播](effects/examples/skiper-48/README.zh-CN.md) |
 | skiper-91 | [Elastic Video Player](effects/examples/skiper-91/README.md) | [弹性拖动视频播放器](effects/examples/skiper-91/README.zh-CN.md) |
 | skiper-81 | [AI Multi Mode Input](effects/examples/skiper-81/README.md) | [AI 多模式输入框](effects/examples/skiper-81/README.zh-CN.md) |
-| skiper-82 | [Rainbow Send Input](effects/examples/skiper-82/README.md) | [彩虹发送输入框](effects/examples/skiper-82/README.zh-CN.md) |
 | skiper-83 | [Integration Mention Input](effects/examples/skiper-83/README.md) | [集成提及输入框](effects/examples/skiper-83/README.zh-CN.md) |
-| skiper-41 | [Progressive Blur](effects/examples/skiper-41/README.md) | [渐进模糊阅读](effects/examples/skiper-41/README.zh-CN.md) |
 | skiper-43 | [Vercel Tooltip](effects/examples/skiper-43/README.md) | [Vercel 图标提示栏](effects/examples/skiper-43/README.zh-CN.md) |
 | skiper-56 | [Devouring Details Sign In](effects/examples/skiper-56/README.md) | [粒子消散输入](effects/examples/skiper-56/README.zh-CN.md) |
 | mirrored-card-stack | [Mirrored Card Stack](effects/examples/mirrored-card-stack/README.md) | [镜像抽出卡片](effects/examples/mirrored-card-stack/README.zh-CN.md) |
 | page-turn-cards | [Page Turn Cards](effects/examples/page-turn-cards/README.md) | [翻页卡片](effects/examples/page-turn-cards/README.zh-CN.md) |
-| chapter-progress-nav | [Chapter Progress Navigation](effects/examples/chapter-progress-nav/README.md) | [章节进度导航](effects/examples/chapter-progress-nav/README.zh-CN.md) |
 
 Public examples use original generic avatar, product and brand artwork, an original sound cue and an original video. The online editor retains its existing media.
 

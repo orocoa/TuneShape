@@ -1,5 +1,0 @@
-User-authorized chapter navigation prototype, 2026-11-05
-
-TuneShape independent implementation: MIT.
-
-Generic chapter data and DOM engine authored for TuneShape. No portfolio controllers, personal text, fonts or media.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "count": 62,
+  "count": 56,
   "website": "https://tuneshape.kai-nex.com/",
   "repository": "https://github.com/orocoa/TuneShape",
   "effects": [
@@ -709,22 +709,6 @@
       "config": "examples/soap-bubble/config.json"
     },
     {
-      "id": "topographic-flow",
-      "name": "Topographic Flow",
-      "nameZh": "流动等高线",
-      "category": "背景",
-      "description": "An evolving contour map with elevation colours, survey dashes and five pointer deformation modes.",
-      "descriptionZh": "持续演变的等高线地图，可叠加高程配色、测绘虚线和五种指针形变。",
-      "editor": "https://tuneshape.kai-nex.com/#/effect/topographic-flow",
-      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/topographic-flow",
-      "documentation": {
-        "zh": "https://tuneshape.kai-nex.com/effects/topographic-flow/",
-        "en": "https://tuneshape.kai-nex.com/en/effects/topographic-flow/"
-      },
-      "license": "MIT",
-      "config": "examples/topographic-flow/config.json"
-    },
-    {
       "id": "chromatic-button",
       "name": "Chromatic Button",
       "nameZh": "流彩按钮",
@@ -755,22 +739,6 @@
       },
       "license": "MIT",
       "config": "examples/liquid-glass-logo/config.json"
-    },
-    {
-      "id": "skiper-106",
-      "name": "Smooth Caret Input",
-      "nameZh": "平滑光标输入框",
-      "category": "控件",
-      "description": "A spring-driven caret follows native text selection, beside a regular input for comparison.",
-      "descriptionZh": "弹簧光标跟随原生文本选区，保留标准输入作对照。",
-      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-106",
-      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-106",
-      "documentation": {
-        "zh": "https://tuneshape.kai-nex.com/effects/skiper-106/",
-        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-106/"
-      },
-      "license": "MIT",
-      "config": "examples/skiper-106/config.json"
     },
     {
       "id": "skiper-46",
@@ -821,22 +789,6 @@
       "config": "examples/skiper-92/config.json"
     },
     {
-      "id": "skiper-48",
-      "name": "Card Swipe Carousel",
-      "nameZh": "卡片堆叠滑动轮播",
-      "category": "图片",
-      "description": "Drag a stack of geometric image cards, with depth and rotation on the cards behind, and snap on release.",
-      "descriptionZh": "拖拽站内几何图片卡片，后方卡片以旋转和纵深堆叠，松手吸附到上一张或下一张。",
-      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-48",
-      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-48",
-      "documentation": {
-        "zh": "https://tuneshape.kai-nex.com/effects/skiper-48/",
-        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-48/"
-      },
-      "license": "MIT",
-      "config": "examples/skiper-48/config.json"
-    },
-    {
       "id": "skiper-91",
       "name": "Elastic Video Player",
       "nameZh": "弹性拖动视频播放器",
@@ -869,22 +821,6 @@
       "config": "examples/skiper-81/config.json"
     },
     {
-      "id": "skiper-82",
-      "name": "Rainbow Send Input",
-      "nameZh": "彩虹发送输入框",
-      "category": "控件",
-      "description": "A compact message input with a rainbow send wave, rotating arrow and local message stack.",
-      "descriptionZh": "紧凑消息输入在发送时展开彩色光带、旋转箭头，并堆叠本地消息。",
-      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-82",
-      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-82",
-      "documentation": {
-        "zh": "https://tuneshape.kai-nex.com/effects/skiper-82/",
-        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-82/"
-      },
-      "license": "MIT",
-      "config": "examples/skiper-82/config.json"
-    },
-    {
       "id": "skiper-83",
       "name": "Integration Mention Input",
       "nameZh": "集成提及输入框",
@@ -899,22 +835,6 @@
       },
       "license": "MIT",
       "config": "examples/skiper-83/config.json"
-    },
-    {
-      "id": "skiper-41",
-      "name": "Progressive Blur",
-      "nameZh": "渐进模糊阅读",
-      "category": "背景",
-      "description": "A scrollable reading surface with gradient backdrop blur at both edges.",
-      "descriptionZh": "文字滚经上下渐进模糊遮罩，阅读区中部保持清晰。",
-      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-41",
-      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-41",
-      "documentation": {
-        "zh": "https://tuneshape.kai-nex.com/effects/skiper-41/",
-        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-41/"
-      },
-      "license": "MIT",
-      "config": "examples/skiper-41/config.json"
     },
     {
       "id": "skiper-43",
@@ -979,22 +899,6 @@
       },
       "license": "MIT",
       "config": "examples/page-turn-cards/config.json"
-    },
-    {
-      "id": "chapter-progress-nav",
-      "name": "Chapter Progress Navigation",
-      "nameZh": "章节进度导航",
-      "category": "导航",
-      "description": "Equal chapter labels, real scroll progress, and an interruptible direct transition.",
-      "descriptionZh": "等宽章节标签、真实阅读进度和可随时打断的短转场。",
-      "editor": "https://tuneshape.kai-nex.com/#/effect/chapter-progress-nav",
-      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/chapter-progress-nav",
-      "documentation": {
-        "zh": "https://tuneshape.kai-nex.com/effects/chapter-progress-nav/",
-        "en": "https://tuneshape.kai-nex.com/en/effects/chapter-progress-nav/"
-      },
-      "license": "MIT",
-      "config": "examples/chapter-progress-nav/config.json"
     }
   ]
 }
