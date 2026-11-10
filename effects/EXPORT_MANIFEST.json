@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "key": "tuneshape-public-retirement-v1:a03cda2899a9dcced93edd80e528524851185952ac7479786fecf30f42390b65",
-  "effects": 53,
+  "key": "tuneshape-public-purge-v1:8802b0b70b87c13b234ae71f0a84fa08ac99f9d8e30ff9b879989d1d50bb1ec1",
+  "effects": 52,
   "scope": "Current visible effect renderers and runnable entries; full editor excluded",
   "input": [
     {
@@ -243,11 +243,6 @@
       "path": "src/SkiperPreview.tsx",
       "bytes": 2476,
       "sha256": "fc760f6282fae493b669dc06ac4356d0343a993532323e1217145aaead6181cd"
-    },
-    {
-      "path": "src/SoapBubblePreview.tsx",
-      "bytes": 2245,
-      "sha256": "8f7b4c40f2216fdbc183e5bc2fba1b587769ab96b2a5b8e356cf1722de70b857"
     },
     {
       "path": "src/StudioEffectsPreview.tsx",
@@ -1095,26 +1090,6 @@
       "sha256": "d116772e555d12f551897edeb306e8c7354e08d79cc97dd16a4420dd732c35ec"
     },
     {
-      "path": "src/soap-bubble-settings.ts",
-      "bytes": 24020,
-      "sha256": "19fce567aec5a943a8010955e273587cf19140e3ed6e73769688e2819abcbf14"
-    },
-    {
-      "path": "src/soap-bubble-shader.ts",
-      "bytes": 8156,
-      "sha256": "cb499c922a449b58f473def217645570696016ad5788b3167d12599223858694"
-    },
-    {
-      "path": "src/soap-bubble-spec.ts",
-      "bytes": 7657,
-      "sha256": "6c51774b5f1119a529ac02f499ec3ca10f56f1cc09a4a736d0b70e6a71679ac3"
-    },
-    {
-      "path": "src/soap-bubble.ts",
-      "bytes": 20710,
-      "sha256": "cf6423700619f8843ec10259af159ff6fcf1b9d98251e9fec3f2455a13985ec4"
-    },
-    {
       "path": "src/source-notices.test.ts",
       "bytes": 682,
       "sha256": "bf7968662a71e431675e1ad332fd3d0f6f66a35965f699e264fb16779dfe1afa"
@@ -1278,13 +1253,13 @@
     },
     {
       "path": "src/translations-en.ts",
-      "bytes": 66810,
-      "sha256": "f02ff4bd35933417c88cac5ee4b352e60cf6e3d4b686139e1cdc11ccfef5b595"
+      "bytes": 66318,
+      "sha256": "2cded21ef0447b523eb5720a4ead9d965f4f41bb4389c9d6302e4b347bf86ce8"
     },
     {
       "path": "src/effect-terms.ts",
-      "bytes": 10475,
-      "sha256": "e75474c11172fb1d3db813b264262efe9a3c228ab84c0e39a59d31f4971f0fe3"
+      "bytes": 10287,
+      "sha256": "cd5063163bb5ac33505cbf015e16282fe88ffbbdff44e4e5e16b393a0b84a27f"
     },
     {
       "path": "src/skiper-effects.ts",
@@ -1363,13 +1338,13 @@
     },
     {
       "path": "src/browse-catalog.ts",
-      "bytes": 3373,
-      "sha256": "db7d31995366f616be610bbf6daf58e70687fe542ab20e8173b07ab93c8496c2"
+      "bytes": 3359,
+      "sha256": "7f3ab284651a9b6cf255a21b6d66a25d733513e0659b25a6279b50bdeddef7c3"
     },
     {
       "path": "src/catalog.ts",
-      "bytes": 3783,
-      "sha256": "892e8587203b114ec0ce865bb951ab06531682731c35f7a20536ac58cf4ae892"
+      "bytes": 3769,
+      "sha256": "874e4ef375113caced77f30407f5544f0e8c2a7a8d92b8f25fb9991f76e93e26"
     },
     {
       "path": "src/model.ts",
@@ -1393,8 +1368,8 @@
     },
     {
       "path": "src/HistoryPreview.tsx",
-      "bytes": 26903,
-      "sha256": "bf384777f187704d867d212a5bd19d725b2bb9ff4ba9a25606e4fb5c02acf652"
+      "bytes": 26780,
+      "sha256": "a372266610f94fca1131a1901b21352c429061399bc65e4f3b552a04b21bde56"
     },
     {
       "path": "src/MirroredCardStackPreview.tsx",
@@ -1617,26 +1592,6 @@
       "sha256": "15e11cc41cc74de054755b242f1a2f84aa5d9eca2ab20efe8c7b8f1b71cf146b"
     },
     {
-      "path": "src/SoapBubblePreview.tsx",
-      "bytes": 2245,
-      "sha256": "8f7b4c40f2216fdbc183e5bc2fba1b587769ab96b2a5b8e356cf1722de70b857"
-    },
-    {
-      "path": "src/soap-bubble.ts",
-      "bytes": 20710,
-      "sha256": "cf6423700619f8843ec10259af159ff6fcf1b9d98251e9fec3f2455a13985ec4"
-    },
-    {
-      "path": "src/soap-bubble-shader.ts",
-      "bytes": 8156,
-      "sha256": "cb499c922a449b58f473def217645570696016ad5788b3167d12599223858694"
-    },
-    {
-      "path": "src/soap-bubble-settings.ts",
-      "bytes": 24020,
-      "sha256": "19fce567aec5a943a8010955e273587cf19140e3ed6e73769688e2819abcbf14"
-    },
-    {
       "path": "src/LiquidCarouselPreview.tsx",
       "bytes": 2733,
       "sha256": "038c572f1b50b9dcb4e5024575157df5cf399163476ddc5d94088076f4917ef2"
@@ -1723,8 +1678,8 @@
     },
     {
       "path": "src/history-model.ts",
-      "bytes": 84454,
-      "sha256": "2e383d8b10a02945b2bd0598ea83a30e3c1b024ca4cfd1248015b0cad3cf82f7"
+      "bytes": 83449,
+      "sha256": "3d3e88e727abaaa546637533b1c2ea0125109d0a3c2433c872db3a831abc9dff"
     },
     {
       "path": "src/mirrored-card-stack-spec.ts",
@@ -1763,8 +1718,8 @@
     },
     {
       "path": "src/source-notices.ts",
-      "bytes": 7577,
-      "sha256": "8272c831817e18047e69e2b5b790f93dcebdf8e2adb6e23a7f45178a489aae32"
+      "bytes": 7069,
+      "sha256": "1bef0a78db9c323ad5117b8c47ee93aee86790438492fe1360800b877e0922b3"
     },
     {
       "path": "src/chromatic-button-spec.ts",
@@ -1775,11 +1730,6 @@
       "path": "src/topographic-flow-spec.ts",
       "bytes": 7798,
       "sha256": "9267fde6197ec17abc664a7a96a9122fc6654086c138d2fd38bcb50f337a14bb"
-    },
-    {
-      "path": "src/soap-bubble-spec.ts",
-      "bytes": 7657,
-      "sha256": "6c51774b5f1119a529ac02f499ec3ca10f56f1cc09a4a736d0b70e6a71679ac3"
     },
     {
       "path": "src/liquid-carousel-spec.ts",
@@ -2068,8 +2018,8 @@
     },
     {
       "path": "src/effect-behavior.ts",
-      "bytes": 12679,
-      "sha256": "aa2748628f5c83527b946723053b064ee618e1ab0ca2578fd5f1b31c0e0cf37a"
+      "bytes": 12366,
+      "sha256": "51112e444fd489cc55dc72920d660ddfac392f43f3a6c368d89d6e2d924e052f"
     },
     {
       "path": "src/sidebar-field.ts",
@@ -2268,8 +2218,8 @@
     },
     {
       "path": "src/detail-interface.css",
-      "bytes": 14917,
-      "sha256": "eb26f14284c2b458f83f6ae6dfe8e8753e94f25678c66928b6496a41091ca82e"
+      "bytes": 14857,
+      "sha256": "bfe78745ef5ba2e417fc08134caaaf3706f8824a0e271b70f6154a712084fe77"
     },
     {
       "path": "src/refinement-interface.css",
@@ -2388,13 +2338,13 @@
     },
     {
       "path": "src/gooey-wordmark.test.ts",
-      "bytes": 3464,
-      "sha256": "2d2aa0e1fc00df24cf83c743c43cb817c5f89928b28f8a7e1fbc6985cc421ee1"
+      "bytes": 3350,
+      "sha256": "aafa11de9d7fe15c4886ff0767b282c73cf6bffc30ba6b743949b9e1b5099dbf"
     },
     {
       "path": "src/history-model.test.ts",
-      "bytes": 5144,
-      "sha256": "bcd7a0be8ff870964ef11223236c44d45c6486bdf97bc66c6c25fd4449928e26"
+      "bytes": 5130,
+      "sha256": "852e88351d65db85689ee078be87aecdf5f9279b2f7fb41ce46b35e41fc11d87"
     },
     {
       "path": "src/source-notices.test.ts",
@@ -2538,8 +2488,8 @@
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
-      "bytes": 69882,
-      "sha256": "6922f920617d087bf3b3387ec89de63b3dafa00eb83af3372edcf2ab41af3187"
+      "bytes": 69489,
+      "sha256": "abea573f2d5ab54ae03ffa79a22d7e1090d68aa41a4a9b21079194c7caa4fd28"
     },
     {
       "path": "public/video/ORIGINAL_MEDIA.txt",
@@ -3652,36 +3602,6 @@
       "sha256": "1b96fbb6faa8815c5f310b30cecbdd1f95199e1d784c16a910213402701ed68e"
     },
     {
-      "path": "examples/soap-bubble/config.json",
-      "bytes": 2232,
-      "sha256": "465c8c18126ac2de25d76e31798b0a66393113d8eb29749033626003ba3f37a8"
-    },
-    {
-      "path": "examples/soap-bubble/main.tsx",
-      "bytes": 112,
-      "sha256": "93266a8862eb8c23547ffc20ecc8a5f0fce4709e980272540e5b7e0abbbcca9b"
-    },
-    {
-      "path": "examples/soap-bubble/index.html",
-      "bytes": 449,
-      "sha256": "f7f027f199291a69087cd7f27ce613d2e8a76ddb59e7ec60c3c0de8ba8d37639"
-    },
-    {
-      "path": "examples/soap-bubble/SOURCE_NOTICE.txt",
-      "bytes": 466,
-      "sha256": "97a070695c7a60dcc39f12daadf568ad4db2d15e8a6dd4193a4ba5acf9651063"
-    },
-    {
-      "path": "examples/soap-bubble/README.md",
-      "bytes": 4916,
-      "sha256": "de520caa134aadda16b79bee4a2d2e34ff34ebd2041250d3ac92689362f40715"
-    },
-    {
-      "path": "examples/soap-bubble/README.zh-CN.md",
-      "bytes": 5165,
-      "sha256": "9a283927c4ed8797f9b92597ca895028a99e3a4c1b822e4352b27249e4700299"
-    },
-    {
       "path": "examples/chromatic-button/config.json",
       "bytes": 805,
       "sha256": "95e89cb9d86a925684d05dcae2dc571b72b722ea8b5be45eac8a8053b781ccd9"
@@ -4013,8 +3933,8 @@
     },
     {
       "path": "catalog.json",
-      "bytes": 39568,
-      "sha256": "a7e1136d0ee7e0984e7873c5e9cd51d6c21761612311cda3f5eb51c3d5d90c05"
+      "bytes": 38799,
+      "sha256": "e4dc313bd996251f78672464ba1eb6d37350ba46c53d4f3cf70ffa9a671f0bb2"
     },
     {
       "path": "demo/main.tsx",
@@ -4023,23 +3943,23 @@
     },
     {
       "path": "vite.config.ts",
-      "bytes": 1044,
-      "sha256": "b2d0378ac11db5085f63ca6981ba9e89e97eaf52ca9f77c76b1420d823aab103"
+      "bytes": 1030,
+      "sha256": "704c5f8e36072397d565fbf67f28adc92003688deb79542f6ad3a6f8b9f74b79"
     },
     {
       "path": "index.html",
-      "bytes": 8957,
-      "sha256": "282e9522c22b8ab9bb12a6b91ea00d700a04b53f9512a34407c1833f89750a6b"
+      "bytes": 8776,
+      "sha256": "bb7896097e19093e5618a6565879fd6cd2c3abe53d59a76115dcb73d11fe63fd"
     },
     {
       "path": "README.md",
-      "bytes": 7867,
-      "sha256": "0b9888a9e9a2a964c068c3c74342cc0147dfae8594ee2d44489cb8cdb3cfc2df"
+      "bytes": 7742,
+      "sha256": "5c134b55b110c88a957133439d1920b4adc5213229a53c8ee85be2dd6facde74"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 7761,
-      "sha256": "44ce26f46daaff0a2e4d913451ba6b0b0ef51c81ca10c465a283d032f4708e40"
+      "bytes": 7636,
+      "sha256": "b53435e9cc95dc08edee452b7250c61bf593a9e6c225dc6062814eb0fab4d988"
     },
     {
       "path": "test/catalog.test.mjs",

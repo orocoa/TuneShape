@@ -4,7 +4,7 @@ import {retiredEffectIds} from './effect-terms';
 export type BrowseCategory={key:string;label:string;english:string;symbol:string;featured:string;ids:string[]};
 /** Browse metadata is separate from the category fixtures inside authored effects. */
 const definitions:BrowseCategory[]=[
- {key:'controls',label:'控件',english:'Controls',symbol:'button',featured:'chromatic-button',ids:['skiper-106','skiper-56','skiper-81','skiper-83','skiper-82','skiper-92','chromatic-button','soap-bubble','coffee-selector','basic-button','hover-invert','dropdown','glass-radio','duration-picker','rounded-checks','gooey-input']},
+ {key:'controls',label:'控件',english:'Controls',symbol:'button',featured:'chromatic-button',ids:['skiper-106','skiper-56','skiper-81','skiper-83','skiper-82','skiper-92','chromatic-button','coffee-selector','basic-button','hover-invert','dropdown','glass-radio','duration-picker','rounded-checks','gooey-input']},
  {key:'navigation',label:'导航',english:'Navigation',symbol:'tabs',featured:'chapter-progress-nav',ids:['skiper-46','skiper-98','skiper-43','skiper-75','mini-sidebar','expandable-sidebar','scroll-progress','hook-sidebar','chapter-progress-nav','rail-toc']},
  {key:'containers',label:'容器',english:'Containers',symbol:'grid',featured:'page-turn-cards',ids:['page-turn-cards','card-morph','folder','glass-folder']},
  {key:'text',label:'文字',english:'Text',symbol:'text',featured:'liquid-glass-logo',ids:['liquid-glass-logo','gooey-wordmark','text-rise','text-scramble','glyph-wall','encrypted-text','flip-words','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy']},

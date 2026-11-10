@@ -43,7 +43,7 @@ Export JSON before refreshing or leaving the page: effect parameters are kept fo
 
 ## About this repository
 
-**Rendering source for all 53 effects in the visible catalog is public.** Each includes a default configuration, runnable page, and English/Chinese documentation. [Run the examples](effects/README.md) · [Machine-readable catalog](effects/catalog.json) · [Effect guides](https://tuneshape.kai-nex.com/en/effects/)
+**Rendering source for all 52 effects in the visible catalog is public.** Each includes a default configuration, runnable page, and English/Chinese documentation. [Run the examples](effects/README.md) · [Machine-readable catalog](effects/catalog.json) · [Effect guides](https://tuneshape.kai-nex.com/en/effects/)
 
 ```sh
 git clone https://github.com/orocoa/TuneShape.git
@@ -95,7 +95,6 @@ pnpm dev
 | watercolor-flow | [Watercolor Flow](effects/examples/watercolor-flow/README.md) | [细度水彩融合](effects/examples/watercolor-flow/README.zh-CN.md) |
 | ascii-sharks | [ASCII Sharks](effects/examples/ascii-sharks/README.md) | [ASCII 鲨鱼群](effects/examples/ascii-sharks/README.zh-CN.md) |
 | particle-tide | [Particle Tide](effects/examples/particle-tide/README.md) | [粒子海浪](effects/examples/particle-tide/README.zh-CN.md) |
-| soap-bubble | [Soap Bubble UI](effects/examples/soap-bubble/README.md) | [肥皂泡控件](effects/examples/soap-bubble/README.zh-CN.md) |
 | chromatic-button | [Chromatic Button](effects/examples/chromatic-button/README.md) | [流彩按钮](effects/examples/chromatic-button/README.zh-CN.md) |
 | liquid-glass-logo | [Liquid Glass Logo](effects/examples/liquid-glass-logo/README.md) | [液态玻璃 Logo](effects/examples/liquid-glass-logo/README.zh-CN.md) |
 | skiper-46 | [Next.js Gooey Menu](effects/examples/skiper-46/README.md) | [黏连状态菜单](effects/examples/skiper-46/README.zh-CN.md) |

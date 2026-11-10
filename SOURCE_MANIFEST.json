@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "scope": "All 53 current UI effect renderers, bilingual runnable examples, original generic demonstration media, button example, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
-  "sourceSha256": "c66fb95b039cbfdddf6b4a0a55ebe32849b08db5b9567210f99ee6f1f5b5e6fd",
+  "scope": "All 52 current UI effect renderers, bilingual runnable examples, original generic demonstration media, button example, ASCII Shoal, and reviewed documentation media; full website editor and deployment files excluded",
+  "sourceSha256": "77603d38d199b3f571e64b6172951dfb3ff591f989f729715eb76205cf5bf9b7",
   "files": [
     {
       "path": ".github/workflows/ascii-shoal.yml",
@@ -40,13 +40,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 17786,
-      "sha256": "c7434115a2d900adc6ed39954162442235df24d37920c9d33ab652fd1c01f65d"
+      "bytes": 17645,
+      "sha256": "cc5e7f16a8ae37b683dfe145d37468cb3b619a91c37173128144f6195e6a8428"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 16825,
-      "sha256": "572eb27ea3cf5066604baffaa5e445a6c8804bddacbdb69785a0a99449adc46c"
+      "bytes": 16684,
+      "sha256": "ee5bafc9e9da5beb9fac3ab1080cc101f9a16a560dcf07ed2c49d0f621098141"
     },
     {
       "path": "codemeta.json",
@@ -95,8 +95,8 @@
     },
     {
       "path": "effects/EXPORT_MANIFEST.json",
-      "bytes": 132698,
-      "sha256": "5c57a09a4e4a2996e6ce3675f607d3028051b498714f5488c655571a0ffd3d6d"
+      "bytes": 130100,
+      "sha256": "055ff94d64af0a46af9f179fbd11bc600b3f57d79bd1167b226362c4f4138d83"
     },
     {
       "path": "effects/LICENSE",
@@ -105,23 +105,23 @@
     },
     {
       "path": "effects/README.md",
-      "bytes": 7867,
-      "sha256": "0b9888a9e9a2a964c068c3c74342cc0147dfae8594ee2d44489cb8cdb3cfc2df"
+      "bytes": 7742,
+      "sha256": "5c134b55b110c88a957133439d1920b4adc5213229a53c8ee85be2dd6facde74"
     },
     {
       "path": "effects/README.zh-CN.md",
-      "bytes": 7761,
-      "sha256": "44ce26f46daaff0a2e4d913451ba6b0b0ef51c81ca10c465a283d032f4708e40"
+      "bytes": 7636,
+      "sha256": "b53435e9cc95dc08edee452b7250c61bf593a9e6c225dc6062814eb0fab4d988"
     },
     {
       "path": "effects/THIRD_PARTY_NOTICES.txt",
-      "bytes": 69882,
-      "sha256": "6922f920617d087bf3b3387ec89de63b3dafa00eb83af3372edcf2ab41af3187"
+      "bytes": 69489,
+      "sha256": "abea573f2d5ab54ae03ffa79a22d7e1090d68aa41a4a9b21079194c7caa4fd28"
     },
     {
       "path": "effects/catalog.json",
-      "bytes": 39568,
-      "sha256": "a7e1136d0ee7e0984e7873c5e9cd51d6c21761612311cda3f5eb51c3d5d90c05"
+      "bytes": 38799,
+      "sha256": "e4dc313bd996251f78672464ba1eb6d37350ba46c53d4f3cf70ffa9a671f0bb2"
     },
     {
       "path": "effects/demo/main.tsx",
@@ -1329,36 +1329,6 @@
       "sha256": "fcca6b6d939b892cb68db988f33511e70b8c0f011bb5af9ff2378f6a0bafd13c"
     },
     {
-      "path": "effects/examples/soap-bubble/README.md",
-      "bytes": 4916,
-      "sha256": "de520caa134aadda16b79bee4a2d2e34ff34ebd2041250d3ac92689362f40715"
-    },
-    {
-      "path": "effects/examples/soap-bubble/README.zh-CN.md",
-      "bytes": 5165,
-      "sha256": "9a283927c4ed8797f9b92597ca895028a99e3a4c1b822e4352b27249e4700299"
-    },
-    {
-      "path": "effects/examples/soap-bubble/SOURCE_NOTICE.txt",
-      "bytes": 466,
-      "sha256": "97a070695c7a60dcc39f12daadf568ad4db2d15e8a6dd4193a4ba5acf9651063"
-    },
-    {
-      "path": "effects/examples/soap-bubble/config.json",
-      "bytes": 2232,
-      "sha256": "465c8c18126ac2de25d76e31798b0a66393113d8eb29749033626003ba3f37a8"
-    },
-    {
-      "path": "effects/examples/soap-bubble/index.html",
-      "bytes": 449,
-      "sha256": "f7f027f199291a69087cd7f27ce613d2e8a76ddb59e7ec60c3c0de8ba8d37639"
-    },
-    {
-      "path": "effects/examples/soap-bubble/main.tsx",
-      "bytes": 112,
-      "sha256": "93266a8862eb8c23547ffc20ecc8a5f0fce4709e980272540e5b7e0abbbcca9b"
-    },
-    {
       "path": "effects/examples/soft-blur-in/README.md",
       "bytes": 2095,
       "sha256": "60484563b447ae44c4b854116425f18aeed568844b6c57470fecce7357f3614e"
@@ -1570,8 +1540,8 @@
     },
     {
       "path": "effects/index.html",
-      "bytes": 8957,
-      "sha256": "282e9522c22b8ab9bb12a6b91ea00d700a04b53f9512a34407c1833f89750a6b"
+      "bytes": 8776,
+      "sha256": "bb7896097e19093e5618a6565879fd6cd2c3abe53d59a76115dcb73d11fe63fd"
     },
     {
       "path": "effects/package.json",
@@ -1775,8 +1745,8 @@
     },
     {
       "path": "effects/src/HistoryPreview.tsx",
-      "bytes": 26903,
-      "sha256": "bf384777f187704d867d212a5bd19d725b2bb9ff4ba9a25606e4fb5c02acf652"
+      "bytes": 26780,
+      "sha256": "a372266610f94fca1131a1901b21352c429061399bc65e4f3b552a04b21bde56"
     },
     {
       "path": "effects/src/HookSidebarPreview.tsx",
@@ -1847,11 +1817,6 @@
       "path": "effects/src/SkiperPreview.tsx",
       "bytes": 2476,
       "sha256": "fc760f6282fae493b669dc06ac4356d0343a993532323e1217145aaead6181cd"
-    },
-    {
-      "path": "effects/src/SoapBubblePreview.tsx",
-      "bytes": 2245,
-      "sha256": "8f7b4c40f2216fdbc183e5bc2fba1b587769ab96b2a5b8e356cf1722de70b857"
     },
     {
       "path": "effects/src/StudioEffectsPreview.tsx",
@@ -1980,8 +1945,8 @@
     },
     {
       "path": "effects/src/browse-catalog.ts",
-      "bytes": 3373,
-      "sha256": "db7d31995366f616be610bbf6daf58e70687fe542ab20e8173b07ab93c8496c2"
+      "bytes": 3359,
+      "sha256": "7f3ab284651a9b6cf255a21b6d66a25d733513e0659b25a6279b50bdeddef7c3"
     },
     {
       "path": "effects/src/catalog-design.css",
@@ -1990,8 +1955,8 @@
     },
     {
       "path": "effects/src/catalog.ts",
-      "bytes": 3783,
-      "sha256": "892e8587203b114ec0ce865bb951ab06531682731c35f7a20536ac58cf4ae892"
+      "bytes": 3769,
+      "sha256": "874e4ef375113caced77f30407f5544f0e8c2a7a8d92b8f25fb9991f76e93e26"
     },
     {
       "path": "effects/src/chapter-progress-nav-settings.ts",
@@ -2065,8 +2030,8 @@
     },
     {
       "path": "effects/src/detail-interface.css",
-      "bytes": 14917,
-      "sha256": "eb26f14284c2b458f83f6ae6dfe8e8753e94f25678c66928b6496a41091ca82e"
+      "bytes": 14857,
+      "sha256": "bfe78745ef5ba2e417fc08134caaaf3706f8824a0e271b70f6154a712084fe77"
     },
     {
       "path": "effects/src/duration-picker-spec.ts",
@@ -2090,13 +2055,13 @@
     },
     {
       "path": "effects/src/effect-behavior.ts",
-      "bytes": 12679,
-      "sha256": "aa2748628f5c83527b946723053b064ee618e1ab0ca2578fd5f1b31c0e0cf37a"
+      "bytes": 12366,
+      "sha256": "51112e444fd489cc55dc72920d660ddfac392f43f3a6c368d89d6e2d924e052f"
     },
     {
       "path": "effects/src/effect-terms.ts",
-      "bytes": 10475,
-      "sha256": "e75474c11172fb1d3db813b264262efe9a3c228ab84c0e39a59d31f4971f0fe3"
+      "bytes": 10287,
+      "sha256": "cd5063163bb5ac33505cbf015e16282fe88ffbbdff44e4e5e16b393a0b84a27f"
     },
     {
       "path": "effects/src/effect-variants.ts",
@@ -2205,8 +2170,8 @@
     },
     {
       "path": "effects/src/gooey-wordmark.test.ts",
-      "bytes": 3464,
-      "sha256": "2d2aa0e1fc00df24cf83c743c43cb817c5f89928b28f8a7e1fbc6985cc421ee1"
+      "bytes": 3350,
+      "sha256": "aafa11de9d7fe15c4886ff0767b282c73cf6bffc30ba6b743949b9e1b5099dbf"
     },
     {
       "path": "effects/src/gooey-wordmark.ts",
@@ -2220,13 +2185,13 @@
     },
     {
       "path": "effects/src/history-model.test.ts",
-      "bytes": 5144,
-      "sha256": "bcd7a0be8ff870964ef11223236c44d45c6486bdf97bc66c6c25fd4449928e26"
+      "bytes": 5130,
+      "sha256": "852e88351d65db85689ee078be87aecdf5f9279b2f7fb41ce46b35e41fc11d87"
     },
     {
       "path": "effects/src/history-model.ts",
-      "bytes": 84454,
-      "sha256": "2e383d8b10a02945b2bd0598ea83a30e3c1b024ca4cfd1248015b0cad3cf82f7"
+      "bytes": 83449,
+      "sha256": "3d3e88e727abaaa546637533b1c2ea0125109d0a3c2433c872db3a831abc9dff"
     },
     {
       "path": "effects/src/hook-sidebar-spec.ts",
@@ -2699,34 +2664,14 @@
       "sha256": "d116772e555d12f551897edeb306e8c7354e08d79cc97dd16a4420dd732c35ec"
     },
     {
-      "path": "effects/src/soap-bubble-settings.ts",
-      "bytes": 24020,
-      "sha256": "19fce567aec5a943a8010955e273587cf19140e3ed6e73769688e2819abcbf14"
-    },
-    {
-      "path": "effects/src/soap-bubble-shader.ts",
-      "bytes": 8156,
-      "sha256": "cb499c922a449b58f473def217645570696016ad5788b3167d12599223858694"
-    },
-    {
-      "path": "effects/src/soap-bubble-spec.ts",
-      "bytes": 7657,
-      "sha256": "6c51774b5f1119a529ac02f499ec3ca10f56f1cc09a4a736d0b70e6a71679ac3"
-    },
-    {
-      "path": "effects/src/soap-bubble.ts",
-      "bytes": 20710,
-      "sha256": "cf6423700619f8843ec10259af159ff6fcf1b9d98251e9fec3f2455a13985ec4"
-    },
-    {
       "path": "effects/src/source-notices.test.ts",
       "bytes": 682,
       "sha256": "bf7968662a71e431675e1ad332fd3d0f6f66a35965f699e264fb16779dfe1afa"
     },
     {
       "path": "effects/src/source-notices.ts",
-      "bytes": 7577,
-      "sha256": "8272c831817e18047e69e2b5b790f93dcebdf8e2adb6e23a7f45178a489aae32"
+      "bytes": 7069,
+      "sha256": "1bef0a78db9c323ad5117b8c47ee93aee86790438492fe1360800b877e0922b3"
     },
     {
       "path": "effects/src/style.css",
@@ -2770,8 +2715,8 @@
     },
     {
       "path": "effects/src/translations-en.ts",
-      "bytes": 66810,
-      "sha256": "f02ff4bd35933417c88cac5ee4b352e60cf6e3d4b686139e1cdc11ccfef5b595"
+      "bytes": 66318,
+      "sha256": "2cded21ef0447b523eb5720a4ead9d965f4f41bb4389c9d6302e4b347bf86ce8"
     },
     {
       "path": "effects/src/tuneshape-navigation.ts",
@@ -2880,8 +2825,8 @@
     },
     {
       "path": "effects/vite.config.ts",
-      "bytes": 1044,
-      "sha256": "b2d0378ac11db5085f63ca6981ba9e89e97eaf52ca9f77c76b1420d823aab103"
+      "bytes": 1030,
+      "sha256": "704c5f8e36072397d565fbf67f28adc92003688deb79542f6ad3a6f8b9f74b79"
     },
     {
       "path": "examples/ascii-shoal/.gitignore",

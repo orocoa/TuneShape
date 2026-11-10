@@ -10,7 +10,6 @@ export function galleryPlayback(id:string):'loading'|'cycle'|'direct'{
  if(id==='liquid-glass-logo')return 'loading';
  if(id==='chromatic-button')return 'loading';
  if(id==='topographic-flow')return 'loading';
- if(id==='soap-bubble')return 'loading';
  if(id==='liquid-carousel')return 'loading';
  if(id==='ascii-sharks'||id==='coffee-selector')return 'loading';
  if(isStudioEffect(id))return 'loading';
@@ -23,7 +22,6 @@ export function interactionSelector(id:string){
  if(id==='liquid-glass-logo')return '.liquid-glass-logo';
  if(id==='chromatic-button')return '.chromatic-button';
  if(id==='topographic-flow')return '.topographic-flow';
- if(id==='soap-bubble')return '.soap-bubble';
  if(id==='liquid-carousel')return '.liquid-carousel';
  if(id==='ascii-sharks')return '.ascii-sharks';
  if(id==='coffee-selector')return '.coffee-selector';
@@ -59,7 +57,6 @@ export function effectTrigger(id:string):EffectTrigger{
  if(id==='liquid-glass-logo')return 'loading';
  if(id==='chromatic-button')return 'loading';
  if(id==='topographic-flow')return 'loading';
- if(id==='soap-bubble')return 'loading';
  if(id==='ascii-sharks')return 'loading';
  if(id==='basic-button')return 'press';
  if(['spinner','dots','finger-tap','typewriter','yin-yang','glyph-wall','particle-tide','album-rail','orbit-reel','watercolor','watercolor-original','watercolor-flow','pulse','wave','progress'].includes(id))return 'loading';
@@ -82,7 +79,6 @@ export function triggerDescription(id:string){
  if(id==='liquid-glass-logo')return '悬停、聚焦或 Preview 显形；点击、Enter / 空格重播，方向键定位，End / Escape 显示终态，移开且失焦、离屏或后台停止。';
  if(id==='chromatic-button')return '目录悬停、聚焦或 Preview 播放流彩材质；按钮、消息输入与语音外观保留真实操作，支持 Enter 和空格，操作不会打开详情。';
  if(id==='topographic-flow')return '目录悬停、聚焦或 Preview 播放，详情自动流动；指针与触屏拖动塑造地形，方向键移动影响位置，Home 居中，Escape 清除，Enter / 空格重播。';
- if(id==='soap-bubble')return '悬停、聚焦或 Preview 播放薄膜，按钮、菜单、搜索、开关和滑块保留真实操作；方向键调整滑块，Escape 收起菜单。';
  if(id==='gooey-wordmark')return '详情入场自动播放，点击或 Enter / 空格重播；移动鼠标局部融化并逐字换色，移开恢复。方向键逐字体验，触屏点按或拖动；目录悬停、聚焦或 Preview 播放。';
  if(id==='liquid-carousel')return '点击左右箭头、方向键或横向滑动切换图片；新图片沿液态边缘从点击侧扩散，连续操作接续当前画面。';
  if(id==='ascii-sharks')return '详情自动游动；目录悬停、聚焦或手机预览时播放。离开且失焦、离屏或后台时停止；暂停保留鱼群进度，速度为 0 冻结当前画面。';

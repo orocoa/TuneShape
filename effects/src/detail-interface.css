@@ -169,7 +169,6 @@
 .effect-resource-links{display:flex;gap:20px;align-items:center;margin-left:auto;font-size:13px;white-space:nowrap}.effect-resource-links a{text-underline-offset:4px}.effect-resource-links a:focus-visible{outline:2px solid currentColor;outline-offset:4px}@media(max-width:650px){.editor-breadcrumb{flex-wrap:wrap}.effect-resource-links{width:100%;margin:0;padding-left:44px;gap:24px;font-size:12px}}
 
 /* Text content and hexadecimal colours in the new material panels stay readable. */
-.soap-bubble-controls .effect-color-field input[type=text],
 .liquid-glass-logo-controls .effect-color-field input[type=text]{width:150px;max-width:60%;min-width:80px;flex:0 1 150px;height:32px;padding:6px 10px;border:1px solid var(--line,#dedede);border-radius:8px;background:var(--surface,#fff);color:inherit;font:inherit;cursor:text}
 .liquid-glass-logo-controls .effect-color-field:has(input[type=text]){flex-wrap:wrap}
 .liquid-glass-logo-controls .effect-color-field>small{flex-basis:100%;line-height:1.5}

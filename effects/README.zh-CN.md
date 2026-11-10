@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文**
 
-包含当前可见目录的 53 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
+包含当前可见目录的 52 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
 
 [在线编辑器](https://tuneshape.kai-nex.com/)
 
@@ -59,7 +59,6 @@ pnpm build
 | watercolor-flow | [Watercolor Flow](examples/watercolor-flow/README.md) | [细度水彩融合](examples/watercolor-flow/README.zh-CN.md) |
 | ascii-sharks | [ASCII Sharks](examples/ascii-sharks/README.md) | [ASCII 鲨鱼群](examples/ascii-sharks/README.zh-CN.md) |
 | particle-tide | [Particle Tide](examples/particle-tide/README.md) | [粒子海浪](examples/particle-tide/README.zh-CN.md) |
-| soap-bubble | [Soap Bubble UI](examples/soap-bubble/README.md) | [肥皂泡控件](examples/soap-bubble/README.zh-CN.md) |
 | chromatic-button | [Chromatic Button](examples/chromatic-button/README.md) | [流彩按钮](examples/chromatic-button/README.zh-CN.md) |
 | liquid-glass-logo | [Liquid Glass Logo](examples/liquid-glass-logo/README.md) | [液态玻璃 Logo](examples/liquid-glass-logo/README.zh-CN.md) |
 | skiper-46 | [Next.js Gooey Menu](examples/skiper-46/README.md) | [黏连状态菜单](examples/skiper-46/README.zh-CN.md) |

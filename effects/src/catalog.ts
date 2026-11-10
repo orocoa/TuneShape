@@ -2,7 +2,7 @@
 import {retiredEffectIds} from './effect-terms';
 export type CatalogCategory={label:string;symbol:string;featured:string;children:{label:string;ids:string[]}[]};
 const originalCatalog:CatalogCategory[]=[
- {label:'按钮与输入',symbol:'button',featured:'basic-button',children:[{label:'按钮反馈',ids:['chromatic-button','soap-bubble','basic-button','hover-lift','hover-invert','submit']},{label:'开关控件',ids:['switch']},{label:'复选框',ids:['rounded-checks']},{label:'选择器',ids:['coffee-selector']},{label:'数值输入',ids:['duration-picker']},{label:'搜索输入',ids:['skiper-106','skiper-56','skiper-81','skiper-83','skiper-82','skiper-92','gooey-input']}]},
+ {label:'按钮与输入',symbol:'button',featured:'basic-button',children:[{label:'按钮反馈',ids:['chromatic-button','basic-button','hover-lift','hover-invert','submit']},{label:'开关控件',ids:['switch']},{label:'复选框',ids:['rounded-checks']},{label:'选择器',ids:['coffee-selector']},{label:'数值输入',ids:['duration-picker']},{label:'搜索输入',ids:['skiper-106','skiper-56','skiper-81','skiper-83','skiper-82','skiper-92','gooey-input']}]},
  {label:'导航与切换',symbol:'tabs',featured:'basic-tabs',children:[{label:'标签与菜单',ids:['skiper-46','skiper-98','skiper-75','basic-tabs','dropdown','glass-radio']},{label:'导航反馈',ids:['mini-sidebar','expandable-sidebar','scroll-progress','hook-sidebar','rail-toc','arrow','nav-label']}]},
  {label:'弹窗与浮层',symbol:'modal',featured:'basic-modal',children:[{label:'弹窗与抽屉',ids:['basic-modal','sheet','blur-panel','breality-sheet']},{label:'提示与说明',ids:['skiper-43','toast','tooltip']}]},
  {label:'卡片与布局',symbol:'grid',featured:'card-morph',children:[{label:'展开与折叠',ids:['accordion','card-morph','news-morph','folder','glass-folder']},{label:'边界与分栏',ids:['grid-collapse','border-lines','divider-merge']},{label:'列表入场',ids:['stagger']}]},

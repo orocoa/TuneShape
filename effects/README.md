@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-All 53 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
+All 52 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
 
 [Online editor](https://tuneshape.kai-nex.com/)
 
@@ -59,7 +59,6 @@ Choose an effect in the local server; edit its config.json to reuse it. The dist
 | watercolor-flow | [Watercolor Flow](examples/watercolor-flow/README.md) | [细度水彩融合](examples/watercolor-flow/README.zh-CN.md) |
 | ascii-sharks | [ASCII Sharks](examples/ascii-sharks/README.md) | [ASCII 鲨鱼群](examples/ascii-sharks/README.zh-CN.md) |
 | particle-tide | [Particle Tide](examples/particle-tide/README.md) | [粒子海浪](examples/particle-tide/README.zh-CN.md) |
-| soap-bubble | [Soap Bubble UI](examples/soap-bubble/README.md) | [肥皂泡控件](examples/soap-bubble/README.zh-CN.md) |
 | chromatic-button | [Chromatic Button](examples/chromatic-button/README.md) | [流彩按钮](examples/chromatic-button/README.zh-CN.md) |
 | liquid-glass-logo | [Liquid Glass Logo](examples/liquid-glass-logo/README.md) | [液态玻璃 Logo](examples/liquid-glass-logo/README.zh-CN.md) |
 | skiper-46 | [Next.js Gooey Menu](examples/skiper-46/README.md) | [黏连状态菜单](examples/skiper-46/README.zh-CN.md) |

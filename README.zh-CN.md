@@ -43,7 +43,7 @@ TuneShape，中文名「随形」，是面向设计师与开发者的 UI 动效�
 
 ## 关于本仓库
 
-当前可见目录中的 **53 个动效渲染源码均已公开**，每项提供默认配置、可运行页面和中英文说明。[运行全部示例](effects/README.zh-CN.md) · [机器可读清单](effects/catalog.json) · [动效说明](https://tuneshape.kai-nex.com/effects/)
+当前可见目录中的 **52 个动效渲染源码均已公开**，每项提供默认配置、可运行页面和中英文说明。[运行全部示例](effects/README.zh-CN.md) · [机器可读清单](effects/catalog.json) · [动效说明](https://tuneshape.kai-nex.com/effects/)
 
 ```sh
 git clone https://github.com/orocoa/TuneShape.git
@@ -95,7 +95,6 @@ pnpm dev
 | watercolor-flow | [Watercolor Flow](effects/examples/watercolor-flow/README.md) | [细度水彩融合](effects/examples/watercolor-flow/README.zh-CN.md) |
 | ascii-sharks | [ASCII Sharks](effects/examples/ascii-sharks/README.md) | [ASCII 鲨鱼群](effects/examples/ascii-sharks/README.zh-CN.md) |
 | particle-tide | [Particle Tide](effects/examples/particle-tide/README.md) | [粒子海浪](effects/examples/particle-tide/README.zh-CN.md) |
-| soap-bubble | [Soap Bubble UI](effects/examples/soap-bubble/README.md) | [肥皂泡控件](effects/examples/soap-bubble/README.zh-CN.md) |
 | chromatic-button | [Chromatic Button](effects/examples/chromatic-button/README.md) | [流彩按钮](effects/examples/chromatic-button/README.zh-CN.md) |
 | liquid-glass-logo | [Liquid Glass Logo](effects/examples/liquid-glass-logo/README.md) | [液态玻璃 Logo](effects/examples/liquid-glass-logo/README.zh-CN.md) |
 | skiper-46 | [Next.js Gooey Menu](effects/examples/skiper-46/README.md) | [黏连状态菜单](effects/examples/skiper-46/README.zh-CN.md) |
