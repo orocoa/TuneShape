@@ -1,3 +1,10 @@
+import {isBenchoUiEffect} from './bencho-ui-settings';
+import BenchoUiPreview from './BenchoUiPreview';
+import ReelfolioPreview from './ReelfolioPreview';
+import BenchoPreview from './BenchoPreview';
+import {isReelfolioEffect} from './reelfolio-settings';
+import {isBenchoEffect} from './bencho-settings';
+import {catalogTextFit} from './catalog-text-fit';
 import MirroredCardStackPreview from './MirroredCardStackPreview';
 import PageTurnCardsPreview from './PageTurnCardsPreview';
 import SkiperPreview from './SkiperPreview';
@@ -25,6 +32,11 @@ import {scrambleFrame} from './text-scramble';
 import HoverImagePreview from './HoverImagePreview';
 import GlassFolderPreview from './GlassFolderPreview';
 import ScrollProgressPreview from './ScrollProgressPreview';
+import WavingCardPreview from './WavingCardPreview';
+import DepthRibbonPreview from './DepthRibbonPreview';
+import PassageGalleryPreview from './PassageGalleryPreview';
+import GlassGeneratePreview from './GlassGeneratePreview';
+import ExpandingMenuPreview from './ExpandingMenuPreview';
 import HookSidebarPreview from './HookSidebarPreview';
 import ChapterProgressNavPreview from './ChapterProgressNavPreview';
 import RailTocPreview from './RailTocPreview';
@@ -58,7 +70,7 @@ const Sculpture=memo(function Sculpture({config}:{config:HistoryConfig}){
  };
  const lines=<><i/><i/><i/></>;const scene=recipe.scene;
  if(scene==='tile')return <P id="face" cls="sculpt-tile">Explore<DemoArrow diagonal/></P>;
- if(scene==='menu')return <><P id="trigger" cls="sculpt-trigger">Choose a coffee <P id="chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5.5 9 12 15.5 18.5 9"/></svg></P></P><P id="panel" cls="sculpt-menu">{['Geisha','SL28'].map((s,i)=><P key={s} id={'item'+i} cls="sculpt-menu-item">{s}<span>↗</span></P>)}</P></>;
+ if(scene==='menu')return <div className="sculpt-dropdown"><P id="trigger" cls="sculpt-trigger">Choose a coffee <P id="chevron"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5.5 9 12 15.5 18.5 9"/></svg></P></P><P id="panel" cls="sculpt-menu">{['Geisha','SL28'].map((s,i)=><P key={s} id={'item'+i} cls="sculpt-menu-item">{s}<span>↗</span></P>)}</P></div>;
  if(scene==='accordion')return <div className="sculpt-accordion"><div className="sculpt-accordion-head">Project details<P id="chevron">⌄</P></div><P id="panel" cls="sculpt-accordion-body"><div>An idea unfolds.</div><p>More details, same context.</p></P></div>;
  if(scene==='toast')return <><div className="sculpt-document">{lines}</div><P id="face" cls="sculpt-toast">✓　Changes saved</P></>;
  if(scene==='sheet')return <><button type="button" data-activation="open" className="sculpt-open-panel">Open panel</button><P id="shade" cls="sculpt-shade"/><P id="panel" cls="sculpt-sheet"><button type="button" data-activation="close" className="sculpt-close-panel" aria-label="Close panel">×</button><i className="sculpt-handle"/><strong>A little more space</strong><p>Room for your next idea.</p><div className="sculpt-placeholder">{lines}</div></P></>;
@@ -104,11 +116,14 @@ const Sculpture=memo(function Sculpture({config}:{config:HistoryConfig}){
 export interface HistoryPreviewProps{config:HistoryConfig;speed:number;reduced:boolean;command:PreviewCommand;side:string;paused?:boolean;onRunningChange?:(side:string,running:boolean)=>void;enabled?:boolean;thumbnail?:boolean;autoPlay?:boolean;interactive?:boolean;presentation?:'loading'|'cycle'|'direct'}
 export default function HistoryPreview(props:HistoryPreviewProps){
  useLanguage();
- return props.config.recipeId==='mirrored-card-stack'?<MirroredCardStackPreview {...props}/>:props.config.recipeId==='page-turn-cards'?<PageTurnCardsPreview {...props}/>:isSkiperEffect(props.config.recipeId)?<SkiperPreview {...props}/>:props.config.recipeId==='liquid-glass-logo'?<LiquidGlassLogoPreview {...props}/>:props.config.recipeId==='chromatic-button'?<ChromaticButtonPreview {...props}/>:props.config.recipeId==='topographic-flow'?<TopographicFlowPreview {...props}/>:props.config.recipeId==='liquid-carousel'?<LiquidCarouselPreview {...props}/>:props.config.recipeId==='ascii-sharks'?<AsciiSharksPreview {...props}/>:props.config.recipeId==='coffee-selector'?<CoffeeSelectorPreview {...props}/>:isStudioEffect(props.config.recipeId)?<StudioEffectsPreview {...props}/>:isAceternityEffect(props.config.recipeId)?<AceternityPreview {...props}/>:props.config.recipeId==='rounded-checks'?<RoundedChecksPreview {...props}/>:props.config.recipeId==='glass-folder'?<GlassFolderPreview {...props}/>:props.config.recipeId==='scroll-progress'?<ScrollProgressPreview {...props}/>:props.config.recipeId==='hook-sidebar'?<HookSidebarPreview {...props}/>:props.config.recipeId==='chapter-progress-nav'?<ChapterProgressNavPreview {...props}/>:props.config.recipeId==='rail-toc'?<RailTocPreview {...props}/>:props.config.recipeId==='duration-picker'?<DurationPickerPreview {...props}/>:props.config.recipeId==='hover-preview'?<HoverImagePreview {...props}/>:props.config.recipeId==='album-rail'?<AlbumRailPreview {...props}/>:props.config.recipeId==='orbit-reel'?<OrbitReelPreview {...props}/>:isWatercolorRecipe(props.config.recipeId)?<WatercolorPreview {...props}/>:isReelRecipe(props.config.recipeId)?<ElasticReelPreview {...props}/>:props.config.recipeId==='particle-tide'?<ParticleTidePreview {...props}/>:props.config.recipeId==='glyph-wall'?<GlyphWallPreview {...props}/>:props.config.recipeId==='glass-radio'?<GlassRadioPreview {...props}/>:props.config.recipeId==='mini-sidebar'?<MiniSidebarPreview {...props}/>:props.config.recipeId==='text-scramble'?<TextScramblePreview {...props}/>:<TrackPreview {...props}/>;
+ if(isReelfolioEffect(props.config.recipeId))return <ReelfolioPreview {...props}/>;
+ if(isBenchoUiEffect(props.config.recipeId))return <BenchoUiPreview {...props}/>;
+ if(isBenchoEffect(props.config.recipeId))return <BenchoPreview {...props}/>;
+ return props.config.recipeId==='depth-ribbon'?<DepthRibbonPreview {...props}/>:props.config.recipeId==='passage-gallery'?<PassageGalleryPreview {...props}/>:props.config.recipeId==='waving-card'?<WavingCardPreview {...props}/>:props.config.recipeId==='glass-generate'?<GlassGeneratePreview {...props}/>:props.config.recipeId==='expanding-menu'?<ExpandingMenuPreview {...props}/>:props.config.recipeId==='mirrored-card-stack'?<MirroredCardStackPreview {...props}/>:props.config.recipeId==='page-turn-cards'?<PageTurnCardsPreview {...props}/>:isSkiperEffect(props.config.recipeId)?<SkiperPreview {...props}/>:props.config.recipeId==='liquid-glass-logo'?<LiquidGlassLogoPreview {...props}/>:props.config.recipeId==='chromatic-button'?<ChromaticButtonPreview {...props}/>:props.config.recipeId==='topographic-flow'?<TopographicFlowPreview {...props}/>:props.config.recipeId==='liquid-carousel'?<LiquidCarouselPreview {...props}/>:props.config.recipeId==='ascii-sharks'?<AsciiSharksPreview {...props}/>:props.config.recipeId==='coffee-selector'?<CoffeeSelectorPreview {...props}/>:isStudioEffect(props.config.recipeId)?<StudioEffectsPreview {...props}/>:isAceternityEffect(props.config.recipeId)?<AceternityPreview {...props}/>:props.config.recipeId==='rounded-checks'?<RoundedChecksPreview {...props}/>:props.config.recipeId==='glass-folder'?<GlassFolderPreview {...props}/>:props.config.recipeId==='scroll-progress'?<ScrollProgressPreview {...props}/>:props.config.recipeId==='hook-sidebar'?<HookSidebarPreview {...props}/>:props.config.recipeId==='chapter-progress-nav'?<ChapterProgressNavPreview {...props}/>:props.config.recipeId==='rail-toc'?<RailTocPreview {...props}/>:props.config.recipeId==='duration-picker'?<DurationPickerPreview {...props}/>:props.config.recipeId==='hover-preview'?<HoverImagePreview {...props}/>:props.config.recipeId==='album-rail'?<AlbumRailPreview {...props}/>:props.config.recipeId==='orbit-reel'?<OrbitReelPreview {...props}/>:isWatercolorRecipe(props.config.recipeId)?<WatercolorPreview {...props}/>:isReelRecipe(props.config.recipeId)?<ElasticReelPreview {...props}/>:props.config.recipeId==='particle-tide'?<ParticleTidePreview {...props}/>:props.config.recipeId==='glyph-wall'?<GlyphWallPreview {...props}/>:props.config.recipeId==='glass-radio'?<GlassRadioPreview {...props}/>:props.config.recipeId==='mini-sidebar'?<MiniSidebarPreview {...props}/>:props.config.recipeId==='text-scramble'?<TextScramblePreview {...props}/>:<TrackPreview {...props}/>;
 }
 function TrackPreview({config,speed,reduced,command,side,enabled=true,thumbnail=false,autoPlay=false,interactive=false,presentation='loading',paused:transportPaused=false,onRunningChange}:HistoryPreviewProps){
  useLanguage();
- const host=useRef<HTMLDivElement>(null),[fit,setFit]=useState(.9),[active,setActive]=useState(false),[revision,setRevision]=useState(0),[running,setRunning]=useState(false),[manual,setManual]=useState(false);
+ const host=useRef<HTMLDivElement>(null),[fit,setFit]=useState(.9),[active,setActive]=useState(thumbnail&&config.recipeId==='dropdown'),[revision,setRevision]=useState(0),[running,setRunning]=useState(false),[manual,setManual]=useState(false);
  const trigger=effectTrigger(config.recipeId),automatic=thumbnail&&!interactive&&!manual;
  const restartRequested=useRef(false),lastCommand=useRef(0),initialized=useRef(false),controls=useRef<ReturnType<typeof animate>[]>([]),clock=useRef(speed);clock.current=speed;
  const demo=useRef<'forward'|'reverse'|null>(null),controlClock=usePreviewClock(controls,speed,enabled,transportPaused);
@@ -129,7 +144,11 @@ function TrackPreview({config,speed,reduced,command,side,enabled=true,thumbnail=
  };
  const activate=(value:boolean,restart=false)=>{restartRequested.current=restart;setActive(value);setRevision(n=>n+1)};
  const reveal=['stagger','text-rise'].includes(config.recipeId),hoverRestart=['text-scramble','ascii-wave'].includes(config.recipeId),fill=config.recipeId==='progress',textRise=config.recipeId==='text-rise';
- useEffect(()=>{if(!host.current)return;const observer=new ResizeObserver(([e])=>setFit(Math.max(.1,Math.min(1,(e.contentRect.width-14)/320,thumbnail?(e.contentRect.height-12)/230:1))));observer.observe(host.current);return()=>observer.disconnect()},[thumbnail]);
+ useLayoutEffect(()=>{const element=host.current;if(!element)return;const measure=()=>{
+  const width=element.clientWidth,height=element.clientHeight,specimen=element.querySelector<HTMLElement>('.sculpt-letters');
+  if(thumbnail&&config.recipeId==='text-rise'&&specimen){setFit(catalogTextFit(width,height,parseFloat(getComputedStyle(specimen).fontSize),specimen.scrollWidth,specimen.scrollHeight));return}
+  setFit(Math.max(.1,Math.min(1,(width-14)/320,thumbnail?(height-12)/230:1)));
+ };measure();const observer=new ResizeObserver(measure);observer.observe(element);return()=>observer.disconnect()},[thumbnail]);
  useEffect(()=>{if(!autoPlay)setManual(false);if(automatic)activate(autoPlay)},[autoPlay,automatic]);
  useEffect(()=>{if(lastCommand.current!==command.seq){lastCommand.current=command.seq;demo.current=command.demo?'forward':null;activate(command.active,!!command.restart)}},[command.seq,command.active,command.restart]);
  useLayoutEffect(()=>{
@@ -153,6 +172,16 @@ function TrackPreview({config,speed,reduced,command,side,enabled=true,thumbnail=
   const poster=automatic&&!autoPlay,immediate=first||reduced||poster||idleFlow||idleText||(fill&&!active);
   const loading=trigger==='loading'||config.recipeId==='ascii-wave';
   const tracks=(poster||idleText)&&textRise?compiledTracks(config):demo.current&&!loading?galleryPass(config,!active):poster&&config.recipeId==='wave'?compiledTracks(config):automatic&&presentation==='cycle'?galleryPass(config,!active):compiledTracks(config,!active),forward=idleText?compiledTracks(config):[];
+  if(thumbnail&&config.recipeId==='dropdown'){
+   // Use the menu's own clock to keep both its open group and closed trigger
+   // centered, including paused, reversed and reduced-motion transitions.
+   const panel=tracks.find(track=>track.target==='[data-part="panel"]'&&track.property==='opacity');
+   const menu=root.querySelector<HTMLElement>('.sculpt-menu'),group=root.querySelector<HTMLElement>('.sculpt-dropdown');
+   if(panel&&menu&&group){
+    const offset=(menu.offsetHeight+(parseFloat(getComputedStyle(group).rowGap)||0))/2;
+    tracks.push({...panel,target:'.sculpt-dropdown',property:'y',values:panel.values.map(value=>(1-Number(value))*offset)});
+   }
+  }
   setRunning(!immediate);
   for(const tr of tracks){
    const node=root.querySelector<HTMLElement>(tr.target);if(!node)continue;
@@ -200,6 +229,7 @@ function TrackPreview({config,speed,reduced,command,side,enabled=true,thumbnail=
  },[config,active,revision,reduced,automatic,autoPlay,presentation]);
  const hover=(event:React.PointerEvent<HTMLDivElement>)=>{
   if(trigger!=='hover'||automatic||!enabled||transportPaused)return;
+  if(interactive)demo.current=null;
   const inside=!!(event.target as Element).closest(hoverTarget[config.recipeId]);
   if(!demo.current&&inside&&!hovered.current){hovered.current=true;activate(true,hoverRestart)}
   else if(!demo.current&&!inside&&hovered.current){hovered.current=false;pointer.current.energy=0;activate(false)}
@@ -211,6 +241,7 @@ function TrackPreview({config,speed,reduced,command,side,enabled=true,thumbnail=
  };
  const leave=()=>{pointer.current.energy=0;if(demo.current||transportPaused)return;if(hovered.current){hovered.current=false;pointer.current.energy=0;activate(false)}};
  const click=(event:React.MouseEvent<HTMLDivElement>)=>{
+  if(interactive)demo.current=null;
   if(demo.current||transportPaused)return;
   const target=event.target as Element;
   if(automatic){if(!target.closest(interactionSelector(config.recipeId)))return;setManual(true)}

@@ -20,11 +20,11 @@ Edit `config.json` to adjust the configuration. Use Play / Pause / Replay to che
 
 ## Interaction
 
-Type @yt, @google or @notion to reveal the matching integration cards; Enter/the arrow sends locally. Edit card labels, placeholder, type size, radius and wave colours. Manual sends use the original public cue, which can be muted and keeps its original speed; automatic demos stay silent. These are local interaction demos without external integrations. Catalog hover, focus and mobile Preview share a demonstration; the title opens the editor.
+Type @yt, @google or @notion to reveal the matching integration cards; Enter/the arrow sends locally. Edit placeholder, type size, radius and wave colours. Manual sends use the original public cue, which can be muted and keeps its original speed; automatic demos stay silent. These are local interaction demos without external integrations. Catalog hover, focus and mobile Preview share a demonstration; the title opens the editor.
 
 ## Motion notes 2
 
-Placeholder: "Type shit.."；Input width: 512；Input font size: 24；Input radius: 29；Canvas background: "#f1f1f1"；Input background: "#f5f4f3"；Text color: "#121212"；Send button background: "#ffffff"；@yt card label: "Youtube Analyzer"；@google card label: "Google Search"；@notion card label: "Notion"；Wave pink: "#fc2ba3"；Wave orange: "#fc6d35"；Wave yellow: "#f9c83d"；Wave end color: "#c2d6e1"；Play sound on manual send: true；Demonstration text: "Find @yt about design"
+Placeholder: "Say Something..."；Input width: 512；Input font size: 24；Input radius: 29；Canvas background: "#f1f1f1"；Input background: "#f5f4f3"；Text color: "#121212"；Send button background: "#ffffff"；Wave pink: "#fc2ba3"；Wave orange: "#fc6d35"；Wave yellow: "#f9c83d"；Wave end color: "#c2d6e1"；Play sound on manual send: true；Demonstration text: "tuneshape"
 
 ## States and motion
 

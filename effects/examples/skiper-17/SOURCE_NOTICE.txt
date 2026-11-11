@@ -1,0 +1,5 @@
+https://skiper-ui.com/v1/skiper17
+
+Adapted from the publicly available Skiper UI example. Free use and modification for personal/commercial projects; attribution to Skiper UI is required.
+
+Demo images are original TuneShape geometric works; no Lummi photographs are bundled. Public Skiper scroll geometry is adapted to a local scroll region and managed clocks. Skiper UI / @gurvinder-singh02 / https://gxuri.me. Reference demo media, artwork and product names retain their respective rights; they are demo content, not TuneShape original MIT artwork. Current input, focus, selection and playback position are transient.

@@ -18,15 +18,15 @@
   "roundedChecks": {
     "items": [
       {
-        "label": "Daily summary email",
+        "label": "Revise Model 1.1.1 Final",
         "checked": true
       },
       {
-        "label": "Weekly performance digest",
+        "label": "Coordinate with the Production Factory",
         "checked": true
       },
       {
-        "label": "Product release notes",
+        "label": "Bring Roses to the Date",
         "checked": false
       }
     ],

@@ -38,7 +38,7 @@
     "warpSpeed": 0.08,
     "opacity": 1,
     "brightness": 0.15,
-    "cursorInteraction": false,
+    "cursorInteraction": true,
     "cursorIntensity": 1
   }
 }

@@ -16,15 +16,16 @@
   "interruption": "retarget",
   "tracks": [],
   "hookSidebar": {
-    "label": "TuneShape",
+    "label": "MENU",
     "items": [
-      "Controls",
-      "Navigation",
-      "Containers",
-      "Text",
-      "Images",
-      "Indicators",
-      "Backgrounds"
+      "Tieguanyin",
+      "Longjing",
+      "Da Hong Pao",
+      "Pu-erh",
+      "Silver Needle",
+      "Jasmine Tea",
+      "Earl Grey",
+      "Matcha"
     ],
     "initialIndex": 0,
     "rowHeight": 32,

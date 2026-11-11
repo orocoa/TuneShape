@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {defaultLiquidCarousel,validateLiquidCarousel,liquidIndex,liquidRadius,liquidBoundaryProfile,liquidBoundaryOffset,liquidCarouselEngineCode} from './liquid-carousel';
+import {defaultLiquidCarousel,validateLiquidCarousel,liquidIndex,liquidRadius,liquidBoundaryProfile,liquidBoundaryOffset,liquidCarouselEngineCode,liquidCarouselLayout} from './liquid-carousel';
 import {defaultHistory,parseHistory,serializeHistory,historyMotion,validateHistory} from './history-model';
 import {reelItems} from './elastic-reel-art';
 import {galleryPlayback,interactionSelector} from './effect-behavior';
@@ -22,8 +22,9 @@ test('liquid carousel validates strict local media and preserves independent sav
 test('liquid carousel JSON, Motion adapter and portable factory use the same complete content',()=>{
  const config=defaultHistory('liquid-carousel'),json=serializeHistory(config),motion=historyMotion(config);
  assert.equal(config.liquidCarousel?.edge,.1);assert.equal(config.liquidCarousel?.distortion,.2);
+ assert.equal(config.liquidCarousel?.autoplay,true);assert.equal(config.liquidCarousel?.interval,3600);
  assert.deepEqual(parseHistory(json),config);assert.deepEqual(motion.adapters.liquidCarousel.settings,config.liquidCarousel);
- assert.equal(motion.adapters.liquidCarousel.runtime.durationMs,800);
+ assert.equal(motion.adapters.liquidCarousel.runtime.durationMs,1600);
  assert.equal(typeof Function('__name',liquidCarouselEngineCode+';return createLiquidCarousel')((fn:unknown)=>fn),'function');
  assert.throws(()=>validateHistory({...config,loop:true}));assert.throws(()=>validateHistory({...defaultHistory('toast'),liquidCarousel:config.liquidCarousel}));
  assert.equal(galleryPlayback('liquid-carousel'),'loading');assert.equal(interactionSelector('liquid-carousel'),'.liquid-carousel');
@@ -44,5 +45,18 @@ test('coherent liquid boundary closes smoothly and advances without retreat at t
   let previous=-Infinity;
   for(let n=0;n<=100;n++){const p=n/100,offset=liquidBoundaryOffset(angle,p,.1),radius=liquidRadius(p)-offset;assert.ok(radius>=previous,'front must not flicker backwards');previous=radius;assert.ok(Math.abs(offset)<=.1*liquidBoundaryProfile.reduce((sum,v)=>sum+Math.abs(v),0));assert.equal(exported(angle,p,.1),offset)}
   assert.ok(Math.abs(liquidBoundaryOffset(angle,.5,.1)-liquidBoundaryOffset(angle+2*Math.PI,.5,.1))<1e-14);
+ }
+});
+
+
+test('bottom navigation and image remain inside the fitted scene for every supported extreme',()=>{
+ const portable=Function('__name',liquidCarouselEngineCode+';return liquidCarouselLayout')((fn:unknown)=>fn);
+ for(const count of [2,6,8])for(const height of [150,202,280])for(const aspect of [.6,350/463,1.5])for(const border of [0,4.5,12])for(const buttonSize of [16,24,36]){
+  const settings={...defaultLiquidCarousel,items:Array.from({length:count},(_,i)=>defaultLiquidCarousel.items[i%6]),height,aspect,border,buttonSize},layout=liquidCarouselLayout(settings);
+  assert.deepEqual(portable(settings),layout);
+  assert.ok(layout.frameWidth+40<=layout.width);assert.ok(layout.navWidth+40<=layout.width);
+  assert.ok(layout.imageY-height/2>=20);assert.ok(layout.navTop>=layout.imageY+height/2+buttonSize*2/3-1e-9);
+  assert.ok(layout.navTop+buttonSize<=layout.height-20+1e-9);
+  assert.equal(layout.pagerWidth,(count-1)*layout.dot+layout.active+(count-1)*layout.dotGap);
  }
 });

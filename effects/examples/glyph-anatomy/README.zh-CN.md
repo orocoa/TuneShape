@@ -32,7 +32,7 @@ pnpm dev --open /examples/glyph-anatomy/
 
 ## 内容与参数
 
-当前保存设置：{"kind":"glyph-anatomy","text":"Glyph","fontSize":200,"fontWeight":800,"color":"#171717","guideColor":"#737373","guides":true,"keepPoints":false}。文字采用 1280×720 参考画布，预览按可用空间等比缩放。
+当前保存设置：{"kind":"glyph-anatomy","text":"Tuneshape","fontSize":200,"fontWeight":800,"color":"#171717","guideColor":"#737373","guides":true,"keepPoints":false}。文字采用 1280×720 参考画布，预览按可用空间等比缩放。
 
 ## 时序
 

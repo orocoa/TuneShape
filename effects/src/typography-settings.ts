@@ -11,8 +11,8 @@ export const typographyDefaults:Record<TypographyId,TypographySettings>={
  'short-slide-down':{kind:'short-slide-down',text:'Build from above.',fontSize:72,fontWeight:600,color:'#171717',entryOffset:28},
  'kinetic-center-build':{kind:'kinetic-center-build',text:'Words push left.',fontSize:72,fontWeight:600,color:'#171717',entryOffset:88},
  'period-drop':{kind:'period-drop',text:'Tuneshape',fontSize:160,fontWeight:800,color:'#171717',dotColor:'#737373',dotSize:.2},
- 'outline-trace':{kind:'outline-trace',text:'Outline',fontSize:150,fontWeight:800,color:'#171717',strokeColor:'#171717',strokeWidth:2.5,stagger:3,fill:true,keepStroke:false},
- 'glyph-anatomy':{kind:'glyph-anatomy',text:'Glyph',fontSize:200,fontWeight:800,color:'#171717',guideColor:'#737373',guides:true,keepPoints:false},
+ 'outline-trace':{kind:'outline-trace',text:'Tuneshape',fontSize:150,fontWeight:800,color:'#171717',strokeColor:'#171717',strokeWidth:2.5,stagger:3,fill:true,keepStroke:false},
+ 'glyph-anatomy':{kind:'glyph-anatomy',text:'Tuneshape',fontSize:200,fontWeight:800,color:'#171717',guideColor:'#737373',guides:true,keepPoints:false},
 };
 export const typographyDurations:Record<TypographyId,number>={'typewriter-text':4000,'soft-blur-in':2000,'short-slide-down':2000,'kinetic-center-build':2000,'period-drop':1567,'outline-trace':1467,'glyph-anatomy':2200,'gooey-wordmark':1600};
 export function validateTypography(v:unknown):TypographySettings{

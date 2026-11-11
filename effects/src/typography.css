@@ -10,6 +10,11 @@
  --font-label:var(--font-body);
  --font-data:"Geist Pixel Circle",var(--font-zh),"SFMono-Regular",Consolas,monospace;
  --mono:var(--font-data);
+ --ui-type-body:14px;
+ --ui-type-meta:12px;
+ --ui-type-heading:18px;
+ --ui-line-control:1.5;
+ --ui-line-copy:1.75;
 }
 /* Keep the dot outlines; use real pair kerning and slightly tighter Latin spacing. */
 :root{font-kerning:normal;font-feature-settings:"kern" 1;word-spacing:-.06em;--latin-tracking:-.012em;--latin-word-spacing:-.075em}
@@ -32,3 +37,80 @@
 .font-license-restoration a{text-decoration:underline;text-underline-offset:3px}
 .font-license-links{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:24px;font-size:12px;line-height:1.8}
 .font-license-links a{text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+
+/* Shared interface roles. Authored demos keep their own type and saved settings. */
+:is(.workspace,.history-lab) .control-panel,
+.app-dialog{font-size:var(--ui-type-body);line-height:var(--ui-line-control)}
+:is(.workspace,.history-lab) .control-panel :is(label,.history-control-label,.effect-text-field,.effect-select-field,.effect-color-field,.skiper-text-field,.history-loop),
+:is(.workspace,.history-lab) .control-panel :is(input[type=number],input[type=text],input[type=url],select,textarea),
+:is(.workspace,.history-lab) .control-panel .advanced-controls>summary,
+:is(.workspace,.history-lab) .control-panel .segmented>button{
+ font-size:var(--ui-type-body);line-height:var(--ui-line-control);font-weight:400;
+}
+:is(.workspace,.history-lab) .control-panel input[type=number]{font-variant-numeric:tabular-nums}
+:is(.workspace,.history-lab) .control-panel :is(.number-wrap>span,.effect-color-field>code,.field-hint,.control-hint,.mode-note,.control-footnote,.control-definition,small),
+:is(.workspace,.history-lab) .control-panel .field-heading label>span{
+ font-size:var(--ui-type-meta);line-height:var(--ui-line-copy);font-weight:400;
+}
+:is(.workspace,.history-lab) .panel-heading h2,
+:is(.workspace,.history-lab) .description-lead h3,
+.app-dialog h2,.app-dialog.contact-dialog h2{font-size:var(--ui-type-heading);line-height:1.4;font-weight:400}
+:is(.workspace,.history-lab) .preview-toolbar{--toolbar-font-size:var(--ui-type-body)}
+:is(.workspace,.history-lab) .preview-toolbar .playback-controls select,
+:is(.workspace,.history-lab) .output-toolbar [role=tab],
+:is(.workspace,.history-lab) .output-toolbar .output-actions>button.text-button.output-copy-button{
+ font-size:var(--ui-type-body);line-height:var(--ui-line-control);font-weight:400;
+}
+:is(.workspace,.history-lab) .output-toolbar [role=tab][aria-selected=true]{color:var(--ink)}
+:is(.workspace,.history-lab) .preview-card-heading,
+:is(.workspace,.history-lab) .preview-card-heading small,
+:is(.workspace,.history-lab) .description-lead p,
+:is(.workspace,.history-lab) .spec-number,
+:is(.workspace,.history-lab) .code-caption,
+:is(.workspace,.history-lab) :is(.rule-badge,.source-badge,.history-track-summary,.state-caption,.state-detail,.state-arrow small,.state-strip small,.toggle-label),
+:is(.workspace,.history-lab) .output-footer,
+:is(.workspace,.history-lab) .output-footer>button,
+:is(.workspace,.history-lab) .preview-footer,
+:is(.workspace,.history-lab) .preview-footer>p{
+ font-size:var(--ui-type-meta);line-height:var(--ui-line-control);font-weight:400;
+}
+:is(.workspace,.history-lab) .spec-list :is(h4,p),
+:is(.workspace,.history-lab) .history-adaptation{
+ font-size:var(--ui-type-body);line-height:var(--ui-line-copy);font-weight:400;
+}
+:is(.workspace,.history-lab) .state-strip strong{font-size:var(--ui-type-body);line-height:var(--ui-line-control);font-weight:400}
+:is(.workspace,.history-lab) .state-strip strong>span{font-size:var(--ui-type-meta);line-height:var(--ui-line-control);font-weight:400}
+:is(.workspace,.history-lab) .spec-number{line-height:calc(var(--ui-type-body) * var(--ui-line-copy))}
+:is(.workspace,.history-lab) .output-body pre,
+:is(.workspace,.history-lab) .reuse-code-panel .reuse-html-code,
+.app-dialog textarea{
+ font-size:var(--ui-type-meta);line-height:var(--ui-line-copy);font-weight:400;
+}
+:is(.workspace,.history-lab) .reuse-resources :is(summary,button,a),
+.app-dialog :is(.primary-button,.secondary-button,.text-button,.file-picker,.export-options strong){
+ font-size:var(--ui-type-body);line-height:var(--ui-line-control);font-weight:400;
+}
+:is(.workspace,.history-lab) .reuse-resources>p,
+.app-dialog :is(.dialog-kicker,.dialog-note,.export-options small),
+.page-footer,.page-footer .effect-resource-links,.font-license-links,.font-license-restoration{
+ font-size:var(--ui-type-meta);line-height:var(--ui-line-copy);font-weight:400;
+}
+.app-dialog :is(p,.error-message),.glossary-list p{font-size:var(--ui-type-body);line-height:var(--ui-line-copy)}
+.app-dialog .glossary-list h3{font-size:var(--ui-type-body);line-height:var(--ui-line-control);font-weight:400}
+.app-dialog .glossary-list h3 span{font-size:var(--ui-type-meta)}
+.app-dialog .contact-links small{font-size:var(--ui-type-meta);line-height:var(--ui-line-control)}
+.app-dialog .contact-links strong{font-size:var(--ui-type-body);line-height:var(--ui-line-control)}
+.catalog-layout .catalog-index-nav,.catalog-mobile-panel .catalog-index-nav,
+.catalog-layout .catalog-mobile-trigger,.catalog-layout .catalog-mobile-trigger>span,
+.catalog-layout .library-card-info h2{
+ font-size:var(--ui-type-body);line-height:var(--ui-line-control);font-weight:400;
+}
+.catalog-layout .catalog-index-link>small,.catalog-mobile-panel .catalog-index-link>small,
+.catalog-layout .library-card-info .library-card-category,
+.catalog-layout .library-card-details,.catalog-layout .library-card-number{
+ font-size:var(--ui-type-meta);line-height:var(--ui-line-control);font-weight:400;
+}
+.catalog-layout :is(.library-count,.catalog-overview-link){font-size:var(--ui-type-meta);line-height:var(--ui-line-control);font-weight:400}
+.catalog-layout .library-filters :is(input,select){font-size:var(--ui-type-body);line-height:var(--ui-line-control);font-weight:400}
+.catalog-layout .catalog-result-bar,.catalog-layout .catalog-preview-tip,.catalog-layout .catalog-result-actions>button,
+.catalog-layout .library-touch-preview{font-size:var(--ui-type-meta);line-height:var(--ui-line-control);font-weight:400}

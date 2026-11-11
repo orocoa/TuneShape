@@ -24,7 +24,7 @@ pnpm dev --open /examples/hook-sidebar/
 
 ## 起点与终点
 
-组标题「TuneShape」（留空隐藏），共 7 项：Controls / Navigation / Containers / Text / Images / Indicators / Backgrounds。预选「Controls」。最小行高 32px，字号 14px。
+组标题「MENU」（留空隐藏），共 8 项：Tieguanyin / Longjing / Da Hong Pao / Pu-erh / Silver Needle / Jasmine Tea / Earl Grey / Matcha。预选「Tieguanyin」。最小行高 32px，字号 14px。
 
 ## 时序
 

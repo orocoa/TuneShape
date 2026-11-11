@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-A black circular mark and three-row status tooltip expand through a gooey SVG filter.
+A gray circular mark and three-row status tooltip expand through a gooey SVG filter.
 
 [Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/skiper-46) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/skiper-46/) · [All open-source effects](../../README.md)
 
@@ -24,7 +24,7 @@ Hover/focus the circular button, click to toggle and press Escape to close. Edit
 
 ## Motion notes 2
 
-Framework: "Next.js"；Version: "v13.4.8"；Error label: "Errors"；Error count: "3"；Route label: "Route"；Route value: "Static"；Button diameter: 40；Panel width: 200；Goo blur: 4.4；Expansion distance: 50；Background: "#ffffff"；Menu color: "#000000"；Text color: "#ffffff"；Error color: "#fb2c36"
+Framework: "Next.js"；Version: "v13.4.8"；Error label: "Errors"；Error count: "3"；Route label: "Route"；Route value: "Static"；Button diameter: 40；Panel width: 200；Goo blur: 4.4；Expansion distance: 50；Background: "#f1f1f1"；Menu color: "#e5e5e5"；Text color: "#303030"；Error color: "#b91c1c"
 
 ## States and motion
 
@@ -36,7 +36,7 @@ Response basis 500 ms, delay 0 ms. Observation speed is runtime only.
 
 ## Motion notes 5
 
-A black circular mark and three-row status tooltip expand through a gooey SVG filter. Native controls retain their current local state after the demonstration ends.
+A gray circular mark and three-row status tooltip expand through a gooey SVG filter. Native controls retain their current local state after the demonstration ends.
 
 ## Repeated input and interruption
 

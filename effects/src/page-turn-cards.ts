@@ -1,21 +1,35 @@
 import {createPageTurn,type PageTurn} from './page-turn-runtime/page-turn.js';
 import swiperCss from './page-turn-vendor/swiper/swiper.css?raw';
 import turnCss from './page-turn-runtime/page-turn.css?raw';
-import {validatePageTurn,type PageTurnSettings} from './page-turn-cards-settings';
+import {validatePageTurn,pageTurnGeometry,type PageTurnSettings} from './page-turn-cards-settings';
 import type {NativeEffectRuntime} from './native-effect-tools';
 export type PageTurnRuntime=NativeEffectRuntime&{gallery?:boolean;onInteract?:()=>void};
 
-/** Adapter only: the supplied rigid-card coordinator and its geometric CSS remain intact. */
+/** Shared preview/export adapter. Appearance scales without changing turn geometry. */
 export function createPageTurnCards(host:HTMLElement,input:PageTurnSettings,initial:PageTurnRuntime){
  let settings=validatePageTurn(input),runtime=initial,dead=false,engine:PageTurn|undefined,busy=false;
  const abort=new AbortController(),root=document.createElement('div'),style=document.createElement('style'),frame=document.createElement('div'),nav=document.createElement('div');
  root.className='page-turn-cards';frame.className='ptc-frame';nav.className='ptc-controls';nav.setAttribute('role','group');
  style.textContent=swiperCss+'\n'+turnCss.replace(/^@import[^;]+;/m,'')+`\n.page-turn-cards{position:relative;width:100%;height:100%;min-width:0;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;overflow:hidden;background:#f1f1f1;color:#424242;box-sizing:border-box;padding:16px}.page-turn-cards .ptc-frame{position:relative;flex:none;min-width:0;max-width:100%}.page-turn-cards .ptc-controls{display:flex;align-items:center;justify-content:center;gap:8px;height:44px;flex:none;width:min(100%,calc(var(--ptc-count)*28px + 80px));max-width:100%}.page-turn-cards button{appearance:none;background:transparent;color:#424242;border:0;border-radius:0;cursor:pointer;font:400 22px/1 ui-sans-serif,system-ui,sans-serif;min-width:32px;height:44px;padding:0;display:grid;place-items:center}.page-turn-cards button:focus-visible{outline:2px solid #555;outline-offset:-2px}.page-turn-cards button:disabled{cursor:default;opacity:.4}.page-turn-cards .ptc-controls>button{flex:0 0 32px}.page-turn-cards .ptc-dots{display:flex;align-items:center;gap:0;min-width:0;flex:1}.page-turn-cards .ptc-dot{min-width:0;width:28px;flex:1}.page-turn-cards .ptc-dot::after{content:"";width:6px;height:6px;border-radius:50%;background:#c2c2c2}.page-turn-cards .ptc-dot[aria-current=true]::after{background:#424242}.page-turn-cards .tspt-face{font-size:var(--ptc-font-size,48px);line-height:1;white-space:pre-wrap;overflow-wrap:anywhere;padding:12px;text-align:center}.page-turn-cards *{box-sizing:border-box}.page-turn-cards.ptc-narrow .ptc-controls{display:grid;grid-template-columns:1fr 1fr;width:100%;height:auto;gap:0}.page-turn-cards.ptc-narrow .ptc-dots{display:grid;grid-template-columns:repeat(var(--ptc-columns),minmax(0,1fr));grid-column:1 / -1;grid-row:1;width:100%}.page-turn-cards.ptc-narrow .ptc-dot{width:100%;height:32px}.page-turn-cards.ptc-narrow .ptc-previous{grid-column:1;grid-row:2;width:100%}.page-turn-cards.ptc-narrow .ptc-next{grid-column:2;grid-row:2;width:100%}`;
+ style.textContent+=`.page-turn-cards.ptc-compact .ptc-controls{position:absolute;left:8px;right:8px;top:calc(50% - 16px);transform:translateY(-50%);display:flex;justify-content:space-between;width:auto;height:32px;gap:0;pointer-events:none}.page-turn-cards.ptc-compact .ptc-dots{display:none}.page-turn-cards.ptc-compact .ptc-controls>button{width:32px;min-width:32px;height:32px;pointer-events:auto}`;
  root.append(style,frame,nav);host.classList.add('page-turn-host');host.replaceChildren(root);
  let dots:HTMLButtonElement[]=[],previous:HTMLButtonElement,next:HTMLButtonElement;
  const report=(running:boolean)=>{busy=running;host.dataset.running=String(running);runtime.onRunning?.(running)};
  const allowed=()=>runtime.enabled&&!runtime.paused&&!document.hidden;
- function fit(){if(dead)return;const narrow=root.clientWidth<280,bottom=runtime.gallery&&narrow?52:16;root.classList.toggle('ptc-narrow',narrow);root.style.paddingBottom=bottom+'px';root.style.setProperty('--ptc-count',String(settings.cards.length));root.style.setProperty('--ptc-columns',String(settings.cards.length>4?Math.ceil(settings.cards.length/2):settings.cards.length));const w=root.clientWidth-32,h=root.clientHeight-16-bottom-16-nav.offsetHeight,factor=Math.max(.01,Math.min(1,w/settings.width,h/settings.height));frame.style.width=settings.width*factor+'px';frame.style.height=settings.height*factor+'px';root.style.setProperty('--ptc-font-size',settings.fontSize*factor+'px')}
+ function fit(){
+  if(dead)return;
+  const narrow=root.clientWidth<280,compact=!!runtime.gallery&&narrow&&root.clientHeight<220;
+  const inset=compact?8:16,bottom=compact?40:runtime.gallery&&narrow?52:16;
+  root.classList.toggle('ptc-narrow',narrow&&!compact);root.classList.toggle('ptc-compact',compact);
+  root.style.padding=`${inset}px ${inset}px ${bottom}px`;
+  root.style.setProperty('--ptc-count',String(settings.cards.length));root.style.setProperty('--ptc-columns',String(settings.cards.length>4?Math.ceil(settings.cards.length/2):settings.cards.length));
+  // Small gallery tiles reserve one strip for Preview/Stop. Overlay the arrows
+  // beside the card instead of spending the remaining height on pagination.
+  const w=root.clientWidth-(compact?88:32),h=root.clientHeight-inset-bottom-(compact?0:16+nav.offsetHeight);
+  const factor=Math.max(.01,Math.min(1,w/settings.width,h/settings.height))*pageTurnGeometry.previewScale;
+  root.style.setProperty('--ptc-radius',pageTurnGeometry.cornerRadius*factor+'px');
+  frame.style.width=settings.width*factor+'px';frame.style.height=settings.height*factor+'px';root.style.setProperty('--ptc-font-size',settings.fontSize*factor+'px');
+ }
  function labels(){const en=runtime.language==='en';nav.setAttribute('aria-label',en?'Choose a card':'切换卡片');previous.setAttribute('aria-label',en?'Previous card':'上一张卡片');next.setAttribute('aria-label',en?'Next card':'下一张卡片');dots.forEach((b,i)=>b.setAttribute('aria-label',en?'Card '+(i+1)+': '+settings.cards[i].label:'第 '+(i+1)+' 张卡片：'+settings.cards[i].label));}
  function selected(id:string){host.dataset.selected=id;dots.forEach((b,i)=>b.setAttribute('aria-current',String(settings.cards[i].id===id)))}
  function buttons(){nav.replaceChildren();dots=[];previous=document.createElement('button');previous.type='button';previous.textContent='←';previous.className='ptc-previous';next=document.createElement('button');next.type='button';next.textContent='→';next.className='ptc-next';const group=document.createElement('div');group.className='ptc-dots';

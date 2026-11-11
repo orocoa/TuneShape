@@ -1,4 +1,4 @@
-export type LiquidGlassLogoSettings={logoKind:'tuneshape'|'note'|'orbit'|'star'|'custom';text:string;logoSrc:string;logoName:string;backgroundSrc:string;backgroundName:string;originalColors:boolean;tile:boolean;logoColor:string;tileColor:string;backgroundColor:string;transparentBackground:boolean;backgroundTint:string;loop:boolean;paused:boolean;exportType:'video'|'image';exportFormat:'mp4'|'webm'|'png'|'jpeg'|'webp';exportRatio:'16:9'|'9:16'|'1:1'|'4:5'|'4:3';exportResolution:720|1080|1440|2160;exportFps:30|60;
+export type LiquidGlassLogoSettings={logoKind:'brand'|'tuneshape'|'note'|'orbit'|'star'|'custom';text:string;logoSrc:string;logoName:string;backgroundSrc:string;backgroundName:string;originalColors:boolean;tile:boolean;logoColor:string;tileColor:string;backgroundColor:string;transparentBackground:boolean;backgroundTint:string;loop:boolean;paused:boolean;exportType:'video'|'image';exportFormat:'mp4'|'webm'|'png'|'jpeg'|'webp';exportRatio:'16:9'|'9:16'|'1:1'|'4:5'|'4:3';exportResolution:720|1080|1440|2160;exportFps:30|60;
  logoSize:number;
  logoScale:number;
  finalLogoScale:number;
@@ -46,7 +46,7 @@ export const glassLogoNumberControls=[
  {"key": "maxDpr", "zh": "预览像素比上限", "en": "Preview pixel ratio cap", "min": 1, "max": 3, "step": 0.25, "unit": "", "group": "性能", "hint": "上限不会超过设备像素比；导出文件按所选分辨率渲染。"},
  {"key": "exportFrame", "zh": "取帧时刻", "en": "Frame time", "min": 0, "max": 2.4, "step": 0.01, "unit": "s", "group": "导出", "hint": "基准时间轴 0–2.4 秒；修改后预览定位到同一帧。"},
 ] as const;
-export const defaultLiquidGlassLogo:LiquidGlassLogoSettings={"logoKind": "tuneshape", "text": "tuneshape", "logoSrc": "", "logoName": "", "backgroundSrc": "", "backgroundName": "", "originalColors": false, "tile": true, "logoColor": "#09111b", "tileColor": "#f1f1f1", "backgroundColor": "#f1f1f1", "transparentBackground": false, "backgroundTint": "#000000", "loop": false, "paused": false, "exportType": "video", "exportFormat": "mp4", "exportRatio": "16:9", "exportResolution": 1080, "exportFps": 60, "logoSize": 256, "logoScale": 0.72, "finalLogoScale": 1, "logoRelief": 1, "depth": 2.9, "dispersion": 1, "relief": 1, "caustics": 1, "highlights": 1, "echoTint": 0.5, "innerWallFocus": 0, "bloom": 0.55, "dropStrength": 1, "decay": 1.4, "speed": 1, "loopDelay": 1.6, "backgroundX": 0, "backgroundY": 0, "backgroundScale": 1, "backgroundTintOpacity": 0, "maxDpr": 2, "exportFrame": 0.9};
+export const defaultLiquidGlassLogo:LiquidGlassLogoSettings={"logoKind": "brand", "text": "TuneShape", "logoSrc": "", "logoName": "", "backgroundSrc": "", "backgroundName": "", "originalColors": false, "tile": true, "logoColor": "#09111b", "tileColor": "#f1f1f1", "backgroundColor": "#f1f1f1", "transparentBackground": false, "backgroundTint": "#000000", "loop": false, "paused": false, "exportType": "video", "exportFormat": "mp4", "exportRatio": "16:9", "exportResolution": 1080, "exportFps": 60, "logoSize": 256, "logoScale": 0.72, "finalLogoScale": 1, "logoRelief": 1, "depth": 2.9, "dispersion": 1, "relief": 1, "caustics": 1, "highlights": 1, "echoTint": 0.5, "innerWallFocus": 0, "bloom": 0.55, "dropStrength": 1, "decay": 1.4, "speed": 1, "loopDelay": 1.6, "backgroundX": 0, "backgroundY": 0, "backgroundScale": 1, "backgroundTintOpacity": 0, "maxDpr": 2, "exportFrame": 0.9};
 export const glassLogoPresets={
   "logo-default": {
     "depth": 2.9,
@@ -147,7 +147,7 @@ export const glassLogoPresets={
     "loopDelay": 1.0
   }
 } as const;
-export const glassLogoSelectControls={logoKind:['tuneshape','note','orbit','star','custom'],exportType:['video','image'],exportFormat:['mp4','webm','png','jpeg','webp'],exportRatio:['16:9','9:16','1:1','4:5','4:3'],exportResolution:[720,1080,1440,2160],exportFps:[30,60]} as const;
+export const glassLogoSelectControls={logoKind:['brand','tuneshape','note','orbit','star','custom'],exportType:['video','image'],exportFormat:['mp4','webm','png','jpeg','webp'],exportRatio:['16:9','9:16','1:1','4:5','4:3'],exportResolution:[720,1080,1440,2160],exportFps:[30,60]} as const;
 export const glassLogoThemes={light:{logoColor:'#09111b',tileColor:'#f1f1f1',backgroundColor:'#f1f1f1'},dark:{logoColor:'#ffffff',tileColor:'#060c18',backgroundColor:'#000000'}} as const;
 export function matchingGlassTheme(s:LiquidGlassLogoSettings){return !s.transparentBackground?Object.entries(glassLogoThemes).find(([,v])=>Object.entries(v).every(([k,v])=>s[k as keyof LiquidGlassLogoSettings]===v))?.[0]??'custom':'custom'}
 export function matchingGlassPreset(s:LiquidGlassLogoSettings){return Object.entries(glassLogoPresets).find(([,v])=>Object.entries(v).every(([k,v])=>s[k as keyof LiquidGlassLogoSettings]===v))?.[0]??'custom'}

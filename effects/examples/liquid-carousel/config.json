@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "recipeId": "liquid-carousel",
-  "durationMs": 800,
+  "durationMs": 1600,
   "delayMs": 0,
   "easing": [
     0.22,
@@ -47,11 +47,11 @@
     "aspect": 0.755939524838013,
     "radius": 14.2,
     "border": 4.5,
-    "buttonSize": 19.2,
+    "buttonSize": 24,
     "distortion": 0.2,
     "edge": 0.1,
-    "autoplay": false,
-    "interval": 1800,
+    "autoplay": true,
+    "interval": 3600,
     "disabled": false
   }
 }

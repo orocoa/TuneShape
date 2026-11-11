@@ -26,9 +26,9 @@
     "panelWidth": 200,
     "gooBlur": 4.4,
     "lift": 50,
-    "background": "#ffffff",
-    "panelColor": "#000000",
-    "textColor": "#ffffff",
-    "errorColor": "#fb2c36"
+    "background": "#f1f1f1",
+    "panelColor": "#e5e5e5",
+    "textColor": "#303030",
+    "errorColor": "#b91c1c"
   }
 }

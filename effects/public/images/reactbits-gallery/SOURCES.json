@@ -1,0 +1,88 @@
+{
+  "project": "TuneShape",
+  "generatedFor": "React Bits public-preview independent UI adaptations",
+  "createdAt": "2026-11-10",
+  "notice": "Original AI-generated TuneShape samples. No React Bits Pro source or image media.",
+  "entries": [
+    {
+      "title": "Orbital Fold",
+      "file": "01.jpg",
+      "source": "Original artwork generated for TuneShape with OpenAI image_gen; source PNG retained in the project QA archive.",
+      "generator": "OpenAI built-in image_gen",
+      "prompt": "Create one original abstract digital artwork for a square gallery image, full bleed square 1024x1024. A sculptural coral-orange sphere crossing a deep violet curved sheet against saturated purple, hot pink rim lighting and warm scarlet background. Elegant geometric abstraction, matte satin material, soft airbrushed light, beautifully clear big forms readable as a 24-pixel thumbnail. No text, no frame, no margins, no icons, no logo. Not a contact sheet or collage. Original composition for TuneShape.",
+      "sourceSha256": "35220691c6f04ccaf7b733aa830d14764f7149c7f0b8d07d740a88c8c0261aab",
+      "sha256": "14ae1de38e11a34b73a6747318c444dff95617c5b1b80f964cb91698fbcd9c5e",
+      "purpose": "Original vivid abstract gallery sample for Passage Gallery and Depth Ribbon; no React Bits Pro media"
+    },
+    {
+      "title": "Golden Loop",
+      "file": "02.jpg",
+      "source": "Original artwork generated for TuneShape with OpenAI image_gen; source PNG retained in the project QA archive.",
+      "generator": "OpenAI built-in image_gen",
+      "prompt": "Create one original abstract digital artwork for a square gallery image, full bleed square 1024x1024. A broad golden yellow ribbon bent into an asymmetric loop floating over magenta and aubergine, violet shadows, a warm red-orange corner. Modern sculptural geometric art with satin surfaces and airbrushed lighting. Three strong clean forms, very readable at 24-pixel thumbnail. No text, no frame, no margins, no icons, no logo. Not a contact sheet or collage. Original composition for TuneShape.",
+      "sourceSha256": "25fb4973e27ac24fbaf9714db020fe66c2247b656d7ab6b0f6ade9653f0662c1",
+      "sha256": "54509e6cf0d6018f0415db1579253745451c6c1dd6ef97a873c3260150c7de74",
+      "purpose": "Original vivid abstract gallery sample for Passage Gallery and Depth Ribbon; no React Bits Pro media"
+    },
+    {
+      "title": "Ember Planes",
+      "file": "03.jpg",
+      "source": "Original artwork generated for TuneShape with OpenAI image_gen; source PNG retained in the project QA archive.",
+      "generator": "OpenAI built-in image_gen",
+      "prompt": "Create one original abstract digital artwork for a square gallery image, full bleed square 1024x1024. Diagonal folded planes in tangerine, vermilion and raspberry rising from a near-black plum valley, with a tiny lilac highlight. Smooth tactile paper sculpture, clean bold shapes, fine subtle grain and gallery quality light, readable at 24-pixel thumbnail. No text, no frame, no margins, no icons, no logo. Not a contact sheet or collage. Original composition for TuneShape.",
+      "sourceSha256": "1c450e7b7e634722767678ae99b632e81a0e6842207299e43d734d0514b5f2ce",
+      "sha256": "d060bc0957f231538a7703915fe42ea5f57167e8f8ea83510a8fb29025d804f4",
+      "purpose": "Original vivid abstract gallery sample for Passage Gallery and Depth Ribbon; no React Bits Pro media"
+    },
+    {
+      "title": "Color Arches",
+      "file": "04.jpg",
+      "source": "Original artwork generated for TuneShape with OpenAI image_gen; source PNG retained in the project QA archive.",
+      "generator": "OpenAI built-in image_gen",
+      "prompt": "Create one original abstract digital artwork for a square gallery image, full bleed square 1024x1024. Three offset concentric sculptural arches in violet, hot coral, sunset orange and golden yellow, a bright lilac ground, strong black-plum interior shadows. Clean simple rounded architecture with matte satin surface and soft airbrushed lighting, original distinctive composition, readable at 24-pixel thumbnail. No text, no frame, no margins, no icons, no logo. Not a contact sheet or collage. Original composition for TuneShape.",
+      "sourceSha256": "832bd61dc73b7e7099beb99466a64328f3d1b07ae41bda6887f1de385ac82500",
+      "sha256": "ab028fc3e3a2e13db881cdf61a3993d81faef9da4d503e90bdd6882db9b1a677",
+      "purpose": "Original vivid abstract gallery sample for Passage Gallery and Depth Ribbon; no React Bits Pro media"
+    },
+    {
+      "title": "Dusk Orbit",
+      "file": "05.jpg",
+      "source": "Original artwork generated for TuneShape with OpenAI image_gen; source PNG retained in the project QA archive.",
+      "generator": "OpenAI built-in image_gen",
+      "prompt": "One original square full-bleed abstract digital artwork, 1024x1024. A flattened scarlet and coral torus seen obliquely around a small golden sun, violet ground and raspberry shadows, simple sculptural volumes, matte satin material, subtle airbrushed light. Bold shapes and contrasts readable at 24px as a gallery cover. No text, no frame, no margins, no icons, no logos, no collage. For TuneShape.",
+      "sourceSha256": "74241b3e5c173515f31aa8e029addd0cb888f107b8a2ce370a992f091d235f3d",
+      "sha256": "8d37d41b4fa0ab6e06fc0e5edb848c9538dad8a7bcd9ff875e410ab67e31245a",
+      "purpose": "Original vivid abstract gallery sample for Passage Gallery and Depth Ribbon; no React Bits Pro media"
+    },
+    {
+      "title": "Coral Tide",
+      "file": "06.jpg",
+      "source": "Original artwork generated for TuneShape with OpenAI image_gen; source PNG retained in the project QA archive.",
+      "generator": "OpenAI built-in image_gen",
+      "prompt": "One original square full-bleed abstract digital artwork, 1024x1024. Two sweeping coral and hot pink waves fold over a very dark plum valley, luminous orange ridge, a lavender upper corner. Smooth contemporary sculptural paper, satin shaded gradients, only a few decisive broad shapes, subtle fine grain. Readable at 24px as a gallery cover. No text, no frame, no margins, no icons, no logos, no collage. For TuneShape.",
+      "sourceSha256": "0fd8ea2c547619055e23d993d8441e215405f92521fa3a1020a3d226108082d8",
+      "sha256": "810f02111c73a6e66fd017130f11b922f19ee549cb70c537ade8b0ff9c7bc0a8",
+      "purpose": "Original vivid abstract gallery sample for Passage Gallery and Depth Ribbon; no React Bits Pro media"
+    },
+    {
+      "title": "Diagonal Bloom",
+      "file": "07.jpg",
+      "source": "Original artwork generated for TuneShape with OpenAI image_gen; source PNG retained in the project QA archive.",
+      "generator": "OpenAI built-in image_gen",
+      "prompt": "One original square full-bleed abstract digital artwork, 1024x1024. A strong diagonal magenta slab crossing a deep violet field with a golden yellow disk emerging behind it, orange light on the slab edge. Very clean large geometric sculptural forms, subtly matte surface and beautiful studio illumination. Readable at 24px as a gallery cover. No text, no frame, no margins, no icons, no logos, no collage. For TuneShape.",
+      "sourceSha256": "c2909c67626daee624acef549c10379285a5a14a872748270e19e07de05f4a97",
+      "sha256": "f097e915c561f7d40f3d4c9936f4d1cf862e5387371790b9e88fdccb0a48a8db",
+      "purpose": "Original vivid abstract gallery sample for Passage Gallery and Depth Ribbon; no React Bits Pro media"
+    },
+    {
+      "title": "Violet Horizon",
+      "file": "08.jpg",
+      "source": "Original artwork generated for TuneShape with OpenAI image_gen; source PNG retained in the project QA archive.",
+      "generator": "OpenAI built-in image_gen",
+      "prompt": "One original square full-bleed abstract digital artwork, 1024x1024. A satin purple crescent curls around a glowing peach-orange sphere, bright raspberry and lilac background and a dark eggplant horizontal plane. Quiet architectural balance with big bold shapes and soft airbrushed shading, subtle grain, readable at 24px as a gallery cover. No text, no frame, no margins, no icons, no logos, no collage. For TuneShape.",
+      "sourceSha256": "adc57471d61683778e07b8cd79167f6dcb665ff491e3a79722b44dc8b531094c",
+      "sha256": "ff863e0584d9f2f6f9e48a8936d29d3bf7da404f1f2fc302bf262641bab9802e",
+      "purpose": "Original vivid abstract gallery sample for Passage Gallery and Depth Ribbon; no React Bits Pro media"
+    }
+  ]
+}

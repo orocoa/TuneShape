@@ -24,7 +24,7 @@ Click a checkbox or its label; Tab focuses and Space toggles. Each item is indep
 
 ## States and motion
 
-Checked: Daily summary email; Checked: Weekly performance digest; Unchecked: Product release notes. Box 20px plus a 1.5px border, radius 8px, row gap 14px, label gap 12px, font 15px.
+Checked: Revise Model 1.1.1 Final; Checked: Coordinate with the Production Factory; Unchecked: Bring Roses to the Date. Box 20px plus a 1.5px border, radius 8px, row gap 14px, label gap 12px, font 15px.
 
 ## Motion notes 3
 

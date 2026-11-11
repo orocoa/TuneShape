@@ -32,7 +32,7 @@ pnpm dev --open /examples/outline-trace/
 
 ## 内容与参数
 
-当前保存设置：{"kind":"outline-trace","text":"Outline","fontSize":150,"fontWeight":800,"color":"#171717","strokeColor":"#171717","strokeWidth":2.5,"stagger":3,"fill":true,"keepStroke":false}。文字采用 1280×720 参考画布，预览按可用空间等比缩放。
+当前保存设置：{"kind":"outline-trace","text":"Tuneshape","fontSize":150,"fontWeight":800,"color":"#171717","strokeColor":"#171717","strokeWidth":2.5,"stagger":3,"fill":true,"keepStroke":false}。文字采用 1280×720 参考画布，预览按可用空间等比缩放。
 
 ## 时序
 

@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-All 52 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
+All 73 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
 
 [Online editor](https://tuneshape.kai-nex.com/)
 
@@ -20,7 +20,7 @@ Choose an effect in the local server; edit its config.json to reuse it. The dist
 | --- | --- | --- |
 | basic-button | [Button Press Feedback](examples/basic-button/README.md) | [按钮按压反馈](examples/basic-button/README.zh-CN.md) |
 | hover-invert | [Hover Color Transition](examples/hover-invert/README.md) | [悬停配色过渡](examples/hover-invert/README.zh-CN.md) |
-| duration-picker | [Duration Picker](examples/duration-picker/README.md) | [时长选择器](examples/duration-picker/README.zh-CN.md) |
+| coffee-selector | [Selector](examples/coffee-selector/README.md) | [选择器](examples/coffee-selector/README.zh-CN.md) |
 | glass-radio | [Glass Segmented Radio Control](examples/glass-radio/README.md) | [玻璃分段单选](examples/glass-radio/README.zh-CN.md) |
 | dropdown | [Dropdown Menu](examples/dropdown/README.md) | [下拉菜单](examples/dropdown/README.zh-CN.md) |
 | folder | [Folder](examples/folder/README.md) | [文件夹](examples/folder/README.zh-CN.md) |
@@ -40,7 +40,7 @@ Choose an effect in the local server; edit its config.json to reuse it. The dist
 | gooey-input | [Gooey Input](examples/gooey-input/README.md) | [黏性搜索输入](examples/gooey-input/README.zh-CN.md) |
 | flip-words | [Flip Words](examples/flip-words/README.md) | [词语翻替](examples/flip-words/README.zh-CN.md) |
 | liquid-carousel | [Liquid Image Carousel](examples/liquid-carousel/README.md) | [液态图片轮播](examples/liquid-carousel/README.zh-CN.md) |
-| coffee-selector | [Selector](examples/coffee-selector/README.md) | [选择器](examples/coffee-selector/README.zh-CN.md) |
+| duration-picker | [Duration Input](examples/duration-picker/README.md) | [时长输入器](examples/duration-picker/README.zh-CN.md) |
 | rounded-checks | [Rounded Checkboxes](examples/rounded-checks/README.md) | [圆角复选框](examples/rounded-checks/README.zh-CN.md) |
 | mini-sidebar | [Page Navigation](examples/mini-sidebar/README.md) | [页面导航](examples/mini-sidebar/README.zh-CN.md) |
 | text-rise | [Staggered Character Reveal](examples/text-rise/README.md) | [文字逐字上移揭示](examples/text-rise/README.zh-CN.md) |
@@ -69,6 +69,27 @@ Choose an effect in the local server; edit its config.json to reuse it. The dist
 | skiper-83 | [Integration Mention Input](examples/skiper-83/README.md) | [集成提及输入框](examples/skiper-83/README.zh-CN.md) |
 | skiper-43 | [Vercel Tooltip](examples/skiper-43/README.md) | [Vercel 图标提示栏](examples/skiper-43/README.zh-CN.md) |
 | skiper-56 | [Devouring Details Sign In](examples/skiper-56/README.md) | [粒子消散输入](examples/skiper-56/README.zh-CN.md) |
+| skiper-30 | [Oliver Parallax](examples/skiper-30/README.md) | [多列视差画廊](examples/skiper-30/README.zh-CN.md) |
+| skiper-17 | [Rotating Scroll Stack](examples/skiper-17/README.md) | [旋转滚动叠卡](examples/skiper-17/README.zh-CN.md) |
+| skiper-16 | [Scaling Scroll Stack](examples/skiper-16/README.md) | [缩放滚动叠卡](examples/skiper-16/README.zh-CN.md) |
+| skiper-28 | [Perspective Text Scroll](examples/skiper-28/README.md) | [透视滚动文字](examples/skiper-28/README.zh-CN.md) |
+| expanding-menu | [Expanding Icon Menu](examples/expanding-menu/README.md) | [图标展开菜单](examples/expanding-menu/README.zh-CN.md) |
+| depth-ribbon | [Depth Ribbon](examples/depth-ribbon/README.md) | [纵深图带](examples/depth-ribbon/README.zh-CN.md) |
+| passage-gallery | [Passage Gallery](examples/passage-gallery/README.md) | [穿行图库](examples/passage-gallery/README.zh-CN.md) |
+| glass-generate | [Glass Generate Button](examples/glass-generate/README.md) | [玻璃生成按钮](examples/glass-generate/README.zh-CN.md) |
+| waving-card | [Waving Tilt Card](examples/waving-card/README.md) | [倾斜挥手卡片](examples/waving-card/README.zh-CN.md) |
+| reelfolio-rig | [Rig Assembly](examples/reelfolio-rig/README.md) | [机械臂拼接](examples/reelfolio-rig/README.zh-CN.md) |
+| bencho-card-swap | [Card Swap](examples/bencho-card-swap/README.md) | [纵深换卡](examples/bencho-card-swap/README.zh-CN.md) |
+| bencho-wake-slider | [Wake Slider](examples/bencho-wake-slider/README.md) | [尾波滑杆](examples/bencho-wake-slider/README.zh-CN.md) |
+| bencho-image-compare | [Elastic Image Compare](examples/bencho-image-compare/README.md) | [弹性图片比较](examples/bencho-image-compare/README.zh-CN.md) |
+| bencho-label-input | [Floating Label Input](examples/bencho-label-input/README.md) | [浮动标签输入](examples/bencho-label-input/README.zh-CN.md) |
+| bencho-carousel | [Floating Ring Carousel](examples/bencho-carousel/README.md) | [漂浮转盘轮播](examples/bencho-carousel/README.zh-CN.md) |
+| bencho-upload-dropzone | [Upload Dropzone](examples/bencho-upload-dropzone/README.md) | [弹性上传框](examples/bencho-upload-dropzone/README.zh-CN.md) |
+| bencho-slide-confirm | [Slide to Confirm](examples/bencho-slide-confirm/README.md) | [滑动确认](examples/bencho-slide-confirm/README.zh-CN.md) |
+| bencho-aspect | [Aspect Ratio](examples/bencho-aspect/README.md) | [等面积裁切](examples/bencho-aspect/README.zh-CN.md) |
+| bencho-liq-create | [Create Menu](examples/bencho-liq-create/README.md) | [流动创建菜单](examples/bencho-liq-create/README.zh-CN.md) |
+| bencho-eye-tracker | [Eye Tracker](examples/bencho-eye-tracker/README.md) | [眼睛跟随](examples/bencho-eye-tracker/README.zh-CN.md) |
+| bencho-context-meter | [Context Meter](examples/bencho-context-meter/README.md) | [上下文计量](examples/bencho-context-meter/README.zh-CN.md) |
 | page-turn-cards | [Page Turn Cards](examples/page-turn-cards/README.md) | [翻页卡片](examples/page-turn-cards/README.zh-CN.md) |
 
 ## License and scope

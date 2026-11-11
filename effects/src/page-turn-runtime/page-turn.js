@@ -13,7 +13,7 @@ export function createPageTurn(host, initialItems, initialId, options = {}) {
    const id = String(item.id ?? index + 1);
    if (!id || seen.has(id)) throw new TypeError("Card IDs must be nonempty and unique.");
    seen.add(id);
-   const color = String(item.color ?? "#424242");
+   const color = String(item.color ?? "#777777");
    if (!/^#[0-9a-f]{6}$/i.test(color) || color.slice(1,3).toLowerCase() !== color.slice(3,5).toLowerCase() || color.slice(3,5).toLowerCase() !== color.slice(5,7).toLowerCase()) throw new TypeError("Card colors must be six-digit grayscale hex values.");
    return {id, label: String(item.label ?? index + 1), color};
   });

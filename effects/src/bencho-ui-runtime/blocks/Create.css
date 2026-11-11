@@ -1,0 +1,287 @@
+/* Bencho MIT c659924; original geometry, project-scoped by the renderer. */
+/* the create menu has no ::before to hang it on — its shape
+   is a blob on a metaball layer — so its ring is a spread
+   shadow, which is the same mark by another means */
+[data-stroke="on"] .crt-body {
+  box-shadow: 0 0 0 1px var(--pane-edge);}
+
+/* ── 5 · create ──────────────────────────────────────────── */
+/* ── back to 244 ────────────────────────────────────────────
+   The stage, the panel and the rows are the numbers this was
+   drawn at. They had been shrunk three times chasing a
+   request that was only ever about the PILL — and shrinking
+   the panel with it was wrong twice over: the open state is
+   sized by the four rows it has to hold, so taking it down
+   crushed the rows, and the stage is sized by the panel plus
+   the room the blobs need to travel, so taking THAT down left
+   the metaball nowhere to go.
+
+   One number is smaller than it was, and it is the one that
+   was asked about. */
+.crt-stage {
+  position: relative;
+  width: 244px; height: 244px;
+  /* the two states, as two sets of numbers. One attribute
+     picks between them and everything else follows. */
+  /* The pill, and only the pill. Its WIDTH is set inline from
+     the measured label — see Liquid.tsx — so this is the
+     fallback for the frame before that measurement lands, and
+     the height is the part that lives here. 46 before. */
+  --pill-w: 120px;
+  --pill-h: 38px;
+  --panel-w: 212px;
+  --panel-h: 166px;    /* four rows and the padding; no header any more */
+  --w: var(--pill-w);
+  --h: var(--pill-h);
+  --r: var(--crt-shut-r, 999px);}
+
+.crt-stage[data-open="true"] {
+  --w: var(--panel-w);
+  --h: var(--panel-h);
+  /* 28 outside against a 10px inset leaves 18 for the rows to
+     nest in, and a 34px row rounds fully at 17 — so the two
+     curves are concentric rather than merely both round. The
+     Corner knob moves all three together; see Liquid.tsx. */
+  --r: var(--crt-r, 28px);}
+
+/* No metaball filter on this one, and that is the point. The
+   other studies have two or more shapes that have to fuse;
+   this has exactly one, so a blur can only damage it — at the
+   radius the others use, a fifth of this shape's height, the
+   corners came back bulged and uneven instead of at the
+   radius they were given. The liquid here is entirely in the
+   timing. */
+.crt-blobs {
+  position: absolute; inset: 0;
+  pointer-events: none;}
+
+/* one shape, dead centre, in both states */
+/* ── CENTRED BY AUTO MARGINS, and it has been three things ──
+   A negative margin first, which had to be animated alongside
+   the size — two axes on different clocks, and the box drifted
+   34px above centre halfway through the morph.
+
+   Then `left: 50%` with `translate(-50%, -50%)`, which fixed
+   that: a percentage translate is always half of whatever the
+   box is right now, so there is nothing to keep in step.
+
+   And now auto margins, which are self-correcting in the same
+   way and use NO TRANSFORM AT ALL. That is the whole reason
+   for the third version. This box is a motion.div whose width
+   and height Framer writes inline on every frame of the open,
+   and a CSS transform on a Framer-managed element is the trap
+   this codebase has hit before — CSS `translate` and `scale`
+   resolve BEFORE `transform`, and anything the library decides
+   to write into `transform` takes the centring with it.
+   Reported on iOS as the menu jumping to one side as it opens,
+   which is exactly what a lost -50% looks like.
+
+   `inset: 0` plus `margin: auto` centres an absolutely
+   positioned box against its containing block whatever size
+   the box currently is — no transform to lose, nothing to
+   animate, and the same answer every frame. */
+.crt-body {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: var(--w); height: var(--h);
+  border-radius: var(--r);
+
+  background: var(--slab);
+
+  /* No shadow. It had four stacked ones, added when this
+     became a white panel on the argument that a white panel on
+     a white page has no edge — which was true, and was still
+     the wrong fix: it made the menu read as a card lifted off
+     the page rather than as the page opening up. Stroke is the
+     way to give it an edge now, and it is off by default. */
+  /* One move: width, height and the corner all run the same
+     curve for the same time. Staggering the axes made the
+     open read as two animations queued up rather than one
+     thing changing size.
+
+     And no overshoot. A spring past the target takes the
+     corner radius with it — the corners dipped under 28 and
+     came back, which is a wobble, not a bounce. This curve is
+     quick off the mark and lands without ever passing the
+     number it is going to. */
+  /* width, height and the corner are Framer's now; `scale` stays
+     here because the press beat is a discrete state, not a value
+     being interpolated from JS. */
+  transition: scale 420ms cubic-bezier(0.22, 1, 0.36, 1);}
+
+/* The first beat: pressed down. A plain uniform shrink — the
+   button gets smaller, nothing squashes and nothing spreads.
+   In fast, because a press should be felt at once and not
+   eased into. */
+.crt-stage[data-sink="true"] .crt-body,
+.crt-stage[data-sink="true"] .crt-pill {
+  scale: 0.94;
+  /* 120 against a 95ms handoff: the spread starts while this
+     is still running, so there is never a frame where nothing
+     is moving */
+  transition: scale 160ms cubic-bezier(0.22, 1, 0.36, 1);}
+
+/* and closing is the same single move, run down */
+.crt-stage:not([data-open="true"]) .crt-body {
+  transition: scale 220ms cubic-bezier(0.22, 1, 0.36, 1);}
+
+/* ── a panel, not a slab of ink ───────────────────────────
+   `--slab` is redefined for this component rather than
+   changed at the root, because exactly two things read it and
+   the other is the overlay's Copy button — a primary action
+   that should stay filled.
+
+   On the STAGE, not on the body. The shape and the type are
+   deliberately two layers here — opaque blobs on a filtered
+   one, text riding above on an unfiltered one — and they are
+   siblings, so tokens set on the body reach the fill and
+   none of the words. The stage is the first element that is
+   an ancestor of both.
+
+   `--board` and `--ink` both flip with the theme, so one
+   definition covers both: white with dark type in light,
+   #212429 with light type in dark — which is what dark
+   already had. Only the light theme changes. */
+.crt-stage {
+  /* the fill layer first, and what this was before it as the
+     fallback — so Auto is genuinely unchanged rather than a
+     third value that happens to look similar */
+  --slab: var(--fill-slab, var(--board));
+  --on-slab: var(--fill-on, var(--ink));
+  --on-slab-rgb: var(--fill-on-rgb, var(--ink-rgb));}
+
+.crt-ink { position: absolute; inset: 0; }
+
+/* the pill. It does not move aside, it is simply not there
+   once the shape has spread. */
+/* the same auto-margin centring as .crt-body above, and for
+   the second reason given there: three boxes stacked on one
+   stage, centred by two different mechanisms, can round a
+   sub-pixel apart. One mechanism, one answer. */
+.crt-pill {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: var(--pill-w); height: var(--pill-h);
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  border: 0; background: none;
+  color: var(--on-slab);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    width 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 160ms ease,
+    scale 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  letter-spacing: 0em;}
+
+.crt-stage[data-open="true"] .crt-pill {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease;}
+
+/* held at full strength through the press: fading it during
+   the squash would hide the beat that the squash is for */
+.crt-stage[data-sink="true"] .crt-pill { opacity: 1; }
+
+.crt-glyph { display: grid; place-items: center; }
+
+/* the pill takes the width of whatever it is saying, so the
+   label can change without it jumping */
+.crt-say {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  transition: width 420ms cubic-bezier(0.22, 1, 0.36, 1);}
+
+/* inline-block so it has an offsetWidth to be measured by */
+.crt-say > span { display: inline-block; }
+
+/* the window, in the same place */
+.crt-panel {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: var(--panel-w); height: var(--panel-h);
+  padding: 12px 12px;
+  color: var(--on-slab);
+  pointer-events: none;}
+
+.crt-stage[data-open="true"] .crt-panel { pointer-events: auto; }
+
+.crt-menu {
+  margin: 0; padding: 0;
+  list-style: none;
+  display: grid; align-content: start; gap: 2px;}
+
+.crt-item {
+  opacity: 0;
+  transform: translateY(6px);
+  /* the same curve as the shell, and no overshoot either: a
+     row that slides past its resting line and comes back is
+     the same wobble at a smaller size. Shortened with it —
+     320ms of travel on a box that lands in 180 left the rows
+     still moving after the shape had stopped. */
+  transition: opacity 160ms ease, transform 220ms cubic-bezier(0.22, 1, 0.36, 1);}
+
+.crt-stage[data-open="true"] .crt-item { opacity: 1; transform: none; }
+
+.crt-item button {
+  position: relative;
+  width: 100%;
+  display: flex; align-items: center; gap: 12px;
+  height: 34px; padding: 0 16px;
+  /* fully round, so a row nests inside the card's own corners
+     instead of squaring off against them */
+  border: 0; border-radius: var(--crt-row-r, 999px);
+  background: none;
+  /* 0.78, not the 0.72 this carried when the slab was dark.
+     The same fraction is not the same contrast once the ink
+     and the ground swap ends: light type at 0.72 on near
+     black measured comfortably, dark type at 0.72 on white
+     lands at 4.6:1 — over the line but only just, and this is
+     the menu's only body text. */
+  color: rgba(var(--on-slab-rgb), 0.78);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+  transition: color 220ms ease;
+  letter-spacing: 0em;}
+
+.crt-item button:hover { color: var(--on-slab); }
+
+/* ── the hover wash, one per row ───────────────────────────
+   It was one pill that travelled between rows and stretched
+   on the way. Each row now fades its own in and out; nothing
+   moves between them. */
+.crt-item button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: rgba(var(--on-slab-rgb), 0.08);
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;}
+
+@media (hover: hover) {
+  .crt-item button:hover::before { opacity: 1; transition-duration: 160ms; }
+}
+
+.crt-item button:focus-visible::before { opacity: 1; }
+
+/* the wash sits behind the label, inside its own row */
+.crt-item button { isolation: isolate; }
+
+@media (prefers-reduced-motion: reduce) {
+  .crt-body, .crt-pill, .crt-item, .crt-say { transition-duration: 160ms; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crt-stage[data-sink="true"] .crt-body,
+    .crt-stage[data-sink="true"] .crt-pill { scale: 1; }
+}

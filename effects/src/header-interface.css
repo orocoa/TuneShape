@@ -1,7 +1,7 @@
 .site-header{gap:16px}
 .site-header .brand{color:#000}
 .site-header .brand strong{font-weight:800}
-.header-actions{--header-label-size:13px;gap:8px}
+.header-actions{--header-label-size:var(--ui-type-meta);gap:8px}
 .language-switch{display:flex;align-items:center;gap:7px;flex:none;font-size:var(--header-label-size);line-height:1;color:#777;white-space:nowrap}
 .language-switch>button{padding:7px 1px;color:#777;background:transparent;font-size:var(--header-label-size);line-height:1}
 .language-switch>button[aria-pressed=true]{color:#171717;font-weight:700;text-decoration:none;font-synthesis:weight}

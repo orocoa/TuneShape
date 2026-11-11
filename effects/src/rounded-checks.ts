@@ -2,7 +2,7 @@ import {interFontCss} from './typography-fonts';
 /** Adapted from Uiverse.io by uiverse-astronaut, under the MIT license. */
 export type CheckItem={label:string;checked:boolean};
 export type RoundedChecksSettings={items:CheckItem[];size:number;radius:number;rowGap:number;labelGap:number;fontSize:number;checkedColor:string;textColor:string;boxColor:string;borderColor:string;checkColor:string;disabled:boolean};
-export const defaultRoundedChecks:Readonly<RoundedChecksSettings>={items:[{label:'Daily summary email',checked:true},{label:'Weekly performance digest',checked:true},{label:'Product release notes',checked:false}],size:20,radius:8,rowGap:14,labelGap:12,fontSize:15,checkedColor:'#929292',textColor:'#737373',boxColor:'#ffffff',borderColor:'#e3e8ee',checkColor:'#ffffff',disabled:false};
+export const defaultRoundedChecks:Readonly<RoundedChecksSettings>={items:[{label:'Revise Model 1.1.1 Final',checked:true},{label:'Coordinate with the Production Factory',checked:true},{label:'Bring Roses to the Date',checked:false}],size:20,radius:8,rowGap:14,labelGap:12,fontSize:15,checkedColor:'#929292',textColor:'#737373',boxColor:'#ffffff',borderColor:'#e3e8ee',checkColor:'#ffffff',disabled:false};
 export const roundedChecksRanges={size:[16,36],radius:[0,18],rowGap:[4,28],labelGap:[6,24],fontSize:[12,22]} as const;
 function exact(value:unknown,keys:string[]):asserts value is Record<string,unknown>{
  if(!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype||Reflect.ownKeys(value).length!==keys.length||keys.some(key=>!Object.hasOwn(Object.getOwnPropertyDescriptor(value,key)??{},'value')))throw Error('复选框设置字段不完整或含未知字段。');
@@ -70,7 +70,7 @@ function roundedChecksEngine(fontCss:string){
    });
   }
   function layout(){
-   host.style.gap=settings.rowGap+'px';host.style.fontSize=settings.fontSize+'px';host.style.color=settings.textColor;host.dataset.disabled=String(settings.disabled);host.setAttribute('aria-label',runtime.language==='en'?'Notification preferences':'通知偏好');
+   host.style.gap=settings.rowGap+'px';host.style.fontSize=settings.fontSize+'px';host.style.color=settings.textColor;host.dataset.disabled=String(settings.disabled);host.setAttribute('aria-label',runtime.language==='en'?'Task list':'任务列表');
    rows.forEach((row,index)=>{row.label.style.gap=settings.labelGap+'px';row.box.style.width=settings.size+'px';row.box.style.height=settings.size+'px';row.box.style.borderRadius=settings.radius+'px';row.mark.style.color=settings.checkColor;row.text.textContent=settings.items[index].label;row.input.setAttribute('aria-label',settings.items[index].label);row.input.disabled=settings.disabled||!runtime.enabled||runtime.paused});
   }
   function change(event:Event){event.stopPropagation();const input=event.target as HTMLInputElement,index=Number(input.dataset.index);if(input.type!=='checkbox'||!rows[index]||settings.disabled||!runtime.enabled||runtime.paused)return;cancelDemo();selected[index]=input.checked;paint(index,true);runtime.onChange?.([...selected])}

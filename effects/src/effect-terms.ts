@@ -1,8 +1,15 @@
+import {benchoUiDefinitions} from './bencho-ui-spec';
+import {reelfolioDefinitions} from './reelfolio-spec';
+import {benchoDefinitions} from './bencho-spec';
 import {skiperDefinitions} from './skiper-effects';
 /** Reviewable editorial metadata. IDs and serialized motion configs never change here. */
 export type EffectTerm={label:string;english:string;aliases:string[]};
 export const effectTerms:Record<string,EffectTerm>={
- ...Object.fromEntries(skiperDefinitions.map(d=>[d.id,{label:d.title,english:d.titleEn,aliases:["Skiper UI","skiper"+d.number,"skiper "+d.number,d.titleEn]}])),
+ ...Object.fromEntries(benchoUiDefinitions.map(d=>['bencho-'+d.kind,{label:d.title,english:d.english,aliases:['Bencho',d.kind]}])),
+ ...Object.fromEntries(skiperDefinitions.map(d=>[d.id,{label:d.title,english:d.titleEn,aliases:["Skiper UI","skiper"+d.number,"skiper "+d.number,d.titleEn,...([16,17,28,30].includes(d.number)?["Skiper Scroll"]:[]),...(d.number===30?['无限画布','Infinite Canvas','二维拖拽画廊']:[])]}])),
+ ...Object.fromEntries(reelfolioDefinitions.map(d=>['reelfolio-'+d.kind,{label:d.title,english:d.english,aliases:['Reelfolio',d.kind]}])),
+ ...Object.fromEntries(benchoDefinitions.map(d=>['bencho-'+d.kind,{label:d.title,english:d.english,aliases:['Bencho',d.kind]}])),
+ 'infinite-photo-wall':{label:'无限照片墙',english:'Infinite Photo Wall',aliases:['照片墙','无限图片墙','双轴图片墙','photo wall','infinite wall','virtualized gallery']},
  'mirrored-card-stack':{label:'镜像抽出卡片',english:'Mirrored Card Stack',aliases:['镜像卡片','对称抽出','短甩卡片','卡片堆叠','Skiper 48','Carousel_002','mirrored stack']},
  'page-turn-cards':{label:'翻页卡片',english:'Page Turn Cards',aliases:['灰阶翻页','独立卡片翻转','刚性翻页','page turn','Skiper 50','Carousel_004']},
  'liquid-glass-logo':{label:'液态玻璃 Logo',english:'Liquid Glass Logo',aliases:['ReactDrops','liquid glass logo','玻璃标志','水滴显形','Logo reveal','品牌显形','液滴Logo','折射字标']},
@@ -37,10 +44,15 @@ export const effectTerms:Record<string,EffectTerm>={
  'hover-preview':{label:'文字悬停图片',english:'Hover Preview',aliases:['图片预览','词语预览','hover image','word preview']},
  'glass-folder':{label:'磨砂文件夹',english:'Glass Folder',aliases:['玻璃文件夹','文件夹展开','Folder component','foldercomponent','Rare UI Folder']},
  'scroll-progress':{label:'阅读进度胶囊',english:'Scroll Progress',aliases:['滚动进度指示器','阅读进度','章节胶囊','scrollprogressindicator','Rare UI Scroll Progress']},
+ 'waving-card':{label:'倾斜挥手卡片',english:'Waving Tilt Card',aliases:['个人介绍卡片','挥手卡片','orocoa','MuhammadHasann','hot-liger-0','tilt card','waving card','Uiverse']},
+ 'depth-ribbon':{label:'纵深图带',english:'Depth Ribbon',aliases:['三维图带','图片绳结','图片丝带','3D gallery','depth ribbon','React Bits']},
+ 'passage-gallery':{label:'穿行图库',english:'Passage Gallery',aliases:['隧道图库','图片隧道','穿行画廊','3D画廊','photo tunnel','passage gallery','React Bits']},
+ 'glass-generate':{label:'玻璃生成按钮',english:'Glass Generate Button',aliases:['玻璃按钮','Generate','shokat_2650','massive-snail-29','glass button','glass generate','Uiverse']},
+ 'expanding-menu':{label:'图标展开菜单',english:'Expanding Icon Menu',aliases:['悬停展开菜单','图标导航','expanding menu','Admin12121','soft-falcon-79','Uiverse']},
  'hook-sidebar':{label:'钩线侧栏',english:'Hook Sidebar',aliases:['钩形侧栏','侧边导航','虚线侧栏','hooksidebar','Rare UI Hook Sidebar']},
  'chapter-progress-nav':{label:'章节进度导航',english:'Chapter Progress Navigation',aliases:['顶部章节','真实阅读进度','章节细线','chapter navigation','chapter progress','reading navigation']},
  'rail-toc':{label:'纸飞机目录',english:'Rail TOC',aliases:['轨道目录','文章目录','阅读进度','层级目录','table of contents','railtoc','Rare UI Rail TOC']},
- 'duration-picker':{label:'时长选择器',english:'Duration Picker',aliases:['时长输入','小时分钟','时间选择','duration input','Rare UI','durationpicker']},
+ 'duration-picker':{label:'时长输入器',english:'Duration Input',aliases:['时长输入','时长选择器','Duration Picker','小时分钟','时间选择','duration input','Rare UI','durationpicker']},
  'album-rail':{label:'唱片轨道',english:'Album Rail',aliases:['专辑封套','黑胶唱片','唱片封面','唱片架','唱片扇形','vinyl','album']},
  'orbit-reel':{label:'卡片转轮',english:'Orbit Reel',aliases:['环形卡片','卡片转盘','弧形轮播','orbit','ring carousel']},
  'elastic-reel':{label:'弹性相片卷',english:'Elastic Reel',aliases:['相片切片','照片展开','图片卷轴','照片画廊','dock','React Bits','Elastic Reel']},
@@ -73,6 +85,7 @@ export const effectTerms:Record<string,EffectTerm>={
 
 /** Removed from the product catalog; original recipes stay available to validate older exports. */
 export const retiredEffectIds=new Set([
+ 'infinite-photo-wall',
  'watercolor','mirrored-card-stack','ascii-wave',
  'skiper-41','skiper-82','chapter-progress-nav','skiper-48','skiper-106','topographic-flow',
  'basic-tabs','basic-modal','hover-lift','sheet','blur-panel','page-fade','stagger','tooltip',

@@ -1,3 +1,4 @@
+import {catalogTextFit} from './catalog-text-fit';
 import {t,useLanguage} from './i18n';
 import {useEffect,useLayoutEffect,useRef,useState} from 'react';
 import type {PointerEvent} from 'react';
@@ -81,6 +82,12 @@ export default function TextScramblePreview({config,speed,reduced,command,side,e
  useEffect(()=>{
   const node=host.current;if(!node)return;
   const observer=new ResizeObserver(([entry])=>{
+   const specimen=text.current;
+   if(thumbnail&&specimen){
+    const cells=[...specimen.querySelectorAll<HTMLElement>('.scramble-cell:not(.scramble-line-break)')].map(cell=>cell.getBoundingClientRect()),zoom=specimen.getBoundingClientRect().width/Math.max(1,specimen.offsetWidth);
+    const width=cells.length&&zoom>0?(Math.max(...cells.map(r=>r.right))-Math.min(...cells.map(r=>r.left)))/zoom:specimen.scrollWidth;
+    setFit(catalogTextFit(entry.contentRect.width,entry.contentRect.height,parseFloat(getComputedStyle(specimen).fontSize),width,specimen.scrollHeight));return;
+   }
    setFit(Math.max(.1,Math.min(1,(entry.contentRect.width-14)/320,thumbnail?(entry.contentRect.height-12)/230:1)));
   });observer.observe(node);return()=>observer.disconnect();
  },[thumbnail]);

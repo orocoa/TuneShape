@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "passage-gallery",
+  "durationMs": 800,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "passageGallery": {
+    "items": [],
+    "colorA": "#5227ff",
+    "colorB": "#ff9ffc",
+    "backgroundColor": "#fafafa",
+    "lanes": 5,
+    "gap": 0.1,
+    "radius": 0.06,
+    "photoFill": 0.3,
+    "accentFill": 0.06,
+    "lineOpacity": 0.12,
+    "fog": 1,
+    "speed": 0.6,
+    "boost": 10,
+    "blur": 1,
+    "look": 1,
+    "fov": 72,
+    "hover": 1,
+    "seed": 0,
+    "focusOnClick": true,
+    "captions": true,
+    "wheel": true,
+    "interactive": true,
+    "paused": false
+  }
+}

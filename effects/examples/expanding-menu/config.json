@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "expanding-menu",
+  "durationMs": 200,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "expandingMenu": {
+    "items": [
+      {
+        "id": "home",
+        "label": "Home",
+        "icon": "home"
+      },
+      {
+        "id": "games",
+        "label": "Games",
+        "icon": "games"
+      },
+      {
+        "id": "chat",
+        "label": "Chat",
+        "icon": "chat"
+      },
+      {
+        "id": "search",
+        "label": "Search",
+        "icon": "search"
+      },
+      {
+        "id": "profile",
+        "label": "Profile",
+        "icon": "profile"
+      }
+    ],
+    "closedWidth": 70,
+    "expandedWidth": 130,
+    "height": 50,
+    "iconSize": 28,
+    "radius": 15,
+    "itemRadius": 8,
+    "backgroundColor": "#f1f1f1",
+    "surfaceColor": "#ffffff",
+    "highlightColor": "#eeeeee",
+    "inkColor": "#242424",
+    "shadow": 0.075
+  }
+}

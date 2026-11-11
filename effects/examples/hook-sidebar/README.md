@@ -24,7 +24,7 @@ Click to select. Hover or Tab to another item to show the neutral hook without c
 
 ## States and motion
 
-Group label “TuneShape” (blank hides it); 7 items: Controls / Navigation / Containers / Text / Images / Indicators / Backgrounds. Initially “Controls”. Minimum row height 32px; type 14px.
+Group label “MENU” (blank hides it); 8 items: Tieguanyin / Longjing / Da Hong Pao / Pu-erh / Silver Needle / Jasmine Tea / Earl Grey / Matcha. Initially “Tieguanyin”. Minimum row height 32px; type 14px.
 
 ## Motion notes 3
 

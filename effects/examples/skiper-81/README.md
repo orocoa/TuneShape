@@ -24,7 +24,7 @@ Type a message; Enter sends locally and Shift+Enter inserts a line. Add attachme
 
 ## Motion notes 2
 
-Placeholder: "Ask Anything"；Watermark text: "Skiper llm 0.3"；Show watermark: true；Composer width: 744；Input font size: 16；Composer radius: 16；Canvas background: "#f1f1f1"；Input background: "#f9f8f8"；Button background: "#f9f8f8"；Text color: "#121212"；Selection color: "#0ea5e9"；Models (one per line): "GPT-4o\nClaude 3.5 Sonnet\nGemini Pro\nLlama 3.1"；Initial model: "GPT-4o"；Start with Search: false；Start with DeepMind: false；Local demo reply: "I dunnoo 😭"；Demo reply delay: 1000；Demonstration text: "Plan a studio"
+Placeholder: "Ask Anything"；Composer width: 744；Input font size: 16；Composer radius: 16；Canvas background: "#f1f1f1"；Input background: "#f9f8f8"；Button background: "#f9f8f8"；Text color: "#121212"；Selection color: "#0ea5e9"；Models (one per line): "GPT-4o\nClaude 3.5 Sonnet\nGemini Pro\nLlama 3.1"；Initial model: "GPT-4o"；Start with Search: false；Start with DeepMind: false；Local demo reply: "I dunnoo 😭"；Demo reply delay: 1000；Demonstration text: "Plan a studio"
 
 ## States and motion
 

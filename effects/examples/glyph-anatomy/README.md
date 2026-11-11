@@ -32,7 +32,7 @@ Complete the full entrance and retain readable text; replay restarts the entranc
 
 ## Motion notes 4
 
-Saved settings: {"kind":"glyph-anatomy","text":"Glyph","fontSize":200,"fontWeight":800,"color":"#171717","guideColor":"#737373","guides":true,"keepPoints":false}. Typography uses a 1280×720 reference canvas with proportional preview scaling.
+Saved settings: {"kind":"glyph-anatomy","text":"Tuneshape","fontSize":200,"fontWeight":800,"color":"#171717","guideColor":"#737373","guides":true,"keepPoints":false}. Typography uses a 1280×720 reference canvas with proportional preview scaling.
 
 ## Motion notes 5
 

@@ -43,7 +43,9 @@ Export JSON before refreshing or leaving the page: effect parameters are kept fo
 
 ## About this repository
 
-**Rendering source for all 52 effects in the visible catalog is public.** Each includes a default configuration, runnable page, and English/Chinese documentation. [Run the examples](effects/README.md) · [Machine-readable catalog](effects/catalog.json) · [Effect guides](https://tuneshape.kai-nex.com/en/effects/)
+Source update: [v1.2.0 release notes](docs/releases/v1.2.0.md) — 21 additional runnable examples, 73 matching configurations and bilingual guides, and native-interaction and eye-tracker demo fixes.
+
+**Rendering source for all 73 effects in the visible catalog is public.** Each includes a default configuration, runnable page, and English/Chinese documentation. [Run the examples](effects/README.md) · [Machine-readable catalog](effects/catalog.json) · [Effect guides](https://tuneshape.kai-nex.com/en/effects/)
 
 ```sh
 git clone https://github.com/orocoa/TuneShape.git
@@ -56,7 +58,7 @@ pnpm dev
 | --- | --- | --- |
 | basic-button | [Button Press Feedback](effects/examples/basic-button/README.md) | [按钮按压反馈](effects/examples/basic-button/README.zh-CN.md) |
 | hover-invert | [Hover Color Transition](effects/examples/hover-invert/README.md) | [悬停配色过渡](effects/examples/hover-invert/README.zh-CN.md) |
-| duration-picker | [Duration Picker](effects/examples/duration-picker/README.md) | [时长选择器](effects/examples/duration-picker/README.zh-CN.md) |
+| coffee-selector | [Selector](effects/examples/coffee-selector/README.md) | [选择器](effects/examples/coffee-selector/README.zh-CN.md) |
 | glass-radio | [Glass Segmented Radio Control](effects/examples/glass-radio/README.md) | [玻璃分段单选](effects/examples/glass-radio/README.zh-CN.md) |
 | dropdown | [Dropdown Menu](effects/examples/dropdown/README.md) | [下拉菜单](effects/examples/dropdown/README.zh-CN.md) |
 | folder | [Folder](effects/examples/folder/README.md) | [文件夹](effects/examples/folder/README.zh-CN.md) |
@@ -76,7 +78,7 @@ pnpm dev
 | gooey-input | [Gooey Input](effects/examples/gooey-input/README.md) | [黏性搜索输入](effects/examples/gooey-input/README.zh-CN.md) |
 | flip-words | [Flip Words](effects/examples/flip-words/README.md) | [词语翻替](effects/examples/flip-words/README.zh-CN.md) |
 | liquid-carousel | [Liquid Image Carousel](effects/examples/liquid-carousel/README.md) | [液态图片轮播](effects/examples/liquid-carousel/README.zh-CN.md) |
-| coffee-selector | [Selector](effects/examples/coffee-selector/README.md) | [选择器](effects/examples/coffee-selector/README.zh-CN.md) |
+| duration-picker | [Duration Input](effects/examples/duration-picker/README.md) | [时长输入器](effects/examples/duration-picker/README.zh-CN.md) |
 | rounded-checks | [Rounded Checkboxes](effects/examples/rounded-checks/README.md) | [圆角复选框](effects/examples/rounded-checks/README.zh-CN.md) |
 | mini-sidebar | [Page Navigation](effects/examples/mini-sidebar/README.md) | [页面导航](effects/examples/mini-sidebar/README.zh-CN.md) |
 | text-rise | [Staggered Character Reveal](effects/examples/text-rise/README.md) | [文字逐字上移揭示](effects/examples/text-rise/README.zh-CN.md) |
@@ -105,6 +107,27 @@ pnpm dev
 | skiper-83 | [Integration Mention Input](effects/examples/skiper-83/README.md) | [集成提及输入框](effects/examples/skiper-83/README.zh-CN.md) |
 | skiper-43 | [Vercel Tooltip](effects/examples/skiper-43/README.md) | [Vercel 图标提示栏](effects/examples/skiper-43/README.zh-CN.md) |
 | skiper-56 | [Devouring Details Sign In](effects/examples/skiper-56/README.md) | [粒子消散输入](effects/examples/skiper-56/README.zh-CN.md) |
+| skiper-30 | [Oliver Parallax](effects/examples/skiper-30/README.md) | [多列视差画廊](effects/examples/skiper-30/README.zh-CN.md) |
+| skiper-17 | [Rotating Scroll Stack](effects/examples/skiper-17/README.md) | [旋转滚动叠卡](effects/examples/skiper-17/README.zh-CN.md) |
+| skiper-16 | [Scaling Scroll Stack](effects/examples/skiper-16/README.md) | [缩放滚动叠卡](effects/examples/skiper-16/README.zh-CN.md) |
+| skiper-28 | [Perspective Text Scroll](effects/examples/skiper-28/README.md) | [透视滚动文字](effects/examples/skiper-28/README.zh-CN.md) |
+| expanding-menu | [Expanding Icon Menu](effects/examples/expanding-menu/README.md) | [图标展开菜单](effects/examples/expanding-menu/README.zh-CN.md) |
+| depth-ribbon | [Depth Ribbon](effects/examples/depth-ribbon/README.md) | [纵深图带](effects/examples/depth-ribbon/README.zh-CN.md) |
+| passage-gallery | [Passage Gallery](effects/examples/passage-gallery/README.md) | [穿行图库](effects/examples/passage-gallery/README.zh-CN.md) |
+| glass-generate | [Glass Generate Button](effects/examples/glass-generate/README.md) | [玻璃生成按钮](effects/examples/glass-generate/README.zh-CN.md) |
+| waving-card | [Waving Tilt Card](effects/examples/waving-card/README.md) | [倾斜挥手卡片](effects/examples/waving-card/README.zh-CN.md) |
+| reelfolio-rig | [Rig Assembly](effects/examples/reelfolio-rig/README.md) | [机械臂拼接](effects/examples/reelfolio-rig/README.zh-CN.md) |
+| bencho-card-swap | [Card Swap](effects/examples/bencho-card-swap/README.md) | [纵深换卡](effects/examples/bencho-card-swap/README.zh-CN.md) |
+| bencho-wake-slider | [Wake Slider](effects/examples/bencho-wake-slider/README.md) | [尾波滑杆](effects/examples/bencho-wake-slider/README.zh-CN.md) |
+| bencho-image-compare | [Elastic Image Compare](effects/examples/bencho-image-compare/README.md) | [弹性图片比较](effects/examples/bencho-image-compare/README.zh-CN.md) |
+| bencho-label-input | [Floating Label Input](effects/examples/bencho-label-input/README.md) | [浮动标签输入](effects/examples/bencho-label-input/README.zh-CN.md) |
+| bencho-carousel | [Floating Ring Carousel](effects/examples/bencho-carousel/README.md) | [漂浮转盘轮播](effects/examples/bencho-carousel/README.zh-CN.md) |
+| bencho-upload-dropzone | [Upload Dropzone](effects/examples/bencho-upload-dropzone/README.md) | [弹性上传框](effects/examples/bencho-upload-dropzone/README.zh-CN.md) |
+| bencho-slide-confirm | [Slide to Confirm](effects/examples/bencho-slide-confirm/README.md) | [滑动确认](effects/examples/bencho-slide-confirm/README.zh-CN.md) |
+| bencho-aspect | [Aspect Ratio](effects/examples/bencho-aspect/README.md) | [等面积裁切](effects/examples/bencho-aspect/README.zh-CN.md) |
+| bencho-liq-create | [Create Menu](effects/examples/bencho-liq-create/README.md) | [流动创建菜单](effects/examples/bencho-liq-create/README.zh-CN.md) |
+| bencho-eye-tracker | [Eye Tracker](effects/examples/bencho-eye-tracker/README.md) | [眼睛跟随](effects/examples/bencho-eye-tracker/README.zh-CN.md) |
+| bencho-context-meter | [Context Meter](effects/examples/bencho-context-meter/README.md) | [上下文计量](effects/examples/bencho-context-meter/README.zh-CN.md) |
 | page-turn-cards | [Page Turn Cards](effects/examples/page-turn-cards/README.md) | [翻页卡片](effects/examples/page-turn-cards/README.zh-CN.md) |
 
 Public examples use original generic avatar, product and brand artwork, an original sound cue and an original video. The online editor retains its existing media.

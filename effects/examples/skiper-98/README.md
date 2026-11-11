@@ -24,7 +24,7 @@ Hover/focus the three icons, use Up/Down to move and Escape to hide the tooltip.
 
 ## Motion notes 2
 
-Comment label: "Comment"；Share label: "Share"；Menu label: "Menu"；Tooltip side: "left"；Show menu badge: true；Item size: 32；Tooltip gap: 8；Background: "#f5f4f3"；Menu color: "#000000"；Text color: "#ffffff"；Badge color: "#00a6f4"
+Comment label: "Comment"；Share label: "Share"；Menu label: "Menu"；Tooltip side: "left"；Show menu badge: true；Item size: 32；Tooltip gap: 8；Background: "#f1f1f1"；Menu color: "#e5e5e5"；Text color: "#303030"；Badge color: "#00a6f4"
 
 ## States and motion
 

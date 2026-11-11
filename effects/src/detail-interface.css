@@ -40,8 +40,8 @@
 :is(.workspace,.history-lab) .controls-content{padding-left:0;padding-right:0}
 :is(.workspace,.history-lab) .more-settings{border:0}
 :is(.workspace,.history-lab) .preview-toolbar{--toolbar-control-height:36px;--toolbar-font-size:14px;--toolbar-icon-size:18px;min-height:60px;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:12px;padding:0 0 20px}
-:is(.workspace,.history-lab) .preview-toolbar>div:first-child{display:block;min-width:0;width:auto}
-:is(.workspace,.history-lab) .preview-toolbar h2{display:flex;align-items:center;min-height:var(--toolbar-control-height);font-size:var(--toolbar-font-size);line-height:20px}
+:is(.workspace,.history-lab) .preview-toolbar>div:first-child{display:flex;align-items:center;justify-content:flex-start;flex-wrap:nowrap;gap:8px;min-width:0;width:auto}
+.preview-navigation>.editor-breadcrumb{flex:0 0 44px;min-height:44px;margin:0}
 :is(.workspace,.history-lab) .playback-controls{justify-self:end;justify-content:flex-end;width:auto;margin:0;gap:8px}
 :is(.workspace,.history-lab) .copy-prompt-button{justify-self:center;display:flex;align-items:center;justify-content:center;gap:7px;height:var(--toolbar-control-height);padding:0 12px;line-height:20px;background:#f3f3f3;border-radius:12px;font-size:var(--toolbar-font-size);color:#252525;white-space:nowrap}
 .copy-prompt-button svg{display:block;width:16px;height:16px;flex:none}
@@ -102,11 +102,8 @@
 :is(.workspace,.history-lab) .control-panel .curve-settings select{width:100%}
 @media(max-width:600px){
  :is(.workspace,.history-lab) .comparison{grid-template-columns:minmax(0,1fr);gap:16px}
- /* Full-width titles keep long English names out of the transport controls. */
- :is(.workspace,.history-lab) .preview-toolbar{grid-template-columns:minmax(0,1fr) auto;gap:12px}
- :is(.workspace,.history-lab) .preview-toolbar>div:first-child{grid-column:1/-1;grid-row:1}
- :is(.workspace,.history-lab) .preview-toolbar>.prompt-export{grid-column:1;grid-row:2;justify-self:start}
- :is(.workspace,.history-lab) .preview-toolbar>.playback-controls{grid-column:2;grid-row:2}
+ :is(.workspace,.history-lab) .preview-toolbar{grid-template-columns:44px minmax(0,1fr) auto;gap:8px}
+ :is(.workspace,.history-lab) .preview-toolbar>.prompt-export{justify-self:center}
  /* Equal-height output tabs and copy action share one stable row. */
  :is(.workspace,.history-lab) .output-toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto;height:auto;min-height:48px;gap:12px;align-items:center}
  :is(.workspace,.history-lab) .output-toolbar>[role=tablist]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px;min-width:0;align-self:stretch}
@@ -166,10 +163,13 @@
 
 @media(max-width:600px){.prompt-export .copy-prompt-button{padding-inline:9px}}
 
-.effect-resource-links{display:flex;gap:20px;align-items:center;margin-left:auto;font-size:13px;white-space:nowrap}.effect-resource-links a{text-underline-offset:4px}.effect-resource-links a:focus-visible{outline:2px solid currentColor;outline-offset:4px}@media(max-width:650px){.editor-breadcrumb{flex-wrap:wrap}.effect-resource-links{width:100%;margin:0;padding-left:44px;gap:24px;font-size:12px}}
+.page-footer-actions{align-items:center;flex-wrap:wrap}.effect-resource-links{display:flex;flex-wrap:wrap;gap:16px;align-items:center;font-size:11px}.effect-resource-links a{text-underline-offset:3px}.effect-resource-links a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
 
 /* Text content and hexadecimal colours in the new material panels stay readable. */
 .liquid-glass-logo-controls .effect-color-field input[type=text]{width:150px;max-width:60%;min-width:80px;flex:0 1 150px;height:32px;padding:6px 10px;border:1px solid var(--line,#dedede);border-radius:8px;background:var(--surface,#fff);color:inherit;font:inherit;cursor:text}
 .liquid-glass-logo-controls .effect-color-field:has(input[type=text]){flex-wrap:wrap}
 .liquid-glass-logo-controls .effect-color-field>small{flex-basis:100%;line-height:1.5}
 .chromatic-button-controls label.field input[type=text]{box-sizing:border-box;width:100%;padding:8px 10px;border:1px solid var(--line,#dedede);border-radius:8px;color:inherit;background:var(--surface,#fff);font:inherit}
+
+/* Focused galleries own their image controls; restore the catalog toggle on return. */
+.library-visual:has(:is(.passage-gallery,.depth-ribbon)[data-focused]:not([data-focused="-1"]))>.library-touch-preview{visibility:hidden;pointer-events:none}

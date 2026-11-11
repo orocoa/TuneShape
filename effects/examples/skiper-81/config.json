@@ -17,8 +17,6 @@
   "tracks": [],
   "skiper": {
     "placeholder": "Ask Anything",
-    "watermark": "Skiper llm 0.3",
-    "showWatermark": true,
     "inputWidth": 744,
     "fontSize": 16,
     "cornerRadius": 16,

@@ -31,14 +31,14 @@
     }
   ],
   "tide": {
-    "backgroundColor": "#242426",
-    "waterColor": "#B9B9C2",
-    "crestColor": "#FFFFFF",
-    "density": 1,
-    "particleSize": 1,
-    "waveHeight": 1,
-    "wavelength": 1,
-    "speed": 1,
+    "backgroundColor": "#f1f1f1",
+    "waterColor": "#8181bb",
+    "crestColor": "#1C1C28",
+    "density": 1.25,
+    "particleSize": 2.05,
+    "waveHeight": 1.2,
+    "wavelength": 0.75,
+    "speed": 2.15,
     "interactive": true,
     "clickRipples": true
   }

@@ -24,7 +24,7 @@ pnpm dev --open /examples/rounded-checks/
 
 ## 起点与终点
 
-已勾选：Daily summary email；已勾选：Weekly performance digest；未勾选：Product release notes。方框 20px，边线 1.5px，圆角 8px，项间距 14px，文字间距 12px，字号 15px。
+已勾选：Revise Model 1.1.1 Final；已勾选：Coordinate with the Production Factory；未勾选：Bring Roses to the Date。方框 20px，边线 1.5px，圆角 8px，项间距 14px，文字间距 12px，字号 15px。
 
 ## 时序
 

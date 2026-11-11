@@ -27,6 +27,6 @@
     "opacity": 0.9,
     "gridOpacity": 0.04,
     "wakeOpacity": 0,
-    "interactive": false
+    "interactive": true
   }
 }

@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文**
 
-黑色胶囊图标栏，共享气泡跟随悬停项目并显示快捷键。
+灰色胶囊图标栏，共享气泡跟随悬停项目并显示快捷键。
 
 [在线调整此动效](https://tuneshape.kai-nex.com/#/effect/skiper-43) · [动效说明与默认参数](https://tuneshape.kai-nex.com/effects/skiper-43/) · [全部开源动效](../../README.zh-CN.md)
 
@@ -24,7 +24,7 @@ pnpm dev --open /examples/skiper-43/
 
 ## 参数与内容
 
-图标名称（每行一个）: "Comment\nInbox\nFeature Flags\nDraft Mode\nShare\nMenu"；快捷键（与名称逐行对应）: "C\n\n\n\n\n⌘ K"；通知标记序号（从0开始）: "1,5"；图标大小: 20；图标间距: 12；胶囊内边距: 14；胶囊圆角: 30；气泡距离: 8；胶囊颜色: "#000000"；图标与文字颜色: "#ffffff"；通知标记颜色: "#00a6f4"
+图标名称（每行一个）: "Comment\nInbox\nFeature Flags\nDraft Mode\nShare\nMenu"；快捷键（与名称逐行对应）: "C\n\n\n\n\n⌘ K"；通知标记序号（从0开始）: "1,5"；图标大小: 20；图标间距: 12；胶囊内边距: 14；胶囊圆角: 30；气泡距离: 8；胶囊颜色: "#e5e5e5"；图标与文字颜色: "#303030"；通知标记颜色: "#00a6f4"
 
 ## 起点与终点
 
@@ -36,7 +36,7 @@ pnpm dev --open /examples/skiper-43/
 
 ## 进入与退出
 
-黑色胶囊图标栏，共享气泡跟随悬停项目并显示快捷键。 演示停止后保留组件的当前交互状态。
+灰色胶囊图标栏，共享气泡跟随悬停项目并显示快捷键。 演示停止后保留组件的当前交互状态。
 
 ## 重复操作与打断
 

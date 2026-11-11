@@ -1,4 +1,4 @@
-# 时长选择器 · Duration Picker
+# 时长输入器 · Duration Input
 
 [English](README.md) · **简体中文**
 

@@ -1,0 +1,11 @@
+import type {SVGProps} from 'react';
+type Props=SVGProps<SVGSVGElement>&{size?:number};
+const icon=(path:React.ReactNode)=>(function Glyph({size=20,strokeWidth=2,...props}:Props){return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>{path}</svg>});
+export const Check=icon(<path d="m5 12 4 4L19 6"/>);
+export const ArrowRight=icon(<path d="M4 12h16m-6-6 6 6-6 6"/>);
+export const Upload=icon(<path d="M12 16V3m-5 5 5-5 5 5M4 15v5h16v-5"/>);
+export const Plus=icon(<path d="M12 4v16M4 12h16"/>);
+export const FileText=icon(<><path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h6"/></>);
+export const Table2=icon(<><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M10 10v10"/></>);
+export const Grid2x2=icon(<><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18"/></>);
+export const Folder=icon(<path d="M3 6h7l2 3h9v11H3z"/>);

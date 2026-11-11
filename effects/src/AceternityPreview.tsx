@@ -1,3 +1,4 @@
+import {catalogTextFit,catalogTextSize} from './catalog-text-fit';
 import {useLayoutEffect,useRef,useState} from 'react';
 import type {HistoryPreviewProps} from './HistoryPreview';
 import {aceternityRuntime,aceternitySettings,createAceternityEffect} from './aceternity-spec';
@@ -9,7 +10,13 @@ export default function AceternityPreview({config,speed,reduced,command,side,ena
  const language=useLanguage(),host=useRef<HTMLDivElement>(null),root=useRef<HTMLDivElement>(null),engine=useRef<ReturnType<typeof createAceternityEffect>|null>(null),[fit,setFit]=useState(1),callback=useRef(onRunningChange);callback.current=onRunningChange;
  const automatic=['encrypted-text','flip-words'].includes(config.recipeId),report=useNativeGalleryReplay(engine,thumbnail&&automatic&&enabled&&autoPlay&&!paused&&!reduced,config.recipeId==='flip-words'?config.flipWords?.holdMs??3000:500);
  const sidebar=config.recipeId==='expandable-sidebar',runtime=nativeGalleryRuntime({...aceternityRuntime(config),enabled,paused,reduced,speed,language,onRunning:(running:boolean)=>{report(running);callback.current?.(side,running)}},thumbnail&&automatic,autoPlay),initial=useRef({config,runtime});
- const measure=useRef(()=>{});measure.current=()=>{if(!host.current||!root.current||sidebar)return;const box=host.current.getBoundingClientRect();setFit(Math.max(.1,Math.min(1,(box.width-40)/Math.max(1,root.current.scrollWidth*config.scale),(box.height-40)/Math.max(1,root.current.scrollHeight*config.scale))))};
+ const measure=useRef(()=>{});measure.current=()=>{if(!host.current||!root.current||sidebar)return;const box=host.current.getBoundingClientRect(),settings=config.encryptedText??config.flipWords;
+  if(thumbnail&&automatic&&settings){
+   if(config.recipeId==='flip-words')root.current.style.maxWidth=Math.max(1,box.width-24)*settings.fontSize/catalogTextSize(box.width)+'px';
+   // A transformed, transparent outgoing word must not enlarge the measured specimen.
+   const flip=config.recipeId==='flip-words',width=flip?root.current.offsetWidth:root.current.scrollWidth,height=flip?root.current.offsetHeight:root.current.scrollHeight;
+   setFit(catalogTextFit(box.width,box.height,settings.fontSize,width,height,config.scale));return}
+  setFit(Math.max(.1,Math.min(1,(box.width-40)/Math.max(1,root.current.scrollWidth*config.scale),(box.height-40)/Math.max(1,root.current.scrollHeight*config.scale))))};
  useLayoutEffect(()=>{engine.current=createAceternityEffect(root.current!,initial.current.config,initial.current.runtime);const observer=new ResizeObserver(()=>measure.current());observer.observe(host.current!);observer.observe(root.current!);return()=>{observer.disconnect();engine.current?.destroy();engine.current=null}},[]);
  useLayoutEffect(()=>{engine.current?.update(config,runtime);measure.current()},[config,speed,reduced,enabled,paused,language,thumbnail,autoPlay]);
  useInspectorChange(config,side==='after'&&!thumbnail&&enabled&&!paused,previous=>{

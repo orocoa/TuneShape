@@ -46,7 +46,7 @@ export function useDetailPlayback(identity:string,autoPlay=false){
   return {...previous,running:{...previous.running,[side]:running}};
  }),[identity]);
  const toggle=()=>setSession(previous=>{
-  if(previous.identity===identity&&Object.values(previous.running).some(Boolean))return {...previous,paused:!previous.paused};
+  if(previous.identity===identity&&(previous.paused||Object.values(previous.running).some(Boolean)))return {...previous,paused:!previous.paused};
   return {identity,seq:++sequence.current,paused:false,running:{before:true,after:true}};
  });
  const current=session.identity===identity?session:{seq:0,paused:false,running:{}};

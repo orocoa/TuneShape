@@ -1,0 +1,5 @@
+https://pro.reactbits.dev/docs/components/passage-gallery
+
+Independent TuneShape renderer and original TuneShape abstract artworks: MIT. React Bits Pro source and media are not included.
+
+Public preview and documented controls reviewed 2026-11-10. Independent Canvas perspective subdivision, tiled corridor, seeded content, camera and focus transitions. Eight original TuneShape abstract artworks generated for these independent demos; user uploads remain user-owned. Material, blur and preset values differ from the reference.

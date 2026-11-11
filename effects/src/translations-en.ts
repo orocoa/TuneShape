@@ -1,5 +1,13 @@
 /** Interface copy only. Configuration keys, routes, source records and user text stay canonical. */
 export const english: Record<string, string> = {
+ '中文使用霞鹜新晰黑，采用 IPA Font License 1.0。':'Chinese text uses LXGW Neo XiHei under IPA Font License 1.0.',
+ '组件来源：Skiper UI ↗':'Component source: Skiper UI ↗',
+ '第三方组件许可与署名 ↗':'Third-party component licenses and credits ↗',
+ '多列视差画廊':'Oliver Parallax','旋转滚动叠卡':'Rotating Scroll Stack','缩放滚动叠卡':'Scaling Scroll Stack','透视滚动文字':'Perspective Text Scroll',
+
+ '弹性上传框':'Upload Dropzone','滑动确认':'Slide to Confirm','等面积裁切':'Aspect Ratio','流动创建菜单':'Create Menu','眼睛跟随':'Eye Tracker','上下文计量':'Context Meter',
+ '内容与素材':'Content and assets',
+ '选择器外观与状态':'Selector appearance and state',
 "章节进度导航":"Chapter Progress Navigation",
 "响应基准时长":"Response duration",
 "参数与内容":"Content and parameters",
@@ -658,4 +666,5 @@ export const english: Record<string, string> = {
  "联系我":"Contact me",
  "关闭联系我":"Close contact details",
  "电子邮箱":"Email",
+ "鼠标扰动":"Pointer disturbance",
 };

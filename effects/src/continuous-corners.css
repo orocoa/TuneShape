@@ -26,3 +26,37 @@
 
 .effect-color-field input[type=color]:not(:where(.history-canvas *, .demo-stage *))::-webkit-color-swatch{border-radius:var(--ui-corner);corner-shape:var(--ui-corner-shape)}
 .file-picker input[type=file]:not(:where(.history-canvas *, .demo-stage *))::file-selector-button{border-radius:var(--ui-corner);corner-shape:var(--ui-corner-shape)}
+
+/* The four control posters share continuous corners. Keep this presentation in
+   the catalog: editor settings and portable effect renderers stay independent. */
+.catalog-layout .library-card:is([data-library-effect="basic-button"],[data-library-effect="hover-invert"],[data-library-effect="duration-picker"],[data-library-effect="glass-radio"]) .library-visual>div{
+ display:flex;align-items:center;justify-content:center;
+}
+.catalog-layout :is(.library-basic-preview .demo-button,[data-recipe="hover-invert"] .sculpt-tile){
+ border-radius:var(--ui-corner);corner-shape:var(--ui-corner-shape);
+}
+.catalog-layout [data-recipe="glass-radio"] :is(.glass-radio-stage,.glass-radio-group,.glass-radio-glider,.glass-radio-finish,.glass-radio-option label){
+ border-radius:26px;corner-shape:var(--ui-corner-shape);
+}
+.catalog-layout [data-recipe="duration-picker"] :is(.duration-segment,.duration-toggle){
+ corner-shape:var(--ui-corner-shape);
+}
+/* Read the renderer's existing progress without changing its config or code.
+   Only the two outer corners stay full; inner corners grow as the fields split.
+   Older engines retain the renderer's authored, animated radius fallback. */
+@supports (border-radius:calc(24px * attr(data-progress type(<number>),0))){
+ .catalog-layout [data-recipe="duration-picker"] .duration-picker{
+  --demo-duration-radius:24px;
+  --demo-duration-inner-radius:calc(var(--demo-duration-radius) * clamp(0,attr(data-progress type(<number>),0),1));
+ }
+ .catalog-layout [data-recipe="duration-picker"] .duration-segment{
+  border-radius:var(--demo-duration-inner-radius)!important;
+ }
+ .catalog-layout [data-recipe="duration-picker"] .duration-segment:first-of-type{
+  border-top-left-radius:var(--demo-duration-radius)!important;
+  border-bottom-left-radius:var(--demo-duration-radius)!important;
+ }
+ .catalog-layout [data-recipe="duration-picker"] .duration-toggle{
+  border-radius:var(--demo-duration-inner-radius) var(--demo-duration-radius) var(--demo-duration-radius) var(--demo-duration-inner-radius)!important;
+ }
+}

@@ -1,5 +1,5 @@
 export type AsciiSharksSettings={density:number;fontScale:number;speed:number;sharkCount:number;sharkScale:number;fishDensity:number;backgroundColor:string;inkColor:string;opacity:number;gridOpacity:number;wakeOpacity:number;interactive:boolean};
-export const defaultAsciiSharks:Readonly<AsciiSharksSettings>=Object.freeze({density:2,fontScale:.9,speed:1.7,sharkCount:4,sharkScale:1,fishDensity:1,backgroundColor:'#eeeeee',inkColor:'#303030',opacity:.9,gridOpacity:.04,wakeOpacity:0,interactive:false});
+export const defaultAsciiSharks:Readonly<AsciiSharksSettings>=Object.freeze({density:2,fontScale:.9,speed:1.7,sharkCount:4,sharkScale:1,fishDensity:1,backgroundColor:'#eeeeee',inkColor:'#303030',opacity:.9,gridOpacity:.04,wakeOpacity:0,interactive:true});
 export const asciiSharksRanges={density:[.5,2,.05],fontScale:[.6,1.2,.05],speed:[0,3,.05],sharkCount:[1,6,1],sharkScale:[.5,1.5,.05],fishDensity:[0,2,.1],opacity:[0,1,.05],gridOpacity:[0,.2,.01],wakeOpacity:[0,1,.05]} as const;
 export function validateAsciiSharks(value:unknown):AsciiSharksSettings{
  if(!value||typeof value!=='object'||Array.isArray(value)||Object.getPrototypeOf(value)!==Object.prototype)throw Error('ASCII 鲨鱼设置无效。');

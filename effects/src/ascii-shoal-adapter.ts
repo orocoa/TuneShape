@@ -4,7 +4,7 @@ import type {NativeEffectRuntime} from './native-effect-tools';
 
 /** Keeps saved TuneShape configurations compatible with the independent renderer. */
 export function createAsciiSharks(host:HTMLElement,settings:AsciiSharksSettings,runtime:NativeEffectRuntime){
- const options=(s:AsciiSharksSettings)=>{const {fontScale,...rest}=s;return {...rest,glyphScale:fontScale,interactive:false}};
+ const options=(s:AsciiSharksSettings)=>{const {fontScale,...rest}=s;return {...rest,glyphScale:fontScale}};
  const playback=(r:NativeEffectRuntime)=>({...r,paused:r.paused||!r.enabled});
  let currentRuntime=runtime;
  host.classList.add('ascii-sharks');
