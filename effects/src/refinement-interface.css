@@ -23,6 +23,9 @@ input[type=range]{background:linear-gradient(to right,#171717 0%,#171717 var(--f
 .sculpt-trigger,.sculpt-menu{left:50%;translate:-50% 0;border-color:#e0e0e0}
 .sculpt-trigger{top:67px}.sculpt-menu{top:120px}
 .sculpt-menu-item>span{color:#aaa}
+/* Center the expanded dropdown poster as one group, including its menu. */
+.catalog-layout [data-recipe="dropdown"] .sculpt-dropdown{display:flex;flex-direction:column;gap:10px;width:235px;flex:none}
+.catalog-layout [data-recipe="dropdown"] :is(.sculpt-trigger,.sculpt-menu){position:relative;top:auto;left:auto;translate:none;width:100%}
 .sculpt-tooltip-anchor{background:#e4e4e4;border-color:#ddd;color:#171717}
 .sculpt-tooltip{left:50%;top:45px;translate:-50% 0;white-space:nowrap;background:#171717;pointer-events:none}
 .sculpt-tooltip:after{left:calc(50% - 5px);right:auto}

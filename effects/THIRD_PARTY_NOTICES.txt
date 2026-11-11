@@ -955,6 +955,34 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+ASCII Sharks articulated anatomy - current MIT adaptation
+Source: https://github.com/stackedlol/ascii-sharks
+Commit: a0074c16a106f0abc665fe9712ca445f8f98ad8e
+Joint constraints and body proportions adapted in examples/ascii-shoal/src/shark-body.js.
+
+MIT License
+
+Copyright (c) 2026 drewdi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
 Liquid Image Carousel / 液态图片轮播
 Independent TuneShape renderer and original geometric demo artwork: MIT. Visual reference: user-provided video dated 2026-11-02, used only for motion observation. Default artwork reuses the six original MIT compositions used by Orbit Reel (public/images/geometric-cards/ORIGINAL_ART.json). No reference stills, complete video or reference application code are distributed.
 
@@ -1261,5 +1289,173 @@ Swiper 14.4.0 — https://swiperjs.com/
 Copyright (c) 2019 Vladimir Kharlampidi. MIT License; full text in vendor/swiper/LICENSE.
 
 This distribution includes only Swiper's required ESM dependency graph and CSS, preserved byte-for-byte from the pinned package. It does not include Motion, React, original Skiper artwork, portfolio images, fonts, project data or personal website routing.
+
+
+Infinite Photo Wall 1.0.0: user-owned implementation explicitly extracted for TuneShape. Original rights retained; no new open-source license granted. No personal photographs or site routing included. TuneShape adapter follows repository license.
+
+
+Bencho components and synthesized sounds - Lorenzo Cabra, MIT
+https://github.com/cabralorenzo/bencho/tree/c65992417427bb09e661674ffa800bef29adef49
+Adapted card-swap, wake-slider, image-compare, label-input and carousel; source-site photos are excluded.
+MIT License
+
+Copyright (c) 2026 Lorenzo Cabra
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Not covered by this licence: the Bencho name and the goat mark, and the
+photographs shown on bencho.dev (none are included here). Third-party
+material keeps its own licence; see THIRD_PARTY.md.
+
+# Third-party notices
+
+## cuelume
+
+The sounds **Beacon** (`beacon`) and **Plop** (`plop`) in `sounds/sounds.ts` are rebuilt from the recipes of [cuelume](https://cuelume.dev) by Daniel Belyi.
+
+```
+MIT License
+
+Copyright (c) 2026 Daniel Belyi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## Packages
+
+The blocks use [framer-motion](https://github.com/motiondivision/motion), [lucide-react](https://github.com/lucide-icons/lucide) and [liquid-gooey](https://www.npmjs.com/package/liquid-gooey), each under its own licence.
+
+Reelfolio public previews - visual reference only, independent TuneShape renderer. No original site code or media included.
+
+
+Expanding Icon Menu — Admin12121 / Uiverse.io
+https://uiverse.io/Admin12121/soft-falcon-79
+MIT License
+
+Copyright - 2026 Admin12121 (Admin12121) 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+
+Glass Generate Button — shokat_2650 / Uiverse.io
+https://uiverse.io/shokat_2650/massive-snail-29
+MIT License
+
+Copyright - 2026 shokat_2650 (Shokat Javed) 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+
+Waving Tilt Card — MuhammadHasann / Muhammad Hasan; design by Greeen Yang
+https://uiverse.io/MuhammadHasann/hot-liger-0
+MIT License
+
+Copyright - 2026 Greeen Yang - https://twitter.com/greeenyang/status/1756875866863468827 
+Copyright - 2026 MuhammadHasann (Muhammad Hasan) 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+
+Passage Gallery (2026-11-10)
+Concept references: https://pro.reactbits.dev/docs/components/passage-gallery
+Independently authored TuneShape Canvas renderers and presets: MIT. Public previews and documented control behavior only; no React Bits Pro component code, registry responses, shaders, fonts or media are distributed. Rendering detail and preset values differ. Passage Gallery reuses existing original TuneShape geometric art (MIT); user uploads remain user-owned.
+
+Depth Ribbon — independent TuneShape implementation (2026-11-10).
+Public preview reference: https://pro.reactbits.dev/docs/components/depth-ribbon
+Renderer, 3D curves, camera transitions, controls and presets independently authored by TuneShape, MIT. Existing original TuneShape geometric sample art reused under MIT. No React Bits Pro source, shaders or media included. User uploads retain their owners’ rights.
+
+React Bits independent gallery samples — 2026-11-10 visual review revision.
+Eight original abstract artworks generated specifically for TuneShape with the built-in OpenAI image generation tool; asset prompts, source hashes and optimized hashes are recorded in public/images/reactbits-gallery/SOURCES.json. These replace the former monochrome examples only for Passage Gallery and Depth Ribbon. No React Bits Pro image media is included. TuneShape renderer and included demonstration assets are provided with this project under MIT.
+
+
+Image upload button — SpatexDEV / Uiverse.io
+https://uiverse.io/SpatexDEV/blue-eagle-63
+Adapted for TuneShape's gray inspector palette and native file picker.
+
+MIT License
+Copyright - 2026 SpatexDEV
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+Bencho six controls — public MIT snapshot c65992417427bb09e661674ffa800bef29adef49
+Upload dropzone, Slide to confirm, Aspect ratio, Create menu, Eye tracker, Context meter.
+Copyright (c) 2026 Lorenzo Cabra. MIT License; complete notice retained in src/bencho-runtime/LICENSE and every portable engine export. No site photos, Bencho brand artwork or paid source code.
+
+
+Skiper 16 / 17 / 28 / 30 — reviewed public scroll components
+Author: @gurvinder-singh02 / https://gxuri.me
+Sources: https://skiper-ui.com/v1/skiper16 ; https://skiper-ui.com/v1/skiper17 ; https://skiper-ui.com/v1/skiper28 ; https://skiper-ui.com/v1/skiper30
+Free to use and modify in personal and commercial projects. Attribution to Skiper UI is required for the free version and retained in the site credits and export notices. Source framework drivers are adapted to scoped native scroll regions and a managed clock. No Lenis or GSAP copy, source photographs or source song lyrics are bundled.
+Skiper 30 inspiration credits retained: Olivier Larose / mill3.studio; the source file also references siena.film as visual inspiration.
+Sample images and text are original TuneShape content.
 
 Public example media: Skiper-group images, the send cue and the video are original generic TuneShape demonstrations under MIT. Private reference media is not included. Video producer: examples/public-demo-media/original_demo_video.swift.

@@ -1,7 +1,7 @@
 /** Original particle ocean. Public Customize controls inform the API, not the implementation. */
 type TideRenderSettings={backgroundColor:string;waterColor:string;crestColor:string;density:number;particleSize:number;waveHeight:number;choppiness:number;wavelength:number;windAngle:number;horizon:number;fog:number;glow:number;foam:number;speed:number;parallax:number;swell:number;swellRadius:number;seed:number;interactive:boolean;clickRipples:boolean};
 export type TideSettings=Pick<TideRenderSettings,'backgroundColor'|'waterColor'|'crestColor'|'density'|'particleSize'|'waveHeight'|'wavelength'|'speed'|'interactive'|'clickRipples'>;
-export const defaultTide:Readonly<TideSettings>={backgroundColor:'#242426',waterColor:'#B9B9C2',crestColor:'#FFFFFF',density:1,particleSize:1,waveHeight:1,wavelength:1,speed:1,interactive:true,clickRipples:true};
+export const defaultTide:Readonly<TideSettings>={backgroundColor:'#f1f1f1',waterColor:'#8181bb',crestColor:'#1C1C28',density:1.25,particleSize:2.05,waveHeight:1.2,wavelength:.75,speed:2.15,interactive:true,clickRipples:true};
 export const tideRanges={density:[.3,2,.05],particleSize:[.3,3,.05],waveHeight:[0,2,.05],wavelength:[.4,3,.05],speed:[0,3,.05]} as const;
 export const tidePresets={
  Graphite:{backgroundColor:'#242426',waterColor:'#B9B9C2',crestColor:'#FFFFFF'},

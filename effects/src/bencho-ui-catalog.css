@@ -1,0 +1,5 @@
+/* Keep native controls and the Preview button apart on touch-sized cards. */
+@media(max-width:600px){
+.catalog-layout .library-card:is([data-library-effect="bencho-upload-dropzone"],[data-library-effect="bencho-slide-confirm"],[data-library-effect="bencho-aspect"],[data-library-effect="bencho-liq-create"],[data-library-effect="bencho-eye-tracker"],[data-library-effect="bencho-context-meter"]) {grid-column:1/-1}
+.catalog-layout .library-card:is([data-library-effect="bencho-upload-dropzone"],[data-library-effect="bencho-slide-confirm"],[data-library-effect="bencho-aspect"],[data-library-effect="bencho-liq-create"],[data-library-effect="bencho-eye-tracker"],[data-library-effect="bencho-context-meter"]) .library-visual{aspect-ratio:1;min-height:300px}
+}

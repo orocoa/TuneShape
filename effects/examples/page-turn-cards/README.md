@@ -20,7 +20,7 @@ Edit `config.json` to adjust the configuration. Use Play / Pause / Replay to che
 
 ## States and motion
 
-There are 6 grayscale cards: 1 / 2 / 3 / 4 / 5 / 6. Initially “1”. Fixed #f1f1f1 background, white labels and straight corners.
+There are 6 grayscale cards: 1 / 2 / 3 / 4 / 5 / 6. Initially “1”. Fixed #f1f1f1 background, white labels and continuous superellipse corners.
 
 ## Interaction
 
@@ -32,7 +32,7 @@ Full baseline turn 600 ms with cubic-bezier(.42,0,.58,1). Release settles accord
 
 ## Motion notes 4
 
-Reference card 280 × 336px; label 48px. Fits the canvas proportionally. Perspective 2.8× card width, maximum angle 100°, retreat .10× width. Light loss .18 and side difference .018. Projected 3–6px gap grows and recedes continuously; the two surfaces remain independent.
+Reference card 280 × 336px; label 48px. Fits the canvas proportionally with a 10% inset; 32px reference corners use superellipse(2) and scale with the card. Perspective 2.8× card width, maximum angle 100°, retreat .10× width. Light loss .18 and side difference .018. Projected 3–6px gap grows and recedes continuously; the two surfaces remain independent.
 
 ## Repeated input and interruption
 

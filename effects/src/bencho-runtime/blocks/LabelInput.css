@@ -1,0 +1,159 @@
+/* ══ Label input ═══════════════════════════════════════════
+   lab/LabelInput.tsx. Positioned at the root for the canvas
+   halo — see the note on .gen. */
+.lbi {
+  position: relative;
+  font-family: var(--font-ui);
+  display: grid;
+  place-items: center;
+  /* room above the field for the lifted label */
+  padding-top: 12px;}
+
+/* no fill: the field is only its outline */
+.lbi-box {
+  position: relative;
+  background: transparent;
+  cursor: text;}
+
+/* ── the outline ────────────────────────────────────────────
+   Always whole. At rest a hairline of grey; focused, the ink
+   at a hair heavier; left filled, a grey a step darker than
+   rest. The gap across the top is the only part that moves. */
+.lbi-ring {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;}
+
+.lbi-ring path {
+  fill: none;
+  stroke: color-mix(in srgb, var(--fill-on, #17181a) 32%, var(--fill-slab, #ffffff));
+  stroke-width: 1;
+  stroke-linecap: butt;
+  transition: stroke 220ms ease, stroke-width 220ms ease;}
+
+.lbi[data-focus="true"] .lbi-ring path {
+  stroke: var(--ink);
+  stroke-width: 1.5;}
+
+.lbi[data-filled="true"]:not([data-focus="true"]) .lbi-ring path {
+  stroke: color-mix(in srgb, var(--fill-on, #17181a) 32%, var(--fill-slab, #ffffff));}
+
+/* the gap: whole at rest, parting from its middle when the
+   label lifts. The dash is longer than the path so offset 0
+   is the whole line and -1 is none of it. */
+.lbi-gap {
+  stroke-dasharray: 1 2;
+  stroke-dashoffset: 0;
+  transition: stroke 220ms ease, stroke-width 220ms ease,
+    stroke-dashoffset 420ms cubic-bezier(0.22, 1, 0.36, 1);}
+
+.lbi[data-up="true"] .lbi-gap { stroke-dashoffset: -1; }
+
+/* ── the label ──────────────────────────────────────────────
+   Its placeholder self in the middle of the field, and its
+   lifted self centred on the top edge — the second is the
+   first moved up by half the field and scaled from its left. */
+.lbi-label {
+  position: absolute;
+  left: var(--lbi-x);
+  top: 50%;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  white-space: pre;
+  color: var(--ink-4);
+  transform-origin: left center;
+  transform: translateY(-50%);
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1), color 220ms ease;
+  cursor: text;
+  -webkit-user-select: none;
+  user-select: none;}
+
+.lbi[data-up="true"] .lbi-label {
+  transform: translateY(-50%) translateY(-26px) scale(0.78);
+  color: var(--ink-3);}
+
+.lbi[data-focus="true"] .lbi-label { color: var(--fill-on, var(--ink)); }
+
+.lbi-label span { display: inline-block; }
+
+/* the hop: each letter lifts a hair and settles, one after the
+   next, so the word ripples as it rises */
+.lbi[data-focus="true"] .lbi-label span {
+  animation: lbi-hop 460ms cubic-bezier(0.3, 0.7, 0.3, 1) both;
+  animation-delay: calc(var(--i) * 24ms);}
+
+.lbi-field {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 var(--lbi-x);
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  font: inherit;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--fill-on, var(--ink));
+  outline: none;}
+
+/* the reveal: the text passes through a soft blur rather than
+   snapping between dots and letters. Two names so a second
+   press restarts it. */
+.lbi-field[data-flip="1"] { animation: lbi-flip-a 260ms ease-out; }
+
+.lbi-field[data-flip="0"] { animation: lbi-flip-b 260ms ease-out; }
+
+.lbi-eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-4);
+  cursor: pointer;
+  transition: color 160ms ease, scale 160ms cubic-bezier(0.22, 1, 0.36, 1);}
+
+.lbi-eye:hover { color: var(--fill-on, var(--ink)); }
+
+.lbi-eye:active { scale: 0.96; }
+
+/* the two icons in one place, trading places */
+.lbi-eye svg {
+  grid-area: 1 / 1;
+  transition: opacity 220ms ease, scale 220ms cubic-bezier(0.22, 1, 0.36, 1), filter 220ms ease;}
+
+.lbi-eye svg:last-child { opacity: 0; scale: 0.7; filter: blur(2px); }
+
+.lbi-eye[data-show="true"] svg:first-child { opacity: 0; scale: 0.7; filter: blur(2px); }
+
+.lbi-eye[data-show="true"] svg:last-child { opacity: 1; scale: 1; filter: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lbi-ring path,
+    .lbi-gap,
+    .lbi-label { transition-duration: 160ms; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lbi[data-focus="true"] .lbi-label span,
+    .lbi-field { animation: none; }
+}
+
+@keyframes lbi-hop {
+  0% { transform: translateY(0); }
+  38% { transform: translateY(-3px); }
+  100% { transform: translateY(0); }}
+
+@keyframes lbi-flip-a { from { filter: blur(3px); opacity: 0.5; } }
+
+@keyframes lbi-flip-b { from { filter: blur(3px); opacity: 0.5; } }

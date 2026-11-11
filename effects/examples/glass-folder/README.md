@@ -32,7 +32,7 @@ Spring response basis 800 ms, with a small overshoot and a 6% response-time stag
 
 ## Motion notes 4
 
-The resting flap tilts 15°; hover lift 20px. Full opening tilts the flap 55° and fans the papers by 16° on either side. Folder name, document titles and summaries use real text; empty summaries leave paper rules visible.
+The resting flap tilts 15°; hover lift 20px. Full opening tilts the flap 35° and fans the papers by 16° on either side. Folder name, document titles and summaries use real text; empty summaries leave paper rules visible.
 
 ## Repeated input and interruption
 

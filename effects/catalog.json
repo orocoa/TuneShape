@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "count": 52,
+  "count": 73,
   "website": "https://tuneshape.kai-nex.com/",
   "repository": "https://github.com/orocoa/TuneShape",
   "effects": [
@@ -37,20 +37,20 @@
       "config": "examples/hover-invert/config.json"
     },
     {
-      "id": "duration-picker",
-      "name": "Duration Picker",
-      "nameZh": "时长选择器",
+      "id": "coffee-selector",
+      "name": "Selector",
+      "nameZh": "选择器",
       "category": "控件",
-      "description": "A compact duration input that springs apart to edit and joins on confirmation.",
-      "descriptionZh": "紧凑的时长输入，点击后弹开编辑，确认后重新合拢。",
-      "editor": "https://tuneshape.kai-nex.com/#/effect/duration-picker",
-      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/duration-picker",
+      "description": "A straight wheel with a crisp center, soft distant rows, inertial dragging and snap selection.",
+      "descriptionZh": "直列滚轮，中心清晰，远处渐隐虚化；拖动后带惯性吸附到最近选项。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/coffee-selector",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/coffee-selector",
       "documentation": {
-        "zh": "https://tuneshape.kai-nex.com/effects/duration-picker/",
-        "en": "https://tuneshape.kai-nex.com/en/effects/duration-picker/"
+        "zh": "https://tuneshape.kai-nex.com/effects/coffee-selector/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/coffee-selector/"
       },
       "license": "MIT",
-      "config": "examples/duration-picker/config.json"
+      "config": "examples/coffee-selector/config.json"
     },
     {
       "id": "glass-radio",
@@ -312,7 +312,7 @@
       "id": "gooey-input",
       "name": "Gooey Input",
       "nameZh": "黏性搜索输入",
-      "category": "控件",
+      "category": "输入",
       "description": "Gooey Input · editable content and live parameters",
       "descriptionZh": "黏性搜索输入 · 可编辑内容与实时参数",
       "editor": "https://tuneshape.kai-nex.com/#/effect/gooey-input",
@@ -344,9 +344,9 @@
       "id": "liquid-carousel",
       "name": "Liquid Image Carousel",
       "nameZh": "液态图片轮播",
-      "category": "图片",
-      "description": "A fixed image card with an organic liquid reveal and local refraction originating at the navigation buttons.",
-      "descriptionZh": "固定卡片中的图片从左右按钮位置展开液态覆盖，边界起伏并带局部折射。",
+      "category": "画廊",
+      "description": "A fixed image card with a liquid edge reveal, local refraction and bottom arrow / capsule navigation.",
+      "descriptionZh": "固定卡片中的图片从侧边展开液态覆盖，通过底部箭头或胶囊分页切换。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/liquid-carousel",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/liquid-carousel",
       "documentation": {
@@ -357,20 +357,20 @@
       "config": "examples/liquid-carousel/config.json"
     },
     {
-      "id": "coffee-selector",
-      "name": "Selector",
-      "nameZh": "选择器",
-      "category": "控件",
-      "description": "A straight wheel with a crisp center, soft distant rows, inertial dragging and snap selection.",
-      "descriptionZh": "直列滚轮，中心清晰，远处渐隐虚化；拖动后带惯性吸附到最近选项。",
-      "editor": "https://tuneshape.kai-nex.com/#/effect/coffee-selector",
-      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/coffee-selector",
+      "id": "duration-picker",
+      "name": "Duration Input",
+      "nameZh": "时长输入器",
+      "category": "容器",
+      "description": "A compact duration input that springs apart to edit and joins on confirmation.",
+      "descriptionZh": "紧凑的时长输入，点击后弹开编辑，确认后重新合拢。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/duration-picker",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/duration-picker",
       "documentation": {
-        "zh": "https://tuneshape.kai-nex.com/effects/coffee-selector/",
-        "en": "https://tuneshape.kai-nex.com/en/effects/coffee-selector/"
+        "zh": "https://tuneshape.kai-nex.com/effects/duration-picker/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/duration-picker/"
       },
       "license": "MIT",
-      "config": "examples/coffee-selector/config.json"
+      "config": "examples/duration-picker/config.json"
     },
     {
       "id": "rounded-checks",
@@ -456,7 +456,7 @@
       "id": "hover-preview",
       "name": "Hover Preview",
       "nameZh": "文字悬停图片",
-      "category": "图片",
+      "category": "文字",
       "description": "Inline words reveal a floating image that follows the pointer.",
       "descriptionZh": "文字悬停时浮出图片，随指针轻微偏移和倾斜。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/hover-preview",
@@ -472,7 +472,7 @@
       "id": "album-rail",
       "name": "Album Rail",
       "nameZh": "唱片轨道",
-      "category": "图片",
+      "category": "画廊",
       "description": "A fan of album sleeves, with records that slide out and spin.",
       "descriptionZh": "唱片封套沿扇形展开，悬停探出黑胶，点击后抽出旋转。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/album-rail",
@@ -488,7 +488,7 @@
       "id": "orbit-reel",
       "name": "Orbit Reel",
       "nameZh": "卡片转轮",
-      "category": "图片",
+      "category": "画廊",
       "description": "A rotating ring of cards opens into a navigable arc.",
       "descriptionZh": "旋转的卡片圆环，点击后展开为可切换的弧形。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/orbit-reel",
@@ -504,7 +504,7 @@
       "id": "elastic-reel",
       "name": "Elastic Reel",
       "nameZh": "弹性相片卷",
-      "category": "图片",
+      "category": "画廊",
       "description": "Elastic image slices with pointer magnification and click-to-open images.",
       "descriptionZh": "窄幅图像随指针联动放大，点击弹性展开为完整画面。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/elastic-reel",
@@ -520,7 +520,7 @@
       "id": "dots",
       "name": "Staggered Loading Dots",
       "nameZh": "三点交错跳动",
-      "category": "状态指示",
+      "category": "加载",
       "description": "Staggered Loading Dots · 1200 ms · Ariadne",
       "descriptionZh": "三点交错跳动 · 1200 ms · Ariadne",
       "editor": "https://tuneshape.kai-nex.com/#/effect/dots",
@@ -536,7 +536,7 @@
       "id": "finger-tap",
       "name": "Finger Tapping",
       "nameZh": "手指敲击",
-      "category": "状态指示",
+      "category": "加载",
       "description": "Finger Tapping · 1200 ms · Uiverse.io · Pradeepsaranbishnoi",
       "descriptionZh": "手指敲击 · 1200 ms · Uiverse.io · Pradeepsaranbishnoi",
       "editor": "https://tuneshape.kai-nex.com/#/effect/finger-tap",
@@ -552,7 +552,7 @@
       "id": "typewriter",
       "name": "Typewriter",
       "nameZh": "打字机",
-      "category": "状态指示",
+      "category": "加载",
       "description": "Typewriter · 3000 ms · Uiverse.io · Nawsome",
       "descriptionZh": "打字机 · 3000 ms · Uiverse.io · Nawsome",
       "editor": "https://tuneshape.kai-nex.com/#/effect/typewriter",
@@ -568,7 +568,7 @@
       "id": "yin-yang",
       "name": "Yin Yang Loader",
       "nameZh": "太极加载",
-      "category": "状态指示",
+      "category": "加载",
       "description": "Yin Yang Loader · 3000 ms · Uiverse.io · fthisilak",
       "descriptionZh": "太极加载 · 3000 ms · Uiverse.io · fthisilak",
       "editor": "https://tuneshape.kai-nex.com/#/effect/yin-yang",
@@ -584,7 +584,7 @@
       "id": "pulse",
       "name": "Pulse Scale and Ripple",
       "nameZh": "脉冲缩放与扩散",
-      "category": "状态指示",
+      "category": "加载",
       "description": "Pulse Scale and Ripple · 1300 ms · Ariadne",
       "descriptionZh": "脉冲缩放与扩散 · 1300 ms · Ariadne",
       "editor": "https://tuneshape.kai-nex.com/#/effect/pulse",
@@ -664,7 +664,7 @@
       "id": "chromatic-button",
       "name": "Chromatic Button",
       "nameZh": "流彩按钮",
-      "category": "控件",
+      "category": "输入",
       "description": "A tactile chromatic button with projected reflections, whole-material colour flow and native interactions.",
       "descriptionZh": "带球面反射、整体换色与真实按钮交互的流彩材质。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/chromatic-button",
@@ -696,9 +696,9 @@
       "id": "skiper-46",
       "name": "Next.js Gooey Menu",
       "nameZh": "黏连状态菜单",
-      "category": "导航",
-      "description": "A black circular mark and three-row status tooltip expand through a gooey SVG filter.",
-      "descriptionZh": "黑色圆形标志与三行状态气泡通过 SVG 黏连滤镜展开和收合。",
+      "category": "控件",
+      "description": "A gray circular mark and three-row status tooltip expand through a gooey SVG filter.",
+      "descriptionZh": "灰色圆形标志与三行状态气泡通过 SVG 黏连滤镜展开和收合。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-46",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-46",
       "documentation": {
@@ -712,7 +712,7 @@
       "id": "skiper-98",
       "name": "Vertical Tooltip Menu",
       "nameZh": "竖向裁切提示菜单",
-      "category": "导航",
+      "category": "控件",
       "description": "Three vertically stacked icons share a clipped tooltip that follows hover and keyboard focus.",
       "descriptionZh": "三枚竖向图标共享一个裁切提示层，提示随悬停和键盘聚焦滑动。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-98",
@@ -728,7 +728,7 @@
       "id": "skiper-92",
       "name": "Vercel Command Search",
       "nameZh": "变形命令搜索",
-      "category": "控件",
+      "category": "输入",
       "description": "A compact search trigger morphs into a grouped command panel with filtering, arrow-key selection and Escape.",
       "descriptionZh": "紧凑搜索入口变形成分组命令面板，可搜索、方向键选择、Esc 收起。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-92",
@@ -744,7 +744,7 @@
       "id": "skiper-91",
       "name": "Elastic Video Player",
       "nameZh": "弹性拖动视频播放器",
-      "category": "图片",
+      "category": "控件",
       "description": "A portrait video with an elastic scrubber, hover time marker and animated playback feedback.",
       "descriptionZh": "竖屏视频配合可拉伸进度条、悬停时间标记与播放反馈。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-91",
@@ -760,7 +760,7 @@
       "id": "skiper-81",
       "name": "AI Multi Mode Input",
       "nameZh": "AI 多模式输入框",
-      "category": "控件",
+      "category": "输入",
       "description": "A multiline composer with attachments, Search, DeepMind and model selection. Submission stays in the local demo.",
       "descriptionZh": "带附件、搜索、DeepMind 和模型选择的多行输入；提交内容只保存在当前演示。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-81",
@@ -776,7 +776,7 @@
       "id": "skiper-83",
       "name": "Integration Mention Input",
       "nameZh": "集成提及输入框",
-      "category": "控件",
+      "category": "输入",
       "description": "Recognizes @yt, @google and @notion, expands integration cards and sends them with local messages.",
       "descriptionZh": "识别 @yt、@google、@notion，展开集成卡片并随消息发送；保持本地演示。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-83",
@@ -792,9 +792,9 @@
       "id": "skiper-43",
       "name": "Vercel Tooltip",
       "nameZh": "Vercel 图标提示栏",
-      "category": "导航",
-      "description": "A dark icon toolbar with a shared moving tooltip and keyboard hints.",
-      "descriptionZh": "黑色胶囊图标栏，共享气泡跟随悬停项目并显示快捷键。",
+      "category": "控件",
+      "description": "A gray icon toolbar with a shared moving tooltip and keyboard hints.",
+      "descriptionZh": "灰色胶囊图标栏，共享气泡跟随悬停项目并显示快捷键。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-43",
       "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-43",
       "documentation": {
@@ -808,7 +808,7 @@
       "id": "skiper-56",
       "name": "Devouring Details Sign In",
       "nameZh": "粒子消散输入",
-      "category": "控件",
+      "category": "输入",
       "description": "An underlined input whose text disintegrates into particles when submitted.",
       "descriptionZh": "极简下划线输入框，提交时文字从右向左化为粒子消散。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-56",
@@ -821,10 +821,346 @@
       "config": "examples/skiper-56/config.json"
     },
     {
+      "id": "skiper-30",
+      "name": "Oliver Parallax",
+      "nameZh": "多列视差画廊",
+      "category": "画廊",
+      "description": "Pan an endless image canvas in any direction, or switch to the original multi-column scroll parallax.",
+      "descriptionZh": "图片在可四向拖拽的无限画布中循环排列，也可切回原版多列滚动视差。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-30",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-30",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-30/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-30/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-30/config.json"
+    },
+    {
+      "id": "skiper-17",
+      "name": "Rotating Scroll Stack",
+      "nameZh": "旋转滚动叠卡",
+      "category": "画廊",
+      "description": "The next image rises while the current card shrinks and rotates; scrolling reverses the stack.",
+      "descriptionZh": "后张图片从底部进入，前张同步缩小并倾斜，滚动可反向回看。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-17",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-17",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-17/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-17/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-17/config.json"
+    },
+    {
+      "id": "skiper-16",
+      "name": "Scaling Scroll Stack",
+      "nameZh": "缩放滚动叠卡",
+      "category": "画廊",
+      "description": "Cards pin one by one; earlier layers shrink and retain a stepped edge.",
+      "descriptionZh": "卡片逐张停驻并露出堆叠边缘，前层随整体滚动逐渐缩小。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-16",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-16",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-16/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-16/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-16/config.json"
+    },
+    {
+      "id": "skiper-28",
+      "name": "Perspective Text Scroll",
+      "nameZh": "透视滚动文字",
+      "category": "文字",
+      "description": "Text advances on a tilted 3D plane, with perspective widening the nearer lines.",
+      "descriptionZh": "文字沿固定三维倾角向上推进，透视投影让近处字形向两侧展开。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/skiper-28",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-28",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/skiper-28/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/skiper-28/"
+      },
+      "license": "MIT",
+      "config": "examples/skiper-28/config.json"
+    },
+    {
+      "id": "expanding-menu",
+      "name": "Expanding Icon Menu",
+      "nameZh": "图标展开菜单",
+      "category": "导航",
+      "description": "An icon dock that reveals each label with a sliding highlight on hover or focus.",
+      "descriptionZh": "悬停或聚焦图标时，菜单项横向展开，文字与浅色底同步滑入。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/expanding-menu",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/expanding-menu",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/expanding-menu/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/expanding-menu/"
+      },
+      "license": "MIT",
+      "config": "examples/expanding-menu/config.json"
+    },
+    {
+      "id": "depth-ribbon",
+      "name": "Depth Ribbon",
+      "nameZh": "纵深图带",
+      "category": "画廊",
+      "description": "A ribbon of images winding through three-dimensional space, with overview and ride cameras.",
+      "descriptionZh": "图片沿三维曲线串成图带，镜头在全貌与穿行之间切换。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/depth-ribbon",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/depth-ribbon",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/depth-ribbon/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/depth-ribbon/"
+      },
+      "license": "MIT",
+      "config": "examples/depth-ribbon/config.json"
+    },
+    {
+      "id": "passage-gallery",
+      "name": "Passage Gallery",
+      "nameZh": "穿行图库",
+      "category": "画廊",
+      "description": "A tiled image tunnel with continuous travel, pointer look and photos that open out of the walls.",
+      "descriptionZh": "沿铺满图片的隧道穿行，视角跟随指针，图片从墙面展开。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/passage-gallery",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/passage-gallery",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/passage-gallery/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/passage-gallery/"
+      },
+      "license": "MIT",
+      "config": "examples/passage-gallery/config.json"
+    },
+    {
+      "id": "glass-generate",
+      "name": "Glass Generate Button",
+      "nameZh": "玻璃生成按钮",
+      "category": "控件",
+      "description": "A translucent pill with a moving rim, reflective sweep and a tilted press.",
+      "descriptionZh": "透明胶囊按钮，带移动描边、反光扫动与按压倾转。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/glass-generate",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glass-generate",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/glass-generate/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/glass-generate/"
+      },
+      "license": "MIT",
+      "config": "examples/glass-generate/config.json"
+    },
+    {
+      "id": "waving-card",
+      "name": "Waving Tilt Card",
+      "nameZh": "倾斜挥手卡片",
+      "category": "容器",
+      "description": "A gradient profile card with fifteen tilt zones and a waving hand.",
+      "descriptionZh": "三色渐变个人卡片，随 15 个感应区域倾斜并挥手。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/waving-card",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/waving-card",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/waving-card/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/waving-card/"
+      },
+      "license": "MIT",
+      "config": "examples/waving-card/config.json"
+    },
+    {
+      "id": "reelfolio-rig",
+      "name": "Rig Assembly",
+      "nameZh": "机械臂拼接",
+      "category": "画廊",
+      "description": "Two arms bring image panels into place, assembling the picture from top to bottom.",
+      "descriptionZh": "两侧机械臂搬运图片分块，从上到下拼接成完整画面。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/reelfolio-rig",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/reelfolio-rig",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/reelfolio-rig/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/reelfolio-rig/"
+      },
+      "license": "MIT",
+      "config": "examples/reelfolio-rig/config.json"
+    },
+    {
+      "id": "bencho-card-swap",
+      "name": "Card Swap",
+      "nameZh": "纵深换卡",
+      "category": "画廊",
+      "description": "The front card takes the back slot while the others step forward.",
+      "descriptionZh": "前卡直接退到后层，其余卡片沿固定斜向槽位前移。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/bencho-card-swap",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-card-swap",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/bencho-card-swap/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/bencho-card-swap/"
+      },
+      "license": "MIT",
+      "config": "examples/bencho-card-swap/config.json"
+    },
+    {
+      "id": "bencho-wake-slider",
+      "name": "Wake Slider",
+      "nameZh": "尾波滑杆",
+      "category": "控件",
+      "description": "A bar slider leaves a rising wake behind a fast drag.",
+      "descriptionZh": "无滑块的细条数值轨道，快速滑过的条留下弹起尾波。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/bencho-wake-slider",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-wake-slider",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/bencho-wake-slider/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/bencho-wake-slider/"
+      },
+      "license": "MIT",
+      "config": "examples/bencho-wake-slider/config.json"
+    },
+    {
+      "id": "bencho-image-compare",
+      "name": "Elastic Image Compare",
+      "nameZh": "弹性图片比较",
+      "category": "画廊",
+      "description": "A flexible divider and its matching image mask follow the same curve.",
+      "descriptionZh": "分割线随拖动弯曲，图片裁切使用同一条曲线。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/bencho-image-compare",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-image-compare",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/bencho-image-compare/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/bencho-image-compare/"
+      },
+      "license": "MIT",
+      "config": "examples/bencho-image-compare/config.json"
+    },
+    {
+      "id": "bencho-label-input",
+      "name": "Floating Label Input",
+      "nameZh": "浮动标签输入",
+      "category": "输入",
+      "description": "The label lifts into a measured notch in the outline on focus.",
+      "descriptionZh": "聚焦时标签逐字抬升，描边从标签中间向两边让出缺口。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/bencho-label-input",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-label-input",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/bencho-label-input/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/bencho-label-input/"
+      },
+      "license": "MIT",
+      "config": "examples/bencho-label-input/config.json"
+    },
+    {
+      "id": "bencho-carousel",
+      "name": "Floating Ring Carousel",
+      "nameZh": "漂浮转盘轮播",
+      "category": "画廊",
+      "description": "Cards float on a continuous ring, with independent drag, settle and inward tilt.",
+      "descriptionZh": "图片沿连续转盘前后交错，拖动、惯性归位与下压倾斜各自独立。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/bencho-carousel",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-carousel",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/bencho-carousel/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/bencho-carousel/"
+      },
+      "license": "MIT",
+      "config": "examples/bencho-carousel/config.json"
+    },
+    {
+      "id": "bencho-upload-dropzone",
+      "name": "Upload Dropzone",
+      "nameZh": "弹性上传框",
+      "category": "输入",
+      "description": "Files tuck into a progress pill; oversized files bounce back.",
+      "descriptionZh": "文件被吸入上传框，进度胶囊完成后回到待机；过大文件会弹回。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/bencho-upload-dropzone",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-upload-dropzone",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/bencho-upload-dropzone/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/bencho-upload-dropzone/"
+      },
+      "license": "MIT",
+      "config": "examples/bencho-upload-dropzone/config.json"
+    },
+    {
+      "id": "bencho-slide-confirm",
+      "name": "Slide to Confirm",
+      "nameZh": "滑动确认",
+      "category": "控件",
+      "description": "Reach the end to unfurl the confirmation pill; partial drags spring back.",
+      "descriptionZh": "滑块到达终点后向左舒展成确认胶囊，未完成时弹回。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/bencho-slide-confirm",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-slide-confirm",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/bencho-slide-confirm/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/bencho-slide-confirm/"
+      },
+      "license": "MIT",
+      "config": "examples/bencho-slide-confirm/config.json"
+    },
+    {
+      "id": "bencho-aspect",
+      "name": "Aspect Ratio",
+      "nameZh": "等面积裁切",
+      "category": "画廊",
+      "description": "One image morphs between three crops with equal-area endpoints.",
+      "descriptionZh": "同一张图片在三种等面积比例之间以弹簧形变切换。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/bencho-aspect",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-aspect",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/bencho-aspect/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/bencho-aspect/"
+      },
+      "license": "MIT",
+      "config": "examples/bencho-aspect/config.json"
+    },
+    {
+      "id": "bencho-liq-create",
+      "name": "Create Menu",
+      "nameZh": "流动创建菜单",
+      "category": "导航",
+      "description": "A pill presses inward, then opens into a centered creation menu.",
+      "descriptionZh": "创建按钮先轻压，再从中心展开成菜单，选择后收回。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/bencho-liq-create",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-liq-create",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/bencho-liq-create/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/bencho-liq-create/"
+      },
+      "license": "MIT",
+      "config": "examples/bencho-liq-create/config.json"
+    },
+    {
+      "id": "bencho-eye-tracker",
+      "name": "Eye Tracker",
+      "nameZh": "眼睛跟随",
+      "category": "容器",
+      "description": "Eyes follow your pointer inside a soft shape; click to make it speak.",
+      "descriptionZh": "柔软立体形状里的双眼追随指针，点击后逐字说话。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/bencho-eye-tracker",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-eye-tracker",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/bencho-eye-tracker/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/bencho-eye-tracker/"
+      },
+      "license": "MIT",
+      "config": "examples/bencho-eye-tracker/config.json"
+    },
+    {
+      "id": "bencho-context-meter",
+      "name": "Context Meter",
+      "nameZh": "上下文计量",
+      "category": "加载",
+      "description": "Category usage forms a bar or dot field, with reversible compaction.",
+      "descriptionZh": "类别用量组成条形或点阵；压缩与撤销带来数字和图形联动。",
+      "editor": "https://tuneshape.kai-nex.com/#/effect/bencho-context-meter",
+      "source": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-context-meter",
+      "documentation": {
+        "zh": "https://tuneshape.kai-nex.com/effects/bencho-context-meter/",
+        "en": "https://tuneshape.kai-nex.com/en/effects/bencho-context-meter/"
+      },
+      "license": "MIT",
+      "config": "examples/bencho-context-meter/config.json"
+    },
+    {
       "id": "page-turn-cards",
       "name": "Page Turn Cards",
       "nameZh": "翻页卡片",
-      "category": "容器",
+      "category": "画廊",
       "description": "Independent rigid cards turn on opposing side pivots, with a narrow projected gap and soft light.",
       "descriptionZh": "两张独立刚性卡片沿各自边轴翻转，以连续窄缝和柔光完成交接。",
       "editor": "https://tuneshape.kai-nex.com/#/effect/page-turn-cards",

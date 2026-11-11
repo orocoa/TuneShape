@@ -24,7 +24,7 @@ Type and press Enter/the arrow to dissolve the text into particles and clear it.
 
 ## Motion notes 2
 
-Placeholder: "yo@gxuri.me"；Default value: ""；Submit label: "→"；Input font size: 60；Input width: 550；Particle size: 1；Particle scatter: 26；Background: "#f5f4f3"；Input color: "#000000"；Placeholder color: "#808080"
+Placeholder: "orocoa@kai-nex.com"；Default value: ""；Submit label: "→"；Input font size: 52；Input width: 550；Particle size: 1；Particle scatter: 26；Background: "#f5f4f3"；Input color: "#000000"；Placeholder color: "#808080"
 
 ## States and motion
 

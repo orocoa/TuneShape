@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "waving-card",
+  "durationMs": 300,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "wavingCard": {
+    "name": "orocoa",
+    "description": "Passionate about creating, beautiful and functional websites",
+    "angleX": 15,
+    "angleY": 20,
+    "cardWidth": 240,
+    "padding": 24,
+    "radius": 8,
+    "titleSize": 16,
+    "bodySize": 8,
+    "colorA": "#acfae9",
+    "colorB": "#d58feb",
+    "colorC": "#f27ef1",
+    "textColor": "#1f1f1f",
+    "backgroundColor": "#f1f1f1",
+    "waveAngle": 25,
+    "waveMs": 350,
+    "showHand": true
+  }
+}

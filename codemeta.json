@@ -3,7 +3,7 @@
   "@type": "SoftwareSourceCode",
   "name": "TuneShape",
   "alternateName": "随形",
-  "description": "Rendering source and runnable bilingual examples for 62 UI motion effects.",
+  "description": "Rendering source and runnable bilingual examples for 73 UI motion effects.",
   "codeRepository": "https://github.com/orocoa/TuneShape",
   "url": "https://tuneshape.kai-nex.com/",
   "license": "https://spdx.org/licenses/MIT.html",
@@ -45,14 +45,14 @@
     },
     {
       "@type": "SoftwareSourceCode",
-      "name": "Duration Picker",
-      "alternateName": "时长选择器",
-      "description": "A compact duration input that springs apart to edit and joins on confirmation.",
-      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/duration-picker",
-      "url": "https://tuneshape.kai-nex.com/en/effects/duration-picker/",
+      "name": "Selector",
+      "alternateName": "选择器",
+      "description": "A straight wheel with a crisp center, soft distant rows, inertial dragging and snap selection.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/coffee-selector",
+      "url": "https://tuneshape.kai-nex.com/en/effects/coffee-selector/",
       "subjectOf": [
-        "https://tuneshape.kai-nex.com/en/effects/duration-picker/",
-        "https://tuneshape.kai-nex.com/effects/duration-picker/"
+        "https://tuneshape.kai-nex.com/en/effects/coffee-selector/",
+        "https://tuneshape.kai-nex.com/effects/coffee-selector/"
       ]
     },
     {
@@ -275,7 +275,7 @@
       "@type": "SoftwareSourceCode",
       "name": "Liquid Image Carousel",
       "alternateName": "液态图片轮播",
-      "description": "A fixed image card with an organic liquid reveal and local refraction originating at the navigation buttons.",
+      "description": "A fixed image card with a liquid edge reveal, local refraction and bottom arrow / capsule navigation.",
       "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/liquid-carousel",
       "url": "https://tuneshape.kai-nex.com/en/effects/liquid-carousel/",
       "subjectOf": [
@@ -285,14 +285,14 @@
     },
     {
       "@type": "SoftwareSourceCode",
-      "name": "Selector",
-      "alternateName": "选择器",
-      "description": "A straight wheel with a crisp center, soft distant rows, inertial dragging and snap selection.",
-      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/coffee-selector",
-      "url": "https://tuneshape.kai-nex.com/en/effects/coffee-selector/",
+      "name": "Duration Input",
+      "alternateName": "时长输入器",
+      "description": "A compact duration input that springs apart to edit and joins on confirmation.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/duration-picker",
+      "url": "https://tuneshape.kai-nex.com/en/effects/duration-picker/",
       "subjectOf": [
-        "https://tuneshape.kai-nex.com/en/effects/coffee-selector/",
-        "https://tuneshape.kai-nex.com/effects/coffee-selector/"
+        "https://tuneshape.kai-nex.com/en/effects/duration-picker/",
+        "https://tuneshape.kai-nex.com/effects/duration-picker/"
       ]
     },
     {
@@ -465,18 +465,6 @@
     },
     {
       "@type": "SoftwareSourceCode",
-      "name": "Watercolor Blend",
-      "alternateName": "水彩融合",
-      "description": "Five gradient-noise layers blend two colors into a smooth, grain-free wash with optional pointer warping.",
-      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/watercolor",
-      "url": "https://tuneshape.kai-nex.com/en/effects/watercolor/",
-      "subjectOf": [
-        "https://tuneshape.kai-nex.com/en/effects/watercolor/",
-        "https://tuneshape.kai-nex.com/effects/watercolor/"
-      ]
-    },
-    {
-      "@type": "SoftwareSourceCode",
       "name": "Watercolor Original",
       "alternateName": "水彩模糊",
       "description": "Six noise layers and paper grain create the layered wash of the original watercolor.",
@@ -525,42 +513,6 @@
     },
     {
       "@type": "SoftwareSourceCode",
-      "name": "ASCII Wave Animation",
-      "alternateName": "ASCII 波形动画",
-      "description": "ASCII Wave Animation · 4000 ms · Ariadne",
-      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/ascii-wave",
-      "url": "https://tuneshape.kai-nex.com/en/effects/ascii-wave/",
-      "subjectOf": [
-        "https://tuneshape.kai-nex.com/en/effects/ascii-wave/",
-        "https://tuneshape.kai-nex.com/effects/ascii-wave/"
-      ]
-    },
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "Soap Bubble UI",
-      "alternateName": "肥皂泡控件",
-      "description": "Interactive controls with a flowing interference film, glass refraction and pointer reflections.",
-      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/soap-bubble",
-      "url": "https://tuneshape.kai-nex.com/en/effects/soap-bubble/",
-      "subjectOf": [
-        "https://tuneshape.kai-nex.com/en/effects/soap-bubble/",
-        "https://tuneshape.kai-nex.com/effects/soap-bubble/"
-      ]
-    },
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "Topographic Flow",
-      "alternateName": "流动等高线",
-      "description": "An evolving contour map with elevation colours, survey dashes and five pointer deformation modes.",
-      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/topographic-flow",
-      "url": "https://tuneshape.kai-nex.com/en/effects/topographic-flow/",
-      "subjectOf": [
-        "https://tuneshape.kai-nex.com/en/effects/topographic-flow/",
-        "https://tuneshape.kai-nex.com/effects/topographic-flow/"
-      ]
-    },
-    {
-      "@type": "SoftwareSourceCode",
       "name": "Chromatic Button",
       "alternateName": "流彩按钮",
       "description": "A tactile chromatic button with projected reflections, whole-material colour flow and native interactions.",
@@ -585,21 +537,9 @@
     },
     {
       "@type": "SoftwareSourceCode",
-      "name": "Smooth Caret Input",
-      "alternateName": "平滑光标输入框",
-      "description": "A spring-driven caret follows native text selection, beside a regular input for comparison.",
-      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-106",
-      "url": "https://tuneshape.kai-nex.com/en/effects/skiper-106/",
-      "subjectOf": [
-        "https://tuneshape.kai-nex.com/en/effects/skiper-106/",
-        "https://tuneshape.kai-nex.com/effects/skiper-106/"
-      ]
-    },
-    {
-      "@type": "SoftwareSourceCode",
       "name": "Next.js Gooey Menu",
       "alternateName": "黏连状态菜单",
-      "description": "A black circular mark and three-row status tooltip expand through a gooey SVG filter.",
+      "description": "A gray circular mark and three-row status tooltip expand through a gooey SVG filter.",
       "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-46",
       "url": "https://tuneshape.kai-nex.com/en/effects/skiper-46/",
       "subjectOf": [
@@ -633,18 +573,6 @@
     },
     {
       "@type": "SoftwareSourceCode",
-      "name": "Card Swipe Carousel",
-      "alternateName": "卡片堆叠滑动轮播",
-      "description": "Drag a stack of geometric image cards, with depth and rotation on the cards behind, and snap on release.",
-      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-48",
-      "url": "https://tuneshape.kai-nex.com/en/effects/skiper-48/",
-      "subjectOf": [
-        "https://tuneshape.kai-nex.com/en/effects/skiper-48/",
-        "https://tuneshape.kai-nex.com/effects/skiper-48/"
-      ]
-    },
-    {
-      "@type": "SoftwareSourceCode",
       "name": "Elastic Video Player",
       "alternateName": "弹性拖动视频播放器",
       "description": "A portrait video with an elastic scrubber, hover time marker and animated playback feedback.",
@@ -669,18 +597,6 @@
     },
     {
       "@type": "SoftwareSourceCode",
-      "name": "Rainbow Send Input",
-      "alternateName": "彩虹发送输入框",
-      "description": "A compact message input with a rainbow send wave, rotating arrow and local message stack.",
-      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-82",
-      "url": "https://tuneshape.kai-nex.com/en/effects/skiper-82/",
-      "subjectOf": [
-        "https://tuneshape.kai-nex.com/en/effects/skiper-82/",
-        "https://tuneshape.kai-nex.com/effects/skiper-82/"
-      ]
-    },
-    {
-      "@type": "SoftwareSourceCode",
       "name": "Integration Mention Input",
       "alternateName": "集成提及输入框",
       "description": "Recognizes @yt, @google and @notion, expands integration cards and sends them with local messages.",
@@ -693,21 +609,9 @@
     },
     {
       "@type": "SoftwareSourceCode",
-      "name": "Progressive Blur",
-      "alternateName": "渐进模糊阅读",
-      "description": "A scrollable reading surface with gradient backdrop blur at both edges.",
-      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-41",
-      "url": "https://tuneshape.kai-nex.com/en/effects/skiper-41/",
-      "subjectOf": [
-        "https://tuneshape.kai-nex.com/en/effects/skiper-41/",
-        "https://tuneshape.kai-nex.com/effects/skiper-41/"
-      ]
-    },
-    {
-      "@type": "SoftwareSourceCode",
       "name": "Vercel Tooltip",
       "alternateName": "Vercel 图标提示栏",
-      "description": "A dark icon toolbar with a shared moving tooltip and keyboard hints.",
+      "description": "A gray icon toolbar with a shared moving tooltip and keyboard hints.",
       "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-43",
       "url": "https://tuneshape.kai-nex.com/en/effects/skiper-43/",
       "subjectOf": [
@@ -729,14 +633,254 @@
     },
     {
       "@type": "SoftwareSourceCode",
-      "name": "Mirrored Card Stack",
-      "alternateName": "镜像抽出卡片",
-      "description": "The current top card extracts on either side, changes layer, and slips back into the stack.",
-      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/mirrored-card-stack",
-      "url": "https://tuneshape.kai-nex.com/en/effects/mirrored-card-stack/",
+      "name": "Oliver Parallax",
+      "alternateName": "多列视差画廊",
+      "description": "Pan an endless image canvas in any direction, or switch to the original multi-column scroll parallax.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-30",
+      "url": "https://tuneshape.kai-nex.com/en/effects/skiper-30/",
       "subjectOf": [
-        "https://tuneshape.kai-nex.com/en/effects/mirrored-card-stack/",
-        "https://tuneshape.kai-nex.com/effects/mirrored-card-stack/"
+        "https://tuneshape.kai-nex.com/en/effects/skiper-30/",
+        "https://tuneshape.kai-nex.com/effects/skiper-30/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Rotating Scroll Stack",
+      "alternateName": "旋转滚动叠卡",
+      "description": "The next image rises while the current card shrinks and rotates; scrolling reverses the stack.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-17",
+      "url": "https://tuneshape.kai-nex.com/en/effects/skiper-17/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/skiper-17/",
+        "https://tuneshape.kai-nex.com/effects/skiper-17/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Scaling Scroll Stack",
+      "alternateName": "缩放滚动叠卡",
+      "description": "Cards pin one by one; earlier layers shrink and retain a stepped edge.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-16",
+      "url": "https://tuneshape.kai-nex.com/en/effects/skiper-16/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/skiper-16/",
+        "https://tuneshape.kai-nex.com/effects/skiper-16/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Perspective Text Scroll",
+      "alternateName": "透视滚动文字",
+      "description": "Text advances on a tilted 3D plane, with perspective widening the nearer lines.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/skiper-28",
+      "url": "https://tuneshape.kai-nex.com/en/effects/skiper-28/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/skiper-28/",
+        "https://tuneshape.kai-nex.com/effects/skiper-28/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Expanding Icon Menu",
+      "alternateName": "图标展开菜单",
+      "description": "An icon dock that reveals each label with a sliding highlight on hover or focus.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/expanding-menu",
+      "url": "https://tuneshape.kai-nex.com/en/effects/expanding-menu/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/expanding-menu/",
+        "https://tuneshape.kai-nex.com/effects/expanding-menu/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Depth Ribbon",
+      "alternateName": "纵深图带",
+      "description": "A ribbon of images winding through three-dimensional space, with overview and ride cameras.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/depth-ribbon",
+      "url": "https://tuneshape.kai-nex.com/en/effects/depth-ribbon/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/depth-ribbon/",
+        "https://tuneshape.kai-nex.com/effects/depth-ribbon/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Passage Gallery",
+      "alternateName": "穿行图库",
+      "description": "A tiled image tunnel with continuous travel, pointer look and photos that open out of the walls.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/passage-gallery",
+      "url": "https://tuneshape.kai-nex.com/en/effects/passage-gallery/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/passage-gallery/",
+        "https://tuneshape.kai-nex.com/effects/passage-gallery/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Glass Generate Button",
+      "alternateName": "玻璃生成按钮",
+      "description": "A translucent pill with a moving rim, reflective sweep and a tilted press.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/glass-generate",
+      "url": "https://tuneshape.kai-nex.com/en/effects/glass-generate/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/glass-generate/",
+        "https://tuneshape.kai-nex.com/effects/glass-generate/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Waving Tilt Card",
+      "alternateName": "倾斜挥手卡片",
+      "description": "A gradient profile card with fifteen tilt zones and a waving hand.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/waving-card",
+      "url": "https://tuneshape.kai-nex.com/en/effects/waving-card/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/waving-card/",
+        "https://tuneshape.kai-nex.com/effects/waving-card/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Rig Assembly",
+      "alternateName": "机械臂拼接",
+      "description": "Two arms bring image panels into place, assembling the picture from top to bottom.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/reelfolio-rig",
+      "url": "https://tuneshape.kai-nex.com/en/effects/reelfolio-rig/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/reelfolio-rig/",
+        "https://tuneshape.kai-nex.com/effects/reelfolio-rig/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Card Swap",
+      "alternateName": "纵深换卡",
+      "description": "The front card takes the back slot while the others step forward.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-card-swap",
+      "url": "https://tuneshape.kai-nex.com/en/effects/bencho-card-swap/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/bencho-card-swap/",
+        "https://tuneshape.kai-nex.com/effects/bencho-card-swap/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Wake Slider",
+      "alternateName": "尾波滑杆",
+      "description": "A bar slider leaves a rising wake behind a fast drag.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-wake-slider",
+      "url": "https://tuneshape.kai-nex.com/en/effects/bencho-wake-slider/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/bencho-wake-slider/",
+        "https://tuneshape.kai-nex.com/effects/bencho-wake-slider/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Elastic Image Compare",
+      "alternateName": "弹性图片比较",
+      "description": "A flexible divider and its matching image mask follow the same curve.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-image-compare",
+      "url": "https://tuneshape.kai-nex.com/en/effects/bencho-image-compare/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/bencho-image-compare/",
+        "https://tuneshape.kai-nex.com/effects/bencho-image-compare/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Floating Label Input",
+      "alternateName": "浮动标签输入",
+      "description": "The label lifts into a measured notch in the outline on focus.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-label-input",
+      "url": "https://tuneshape.kai-nex.com/en/effects/bencho-label-input/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/bencho-label-input/",
+        "https://tuneshape.kai-nex.com/effects/bencho-label-input/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Floating Ring Carousel",
+      "alternateName": "漂浮转盘轮播",
+      "description": "Cards float on a continuous ring, with independent drag, settle and inward tilt.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-carousel",
+      "url": "https://tuneshape.kai-nex.com/en/effects/bencho-carousel/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/bencho-carousel/",
+        "https://tuneshape.kai-nex.com/effects/bencho-carousel/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Upload Dropzone",
+      "alternateName": "弹性上传框",
+      "description": "Files tuck into a progress pill; oversized files bounce back.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-upload-dropzone",
+      "url": "https://tuneshape.kai-nex.com/en/effects/bencho-upload-dropzone/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/bencho-upload-dropzone/",
+        "https://tuneshape.kai-nex.com/effects/bencho-upload-dropzone/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Slide to Confirm",
+      "alternateName": "滑动确认",
+      "description": "Reach the end to unfurl the confirmation pill; partial drags spring back.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-slide-confirm",
+      "url": "https://tuneshape.kai-nex.com/en/effects/bencho-slide-confirm/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/bencho-slide-confirm/",
+        "https://tuneshape.kai-nex.com/effects/bencho-slide-confirm/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Aspect Ratio",
+      "alternateName": "等面积裁切",
+      "description": "One image morphs between three crops with equal-area endpoints.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-aspect",
+      "url": "https://tuneshape.kai-nex.com/en/effects/bencho-aspect/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/bencho-aspect/",
+        "https://tuneshape.kai-nex.com/effects/bencho-aspect/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Create Menu",
+      "alternateName": "流动创建菜单",
+      "description": "A pill presses inward, then opens into a centered creation menu.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-liq-create",
+      "url": "https://tuneshape.kai-nex.com/en/effects/bencho-liq-create/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/bencho-liq-create/",
+        "https://tuneshape.kai-nex.com/effects/bencho-liq-create/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Eye Tracker",
+      "alternateName": "眼睛跟随",
+      "description": "Eyes follow your pointer inside a soft shape; click to make it speak.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-eye-tracker",
+      "url": "https://tuneshape.kai-nex.com/en/effects/bencho-eye-tracker/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/bencho-eye-tracker/",
+        "https://tuneshape.kai-nex.com/effects/bencho-eye-tracker/"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Context Meter",
+      "alternateName": "上下文计量",
+      "description": "Category usage forms a bar or dot field, with reversible compaction.",
+      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/bencho-context-meter",
+      "url": "https://tuneshape.kai-nex.com/en/effects/bencho-context-meter/",
+      "subjectOf": [
+        "https://tuneshape.kai-nex.com/en/effects/bencho-context-meter/",
+        "https://tuneshape.kai-nex.com/effects/bencho-context-meter/"
       ]
     },
     {
@@ -749,18 +893,6 @@
       "subjectOf": [
         "https://tuneshape.kai-nex.com/en/effects/page-turn-cards/",
         "https://tuneshape.kai-nex.com/effects/page-turn-cards/"
-      ]
-    },
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "Chapter Progress Navigation",
-      "alternateName": "章节进度导航",
-      "description": "Equal chapter labels, real scroll progress, and an interruptible direct transition.",
-      "codeRepository": "https://github.com/orocoa/TuneShape/tree/main/effects/examples/chapter-progress-nav",
-      "url": "https://tuneshape.kai-nex.com/en/effects/chapter-progress-nav/",
-      "subjectOf": [
-        "https://tuneshape.kai-nex.com/en/effects/chapter-progress-nav/",
-        "https://tuneshape.kai-nex.com/effects/chapter-progress-nav/"
       ]
     }
   ]

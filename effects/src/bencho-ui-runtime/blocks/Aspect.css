@@ -1,0 +1,106 @@
+/* Bencho MIT c659924; original geometry, project-scoped by the renderer. */
+/* No stroke rule here on purpose — see the note on the
+   catalog entry. `--pane-edge` is 8% ink, which reads against
+   a pane and disappears against a photograph, so the block
+   does not offer the switch rather than offering one that
+   reports a state it is not producing. */
+
+/* ══ Aspect ═════════════════════════════════════════════════
+   A picture and three shapes to put it in. Almost everything
+   that moves is written in the markup from the chosen shape;
+   what is here is the transition itself and the chrome. */
+.asp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-ui);}
+
+/* the full square, and it never changes size — the picture is
+   centred in a box that is not moving, so the tabs below do
+   not climb and drop as the shape changes */
+.asp-stage {
+  display: grid;
+  place-items: center;
+  width: 100%;}
+
+.asp-pic {
+  background-color: var(--surface-2);
+  background-size: cover;
+  background-position: center;
+  /* `cover` and a frame that moves: the picture stays
+     undistorted and the CROP changes, which is what a format
+     switch actually is. Contain would letterbox and fit would
+     squash. */
+  transition:
+    width var(--asp-ms, 600ms) cubic-bezier(0.22, 1, 0.36, 1),
+    height var(--asp-ms, 600ms) cubic-bezier(0.22, 1, 0.36, 1);}
+
+/* ── the tab strip ──────────────────────────────────────────
+   .dtl-seg's numbers, which is the segmented control the
+   panel beside this block is already wearing: 36 tall, 2 of
+   padding, a 6% ink track and 999 on both. Copied by value
+   rather than by class because that one belongs to the site's
+   chrome and this is a component — but a block that invented
+   its own segmented control would be a third opinion about
+   what one looks like, sitting six inches from the second.
+
+   The tabs are 40 wide, against .dtl-seg's 58 for a word.
+   That is what a 18px glyph needs to stop being a hit target
+   you have to aim at — they were 18 wide, which is the icon
+   and no more. */
+.asp-tabs {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  padding: 2px;
+  border-radius: 999px;
+  background: rgba(var(--ink-rgb), var(--wash));}
+
+.asp-thumb {
+  position: absolute;
+  top: 2px; left: 2px;
+  width: calc((100% - 4px) / 3);
+  height: calc(100% - 4px);
+  border-radius: 999px;
+  background: var(--card);
+  box-shadow: 0 1px 2px rgba(var(--ink-rgb), 0.1);
+  /* ── it LEADS the picture ──────────────────────────────
+     Both are the same event and both answer the one knob, so
+     the thumb is not on a duration of its own — it is a
+     fraction of the picture's. A control that takes as long
+     as the thing it controls feels like it did not hear you;
+     one that arrives first reads as the cause of what
+     follows. */
+  transition: transform calc(var(--asp-ms, 600ms) * 0.55)
+    cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;}
+
+.asp-tab {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: color 160ms ease, scale 160ms cubic-bezier(0.22, 1, 0.36, 1);}
+
+.asp-tab:hover { color: var(--ink); }
+
+.asp-tab[aria-checked="true"] { color: var(--ink); }
+
+/* the same give every other control on this bench has */
+.asp-tab:active { scale: 0.96; }
+
+.asp-tab:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--card), 0 0 0 4px rgba(var(--ink-rgb), 0.35);}
+
+@media (prefers-reduced-motion: reduce) {
+  .asp-pic, .asp-thumb, .asp-tab { transition-duration: 160ms; }
+}

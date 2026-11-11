@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "bencho-image-compare",
+  "durationMs": 600,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "bencho": {
+    "kind": "image-compare",
+    "images": [
+      {
+        "id": "image-1",
+        "label": "Before",
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20640%20640%22%3E%3Crect%20width%3D%22640%22%20height%3D%22640%22%20fill%3D%22%23ffffff%22%2F%3E%3Ccircle%20cx%3D%22320%22%20cy%3D%22320%22%20r%3D%22176%22%20fill%3D%22%23929292%22%2F%3E%3C%2Fsvg%3E%0A"
+      },
+      {
+        "id": "image-2",
+        "label": "After",
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20640%20640%22%3E%3Crect%20width%3D%22640%22%20height%3D%22640%22%20fill%3D%22%23ffffff%22%2F%3E%3Ccircle%20cx%3D%22320%22%20cy%3D%22320%22%20r%3D%22176%22%20fill%3D%22%23929292%22%2F%3E%3C%2Fsvg%3E%0A"
+      }
+    ],
+    "background": "#f1f1f1",
+    "ink": "#242424",
+    "corner": 20,
+    "auto": false,
+    "every": 4,
+    "stackGap": 34,
+    "bars": 36,
+    "wake": 60,
+    "initialValue": 50,
+    "labels": true,
+    "beforeLabel": "Before",
+    "afterLabel": "After",
+    "field": "Email",
+    "fieldLabel": "邮箱",
+    "orbit": 138,
+    "depth": 100,
+    "float": 15,
+    "sink": 50,
+    "settle": 50,
+    "sound": true,
+    "volume": 0.35
+  }
+}

@@ -1,0 +1,75 @@
+/* ══ Image compare ════════════════════════════════════════ */
+.cmp {
+  position: relative;
+  overflow: hidden;
+  touch-action: none;
+  cursor: ew-resize;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  background: var(--fill-on, var(--ink));}
+
+.cmp:focus-visible { box-shadow: 0 0 0 2px var(--signal, #2231dd); }
+
+.cmp-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  -webkit-user-drag: none;}
+
+/* no drift now: two separate photographs have to stay exactly in
+   register, or the x-ray stops lining up with the picture */
+.cmp-before { position: absolute; inset: 0; }
+
+.cmp-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(23, 24, 26, 0.36);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  pointer-events: none;
+  letter-spacing: 0em;}
+
+.cmp-tag.cmp-right { left: auto; right: 12px; }
+
+/* the line is drawn, so it can bend: a 2px white curve with a
+   soft glow, over the whole block */
+.cmp-line {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));}
+
+.cmp-line path { fill: none; stroke: #fff; stroke-width: 2; }
+
+.cmp-grip { position: absolute; top: 0; bottom: 0; width: 0; pointer-events: none; }
+
+.cmp-knob {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 36px;
+  height: 36px;
+  translate: -50% -50%;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--fill-slab, var(--card));
+  color: var(--fill-on, var(--ink));
+  box-shadow: 0 2px 12px rgba(23, 24, 26, 0.25);
+  transition: scale 220ms cubic-bezier(0.24, 1.34, 0.38, 1);}
+
+.cmp:hover .cmp-knob { scale: 1.08; }
+
+.cmp[data-held] .cmp-knob { scale: 0.9; }

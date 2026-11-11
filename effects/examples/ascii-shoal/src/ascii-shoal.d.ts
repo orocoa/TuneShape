@@ -10,7 +10,7 @@ export interface AsciiShoalOptions {
   opacity: number;
   gridOpacity: number;
   wakeOpacity: number;
-  /** @deprecated Kept for compatibility; pointer input is ignored. */
+  /** Hover causes avoidance; click/tap creates a local scattering impulse. */
   interactive: boolean;
   characters: string;
   seed: number;
@@ -40,7 +40,7 @@ export interface AsciiShoalLayout {
   dpr: number;
 }
 
-export interface AsciiShoalPointer { x: number; y: number; energy: number; }
+export interface AsciiShoalPointer { x: number; y: number; strength?: number; /** @deprecated */ energy?: number; }
 
 export interface AsciiShoalSharkDescriptor {
   readonly id: number;
@@ -91,6 +91,8 @@ export interface AsciiShoalPose {
   angle: number;
   size: number;
   bend?: number;
+  /** Dimensionless curvature used for turning the trailing body. */
+  curvature?: number;
   tailPhase: number;
   tone: number;
 }
@@ -114,6 +116,12 @@ export interface AsciiShoalState {
   rows: number;
   sharkCount: number;
   fishCount: number;
+  pointer: { x: number; y: number; strength: number; active: boolean };
+  /** Transient diagnostic state, never part of saved settings. Speed is logical pixels/second. */
+  swimmers: Array<{id: number; kind: 'shark' | 'fish'; x: number; y: number; angle: number; speed: number; alarm: number; pointerAlarm: number; tailPhase: number; curvature: number}>;
+  /** Transient articulated joints in logical pixels; never serialized as settings. */
+  spines: Array<{id: number; points: number[]}>;
+  splashes: Array<{x: number; y: number; age: number}>;
   positions: Array<{ x: number; y: number; angle: number; size: number }>;
 }
 
@@ -130,6 +138,9 @@ export const defaults: Readonly<AsciiShoalOptions>;
 export function normalizeOptions(options?: Partial<AsciiShoalOptions>): AsciiShoalOptions;
 export function computeLayout(width: number, height: number, density?: number, glyphScale?: number, dpr?: number): AsciiShoalLayout;
 export function createScene(seed?: number): AsciiShoalScene;
+/** Samples autonomous paths; the legacy pointer argument is ignored. Use the controller for steering. */
 export function sampleScene(scene: AsciiShoalScene, time: number, width: number, height: number, options?: Partial<AsciiShoalOptions>, pointer?: AsciiShoalPointer | null): { sharks: AsciiShoalPose[]; fish: AsciiShoalPose[] };
-export function sampleSharkMask(x: number, y: number, phase?: number, softness?: number): number;
+export function sampleSharkMask(x: number, y: number, phase?: number, softness?: number, curvature?: number): number;
+/** Local centerline displacement: front-to-tail wave plus inertial turn curvature. */
+export function sampleSharkSpine(x: number, phase?: number, curvature?: number): number;
 export function createAsciiShoal(host: HTMLElement, options?: Partial<AsciiShoalOptions>, runtime?: AsciiShoalRuntime): AsciiShoalController;

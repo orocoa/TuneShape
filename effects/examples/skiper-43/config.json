@@ -24,8 +24,8 @@
     "padding": 14,
     "radius": 30,
     "tooltipOffset": 8,
-    "backgroundColor": "#000000",
-    "textColor": "#ffffff",
+    "backgroundColor": "#e5e5e5",
+    "textColor": "#303030",
     "badgeColor": "#00a6f4"
   }
 }

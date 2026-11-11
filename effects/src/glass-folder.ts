@@ -2,7 +2,7 @@
 export type FolderDocument={title:string;body:string};
 export type GlassFolderSettings={name:string;documents:FolderDocument[];color:'black'|'white'|'blue';size:'sm'|'md'|'lg';lift:number;spread:number;hoverLift:number;tilt:number;fanAngle:number;initialOpen:boolean};
 export type GlassFolderRuntime={enabled:boolean;paused:boolean;reduced:boolean;speed:number;durationMs:number;language:'zh'|'en';compact?:boolean;onRunning?:(running:boolean)=>void;onOpenChange?:(open:boolean)=>void};
-export const defaultGlassFolder:Readonly<GlassFolderSettings>={name:'',documents:[{title:'Notes',body:''},{title:'Draft',body:''},{title:'Ideas',body:''}],color:'white',size:'md',lift:175,spread:68,hoverLift:20,tilt:55,fanAngle:16,initialOpen:false};
+export const defaultGlassFolder:Readonly<GlassFolderSettings>={name:'',documents:[{title:'Notes',body:''},{title:'Draft',body:''},{title:'Ideas',body:''}],color:'white',size:'md',lift:175,spread:68,hoverLift:20,tilt:35,fanAngle:16,initialOpen:false};
 export function validateGlassFolder(value:unknown):GlassFolderSettings{
  const plain=(v:unknown,keys:string[])=>{if(!v||typeof v!=='object'||Object.getPrototypeOf(v)!==Object.prototype||Reflect.ownKeys(v).length!==keys.length||keys.some(k=>!Object.hasOwn(Object.getOwnPropertyDescriptor(v,k)??{},'value')))throw Error('磨砂文件夹字段不完整或含未知字段。')};plain(value,Object.keys(defaultGlassFolder));const s=value as GlassFolderSettings;
  const text=(v:unknown,min:number,max:number)=>typeof v==='string'&&v.trim().length>=min&&Array.from(v).length<=max&&!/[\u0000-\u001f\u007f-\u009f<>]/u.test(v);

@@ -1,0 +1,41 @@
+/* ══ Wake slider ══════════════════════════════════════════
+   lab/WakeSlider.tsx. Thin bars, the reading beside them. The bars
+   are data marks, so they take the ink strengths: ink when lit,
+   faint after the value. Heights are written by the component */
+.wks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  color: var(--fill-on, #17181a);}
+
+.wks-track {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: ew-resize;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 6px;}
+
+.wks-track:focus-visible { outline: 2px solid #2231dd; outline-offset: 6px; }
+
+.wks-bar {
+  flex: none;
+  width: 3px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--fill-on, #17181a) 32%, var(--fill-slab, #fff));
+  transform-origin: 50% 50%;
+  transition: background-color 160ms ease;}
+
+.wks-bar[data-on] { background: var(--fill-on, #17181a); }
+
+.wks-value {
+  min-width: 3ch;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+  color: color-mix(in srgb, var(--fill-on, #17181a) 72%, var(--fill-slab, #fff));}

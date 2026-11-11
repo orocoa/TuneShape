@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "glass-generate",
+  "durationMs": 400,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "glassGenerate": {
+    "label": "Generate",
+    "fontSize": 16,
+    "paddingX": 1.5,
+    "paddingY": 0.875,
+    "blur": 2,
+    "hoverScale": 0.975,
+    "pressTilt": 25,
+    "backgroundColor": "#f1f1f1",
+    "glassColor": "#ffffff",
+    "inkColor": "#323232",
+    "showGrid": true,
+    "gridSize": 30,
+    "gridOpacity": 0.15,
+    "disabled": false
+  }
+}

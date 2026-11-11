@@ -32,7 +32,7 @@ Complete the full entrance and retain readable text; replay restarts the entranc
 
 ## Motion notes 4
 
-Saved settings: {"kind":"outline-trace","text":"Outline","fontSize":150,"fontWeight":800,"color":"#171717","strokeColor":"#171717","strokeWidth":2.5,"stagger":3,"fill":true,"keepStroke":false}. Typography uses a 1280×720 reference canvas with proportional preview scaling.
+Saved settings: {"kind":"outline-trace","text":"Tuneshape","fontSize":150,"fontWeight":800,"color":"#171717","strokeColor":"#171717","strokeWidth":2.5,"stagger":3,"fill":true,"keepStroke":false}. Typography uses a 1280×720 reference canvas with proportional preview scaling.
 
 ## Motion notes 5
 

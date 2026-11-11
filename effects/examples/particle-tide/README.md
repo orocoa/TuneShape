@@ -28,7 +28,7 @@ Canvas 320 × 230; offset 0, 0 px; scale 1. Waves advance continuously without a
 
 ## Motion notes 3
 
-Base clock 12000 ms; delay 0 ms; wave speed 1×. Accumulate time across repeats without resetting the sea; speed 0 holds the current frame.
+Base clock 12000 ms; delay 0 ms; wave speed 2.15×. Accumulate time across repeats without resetting the sea; speed 0 holds the current frame.
 
 ## Motion notes 4
 
@@ -44,7 +44,7 @@ Follow reduced motion: show a still sea with no pointer swell, click ripples or 
 
 ## Motion notes 7
 
-Background #242426; water #B9B9C2; crest #FFFFFF; density 1; particle size 1; wave height 1; wavelength 1; speed 1; interactive true; click ripples true.
+Background #f1f1f1; water #8181bb; crest #1C1C28; density 1.25; particle size 2.05; wave height 1.2; wavelength 0.75; speed 2.15; interactive true; click ripples true.
 
 ## Source, configuration, and license
 

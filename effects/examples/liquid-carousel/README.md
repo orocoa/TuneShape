@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-A fixed image card with an organic liquid reveal and local refraction originating at the navigation buttons.
+A fixed image card with a liquid edge reveal, local refraction and bottom arrow / capsule navigation.
 
 [Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/liquid-carousel) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/liquid-carousel/) · [All open-source effects](../../README.md)
 
@@ -20,7 +20,7 @@ Edit `config.json` to adjust the configuration. Use Play / Pause / Replay to che
 
 ## Interaction
 
-Use the arrow buttons, Left/Right keys, Home/End or horizontal swipes. Selection stays on this page.
+Autoplay advances when the bottom progress bar fills. Selecting an arrow or dot restarts the timer and continues autoplay. Left/Right keys, Home/End and horizontal swipes also work. Selection stays on this page.
 
 ## States and motion
 
@@ -28,11 +28,11 @@ A 202px card, 0.756 image aspect, 14.2px corners and 4.5px white border. Default
 
 ## Motion notes 3
 
-Each transition lasts 800 ms. An organic radial reveal grows from the clicked button; coherent ripples follow the edge, with refraction confined to the moving front. Distortion 0.2, edge variation 0.1.
+Each transition lasts 1600 ms. An organic radial reveal grows from the corresponding image edge; coherent ripples follow the edge, with refraction confined to the moving front. Distortion 0.2, edge variation 0.1.
 
 ## Motion notes 4
 
-Next reveals from the right button; previous reveals from the left. Both images refract locally near the moving boundary. The rounded white frame and navigation controls stay fixed. Painting stops after full coverage.
+Next reveals from the right image edge; previous reveals from the left. Both images refract locally near the moving boundary. The rounded white frame stays fixed. The active bottom dot expands into a capsule and shows progress during automatic demos. Painting stops after full coverage.
 
 ## Repeated input and interruption
 

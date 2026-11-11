@@ -1,18 +1,36 @@
+import {skiperGroupE,createSkiperE,skiperEEngineCode} from './skiper-group-e';
+import {validateScrollSkiper} from './skiper-scroll-settings';
 import {skiperGroupA,createSkiperA,skiperAEngineCode} from './skiper-group-a';
 import {skiperGroupB,createSkiperB,skiperBEngineCode} from './skiper-group-b';
 import {skiperGroupC,createSkiperC,skiperCEngineCode} from './skiper-group-c';
 import {skiperGroupD,createSkiperD,skiperDEngineCode} from './skiper-group-d';
 import type {SkiperDefinition,SkiperSettings,SkiperRuntime} from './skiper-types';
 import {installSkiperFonts,withSkiperFontSource} from './skiper-fonts';
-export const skiperDefinitions:SkiperDefinition[]=[...skiperGroupA,...skiperGroupB,...skiperGroupC,...skiperGroupD];
+export const skiperDefinitions:SkiperDefinition[]=[...skiperGroupA,...skiperGroupB,...skiperGroupC,...skiperGroupD,...skiperGroupE];
 export const skiperMap:Record<string,SkiperDefinition>=Object.fromEntries(skiperDefinitions.map(d=>[d.id,d]));
 export const isSkiperEffect=(id:string)=>Object.hasOwn(skiperMap,id);
-export const skiperGroup=(id:string)=>skiperGroupA.some(d=>d.id===id)?'a':skiperGroupB.some(d=>d.id===id)?'b':skiperGroupC.some(d=>d.id===id)?'c':'d';
-export function createSkiperEffect(host:HTMLElement,id:string,settings:SkiperSettings,runtime:SkiperRuntime){installSkiperFonts(host.ownerDocument);return ({a:createSkiperA,b:createSkiperB,c:createSkiperC,d:createSkiperD})[skiperGroup(id)](host,id,settings,runtime)}
-export function skiperEngineSource(id:string){const group=skiperGroup(id),name='createSkiper'+group.toUpperCase(),code=({a:skiperAEngineCode,b:skiperBEngineCode,c:skiperCEngineCode,d:skiperDEngineCode})[group];return {name,code:withSkiperFontSource(name,code)}}
+export const skiperGroup=(id:string)=>skiperGroupA.some(d=>d.id===id)?'a':skiperGroupB.some(d=>d.id===id)?'b':skiperGroupC.some(d=>d.id===id)?'c':skiperGroupD.some(d=>d.id===id)?'d':'e';
+export function createSkiperEffect(host:HTMLElement,id:string,settings:SkiperSettings,runtime:SkiperRuntime){installSkiperFonts(host.ownerDocument);return ({a:createSkiperA,b:createSkiperB,c:createSkiperC,d:createSkiperD,e:createSkiperE})[skiperGroup(id)](host,id,settings,runtime)}
+export function skiperEngineSource(id:string){const group=skiperGroup(id),name='createSkiper'+group.toUpperCase(),code=({a:skiperAEngineCode,b:skiperBEngineCode,c:skiperCEngineCode,d:skiperDEngineCode,e:skiperEEngineCode})[group];return {name,code:withSkiperFontSource(name,code)}}
 export function validateSkiper(id:string,value:unknown):SkiperSettings{
  const d=skiperMap[id];if(!d||!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype)throw Error('Skiper 组件设置无效。');
  let v=value as SkiperSettings;const keys=Object.keys(d.defaults);
+ const canvasKeys=['mode','canvasScale','canvasAspect','dragSensitivity','momentum','stagger'],legacyCanvasKeys=keys.filter(k=>!canvasKeys.includes(k));
+ if(id==='skiper-30'&&canvasKeys.every(k=>!Object.hasOwn(v,k))&&Reflect.ownKeys(v).length===legacyCanvasKeys.length&&legacyCanvasKeys.every(k=>Object.hasOwn(Object.getOwnPropertyDescriptor(v,k)??{},'value'))){v=Object.fromEntries(keys.map(k=>[k,canvasKeys.includes(k)?k==='mode'?'scroll':d.defaults[k]:Object.getOwnPropertyDescriptor(v,k)!.value]))}
+
+ const hint=Object.getOwnPropertyDescriptor(v,'hint');if(id==='skiper-41'&&hint&&Object.hasOwn(hint,'value')&&typeof hint.value==='string'&&/^scroll down to see(?: the effect)?$/i.test(hint.value.trim())){v=Object.fromEntries(Reflect.ownKeys(v).map(key=>{const d=Object.getOwnPropertyDescriptor(v,key)!;if(typeof key!=='string'||!Object.hasOwn(d,'value'))throw Error('Skiper 设置不能包含访问器或符号。');return [key,key==='hint'?'':d.value]}))}
+ // Removed composer options migrate only from complete old data shapes.
+ // Do not evaluate accessors or allow unknown fields through the migration.
+ const retired:Record<string,string>=id==='skiper-81'?{watermark:'string',showWatermark:'boolean'}:id==='skiper-83'?{youtubeLabel:'string',googleLabel:'string',notionLabel:'string'}:{};
+ if(Object.keys(retired).some(k=>Object.hasOwn(v,k))){
+  for(const [key,type] of Object.entries(retired)){
+   const descriptor=Object.getOwnPropertyDescriptor(v,key);
+   if(!descriptor||!Object.hasOwn(descriptor,'value')||typeof descriptor.value!==type)throw Error('旧版组件设置无效。');
+  }
+  const retained=Reflect.ownKeys(v).filter(k=>typeof k!=='string'||!Object.hasOwn(retired,k));
+  if(retained.some(k=>typeof k!=='string'||!keys.includes(k)))throw Error('Skiper 设置含未知字段。');
+  v=Object.fromEntries(retained.map(key=>{const descriptor=Object.getOwnPropertyDescriptor(v,key)!;if(!Object.hasOwn(descriptor,'value'))throw Error('Skiper 设置不能包含访问器。');return [key,descriptor.value]}));
+ }
  // The first published 81/82 presets predate adjustable local demo replies.
  // Migrate only their exact complete old shape; retain strict validation otherwise.
  const replyKeys=['replyText','replyDelay'],legacyKeys=keys.filter(k=>!replyKeys.includes(k));
@@ -27,5 +45,6 @@ export function validateSkiper(id:string,value:unknown):SkiperSettings{
  for(const key of ['selectedIndex','colorIndex','paragraphs'])if(Object.hasOwn(v,key)&&!Number.isInteger(v[key]))throw Error('序号和数量必须是整数。');
  for(const [key,list] of [['selectedIndex','images'],['colorIndex','colorNames']] as const)if(typeof v[key]==='number'&&typeof v[list]==='string'&&(v[key] as number)>=String(v[list]).split('\n').filter(x=>x.trim()).length)throw Error('默认序号超出当前内容列表。');
  if(typeof v.models==='string'&&typeof v.initialModel==='string'&&!v.models.split('\n').includes(v.initialModel))throw Error('默认模型须在模型列表中。');
+ if([16,17,28,30].includes(d.number))validateScrollSkiper(id,v);
  return structuredClone(v);
 }

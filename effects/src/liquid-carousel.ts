@@ -4,7 +4,7 @@ import {liquidCarouselImages} from './liquid-carousel-art';
 
 export type LiquidImage={src:string;title:string};
 export type LiquidCarouselSettings={items:LiquidImage[];selectedIndex:number;height:number;aspect:number;radius:number;border:number;buttonSize:number;distortion:number;edge:number;autoplay:boolean;interval:number;disabled:boolean};
-export const defaultLiquidCarousel:LiquidCarouselSettings={items:structuredClone(liquidCarouselImages),selectedIndex:0,height:202,aspect:350/463,radius:14.2,border:4.5,buttonSize:19.2,distortion:.2,edge:.1,autoplay:false,interval:1800,disabled:false};
+export const defaultLiquidCarousel:LiquidCarouselSettings={items:structuredClone(liquidCarouselImages),selectedIndex:0,height:202,aspect:350/463,radius:14.2,border:4.5,buttonSize:24,distortion:.2,edge:.1,autoplay:true,interval:3600,disabled:false};
 export const liquidCarouselRanges={height:[150,280],aspect:[.6,1.5],radius:[0,40],border:[0,12],buttonSize:[16,36],distortion:[0,.6],edge:[0,.25],interval:[800,6000]} as const;
 export function validateLiquidCarousel(value:unknown):LiquidCarouselSettings{
  if(!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype)throw Error('液态轮播设置须为普通对象。');
@@ -23,6 +23,15 @@ export function validateLiquidCarousel(value:unknown):LiquidCarouselSettings{
  return structuredClone(v) as LiquidCarouselSettings;
 }
 export function liquidIndex(index:number,count:number){return ((index%count)+count)%count}
+/** Keep the image and bottom navigation inside the same fitted scene, including 2–8 images. */
+export function liquidCarouselLayout(settings:Pick<LiquidCarouselSettings,'height'|'border'|'aspect'|'buttonSize'|'items'>){
+ const size=settings.buttonSize,dot=size/3,active=size*7/6,dotGap=size/6,sideGap=size*5/6,gap=size*2/3;
+ const frameWidth=(settings.height-2*settings.border)*settings.aspect+2*settings.border;
+ const pagerWidth=(settings.items.length-1)*dot+active+(settings.items.length-1)*dotGap;
+ const navWidth=2*size+2*sideGap+pagerWidth,width=Math.max(320,frameWidth+40,navWidth+40),height=Math.max(300,settings.height+size+gap+40);
+ const imageY=(height-size-gap)/2;
+ return {width,height,frameWidth,imageY,navTop:imageY+settings.height/2+gap,navWidth,pagerWidth,size,dot,active,dotGap,sideGap};
+}
 export function liquidRadius(progress:number,aspect=350/463){const p=Math.max(0,Math.min(1,progress));return (-.05+.84*p+.235*(1-Math.exp(-196*p*p)))*Math.hypot(.889*aspect,.5)/Math.hypot(.889*350/463,.5)}
 /** Low-frequency ripples follow the front rather than boiling through a noise field. */
 export const liquidBoundaryProfile=[0.0225,-0.0375,-0.015,0.03,0,-0.09,-0.105,0.0075] as const;
@@ -35,13 +44,17 @@ function liquidBoundaryKernel(profile:readonly number[],angle:number,progress:nu
 export function liquidBoundaryOffset(angle:number,progress:number,amount:number){return liquidBoundaryKernel(liquidBoundaryProfile,angle,progress,amount)}
 export type LiquidRuntime=NativeEffectRuntime&{gallery?:boolean;managed?:boolean;interactive?:boolean;interruption?:'retarget'|'restart'};
 
-function liquidCarouselEngine(tools:ReturnType<typeof nativeEffectTools>,wrap:typeof liquidIndex,radiusAt:typeof liquidRadius,boundaryAt:typeof liquidBoundaryOffset,profile:readonly number[]){
+function liquidCarouselEngine(tools:ReturnType<typeof nativeEffectTools>,wrap:typeof liquidIndex,radiusAt:typeof liquidRadius,boundaryAt:typeof liquidBoundaryOffset,profile:readonly number[],sceneLayout:typeof liquidCarouselLayout){
  const css=`.liquid-carousel{position:relative;width:320px;height:300px;isolation:isolate;user-select:none;-webkit-user-select:none;color:#17191a}
  .liquid-carousel *{box-sizing:border-box}.liquid-carousel .lc-frame{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#fff;overflow:hidden;box-shadow:0 3px 10px #00000003;outline:none;touch-action:pan-y}
  .liquid-carousel .lc-frame:focus-visible{outline:2px solid #555;outline-offset:4px}.liquid-carousel .lc-canvas{display:block;width:100%;height:100%;pointer-events:none}
  .liquid-carousel .lc-halo{position:absolute;left:50%;top:50%;transform:translate(-20%,-46%) scale(.93);width:166px;height:200px;background-position:center;background-size:cover;filter:blur(20px);opacity:.2;pointer-events:none;z-index:-1}
- .liquid-carousel .lc-button{position:absolute;top:50%;transform:translateY(-50%);border:0;border-radius:50%;padding:0;display:grid;place-items:center;background:#fff;color:#141919;cursor:pointer;box-shadow:none;touch-action:manipulation;outline:none}
- .liquid-carousel .lc-button:focus-visible{outline:2px solid #222;outline-offset:3px}.liquid-carousel .lc-button:hover{background:#f8f8f8}.liquid-carousel .lc-button:disabled{cursor:default}.liquid-carousel .lc-button svg{display:block;width:44%;height:44%;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+ .liquid-carousel .lc-nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;touch-action:manipulation}
+ .liquid-carousel .lc-button{flex:none;border:0;border-radius:50%;padding:0;display:grid;place-items:center;background:#dedddd;color:#777;cursor:pointer;box-shadow:none;outline:none}
+ .liquid-carousel .lc-button:hover{background:#d3d2d2;color:#4d4d4d}.liquid-carousel .lc-button svg{display:block;width:52%;height:52%;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+ .liquid-carousel .lc-pages{display:flex;align-items:center}.liquid-carousel .lc-page{position:relative;flex:none;display:grid;align-items:center;padding:0;border:0;border-radius:999px;background:transparent;cursor:pointer;outline:none}
+ .liquid-carousel .lc-dot{display:block;position:relative;width:100%;border-radius:999px;overflow:hidden;background:#d2d0d0;pointer-events:none}.liquid-carousel .lc-fill{display:block;width:100%;height:100%;border-radius:inherit;background:#141515;transform:scaleX(0);transform-origin:left}
+ .liquid-carousel .lc-button:focus-visible,.liquid-carousel .lc-page:focus-visible{outline:2px solid #555;outline-offset:4px}.liquid-carousel button:disabled{cursor:default}
  .liquid-carousel .lc-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.liquid-carousel[data-disabled=true]{opacity:.45}`;
  const vertex=`attribute vec2 aPosition;varying vec2 vUv;void main(){vUv=aPosition*.5+.5;gl_Position=vec4(aPosition,0.,1.);}`;
  const fragment=`precision highp float;varying vec2 vUv;uniform sampler2D uFrom,uTo;uniform float uProgress,uRadius,uAspect,uFromAspect,uToAspect,uDirection,uDistortion,uEdge,uTexel;uniform vec4 uWave,uRipple;
@@ -56,13 +69,27 @@ function liquidCarouselEngine(tools:ReturnType<typeof nativeEffectTools>,wrap:ty
  gl_FragColor=mix(texture2D(uFrom,fromUv),texture2D(uTo,toUv),mask);}`;
  function create(host:HTMLElement,initial:LiquidCarouselSettings,initialRuntime:LiquidRuntime){
   let settings=initial,runtime=initialRuntime,items=settings.items,index=settings.selectedIndex,target=index,dead=false,ready=false,generation=0,elapsed=0,frames=0;
-  let mode:'none'|'once'|'gallery'|'auto'='none',demoElapsed=0,nextAt=0,demoSteps=0,originIndex=index;
+  let mode:'none'|'once'|'gallery'|'auto'='none',demoElapsed=0,nextAt=0,cycleStart=0,demoSteps=0,originIndex=index;
   type Surface={image:HTMLCanvasElement;aspect:number;texture:WebGLTexture|null;snapshot?:boolean};
   let surfaces:Surface[]=[],transition:{from:Surface;to:Surface;elapsed:number;direction:number}|null=null,drag:{x:number;y:number;id:number}|null=null;
-  const style=tools.install(host,'liquid-carousel',css),haloA=tools.element('div','lc-halo'),haloB=tools.element('div','lc-halo'),frame=tools.element('div','lc-frame'),canvas=tools.element('canvas','lc-canvas'),previous=tools.element('button','lc-button'),next=tools.element('button','lc-button'),status=tools.element('span','lc-status');
+  const style=tools.install(host,'liquid-carousel',css),haloA=tools.element('div','lc-halo'),haloB=tools.element('div','lc-halo'),frame=tools.element('div','lc-frame'),canvas=tools.element('canvas','lc-canvas'),nav=tools.element('div','lc-nav'),pages=tools.element('div','lc-pages'),previous=tools.element('button','lc-button lc-previous'),next=tools.element('button','lc-button lc-next'),status=tools.element('span','lc-status');
   host.setAttribute('role','region');host.setAttribute('aria-roledescription','carousel');frame.tabIndex=0;frame.setAttribute('role','group');canvas.setAttribute('aria-hidden','true');status.setAttribute('aria-live','polite');previous.type=next.type='button';
   previous.innerHTML='<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m10 3-5 5 5 5"/></svg>';next.innerHTML='<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg>';
-  frame.append(canvas,previous,next);host.append(haloA,haloB,frame,status);
+  frame.append(canvas);nav.append(previous,pages,next);host.append(haloA,haloB,frame,nav,status);
+  nav.setAttribute('role','group');pages.setAttribute('role','group');
+  let pageButtons:HTMLButtonElement[]=[],navWeights:number[]=[],navFrom:number[]=[];
+  function buildPages(){
+   pageButtons=items.map((_,i)=>{const button=tools.element('button','lc-page'),dot=tools.element('span','lc-dot'),fill=tools.element('span','lc-fill');button.type='button';button.dataset.index=String(i);dot.setAttribute('aria-hidden','true');dot.append(fill);button.append(dot);return button});
+   pages.replaceChildren(...pageButtons);navWeights=items.map((_,i)=>i===target?1:0);navFrom=[...navWeights];
+  }
+  function paintNavigation(){
+   const shape=sceneLayout(settings),blend=transition?tools.ease(transition.elapsed/Math.min(200,Math.max(80,runtime.durationMs*.25))):1;
+   const progress=mode!=='none'?tools.clamp((demoElapsed-cycleStart)/Math.max(1,nextAt-cycleStart)):transition?tools.clamp(transition.elapsed/Math.max(80,runtime.durationMs)):1;
+   const en=runtime.language==='en';nav.setAttribute('aria-label',en?'Image navigation':'图片切换');pages.setAttribute('aria-label',en?'Choose an image':'选择图片');
+   nav.style.top=shape.navTop+'px';nav.style.gap=shape.sideGap+'px';pages.style.gap=shape.dotGap+'px';
+   host.dataset.navigationProgress=progress.toFixed(4);
+   pageButtons.forEach((button,i)=>{const selected=i===target;navWeights[i]=(navFrom[i]??0)*(1-blend)+(selected?blend:0);button.style.width=(shape.dot+(shape.active-shape.dot)*navWeights[i])+'px';button.style.height=shape.size+'px';button.querySelector<HTMLElement>('.lc-dot')!.style.height=shape.dot+'px';button.querySelector<HTMLElement>('.lc-fill')!.style.transform=`scaleX(${selected?progress:0})`;button.setAttribute('aria-label',en?`Show image ${i+1}: ${items[i].title}`:`显示第 ${i+1} 张图片：${items[i].title}`);button.setAttribute('aria-current',String(selected));button.disabled=settings.disabled||!ready});
+  }
   const gl=canvas.getContext('webgl',{alpha:false,antialias:false,preserveDrawingBuffer:true,depth:false,stencil:false}),ctx=gl?null:canvas.getContext('2d');
   let program:WebGLProgram|null=null,buffer:WebGLBuffer|null=null;const uniforms:Record<string,WebGLUniformLocation|null>={};
   if(gl){
@@ -76,8 +103,9 @@ function liquidCarouselEngine(tools:ReturnType<typeof nativeEffectTools>,wrap:ty
   function release(surface:Surface|null){if(surface?.snapshot&&surface.texture)gl?.deleteTexture(surface.texture)}
   function layout(){
    const innerHeight=settings.height-2*settings.border,innerWidth=innerHeight*settings.aspect,dpr=Math.min(2,devicePixelRatio||1),w=Math.max(1,Math.round(innerWidth*dpr)),h=Math.max(1,Math.round(innerHeight*dpr));
-   frame.style.width=innerWidth+settings.border*2+'px';frame.style.height=settings.height+'px';frame.style.border=settings.border+'px solid white';frame.style.borderRadius=settings.radius+'px';
-   if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h}for(const button of [previous,next]){button.style.width=button.style.height=settings.buttonSize+'px'}previous.style.left=innerWidth*.111-settings.buttonSize/2+'px';next.style.right=innerWidth*.111-settings.buttonSize/2+'px';
+   const shape=sceneLayout(settings);host.style.width=shape.width+'px';host.style.height=shape.height+'px';frame.style.top=haloA.style.top=haloB.style.top=shape.imageY+'px';
+   frame.style.width=shape.frameWidth+'px';frame.style.height=settings.height+'px';frame.style.border=settings.border+'px solid white';frame.style.borderRadius=settings.radius+'px';
+   if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h}for(const button of [previous,next]){button.style.width=button.style.height=settings.buttonSize+'px'}paintNavigation();
    haloA.style.width=haloB.style.width=innerWidth+'px';haloA.style.height=haloB.style.height=innerHeight+'px';
    const en=runtime.language==='en';host.setAttribute('aria-label',en?'Liquid image carousel':'液态图片轮播');previous.setAttribute('aria-label',en?'Previous image':'上一张图片');next.setAttribute('aria-label',en?'Next image':'下一张图片');frame.setAttribute('aria-label',(en?'Image: ':'图片：')+items[target].title);previous.disabled=next.disabled=settings.disabled||!ready;host.dataset.disabled=String(settings.disabled);
   }
@@ -96,26 +124,30 @@ function liquidCarouselEngine(tools:ReturnType<typeof nativeEffectTools>,wrap:ty
   }
   function choose(to:number,direction:number,manual=true){
    if(!ready||settings.disabled||!(runtime.interactive??runtime.enabled)||runtime.paused)return;
-   if(manual){mode='none';demoElapsed=0}to=wrap(to,items.length);if(to===target&&!transition)return;
-   let from=surfaces[index];if(transition){if(runtime.interruption!=='restart')from=snapshot();release(transition.from)}target=to;elapsed=0;runtime.onChange?.({index:target,title:items[target].title});
+   if(manual){
+    demoElapsed=cycleStart=0;mode=settings.autoplay&&runtime.enabled&&!runtime.reduced&&runtime.speed>0&&(!runtime.managed||runtime.gallery)?runtime.managed?'gallery':'auto':'none';
+    nextAt=runtime.durationMs+Math.max(400,settings.interval*.45);
+   }
+   to=wrap(to,items.length);if(to===target&&!transition){paint();if(mode!=='none')clock.wake();return}
+   let from=surfaces[index];if(transition){if(runtime.interruption!=='restart')from=snapshot();release(transition.from)}navFrom=[...navWeights];target=to;elapsed=0;runtime.onChange?.({index:target,title:items[target].title});
    if(runtime.reduced||!runtime.enabled||runtime.speed<=0){transition=null;index=target;status.textContent=items[index].title;clock.sleep();paint();return}
    transition={from,to:surfaces[to],elapsed:0,direction};paint();clock.wake();
   }
   function startDemo(nextMode:'once'|'gallery'|'auto'){
-   if(!runtime.enabled||runtime.paused||runtime.reduced||settings.disabled)return;mode=nextMode;demoElapsed=0;demoSteps=0;originIndex=target;nextAt=(runtime.delayMs??0)+400;if(ready)clock.wake();
+   if(!runtime.enabled||runtime.paused||runtime.reduced||settings.disabled)return;mode=nextMode;demoElapsed=0;demoSteps=0;originIndex=target;cycleStart=0;nextAt=(runtime.delayMs??0)+(transition?Math.max(0,runtime.durationMs-transition.elapsed)+Math.max(400,settings.interval*.45):Math.max(80,runtime.durationMs/2));if(ready)clock.wake();
   }
   function settle(){mode='none';demoElapsed=0;finish();clock.sleep()}
   function tick(dt:number){
    elapsed+=dt;if(transition)transition.elapsed+=dt;
    if(transition&&transition.elapsed>=runtime.durationMs)finish();
    if(mode!=='none'){
-    demoElapsed+=dt;if(ready&&!transition&&demoElapsed>=nextAt){demoSteps++;const to=mode==='once'&&demoSteps===2?originIndex:target+1;choose(to,1,false);nextAt=demoElapsed+runtime.durationMs+Math.max(400,settings.interval*.45);if(mode==='once'&&demoSteps===2)mode='none'}
+    demoElapsed+=dt;if(ready&&!transition&&demoElapsed>=nextAt){demoSteps++;const to=mode==='once'&&demoSteps===2?originIndex:target+1;choose(to,1,false);cycleStart=demoElapsed;nextAt=demoElapsed+runtime.durationMs+Math.max(400,settings.interval*.45);if(mode==='once'&&demoSteps===2)mode='none'}
    }
    paint();return !!transition||mode!=='none';
   }
   const clock=tools.clock(runtime,tick,host);
   function load(){
-   const token=++generation;ready=false;for(const s of surfaces)if(s.texture)gl?.deleteTexture(s.texture);if(transition)release(transition.from);surfaces=[];transition=null;index=target=Math.min(settings.selectedIndex,items.length-1);paint();
+   const token=++generation;ready=false;for(const s of surfaces)if(s.texture)gl?.deleteTexture(s.texture);if(transition)release(transition.from);surfaces=[];transition=null;index=target=Math.min(settings.selectedIndex,items.length-1);buildPages();paint();
    Promise.all(items.map(item=>new Promise<Surface>((resolve,reject)=>{
     const image=new Image();image.onload=()=>{const prepared=document.createElement('canvas');prepared.width=item.src.startsWith('data:image/svg+xml,')?640:image.naturalWidth;prepared.height=item.src.startsWith('data:image/svg+xml,')?640:image.naturalHeight;const context=prepared.getContext('2d')!;context.drawImage(image,0,0,prepared.width,prepared.height);
 
@@ -127,14 +159,16 @@ function liquidCarouselEngine(tools:ReturnType<typeof nativeEffectTools>,wrap:ty
   const down=(e:PointerEvent)=>{e.stopPropagation();if(e.button===0&&!(e.target as Element).closest('button'))drag={x:e.clientX,y:e.clientY,id:e.pointerId}};
   const up=(e:PointerEvent)=>{if(!drag||drag.id!==e.pointerId)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag=null;if(Math.abs(dx)>24&&Math.abs(dx)>Math.abs(dy)*1.3){e.stopPropagation();choose(target+(dx<0?1:-1),dx<0?1:-1)}};
   const stopClick=(e:Event)=>e.stopPropagation();
-  const listeners:[EventTarget,string,EventListener][]=[[previous,'click',clickPrevious],[next,'click',clickNext],[frame,'keydown',key as EventListener],[frame,'pointerdown',down as EventListener],[frame,'pointerup',up as EventListener],[frame,'pointercancel',()=>{drag=null}],[frame,'click',stopClick]];
+  const selectPage=(e:Event)=>{e.stopPropagation();const button=(e.target as Element).closest<HTMLButtonElement>('.lc-page');if(button){const to=Number(button.dataset.index);choose(to,to<target?-1:1)}};
+  const pageKey=(e:KeyboardEvent)=>{key(e);if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key))pageButtons[target]?.focus()};
+  const listeners:[EventTarget,string,EventListener][]=[[pages,'click',selectPage],[pages,'keydown',pageKey as EventListener],[nav,'click',stopClick],[previous,'click',clickPrevious],[next,'click',clickNext],[frame,'keydown',key as EventListener],[frame,'pointerdown',down as EventListener],[frame,'pointerup',up as EventListener],[frame,'pointercancel',()=>{drag=null}],[frame,'click',stopClick]];
   listeners.forEach(([node,event,handler])=>node.addEventListener(event,handler));clock.update(runtime);load();if(runtime.gallery)startDemo('gallery');else if(!runtime.managed&&settings.autoplay)startDemo('auto');
   return {update(nextSettings:LiquidCarouselSettings,nextRuntime:LiquidRuntime){const old=settings,oldRuntime=runtime;settings=nextSettings;runtime=nextRuntime;const changed=JSON.stringify(old.items)!==JSON.stringify(settings.items);items=settings.items;if(changed)load();else if(old.selectedIndex!==settings.selectedIndex){target=settings.selectedIndex;finish();index=target}
    clock.update(runtime);if(!runtime.enabled||settings.disabled)settle();else if(runtime.reduced)settle();else if(runtime.gallery&&!oldRuntime.gallery)startDemo('gallery');else if(!runtime.gallery&&oldRuntime.gallery){mode='none';if(!transition)clock.sleep()}else if(!runtime.managed&&settings.autoplay&&(!old.autoplay||old.disabled||!oldRuntime.enabled||oldRuntime.reduced))startDemo('auto');else if(!settings.autoplay&&mode==='auto'){mode='none';if(!transition)clock.sleep()}paint();
-  },demonstrate(){if(runtime.reduced)choose(target+1,1);else startDemo('once')},settle,getValue:()=>({index:target,title:items[target].title}),destroy(){dead=true;generation++;clock.destroy();listeners.forEach(([node,event,handler])=>node.removeEventListener(event,handler));for(const s of surfaces)if(s.texture)gl?.deleteTexture(s.texture);if(transition)release(transition.from);if(gl){gl.deleteBuffer(buffer);gl.deleteProgram(program);gl.getExtension('WEBGL_lose_context')?.loseContext()}host.replaceChildren();host.classList.remove('liquid-carousel');void style}};
+  },demonstrate(){if(runtime.reduced)choose(target+1,1);else startDemo(settings.autoplay?runtime.managed?'gallery':'auto':'once')},settle,getValue:()=>({index:target,title:items[target].title}),destroy(){dead=true;generation++;clock.destroy();listeners.forEach(([node,event,handler])=>node.removeEventListener(event,handler));for(const s of surfaces)if(s.texture)gl?.deleteTexture(s.texture);if(transition)release(transition.from);if(gl){gl.deleteBuffer(buffer);gl.deleteProgram(program);gl.getExtension('WEBGL_lose_context')?.loseContext()}host.replaceChildren();host.classList.remove('liquid-carousel');void style}};
  }
  return {create};
 }
-const engine=liquidCarouselEngine(nativeEffectTools(),liquidIndex,liquidRadius,liquidBoundaryOffset,liquidBoundaryProfile);
+const engine=liquidCarouselEngine(nativeEffectTools(),liquidIndex,liquidRadius,liquidBoundaryOffset,liquidBoundaryProfile,liquidCarouselLayout);
 export const createLiquidCarousel=engine.create;
-export const liquidCarouselEngineCode=`${nativeToolsCode}\nconst liquidIndex=${liquidIndex.toString()};\nconst liquidRadius=${liquidRadius.toString()};\nconst liquidBoundaryProfile=${JSON.stringify(liquidBoundaryProfile)};\nconst liquidBoundaryKernel=((__name)=>(${liquidBoundaryKernel.toString()}))((fn)=>fn);\nconst liquidBoundaryOffset=(angle,progress,amount)=>liquidBoundaryKernel(liquidBoundaryProfile,angle,progress,amount);\nconst liquidEngine=((__name)=>(${liquidCarouselEngine.toString()}))((fn)=>fn)(tools,liquidIndex,liquidRadius,liquidBoundaryOffset,liquidBoundaryProfile);\nconst createLiquidCarousel=liquidEngine.create;`;
+export const liquidCarouselEngineCode=`${nativeToolsCode}\nconst liquidIndex=${liquidIndex.toString()};\nconst liquidRadius=${liquidRadius.toString()};\nconst liquidCarouselLayout=${liquidCarouselLayout.toString()};\nconst liquidBoundaryProfile=${JSON.stringify(liquidBoundaryProfile)};\nconst liquidBoundaryKernel=((__name)=>(${liquidBoundaryKernel.toString()}))((fn)=>fn);\nconst liquidBoundaryOffset=(angle,progress,amount)=>liquidBoundaryKernel(liquidBoundaryProfile,angle,progress,amount);\nconst liquidEngine=((__name)=>(${liquidCarouselEngine.toString()}))((fn)=>fn)(tools,liquidIndex,liquidRadius,liquidBoundaryOffset,liquidBoundaryProfile,liquidCarouselLayout);\nconst createLiquidCarousel=liquidEngine.create;`;

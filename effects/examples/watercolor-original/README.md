@@ -32,7 +32,7 @@ Linear base clock 12000 ms; delay 0 ms; flow speed 0.6×. Accumulate time across
 
 ## Motion notes 4
 
-Flow continuously. Leaving a catalog card restores the still poster; leaving the surface clears the local warp. Cursor interaction is disabled.
+Flow continuously. Leaving a catalog card restores the still poster; leaving the surface clears the local warp. Pointer warp and contrast strength 1.
 
 ## Repeated input and interruption
 
@@ -44,7 +44,7 @@ Respect reduced motion: render a still watercolor frame with no animation or poi
 
 ## Motion notes 7
 
-Colors #0A0A0A / #E0E0E0; speed 0.6; scale 0.6; warp speed 0.08; opacity 1; additive RGB offset 0.15; cursor interaction false; cursor intensity 1.
+Colors #0A0A0A / #E0E0E0; speed 0.6; scale 0.6; warp speed 0.08; opacity 1; additive RGB offset 0.15; cursor interaction true; cursor intensity 1.
 
 ## Motion notes 8
 

@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-A dark icon toolbar with a shared moving tooltip and keyboard hints.
+A gray icon toolbar with a shared moving tooltip and keyboard hints.
 
 [Open this effect in the editor](https://tuneshape.kai-nex.com/#/effect/skiper-43) · [Effect guide and default parameters](https://tuneshape.kai-nex.com/en/effects/skiper-43/) · [All open-source effects](../../README.md)
 
@@ -24,7 +24,7 @@ Hover/focus icons to move the shared tooltip. Left/Right, Home and End move focu
 
 ## Motion notes 2
 
-Icon labels (one per line): "Comment\nInbox\nFeature Flags\nDraft Mode\nShare\nMenu"；Shortcuts (matching lines): "C\n\n\n\n\n⌘ K"；Badge indices (zero based): "1,5"；Icon size: 20；Icon gap: 12；Toolbar padding: 14；Toolbar radius: 30；Tooltip offset: 8；Toolbar color: "#000000"；Icon and text color: "#ffffff"；Badge color: "#00a6f4"
+Icon labels (one per line): "Comment\nInbox\nFeature Flags\nDraft Mode\nShare\nMenu"；Shortcuts (matching lines): "C\n\n\n\n\n⌘ K"；Badge indices (zero based): "1,5"；Icon size: 20；Icon gap: 12；Toolbar padding: 14；Toolbar radius: 30；Tooltip offset: 8；Toolbar color: "#e5e5e5"；Icon and text color: "#303030"；Badge color: "#00a6f4"
 
 ## States and motion
 
@@ -36,7 +36,7 @@ Response basis 500 ms, delay 0 ms. Observation speed is runtime only.
 
 ## Motion notes 5
 
-A dark icon toolbar with a shared moving tooltip and keyboard hints. Native controls retain their current local state after the demonstration ends.
+A gray icon toolbar with a shared moving tooltip and keyboard hints. Native controls retain their current local state after the demonstration ends.
 
 ## Repeated input and interruption
 

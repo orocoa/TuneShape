@@ -24,7 +24,7 @@ pnpm dev --open /examples/skiper-81/
 
 ## 参数与内容
 
-输入提示: "Ask Anything"；背景文字: "Skiper llm 0.3"；显示背景文字: true；输入区宽度: 744；输入文字大小: 16；输入区圆角: 16；画布背景: "#f1f1f1"；输入区底色: "#f9f8f8"；按钮底色: "#f9f8f8"；文字颜色: "#121212"；选中颜色: "#0ea5e9"；模型列表（每行一项）: "GPT-4o\nClaude 3.5 Sonnet\nGemini Pro\nLlama 3.1"；默认模型: "GPT-4o"；默认开启搜索: false；默认开启 DeepMind: false；本地演示回复: "I dunnoo 😭"；演示回复延迟: 1000；演示输入内容: "Plan a studio"
+输入提示: "Ask Anything"；输入区宽度: 744；输入文字大小: 16；输入区圆角: 16；画布背景: "#f1f1f1"；输入区底色: "#f9f8f8"；按钮底色: "#f9f8f8"；文字颜色: "#121212"；选中颜色: "#0ea5e9"；模型列表（每行一项）: "GPT-4o\nClaude 3.5 Sonnet\nGemini Pro\nLlama 3.1"；默认模型: "GPT-4o"；默认开启搜索: false；默认开启 DeepMind: false；本地演示回复: "I dunnoo 😭"；演示回复延迟: 1000；演示输入内容: "Plan a studio"
 
 ## 起点与终点
 

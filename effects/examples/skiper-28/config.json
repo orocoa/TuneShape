@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "skiper-28",
+  "durationMs": 500,
+  "delayMs": 0,
+  "easing": [
+    0.22,
+    1,
+    0.36,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "skiper": {
+    "content": "IDEAS TAKE SHAPE IN MOTION. A SMALL SHIFT CAN CHANGE THE WAY WE SEE. MAKE ROOM FOR EXPERIMENTS, FIND THE RHYTHM IN SIMPLE THINGS, AND LET EACH DETAIL CONNECT TO THE NEXT. EXPLORE WHAT MOVES YOU. CREATE SOMETHING THAT FEELS ALIVE.",
+    "fontSize": 60,
+    "lineHeight": 1,
+    "fontWeight": 700,
+    "letterSpacing": -3,
+    "rotateX": 30,
+    "perspective": 200,
+    "translateY": 487,
+    "translateZ": 10,
+    "scrollLength": 3,
+    "scrub": 0.15,
+    "initialProgress": 0,
+    "backgroundColor": "#f1f1f1",
+    "textColor": "#ff5800"
+  }
+}

@@ -1,0 +1,5 @@
+Independent TuneShape implementation - public Reelfolio rig reference: https://reelfolio.io/dashboard
+
+TuneShape implementation MIT. No licence claim over the reference site or its media.
+
+Project-owned geometric images, light gray theme, 2D Canvas approximation. No original Reelfolio code, photographs, video, logo or soundtrack.

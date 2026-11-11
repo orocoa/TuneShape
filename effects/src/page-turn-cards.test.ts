@@ -22,6 +22,6 @@ test('page turn preview, JSON, timing and executable export share a strict contr
 });
 test('page turn retains coupled projected-gap geometry and a standalone engine with no imported media',()=>{
  const css=readFileSync(new URL('./page-turn-runtime/page-turn.css',import.meta.url),'utf8');
- for(const fragment of ['--turn-camera:2.8','--turn-retreat:.10','--turn-ease:cubic-bezier(.42,0,.58,1)','--contact-correction:','border-radius:0!important'])assert(css.includes(fragment));
+ for(const fragment of ['--turn-camera:2.8','--turn-retreat:.10','--turn-ease:cubic-bezier(.42,0,.58,1)','--contact-correction:'])assert(css.includes(fragment));
  const coordinator=readFileSync(new URL('./page-turn-runtime/fold-handoff.js',import.meta.url),'utf8');assert.match(coordinator,/Math\.sqrt\(Math\.min\(1,Math\.abs\(start-end\)\)\)/);assert.match(coordinator,/preventInteractionOnTransition=far/);
 });

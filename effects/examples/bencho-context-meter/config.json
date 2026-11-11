@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "bencho-context-meter",
+  "durationMs": 600,
+  "delayMs": 0,
+  "easing": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "benchoUi": {
+    "kind": "context-meter",
+    "background": "#f1f1f1",
+    "ink": "#242424",
+    "fill": "Light",
+    "stroke": false,
+    "corner": 20,
+    "speed": 50,
+    "bounce": 40,
+    "width": 280,
+    "morph": 50,
+    "ratio": "square",
+    "image": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20640%20640%22%3E%3Crect%20width%3D%22640%22%20height%3D%22640%22%20fill%3D%22%23ffffff%22%2F%3E%3Ccircle%20cx%3D%22320%22%20cy%3D%22320%22%20r%3D%22176%22%20fill%3D%22%23929292%22%2F%3E%3C%2Fsvg%3E%0A",
+    "maxMb": 5,
+    "uploadLabel": "Drag a file here",
+    "files": [
+      {
+        "id": "img",
+        "name": "Final2.png",
+        "ext": "PNG",
+        "size": 2400000,
+        "tint": "#079455"
+      },
+      {
+        "id": "vid",
+        "name": "11Nov.mp4",
+        "ext": "MP4",
+        "size": 12600000,
+        "tint": "#155eef"
+      }
+    ],
+    "confirmLabel": "Slide to confirm",
+    "confirmedLabel": "Confirmed",
+    "createLabel": "Create",
+    "menuItems": [
+      {
+        "id": "document",
+        "label": "Document",
+        "icon": "file"
+      },
+      {
+        "id": "spreadsheet",
+        "label": "Spreadsheet",
+        "icon": "table"
+      },
+      {
+        "id": "board",
+        "label": "Board",
+        "icon": "grid"
+      },
+      {
+        "id": "folder",
+        "label": "Folder",
+        "icon": "folder"
+      }
+    ],
+    "follow": 60,
+    "shape": "Cube",
+    "eyes": "Slant",
+    "size": 100,
+    "messages": [
+      "Hey, I see you.",
+      "Boop.",
+      "That tickles.",
+      "Hi there!",
+      "Stop poking me.",
+      "I'm watching you.",
+      "Again? Okay.",
+      "You found me."
+    ],
+    "meterStyle": "Bar",
+    "colour": "Colour",
+    "capacity": 200,
+    "compactChat": 30.4,
+    "segments": [
+      {
+        "id": "sys",
+        "name": "System",
+        "k": 4.2,
+        "colour": "#ec4f8c"
+      },
+      {
+        "id": "tools",
+        "name": "Tools",
+        "k": 12.8,
+        "colour": "#9a5cf6"
+      },
+      {
+        "id": "files",
+        "name": "Files",
+        "k": 46.1,
+        "colour": "#3d7ef5"
+      },
+      {
+        "id": "chat",
+        "name": "Chat",
+        "k": 108.6,
+        "colour": "#1db4cc"
+      },
+      {
+        "id": "mem",
+        "name": "Memory",
+        "k": 3.9,
+        "colour": "#2ccb7e"
+      }
+    ],
+    "sound": true,
+    "volume": 0.35
+  }
+}

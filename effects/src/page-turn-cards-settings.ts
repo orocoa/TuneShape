@@ -1,6 +1,6 @@
 export type PageTurnCard={id:string;label:string;color:string};
 export type PageTurnSettings={cards:PageTurnCard[];initialIndex:number;width:number;height:number;fontSize:number};
-export const defaultPageTurn:PageTurnSettings={cards:Array.from({length:6},(_,i)=>({id:String(i+1),label:String(i+1),color:'#424242'})),initialIndex:0,width:280,height:336,fontSize:48};
+export const defaultPageTurn:PageTurnSettings={cards:Array.from({length:6},(_,i)=>({id:String(i+1),label:String(i+1),color:'#777777'})),initialIndex:0,width:280,height:336,fontSize:48};
 export function validatePageTurn(value:unknown):PageTurnSettings{
  const exact=(v:unknown,keys:string[])=>{if(!v||typeof v!=='object'||Array.isArray(v)||Object.getPrototypeOf(v)!==Object.prototype||Reflect.ownKeys(v).length!==keys.length||keys.some(k=>!Object.hasOwn(Object.getOwnPropertyDescriptor(v,k)??{},'value')))throw Error('翻页卡片字段缺失或包含未知内容。')};
  exact(value,Object.keys(defaultPageTurn));const s=value as PageTurnSettings;
@@ -13,4 +13,4 @@ export function validatePageTurn(value:unknown):PageTurnSettings{
  if(!Number.isInteger(s.initialIndex)||s.initialIndex<0||s.initialIndex>=cards.length)throw Error('初始卡片超出范围。');
  return {...s,cards};
 }
-export const pageTurnGeometry={camera:2.8,retreat:.10,maxAngle:100,lightLoss:.18,lightSide:.018,easing:[.42,0,.58,1],gapMin:3,gapMax:6} as const;
+export const pageTurnGeometry={camera:2.8,retreat:.10,maxAngle:100,lightLoss:.18,lightSide:.018,easing:[.42,0,.58,1],gapMin:3,gapMax:6,previewScale:.9,cornerRadius:32,cornerShape:'superellipse(2)'} as const;

@@ -1,9 +1,22 @@
+import {isBenchoUiEffect} from './bencho-ui-settings';
+import {isReelfolioEffect} from './reelfolio-settings';
+import {isBenchoEffect} from './bencho-settings';
 import {isSkiperEffect} from './skiper-effects';
 import {isStudioEffect} from './orbit-typography-spec';
 import {isWatercolorRecipe,isReelRecipe} from './effect-variants';
 export type EffectTrigger='press'|'click'|'hover'|'loading';
 export function galleryPlayback(id:string):'loading'|'cycle'|'direct'{
+ if(id==='depth-ribbon'||id==='passage-gallery')return 'loading';
+ if(id==='waving-card')return 'loading';
+ if(id==='glass-generate')return 'loading';
+ if(id==='expanding-menu')return 'loading';
+ if(isReelfolioEffect(id))return 'loading';
+ if(id==='bencho-wake-slider')return 'direct';
+ if(id==='bencho-upload-dropzone'||id==='bencho-slide-confirm')return 'direct';
+ if(isBenchoUiEffect(id))return 'loading';
+ if(isBenchoEffect(id))return 'loading';
  if(isSkiperEffect(id))return 'loading';
+ if(id==='infinite-photo-wall')return 'loading';
  if(id==='mirrored-card-stack')return 'loading';
  if(id==='page-turn-cards')return 'loading';
  if(id==='chapter-progress-nav')return 'loading';
@@ -18,6 +31,14 @@ export function galleryPlayback(id:string):'loading'|'cycle'|'direct'{
  return ['toast','card-morph','sheet','blur-panel','breality-sheet','page-fade','stagger','text-rise'].includes(id)?'cycle':'direct';
 }
 export function interactionSelector(id:string){
+ if(id==='depth-ribbon')return '.depth-ribbon';
+ if(id==='passage-gallery')return '.passage-gallery';
+ if(id==='waving-card')return '.wc-container';
+ if(id==='glass-generate')return '.ugb-stage';
+ if(id==='expanding-menu')return '.expanding-menu';
+ if(isReelfolioEffect(id))return '.reelfolio-effect';
+ if(isBenchoUiEffect(id))return '.bencho-ui-effect';
+ if(isBenchoEffect(id))return '.bencho-effect';
  if(isSkiperEffect(id))return '.skiper-effect';
  if(id==='liquid-glass-logo')return '.liquid-glass-logo';
  if(id==='chromatic-button')return '.chromatic-button';
@@ -29,6 +50,7 @@ export function interactionSelector(id:string){
  if(id==='glass-folder')return '.glass-folder-hit';
  if(id==='scroll-progress')return '.reading-progress-stage';
  if(id==='hook-sidebar')return '.hook-sidebar-nav';
+ if(id==='infinite-photo-wall')return '.ipw-root';
  if(id==='mirrored-card-stack')return '.mirrored-card-stack';
  if(id==='page-turn-cards')return '.page-turn-cards';
  if(id==='chapter-progress-nav')return '.chapter-progress-nav';
@@ -54,6 +76,10 @@ export function interactionSelector(id:string){
  return '[data-gallery-control]';
 }
 export function effectTrigger(id:string):EffectTrigger{
+ if(id==='depth-ribbon'||id==='passage-gallery')return 'loading';
+ if(id==='waving-card')return 'hover';
+ if(id==='glass-generate')return 'hover';
+ if(id==='expanding-menu')return 'hover';
  if(id==='liquid-glass-logo')return 'loading';
  if(id==='chromatic-button')return 'loading';
  if(id==='topographic-flow')return 'loading';
@@ -75,6 +101,11 @@ export const clickTarget:Record<string,string>={
  stagger:'.sculpt-stagger','text-rise':'.sculpt-letters',progress:'.sculpt-progress',
 };
 export function triggerDescription(id:string){
+ if(id==='depth-ribbon')return '滚轮、拖拽或方向键沿三维图带穿行；按住或空格查看全貌，点击或 Enter 拉近图片，Escape 返回。目录悬停、聚焦或 Preview 演示，离开且失焦、离屏或后台停止。';
+ if(id==='passage-gallery')return '拖拽、滚轮或方向键穿行图片隧道；按住加速，点击或 Enter 展开图片，Escape 收回。目录悬停、聚焦或 Preview 播放，离开且失焦、离屏或后台停止。';
+ if(id==='waving-card')return '悬停 15 个区域倾斜并挥手；聚焦后方向键切换区域，Enter / 空格演示，Escape 复位。手机点按或 Preview 演示；操作不打开详情。';
+ if(id==='glass-generate')return '悬停或聚焦移动反光，点击、Enter 或空格按压；触屏点按，操作不打开详情。目录 Preview 演示，移开且失焦、离屏或后台停止。';
+ if(id==='expanding-menu')return '悬停、聚焦展开菜单文字，移开且失焦收起；方向键与 Home / End 移动，Enter / 空格选择，Escape 收起。手机点按或 Preview 演示；操作不跳转详情。';
  if(isSkiperEffect(id))return '目录悬停、聚焦或手机 Preview 演示；原生输入、按钮、菜单、拖动与键盘在当前预览内操作。';
  if(id==='liquid-glass-logo')return '悬停、聚焦或 Preview 显形；点击、Enter / 空格重播，方向键定位，End / Escape 显示终态，移开且失焦、离屏或后台停止。';
  if(id==='chromatic-button')return '目录悬停、聚焦或 Preview 播放流彩材质；按钮、消息输入与语音外观保留真实操作，支持 Enter 和空格，操作不会打开详情。';
@@ -86,6 +117,7 @@ export function triggerDescription(id:string){
  if(id==='glass-folder')return '悬停或聚焦时轻展卡片，点击、Enter / 空格展开；移开、离焦、点击外部或 Escape 收合。';
  if(id==='scroll-progress')return '滚动阅读区同步圆环与当前章节，鼠标悬停胶囊自动展开目录，移出胶囊和菜单区域自动收合，点击章节定位并收合；触屏点按胶囊展开，点击外部或 Escape 关闭。';
  if(id==='hook-sidebar')return '点击菜单项确认选择，悬停或键盘聚焦另一项显示灰色钩线；方向键与 Home / End 移动焦点，Enter / 空格确认。';
+ if(id==='infinite-photo-wall')return '滚轮或双轴拖动探索；方向键移动，Enter 打开中央图片，Escape 归位。目录每次进入演示一次短平移，不自动重播。';
  if(id==='mirrored-card-stack')return '左右拖动、短甩、方向键、箭头及分页点切换；两侧均抽出当前顶卡，中途按住可接住并反向继续。';
  if(id==='page-turn-cards')return '左右拖动、方向键、箭头和分页点切换；目录悬停、聚焦或手机 Preview 演示一页，手动操作后停止自动重播。';
  if(id==='chapter-progress-nav')return '滚动阅读区更新章节细线；整行标签可点击，细线不可操作。最新点击替换目标，滚轮、触摸和滚动按键可中断；目录悬停或 Preview 演示真实滚动位置。';

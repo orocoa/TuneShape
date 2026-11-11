@@ -1,8 +1,7 @@
 /** Independent Hook Sidebar interaction engine; no reference source or runtime dependency. */
-import {tuneShapeNavigation,tuneShapeNavigationTitle} from './tuneshape-navigation';
 export type HookSettings={label:string;items:string[];initialIndex:number;rowHeight:number;fontSize:number;accentColor:string;dashed:boolean;theme:'light'|'dark'};
 export type HookRuntime={enabled:boolean;paused:boolean;reduced:boolean;speed:number;durationMs:number;language:'zh'|'en';onRunning?:(running:boolean)=>void;onHeight?:(height:number)=>void;onSelect?:(index:number,label:string)=>void};
-export const defaultHook:Readonly<HookSettings>={label:tuneShapeNavigationTitle,items:tuneShapeNavigation.map(item=>item.label),initialIndex:0,rowHeight:32,fontSize:14,accentColor:'#fc4c01',dashed:true,theme:'light'};
+export const defaultHook:Readonly<HookSettings>={label:'MENU',items:['Tieguanyin','Longjing','Da Hong Pao','Pu-erh','Silver Needle','Jasmine Tea','Earl Grey','Matcha'],initialIndex:0,rowHeight:32,fontSize:14,accentColor:'#fc4c01',dashed:true,theme:'light'};
 export function validateHook(value:unknown):HookSettings{
  if(!value||typeof value!=='object'||Object.getPrototypeOf(value)!==Object.prototype||Reflect.ownKeys(value).length!==Object.keys(defaultHook).length||Object.keys(defaultHook).some(k=>!Object.hasOwn(Object.getOwnPropertyDescriptor(value,k)??{},'value')))throw Error('钩线侧栏字段不完整或含未知字段。');
  const s=value as HookSettings,text=(s:unknown,min:number,max:number)=>typeof s==='string'&&s.trim().length>=min&&Array.from(s).length<=max&&!/[\u0000-\u001f\u007f-\u009f<>]/u.test(s);

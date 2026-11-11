@@ -42,13 +42,21 @@ Sparse 0.6×, balanced 1×, fine 1.6× and high-density 2× presets, with contin
 
 Appearance comes from one configuration. Fish positions, elapsed time and gallery state are transient. Play resumes a pause; a new demonstration restarts.
 
+## Motion notes 7
+
+Twenty constrained joints follow the head’s actual trajectory. A speed-linked propulsive wave runs along that articulated spine, with subtle fin banking. Fish relay alarm, split around a shark’s flanks and regroup as danger fades.
+
 ## Reduced motion
 
 Follow the system preference: render a still frame without automatic loops.
 
-## Motion notes 8
+## Motion notes 9
 
-Background #eeeeee; ink #303030; glyph opacity 0.9; autonomous paths are unaffected by pointer input.
+Background #eeeeee; ink #303030; glyph opacity 0.9; pointer disturbance enabled: nearby creatures accelerate and steer away, with faster reactions for small fish and more inertia for sharks; leaving gradually restores cruise speed without pulling positions back.
+
+## Motion notes 10
+
+Nearby creatures avoid a hovering pointer. Click or tap creates a local ripple and scattering impulse; sharks retain turning inertia. Touch movement does not act as hover or prevent page scrolling. Disabled interaction, pause and reduced motion accept no new disturbance.
 
 ## Source, configuration, and license
 
