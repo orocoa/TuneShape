@@ -13,7 +13,7 @@ Scroll inside the reading panel with the wheel, touch, or the keyboard. The orb 
 
 Click or tap the orb, or activate it with Enter or Space, to return the panel to the top. The orb fades in and out as it crosses the visibility threshold. If the orb has focus when it starts fading out, focus returns to the reading panel immediately. With reduced motion, visibility and the return to top are instant, and the particles stay hidden.
 
-The preview toolbar plays a single scroll to 65% and back. Pause freezes scripted motion. Wheel, touch and scrolling keys interrupt the demonstration and keep the reading position under your control. Under reduced motion, Play jumps to the sample position.
+The standalone preview opens at 30% of the actual reading range. Play scrolls to 75%, briefly holds, then returns to 30% over about three seconds. Pause holds the current frame, Resume continues from it, and Replay starts a new run at 30%. Reading input takes over at any time. With reduced motion, Play and Replay set the reading position to 30% immediately.
 
 [Configuration](config.json) uses the shared recipe format. The default return takes 400 ms. Progress, focus and hover come from live input. See the [implementation specification](../../src/pixel-scroll-orb-spec.ts) for the pixel geometry, particle timings and motion policies.
 

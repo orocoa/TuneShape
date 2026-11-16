@@ -1,4 +1,4 @@
-import {useCallback, useLayoutEffect, useRef, useState} from 'react';
+import {useCallback, useContext, useLayoutEffect, useRef, useState} from 'react';
 import type {KeyboardEvent} from 'react';
 import {animate, motion, useMotionValue, useMotionValueEvent, useSpring, useTransform} from 'motion/react';
 import {motionEasing} from './easing';
@@ -7,6 +7,7 @@ import {
   clampOrbProgress, defaultMonochromeOrb, monochromeOrbDash, monochromeOrbGeometry,
   monochromeOrbReading, monochromeOrbSpring, monochromeOrbVisibility,
 } from './monochrome-scroll-orb';
+import {ScrollPreviewPane} from './scroll-preview-pane';
 import type {HistoryPreviewProps} from './preview-types';
 import {usePreviewClock} from './useDetailPlayback';
 import type {PlaybackControl} from './useDetailPlayback';
@@ -33,6 +34,7 @@ export default function MonochromeScrollOrbPreview({
   const theme = config.monochromeScrollOrb?.theme ?? defaultMonochromeOrb.theme;
   const available = enabled && interactive;
   const pane = useRef<HTMLDivElement>(null);
+  const initializePreview = useContext(ScrollPreviewPane);
   const article = useRef<HTMLElement>(null);
   const button = useRef<HTMLButtonElement>(null);
   const lastCommand = useRef(0);
@@ -52,12 +54,14 @@ export default function MonochromeScrollOrbPreview({
   useMotionValueEvent(progress, 'change', value => setNumber(Math.round(clampOrbProgress(value))));
 
   const [visible, setVisible] = useState(false);
+  const initialReveal = useRef(false);
   const [painted, setPainted] = useState(false);
   const opacity = useMotionValue(0);
   const show = available && visible;
 
   useLayoutEffect(() => {
     const viewport = pane.current!;
+    let firstMeasurement = initializePreview?.(viewport) ?? false;
     let frame: number | undefined;
     const measure = () => {
       frame = undefined;
@@ -65,10 +69,12 @@ export default function MonochromeScrollOrbPreview({
       const previous = reading.current;
       const next = monochromeOrbReading(viewport.scrollTop, viewport.scrollHeight, viewport.clientHeight, previous.visible);
       reading.current = {...next, visible: available && next.visible};
-      if (reduced) progress.jump(next.percent);
-      else if (available && !(pausedRef.current && demoRunning.current) && previous.percent !== next.percent) {
+      if (firstMeasurement) initialReveal.current = reading.current.visible;
+      if (firstMeasurement || reduced) progress.jump(next.percent);
+      else if (available && !(pausedRef.current && (initializePreview || demoRunning.current)) && previous.percent !== next.percent) {
         progress.set(next.percent);
       }
+      firstMeasurement = false;
       if (previous.visible !== reading.current.visible) {
         if (!reading.current.visible && viewport.ownerDocument.activeElement === button.current) {
           viewport.focus({preventScroll: true});
@@ -87,7 +93,7 @@ export default function MonochromeScrollOrbPreview({
       viewport.removeEventListener('scroll', schedule);
       if (frame !== undefined) cancelAnimationFrame(frame);
     };
-  }, [available, progress, reduced]);
+  }, [available, initializePreview, progress, reduced]);
 
   useLayoutEffect(() => {
     if (paused || !available) progress.stop();
@@ -96,7 +102,8 @@ export default function MonochromeScrollOrbPreview({
 
   useLayoutEffect(() => {
     const target = Number(show);
-    if (reduced || !available || opacity.get() === target) {
+    if ((initialReveal.current && show) || reduced || !available || opacity.get() === target) {
+      if (show) initialReveal.current = false;
       opacity.jump(target);
       setPainted(show);
       return;

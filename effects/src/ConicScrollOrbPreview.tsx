@@ -1,8 +1,9 @@
-import {useCallback, useLayoutEffect, useRef, useState} from 'react';
+import {useCallback, useContext, useLayoutEffect, useRef, useState} from 'react';
 import type {KeyboardEvent} from 'react';
 import {animate, motion, useMotionValueEvent, useSpring, useTransform} from 'motion/react';
 import {motionEasing} from './easing';
 import {useLanguage} from './i18n';
+import {ScrollPreviewPane} from './scroll-preview-pane';
 import type {HistoryPreviewProps} from './preview-types';
 import {usePreviewClock} from './useDetailPlayback';
 import type {PlaybackControl} from './useDetailPlayback';
@@ -36,6 +37,7 @@ export default function ConicScrollOrbPreview({
   const zh = useLanguage() === 'zh';
   const available = enabled && interactive;
   const pane = useRef<HTMLDivElement>(null);
+  const initializePreview = useContext(ScrollPreviewPane);
   const article = useRef<HTMLElement>(null);
   const button = useRef<HTMLButtonElement>(null);
   const returning = useRef(false);
@@ -76,7 +78,7 @@ export default function ConicScrollOrbPreview({
     stopReturn();
   }, [stopDemo, stopReturn]);
 
-  const measure = useCallback(() => {
+  const measure = useCallback((initializing = false) => {
     const viewport = pane.current;
     if (!viewport) return;
     const next = readPane(viewport);
@@ -88,25 +90,27 @@ export default function ConicScrollOrbPreview({
 
     if (next.percent === actualProgress.current) return;
     actualProgress.current = next.percent;
-    if (reduced) progress.jump(next.percent);
-    else if (available && !(pausedRef.current && controls.current.length)) progress.set(next.percent);
-  }, [available, progress, reduced]);
+    if (initializing) setLabelText(`${Math.round(next.percent)}%`);
+    if (initializing || reduced) progress.jump(next.percent);
+    else if (available && !(pausedRef.current && (initializePreview || controls.current.length))) progress.set(next.percent);
+  }, [available, initializePreview, progress, reduced]);
 
   useLayoutEffect(() => {
     const viewport = pane.current!;
-    const observer = new ResizeObserver(measure);
+    const sync = () => measure();
+    const observer = new ResizeObserver(sync);
     observer.observe(viewport);
     observer.observe(article.current!);
-    viewport.addEventListener('scroll', measure, {passive: true});
+    viewport.addEventListener('scroll', sync, {passive: true});
     // Stop programmatic scrolling before the browser applies the wheel delta.
     viewport.addEventListener('wheel', takeOver, {passive: false});
-    measure();
+    measure(initializePreview?.(viewport));
     return () => {
       observer.disconnect();
-      viewport.removeEventListener('scroll', measure);
+      viewport.removeEventListener('scroll', sync);
       viewport.removeEventListener('wheel', takeOver);
     };
-  }, [measure, takeOver]);
+  }, [initializePreview, measure, takeOver]);
 
   useLayoutEffect(() => () => clear(), [clear]);
 

@@ -1,8 +1,9 @@
-import {useCallback, useLayoutEffect, useRef, useState} from 'react';
+import {useCallback, useContext, useLayoutEffect, useRef, useState} from 'react';
 import type {KeyboardEvent, PointerEvent} from 'react';
 import {animate, motion, useMotionValue, useMotionValueEvent, useSpring, useTransform} from 'motion/react';
 import {motionEasing} from './easing';
 import {useLanguage} from './i18n';
+import {ScrollPreviewPane} from './scroll-preview-pane';
 import type {HistoryPreviewProps} from './preview-types';
 import {usePreviewClock} from './useDetailPlayback';
 import type {PlaybackControl} from './useDetailPlayback';
@@ -31,6 +32,7 @@ export default function VerticalScrollGaugePreview({
   const direction = config.verticalScrollGauge?.direction ?? defaultVerticalGauge.direction;
   const available = enabled && interactive;
   const pane = useRef<HTMLDivElement>(null);
+  const initializePreview = useContext(ScrollPreviewPane);
   const article = useRef<HTMLElement>(null);
   const track = useRef<HTMLSpanElement>(null);
   const capture = useRef<{dragging: boolean; stop: () => void; dispose: () => void} | null>(null);
@@ -51,7 +53,7 @@ export default function VerticalScrollGaugePreview({
   const label = useTransform(displayed, value => `${gaugeTrackPosition(value, direction) * 100}%`);
   useMotionValueEvent(progress, 'change', value => setPercent(Math.round(value * 100)));
 
-  const measure = useCallback(() => {
+  const measure = useCallback((initializing = false) => {
     const viewport = pane.current!;
     if (seekTarget.current !== null && Math.abs(seekTarget.current - viewport.scrollTop) <= 1) {
       seekTarget.current = null;
@@ -60,9 +62,9 @@ export default function VerticalScrollGaugePreview({
     const next = travel > 0 ? clampGaugeProgress(viewport.scrollTop / travel) : 0;
     if (next === progress.get()) return;
     progress.set(next);
-    if (reduced || capture.current?.dragging) smooth.jump(next);
-    else if (!pausedRef.current || !controls.current.length) smooth.set(next);
-  }, [progress, reduced, smooth]);
+    if (initializing || reduced || capture.current?.dragging) smooth.jump(next);
+    else if (!pausedRef.current || !(initializePreview || controls.current.length)) smooth.set(next);
+  }, [initializePreview, progress, reduced, smooth]);
 
   const stopDemo = useCallback(() => {
     if (!controls.current.length) return;
@@ -84,19 +86,20 @@ export default function VerticalScrollGaugePreview({
 
   useLayoutEffect(() => {
     const viewport = pane.current!;
-    viewport.addEventListener('scroll', measure, {passive: true});
+    const sync = () => measure();
+    viewport.addEventListener('scroll', sync, {passive: true});
     // Stop programmatic scrolling before the browser applies the first wheel delta.
     viewport.addEventListener('wheel', takeOver, {passive: false});
-    const observer = new ResizeObserver(measure);
+    const observer = new ResizeObserver(sync);
     observer.observe(viewport);
     observer.observe(article.current!);
-    measure();
+    measure(initializePreview?.(viewport));
     return () => {
       observer.disconnect();
-      viewport.removeEventListener('scroll', measure);
+      viewport.removeEventListener('scroll', sync);
       viewport.removeEventListener('wheel', takeOver);
     };
-  }, [measure, takeOver]);
+  }, [initializePreview, measure, takeOver]);
 
   useLayoutEffect(() => {
     if (reduced) smooth.jump(progress.get());

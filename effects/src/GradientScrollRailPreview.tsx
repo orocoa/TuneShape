@@ -1,4 +1,4 @@
-import {useCallback, useLayoutEffect, useRef, useState} from 'react';
+import {useCallback, useContext, useLayoutEffect, useRef, useState} from 'react';
 import type {KeyboardEvent, PointerEvent} from 'react';
 import {animate, motion, useMotionValue, useMotionValueEvent, useSpring, useTransform} from 'motion/react';
 import type {MotionValue} from 'motion/react';
@@ -10,6 +10,7 @@ import {
 } from './gradient-scroll-rail';
 import type {GradientRailDirection} from './gradient-scroll-rail';
 import {useLanguage} from './i18n';
+import {ScrollPreviewPane} from './scroll-preview-pane';
 import type {HistoryPreviewProps} from './preview-types';
 import {usePreviewClock} from './useDetailPlayback';
 import type {PlaybackControl} from './useDetailPlayback';
@@ -62,6 +63,7 @@ export default function GradientScrollRailPreview({
   const direction = config.gradientScrollRail?.direction ?? defaultGradientRail.direction;
   const available = enabled && interactive;
   const pane = useRef<HTMLDivElement>(null);
+  const initializePreview = useContext(ScrollPreviewPane);
   const article = useRef<HTMLElement>(null);
   const bars = useRef<HTMLDivElement>(null);
   const press = useRef<Press | null>(null);
@@ -137,6 +139,7 @@ export default function GradientScrollRailPreview({
   useLayoutEffect(() => {
     const viewport = pane.current!;
     const view = viewport.ownerDocument.defaultView!;
+    initializePreview?.(viewport);
     const observer = new ResizeObserver(measure);
     observer.observe(viewport);
     observer.observe(article.current!);
@@ -151,7 +154,7 @@ export default function GradientScrollRailPreview({
       viewport.removeEventListener('wheel', takeOver);
       view.removeEventListener('blur', finishPress);
     };
-  }, [finishPress, measure, takeOver]);
+  }, [finishPress, initializePreview, measure, takeOver]);
 
   useLayoutEffect(() => () => {
     disposePress();

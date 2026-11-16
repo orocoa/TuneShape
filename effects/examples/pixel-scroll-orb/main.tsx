@@ -1,4 +1,6 @@
-import config from './config.json';
-import {mountDemo} from '../../demo/main';
+import preset from './config.json';
+// Keep the standalone page styles used by this example.
+import '../../demo/main';
+import {mountScrollingPreview} from '../../demo/scrolling-preview';
 
-mountDemo(config, 'pixel-scroll-orb', {onlineEditor: false});
+mountScrollingPreview(preset);

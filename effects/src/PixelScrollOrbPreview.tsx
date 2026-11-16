@@ -1,4 +1,4 @@
-import {useCallback, useId, useLayoutEffect, useRef, useState} from 'react';
+import {useCallback, useContext, useId, useLayoutEffect, useRef, useState} from 'react';
 import type {KeyboardEvent} from 'react';
 import {animate, motion, useMotionValue} from 'motion/react';
 import {motionEasing} from './easing';
@@ -7,6 +7,7 @@ import {
   orbDigits, orbFace, orbParticleFrame, orbParticleSpawn, orbParticles, orbScrollMetrics, orbSegments, orbSize,
   orbVisibilityMs,
 } from './pixel-scroll-orb';
+import {ScrollPreviewPane} from './scroll-preview-pane';
 import type {HistoryPreviewProps} from './preview-types';
 import {usePreviewClock} from './useDetailPlayback';
 import type {PlaybackControl} from './useDetailPlayback';
@@ -33,6 +34,7 @@ export default function PixelScrollOrbPreview({
   const zh = useLanguage() === 'zh';
   const digitId = useId();
   const pane = useRef<HTMLDivElement>(null);
+  const initializePreview = useContext(ScrollPreviewPane);
   const content = useRef<HTMLElement>(null);
   const button = useRef<HTMLButtonElement>(null);
   const particleGroup = useRef<SVGGElement>(null);
@@ -42,6 +44,7 @@ export default function PixelScrollOrbPreview({
   const available = enabled && interactive;
   const [{percent, visible}, setProgress] = useState({percent: 0, visible: false});
   const orbVisible = available && visible;
+  const initialReveal = useRef(false);
   const [painted, setPainted] = useState(false);
   const orbOpacity = useMotionValue(0);
   const [hovered, setHovered] = useState(false);
@@ -57,11 +60,14 @@ export default function PixelScrollOrbPreview({
 
   useLayoutEffect(() => {
     const viewport = pane.current!;
+    let firstMeasurement = initializePreview?.(viewport, stopScroll) ?? false;
     let frame: number | undefined;
     const measure = () => {
       frame = undefined;
       const metrics = orbScrollMetrics(viewport.scrollTop, viewport.scrollHeight, viewport.clientHeight);
       const show = available && metrics.visible;
+      if (firstMeasurement) initialReveal.current = show;
+      firstMeasurement = false;
       if (!show) {
         if (viewport.ownerDocument.activeElement === button.current) viewport.focus({preventScroll: true});
         setHovered(false);
@@ -80,11 +86,12 @@ export default function PixelScrollOrbPreview({
       viewport.removeEventListener('scroll', schedule);
       if (frame !== undefined) cancelAnimationFrame(frame);
     };
-  }, [available]);
+  }, [available, initializePreview, stopScroll]);
 
   useLayoutEffect(() => {
     const target = orbVisible ? 1 : 0;
-    if (reduced || !available || orbOpacity.get() === target) {
+    if ((initialReveal.current && orbVisible) || reduced || !available || orbOpacity.get() === target) {
+      if (orbVisible) initialReveal.current = false;
       orbOpacity.jump(target);
       setPainted(orbVisible);
       return;
