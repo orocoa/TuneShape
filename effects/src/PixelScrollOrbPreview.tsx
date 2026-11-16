@@ -1,10 +1,11 @@
 import {useCallback, useId, useLayoutEffect, useRef, useState} from 'react';
 import type {KeyboardEvent} from 'react';
-import {animate} from 'motion/react';
+import {animate, motion, useMotionValue} from 'motion/react';
 import {motionEasing} from './easing';
 import {useLanguage} from './i18n';
 import {
   orbDigits, orbFace, orbParticleFrame, orbParticleSpawn, orbParticles, orbScrollMetrics, orbSegments, orbSize,
+  orbVisibilityMs,
 } from './pixel-scroll-orb';
 import type {HistoryPreviewProps} from './preview-types';
 import {usePreviewClock} from './useDetailPlayback';
@@ -40,6 +41,9 @@ export default function PixelScrollOrbPreview({
   const particleControls = useRef<PlaybackControl[]>([]);
   const available = enabled && interactive;
   const [{percent, visible}, setProgress] = useState({percent: 0, visible: false});
+  const orbVisible = available && visible;
+  const [painted, setPainted] = useState(false);
+  const orbOpacity = useMotionValue(0);
   const [hovered, setHovered] = useState(false);
   const report = useRef(onRunningChange);
   report.current = onRunningChange;
@@ -77,6 +81,22 @@ export default function PixelScrollOrbPreview({
       if (frame !== undefined) cancelAnimationFrame(frame);
     };
   }, [available]);
+
+  useLayoutEffect(() => {
+    const target = orbVisible ? 1 : 0;
+    if (reduced || !available || orbOpacity.get() === target) {
+      orbOpacity.jump(target);
+      setPainted(orbVisible);
+      return;
+    }
+    if (orbVisible) setPainted(true);
+    const fade = animate(orbOpacity, target, {
+      duration: orbVisibilityMs[orbVisible ? 'enter' : 'exit'] / 1000,
+      ease: orbVisible ? 'easeOut' : 'easeIn',
+      onComplete: () => { if (!orbVisible) setPainted(false); },
+    });
+    return () => fade.stop();
+  }, [available, orbOpacity, orbVisible, reduced]);
 
   const moveScroll = useCallback((demo: boolean) => {
     const viewport = pane.current!;
@@ -179,8 +199,9 @@ export default function PixelScrollOrbPreview({
               ))}
             </article>
             <div className="pixel-scroll-overlay">
-              <button ref={button} type="button" className="pixel-scroll-orb" hidden={!visible} inert={!visible}
-                style={{transform: `translate(${config.offsetX}px, ${config.offsetY}px) scale(${config.scale})`}}
+              <motion.button ref={button} type="button" className="pixel-scroll-orb"
+                hidden={!orbVisible && (!painted || reduced || !available)} inert={!orbVisible} aria-hidden={!orbVisible}
+                style={{opacity: reduced ? Number(orbVisible) : orbOpacity, transform: `translate(${config.offsetX}px, ${config.offsetY}px) scale(${config.scale})`}}
                 aria-label={`${label} ${percent}%`} onClick={() => moveScroll(false)}
                 onPointerEnter={event => {
                   if (event.pointerType === 'mouse' && window.matchMedia(hoverQuery).matches) setHovered(true);
@@ -205,7 +226,7 @@ export default function PixelScrollOrbPreview({
                     {orbParticles.map(({x, y, size}, index) => <rect key={index} x={x} y={y} width={size} height={size}/>)}
                   </g>
                 </svg>
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>

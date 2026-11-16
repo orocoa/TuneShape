@@ -11,7 +11,7 @@ pnpm dev --open /examples/pixel-scroll-orb/
 
 Scroll inside the reading panel with the wheel, touch, or the keyboard. The orb appears when the panel can scroll more than 320 px and the reading position passes 72 px. Its 24 segments and pixel digits follow the actual position. On hover, seven pixel particles appear in succession, varying slightly in size and starting position each time.
 
-Click or tap the orb, or activate it with Enter or Space, to return the panel to the top. Focus moves back to the reading panel if the focused orb hides. With reduced motion, the return is instant and the particles stay hidden.
+Click or tap the orb, or activate it with Enter or Space, to return the panel to the top. The orb fades in and out as it crosses the visibility threshold. If the orb has focus when it starts fading out, focus returns to the reading panel immediately. With reduced motion, visibility and the return to top are instant, and the particles stay hidden.
 
 The preview toolbar plays a single scroll to 65% and back. Pause freezes scripted motion. Wheel, touch and scrolling keys interrupt the demonstration and keep the reading position under your control. Under reduced motion, Play jumps to the sample position.
 

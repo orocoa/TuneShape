@@ -1176,7 +1176,7 @@
       "id": "pixel-scroll-orb",
       "name": "Pixel Scroll Orb",
       "nameZh": "像素滚动球",
-      "category": "滚动交互",
+      "category": "滚动",
       "description": "A 56 px pixel orb tracks the reading panel and returns it to the top.",
       "descriptionZh": "56 像素球体跟随阅读区滚动，点按返回顶部。",
       "editor": "examples/pixel-scroll-orb/",

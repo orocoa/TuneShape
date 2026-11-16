@@ -91,6 +91,7 @@ test('Pixel Scroll Orb uses the real scroll pane, playback and teardown', {
       const orb = pane.querySelector('.pixel-scroll-orb');
       return {
         top: pane.scrollTop, max: pane.scrollHeight - pane.clientHeight, hidden: orb.hidden, inert: orb.inert,
+        opacity: Number(getComputedStyle(orb).opacity),
         label: orb.getAttribute('aria-label'), active: orb.querySelectorAll('.pixel-scroll-segment[data-active]').length,
         focused: document.activeElement === pane, outer: window.scrollY,
         paused: pane.closest('[data-recipe]').dataset.paused === 'true',
@@ -130,8 +131,22 @@ test('Pixel Scroll Orb uses the real scroll pane, playback and teardown', {
     }, 'measure at 72px');
     assert.equal((await read()).hidden, true);
     await scroll(73);
-    await until(async () => !(await read()).hidden, 'show at 73px');
-    assert.equal((await read()).inert, false);
+    await until(async () => {
+      const {hidden, inert, opacity} = await read();
+      return !hidden && !inert && opacity > 0 && opacity < 1;
+    }, 'fade in at 73px');
+    await until(async () => (await read()).opacity === 1, 'finish the fade-in');
+    await focus('.pixel-scroll-orb');
+    await scroll(72);
+    await until(async () => {
+      const {hidden, inert, opacity, focused} = await read();
+      return !hidden && inert && focused && opacity > 0 && opacity < 1;
+    }, 'fade out with input disabled and focus restored');
+    await scroll(73);
+    await until(async () => {
+      const {hidden, inert, opacity} = await read();
+      return !hidden && !inert && opacity === 1;
+    }, 'reverse an interrupted fade-out');
     await toolbar('Replay');
     await reachesTop();
 
@@ -205,7 +220,11 @@ test('Pixel Scroll Orb uses the real scroll pane, playback and teardown', {
     await toolbar('Play');
     const reduced = await read();
     assert.equal(reduced.top, Math.round(reduced.max * .65));
-    await until(async () => !(await read()).hidden, 'show reduced-motion progress');
+    const revealed = await until(async () => {
+      const state = await read();
+      return !state.hidden && state;
+    }, 'show reduced-motion progress');
+    assert.equal(revealed.opacity, 1);
     await hover();
     await sleep(200);
     assert.equal(await particlesVisible(), false);

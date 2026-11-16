@@ -1,5 +1,6 @@
 export const orbSize = 56;
 export const orbDurationMs = 400;
+export const orbVisibilityMs = {enter: 180, exit: 160};
 
 // Clockwise from twelve o'clock on the original 28 × 28 pixel grid.
 export const orbSegments = [

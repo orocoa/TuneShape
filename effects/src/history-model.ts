@@ -127,7 +127,7 @@ export const recipes:Recipe[]=[
  d('glass-folder','磨砂文件夹','卡片与布局','原创实现','src/glass-folder.ts',1,800,'glass-folder',[],L,glassFolderSourceNote),
  d('scroll-progress','阅读进度胶囊','导航与切换','原创实现','src/scroll-progress.ts',1,500,'scroll-progress',[],L,scrollProgressSourceNote),
  d('hook-sidebar','钩线侧栏','导航与切换','原创实现','src/hook-sidebar.ts',1,360,'hook-sidebar',[],L,hookSourceNote),
- d('pixel-scroll-orb','像素滚动球','滚动交互','本地示例','src/PixelScrollOrbPreview.tsx',1,orbDurationMs,'pixel-scroll-orb',[],L),
+ d('pixel-scroll-orb','像素滚动球','滚动','本地示例','src/PixelScrollOrbPreview.tsx',1,orbDurationMs,'pixel-scroll-orb',[],L),
  d('rail-toc','纸飞机目录','导航与切换','原创实现','src/rail-toc.ts',1,520,'rail-toc',[],L,railSourceNote),
  d('duration-picker','时长选择器','按钮与输入','原创实现','src/duration-picker.ts',1,450,'duration-picker',[],L,durationSourceNote),
  ...studioIds.map(id=>d(id,studioMeta[id].label,id==='app-orbit'?'图片与媒体':'文字效果','原创实现','src/'+(id==='app-orbit'?'app-orbit-engine':id==='gooey-wordmark'?'gooey-wordmark':'typography-engine')+'.ts',1,studioMeta[id].duration,id,[],E,studioMeta[id].note)),

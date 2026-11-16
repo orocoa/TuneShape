@@ -1,7 +1,7 @@
 import type {HistoryConfig} from './history-model';
 import type {Description} from './model';
 import {
-  orbDigits, orbMinimumTravel, orbParticleFade, orbParticles, orbRevealOffset, orbSegments, orbSize,
+  orbDigits, orbMinimumTravel, orbParticleFade, orbParticles, orbRevealOffset, orbSegments, orbSize, orbVisibilityMs,
 } from './pixel-scroll-orb';
 
 export function pixelScrollOrbDescription(config: HistoryConfig, language: 'zh' | 'en' = 'zh'): Description {
@@ -21,14 +21,14 @@ export function pixelScrollOrbDescription(config: HistoryConfig, language: 'zh' 
         ? `Return to top takes ${config.durationMs} ms. Play scrolls to 65% and back.`
         : `返回顶部用时 ${config.durationMs} ms。播放会滚动到 65% 后返回。`},
       {label: en ? 'Entry and exit' : '进入与退出', text: en
-        ? 'The orb immediately hides at or below the reveal threshold. Focus returns to the reading pane when a focused orb hides.'
-        : '回到显示阈值或以下时立即隐藏。隐藏前若球体有焦点，焦点会回到阅读区。'},
+        ? `The orb fades in over ${orbVisibilityMs.enter} ms and out over ${orbVisibilityMs.exit} ms. When it starts fading out, the orb stops accepting input and returns any focus to the reading pane.`
+        : `球体用 ${orbVisibilityMs.enter} 毫秒淡入、${orbVisibilityMs.exit} 毫秒淡出。开始淡出时即停止接收输入，球体上的焦点会回到阅读区。`},
       {label: en ? 'Repeat and interruption' : '重复操作与打断', text: en
         ? 'Direct input interrupts scripted scrolling. Hover staggers seven particles. Each cycle varies its start position and square size, then drifts outward as it fades. Leaving stops the particles.'
         : '直接操作可中断程序滚动。悬停时七颗粒子错峰出现，每轮微调起点和像素尺寸，向外轻漂并渐隐。移开后停止。'},
       {label: en ? 'Reduced motion' : '减少动态效果', text: en
-        ? 'Progress follows manual scroll. Return to top is instant, and hover particles stay hidden.'
-        : '进度仍跟随手动滚动，返回顶部即时完成，悬停粒子保持隐藏。'},
+        ? 'Progress follows manual scroll. Visibility and return to top are instant, and hover particles stay hidden.'
+        : '进度仍跟随手动滚动，显隐和返回顶部即时完成，悬停粒子保持隐藏。'},
       {label: en ? 'Implementation' : '来源', text: 'src/PixelScrollOrbPreview.tsx'},
     ],
   };
@@ -42,7 +42,7 @@ export function pixelScrollOrbMotion(config: HistoryConfig) {
     reverse: [],
     policies: {
       repeat: 0,
-      reduceMotion: 'Keep native progress. Jump to top instantly and suppress hover particles.',
+      reduceMotion: 'Keep native progress. Update visibility and return to the top instantly, and suppress hover particles.',
       observationSpeed: 'Runtime only, applied to the Motion scroll and particle clocks.',
     },
     adapters: {
@@ -55,6 +55,7 @@ export function pixelScrollOrbMotion(config: HistoryConfig) {
         particleFade: orbParticleFade,
         minimumTravelExclusive: orbMinimumTravel,
         revealOffsetExclusive: orbRevealOffset,
+        visibilityFadeMs: orbVisibilityMs,
         returnToTop: {durationMs: config.durationMs, easing: config.easing},
         demo: {fraction: .65, delayMs: config.delayMs},
         usage: 'Render a local scroll pane and overlay the button. Measure the pane on scroll and resize. Use rounded scroll percent for the digits and round(percent * 24 / 100) for the ring. Keep focus in the pane when its button hides. Animate scrollTop and hover particles with Motion. At each particle cycle start, sample a square size of 2, 3, or 4 px, with smaller squares more common. Offset the anchor center by 2–4 px along the tangent in either direction and 0–2 px outward. Keep that size and origin throughout the rise. Apply quadratic ease-out to the rise and 2–3 px of sideways drift. Manual scroll position, focus, and hover are transient.',

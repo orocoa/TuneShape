@@ -26,7 +26,9 @@ test('pixel scroll orb default preset, Scrolling catalog and motion specificatio
  assert.throws(()=>validateHistory({...config,loop:true}),/不支持循环/);
  assert.throws(()=>validateHistory({...config,scrollTop:100}));
  assert.deepEqual(catalogIds('scrolling'),[config.recipeId]);
+ assert.deepEqual(catalogIds('滚动'),[config.recipeId]);
  assert.deepEqual(catalogIds('滚动交互'),[config.recipeId]);
+ assert.equal(catalogParent('滚动交互')?.label,'滚动');
  assert.equal(catalogParent('scrolling')?.featured,config.recipeId);
  assert.equal(historyDescription(config).title,'像素滚动球');
  assert.equal(pixelScrollOrbDescription(config,'en').title,'Pixel Scroll Orb');
