@@ -9,6 +9,9 @@ import {monochromeOrbMotion} from './monochrome-scroll-orb-spec';
 import {gaugeKeyProgress,gaugeTrackPosition} from './vertical-scroll-gauge';
 import {verticalGaugeDescription,verticalGaugeMotion} from './vertical-scroll-gauge-spec';
 import verticalGaugeConfig from '../examples/vertical-scroll-gauge/config.json';
+import {clampConicProgress,conicOrbReading,conicOrbStepTop} from './conic-scroll-orb';
+import {conicOrbDescription,conicOrbMotion} from './conic-scroll-orb-spec';
+import conicOrbConfig from '../examples/conic-scroll-orb/config.json';
 import orbConfig from '../examples/pixel-scroll-orb/config.json';
 import monochromeOrbConfig from '../examples/monochrome-scroll-orb/config.json';
 import publicCatalog from '../catalog.json';
@@ -31,7 +34,7 @@ test('pixel scroll orb default preset, Scrolling catalog and motion specificatio
  assert.deepEqual(parseHistory(JSON.stringify(orbConfig)),config);
  assert.throws(()=>validateHistory({...config,loop:true}),/不支持循环/);
  assert.throws(()=>validateHistory({...config,scrollTop:100}));
- assert.deepEqual(catalogIds('scrolling'),[config.recipeId,'monochrome-scroll-orb','vertical-scroll-gauge']);
+ assert.deepEqual(catalogIds('scrolling'),[config.recipeId,'monochrome-scroll-orb','vertical-scroll-gauge','conic-scroll-orb']);
  assert.deepEqual(catalogIds('滚动'),catalogIds('scrolling'));
  assert.deepEqual(catalogIds('滚动交互'),catalogIds('scrolling'));
  assert.equal(catalogParent('滚动交互')?.label,'滚动');
@@ -124,6 +127,43 @@ test('vertical gauge saves only direction and exports its spring and geometry',(
  assert.equal(gauge.geometry.trackWidthPx,6);
 });
 
+test('conic orb measures actual reading progress and uses strict visibility thresholds',()=>{
+ assert.deepEqual(conicOrbReading(0,180,200),{distance:0,percent:0,visible:false});
+ assert.equal(conicOrbReading(200,520,200).visible,false);
+ assert.equal(conicOrbReading(72,521,200).visible,false);
+ assert.equal(conicOrbReading(73,521,200).visible,true);
+ assert.equal(conicOrbReading(250,700,200).percent,50);
+ assert.equal(conicOrbReading(-10,700,200).percent,0);
+ assert.equal(conicOrbReading(510,700,200).percent,100);
+ assert.equal(clampConicProgress(-.01),0);
+ assert.equal(clampConicProgress(100.01),100);
+});
+
+test('conic orb takes quarter steps from the current position within the reading pane',()=>{
+ assert.equal(conicOrbStepTop(500,500),375);
+ assert.equal(conicOrbStepTop(300,500),175);
+ assert.equal(conicOrbStepTop(240,500),115);
+ assert.equal(conicOrbStepTop(73,500),0);
+ assert.equal(conicOrbStepTop(0,0),0);
+});
+
+test('conic orb uses the standard preset and exports its fixed spring, geometry and step',()=>{
+ const config=defaultHistory('conic-scroll-orb');
+ assert.deepEqual(parseHistory(JSON.stringify(conicOrbConfig)),config);
+ assert.deepEqual(parseHistory(serializeHistory(config)),config);
+ assert.throws(()=>validateHistory({...config,loop:true}),/不支持循环/);
+ assert.throws(()=>validateHistory({...config,theme:'dark'}));
+ assert.equal(historyDescription(config).title,'环形渐变滚动球');
+ assert.equal(conicOrbDescription('en').title,'Conic Scroll Orb');
+ const exported=Function(serializeHistoryMotion(config).replace('export default','return'))();
+ assert.deepEqual(exported,conicOrbMotion(config));
+ const orb=exported.adapters.conicScrollOrb;
+ assert.deepEqual(orb.spring,{stiffness:210,damping:25,mass:.85});
+ assert.deepEqual(orb.geometry,{size:46,coreInset:4,startAngle:220});
+ assert.deepEqual(orb.visibility,{minimumTravel:320,revealOffset:72,durationMs:180,opacity:.78,hoverOpacity:.93});
+ assert.equal(orb.stepBackFraction,.25);
+});
+
 test('orb hover particles vary between launches and enter, slow, and fade within each cycle',()=>{
  const anchor=orbParticles[0];
  const spawns=[.1,.65,.95].map(value=>orbParticleSpawn(anchor,()=>value));
@@ -136,7 +176,7 @@ test('orb hover particles vary between launches and enter, slow, and fade within
  assert.ok(orbParticleFrame(anchor,.6).opacity<orbParticleFrame(anchor,.2).opacity);
  assert.deepEqual(orbParticleFrame(anchor,1),{travel:1,opacity:0});
 });
-for(const recipe of recipes)test(recipe.label+'：完整轨道、时序和描述可往返还原',()=>{const config=defaultHistory(recipe.id);config.durationMs=1800;config.delayMs=['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id)?0:90;config.offsetX=-15;config.offsetY=12;config.scale=.93;if(!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id))config.easing=[.3,-.2,.7,1.2];config.loop=!recipe.id.startsWith('skiper-')&&!recipe.id.startsWith('bencho-')&&!recipe.id.startsWith('reelfolio-')&&!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','infinite-photo-wall','mirrored-card-stack','page-turn-cards','chapter-progress-nav','liquid-glass-logo','chromatic-button','topographic-flow','gooey-wordmark','liquid-carousel','coffee-selector','hover-invert','glass-radio','hover-preview','duration-picker','rail-toc','hook-sidebar','scroll-progress','pixel-scroll-orb','monochrome-scroll-orb','vertical-scroll-gauge','glass-folder','rounded-checks','expandable-sidebar','encrypted-text','gooey-input','app-orbit','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy'].includes(recipe.id);const restored=parseHistory(serializeHistory(config));assert.deepEqual(restored,config);assert.deepEqual(compiledTracks(restored),compiledTracks(config));assert.deepEqual(compiledTracks(restored,true),compiledTracks(config,true));assert.deepEqual(historyDescription(restored),historyDescription(config));assert.deepEqual(historyMotion(restored),historyMotion(config));assert.notEqual(restored.tracks,config.tracks);});
+for(const recipe of recipes)test(recipe.label+'：完整轨道、时序和描述可往返还原',()=>{const config=defaultHistory(recipe.id);config.durationMs=1800;config.delayMs=['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id)?0:90;config.offsetX=-15;config.offsetY=12;config.scale=.93;if(!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id))config.easing=[.3,-.2,.7,1.2];config.loop=!recipe.id.startsWith('skiper-')&&!recipe.id.startsWith('bencho-')&&!recipe.id.startsWith('reelfolio-')&&!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','infinite-photo-wall','mirrored-card-stack','page-turn-cards','chapter-progress-nav','liquid-glass-logo','chromatic-button','topographic-flow','gooey-wordmark','liquid-carousel','coffee-selector','hover-invert','glass-radio','hover-preview','duration-picker','rail-toc','hook-sidebar','scroll-progress','pixel-scroll-orb','monochrome-scroll-orb','vertical-scroll-gauge','conic-scroll-orb','glass-folder','rounded-checks','expandable-sidebar','encrypted-text','gooey-input','app-orbit','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy'].includes(recipe.id);const restored=parseHistory(serializeHistory(config));assert.deepEqual(restored,config);assert.deepEqual(compiledTracks(restored),compiledTracks(config));assert.deepEqual(compiledTracks(restored,true),compiledTracks(config,true));assert.deepEqual(historyDescription(restored),historyDescription(config));assert.deepEqual(historyMotion(restored),historyMotion(config));assert.notEqual(restored.tracks,config.tracks);});
 test('所有预设进入退出阶段时序有效；文字揭示淡出，其余反向轨道保留关键帧关系',()=>{
  for(const recipe of recipes){
   const config=defaultHistory(recipe.id),forward=compiledTracks(config),exit=compiledTracks(config,true);

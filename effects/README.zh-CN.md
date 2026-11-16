@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文**
 
-包含 76 个可独立运行的动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
+包含 77 个可独立运行的动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
 
 [在线编辑器](https://tuneshape.kai-nex.com/)
 
@@ -94,6 +94,7 @@ pnpm build
 | pixel-scroll-orb | [Pixel Scroll Orb](examples/pixel-scroll-orb/README.md) | [像素滚动球](examples/pixel-scroll-orb/README.zh-CN.md) |
 | monochrome-scroll-orb | [Monochrome Scroll Orb](examples/monochrome-scroll-orb/README.md) | [单色滚动球](examples/monochrome-scroll-orb/README.zh-CN.md) |
 | vertical-scroll-gauge | [Vertical Scroll Gauge](examples/vertical-scroll-gauge/README.md) | [竖向滚动刻度](examples/vertical-scroll-gauge/README.zh-CN.md) |
+| conic-scroll-orb | [Conic Scroll Orb](examples/conic-scroll-orb/README.md) | [环形渐变滚动球](examples/conic-scroll-orb/README.zh-CN.md) |
 
 ## 许可与范围
 

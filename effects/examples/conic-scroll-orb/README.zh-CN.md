@@ -1,0 +1,11 @@
+# 环形渐变滚动球
+
+[English](README.md) · **简体中文** · [全部示例](../../README.zh-CN.md)
+
+在 `effects/` 目录运行 `pnpm dev --open /examples/conic-scroll-orb/`。
+
+在阅读区内滚动。可滚动距离超过 320 像素时，滚过 72 像素后球体淡入，回到距顶部 72 像素以内时淡出。灰阶圆环和百分比由同一个弹簧驱动。点击球体，或聚焦后按 Enter、空格，以当前位置为起点回退总可滚动距离的 25%。滚轮、触屏和键盘滚动均可打断回退。
+
+播放演示先滚到 65%，再回退到 40%。暂停保持演示位置和进度，重播从顶部开始。启用减少动态效果时，播放直接跳到 65%，回退、进度和显隐均即时更新。
+
+使用 `parseHistory` 解析[默认配置](config.json)，通过 [HistoryPreview](../../src/HistoryPreview.tsx) 传入配置、播放状态和减少动态效果选项。默认配置使用通用的播放字段。`serializeHistoryMotion` 可导出[实现规格](../../src/conic-scroll-orb-spec.ts)。

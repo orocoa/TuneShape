@@ -45,7 +45,7 @@ Export JSON before refreshing or leaving the page: effect parameters are kept fo
 
 Source update: [v1.2.0 release notes](docs/releases/v1.2.0.md) — 21 additional runnable examples, 73 matching configurations and bilingual guides, and native-interaction and eye-tracker demo fixes.
 
-**This repository includes rendering source for 76 effects.** Each includes a default configuration, runnable page, and English/Chinese documentation. [Run the examples](effects/README.md) · [Machine-readable catalog](effects/catalog.json) · [Effect guides](https://tuneshape.kai-nex.com/en/effects/)
+**This repository includes rendering source for 77 effects.** Each includes a default configuration, runnable page, and English/Chinese documentation. [Run the examples](effects/README.md) · [Machine-readable catalog](effects/catalog.json) · [Effect guides](https://tuneshape.kai-nex.com/en/effects/)
 
 ```sh
 git clone https://github.com/orocoa/TuneShape.git
@@ -132,6 +132,7 @@ pnpm dev
 | pixel-scroll-orb | [Pixel Scroll Orb](effects/examples/pixel-scroll-orb/README.md) | [像素滚动球](effects/examples/pixel-scroll-orb/README.zh-CN.md) |
 | monochrome-scroll-orb | [Monochrome Scroll Orb](effects/examples/monochrome-scroll-orb/README.md) | [单色滚动球](effects/examples/monochrome-scroll-orb/README.zh-CN.md) |
 | vertical-scroll-gauge | [Vertical Scroll Gauge](effects/examples/vertical-scroll-gauge/README.md) | [竖向滚动刻度](effects/examples/vertical-scroll-gauge/README.zh-CN.md) |
+| conic-scroll-orb | [Conic Scroll Orb](effects/examples/conic-scroll-orb/README.md) | [环形渐变滚动球](effects/examples/conic-scroll-orb/README.zh-CN.md) |
 
 Public examples use original generic avatar, product and brand artwork, an original sound cue and an original video. The online editor retains its existing media.
 

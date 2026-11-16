@@ -47,6 +47,7 @@ export const effectTerms:Record<string,EffectTerm>={
  'pixel-scroll-orb':{label:'像素滚动球',english:'Pixel Scroll Orb',aliases:['滚动进度','返回顶部','像素进度','scroll progress','back to top','pixel digits']},
  'monochrome-scroll-orb':{label:'单色滚动球',english:'Monochrome Scroll Orb',aliases:['黑白滚动球','滚动进度','返回顶部','scroll progress','spring','back to top']},
  'vertical-scroll-gauge':{label:'竖向滚动刻度',english:'Vertical Scroll Gauge',aliases:['竖向进度条','阅读进度','滚动进度','scroll progress','scroll slider']},
+ 'conic-scroll-orb':{label:'环形渐变滚动球',english:'Conic Scroll Orb',aliases:['环形进度','滚动进度','回退四分之一','conic gradient','scroll progress']},
  'waving-card':{label:'倾斜挥手卡片',english:'Waving Tilt Card',aliases:['个人介绍卡片','挥手卡片','orocoa','MuhammadHasann','hot-liger-0','tilt card','waving card','Uiverse']},
  'depth-ribbon':{label:'纵深图带',english:'Depth Ribbon',aliases:['三维图带','图片绳结','图片丝带','3D gallery','depth ribbon','React Bits']},
  'passage-gallery':{label:'穿行图库',english:'Passage Gallery',aliases:['隧道图库','图片隧道','穿行画廊','3D画廊','photo tunnel','passage gallery','React Bits']},
