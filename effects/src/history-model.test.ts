@@ -12,6 +12,9 @@ import verticalGaugeConfig from '../examples/vertical-scroll-gauge/config.json';
 import {clampConicProgress,conicOrbReading,conicOrbStepTop} from './conic-scroll-orb';
 import {conicOrbDescription,conicOrbMotion} from './conic-scroll-orb-spec';
 import conicOrbConfig from '../examples/conic-scroll-orb/config.json';
+import {gradientRailCenter,gradientRailDrag,gradientRailGeometry,gradientRailGray,gradientRailKey,gradientRailPressIntent,gradientRailProgress,gradientRailSeek,gradientRailWidth} from './gradient-scroll-rail';
+import {gradientRailDescription,gradientRailMotion} from './gradient-scroll-rail-spec';
+import gradientRailConfig from '../examples/gradient-scroll-rail/config.json';
 import orbConfig from '../examples/pixel-scroll-orb/config.json';
 import monochromeOrbConfig from '../examples/monochrome-scroll-orb/config.json';
 import publicCatalog from '../catalog.json';
@@ -34,7 +37,7 @@ test('pixel scroll orb default preset, Scrolling catalog and motion specificatio
  assert.deepEqual(parseHistory(JSON.stringify(orbConfig)),config);
  assert.throws(()=>validateHistory({...config,loop:true}),/不支持循环/);
  assert.throws(()=>validateHistory({...config,scrollTop:100}));
- assert.deepEqual(catalogIds('scrolling'),[config.recipeId,'monochrome-scroll-orb','vertical-scroll-gauge','conic-scroll-orb']);
+ assert.deepEqual(catalogIds('scrolling'),[config.recipeId,'monochrome-scroll-orb','vertical-scroll-gauge','conic-scroll-orb','gradient-scroll-rail']);
  assert.deepEqual(catalogIds('滚动'),catalogIds('scrolling'));
  assert.deepEqual(catalogIds('滚动交互'),catalogIds('scrolling'));
  assert.equal(catalogParent('滚动交互')?.label,'滚动');
@@ -164,6 +167,83 @@ test('conic orb uses the standard preset and exports its fixed spring, geometry 
  assert.equal(orb.stepBackFraction,.25);
 });
 
+test('gradient rail uses the specified continuous Gaussian shape, spacing and limits',()=>{
+ assert.deepEqual(gradientRailGeometry,{count:32,barHeight:3,gap:3,pitch:6,height:189,restWidth:8,maxWidth:36,sigma:2.5});
+ assert.equal(gradientRailCenter(1.5),0);
+ assert.equal(gradientRailCenter(94.5),15.5);
+ assert.equal(gradientRailCenter(187.5),31);
+ assert.equal(gradientRailWidth(15,15,0),8);
+ assert.equal(gradientRailWidth(15,15,1),36);
+ assert.equal(gradientRailWidth(15,15,.5),22);
+ assert.equal(gradientRailWidth(15,15.5,1),gradientRailWidth(16,15.5,1));
+ assert.ok(gradientRailWidth(15,15.5,1)<36);
+ assert.ok(gradientRailWidth(21,15.5,1)<gradientRailWidth(20,15.5,1));
+ assert.equal(gradientRailWidth(2,0,1),gradientRailWidth(29,31,1));
+});
+
+test('gradient rail starts empty, mirrors fill direction and darkens filled bars as reading advances',()=>{
+ assert.equal(gradientRailProgress(0,0),0);
+ assert.equal(gradientRailProgress(-12,500),0);
+ assert.equal(gradientRailProgress(600,500),1);
+ for(let i=0;i<32;i++){
+  assert.equal(gradientRailGray(i,0,'top-to-bottom'),250);
+  assert.equal(gradientRailGray(i,0,'bottom-to-top'),250);
+  assert.equal(gradientRailGray(i,.42,'top-to-bottom'),gradientRailGray(31-i,.42,'bottom-to-top'));
+ }
+ const forward='top-to-bottom';
+ assert.ok(gradientRailGray(0,1,forward)>gradientRailGray(31,1,forward));
+ assert.ok(gradientRailGray(0,.2,forward)>gradientRailGray(0,.5,forward));
+ assert.ok(gradientRailGray(0,.5,forward)>gradientRailGray(0,.8,forward));
+ assert.ok(gradientRailGray(10,.75,forward)>gradientRailGray(20,.75,forward));
+ assert.equal(gradientRailGray(16,.5,forward),240);
+ const partial=gradientRailGray(16,16.5/32,forward);
+ assert.ok(partial<240&&partial>gradientRailGray(16,17/32,forward));
+});
+
+test('gradient rail starts vertical drags beyond the click tolerance and maps relative travel in both directions',()=>{
+ assert.equal(gradientRailPressIntent(3.6,4.8),'pending');
+ assert.equal(gradientRailPressIntent(0,6),'pending');
+ assert.equal(gradientRailPressIntent(0,-7),'drag');
+ assert.equal(gradientRailPressIntent(5,5),'drag');
+ assert.equal(gradientRailPressIntent(7,1),'cancel');
+ for(const direction of ['top-to-bottom','bottom-to-top'] as const){
+  assert.equal(gradientRailDrag(.5,0,direction),.5);
+  assert.equal(gradientRailDrag(.5,47.25,direction),direction==='top-to-bottom'?.75:.25);
+  assert.equal(gradientRailDrag(.5,189,direction),direction==='top-to-bottom'?1:0);
+ }
+ assert.equal(gradientRailKey('ArrowDown',.5),.525);
+ assert.equal(gradientRailKey('PageUp',.5),.4);
+ assert.equal(gradientRailKey('Home',.5),0);
+ assert.equal(gradientRailKey('End',.5),1);
+ assert.equal(gradientRailKey('Tab',.5),undefined);
+});
+
+test('gradient rail clicks map to the visible track in either direction and clamp extra hit padding',()=>{
+ for(const [position,forward,reverse] of [[-.1,0,1],[0,0,1],[.25,.25,.75],[1,1,0],[1.1,1,0]]){
+  assert.equal(gradientRailSeek(position,'top-to-bottom'),forward);
+  assert.equal(gradientRailSeek(position,'bottom-to-top'),reverse);
+ }
+});
+
+test('gradient rail round trips its single setting and exports its press and spring profile',()=>{
+ const config=defaultHistory('gradient-scroll-rail');
+ assert.deepEqual(parseHistory(JSON.stringify(gradientRailConfig)),config);
+ const reverse={...config,gradientScrollRail:{direction:'bottom-to-top' as const}};
+ assert.deepEqual(parseHistory(serializeHistory(reverse)),reverse);
+ assert.throws(()=>validateHistory({...config,gradientScrollRail:{direction:'left-to-right'}}),/方向无效/);
+ assert.throws(()=>validateHistory({...config,gradientScrollRail:{direction:'top-to-bottom',theme:'dark'}}));
+ const {gradientScrollRail,...withoutDirection}=config;
+ assert.throws(()=>validateHistory(withoutDirection),/须有方向设置/);
+ assert.throws(()=>validateHistory({...config,loop:true}),/不支持循环/);
+ assert.throws(()=>validateHistory({...defaultHistory('vertical-scroll-gauge'),gradientScrollRail}));
+ assert.equal(historyDescription(config).title,'渐变滚动轨');
+ assert.equal(gradientRailDescription(reverse,'en').title,'Gradient Scroll Rail');
+ const exported=Function(serializeHistoryMotion(reverse).replace('export default','return'))();
+ assert.deepEqual(exported,gradientRailMotion(reverse));
+ assert.deepEqual(exported.adapters.gradientScrollRail.press,{delayMs:240,tolerance:6});
+ assert.deepEqual(exported.adapters.gradientScrollRail.spring,{stiffness:280,damping:30,mass:.65});
+});
+
 test('orb hover particles vary between launches and enter, slow, and fade within each cycle',()=>{
  const anchor=orbParticles[0];
  const spawns=[.1,.65,.95].map(value=>orbParticleSpawn(anchor,()=>value));
@@ -176,7 +256,7 @@ test('orb hover particles vary between launches and enter, slow, and fade within
  assert.ok(orbParticleFrame(anchor,.6).opacity<orbParticleFrame(anchor,.2).opacity);
  assert.deepEqual(orbParticleFrame(anchor,1),{travel:1,opacity:0});
 });
-for(const recipe of recipes)test(recipe.label+'：完整轨道、时序和描述可往返还原',()=>{const config=defaultHistory(recipe.id);config.durationMs=1800;config.delayMs=['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id)?0:90;config.offsetX=-15;config.offsetY=12;config.scale=.93;if(!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id))config.easing=[.3,-.2,.7,1.2];config.loop=!recipe.id.startsWith('skiper-')&&!recipe.id.startsWith('bencho-')&&!recipe.id.startsWith('reelfolio-')&&!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','infinite-photo-wall','mirrored-card-stack','page-turn-cards','chapter-progress-nav','liquid-glass-logo','chromatic-button','topographic-flow','gooey-wordmark','liquid-carousel','coffee-selector','hover-invert','glass-radio','hover-preview','duration-picker','rail-toc','hook-sidebar','scroll-progress','pixel-scroll-orb','monochrome-scroll-orb','vertical-scroll-gauge','conic-scroll-orb','glass-folder','rounded-checks','expandable-sidebar','encrypted-text','gooey-input','app-orbit','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy'].includes(recipe.id);const restored=parseHistory(serializeHistory(config));assert.deepEqual(restored,config);assert.deepEqual(compiledTracks(restored),compiledTracks(config));assert.deepEqual(compiledTracks(restored,true),compiledTracks(config,true));assert.deepEqual(historyDescription(restored),historyDescription(config));assert.deepEqual(historyMotion(restored),historyMotion(config));assert.notEqual(restored.tracks,config.tracks);});
+for(const recipe of recipes)test(recipe.label+'：完整轨道、时序和描述可往返还原',()=>{const config=defaultHistory(recipe.id);config.durationMs=1800;config.delayMs=['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id)?0:90;config.offsetX=-15;config.offsetY=12;config.scale=.93;if(!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id))config.easing=[.3,-.2,.7,1.2];config.loop=!recipe.id.startsWith('skiper-')&&!recipe.id.startsWith('bencho-')&&!recipe.id.startsWith('reelfolio-')&&!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','infinite-photo-wall','mirrored-card-stack','page-turn-cards','chapter-progress-nav','liquid-glass-logo','chromatic-button','topographic-flow','gooey-wordmark','liquid-carousel','coffee-selector','hover-invert','glass-radio','hover-preview','duration-picker','rail-toc','hook-sidebar','scroll-progress','pixel-scroll-orb','monochrome-scroll-orb','vertical-scroll-gauge','conic-scroll-orb','gradient-scroll-rail','glass-folder','rounded-checks','expandable-sidebar','encrypted-text','gooey-input','app-orbit','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy'].includes(recipe.id);const restored=parseHistory(serializeHistory(config));assert.deepEqual(restored,config);assert.deepEqual(compiledTracks(restored),compiledTracks(config));assert.deepEqual(compiledTracks(restored,true),compiledTracks(config,true));assert.deepEqual(historyDescription(restored),historyDescription(config));assert.deepEqual(historyMotion(restored),historyMotion(config));assert.notEqual(restored.tracks,config.tracks);});
 test('所有预设进入退出阶段时序有效；文字揭示淡出，其余反向轨道保留关键帧关系',()=>{
  for(const recipe of recipes){
   const config=defaultHistory(recipe.id),forward=compiledTracks(config),exit=compiledTracks(config,true);
