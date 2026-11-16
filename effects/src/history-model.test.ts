@@ -1,10 +1,11 @@
 import {glyphPlaybackMs,defaultGlyphWall} from './glyph-wall';
 import {test} from 'node:test';import assert from 'node:assert/strict';
 import {recipes,defaultHistory,validateHistory,parseHistory,serializeHistory,compiledTracks,historyDescription,historyMotion,serializeHistoryMotion} from './history-model.ts';
-import {catalogIds} from './browse-catalog';
+import {catalog,catalogIds,catalogParent} from './browse-catalog';
 import {orbFace,orbParticleFrame,orbParticleSpawn,orbParticles,orbScrollMetrics} from './pixel-scroll-orb';
 import {pixelScrollOrbDescription,pixelScrollOrbMotion} from './pixel-scroll-orb-spec';
 import orbConfig from '../examples/pixel-scroll-orb/config.json';
+import publicCatalog from '../catalog.json';
 
 test('pixel scroll orb keeps the original visibility, rounding and digit alignment',()=>{
  assert.equal(orbScrollMetrics(90,520,200).visible,false);
@@ -24,15 +25,25 @@ test('pixel scroll orb default preset, Scrolling catalog and motion specificatio
  assert.deepEqual(parseHistory(JSON.stringify(orbConfig)),config);
  assert.throws(()=>validateHistory({...config,loop:true}),/不支持循环/);
  assert.throws(()=>validateHistory({...config,scrollTop:100}));
- assert.ok(catalogIds('scrolling').includes(config.recipeId));
+ assert.deepEqual(catalogIds('scrolling'),[config.recipeId]);
+ assert.deepEqual(catalogIds('滚动交互'),[config.recipeId]);
+ assert.equal(catalogParent('scrolling')?.featured,config.recipeId);
  assert.equal(historyDescription(config).title,'像素滚动球');
  assert.equal(pixelScrollOrbDescription(config,'en').title,'Pixel Scroll Orb');
  assert.deepEqual(historyMotion(config),pixelScrollOrbMotion(config));
+ const exportedMotion=Function(serializeHistoryMotion(config).replace('export default','return'))();
+ assert.deepEqual(exportedMotion,pixelScrollOrbMotion(config));
  const adapter=pixelScrollOrbMotion(config).adapters.pixelScrollOrb;
  assert.equal(adapter.size,56);
  assert.equal(adapter.segments.length,24);
  assert.equal(adapter.particles.length,7);
  assert.equal(adapter.returnToTop.durationMs,config.durationMs);
+});
+
+test('all public effects have exactly their indexed browse category',()=>{
+ const browseEntries=catalog.flatMap(category=>category.ids.map(id=>[id,category.label].join(':')));
+ const indexEntries=publicCatalog.effects.map(effect=>[effect.id,effect.category].join(':'));
+ assert.deepEqual(browseEntries.sort(),indexEntries.sort());
 });
 
 test('orb hover particles vary between launches and enter, slow, and fade within each cycle',()=>{
