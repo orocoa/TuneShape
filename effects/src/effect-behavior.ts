@@ -51,6 +51,7 @@ export function interactionSelector(id:string){
  if(id==='scroll-progress')return '.reading-progress-stage';
  if(id==='pixel-scroll-orb')return '.pixel-scroll-stage';
  if(id==='monochrome-scroll-orb')return '.monochrome-orb-stage';
+ if(id==='vertical-scroll-gauge')return '.vertical-gauge-stage';
  if(id==='hook-sidebar')return '.hook-sidebar-nav';
  if(id==='infinite-photo-wall')return '.ipw-root';
  if(id==='mirrored-card-stack')return '.mirrored-card-stack';
@@ -120,6 +121,7 @@ export function triggerDescription(id:string){
  if(id==='scroll-progress')return '滚动阅读区同步圆环与当前章节，鼠标悬停胶囊自动展开目录，移出胶囊和菜单区域自动收合，点击章节定位并收合；触屏点按胶囊展开，点击外部或 Escape 关闭。';
  if(id==='pixel-scroll-orb')return '在卡片内滚动阅读区以显示像素球；点击球体或按 Enter / 空格返回阅读区顶部。';
  if(id==='monochrome-scroll-orb')return '在阅读区滚动以显示进度，点按球体或按 Enter / 空格返回阅读区顶部。';
+ if(id==='vertical-scroll-gauge')return '在阅读区滚动、沿刻度拖动，或聚焦刻度后按方向键。';
  if(id==='hook-sidebar')return '点击菜单项确认选择，悬停或键盘聚焦另一项显示灰色钩线；方向键与 Home / End 移动焦点，Enter / 空格确认。';
  if(id==='infinite-photo-wall')return '滚轮或双轴拖动探索；方向键移动，Enter 打开中央图片，Escape 归位。目录每次进入演示一次短平移，不自动重播。';
  if(id==='mirrored-card-stack')return '左右拖动、短甩、方向键、箭头及分页点切换；两侧均抽出当前顶卡，中途按住可接住并反向继续。';

@@ -34,6 +34,7 @@ import GlassFolderPreview from './GlassFolderPreview';
 import ScrollProgressPreview from './ScrollProgressPreview';
 import PixelScrollOrbPreview from './PixelScrollOrbPreview';
 import MonochromeScrollOrbPreview from './MonochromeScrollOrbPreview';
+import VerticalScrollGaugePreview from './VerticalScrollGaugePreview';
 import WavingCardPreview from './WavingCardPreview';
 import DepthRibbonPreview from './DepthRibbonPreview';
 import PassageGalleryPreview from './PassageGalleryPreview';
@@ -120,6 +121,7 @@ export default function HistoryPreview(props:HistoryPreviewProps){
  useLanguage();
  if(props.config.recipeId==='pixel-scroll-orb')return <PixelScrollOrbPreview {...props}/>;
  if(props.config.recipeId==='monochrome-scroll-orb')return <MonochromeScrollOrbPreview {...props}/>;
+ if(props.config.recipeId==='vertical-scroll-gauge')return <VerticalScrollGaugePreview {...props}/>;
  if(isReelfolioEffect(props.config.recipeId))return <ReelfolioPreview {...props}/>;
  if(isBenchoUiEffect(props.config.recipeId))return <BenchoUiPreview {...props}/>;
  if(isBenchoEffect(props.config.recipeId))return <BenchoPreview {...props}/>;

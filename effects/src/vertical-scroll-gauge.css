@@ -1,0 +1,132 @@
+.history-canvas.vertical-gauge-canvas {
+  position: relative;
+  min-height: 0;
+  cursor: default;
+}
+
+.vertical-gauge-stage {
+  --gauge-ink: #cfdbf0;
+  --gauge-fill: #aebbd4;
+  --gauge-type: Oxanium, Bahnschrift, "Segoe UI", sans-serif;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  background-color: #11151a;
+  background-image: linear-gradient(to right, #1a2026 1px, transparent 1px),
+    linear-gradient(to bottom, #1a2026 1px, transparent 1px);
+  background-position: 9px 7px;
+  background-size: 26px 26px;
+  color: var(--gauge-ink);
+  color-scheme: dark;
+}
+
+.vertical-gauge-pane {
+  height: 100%;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scroll-behavior: auto;
+  scrollbar-width: none;
+}
+
+.vertical-gauge-pane:focus-visible {
+  outline: 1px solid #b7cef2;
+  outline-offset: -2px;
+}
+
+.vertical-gauge-content {
+  box-sizing: content-box;
+  max-width: 52ch;
+  margin-inline: auto;
+  padding: 22px 112px 22px 22px;
+}
+
+.vertical-gauge-content section {
+  min-height: 200px;
+}
+
+.vertical-gauge-content h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.vertical-gauge-content p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.vertical-gauge-overlay {
+  position: sticky;
+  z-index: 1;
+  bottom: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.vertical-scroll-gauge {
+  --column-height: clamp(42px, 9svh, 75px);
+  --edge: clamp(12px, 2.7vw, 38px);
+  --rail: clamp(14px, 1.6vw, 24px);
+  position: absolute;
+  right: calc(var(--edge) + var(--rail) - 8px);
+  bottom: calc(var(--edge) + var(--rail) + 47px);
+  width: 44px;
+  height: calc(var(--column-height) + 18px);
+  touch-action: none;
+  pointer-events: auto;
+  user-select: none;
+  cursor: grab;
+}
+
+.vertical-scroll-gauge[data-dragging="true"] {
+  cursor: grabbing;
+}
+
+.vertical-gauge-track {
+  position: absolute;
+  inset: 9px auto 9px calc(50% - 3px);
+  width: 6px;
+  border-radius: 3px;
+  background: #38434e;
+}
+
+.vertical-gauge-fill {
+  position: absolute;
+  inset: 0 0 auto;
+  border-radius: 3px;
+  background: var(--gauge-fill);
+  pointer-events: none;
+}
+
+.vertical-scroll-gauge[data-direction="bottom-to-top"] .vertical-gauge-fill {
+  inset: auto 0 0;
+}
+
+.vertical-gauge-percent {
+  position: absolute;
+  right: calc(100% + 8px);
+  translate: 0 -50%;
+  color: var(--gauge-ink);
+  font: 600 11px / 1 var(--gauge-type);
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+
+.vertical-scroll-gauge:focus-visible {
+  outline: none;
+}
+
+.vertical-scroll-gauge:focus-visible .vertical-gauge-percent {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+  .vertical-scroll-gauge { right: var(--edge); }
+  .vertical-gauge-content { padding-right: 82px; }
+}
+
+@media (max-height: 460px) {
+  .vertical-scroll-gauge { bottom: calc(var(--edge) + var(--rail) + 36px); }
+}

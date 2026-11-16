@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "count": 75,
+  "count": 76,
   "website": "https://tuneshape.kai-nex.com/",
   "repository": "https://github.com/orocoa/TuneShape",
   "effects": [
@@ -1202,6 +1202,21 @@
         "en": "examples/monochrome-scroll-orb/README.md"
       },
       "config": "examples/monochrome-scroll-orb/config.json"
+    },
+    {
+      "id": "vertical-scroll-gauge",
+      "name": "Vertical Scroll Gauge",
+      "nameZh": "竖向滚动刻度",
+      "category": "滚动",
+      "description": "A draggable vertical gauge for reading progress.",
+      "descriptionZh": "可拖动的竖向阅读进度刻度。",
+      "editor": "examples/vertical-scroll-gauge/",
+      "source": "examples/vertical-scroll-gauge",
+      "documentation": {
+        "zh": "examples/vertical-scroll-gauge/README.zh-CN.md",
+        "en": "examples/vertical-scroll-gauge/README.md"
+      },
+      "config": "examples/vertical-scroll-gauge/config.json"
     }
   ]
 }
