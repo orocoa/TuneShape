@@ -173,6 +173,8 @@ test('Pixel Scroll Orb uses the real scroll pane, playback and teardown', {
     assert.equal((await read()).top, pausedAt);
     await toolbar('Play');
     await reachesTop();
+    await until(() => page(() => [...document.querySelectorAll('.reuse-toolbar button')]
+      .some(button => button.textContent === 'Play')), 'toolbar returns to Play after the single preview finishes');
 
     await toolbar('Replay');
     await until(async () => (await read()).top > 90, 'Replay restarts the active command');
