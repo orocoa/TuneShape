@@ -36,19 +36,26 @@ export function usePreviewClock<C extends PlaybackControl>(controls:{current:C[]
  return {register,clear,forget};
 }
 
-/** Both comparison sides finish independently; the toolbar stays active until both return. */
-export function useDetailPlayback(identity:string,autoPlay=false){
+/** Keep the toolbar active until every mounted side finishes. */
+export function useDetailPlayback(identity:string,autoPlay=false,side?:'after'){
+ const startRunning=():Record<string,boolean>=>side?{[side]:true}:{before:true,after:true};
  const sequence=useRef(0);
  const [session,setSession]=useState({identity,seq:0,paused:false,running:{} as Record<string,boolean>});
- useEffect(()=>{setSession({identity,seq:autoPlay?++sequence.current:0,paused:false,running:autoPlay?{before:true,after:true}:{}})},[identity,autoPlay]);
+ useEffect(()=>{setSession({identity,seq:autoPlay?++sequence.current:0,paused:false,running:autoPlay?startRunning():{}})},[identity,autoPlay,side]);
  const report=useCallback((side:string,running:boolean)=>setSession(previous=>{
   if(previous.identity!==identity||previous.running[side]===running)return previous;
   return {...previous,running:{...previous.running,[side]:running}};
  }),[identity]);
+ const start=()=>({identity,seq:++sequence.current,paused:false,running:startRunning()});
+ const restart=()=>setSession(start());
+ const cancel=useCallback(()=>setSession(previous=>{
+  if(previous.identity!==identity)return previous;
+  return {...previous,paused:false,running:{}};
+ }),[identity]);
  const toggle=()=>setSession(previous=>{
   if(previous.identity===identity&&(previous.paused||Object.values(previous.running).some(Boolean)))return {...previous,paused:!previous.paused};
-  return {identity,seq:++sequence.current,paused:false,running:{before:true,after:true}};
+  return start();
  });
  const current=session.identity===identity?session:{seq:0,paused:false,running:{}};
- return {command:{seq:current.seq,active:current.seq>0,restart:true,demo:current.seq>0} satisfies PreviewCommand,paused:current.paused,playing:!current.paused&&Object.values(current.running).some(Boolean),report,toggle};
+ return {command:{seq:current.seq,active:current.seq>0,restart:true,demo:current.seq>0} satisfies PreviewCommand,paused:current.paused,playing:!current.paused&&Object.values(current.running).some(Boolean),report,toggle,restart,cancel};
 }

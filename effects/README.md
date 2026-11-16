@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-All 73 effects in the maintained visible catalog. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
+All 78 effects in this directory. Each includes a default configuration, runnable entry point, and English/Chinese documentation, using the shared public renderer in this directory.
 
 [Online editor](https://tuneshape.kai-nex.com/)
 
@@ -91,6 +91,11 @@ Choose an effect in the local server; edit its config.json to reuse it. The dist
 | bencho-eye-tracker | [Eye Tracker](examples/bencho-eye-tracker/README.md) | [眼睛跟随](examples/bencho-eye-tracker/README.zh-CN.md) |
 | bencho-context-meter | [Context Meter](examples/bencho-context-meter/README.md) | [上下文计量](examples/bencho-context-meter/README.zh-CN.md) |
 | page-turn-cards | [Page Turn Cards](examples/page-turn-cards/README.md) | [翻页卡片](examples/page-turn-cards/README.zh-CN.md) |
+| pixel-scroll-orb | [Pixel Scroll Orb](examples/pixel-scroll-orb/README.md) | [像素滚动球](examples/pixel-scroll-orb/README.zh-CN.md) |
+| monochrome-scroll-orb | [Monochrome Scroll Orb](examples/monochrome-scroll-orb/README.md) | [单色滚动球](examples/monochrome-scroll-orb/README.zh-CN.md) |
+| vertical-scroll-gauge | [Vertical Scroll Gauge](examples/vertical-scroll-gauge/README.md) | [竖向滚动刻度](examples/vertical-scroll-gauge/README.zh-CN.md) |
+| conic-scroll-orb | [Conic Scroll Orb](examples/conic-scroll-orb/README.md) | [环形渐变滚动球](examples/conic-scroll-orb/README.zh-CN.md) |
+| gradient-scroll-rail | [Gradient Scroll Rail](examples/gradient-scroll-rail/README.md) | [渐变滚动轨](examples/gradient-scroll-rail/README.zh-CN.md) |
 
 ## License and scope
 

@@ -1,7 +1,303 @@
 import {glyphPlaybackMs,defaultGlyphWall} from './glyph-wall';
 import {test} from 'node:test';import assert from 'node:assert/strict';
 import {recipes,defaultHistory,validateHistory,parseHistory,serializeHistory,compiledTracks,historyDescription,historyMotion,serializeHistoryMotion} from './history-model.ts';
-for(const recipe of recipes)test(recipe.label+'：完整轨道、时序和描述可往返还原',()=>{const config=defaultHistory(recipe.id);config.durationMs=1800;config.delayMs=['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id)?0:90;config.offsetX=-15;config.offsetY=12;config.scale=.93;if(!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id))config.easing=[.3,-.2,.7,1.2];config.loop=!recipe.id.startsWith('skiper-')&&!recipe.id.startsWith('bencho-')&&!recipe.id.startsWith('reelfolio-')&&!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','infinite-photo-wall','mirrored-card-stack','page-turn-cards','chapter-progress-nav','liquid-glass-logo','chromatic-button','topographic-flow','gooey-wordmark','liquid-carousel','coffee-selector','hover-invert','glass-radio','hover-preview','duration-picker','rail-toc','hook-sidebar','scroll-progress','glass-folder','rounded-checks','expandable-sidebar','encrypted-text','gooey-input','app-orbit','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy'].includes(recipe.id);const restored=parseHistory(serializeHistory(config));assert.deepEqual(restored,config);assert.deepEqual(compiledTracks(restored),compiledTracks(config));assert.deepEqual(compiledTracks(restored,true),compiledTracks(config,true));assert.deepEqual(historyDescription(restored),historyDescription(config));assert.deepEqual(historyMotion(restored),historyMotion(config));assert.notEqual(restored.tracks,config.tracks);});
+import {catalog,catalogIds,catalogParent} from './browse-catalog';
+import {orbFace,orbParticleFrame,orbParticleSpawn,orbParticles,orbScrollMetrics} from './pixel-scroll-orb';
+import {pixelScrollOrbDescription,pixelScrollOrbMotion} from './pixel-scroll-orb-spec';
+import {monochromeOrbDash,monochromeOrbGeometry,monochromeOrbReading,monochromeOrbSpring} from './monochrome-scroll-orb';
+import {monochromeOrbMotion} from './monochrome-scroll-orb-spec';
+import {gaugeKeyProgress,gaugeTrackPosition} from './vertical-scroll-gauge';
+import {verticalGaugeDescription,verticalGaugeMotion} from './vertical-scroll-gauge-spec';
+import verticalGaugeConfig from '../examples/vertical-scroll-gauge/config.json';
+import {clampConicProgress,conicOrbReading} from './conic-scroll-orb';
+import {conicOrbDescription,conicOrbMotion} from './conic-scroll-orb-spec';
+import conicOrbConfig from '../examples/conic-scroll-orb/config.json';
+import {gradientRailCenter,gradientRailDrag,gradientRailGeometry,gradientRailGray,gradientRailKey,gradientRailPressIntent,gradientRailProgress,gradientRailSeek,gradientRailWidth} from './gradient-scroll-rail';
+import {gradientRailDescription,gradientRailMotion} from './gradient-scroll-rail-spec';
+import gradientRailConfig from '../examples/gradient-scroll-rail/config.json';
+import orbConfig from '../examples/pixel-scroll-orb/config.json';
+import monochromeOrbConfig from '../examples/monochrome-scroll-orb/config.json';
+import publicCatalog from '../catalog.json';
+import {scrollingPrompt, scrollingSettingsFor} from './scrolling-config';
+
+test('pixel scroll orb keeps the original visibility, rounding and digit alignment',()=>{
+ assert.equal(orbScrollMetrics(90,520,200).visible,false);
+ assert.equal(orbScrollMetrics(72,600,200).visible,false);
+ assert.equal(orbScrollMetrics(73,600,200).visible,true);
+ assert.deepEqual(orbScrollMetrics(NaN,200,400),{distance:0,percent:0,visible:false});
+ assert.equal(orbScrollMetrics(-40,1200,200).percent,0);
+ assert.deepEqual(orbScrollMetrics(600,2500,500),{distance:2000,percent:30,visible:true});
+ assert.equal(orbScrollMetrics(2000,1200,200).percent,100);
+ for(const [percent,digits,digitX,activeSegments] of [
+  [0,'00',17.5,0],[3,'03',17.5,1],[50,'50',17.5,12],[99,'99',17.5,24],[100,'100',11.5,24],
+ ] as const)assert.deepEqual(orbFace(percent),{digits,digitX,activeSegments});
+});
+
+test('pixel scroll orb default preset, Scrolling catalog and motion specification agree',()=>{
+ const config=defaultHistory('pixel-scroll-orb');
+ assert.deepEqual(parseHistory(JSON.stringify(orbConfig)),config);
+ assert.throws(()=>validateHistory({...config,loop:true}),/不支持循环/);
+ assert.throws(()=>validateHistory({...config,scrollTop:100}));
+ assert.deepEqual(catalogIds('scrolling'),[config.recipeId,'monochrome-scroll-orb','vertical-scroll-gauge','conic-scroll-orb','gradient-scroll-rail']);
+ assert.deepEqual(catalogIds('滚动'),catalogIds('scrolling'));
+ assert.deepEqual(catalogIds('滚动交互'),catalogIds('scrolling'));
+ assert.equal(catalogParent('滚动交互')?.label,'滚动');
+ assert.equal(catalogParent('scrolling')?.featured,config.recipeId);
+ assert.equal(historyDescription(config).title,'像素滚动球');
+ assert.equal(pixelScrollOrbDescription(config,'en').title,'Pixel Scroll Orb');
+ assert.deepEqual(historyMotion(config),pixelScrollOrbMotion(config));
+ const exportedMotion=Function(serializeHistoryMotion(config).replace('export default','return'))();
+ assert.deepEqual(exportedMotion,pixelScrollOrbMotion(config));
+ const adapter=pixelScrollOrbMotion(config).adapters.pixelScrollOrb;
+ assert.equal(adapter.size,56);
+ assert.equal(adapter.segments.length,24);
+ assert.equal(adapter.particles.length,7);
+ assert.equal(adapter.returnToTop.durationMs,config.durationMs);
+});
+
+test('all public effects have exactly their indexed browse category',()=>{
+ const browseEntries=catalog.flatMap(category=>category.ids.map(id=>[id,category.label].join(':')));
+ const indexEntries=publicCatalog.effects.map(effect=>[effect.id,effect.category].join(':'));
+ assert.deepEqual(browseEntries.sort(),indexEntries.sort());
+});
+
+test('the monochrome orb follows real scroll travel with separate entry and exit thresholds',()=>{
+ assert.equal(monochromeOrbReading(150,520,200,false).visible,false);
+ assert.equal(monochromeOrbReading(80,620,200,false).visible,false);
+ assert.equal(monochromeOrbReading(81,620,200,false).visible,true);
+ assert.equal(monochromeOrbReading(41,620,200,true).visible,true);
+ assert.equal(monochromeOrbReading(40,620,200,true).visible,false);
+ assert.equal(monochromeOrbReading(250,700,200,false).percent,50);
+ assert.equal(monochromeOrbReading(700,700,200,true).percent,100);
+ assert.equal(monochromeOrbReading(-10,700,200,false).percent,0);
+ assert.deepEqual(monochromeOrbReading(0,200,200,true),{percent:0,visible:false});
+ const circumference=2*Math.PI*monochromeOrbGeometry.trackRadius;
+ assert.equal(monochromeOrbDash(0),`0 ${circumference}`);
+ const [halfArc, gapLength]=monochromeOrbDash(50).split(' ').map(Number);
+ assert.ok(Math.abs(halfArc-circumference/2)<.001);
+ assert.equal(gapLength,circumference);
+ assert.equal(monochromeOrbDash(100),'none');
+ assert.equal(monochromeOrbDash(105),'none');
+});
+
+test('the monochrome orb saves a theme and exports the specified geometry and spring',()=>{
+ const config=defaultHistory('monochrome-scroll-orb');
+ assert.deepEqual(parseHistory(JSON.stringify(monochromeOrbConfig)),config);
+ const dark={...config,monochromeScrollOrb:{theme:'dark' as const}};
+ assert.deepEqual(parseHistory(serializeHistory(dark)),dark);
+ assert.throws(()=>validateHistory({...config,monochromeScrollOrb:{theme:'blue'}}));
+ assert.throws(()=>validateHistory({...config,monochromeScrollOrb:{theme:'light',stiffness:79}}));
+ assert.throws(()=>validateHistory({...config,monochromeScrollOrb:undefined}));
+ assert.throws(()=>validateHistory({...config,loop:true}));
+ assert.throws(()=>validateHistory({...defaultHistory('pixel-scroll-orb'),monochromeScrollOrb:{theme:'light'}}));
+ const exported=Function(serializeHistoryMotion(dark).replace('export default','return'))();
+ assert.deepEqual(exported,monochromeOrbMotion(dark));
+ assert.deepEqual(exported.adapters.monochromeScrollOrb.spring,monochromeOrbSpring);
+ assert.deepEqual(exported.adapters.monochromeScrollOrb.geometry,{size:64,innerDiameter:36,trackRadius:22.5,trackWidth:2,arcWidth:3});
+});
+
+test('vertical gauge mirrors the fill endpoint and inverse drag mapping in the reverse direction',()=>{
+ for(const [input,forward,reverse] of [[-1,0,1],[0,0,1],[.25,.25,.75],[.75,.75,.25],[1,1,0],[2,1,0]]){
+  assert.equal(gaugeTrackPosition(input,'top-to-bottom'),forward);
+  assert.equal(gaugeTrackPosition(input,'bottom-to-top'),reverse);
+  assert.equal(gaugeTrackPosition(reverse,'bottom-to-top'),forward);
+ }
+ for(const [key,expected] of [['ArrowUp',.475],['ArrowDown',.525],['ArrowLeft',.475],['ArrowRight',.525],
+  ['PageUp',.4],['PageDown',.6],['Home',0],['End',1],['Tab',undefined]] as const){
+  assert.equal(gaugeKeyProgress(key,.5),expected);
+ }
+ assert.equal(gaugeKeyProgress('ArrowUp',0),0);
+ assert.equal(gaugeKeyProgress('ArrowDown',1),1);
+});
+
+test('vertical gauge preserves legacy direction presets and exports its spring and geometry',()=>{
+ const config=defaultHistory('vertical-scroll-gauge');
+ assert.deepEqual(parseHistory(JSON.stringify(verticalGaugeConfig)),config);
+ const reverse={...config,verticalScrollGauge:{direction:'bottom-to-top' as const}};
+ assert.deepEqual(parseHistory(serializeHistory(reverse)),reverse);
+ assert.throws(()=>validateHistory({...config,verticalScrollGauge:{direction:'left-to-right'}}),/方向无效/);
+ assert.throws(()=>validateHistory({...config,verticalScrollGauge:{direction:'top-to-bottom',theme:'dark'}}));
+ const {verticalScrollGauge,...withoutDirection}=config;
+ assert.throws(()=>validateHistory(withoutDirection),/须有方向设置/);
+ assert.throws(()=>validateHistory({...config,loop:true}),/不支持循环/);
+ assert.throws(()=>validateHistory({...defaultHistory('scroll-progress'),verticalScrollGauge}));
+ assert.equal(historyDescription(config).title,'竖向滚动刻度');
+ assert.equal(verticalGaugeDescription(reverse,'en').title,'Vertical Scroll Gauge');
+ const exported=Function(serializeHistoryMotion(reverse).replace('export default','return'))();
+ assert.deepEqual(exported,verticalGaugeMotion(reverse));
+ const gauge=exported.adapters.verticalScrollGauge;
+ assert.deepEqual(gauge.settings,{direction:'bottom-to-top',damping:36});
+ assert.deepEqual(gauge.spring,{stiffness:300,damping:36,mass:.6,restDelta:.001,skipInitialAnimation:true});
+ assert.equal(gauge.geometry.trackWidthPx,6);
+});
+
+test('conic orb measures actual reading progress and uses strict visibility thresholds',()=>{
+ assert.deepEqual(conicOrbReading(0,180,200),{distance:0,percent:0,visible:false});
+ assert.equal(conicOrbReading(200,520,200).visible,false);
+ assert.equal(conicOrbReading(72,521,200).visible,false);
+ assert.equal(conicOrbReading(73,521,200).visible,true);
+ assert.equal(conicOrbReading(250,700,200).percent,50);
+ assert.equal(conicOrbReading(-10,700,200).percent,0);
+ assert.equal(conicOrbReading(510,700,200).percent,100);
+ assert.equal(clampConicProgress(-.01),0);
+ assert.equal(clampConicProgress(100.01),100);
+});
+
+test('conic orb uses the standard preset and exports its fixed spring, geometry and return to top',()=>{
+ const config=defaultHistory('conic-scroll-orb');
+ assert.deepEqual(parseHistory(JSON.stringify(conicOrbConfig)),config);
+ assert.deepEqual(parseHistory(serializeHistory(config)),config);
+ assert.throws(()=>validateHistory({...config,loop:true}),/不支持循环/);
+ assert.throws(()=>validateHistory({...config,theme:'dark'}));
+ assert.equal(historyDescription(config).title,'环形渐变滚动球');
+ assert.equal(conicOrbDescription('en').title,'Conic Scroll Orb');
+ const exported=Function(serializeHistoryMotion(config).replace('export default','return'))();
+ assert.deepEqual(exported,conicOrbMotion(config));
+ const orb=exported.adapters.conicScrollOrb;
+ assert.deepEqual(orb.spring,{stiffness:210,damping:25,mass:.85});
+ assert.deepEqual(orb.geometry,{size:46,coreInset:4,startAngle:220});
+ assert.deepEqual(orb.visibility,{minimumTravel:320,revealOffset:72,durationMs:180,opacity:.78,hoverOpacity:.93});
+ assert.equal(orb.returnToTop,'native smooth scroll on the bound pane');
+});
+
+test('gradient rail uses the specified continuous Gaussian shape, spacing and limits',()=>{
+ assert.deepEqual(gradientRailGeometry,{count:32,barHeight:3,gap:3,pitch:6,height:189,restWidth:8,maxWidth:36,sigma:2.5});
+ assert.equal(gradientRailCenter(1.5),0);
+ assert.equal(gradientRailCenter(94.5),15.5);
+ assert.equal(gradientRailCenter(187.5),31);
+ assert.equal(gradientRailWidth(15,15,0),8);
+ assert.equal(gradientRailWidth(15,15,1),36);
+ assert.equal(gradientRailWidth(15,15,.5),22);
+ assert.equal(gradientRailWidth(15,15.5,1),gradientRailWidth(16,15.5,1));
+ assert.ok(gradientRailWidth(15,15.5,1)<36);
+ assert.ok(gradientRailWidth(21,15.5,1)<gradientRailWidth(20,15.5,1));
+ assert.equal(gradientRailWidth(2,0,1),gradientRailWidth(29,31,1));
+});
+
+test('gradient rail keeps unfilled bars visible at zero, mirrors fill direction and deepens filled bars',()=>{
+ assert.equal(gradientRailProgress(0,0),0);
+ assert.equal(gradientRailProgress(-12,500),0);
+ assert.equal(gradientRailProgress(600,500),1);
+ for(let i=0;i<32;i++){
+  assert.equal(gradientRailGray(i,0,'top-to-bottom'),230);
+  assert.equal(gradientRailGray(i,0,'bottom-to-top'),230);
+  assert.equal(gradientRailGray(i,.42,'top-to-bottom'),gradientRailGray(31-i,.42,'bottom-to-top'));
+ }
+ const forward='top-to-bottom';
+ assert.ok(gradientRailGray(0,1,forward)>gradientRailGray(31,1,forward));
+ assert.ok(gradientRailGray(0,.2,forward)>gradientRailGray(0,.5,forward));
+ assert.ok(gradientRailGray(0,.5,forward)>gradientRailGray(0,.8,forward));
+ assert.ok(gradientRailGray(10,.75,forward)>gradientRailGray(20,.75,forward));
+ assert.equal(gradientRailGray(1,.01,forward),230);
+ assert.equal(gradientRailGray(16,.5,forward),230);
+ const partial=gradientRailGray(16,16.5/32,forward);
+ assert.ok(partial<230&&partial>gradientRailGray(16,17/32,forward));
+});
+
+test('gradient rail starts vertical drags beyond the click tolerance and maps relative travel in both directions',()=>{
+ assert.equal(gradientRailPressIntent(3.6,4.8),'pending');
+ assert.equal(gradientRailPressIntent(0,6),'pending');
+ assert.equal(gradientRailPressIntent(0,-7),'drag');
+ assert.equal(gradientRailPressIntent(5,5),'drag');
+ assert.equal(gradientRailPressIntent(7,1),'cancel');
+ for(const direction of ['top-to-bottom','bottom-to-top'] as const){
+  assert.equal(gradientRailDrag(.5,0,direction),.5);
+  assert.equal(gradientRailDrag(.5,47.25,direction),direction==='top-to-bottom'?.75:.25);
+  assert.equal(gradientRailDrag(.5,189,direction),direction==='top-to-bottom'?1:0);
+ }
+ assert.equal(gradientRailKey('ArrowDown',.5),.525);
+ assert.equal(gradientRailKey('PageUp',.5),.4);
+ assert.equal(gradientRailKey('Home',.5),0);
+ assert.equal(gradientRailKey('End',.5),1);
+ assert.equal(gradientRailKey('Tab',.5),undefined);
+});
+
+test('gradient rail clicks map to the visible track in either direction and clamp extra hit padding',()=>{
+ for(const [position,forward,reverse] of [[-.1,0,1],[0,0,1],[.25,.25,.75],[1,1,0],[1.1,1,0]]){
+  assert.equal(gradientRailSeek(position,'top-to-bottom'),forward);
+  assert.equal(gradientRailSeek(position,'bottom-to-top'),reverse);
+ }
+});
+
+test('gradient rail preserves legacy direction presets and exports its press and spring profile',()=>{
+ const config=defaultHistory('gradient-scroll-rail');
+ assert.deepEqual(parseHistory(JSON.stringify(gradientRailConfig)),config);
+ const reverse={...config,gradientScrollRail:{direction:'bottom-to-top' as const}};
+ assert.deepEqual(parseHistory(serializeHistory(reverse)),reverse);
+ assert.throws(()=>validateHistory({...config,gradientScrollRail:{direction:'left-to-right'}}),/方向无效/);
+ assert.throws(()=>validateHistory({...config,gradientScrollRail:{direction:'top-to-bottom',theme:'dark'}}));
+ const {gradientScrollRail,...withoutDirection}=config;
+ assert.throws(()=>validateHistory(withoutDirection),/须有方向设置/);
+ assert.throws(()=>validateHistory({...config,loop:true}),/不支持循环/);
+ assert.throws(()=>validateHistory({...defaultHistory('vertical-scroll-gauge'),gradientScrollRail}));
+ assert.equal(historyDescription(config).title,'渐变滚动轨');
+ assert.equal(gradientRailDescription(reverse,'en').title,'Gradient Scroll Rail');
+ const exported=Function(serializeHistoryMotion(reverse).replace('export default','return'))();
+ assert.deepEqual(exported,gradientRailMotion(reverse));
+ assert.deepEqual(exported.adapters.gradientScrollRail.press,{delayMs:240,tolerance:6});
+ assert.deepEqual(exported.adapters.gradientScrollRail.spring,{stiffness:280,damping:30,mass:.65});
+});
+
+test('scroll settings round trip, accept legacy presets and agree with the Motion and prompt exports', () => {
+ const cases = [
+  ['pixel-scroll-orb', {}, {revealOffset:165, particlesEnabled:false}, {revealOffset:-1}],
+  ['monochrome-scroll-orb', {theme:'dark'}, {theme:'dark', stiffness:380, damping:51}, {damping:66}],
+  ['vertical-scroll-gauge', {direction:'bottom-to-top'}, {direction:'bottom-to-top', damping:52}, {damping:NaN}],
+  ['conic-scroll-orb', {}, {revealOffset:180, damping:55}, {revealOffset:321}],
+  ['gradient-scroll-rail', {direction:'bottom-to-top'}, {direction:'bottom-to-top', maxWidth:64, sigma:5.75}, {sigma:0}],
+ ] as const;
+ for (const [id, legacy, tuned, invalid] of cases) {
+  const {key, defaults} = scrollingSettingsFor(id);
+  const current = defaultHistory(id);
+  assert.deepEqual(current[key], defaults);
+  const { [key]: ignored, ...base } = current;
+  const legacyPreset = {...base, ...(Object.keys(legacy).length ? {[key]:legacy} : {})};
+  const old = parseHistory(JSON.stringify(legacyPreset));
+  assert.deepEqual(old, legacyPreset);
+  const legacyExport = Function(serializeHistoryMotion(old).replace('export default','return'))().adapters[key];
+  assert.deepEqual(legacyExport.settings,{...defaults,...legacy});
+  const custom = {...current,[key]:tuned};
+  assert.deepEqual(parseHistory(serializeHistory(custom)), custom);
+  assert.throws(() => validateHistory({...custom,[key]:{...tuned,...invalid}}));
+  assert.throws(() => validateHistory({...custom,[key]:{...tuned, extra:1}}));
+  assert.throws(() => validateHistory({...defaultHistory('scroll-progress'),[key]:tuned}));
+  const exported = Function(serializeHistoryMotion(custom).replace('export default','return'))().adapters[key];
+  assert.deepEqual(exported.settings,tuned);
+  if ('stiffness' in tuned) assert.equal(exported.spring.stiffness,tuned.stiffness);
+  if ('damping' in tuned) assert.equal(exported.spring.damping,tuned.damping);
+  if ('maxWidth' in tuned) {
+   assert.equal(exported.geometry.maxWidth,tuned.maxWidth);
+   assert.equal(exported.geometry.sigma,tuned.sigma);
+  }
+  if (key==='conicScrollOrb') assert.equal(exported.visibility.revealOffset,180);
+  if (key==='pixelScrollOrb') assert.equal(exported.revealOffsetExclusive,165);
+  for (const language of ['en','zh'] as const) {
+   const prompt=scrollingPrompt(custom,language);
+   assert.match(prompt,/React.*TypeScript.*motion\/react/);
+   assert.ok(prompt.includes(JSON.stringify(defaults)));
+   assert.ok(prompt.includes(JSON.stringify(tuned)));
+  }
+ }
+ assert.equal(orbScrollMetrics(165,600,200,165).visible,false);
+ assert.equal(conicOrbReading(181,600,200,180).visible,true);
+ assert.equal(gradientRailWidth(15,15,1,64,5.75),64);
+ assert.ok(gradientRailWidth(20,15,1,36,5.75)>gradientRailWidth(20,15,1));
+ assert.throws(() => validateHistory({...defaultHistory('pixel-scroll-orb'),pixelScrollOrb:{particlesEnabled:0}}));
+});
+
+test('orb hover particles vary between launches and enter, slow, and fade within each cycle',()=>{
+ const anchor=orbParticles[0];
+ const spawns=[.1,.65,.95].map(value=>orbParticleSpawn(anchor,()=>value));
+ assert.deepEqual(spawns.map(spawn=>spawn.size),[2,3,4]);
+ assert.equal(new Set(spawns.map(spawn=>`${spawn.x},${spawn.y}`)).size,3);
+ assert.ok(spawns.every(spawn=>Number.isInteger(spawn.x)&&Number.isInteger(spawn.y)&&spawn.drift<0));
+ assert.deepEqual(orbParticleFrame(anchor,0),{travel:0,opacity:0});
+ assert.equal(orbParticleFrame(anchor,100/anchor.duration).opacity,anchor.opacity);
+ assert.ok(orbParticleFrame(anchor,.2).travel>1/3);
+ assert.ok(orbParticleFrame(anchor,.6).opacity<orbParticleFrame(anchor,.2).opacity);
+ assert.deepEqual(orbParticleFrame(anchor,1),{travel:1,opacity:0});
+});
+for(const recipe of recipes)test(recipe.label+'：完整轨道、时序和描述可往返还原',()=>{const config=defaultHistory(recipe.id);config.durationMs=1800;config.delayMs=['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id)?0:90;config.offsetX=-15;config.offsetY=12;config.scale=.93;if(!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id))config.easing=[.3,-.2,.7,1.2];config.loop=!recipe.id.startsWith('skiper-')&&!recipe.id.startsWith('bencho-')&&!recipe.id.startsWith('reelfolio-')&&!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','infinite-photo-wall','mirrored-card-stack','page-turn-cards','chapter-progress-nav','liquid-glass-logo','chromatic-button','topographic-flow','gooey-wordmark','liquid-carousel','coffee-selector','hover-invert','glass-radio','hover-preview','duration-picker','rail-toc','hook-sidebar','scroll-progress','pixel-scroll-orb','monochrome-scroll-orb','vertical-scroll-gauge','conic-scroll-orb','gradient-scroll-rail','glass-folder','rounded-checks','expandable-sidebar','encrypted-text','gooey-input','app-orbit','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy'].includes(recipe.id);const restored=parseHistory(serializeHistory(config));assert.deepEqual(restored,config);assert.deepEqual(compiledTracks(restored),compiledTracks(config));assert.deepEqual(compiledTracks(restored,true),compiledTracks(config,true));assert.deepEqual(historyDescription(restored),historyDescription(config));assert.deepEqual(historyMotion(restored),historyMotion(config));assert.notEqual(restored.tracks,config.tracks);});
 test('所有预设进入退出阶段时序有效；文字揭示淡出，其余反向轨道保留关键帧关系',()=>{
  for(const recipe of recipes){
   const config=defaultHistory(recipe.id),forward=compiledTracks(config),exit=compiledTracks(config,true);

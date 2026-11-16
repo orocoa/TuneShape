@@ -1,0 +1,113 @@
+.history-canvas.conic-orb-canvas {
+  position: relative;
+  min-height: 0;
+  cursor: default;
+}
+
+.conic-orb-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  background: #202020;
+  color: #dedede;
+  color-scheme: dark;
+}
+
+.conic-orb-pane {
+  height: 100%;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scroll-behavior: auto;
+  scrollbar-color: #696969 #202020;
+}
+
+.conic-orb-pane:focus-visible {
+  outline: 1px solid #c8c8c8;
+  outline-offset: -2px;
+}
+
+.conic-orb-content {
+  box-sizing: content-box;
+  max-width: 52ch;
+  margin-inline: auto;
+  padding: 22px 88px 22px 22px;
+}
+
+.conic-orb-content section {
+  min-height: 200px;
+}
+
+.conic-orb-content h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.conic-orb-content p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.conic-orb-overlay {
+  position: sticky;
+  z-index: 1;
+  bottom: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.conic-orb-stage .conic-scroll-orb {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: conic-gradient(from 220deg, #c8c8c8 var(--conic-orb-progress, 0%), #454545 0);
+  box-shadow: 0 12px 32px rgb(0 0 0 / .2), inset 0 0 0 1px rgb(255 255 255 / .08);
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity 180ms ease, box-shadow 180ms ease;
+}
+
+.conic-orb-stage .conic-scroll-orb[data-visible="true"] {
+  opacity: .78;
+  pointer-events: auto;
+}
+
+.conic-scroll-orb::before {
+  position: absolute;
+  inset: 4px;
+  border-radius: inherit;
+  background: linear-gradient(180deg, #252525, #303030);
+  content: '';
+}
+
+.conic-orb-number {
+  position: relative;
+  color: #e0e0e0;
+  font-size: .64rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .conic-orb-stage .conic-scroll-orb[data-visible="true"]:hover {
+    opacity: .93;
+    box-shadow: 0 14px 34px rgb(0 0 0 / .24), inset 0 0 0 1px rgb(255 255 255 / .1);
+  }
+}
+
+.conic-orb-stage .conic-scroll-orb:focus-visible {
+  outline: 2px solid #c8c8c8;
+  outline-offset: 3px;
+}
+
+.conic-orb-stage[data-reduced="true"] .conic-scroll-orb {
+  transition: none;
+}

@@ -12,6 +12,7 @@ const definitions:BrowseCategory[]=[
  {key:'images',label:'画廊',english:'Galleries',symbol:'image',featured:'infinite-photo-wall',ids:['skiper-30','skiper-17','skiper-16','bencho-aspect','depth-ribbon','passage-gallery','reelfolio-rig','bencho-card-swap','bencho-image-compare','bencho-carousel','infinite-photo-wall','page-turn-cards','mirrored-card-stack','skiper-48','skiper-50','skiper-78','skiper-77','liquid-carousel','album-rail','elastic-reel','orbit-reel','app-orbit']},
  {key:'indicators',label:'加载',english:'Loading',symbol:'loader',featured:'progress',ids:['bencho-context-meter','progress','dots','finger-tap','typewriter','yin-yang','pulse']},
  {key:'backgrounds',label:'背景',english:'Backgrounds',symbol:'page',featured:'topographic-flow',ids:['skiper-41','topographic-flow','ascii-wave','ascii-sharks','particle-tide','watercolor','watercolor-original','watercolor-flow']},
+ {key:'scrolling',label:'滚动',english:'Scrolling',symbol:'page',featured:'pixel-scroll-orb',ids:['pixel-scroll-orb','monochrome-scroll-orb','vertical-scroll-gauge','conic-scroll-orb','gradient-scroll-rail']},
 ];
 export const catalog=definitions.flatMap(category=>{
  const ids=category.ids.filter(id=>!retiredEffectIds.has(id));
@@ -25,6 +26,8 @@ const galleryCategory=current.get('images');
 if(galleryCategory)current.set('图片',galleryCategory);
 const loadingCategory=current.get('indicators');
 if(loadingCategory){current.set('状态指示',loadingCategory);current.set('加载状态',loadingCategory)}
+const scrollingCategory=current.get('scrolling');
+if(scrollingCategory)current.set('滚动交互',scrollingCategory);
 
 /** Old links retain their exact member sets, even when a group crossed new categories. */
 export const legacyBrowseGroups=authoredCatalog.flatMap(category=>[

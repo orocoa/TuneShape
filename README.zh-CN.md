@@ -45,7 +45,7 @@ TuneShape，中文名「随形」，是面向设计师与开发者的 UI 动效�
 
 本次源码更新：[v1.2.0 更新说明](docs/releases/v1.2.0.md) — 新增 21 个可运行示例，补齐 73 项配置与双语说明，并同步原生交互和眼睛跟随演示修复。
 
-当前可见目录中的 **73 个动效渲染源码均已公开**，每项提供默认配置、可运行页面和中英文说明。[运行全部示例](effects/README.zh-CN.md) · [机器可读清单](effects/catalog.json) · [动效说明](https://tuneshape.kai-nex.com/effects/)
+本仓库提供 **78 个动效的渲染源码**，每项提供默认配置、可运行页面和中英文说明。[运行全部示例](effects/README.zh-CN.md) · [机器可读清单](effects/catalog.json) · [动效说明](https://tuneshape.kai-nex.com/effects/)
 
 ```sh
 git clone https://github.com/orocoa/TuneShape.git
@@ -129,6 +129,11 @@ pnpm dev
 | bencho-eye-tracker | [Eye Tracker](effects/examples/bencho-eye-tracker/README.md) | [眼睛跟随](effects/examples/bencho-eye-tracker/README.zh-CN.md) |
 | bencho-context-meter | [Context Meter](effects/examples/bencho-context-meter/README.md) | [上下文计量](effects/examples/bencho-context-meter/README.zh-CN.md) |
 | page-turn-cards | [Page Turn Cards](effects/examples/page-turn-cards/README.md) | [翻页卡片](effects/examples/page-turn-cards/README.zh-CN.md) |
+| pixel-scroll-orb | [Pixel Scroll Orb](effects/examples/pixel-scroll-orb/README.md) | [像素滚动球](effects/examples/pixel-scroll-orb/README.zh-CN.md) |
+| monochrome-scroll-orb | [Monochrome Scroll Orb](effects/examples/monochrome-scroll-orb/README.md) | [单色滚动球](effects/examples/monochrome-scroll-orb/README.zh-CN.md) |
+| vertical-scroll-gauge | [Vertical Scroll Gauge](effects/examples/vertical-scroll-gauge/README.md) | [竖向滚动刻度](effects/examples/vertical-scroll-gauge/README.zh-CN.md) |
+| conic-scroll-orb | [Conic Scroll Orb](effects/examples/conic-scroll-orb/README.md) | [环形渐变滚动球](effects/examples/conic-scroll-orb/README.zh-CN.md) |
+| gradient-scroll-rail | [Gradient Scroll Rail](effects/examples/gradient-scroll-rail/README.md) | [渐变滚动轨](effects/examples/gradient-scroll-rail/README.zh-CN.md) |
 
 公开示例的个人头像、产品与品牌图形采用通用原创图形，提示音与视频使用原创演示素材；线上编辑器的原始内容保留。
 

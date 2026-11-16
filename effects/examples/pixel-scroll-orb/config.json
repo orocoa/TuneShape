@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 2,
+  "recipeId": "pixel-scroll-orb",
+  "durationMs": 400,
+  "delayMs": 0,
+  "easing": [0, 0, 1, 1],
+  "offsetX": 0,
+  "offsetY": 0,
+  "scale": 1,
+  "loop": false,
+  "interruption": "retarget",
+  "tracks": [],
+  "pixelScrollOrb": {
+    "revealOffset": 72,
+    "particlesEnabled": true
+  }
+}

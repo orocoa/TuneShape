@@ -1,0 +1,107 @@
+.history-canvas.pixel-scroll-canvas {
+  position: relative;
+  min-height: 0;
+  cursor: default;
+}
+
+.pixel-scroll-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  background: #1d1f22;
+  color: rgba(248, 250, 252, .94);
+}
+
+.pixel-scroll-pane {
+  height: 100%;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scroll-behavior: auto;
+  color-scheme: dark;
+}
+
+.pixel-scroll-pane:focus-visible {
+  outline: 2px solid #cbd5e1;
+  outline-offset: -2px;
+}
+
+.pixel-scroll-content {
+  max-width: 52ch;
+  margin-inline: auto;
+  padding: 20px 84px 20px 20px;
+  box-sizing: content-box;
+}
+
+.pixel-scroll-content section {
+  min-height: 180px;
+}
+
+.pixel-scroll-content h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.pixel-scroll-content p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.pixel-scroll-overlay {
+  position: sticky;
+  z-index: 1;
+  bottom: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.pixel-scroll-stage .pixel-scroll-orb {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: inline-flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.pixel-scroll-stage .pixel-scroll-orb[hidden] {
+  display: none;
+}
+
+.pixel-scroll-stage .pixel-scroll-orb:focus-visible {
+  outline: 2px solid #cbd5e1;
+  outline-offset: 4px;
+}
+
+.pixel-scroll-orb svg {
+  display: block;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.pixel-scroll-segment {
+  fill: rgba(226, 232, 240, .28);
+}
+
+.pixel-scroll-segment[data-active],
+.pixel-scroll-digits {
+  fill: rgba(248, 250, 252, .94);
+}
+
+.pixel-scroll-particles {
+  fill: rgba(203, 213, 225, .76);
+}
+
+.pixel-scroll-particles rect {
+  opacity: 0;
+}

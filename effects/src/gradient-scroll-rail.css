@@ -1,0 +1,89 @@
+.history-canvas.gradient-rail-canvas {
+  position: relative;
+  min-height: 0;
+  cursor: default;
+}
+
+.gradient-rail-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  color: #353535;
+  color-scheme: light;
+}
+
+.gradient-rail-pane {
+  height: 100%;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scroll-behavior: auto;
+  scrollbar-width: none;
+}
+
+.gradient-rail-pane:focus-visible,
+.gradient-rail-pane:has(.gradient-scroll-rail:focus-visible) {
+  outline: 1px solid #777;
+  outline-offset: -2px;
+}
+
+.gradient-rail-content {
+  box-sizing: content-box;
+  max-width: 52ch;
+  margin-inline: auto;
+  padding: 22px 112px 22px 22px;
+}
+
+.gradient-rail-content section {
+  min-height: 200px;
+}
+
+.gradient-rail-content h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.gradient-rail-content p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.gradient-rail-overlay {
+  position: sticky;
+  top: 50%;
+  z-index: 1;
+  height: 0;
+  pointer-events: none;
+}
+
+.gradient-scroll-rail {
+  position: absolute;
+  right: 0;
+  top: 0;
+  box-sizing: border-box;
+  width: 100px;
+  padding: 16px 22px 16px 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  touch-action: none;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.gradient-scroll-rail:focus-visible {
+  outline: none;
+}
+
+.gradient-rail-bars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.gradient-rail-bar {
+  display: block;
+  flex: none;
+  border-radius: 1.5px;
+}

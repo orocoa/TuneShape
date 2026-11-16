@@ -32,6 +32,11 @@ import {scrambleFrame} from './text-scramble';
 import HoverImagePreview from './HoverImagePreview';
 import GlassFolderPreview from './GlassFolderPreview';
 import ScrollProgressPreview from './ScrollProgressPreview';
+import PixelScrollOrbPreview from './PixelScrollOrbPreview';
+import MonochromeScrollOrbPreview from './MonochromeScrollOrbPreview';
+import VerticalScrollGaugePreview from './VerticalScrollGaugePreview';
+import ConicScrollOrbPreview from './ConicScrollOrbPreview';
+import GradientScrollRailPreview from './GradientScrollRailPreview';
 import WavingCardPreview from './WavingCardPreview';
 import DepthRibbonPreview from './DepthRibbonPreview';
 import PassageGalleryPreview from './PassageGalleryPreview';
@@ -116,6 +121,11 @@ const Sculpture=memo(function Sculpture({config}:{config:HistoryConfig}){
 export interface HistoryPreviewProps{config:HistoryConfig;speed:number;reduced:boolean;command:PreviewCommand;side:string;paused?:boolean;onRunningChange?:(side:string,running:boolean)=>void;enabled?:boolean;thumbnail?:boolean;autoPlay?:boolean;interactive?:boolean;presentation?:'loading'|'cycle'|'direct'}
 export default function HistoryPreview(props:HistoryPreviewProps){
  useLanguage();
+ if(props.config.recipeId==='pixel-scroll-orb')return <PixelScrollOrbPreview {...props}/>;
+ if(props.config.recipeId==='monochrome-scroll-orb')return <MonochromeScrollOrbPreview {...props}/>;
+ if(props.config.recipeId==='vertical-scroll-gauge')return <VerticalScrollGaugePreview {...props}/>;
+ if(props.config.recipeId==='conic-scroll-orb')return <ConicScrollOrbPreview {...props}/>;
+ if(props.config.recipeId==='gradient-scroll-rail')return <GradientScrollRailPreview {...props}/>;
  if(isReelfolioEffect(props.config.recipeId))return <ReelfolioPreview {...props}/>;
  if(isBenchoUiEffect(props.config.recipeId))return <BenchoUiPreview {...props}/>;
  if(isBenchoEffect(props.config.recipeId))return <BenchoPreview {...props}/>;

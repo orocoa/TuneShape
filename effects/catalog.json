@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "count": 73,
+  "count": 78,
   "website": "https://tuneshape.kai-nex.com/",
   "repository": "https://github.com/orocoa/TuneShape",
   "effects": [
@@ -1171,6 +1171,82 @@
       },
       "license": "MIT",
       "config": "examples/page-turn-cards/config.json"
+    },
+    {
+      "id": "pixel-scroll-orb",
+      "name": "Pixel Scroll Orb",
+      "nameZh": "像素滚动球",
+      "category": "滚动",
+      "description": "A 56 px pixel orb tracks the reading panel and returns it to the top.",
+      "descriptionZh": "56 像素球体跟随阅读区滚动，点按返回顶部。",
+      "editor": "examples/pixel-scroll-orb/",
+      "source": "examples/pixel-scroll-orb",
+      "documentation": {
+        "zh": "examples/pixel-scroll-orb/README.zh-CN.md",
+        "en": "examples/pixel-scroll-orb/README.md"
+      },
+      "license": "MIT",
+      "config": "examples/pixel-scroll-orb/config.json"
+    },
+    {
+      "id": "monochrome-scroll-orb",
+      "name": "Monochrome Scroll Orb",
+      "nameZh": "单色滚动球",
+      "category": "滚动",
+      "description": "A grayscale reading indicator with spring-driven progress.",
+      "descriptionZh": "由弹簧驱动的黑白灰阅读进度指示。",
+      "editor": "examples/monochrome-scroll-orb/",
+      "source": "examples/monochrome-scroll-orb",
+      "documentation": {
+        "zh": "examples/monochrome-scroll-orb/README.zh-CN.md",
+        "en": "examples/monochrome-scroll-orb/README.md"
+      },
+      "config": "examples/monochrome-scroll-orb/config.json"
+    },
+    {
+      "id": "vertical-scroll-gauge",
+      "name": "Vertical Scroll Gauge",
+      "nameZh": "竖向滚动刻度",
+      "category": "滚动",
+      "description": "A draggable vertical gauge for reading progress.",
+      "descriptionZh": "可拖动的竖向阅读进度刻度。",
+      "editor": "examples/vertical-scroll-gauge/",
+      "source": "examples/vertical-scroll-gauge",
+      "documentation": {
+        "zh": "examples/vertical-scroll-gauge/README.zh-CN.md",
+        "en": "examples/vertical-scroll-gauge/README.md"
+      },
+      "config": "examples/vertical-scroll-gauge/config.json"
+    },
+    {
+      "id": "conic-scroll-orb",
+      "name": "Conic Scroll Orb",
+      "nameZh": "环形渐变滚动球",
+      "category": "滚动",
+      "description": "A grayscale scroll indicator that returns the reading pane to the top.",
+      "descriptionZh": "显示滚动进度并支持返回阅读区顶部的灰阶进度球。",
+      "editor": "examples/conic-scroll-orb/",
+      "source": "examples/conic-scroll-orb",
+      "documentation": {
+        "zh": "examples/conic-scroll-orb/README.zh-CN.md",
+        "en": "examples/conic-scroll-orb/README.md"
+      },
+      "config": "examples/conic-scroll-orb/config.json"
+    },
+    {
+      "id": "gradient-scroll-rail",
+      "name": "Gradient Scroll Rail",
+      "nameZh": "渐变滚动轨",
+      "category": "滚动",
+      "description": "A grayscale reading rail that arches on press and hold.",
+      "descriptionZh": "长按展开弧形、拖动定位的灰阶阅读轨。",
+      "editor": "examples/gradient-scroll-rail/",
+      "source": "examples/gradient-scroll-rail",
+      "documentation": {
+        "zh": "examples/gradient-scroll-rail/README.zh-CN.md",
+        "en": "examples/gradient-scroll-rail/README.md"
+      },
+      "config": "examples/gradient-scroll-rail/config.json"
     }
   ]
 }

@@ -49,6 +49,11 @@ export function interactionSelector(id:string){
  if(isStudioEffect(id))return id==='app-orbit'?'.app-orbit':'.type-motion';
  if(id==='glass-folder')return '.glass-folder-hit';
  if(id==='scroll-progress')return '.reading-progress-stage';
+ if(id==='pixel-scroll-orb')return '.pixel-scroll-stage';
+ if(id==='monochrome-scroll-orb')return '.monochrome-orb-stage';
+ if(id==='vertical-scroll-gauge')return '.vertical-gauge-stage';
+ if(id==='conic-scroll-orb')return '.conic-orb-stage';
+ if(id==='gradient-scroll-rail')return '.gradient-rail-stage';
  if(id==='hook-sidebar')return '.hook-sidebar-nav';
  if(id==='infinite-photo-wall')return '.ipw-root';
  if(id==='mirrored-card-stack')return '.mirrored-card-stack';
@@ -116,6 +121,11 @@ export function triggerDescription(id:string){
  if(id==='coffee-selector')return '点击展开直列滚轮，滚轮、上下拖动或方向键选择；松手惯性吸附，点击选项或 Enter 确认，Escape 撤回。';
  if(id==='glass-folder')return '悬停或聚焦时轻展卡片，点击、Enter / 空格展开；移开、离焦、点击外部或 Escape 收合。';
  if(id==='scroll-progress')return '滚动阅读区同步圆环与当前章节，鼠标悬停胶囊自动展开目录，移出胶囊和菜单区域自动收合，点击章节定位并收合；触屏点按胶囊展开，点击外部或 Escape 关闭。';
+ if(id==='pixel-scroll-orb')return '在卡片内滚动阅读区以显示像素球；点击球体或按 Enter / 空格返回阅读区顶部。';
+ if(id==='monochrome-scroll-orb')return '在阅读区滚动以显示进度，点按球体或按 Enter / 空格返回阅读区顶部。';
+ if(id==='vertical-scroll-gauge')return '在阅读区滚动、沿刻度拖动，或聚焦刻度后按方向键。';
+ if(id==='conic-scroll-orb')return '在阅读区滚动，点按球体或按 Enter / 空格平滑返回阅读区顶部。';
+ if(id==='gradient-scroll-rail')return '单击轨道平滑定位，按住即可拖动，原地长按可先展开短条。';
  if(id==='hook-sidebar')return '点击菜单项确认选择，悬停或键盘聚焦另一项显示灰色钩线；方向键与 Home / End 移动焦点，Enter / 空格确认。';
  if(id==='infinite-photo-wall')return '滚轮或双轴拖动探索；方向键移动，Enter 打开中央图片，Escape 归位。目录每次进入演示一次短平移，不自动重播。';
  if(id==='mirrored-card-stack')return '左右拖动、短甩、方向键、箭头及分页点切换；两侧均抽出当前顶卡，中途按住可接住并反向继续。';
