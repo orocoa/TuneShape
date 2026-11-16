@@ -11,7 +11,7 @@ export const gradientRailGeometry = {
 };
 export const gradientRailPress = {delayMs: 240, tolerance: 6};
 export const gradientRailSpring = {stiffness: 280, damping: 30, mass: .65};
-export const gradientRailPalette = {empty: 250, pending: 240, start: 201, end: 69};
+export const gradientRailPalette = {surface: 250, pending: 230, start: 201, end: 69};
 export const gradientRailDemo = {fraction: .65, legMs: 400};
 export const defaultGradientRail: GradientRailSettings = {direction: 'top-to-bottom'};
 
@@ -39,11 +39,10 @@ export function gradientRailGray(index: number, progress: number, direction: Gra
   const reading = clamp(progress);
   const order = direction === 'top-to-bottom' ? index : count - 1 - index;
   const fill = clamp(reading * count - order);
-  const {empty, pending, start, end} = gradientRailPalette;
-  const unfilled = empty + (pending - empty) * clamp(reading * count);
+  const {pending, start, end} = gradientRailPalette;
   const depth = .65 * reading + .35 * order / (count - 1);
   const filled = start + (end - start) * depth;
-  return Math.round(unfilled + (filled - unfilled) * fill);
+  return Math.round(pending + (filled - pending) * fill);
 }
 
 export function gradientRailPressIntent(deltaX: number, deltaY: number) {

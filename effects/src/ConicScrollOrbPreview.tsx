@@ -7,7 +7,7 @@ import type {HistoryPreviewProps} from './preview-types';
 import {usePreviewClock} from './useDetailPlayback';
 import type {PlaybackControl} from './useDetailPlayback';
 import {
-  clampConicProgress, conicOrbDemo, conicOrbGeometry, conicOrbReading, conicOrbSpring, conicOrbStepTop,
+  clampConicProgress, conicOrbDemo, conicOrbGeometry, conicOrbReading, conicOrbSpring,
 } from './conic-scroll-orb';
 import './conic-scroll-orb.css';
 
@@ -16,10 +16,10 @@ const sections = [
     '环形渐变滚动球', '在阅读区内向下滚动，即可看到进度球。'],
   ['Track your progress', 'The ring and percentage follow the same reading position.',
     '查看进度', '圆环和百分比同步跟随阅读位置。'],
-  ['Go back a quarter', 'Click the orb, or focus it and press Enter or Space, to move back by a quarter of the full scroll distance.',
-    '向上回退四分之一', '点击球体，或聚焦后按 Enter 或空格，向上回退总滚动距离的四分之一。'],
+  ['Return to top', 'Click the orb, or focus it and press Enter or Space, to return to the top of this reading area.',
+    '返回顶部', '点击球体，或聚焦后按 Enter 或空格，即可返回阅读区顶部。'],
   ['Keep reading', 'Scroll again at any time to take over.',
-    '继续阅读', '回退过程中仍可随时手动滚动。'],
+    '继续阅读', '返回顶部途中仍可随时手动滚动。'],
 ] as const;
 
 const upwardKeys = new Set(['ArrowUp', 'PageUp', 'Home']);
@@ -38,7 +38,7 @@ export default function ConicScrollOrbPreview({
   const pane = useRef<HTMLDivElement>(null);
   const article = useRef<HTMLElement>(null);
   const button = useRef<HTMLButtonElement>(null);
-  const stepTarget = useRef<number | null>(null);
+  const returning = useRef(false);
   const lastCommand = useRef(0);
   const controls = useRef<PlaybackControl[]>([]);
   const pausedRef = useRef(paused);
@@ -64,25 +64,23 @@ export default function ConicScrollOrbPreview({
     report.current?.(side, false);
   }, [clear, side]);
 
-  const stopStep = useCallback(() => {
-    if (stepTarget.current === null) return;
-    stepTarget.current = null;
+  const stopReturn = useCallback(() => {
+    if (!returning.current) return;
+    returning.current = false;
     const viewport = pane.current!;
     viewport.scrollTo({top: viewport.scrollTop, behavior: 'instant'});
   }, []);
 
   const takeOver = useCallback(() => {
     stopDemo();
-    stopStep();
-  }, [stopDemo, stopStep]);
+    stopReturn();
+  }, [stopDemo, stopReturn]);
 
   const measure = useCallback(() => {
     const viewport = pane.current;
     if (!viewport) return;
     const next = readPane(viewport);
-    if (stepTarget.current !== null && Math.abs(stepTarget.current - viewport.scrollTop) <= 1) {
-      stepTarget.current = null;
-    }
+    if (viewport.scrollTop <= 0) returning.current = false;
     if (!next.visible && viewport.ownerDocument.activeElement === button.current) {
       viewport.focus({preventScroll: true});
     }
@@ -114,14 +112,13 @@ export default function ConicScrollOrbPreview({
 
   useLayoutEffect(() => {
     if (!available || reduced) stopDemo();
-    if (!available) stopStep();
-    else if (reduced && stepTarget.current !== null) {
-      const top = stepTarget.current;
-      stepTarget.current = null;
-      pane.current!.scrollTo({top, behavior: 'instant'});
+    if (!available) stopReturn();
+    else if (reduced && returning.current) {
+      returning.current = false;
+      pane.current!.scrollTo({top: 0, behavior: 'instant'});
       measure();
     }
-  }, [available, measure, reduced, stopDemo, stopStep]);
+  }, [available, measure, reduced, stopDemo, stopReturn]);
 
   useLayoutEffect(() => {
     if (reduced) progress.jump(actualProgress.current);
@@ -147,7 +144,7 @@ export default function ConicScrollOrbPreview({
 
     const start = viewport.scrollTop;
     report.current?.(side, true);
-    const animation = register(animate(start, [start, sample, conicOrbStepTop(sample, distance)], {
+    const animation = register(animate(start, [start, sample, 0], {
       duration: config.durationMs * 2 / 1000,
       delay: config.delayMs / 1000,
       ease: motionEasing(config.easing),
@@ -179,17 +176,15 @@ export default function ConicScrollOrbPreview({
     }
   };
 
-  const backOneQuarter = () => {
+  const backToTop = () => {
     const viewport = pane.current!;
     takeOver();
-    const {distance} = readPane(viewport);
-    const top = conicOrbStepTop(viewport.scrollTop, distance);
-    stepTarget.current = reduced ? null : top;
-    viewport.scrollTo({top, behavior: reduced ? 'instant' : 'smooth'});
+    returning.current = !reduced && viewport.scrollTop > 0;
+    viewport.scrollTo({top: 0, behavior: reduced ? 'instant' : 'smooth'});
     if (reduced) measure();
   };
 
-  const action = zh ? '向上回退总滚动距离的四分之一' : 'Scroll back a quarter of the reading distance';
+  const action = zh ? '返回顶部' : 'Back to top';
 
   return (
     <div className="history-demo" data-history-preview={side} data-recipe="conic-scroll-orb" data-trigger="click" data-paused={paused}>
@@ -208,7 +203,7 @@ export default function ConicScrollOrbPreview({
                 inert={!show} aria-hidden={!show} title={action}
                 style={orbStyle}
                 aria-label={zh ? `${action}，当前进度 ${labelText}` : `${action}, current progress ${labelText}`}
-                onClick={backOneQuarter}>
+                onClick={backToTop}>
                 <motion.span className="conic-orb-number" aria-hidden="true">{label}</motion.span>
               </motion.button>
             </div>

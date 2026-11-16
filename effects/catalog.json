@@ -1223,8 +1223,8 @@
       "name": "Conic Scroll Orb",
       "nameZh": "环形渐变滚动球",
       "category": "滚动",
-      "description": "A grayscale scroll indicator with a quarter-distance step back.",
-      "descriptionZh": "显示滚动进度并支持回退四分之一的灰阶进度球。",
+      "description": "A grayscale scroll indicator that returns the reading pane to the top.",
+      "descriptionZh": "显示滚动进度并支持返回阅读区顶部的灰阶进度球。",
       "editor": "examples/conic-scroll-orb/",
       "source": "examples/conic-scroll-orb",
       "documentation": {

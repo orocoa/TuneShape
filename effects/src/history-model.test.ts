@@ -9,7 +9,7 @@ import {monochromeOrbMotion} from './monochrome-scroll-orb-spec';
 import {gaugeKeyProgress,gaugeTrackPosition} from './vertical-scroll-gauge';
 import {verticalGaugeDescription,verticalGaugeMotion} from './vertical-scroll-gauge-spec';
 import verticalGaugeConfig from '../examples/vertical-scroll-gauge/config.json';
-import {clampConicProgress,conicOrbReading,conicOrbStepTop} from './conic-scroll-orb';
+import {clampConicProgress,conicOrbReading} from './conic-scroll-orb';
 import {conicOrbDescription,conicOrbMotion} from './conic-scroll-orb-spec';
 import conicOrbConfig from '../examples/conic-scroll-orb/config.json';
 import {gradientRailCenter,gradientRailDrag,gradientRailGeometry,gradientRailGray,gradientRailKey,gradientRailPressIntent,gradientRailProgress,gradientRailSeek,gradientRailWidth} from './gradient-scroll-rail';
@@ -142,15 +142,7 @@ test('conic orb measures actual reading progress and uses strict visibility thre
  assert.equal(clampConicProgress(100.01),100);
 });
 
-test('conic orb takes quarter steps from the current position within the reading pane',()=>{
- assert.equal(conicOrbStepTop(500,500),375);
- assert.equal(conicOrbStepTop(300,500),175);
- assert.equal(conicOrbStepTop(240,500),115);
- assert.equal(conicOrbStepTop(73,500),0);
- assert.equal(conicOrbStepTop(0,0),0);
-});
-
-test('conic orb uses the standard preset and exports its fixed spring, geometry and step',()=>{
+test('conic orb uses the standard preset and exports its fixed spring, geometry and return to top',()=>{
  const config=defaultHistory('conic-scroll-orb');
  assert.deepEqual(parseHistory(JSON.stringify(conicOrbConfig)),config);
  assert.deepEqual(parseHistory(serializeHistory(config)),config);
@@ -164,7 +156,7 @@ test('conic orb uses the standard preset and exports its fixed spring, geometry 
  assert.deepEqual(orb.spring,{stiffness:210,damping:25,mass:.85});
  assert.deepEqual(orb.geometry,{size:46,coreInset:4,startAngle:220});
  assert.deepEqual(orb.visibility,{minimumTravel:320,revealOffset:72,durationMs:180,opacity:.78,hoverOpacity:.93});
- assert.equal(orb.stepBackFraction,.25);
+ assert.equal(orb.returnToTop,'native smooth scroll on the bound pane');
 });
 
 test('gradient rail uses the specified continuous Gaussian shape, spacing and limits',()=>{
@@ -181,13 +173,13 @@ test('gradient rail uses the specified continuous Gaussian shape, spacing and li
  assert.equal(gradientRailWidth(2,0,1),gradientRailWidth(29,31,1));
 });
 
-test('gradient rail starts empty, mirrors fill direction and darkens filled bars as reading advances',()=>{
+test('gradient rail keeps unfilled bars visible at zero, mirrors fill direction and deepens filled bars',()=>{
  assert.equal(gradientRailProgress(0,0),0);
  assert.equal(gradientRailProgress(-12,500),0);
  assert.equal(gradientRailProgress(600,500),1);
  for(let i=0;i<32;i++){
-  assert.equal(gradientRailGray(i,0,'top-to-bottom'),250);
-  assert.equal(gradientRailGray(i,0,'bottom-to-top'),250);
+  assert.equal(gradientRailGray(i,0,'top-to-bottom'),230);
+  assert.equal(gradientRailGray(i,0,'bottom-to-top'),230);
   assert.equal(gradientRailGray(i,.42,'top-to-bottom'),gradientRailGray(31-i,.42,'bottom-to-top'));
  }
  const forward='top-to-bottom';
@@ -195,9 +187,10 @@ test('gradient rail starts empty, mirrors fill direction and darkens filled bars
  assert.ok(gradientRailGray(0,.2,forward)>gradientRailGray(0,.5,forward));
  assert.ok(gradientRailGray(0,.5,forward)>gradientRailGray(0,.8,forward));
  assert.ok(gradientRailGray(10,.75,forward)>gradientRailGray(20,.75,forward));
- assert.equal(gradientRailGray(16,.5,forward),240);
+ assert.equal(gradientRailGray(1,.01,forward),230);
+ assert.equal(gradientRailGray(16,.5,forward),230);
  const partial=gradientRailGray(16,16.5/32,forward);
- assert.ok(partial<240&&partial>gradientRailGray(16,17/32,forward));
+ assert.ok(partial<230&&partial>gradientRailGray(16,17/32,forward));
 });
 
 test('gradient rail starts vertical drags beyond the click tolerance and maps relative travel in both directions',()=>{

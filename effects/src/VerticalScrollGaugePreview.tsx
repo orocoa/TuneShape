@@ -14,7 +14,7 @@ import './vertical-scroll-gauge.css';
 
 const sections = [
   ['Vertical Scroll Gauge', 'Scroll this reading area to move the gauge.', '竖向滚动刻度', '在阅读区内滚动，查看刻度上的阅读进度。'],
-  ['Drag the gauge', 'Drag along the track to move through this article.', '拖动刻度', '沿刻度轨道拖动，跳转到文章中的对应位置。'],
+  ['Use the gauge', 'Click the track to scroll smoothly, or drag to follow the pointer.', '操作刻度', '单击刻度可平滑滚到对应位置，拖动时即时跟手。'],
   ['Use the keyboard', 'Tab to the gauge and use the arrow keys or Page Up and Page Down.', '使用键盘', '按 Tab 聚焦刻度，然后使用方向键或 Page Up、Page Down。'],
   ['End of the reading area', 'Home and End jump to the start and end of the article.', '阅读区末尾', '按 Home 或 End 跳到文章的开头或末尾。'],
 ] as const;
@@ -33,7 +33,8 @@ export default function VerticalScrollGaugePreview({
   const pane = useRef<HTMLDivElement>(null);
   const article = useRef<HTMLElement>(null);
   const track = useRef<HTMLSpanElement>(null);
-  const drag = useRef<{stop: () => void; dispose: () => void} | null>(null);
+  const capture = useRef<{dragging: boolean; stop: () => void; dispose: () => void} | null>(null);
+  const seekTarget = useRef<number | null>(null);
   const lastCommand = useRef(0);
   const controls = useRef<PlaybackControl[]>([]);
   const pausedRef = useRef(paused);
@@ -52,11 +53,14 @@ export default function VerticalScrollGaugePreview({
 
   const measure = useCallback(() => {
     const viewport = pane.current!;
+    if (seekTarget.current !== null && Math.abs(seekTarget.current - viewport.scrollTop) <= 1) {
+      seekTarget.current = null;
+    }
     const travel = scrollTravel(viewport);
     const next = travel > 0 ? clampGaugeProgress(viewport.scrollTop / travel) : 0;
     if (next === progress.get()) return;
     progress.set(next);
-    if (reduced || drag.current) smooth.jump(next);
+    if (reduced || capture.current?.dragging) smooth.jump(next);
     else if (!pausedRef.current || !controls.current.length) smooth.set(next);
   }, [progress, reduced, smooth]);
 
@@ -66,11 +70,23 @@ export default function VerticalScrollGaugePreview({
     report.current?.(side, false);
   }, [clear, side]);
 
+  const stopSeek = useCallback(() => {
+    if (seekTarget.current === null) return;
+    seekTarget.current = null;
+    const viewport = pane.current!;
+    viewport.scrollTo({top: viewport.scrollTop, behavior: 'instant'});
+  }, []);
+
+  const takeOver = useCallback(() => {
+    stopDemo();
+    stopSeek();
+  }, [stopDemo, stopSeek]);
+
   useLayoutEffect(() => {
     const viewport = pane.current!;
     viewport.addEventListener('scroll', measure, {passive: true});
-    // Let the demo release the pane before the browser applies the first wheel delta.
-    viewport.addEventListener('wheel', stopDemo, {passive: false});
+    // Stop programmatic scrolling before the browser applies the first wheel delta.
+    viewport.addEventListener('wheel', takeOver, {passive: false});
     const observer = new ResizeObserver(measure);
     observer.observe(viewport);
     observer.observe(article.current!);
@@ -78,9 +94,9 @@ export default function VerticalScrollGaugePreview({
     return () => {
       observer.disconnect();
       viewport.removeEventListener('scroll', measure);
-      viewport.removeEventListener('wheel', stopDemo);
+      viewport.removeEventListener('wheel', takeOver);
     };
-  }, [measure, stopDemo]);
+  }, [measure, takeOver]);
 
   useLayoutEffect(() => {
     if (reduced) smooth.jump(progress.get());
@@ -89,20 +105,21 @@ export default function VerticalScrollGaugePreview({
   }, [available, paused, progress, reduced, smooth]);
 
   useLayoutEffect(() => () => {
-    drag.current?.dispose();
+    capture.current?.dispose();
     clear();
   }, [clear]);
 
   useLayoutEffect(() => {
     if (!available || reduced) stopDemo();
-    if (!available) drag.current?.stop();
-  }, [available, reduced, stopDemo]);
+    if (!available) capture.current?.stop();
+    if (!available) stopSeek();
+  }, [available, reduced, stopDemo, stopSeek]);
 
   useLayoutEffect(() => {
     if (!available || !command.active || command.seq <= lastCommand.current) return;
     lastCommand.current = command.seq;
-    stopDemo();
-    drag.current?.stop();
+    takeOver();
+    capture.current?.stop();
     const viewport = pane.current!;
     const top = viewport.scrollTop;
     const sample = Math.round(scrollTravel(viewport) * verticalGaugeDemo.fraction);
@@ -130,65 +147,85 @@ export default function VerticalScrollGaugePreview({
       },
     }));
   }, [available, command.active, command.seq, config.delayMs, config.durationMs, config.easing,
-    forget, measure, reduced, register, side, stopDemo]);
+    forget, measure, reduced, register, side, takeOver]);
 
-  const scrollToProgress = (value: number) => {
+  const scrollToProgress = (value: number, behavior: ScrollBehavior = 'instant') => {
     const viewport = pane.current!;
-    viewport.scrollTo({top: value * scrollTravel(viewport), behavior: 'instant'});
+    const top = value * scrollTravel(viewport);
+    seekTarget.current = behavior === 'smooth' && Math.abs(top - viewport.scrollTop) > 1 ? top : null;
+    viewport.scrollTo({top, behavior});
     measure();
   };
 
-  const startDrag = (event: PointerEvent<HTMLDivElement>) => {
-    if (!event.isPrimary || event.button !== 0 || drag.current) return;
+  const startPointer = (event: PointerEvent<HTMLDivElement>) => {
+    if (!event.isPrimary || event.button !== 0 || capture.current) return;
     event.preventDefault();
     event.stopPropagation();
     stopDemo();
     const slider = event.currentTarget;
-    const pointer = event.pointerId;
+    const {pointerId: pointer, clientX: startX, clientY: startY} = event;
     slider.focus({preventScroll: true});
     slider.setPointerCapture(pointer);
-    const scrollAtPointer = (clientY: number) => {
+    const scrollAtPointer = (clientY: number, behavior: ScrollBehavior) => {
       const bounds = track.current?.getBoundingClientRect();
-      if (bounds?.height) scrollToProgress(gaugeTrackPosition((clientY - bounds.top) / bounds.height, direction));
+      if (bounds?.height) scrollToProgress(gaugeTrackPosition((clientY - bounds.top) / bounds.height, direction), behavior);
     };
+    const moved = (input: globalThis.PointerEvent) => Math.hypot(input.clientX - startX, input.clientY - startY) > 6;
     const controller = new AbortController();
     const dispose = () => {
       controller.abort();
-      drag.current = null;
+      capture.current = null;
       if (slider.hasPointerCapture(pointer)) slider.releasePointerCapture(pointer);
     };
     const stop = () => {
       dispose();
-      smooth.jump(progress.get());
-      setDragging(false);
+      if (session.dragging) {
+        smooth.jump(progress.get());
+        setDragging(false);
+      }
     };
-    drag.current = {dispose, stop};
-    setDragging(true);
-    scrollAtPointer(event.clientY);
+    const session = {dragging: false, dispose, stop};
+    capture.current = session;
 
     const scope = {signal: controller.signal};
     const view = slider.ownerDocument.defaultView!;
     const end = (input: globalThis.PointerEvent) => { if (input.pointerId === pointer) stop(); };
     view.addEventListener('pointermove', input => {
       if (input.pointerId !== pointer) return;
-      if (input.buttons === 0) stop();
-      else scrollAtPointer(input.clientY);
+      if (input.buttons === 0) {
+        stop();
+        return;
+      }
+      if (!session.dragging) {
+        if (!moved(input)) return;
+        stopSeek();
+        session.dragging = true;
+        setDragging(true);
+      }
+      scrollAtPointer(input.clientY, 'instant');
     }, scope);
-    view.addEventListener('pointerup', end, scope);
+    view.addEventListener('pointerup', input => {
+      if (input.pointerId !== pointer) return;
+      stop();
+      if (!session.dragging && !moved(input)) scrollAtPointer(input.clientY, reduced ? 'instant' : 'smooth');
+    }, scope);
     view.addEventListener('pointercancel', end, scope);
     view.addEventListener('blur', stop, scope);
     slider.addEventListener('lostpointercapture', end, scope);
   };
 
-  // End capture if a direction change would invalidate the active pointer mapping.
-  useLayoutEffect(() => { drag.current?.stop(); }, [direction, measure]);
+  // End pointer actions when their direction or motion preference changes.
+  useLayoutEffect(() => {
+    capture.current?.stop();
+    stopSeek();
+  }, [direction, measure, stopSeek]);
 
   const onGaugeKey = (event: KeyboardEvent<HTMLDivElement>) => {
     const next = gaugeKeyProgress(event.key, progress.get());
     if (next === undefined) return;
     event.preventDefault();
     event.stopPropagation();
-    stopDemo();
+    takeOver();
     scrollToProgress(next);
   };
 
@@ -203,7 +240,7 @@ export default function VerticalScrollGaugePreview({
     if (!Object.hasOwn(steps, event.key)) return;
     event.preventDefault();
     event.stopPropagation();
-    stopDemo();
+    takeOver();
     viewport.scrollTo({top: viewport.scrollTop + steps[event.key], behavior: 'instant'});
   };
 
@@ -213,7 +250,7 @@ export default function VerticalScrollGaugePreview({
         <div className="vertical-gauge-stage" inert={!available} onClick={event => event.stopPropagation()}>
           <div ref={pane} className="vertical-gauge-pane" tabIndex={0} role="region"
             aria-label={zh ? '竖向滚动刻度演示阅读区' : 'Vertical Scroll Gauge reading area'}
-            onPointerDown={stopDemo} onKeyDown={onPaneKey}>
+            onPointerDown={takeOver} onKeyDown={onPaneKey}>
             <article ref={article} className="vertical-gauge-content">
               {sections.map(([title, text, titleZh, textZh]) => (
                 <section key={title}><h3>{zh ? titleZh : title}</h3><p>{zh ? textZh : text}</p></section>
@@ -223,7 +260,7 @@ export default function VerticalScrollGaugePreview({
               <div className="vertical-scroll-gauge" role="slider" tabIndex={0}
                 aria-label={zh ? '阅读进度' : 'Reading progress'} aria-orientation="vertical"
                 aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent} aria-valuetext={`${percent}%`}
-                data-direction={direction} data-dragging={dragging} onPointerDown={startDrag} onKeyDown={onGaugeKey}>
+                data-direction={direction} data-dragging={dragging} onPointerDown={startPointer} onKeyDown={onGaugeKey}>
                 <span ref={track} className="vertical-gauge-track" aria-hidden="true">
                   <motion.span className="vertical-gauge-fill" style={{height: fill}}/>
                   <motion.span className="vertical-gauge-percent" style={{top: label}}>{percent}%</motion.span>

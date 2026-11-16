@@ -16,8 +16,8 @@ export function gradientRailDescription(config: HistoryConfig, language: 'zh' | 
         ? 'Click the rail to scroll smoothly to that position. A vertical drag starts once movement exceeds 6 px. Holding still for 240 ms opens the arc in place.'
         : '单击轨道可平滑滚到对应位置。纵向移动超过 6 像素即可拖动，原地按住 240 毫秒可先展开弧形。'},
       {label: en ? 'Start and end' : '起点与终点', text: en
-        ? `The rail starts empty. The 32 right-aligned bars fill ${reverse ? 'from bottom to top' : 'from top to bottom'} from light to dark gray. Filled bars deepen as progress advances.`
-        : `0% 时轨道为空。32 根右对齐的短条${reverse ? '从下向上' : '从上向下'}由浅灰向深灰填充，已填充的短条也会随着进度加深。`},
+        ? `The 32 right-aligned bars stay visible in light gray at 0%. They fill ${reverse ? 'from bottom to top' : 'from top to bottom'} from light to dark gray. Filled bars deepen as progress advances.`
+        : `0% 时仍显示 32 根右对齐的浅灰短条。进度${reverse ? '从下向上' : '从上向下'}由浅灰向深灰填充，已填充的短条也会随着进度加深。`},
       {label: en ? 'Timing' : '时序', text: en
         ? 'A continuous center and strength drive the Gaussian width profile. The spring uses stiffness 280, damping 30, and mass 0.65. Reading position responds immediately.'
         : '连续中心和形变强度共同驱动高斯宽度曲线。弹簧刚度为 280、阻尼 30、质量 0.65，阅读位置即时响应。'},

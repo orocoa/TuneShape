@@ -17,8 +17,8 @@ import './gradient-scroll-rail.css';
 
 const {height, count, barHeight, gap} = gradientRailGeometry;
 const indices = Array.from({length: count}, (_, index) => index);
-const emptyShade = gradientRailPalette.empty;
-const backgroundColor = `rgb(${emptyShade} ${emptyShade} ${emptyShade})`;
+const surface = gradientRailPalette.surface;
+const backgroundColor = `rgb(${surface} ${surface} ${surface})`;
 const sections = [
   ['Gradient Scroll Rail', 'Scroll inside this reading area, or click the rail on the right to scroll to that position.',
     '渐变滚动轨', '在阅读区内滚动，或单击右侧轨道平滑滚到对应位置。'],
