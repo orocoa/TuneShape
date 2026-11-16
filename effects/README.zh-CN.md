@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文**
 
-包含当前可见目录的 73 个动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
+包含 74 个可独立运行的动效。每项均包含默认配置、可运行入口与中英文说明，共享此目录内的公开渲染源码。
 
 [在线编辑器](https://tuneshape.kai-nex.com/)
 
@@ -91,6 +91,7 @@ pnpm build
 | bencho-eye-tracker | [Eye Tracker](examples/bencho-eye-tracker/README.md) | [眼睛跟随](examples/bencho-eye-tracker/README.zh-CN.md) |
 | bencho-context-meter | [Context Meter](examples/bencho-context-meter/README.md) | [上下文计量](examples/bencho-context-meter/README.zh-CN.md) |
 | page-turn-cards | [Page Turn Cards](examples/page-turn-cards/README.md) | [翻页卡片](examples/page-turn-cards/README.zh-CN.md) |
+| pixel-scroll-orb | [Pixel Scroll Orb](examples/pixel-scroll-orb/README.md) | [像素滚动球](examples/pixel-scroll-orb/README.zh-CN.md) |
 
 ## 许可与范围
 

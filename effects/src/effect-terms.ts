@@ -44,6 +44,7 @@ export const effectTerms:Record<string,EffectTerm>={
  'hover-preview':{label:'文字悬停图片',english:'Hover Preview',aliases:['图片预览','词语预览','hover image','word preview']},
  'glass-folder':{label:'磨砂文件夹',english:'Glass Folder',aliases:['玻璃文件夹','文件夹展开','Folder component','foldercomponent','Rare UI Folder']},
  'scroll-progress':{label:'阅读进度胶囊',english:'Scroll Progress',aliases:['滚动进度指示器','阅读进度','章节胶囊','scrollprogressindicator','Rare UI Scroll Progress']},
+ 'pixel-scroll-orb':{label:'像素滚动球',english:'Pixel Scroll Orb',aliases:['滚动进度','返回顶部','像素进度','scroll progress','back to top','pixel digits']},
  'waving-card':{label:'倾斜挥手卡片',english:'Waving Tilt Card',aliases:['个人介绍卡片','挥手卡片','orocoa','MuhammadHasann','hot-liger-0','tilt card','waving card','Uiverse']},
  'depth-ribbon':{label:'纵深图带',english:'Depth Ribbon',aliases:['三维图带','图片绳结','图片丝带','3D gallery','depth ribbon','React Bits']},
  'passage-gallery':{label:'穿行图库',english:'Passage Gallery',aliases:['隧道图库','图片隧道','穿行画廊','3D画廊','photo tunnel','passage gallery','React Bits']},

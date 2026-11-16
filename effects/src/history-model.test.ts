@@ -1,7 +1,53 @@
 import {glyphPlaybackMs,defaultGlyphWall} from './glyph-wall';
 import {test} from 'node:test';import assert from 'node:assert/strict';
 import {recipes,defaultHistory,validateHistory,parseHistory,serializeHistory,compiledTracks,historyDescription,historyMotion,serializeHistoryMotion} from './history-model.ts';
-for(const recipe of recipes)test(recipe.label+'：完整轨道、时序和描述可往返还原',()=>{const config=defaultHistory(recipe.id);config.durationMs=1800;config.delayMs=['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id)?0:90;config.offsetX=-15;config.offsetY=12;config.scale=.93;if(!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id))config.easing=[.3,-.2,.7,1.2];config.loop=!recipe.id.startsWith('skiper-')&&!recipe.id.startsWith('bencho-')&&!recipe.id.startsWith('reelfolio-')&&!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','infinite-photo-wall','mirrored-card-stack','page-turn-cards','chapter-progress-nav','liquid-glass-logo','chromatic-button','topographic-flow','gooey-wordmark','liquid-carousel','coffee-selector','hover-invert','glass-radio','hover-preview','duration-picker','rail-toc','hook-sidebar','scroll-progress','glass-folder','rounded-checks','expandable-sidebar','encrypted-text','gooey-input','app-orbit','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy'].includes(recipe.id);const restored=parseHistory(serializeHistory(config));assert.deepEqual(restored,config);assert.deepEqual(compiledTracks(restored),compiledTracks(config));assert.deepEqual(compiledTracks(restored,true),compiledTracks(config,true));assert.deepEqual(historyDescription(restored),historyDescription(config));assert.deepEqual(historyMotion(restored),historyMotion(config));assert.notEqual(restored.tracks,config.tracks);});
+import {catalogIds} from './browse-catalog';
+import {orbFace,orbParticleFrame,orbParticleSpawn,orbParticles,orbScrollMetrics} from './pixel-scroll-orb';
+import {pixelScrollOrbDescription,pixelScrollOrbMotion} from './pixel-scroll-orb-spec';
+import orbConfig from '../examples/pixel-scroll-orb/config.json';
+
+test('pixel scroll orb keeps the original visibility, rounding and digit alignment',()=>{
+ assert.equal(orbScrollMetrics(90,520,200).visible,false);
+ assert.equal(orbScrollMetrics(72,600,200).visible,false);
+ assert.equal(orbScrollMetrics(73,600,200).visible,true);
+ assert.deepEqual(orbScrollMetrics(NaN,200,400),{distance:0,percent:0,visible:false});
+ assert.equal(orbScrollMetrics(-40,1200,200).percent,0);
+ assert.deepEqual(orbScrollMetrics(600,2500,500),{distance:2000,percent:30,visible:true});
+ assert.equal(orbScrollMetrics(2000,1200,200).percent,100);
+ for(const [percent,digits,digitX,activeSegments] of [
+  [0,'00',17.5,0],[3,'03',17.5,1],[50,'50',17.5,12],[99,'99',17.5,24],[100,'100',11.5,24],
+ ] as const)assert.deepEqual(orbFace(percent),{digits,digitX,activeSegments});
+});
+
+test('pixel scroll orb default preset, Scrolling catalog and motion specification agree',()=>{
+ const config=defaultHistory('pixel-scroll-orb');
+ assert.deepEqual(parseHistory(JSON.stringify(orbConfig)),config);
+ assert.throws(()=>validateHistory({...config,loop:true}),/不支持循环/);
+ assert.throws(()=>validateHistory({...config,scrollTop:100}));
+ assert.ok(catalogIds('scrolling').includes(config.recipeId));
+ assert.equal(historyDescription(config).title,'像素滚动球');
+ assert.equal(pixelScrollOrbDescription(config,'en').title,'Pixel Scroll Orb');
+ assert.deepEqual(historyMotion(config),pixelScrollOrbMotion(config));
+ const adapter=pixelScrollOrbMotion(config).adapters.pixelScrollOrb;
+ assert.equal(adapter.size,56);
+ assert.equal(adapter.segments.length,24);
+ assert.equal(adapter.particles.length,7);
+ assert.equal(adapter.returnToTop.durationMs,config.durationMs);
+});
+
+test('orb hover particles vary between launches and enter, slow, and fade within each cycle',()=>{
+ const anchor=orbParticles[0];
+ const spawns=[.1,.65,.95].map(value=>orbParticleSpawn(anchor,()=>value));
+ assert.deepEqual(spawns.map(spawn=>spawn.size),[2,3,4]);
+ assert.equal(new Set(spawns.map(spawn=>`${spawn.x},${spawn.y}`)).size,3);
+ assert.ok(spawns.every(spawn=>Number.isInteger(spawn.x)&&Number.isInteger(spawn.y)&&spawn.drift<0));
+ assert.deepEqual(orbParticleFrame(anchor,0),{travel:0,opacity:0});
+ assert.equal(orbParticleFrame(anchor,100/anchor.duration).opacity,anchor.opacity);
+ assert.ok(orbParticleFrame(anchor,.2).travel>1/3);
+ assert.ok(orbParticleFrame(anchor,.6).opacity<orbParticleFrame(anchor,.2).opacity);
+ assert.deepEqual(orbParticleFrame(anchor,1),{travel:1,opacity:0});
+});
+for(const recipe of recipes)test(recipe.label+'：完整轨道、时序和描述可往返还原',()=>{const config=defaultHistory(recipe.id);config.durationMs=1800;config.delayMs=['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id)?0:90;config.offsetX=-15;config.offsetY=12;config.scale=.93;if(!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','reelfolio-rig','bencho-card-swap','bencho-wake-slider','bencho-image-compare','bencho-label-input','bencho-carousel','bencho-upload-dropzone','bencho-slide-confirm','bencho-aspect','bencho-liq-create','bencho-eye-tracker','bencho-context-meter','infinite-photo-wall','page-turn-cards','mirrored-card-stack'].includes(recipe.id))config.easing=[.3,-.2,.7,1.2];config.loop=!recipe.id.startsWith('skiper-')&&!recipe.id.startsWith('bencho-')&&!recipe.id.startsWith('reelfolio-')&&!['depth-ribbon','passage-gallery','waving-card','glass-generate','expanding-menu','infinite-photo-wall','mirrored-card-stack','page-turn-cards','chapter-progress-nav','liquid-glass-logo','chromatic-button','topographic-flow','gooey-wordmark','liquid-carousel','coffee-selector','hover-invert','glass-radio','hover-preview','duration-picker','rail-toc','hook-sidebar','scroll-progress','pixel-scroll-orb','glass-folder','rounded-checks','expandable-sidebar','encrypted-text','gooey-input','app-orbit','typewriter-text','soft-blur-in','short-slide-down','kinetic-center-build','period-drop','outline-trace','glyph-anatomy'].includes(recipe.id);const restored=parseHistory(serializeHistory(config));assert.deepEqual(restored,config);assert.deepEqual(compiledTracks(restored),compiledTracks(config));assert.deepEqual(compiledTracks(restored,true),compiledTracks(config,true));assert.deepEqual(historyDescription(restored),historyDescription(config));assert.deepEqual(historyMotion(restored),historyMotion(config));assert.notEqual(restored.tracks,config.tracks);});
 test('所有预设进入退出阶段时序有效；文字揭示淡出，其余反向轨道保留关键帧关系',()=>{
  for(const recipe of recipes){
   const config=defaultHistory(recipe.id),forward=compiledTracks(config),exit=compiledTracks(config,true);
