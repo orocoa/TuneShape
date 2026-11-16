@@ -9,5 +9,9 @@
   "scale": 1,
   "loop": false,
   "interruption": "retarget",
-  "tracks": []
+  "tracks": [],
+  "pixelScrollOrb": {
+    "revealOffset": 72,
+    "particlesEnabled": true
+  }
 }

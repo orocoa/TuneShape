@@ -10,4 +10,6 @@ With reduced motion, the return to top is instant and progress and visibility up
 
 The standalone preview opens at 30% of the actual reading range. Play scrolls to 75%, briefly holds, then returns to 30% over about three seconds. Pause holds the current frame, Resume continues from it, and Replay starts a new run at 30%. Reading input takes over at any time. With reduced motion, Play and Replay set the reading position to 30% immediately.
 
-Parse the [default preset](config.json) with `parseHistory` and render it using [HistoryPreview](../../src/HistoryPreview.tsx). Pass the host's playback and reduced-motion state. The preset uses the standard playback fields. `serializeHistoryMotion` exports the [implementation specification](../../src/conic-scroll-orb-spec.ts).
+The preset saves `conicScrollOrb.revealOffset` (72 px) and `damping` (25). The controls apply immediately. Use Restore defaults or Import JSON, or copy the current JSON, Motion specification, or implementation prompt. Older schemaVersion 2 presets use the defaults for omitted fields.
+
+Parse the [default preset](config.json) with `parseHistory` and render it using [HistoryPreview](../../src/HistoryPreview.tsx). Pass the host's playback and reduced-motion state. `serializeHistoryMotion` exports the [implementation specification](../../src/conic-scroll-orb-spec.ts).

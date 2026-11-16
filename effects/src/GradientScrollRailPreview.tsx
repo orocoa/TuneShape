@@ -43,11 +43,12 @@ function scrollTravel(pane: HTMLElement) {
   return pane.scrollHeight - pane.clientHeight;
 }
 
-function RailBar({index, direction, center, strength, progress}: {
+function RailBar({index, direction, center, strength, progress, maxWidth, sigma}: {
   index: number; direction: GradientRailDirection;
   center: MotionValue<number>; strength: MotionValue<number>; progress: MotionValue<number>;
+  maxWidth: number; sigma: number;
 }) {
-  const width = useTransform(() => gradientRailWidth(index, center.get(), strength.get()));
+  const width = useTransform(() => gradientRailWidth(index, center.get(), strength.get(), maxWidth, sigma));
   const backgroundColor = useTransform(progress, value => {
     const shade = gradientRailGray(index, value, direction);
     return `rgb(${shade} ${shade} ${shade})`;
@@ -61,6 +62,8 @@ export default function GradientScrollRailPreview({
 }: HistoryPreviewProps) {
   const zh = useLanguage() === 'zh';
   const direction = config.gradientScrollRail?.direction ?? defaultGradientRail.direction;
+  const maxWidth = config.gradientScrollRail?.maxWidth ?? defaultGradientRail.maxWidth;
+  const sigma = config.gradientScrollRail?.sigma ?? defaultGradientRail.sigma;
   const available = enabled && interactive;
   const pane = useRef<HTMLDivElement>(null);
   const initializePreview = useContext(ScrollPreviewPane);
@@ -327,7 +330,7 @@ export default function GradientScrollRailPreview({
                 onKeyDown={onRailKey} onBlur={finishPress} onPointerDown={onRailDown} onPointerMove={onRailMove}
                 onPointerUp={onRailUp} onPointerCancel={onRailEnd} onLostPointerCapture={onRailEnd}>
                 <div ref={bars} className="gradient-rail-bars" aria-hidden="true" style={{gap}}>
-                  {indices.map(index => <RailBar key={index} {...{index, center, strength, direction, progress}}/>)}
+                  {indices.map(index => <RailBar key={index} {...{index, center, strength, direction, progress, maxWidth, sigma}}/>)}
                 </div>
               </div>
             </div>

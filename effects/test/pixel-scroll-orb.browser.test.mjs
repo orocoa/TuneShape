@@ -279,6 +279,160 @@ test('Standalone scrolling previews use real progress, playback and teardown', {
       }
     }
 
+
+    const scrollPane = '[data-history-preview] [role="region"]';
+    const action = label => page(text => {
+      [...document.querySelectorAll('.scrolling-settings button')].find(button => button.textContent.trim() === text).click();
+    }, label);
+    const tune = (name, value) => page((field, next) => {
+      const input = document.querySelector(`input[name="${field}"]`);
+      if (input.type === 'checkbox') {
+        if (input.checked !== next) input.click();
+      } else {
+        Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(input, String(next));
+        input.dispatchEvent(new Event('input', {bubbles: true}));
+      }
+    }, name, value);
+    const copiedText = async label => {
+      await page(() => {
+        window.copiedText = '';
+        navigator.clipboard.writeText = async text => { window.copiedText = text; };
+      });
+      await action(label);
+      return until(() => page(() => window.copiedText), label);
+    };
+
+    for (const [id, field, defaults, edits, option] of [
+      ['pixel-scroll-orb', 'pixelScrollOrb', {revealOffset:72, particlesEnabled:true}, {revealOffset:300, particlesEnabled:false}],
+      ['monochrome-scroll-orb', 'monochromeScrollOrb', {theme:'light', stiffness:210, damping:25}, {stiffness:95,damping:63}, 'Dark'],
+      ['vertical-scroll-gauge', 'verticalScrollGauge', {direction:'top-to-bottom', damping:36}, {damping:64}, 'Bottom to top'],
+      ['conic-scroll-orb', 'conicScrollOrb', {revealOffset:72,damping:25}, {revealOffset:310,damping:61}],
+      ['gradient-scroll-rail', 'gradientScrollRail', {direction:'top-to-bottom',maxWidth:36,sigma:2.5}, {maxWidth:68,sigma:5.75}, 'Bottom to top'],
+    ]) {
+      await open(id);
+      const defaultJSON = JSON.parse(await copiedText('Copy JSON'));
+      assert.deepEqual(defaultJSON[field], defaults);
+      await page(selector => { window.originalPane = document.querySelector(selector); }, scrollPane);
+      await toolbar('Play');
+      await until(async () => (await snapshot()).position > .40, `${id}: start Play before tuning`);
+      await toolbar('Pause');
+      await until(async () => (await snapshot()).transport === 'Resume', `${id}: pause before tuning`);
+      const pausedTop = (await snapshot()).position;
+      for (const [name, value] of Object.entries(edits)) await tune(name, value);
+      if (option) await toolbar(option);
+
+      const saved = await copiedText('Copy JSON');
+      const custom = JSON.parse(saved)[field];
+      const expected = {...defaults,...edits};
+      if (option === 'Dark') expected.theme = 'dark';
+      if (option === 'Bottom to top') expected.direction = 'bottom-to-top';
+      assert.deepEqual(custom, expected);
+      const motion = Function((await copiedText('Copy Motion spec')).replace('export default','return'))().adapters[field];
+      assert.deepEqual(motion.settings, custom);
+      const prompt = await copiedText('Copy prompt');
+      assert.ok(prompt.includes(JSON.stringify(custom)));
+      assert.match(prompt, /React.*TypeScript.*motion\/react/);
+      assert.equal((await snapshot()).transport, 'Resume');
+      assert.equal((await snapshot()).position, pausedTop);
+      if (option === 'Dark') assert.equal(await page(() => document.querySelector('.monochrome-orb-stage').dataset.theme), 'dark');
+      if (option === 'Bottom to top') assert.equal((await snapshot()).direction, 'bottom-to-top');
+
+      await action('Restore defaults');
+      assert.deepEqual(JSON.parse(await copiedText('Copy JSON')), defaultJSON);
+      await page(text => {
+        const input = document.querySelector('.scrolling-settings input[type="file"]');
+        const files = new DataTransfer();
+        files.items.add(new File([text], 'preset.json', {type:'application/json'}));
+        input.files = files.files;
+        input.dispatchEvent(new Event('change', {bubbles:true}));
+      }, saved);
+      await until(() => page(() => document.querySelector('.scrolling-settings [role="status"]').textContent === 'Configuration imported'), `${id}: import the exported JSON`);
+      assert.equal(await copiedText('Copy JSON'), saved);
+      assert.equal(await page(selector => document.querySelector(selector) === window.originalPane, scrollPane), true);
+      assert.equal((await snapshot()).position, pausedTop);
+      await toolbar('Resume');
+      await until(async () => (await snapshot()).position > pausedTop + .05, `${id}: tuning preserves the paused Play cycle`);
+    }
+
+    // Compare the real spring response with and without a change while the same scroll target is in flight.
+    async function springResponse(id, field, value) {
+      await open(id);
+      return page(async ({field, value}) => {
+        const pane = document.querySelector('[data-history-preview] [role="region"]');
+        const measure = () => {
+          const gauge = pane.querySelector('.vertical-gauge-fill');
+          const conic = pane.querySelector('.conic-scroll-orb');
+          return gauge ? parseFloat(gauge.style.height)
+            : conic ? parseFloat(conic.style.getPropertyValue('--conic-orb-progress'))
+              : Number(pane.querySelector('.monochrome-orb-number').textContent);
+        };
+        const frame = () => new Promise(requestAnimationFrame);
+        pane.scrollTop = .8 * (pane.scrollHeight - pane.clientHeight);
+        const start = performance.now();
+        while (measure() < 34 && performance.now() - start < 600) await frame();
+        const before = measure();
+        if (field) {
+          const input = document.querySelector(`input[name="${field}"]`);
+          Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(input, String(value));
+          input.dispatchEvent(new Event('input', {bubbles:true}));
+        }
+        const changed = performance.now();
+        const after = measure();
+        while (performance.now() - changed < 170) await frame();
+        const middle = measure();
+        while (Math.abs(measure() - 80) > 1 && performance.now() - changed < 2200) await frame();
+        return {before, after, middle, end:measure()};
+      }, {field, value});
+    }
+
+    for (const [id, parameters] of [
+      ['monochrome-scroll-orb', {stiffness:80,damping:65}],
+      ['vertical-scroll-gauge', {damping:65}],
+      ['conic-scroll-orb', {damping:65}],
+    ]) {
+      const baseline = await springResponse(id);
+      for (const [field, value] of Object.entries(parameters)) {
+        const tuned = await springResponse(id, field, value);
+        assert.ok(tuned.before >= 34 && tuned.before < 58, `${id}: edit during motion ${JSON.stringify(tuned)}`);
+        assert.ok(Math.abs(tuned.after - tuned.before) < 4, `${id}: changing ${field} preserves displayed position`);
+        assert.ok(baseline.middle - tuned.middle > 5, `${id}: ${field} changes the spring response ${JSON.stringify({baseline,tuned})}`);
+        assert.ok(Math.abs(tuned.end - 80) <= 1, `${id}: edited spring reaches its existing target`);
+      }
+    }
+
+    await open();
+    await hover();
+    await until(particlesVisible, 'default particles launch');
+    await tune('particlesEnabled', false);
+    await until(async () => !await particlesVisible(), 'turn off active particles');
+    await sleep(150);
+    assert.equal(await particlesVisible(), false);
+    await tune('particlesEnabled', true);
+    await until(particlesVisible, 're-enable hover particles in the same pane');
+
+    for (const id of ['pixel-scroll-orb', 'conic-scroll-orb']) {
+      await open(id);
+      const start = (await snapshot()).position;
+      await tune('revealOffset', 320);
+      await until(async () => !(await snapshot()).visible, `${id}: raising the live threshold hides the orb`);
+      assert.equal((await snapshot()).position, start);
+      await action('Restore defaults');
+      await until(async () => (await snapshot()).visible, `${id}: default threshold restores visibility`);
+    }
+
+    await open('gradient-scroll-rail');
+    const railPoint = await center('.gradient-rail-bar:nth-child(17)');
+    const widths = () => page(() => [...document.querySelectorAll('.gradient-rail-bar')].map(bar => parseFloat(bar.style.width)));
+    await mouse('mousePressed', railPoint, {button:'left',buttons:1,clickCount:1});
+    await until(async () => (await widths())[16] > 35, 'expand the default rail on hold');
+    const defaultWidths = await widths();
+    await tune('sigma', 7);
+    await until(async () => (await widths())[23] - defaultWidths[23] > 10, 'sigma broadens the active rail');
+    await tune('maxWidth', 68);
+    await until(async () => (await widths())[16] > 66, 'maxWidth lengthens the active rail');
+    await mouse('mouseReleased', railPoint, {button:'left',buttons:0,clickCount:1});
+    await until(async () => Math.max(...await widths()) < 9, 'release retains the rest width');
+
     await open();
     await page(async () => {
       const {mountScrollingPreview} = await import('/demo/scrolling-preview.tsx');
@@ -340,13 +494,16 @@ test('Standalone scrolling previews use real progress, playback and teardown', {
     await send('Emulation.setEmulatedMedia', {features: [{name: 'prefers-reduced-motion', value: 'reduce'}]});
     for (const id of ids) {
       await open(id);
+      if (id === 'pixel-scroll-orb') await tune('revealOffset', 36);
+      else if (id === 'gradient-scroll-rail') await tune('sigma', 6);
+      else await tune('damping', 60);
       await focus('.reuse-demo [role="region"]');
       await key('End', 'End', 35);
       await until(async () => near((await snapshot()).position, 1), `${id}: reach End before reduced-motion Play`);
       await toolbar('Play');
       const settled = await until(async () => {
         const state = await snapshot();
-        return near(state.position, .30) && state.transport === 'Play' && state;
+        return near(state.position, .30) && near(state.percentage, 30, 1) && state.transport === 'Play' && state;
       }, `${id}: reduced-motion Play settles immediately at 30%`);
       assert.ok(settled.visible);
     }

@@ -11,6 +11,7 @@
   "interruption": "retarget",
   "tracks": [],
   "verticalScrollGauge": {
-    "direction": "top-to-bottom"
+    "direction": "top-to-bottom",
+    "damping": 36
   }
 }

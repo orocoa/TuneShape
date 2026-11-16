@@ -37,6 +37,10 @@ export const orbParticleFade = {inMs: 100, outStart: .12};
 export const orbMinimumTravel = 320;
 export const orbRevealOffset = 72;
 
+export type PixelScrollOrbSettings = {revealOffset?: number; particlesEnabled?: boolean};
+export const defaultPixelScrollOrb = {revealOffset: orbRevealOffset, particlesEnabled: true};
+export const pixelOrbBounds = {revealOffset: [0, 320]} as const;
+
 type OrbParticle = typeof orbParticles[number];
 
 export function orbParticleSpawn(anchor: OrbParticle, random = Math.random) {
@@ -67,11 +71,11 @@ export function orbParticleFrame(anchor: OrbParticle, phase: number) {
 
 const nonnegative = (value: number) => Number.isFinite(value) ? Math.max(0, value) : 0;
 
-export function orbScrollMetrics(scrollTop: number, scrollHeight: number, clientHeight: number) {
+export function orbScrollMetrics(scrollTop: number, scrollHeight: number, clientHeight: number, revealOffset = defaultPixelScrollOrb.revealOffset) {
   const distance = Math.max(0, nonnegative(scrollHeight) - nonnegative(clientHeight));
   const top = Math.min(nonnegative(scrollTop), distance);
   const percent = distance > 0 ? Math.round(100 * top / distance) : 0;
-  return { distance, percent, visible: distance > orbMinimumTravel && top > orbRevealOffset };
+  return { distance, percent, visible: distance > orbMinimumTravel && top > revealOffset };
 }
 
 export function orbFace(percent: number) {

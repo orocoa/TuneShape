@@ -18,6 +18,7 @@ import gradientRailConfig from '../examples/gradient-scroll-rail/config.json';
 import orbConfig from '../examples/pixel-scroll-orb/config.json';
 import monochromeOrbConfig from '../examples/monochrome-scroll-orb/config.json';
 import publicCatalog from '../catalog.json';
+import {scrollingPrompt, scrollingSettingsFor} from './scrolling-config';
 
 test('pixel scroll orb keeps the original visibility, rounding and digit alignment',()=>{
  assert.equal(orbScrollMetrics(90,520,200).visible,false);
@@ -85,7 +86,7 @@ test('the monochrome orb saves a theme and exports the specified geometry and sp
  const dark={...config,monochromeScrollOrb:{theme:'dark' as const}};
  assert.deepEqual(parseHistory(serializeHistory(dark)),dark);
  assert.throws(()=>validateHistory({...config,monochromeScrollOrb:{theme:'blue'}}));
- assert.throws(()=>validateHistory({...config,monochromeScrollOrb:{theme:'light',stiffness:120}}));
+ assert.throws(()=>validateHistory({...config,monochromeScrollOrb:{theme:'light',stiffness:79}}));
  assert.throws(()=>validateHistory({...config,monochromeScrollOrb:undefined}));
  assert.throws(()=>validateHistory({...config,loop:true}));
  assert.throws(()=>validateHistory({...defaultHistory('pixel-scroll-orb'),monochromeScrollOrb:{theme:'light'}}));
@@ -109,7 +110,7 @@ test('vertical gauge mirrors the fill endpoint and inverse drag mapping in the r
  assert.equal(gaugeKeyProgress('ArrowDown',1),1);
 });
 
-test('vertical gauge saves only direction and exports its spring and geometry',()=>{
+test('vertical gauge preserves legacy direction presets and exports its spring and geometry',()=>{
  const config=defaultHistory('vertical-scroll-gauge');
  assert.deepEqual(parseHistory(JSON.stringify(verticalGaugeConfig)),config);
  const reverse={...config,verticalScrollGauge:{direction:'bottom-to-top' as const}};
@@ -125,7 +126,7 @@ test('vertical gauge saves only direction and exports its spring and geometry',(
  const exported=Function(serializeHistoryMotion(reverse).replace('export default','return'))();
  assert.deepEqual(exported,verticalGaugeMotion(reverse));
  const gauge=exported.adapters.verticalScrollGauge;
- assert.deepEqual(gauge.settings,{direction:'bottom-to-top'});
+ assert.deepEqual(gauge.settings,{direction:'bottom-to-top',damping:36});
  assert.deepEqual(gauge.spring,{stiffness:300,damping:36,mass:.6,restDelta:.001,skipInitialAnimation:true});
  assert.equal(gauge.geometry.trackWidthPx,6);
 });
@@ -218,7 +219,7 @@ test('gradient rail clicks map to the visible track in either direction and clam
  }
 });
 
-test('gradient rail round trips its single setting and exports its press and spring profile',()=>{
+test('gradient rail preserves legacy direction presets and exports its press and spring profile',()=>{
  const config=defaultHistory('gradient-scroll-rail');
  assert.deepEqual(parseHistory(JSON.stringify(gradientRailConfig)),config);
  const reverse={...config,gradientScrollRail:{direction:'bottom-to-top' as const}};
@@ -235,6 +236,53 @@ test('gradient rail round trips its single setting and exports its press and spr
  assert.deepEqual(exported,gradientRailMotion(reverse));
  assert.deepEqual(exported.adapters.gradientScrollRail.press,{delayMs:240,tolerance:6});
  assert.deepEqual(exported.adapters.gradientScrollRail.spring,{stiffness:280,damping:30,mass:.65});
+});
+
+test('scroll settings round trip, accept legacy presets and agree with the Motion and prompt exports', () => {
+ const cases = [
+  ['pixel-scroll-orb', {}, {revealOffset:165, particlesEnabled:false}, {revealOffset:-1}],
+  ['monochrome-scroll-orb', {theme:'dark'}, {theme:'dark', stiffness:380, damping:51}, {damping:66}],
+  ['vertical-scroll-gauge', {direction:'bottom-to-top'}, {direction:'bottom-to-top', damping:52}, {damping:NaN}],
+  ['conic-scroll-orb', {}, {revealOffset:180, damping:55}, {revealOffset:321}],
+  ['gradient-scroll-rail', {direction:'bottom-to-top'}, {direction:'bottom-to-top', maxWidth:64, sigma:5.75}, {sigma:0}],
+ ] as const;
+ for (const [id, legacy, tuned, invalid] of cases) {
+  const {key, defaults} = scrollingSettingsFor(id);
+  const current = defaultHistory(id);
+  assert.deepEqual(current[key], defaults);
+  const { [key]: ignored, ...base } = current;
+  const legacyPreset = {...base, ...(Object.keys(legacy).length ? {[key]:legacy} : {})};
+  const old = parseHistory(JSON.stringify(legacyPreset));
+  assert.deepEqual(old, legacyPreset);
+  const legacyExport = Function(serializeHistoryMotion(old).replace('export default','return'))().adapters[key];
+  assert.deepEqual(legacyExport.settings,{...defaults,...legacy});
+  const custom = {...current,[key]:tuned};
+  assert.deepEqual(parseHistory(serializeHistory(custom)), custom);
+  assert.throws(() => validateHistory({...custom,[key]:{...tuned,...invalid}}));
+  assert.throws(() => validateHistory({...custom,[key]:{...tuned, extra:1}}));
+  assert.throws(() => validateHistory({...defaultHistory('scroll-progress'),[key]:tuned}));
+  const exported = Function(serializeHistoryMotion(custom).replace('export default','return'))().adapters[key];
+  assert.deepEqual(exported.settings,tuned);
+  if ('stiffness' in tuned) assert.equal(exported.spring.stiffness,tuned.stiffness);
+  if ('damping' in tuned) assert.equal(exported.spring.damping,tuned.damping);
+  if ('maxWidth' in tuned) {
+   assert.equal(exported.geometry.maxWidth,tuned.maxWidth);
+   assert.equal(exported.geometry.sigma,tuned.sigma);
+  }
+  if (key==='conicScrollOrb') assert.equal(exported.visibility.revealOffset,180);
+  if (key==='pixelScrollOrb') assert.equal(exported.revealOffsetExclusive,165);
+  for (const language of ['en','zh'] as const) {
+   const prompt=scrollingPrompt(custom,language);
+   assert.match(prompt,/React.*TypeScript.*motion\/react/);
+   assert.ok(prompt.includes(JSON.stringify(defaults)));
+   assert.ok(prompt.includes(JSON.stringify(tuned)));
+  }
+ }
+ assert.equal(orbScrollMetrics(165,600,200,165).visible,false);
+ assert.equal(conicOrbReading(181,600,200,180).visible,true);
+ assert.equal(gradientRailWidth(15,15,1,64,5.75),64);
+ assert.ok(gradientRailWidth(20,15,1,36,5.75)>gradientRailWidth(20,15,1));
+ assert.throws(() => validateHistory({...defaultHistory('pixel-scroll-orb'),pixelScrollOrb:{particlesEnabled:0}}));
 });
 
 test('orb hover particles vary between launches and enter, slow, and fade within each cycle',()=>{

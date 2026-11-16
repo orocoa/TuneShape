@@ -4,7 +4,7 @@ import {animate, motion, useMotionValue} from 'motion/react';
 import {motionEasing} from './easing';
 import {useLanguage} from './i18n';
 import {
-  orbDigits, orbFace, orbParticleFrame, orbParticleSpawn, orbParticles, orbScrollMetrics, orbSegments, orbSize,
+  defaultPixelScrollOrb, orbDigits, orbFace, orbParticleFrame, orbParticleSpawn, orbParticles, orbScrollMetrics, orbSegments, orbSize,
   orbVisibilityMs,
 } from './pixel-scroll-orb';
 import {ScrollPreviewPane} from './scroll-preview-pane';
@@ -15,8 +15,8 @@ import './pixel-scroll-orb.css';
 
 const hoverQuery = '(hover: hover) and (pointer: fine)';
 const sections = [
-  ['Pixel Scroll Orb', 'Scroll within this panel. The orb appears after 72 px and shows the current reading progress.',
-    '像素滚动球', '在此区域内滚动。超过 72 像素后，球体会显示当前阅读进度。'],
+  ['Pixel Scroll Orb', (offset: number) => `Scroll within this panel. The orb appears after ${offset} px and shows the current reading progress.`,
+    '像素滚动球', (offset: number) => `在此区域内滚动。超过 ${offset} 像素后，球体会显示当前阅读进度。`],
   ['The ring', 'Twenty-four pixels follow the reading position, starting at the top and filling clockwise.',
     '环形进度', '24 段像素从顶部开始，随阅读位置顺时针点亮。'],
   ['The number', 'The center displays two digits until the progress reaches 100%.',
@@ -32,6 +32,8 @@ export default function PixelScrollOrbPreview({
   interactive = true, onRunningChange,
 }: HistoryPreviewProps) {
   const zh = useLanguage() === 'zh';
+  const revealOffset = config.pixelScrollOrb?.revealOffset ?? defaultPixelScrollOrb.revealOffset;
+  const particlesEnabled = config.pixelScrollOrb?.particlesEnabled ?? defaultPixelScrollOrb.particlesEnabled;
   const digitId = useId();
   const pane = useRef<HTMLDivElement>(null);
   const initializePreview = useContext(ScrollPreviewPane);
@@ -64,7 +66,7 @@ export default function PixelScrollOrbPreview({
     let frame: number | undefined;
     const measure = () => {
       frame = undefined;
-      const metrics = orbScrollMetrics(viewport.scrollTop, viewport.scrollHeight, viewport.clientHeight);
+      const metrics = orbScrollMetrics(viewport.scrollTop, viewport.scrollHeight, viewport.clientHeight, revealOffset);
       const show = available && metrics.visible;
       if (firstMeasurement) initialReveal.current = show;
       firstMeasurement = false;
@@ -86,7 +88,7 @@ export default function PixelScrollOrbPreview({
       viewport.removeEventListener('scroll', schedule);
       if (frame !== undefined) cancelAnimationFrame(frame);
     };
-  }, [available, initializePreview, stopScroll]);
+  }, [available, initializePreview, revealOffset, stopScroll]);
 
   useLayoutEffect(() => {
     const target = orbVisible ? 1 : 0;
@@ -136,7 +138,7 @@ export default function PixelScrollOrbPreview({
   }, [command.active, command.seq, moveScroll]);
 
   useLayoutEffect(() => {
-    if (!visible || !hovered || reduced || !available) return;
+    if (!particlesEnabled || !visible || !hovered || reduced || !available) return;
     const elements = Array.from(particleGroup.current!.querySelectorAll('rect'));
     elements.forEach((element, index) => {
       const anchor = orbParticles[index];
@@ -173,7 +175,7 @@ export default function PixelScrollOrbPreview({
         element.style.removeProperty('transform');
       });
     };
-  }, [available, clearParticles, hovered, reduced, registerParticle, visible]);
+  }, [available, clearParticles, hovered, particlesEnabled, reduced, registerParticle, visible]);
 
   const scrollWithKey = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.target !== event.currentTarget || event.ctrlKey || event.metaKey || event.altKey) return;
@@ -201,9 +203,11 @@ export default function PixelScrollOrbPreview({
             aria-label={zh ? '像素滚动球演示阅读区' : 'Pixel Scroll Orb reading area'}
             onWheel={stopScroll} onPointerDown={stopScroll} onKeyDown={scrollWithKey}>
             <article ref={content} className="pixel-scroll-content">
-              {sections.map(([heading, body, headingZh, bodyZh]) => (
-                <section key={heading}><h3>{zh ? headingZh : heading}</h3><p>{zh ? bodyZh : body}</p></section>
-              ))}
+              {sections.map(([heading, body, headingZh, bodyZh]) => {
+                const description = zh ? bodyZh : body;
+                return <section key={heading}><h3>{zh ? headingZh : heading}</h3>
+                  <p>{typeof description === 'function' ? description(revealOffset) : description}</p></section>;
+              })}
             </article>
             <div className="pixel-scroll-overlay">
               <motion.button ref={button} type="button" className="pixel-scroll-orb"

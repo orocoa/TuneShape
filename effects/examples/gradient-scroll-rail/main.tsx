@@ -10,5 +10,5 @@ const directionNames = {
 mountScrollingPreview(preset, gradientRailDirections.map(direction => ({
   label: directionNames[direction],
   selected: config => (config.gradientScrollRail?.direction ?? defaultGradientRail.direction) === direction,
-  select: config => ({...config, gradientScrollRail: {direction}}),
+  select: config => ({...config, gradientScrollRail: {...config.gradientScrollRail, direction}}),
 })));

@@ -10,5 +10,5 @@ const directionNames = {
 mountScrollingPreview(preset, verticalGaugeDirections.map(direction => ({
   label: directionNames[direction],
   selected: config => (config.verticalScrollGauge?.direction ?? defaultVerticalGauge.direction) === direction,
-  select: config => ({...config, verticalScrollGauge: {direction}}),
+  select: config => ({...config, verticalScrollGauge: {...config.verticalScrollGauge, direction}}),
 })));

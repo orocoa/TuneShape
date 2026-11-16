@@ -5,7 +5,7 @@ import {motionEasing} from './easing';
 import {useLanguage} from './i18n';
 import {
   clampOrbProgress, defaultMonochromeOrb, monochromeOrbDash, monochromeOrbGeometry,
-  monochromeOrbReading, monochromeOrbSpring, monochromeOrbVisibility,
+  monochromeOrbReading, monochromeOrbSpringFor, monochromeOrbVisibility,
 } from './monochrome-scroll-orb';
 import {ScrollPreviewPane} from './scroll-preview-pane';
 import type {HistoryPreviewProps} from './preview-types';
@@ -47,7 +47,8 @@ export default function MonochromeScrollOrbPreview({
   report.current = onRunningChange;
   const demoControls = useRef<PlaybackControl[]>([]);
   const {register, clear} = usePreviewClock(demoControls, speed, available, paused);
-  const progress = useSpring(0, monochromeOrbSpring);
+  const spring = monochromeOrbSpringFor(config.monochromeScrollOrb);
+  const progress = useSpring(0, spring);
   const dash = useTransform(progress, monochromeOrbDash);
   const arcOpacity = useTransform(progress, value => value > 0 ? 1 : 0);
   const [number, setNumber] = useState(0);
@@ -98,7 +99,7 @@ export default function MonochromeScrollOrbPreview({
   useLayoutEffect(() => {
     if (paused || !available) progress.stop();
     else if (!reduced) progress.set(reading.current.percent);
-  }, [available, paused, progress, reduced]);
+  }, [available, paused, progress, reduced, spring.damping, spring.stiffness]);
 
   useLayoutEffect(() => {
     const target = Number(show);

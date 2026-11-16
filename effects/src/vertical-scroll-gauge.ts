@@ -1,9 +1,14 @@
 export const verticalGaugeDirections = ['top-to-bottom', 'bottom-to-top'] as const;
 export type VerticalGaugeDirection = typeof verticalGaugeDirections[number];
-export type VerticalGaugeSettings = {direction: VerticalGaugeDirection};
-
-export const defaultVerticalGauge: VerticalGaugeSettings = {direction: 'top-to-bottom'};
+export type VerticalGaugeSettings = {direction: VerticalGaugeDirection; damping?: number};
 export const verticalGaugeSpring = {stiffness: 300, damping: 36, mass: .6, restDelta: .001, skipInitialAnimation: true};
+export const defaultVerticalGauge = {direction: 'top-to-bottom', damping: verticalGaugeSpring.damping} satisfies VerticalGaugeSettings;
+export const verticalGaugeBounds = {damping: [12, 65]} as const;
+
+export function verticalGaugeSpringFor(settings?: VerticalGaugeSettings) {
+  return {...verticalGaugeSpring, damping: settings?.damping ?? defaultVerticalGauge.damping};
+}
+
 export const verticalGaugeDemo = {fraction: .65, legMs: 400};
 
 const scrollSteps: Readonly<Record<string, number | undefined>> = {

@@ -9,7 +9,7 @@ import {usePreviewClock} from './useDetailPlayback';
 import type {PlaybackControl} from './useDetailPlayback';
 import {
   clampGaugeProgress, defaultVerticalGauge, gaugeKeyProgress, gaugeTrackPosition,
-  verticalGaugeDemo, verticalGaugeSpring,
+  verticalGaugeDemo, verticalGaugeSpringFor,
 } from './vertical-scroll-gauge';
 import './vertical-scroll-gauge.css';
 
@@ -45,7 +45,8 @@ export default function VerticalScrollGaugePreview({
   report.current = onRunningChange;
   const {register, clear, forget} = usePreviewClock(controls, speed, available, paused);
   const progress = useMotionValue(0);
-  const smooth = useSpring(0, verticalGaugeSpring);
+  const spring = verticalGaugeSpringFor(config.verticalScrollGauge);
+  const smooth = useSpring(0, spring);
   const [dragging, setDragging] = useState(false);
   const [percent, setPercent] = useState(0);
   const displayed = reduced || dragging ? progress : smooth;
@@ -105,7 +106,7 @@ export default function VerticalScrollGaugePreview({
     if (reduced) smooth.jump(progress.get());
     else if (paused || !available) smooth.jump(smooth.get());
     else smooth.set(progress.get());
-  }, [available, paused, progress, reduced, smooth]);
+  }, [available, paused, progress, reduced, smooth, spring.damping]);
 
   useLayoutEffect(() => () => {
     capture.current?.dispose();

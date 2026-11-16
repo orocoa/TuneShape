@@ -10,5 +10,5 @@ const themes = [
 mountScrollingPreview(preset, themes.map(({theme, label}) => ({
   label,
   selected: config => (config.monochromeScrollOrb?.theme ?? defaultMonochromeOrb.theme) === theme,
-  select: config => ({...config, monochromeScrollOrb: {theme}}),
+  select: config => ({...config, monochromeScrollOrb: {...config.monochromeScrollOrb, theme}}),
 })));

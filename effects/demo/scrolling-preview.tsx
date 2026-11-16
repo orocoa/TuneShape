@@ -12,6 +12,7 @@ import {usePrefersReducedMotion} from '../src/usePrefersReducedMotion';
 import '../src/typography.css';
 import '../src/reuse-runtime.css';
 import './scrolling-preview.css';
+import ScrollingControls from './scrolling-controls';
 
 const startProgress = .30;
 const restingCommand = {seq: 0, active: false};
@@ -144,6 +145,7 @@ function ScrollingPreview({initialConfig, options}: {initialConfig: HistoryConfi
           <HistoryPreview config={config} side="after" speed={1} reduced={reduced} command={restingCommand} paused={paused}/>
         </ScrollPreviewPane.Provider>
       </div>
+      <ScrollingControls config={config} initialConfig={initialConfig} setConfig={setConfig} language={language}/>
     </main>
   );
 }

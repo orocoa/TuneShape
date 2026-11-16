@@ -15,6 +15,8 @@ Click or tap the orb, or activate it with Enter or Space, to return the panel to
 
 The standalone preview opens at 30% of the actual reading range. Play scrolls to 75%, briefly holds, then returns to 30% over about three seconds. Pause holds the current frame, Resume continues from it, and Replay starts a new run at 30%. Reading input takes over at any time. With reduced motion, Play and Replay set the reading position to 30% immediately.
 
+The preview saves `pixelScrollOrb.revealOffset` (72 px) and `particlesEnabled` (on). The controls apply immediately. Use Restore defaults or Import JSON, or copy the current JSON, Motion specification, or implementation prompt. Older schemaVersion 2 presets use the defaults for omitted fields.
+
 [Configuration](config.json) uses the shared recipe format. The default return takes 400 ms. Progress, focus and hover come from live input. See the [implementation specification](../../src/pixel-scroll-orb-spec.ts) for the pixel geometry, particle timings and motion policies.
 
 To embed the effect in TuneShape, parse the example JSON with `parseHistory` from [history-model.ts](../../src/history-model.ts) and pass the result as `config` to [HistoryPreview](../../src/HistoryPreview.tsx). For a single preview, use `side="after"`, `speed={1}`, the host's `reduced` preference, and `command={{seq: 0, active: false}}` to start idle. The preview imports its styles and binds to its own reading pane. `serializeHistory` exports the preset as JSON, and `serializeHistoryMotion` exports the motion specification as data. To run the effect outside the editor, use the React example entry and its build.

@@ -8,7 +8,7 @@ import type {HistoryPreviewProps} from './preview-types';
 import {usePreviewClock} from './useDetailPlayback';
 import type {PlaybackControl} from './useDetailPlayback';
 import {
-  clampConicProgress, conicOrbDemo, conicOrbGeometry, conicOrbReading, conicOrbSpring,
+  clampConicProgress, conicOrbDemo, conicOrbGeometry, conicOrbReading, conicOrbSpringFor, defaultConicScrollOrb,
 } from './conic-scroll-orb';
 import './conic-scroll-orb.css';
 
@@ -26,8 +26,8 @@ const sections = [
 const upwardKeys = new Set(['ArrowUp', 'PageUp', 'Home']);
 const downwardKeys = new Set(['ArrowDown', 'PageDown', 'End']);
 
-function readPane(viewport: HTMLElement) {
-  return conicOrbReading(viewport.scrollTop, viewport.scrollHeight, viewport.clientHeight);
+function readPane(viewport: HTMLElement, revealOffset?: number) {
+  return conicOrbReading(viewport.scrollTop, viewport.scrollHeight, viewport.clientHeight, revealOffset);
 }
 
 export default function ConicScrollOrbPreview({
@@ -50,7 +50,9 @@ export default function ConicScrollOrbPreview({
   const {register, clear, forget} = usePreviewClock(controls, speed, available, paused);
 
   const actualProgress = useRef(0);
-  const progress = useSpring(0, conicOrbSpring);
+  const revealOffset = config.conicScrollOrb?.revealOffset ?? defaultConicScrollOrb.revealOffset;
+  const spring = conicOrbSpringFor(config.conicScrollOrb);
+  const progress = useSpring(0, spring);
   const bounded = useTransform(progress, clampConicProgress);
   const ringProgress = useTransform(bounded, value => `${value}%`);
   const label = useTransform(bounded, value => `${Math.round(value)}%`);
@@ -81,7 +83,7 @@ export default function ConicScrollOrbPreview({
   const measure = useCallback((initializing = false) => {
     const viewport = pane.current;
     if (!viewport) return;
-    const next = readPane(viewport);
+    const next = readPane(viewport, revealOffset);
     if (viewport.scrollTop <= 0) returning.current = false;
     if (!next.visible && viewport.ownerDocument.activeElement === button.current) {
       viewport.focus({preventScroll: true});
@@ -93,7 +95,7 @@ export default function ConicScrollOrbPreview({
     if (initializing) setLabelText(`${Math.round(next.percent)}%`);
     if (initializing || reduced) progress.jump(next.percent);
     else if (available && !(pausedRef.current && (initializePreview || controls.current.length))) progress.set(next.percent);
-  }, [available, initializePreview, progress, reduced]);
+  }, [available, initializePreview, progress, reduced, revealOffset]);
 
   useLayoutEffect(() => {
     const viewport = pane.current!;
@@ -128,7 +130,7 @@ export default function ConicScrollOrbPreview({
     if (reduced) progress.jump(actualProgress.current);
     else if (!available || paused) progress.jump(progress.get());
     else progress.set(actualProgress.current);
-  }, [available, paused, progress, reduced]);
+  }, [available, paused, progress, reduced, spring.damping]);
 
   useLayoutEffect(() => {
     if (!available || !command.active || command.seq <= lastCommand.current) return;

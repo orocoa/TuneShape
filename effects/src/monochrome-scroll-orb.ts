@@ -5,8 +5,16 @@ export const monochromeOrbSpring = {stiffness: 210, damping: 25, mass: .85};
 export const monochromeOrbVisibility = {minimumTravel: 320, enterOffset: 80, exitOffset: 40, enterMs: 180, exitMs: 150};
 export const monochromeOrbDemoMs = 400;
 
-export type MonochromeOrbSettings = {theme: 'light' | 'dark'};
-export const defaultMonochromeOrb: MonochromeOrbSettings = {theme: 'light'};
+export type MonochromeOrbSettings = {theme: 'light' | 'dark'; stiffness?: number; damping?: number};
+export const defaultMonochromeOrb = {
+  theme: 'light', stiffness: monochromeOrbSpring.stiffness, damping: monochromeOrbSpring.damping,
+} satisfies MonochromeOrbSettings;
+export const monochromeOrbBounds = {stiffness: [80, 500], damping: [12, 65]} as const;
+
+export function monochromeOrbSpringFor(settings?: MonochromeOrbSettings) {
+  return {...monochromeOrbSpring, stiffness: settings?.stiffness ?? defaultMonochromeOrb.stiffness,
+    damping: settings?.damping ?? defaultMonochromeOrb.damping};
+}
 
 export const clampOrbProgress = (percent: number) => Math.max(0, Math.min(100, percent));
 

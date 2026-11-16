@@ -10,4 +10,6 @@
 
 独立预览从实际阅读区的 30% 开始。播放在约三秒内滚到 75%，短暂停留后回到 30%。暂停保留当前画面，继续从原位置播放，重播从 30% 重新开始。滚动、点击或拖动可以随时接管演示。开启「减少动态效果」时，播放和重播会即时定位到 30%。
 
-[默认 JSON](config.json) 保存主题设置。在 TuneShape 内复用时，用 `parseHistory` 读取配置，再将结果连同宿主的播放状态与减少动态效果设置传给 [HistoryPreview](../../src/HistoryPreview.tsx)。`serializeHistoryMotion` 可导出[动效规格](../../src/monochrome-scroll-orb-spec.ts)数据。
+配置保存 `monochromeScrollOrb.theme`（默认浅色）、`stiffness`（210）和 `damping`（25）。 调参即时生效，可恢复默认值、导入 JSON，也可复制当前 JSON、Motion 规格或实现 Prompt。旧版 schemaVersion 2 配置省略的新字段使用默认值。
+
+在 TuneShape 内复用时，用 `parseHistory` 读取[默认配置](config.json)，再将结果连同宿主的播放状态与减少动态效果设置传给 [HistoryPreview](../../src/HistoryPreview.tsx)。`serializeHistoryMotion` 可导出[动效规格](../../src/monochrome-scroll-orb-spec.ts)数据。

@@ -11,6 +11,8 @@
   "interruption": "retarget",
   "tracks": [],
   "gradientScrollRail": {
-    "direction": "top-to-bottom"
+    "direction": "top-to-bottom",
+    "maxWidth": 36,
+    "sigma": 2.5
   }
 }

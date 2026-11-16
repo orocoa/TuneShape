@@ -1,6 +1,6 @@
 export const gradientRailDirections = ['top-to-bottom', 'bottom-to-top'] as const;
 export type GradientRailDirection = typeof gradientRailDirections[number];
-export type GradientRailSettings = {direction: GradientRailDirection};
+export type GradientRailSettings = {direction: GradientRailDirection; maxWidth?: number; sigma?: number};
 
 const count = 32;
 const barHeight = 3;
@@ -13,7 +13,10 @@ export const gradientRailPress = {delayMs: 240, tolerance: 6};
 export const gradientRailSpring = {stiffness: 280, damping: 30, mass: .65};
 export const gradientRailPalette = {surface: 250, pending: 230, start: 201, end: 69};
 export const gradientRailDemo = {fraction: .65, legMs: 400};
-export const defaultGradientRail: GradientRailSettings = {direction: 'top-to-bottom'};
+export const defaultGradientRail = {
+  direction: 'top-to-bottom', maxWidth: gradientRailGeometry.maxWidth, sigma: gradientRailGeometry.sigma,
+} satisfies GradientRailSettings;
+export const gradientRailBounds = {maxWidth: [gradientRailGeometry.restWidth, 72], sigma: [.75, 8]} as const;
 
 const readingSteps: Readonly<Record<string, number>> = {
   ArrowUp: -.025, ArrowLeft: -.025, ArrowDown: .025, ArrowRight: .025, PageUp: -.1, PageDown: .1,
@@ -29,8 +32,10 @@ export function gradientRailCenter(localY: number) {
   return (localY - gradientRailGeometry.barHeight / 2) / gradientRailGeometry.pitch;
 }
 
-export function gradientRailWidth(index: number, center: number, strength: number) {
-  const {restWidth, maxWidth, sigma} = gradientRailGeometry;
+export function gradientRailWidth(index: number, center: number, strength: number,
+  maxWidth = defaultGradientRail.maxWidth, sigma = defaultGradientRail.sigma,
+) {
+  const {restWidth} = gradientRailGeometry;
   const distance = index - center;
   return restWidth + (maxWidth - restWidth) * clamp(strength) * Math.exp(-(distance ** 2) / (2 * sigma ** 2));
 }

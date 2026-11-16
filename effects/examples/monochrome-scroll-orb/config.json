@@ -11,6 +11,8 @@
   "interruption": "retarget",
   "tracks": [],
   "monochromeScrollOrb": {
-    "theme": "light"
+    "theme": "light",
+    "stiffness": 210,
+    "damping": 25
   }
 }

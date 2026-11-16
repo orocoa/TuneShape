@@ -9,5 +9,9 @@
   "scale": 1,
   "loop": false,
   "interruption": "retarget",
-  "tracks": []
+  "tracks": [],
+  "conicScrollOrb": {
+    "revealOffset": 72,
+    "damping": 25
+  }
 }

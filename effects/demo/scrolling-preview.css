@@ -1,3 +1,61 @@
 [data-scroll-preview-preparing] .conic-orb-stage .conic-scroll-orb {
   transition: none;
 }
+
+.scrolling-settings {
+  min-inline-size: 0;
+  margin: 12px 0 0;
+  padding: 12px;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.scrolling-settings-fields,
+.scrolling-settings-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+
+.scrolling-settings-fields {
+  margin-bottom: 12px;
+}
+
+.scrolling-settings-fields label {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+}
+
+.scrolling-settings-fields input[type="range"] {
+  width: 112px;
+  margin: 0;
+  accent-color: #555;
+  appearance: auto;
+  height: auto;
+  background: none;
+  display: inline-block;
+}
+
+.scrolling-settings-fields output {
+  min-width: 3ch;
+  font-variant-numeric: tabular-nums;
+}
+
+.scrolling-settings-actions button {
+  font: inherit;
+  padding: 6px 10px;
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+}
+
+.scrolling-settings :focus-visible {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}

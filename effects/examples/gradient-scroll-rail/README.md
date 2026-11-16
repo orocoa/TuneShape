@@ -10,4 +10,6 @@ Dragging moves relative to the press position, or to the position where a statio
 
 The standalone preview opens at 30% of the actual reading range. Play scrolls to 75%, briefly holds, then returns to 30% over about three seconds. Pause holds the current frame, Resume continues from it, and Replay starts a new run at 30%. Reading input takes over at any time. With reduced motion, Play and Replay set the reading position to 30% immediately.
 
-The [default preset](config.json) stores direction in `gradientScrollRail.direction`. Parse it with `parseHistory` and pass the result and the host's playback and reduced-motion state to [HistoryPreview](../../src/HistoryPreview.tsx). `serializeHistoryMotion` exports the [implementation specification](../../src/gradient-scroll-rail-spec.ts).
+The preset saves `gradientScrollRail.direction` (top-to-bottom), `maxWidth` (36 px), and `sigma` (2.5 bar indices). The controls apply immediately. Use Restore defaults or Import JSON, or copy the current JSON, Motion specification, or implementation prompt. Older schemaVersion 2 presets use the defaults for omitted fields.
+
+Parse the [default preset](config.json) with `parseHistory` and pass the result and the host's playback and reduced-motion state to [HistoryPreview](../../src/HistoryPreview.tsx). `serializeHistoryMotion` exports the [implementation specification](../../src/gradient-scroll-rail-spec.ts).
